@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', { 'title': 'Asia Beauty SPA | Страница спецпредложений' })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "color": "primary",
+            "active": "0"
+            })
+            <main class="page">
+                <section class="product-card">
+                    <div class="product-card__header">
+                        <div class="product-card__container container ">
+                            <nav aria-label="Хлебные крошки" class="breadcrumbs breadcrumbs_dark">
+                                <ul class="breadcrumbs__items">
+                                    <li class="breadcrumbs__item">
+                                        <a href="/" class="breadcrumbs__link">главная</a>
+                                    </li>
+                                    <li class="breadcrumbs__item">
+                                        <span class="breadcrumbs__link breadcrumbs__link_active">spa для двоиx</span>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <h1 class="product-card__heading title">
+                                spa для двоих: уникальное свидание <br>
+                                в центре Москвы
+                            </h1>
+                            <p class="product-card__subtitle">
+                                Массажи, хаммамы, джакузи, бани,сауны, апартаменты для двоих
+                            </p>
+                            <div class="product-card__picture" data-animate="line">
+                                <div class="product-card__image" data-animate="parallax">
+                                    <img src="@img/photo.png" class="cover-image" alt="photo desc">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card__body product-card__body_sm-offset">
+                        <div class="product-card__container container">
+                            <div class="product-card__content product-card__content_lg">
+                                <div class="product-card__main">
+                                    <div class="product-card__info">
+                                        <h2 class="product-card__caption title-md">
+                                            Вырваться из оков&nbsp;мегаполиса
+                                        </h2>
+                                    </div>
+                                </div>
+                                <aside class="product-card__side">
+                                    <div class="product-card__side-text">
+                                        <p>
+                                            Свидание в кафе утратило флёр романтики и стало чем-то обыденным. Не говоря об ужине дома. А хочется провести время с любимым человеком по-особенному.
+                                        </p>
+                                        <p>
+                                            Идеальный сценарий – пойти вдвоем в спа-салон! Вырваться из оков мегаполиса и очутиться на фешенебельном курорте в Средиземном море, который затаился в пределах Садового кольца.
+                                        </p>
+                                    </div>
+                                </aside>
+                            </div>
+                            @@include('html/_more-products.html', {
+                            "title": "Spa-программы для двоих",
+                            "btn": true
+                            })
+                            @@include('html/_more-products.html', {
+                            "title": "Апартаменты",
+                            "btn": true
+                            })
+                            <div class="product-card__gallery">
+                                <div class="product-card__gallery-caption">
+                                    Отдых для двоих
+                                </div>
+                                <ul class="product-card__gallery-list product-card__gallery-list_lg">
+                                    <a href="@img/photo.png" data-fancybox="gallery" class="product-card__gallery-item">
+                                        <img src="@img/photo.png" class="cover-image" alt="photo">
+                                    </a>
+                                    <a href="@img/photo.png" data-fancybox="gallery" class="product-card__gallery-item">
+                                        <img src="@img/photo.png" class="cover-image" alt="photo">
+                                    </a>
+                                    <a href="@img/photo.png" data-fancybox="gallery" class="product-card__gallery-item">
+                                        <img src="@img/photo.png" class="cover-image" alt="photo">
+                                    </a>
+                                    <a href="@img/photo.png" data-fancybox="gallery" class="product-card__gallery-item">
+                                        <img src="@img/photo.png" class="cover-image" alt="photo">
+                                    </a>
+                                    <a href="@img/photo.png" data-fancybox="gallery" class="product-card__gallery-item">
+                                        <img src="@img/photo.png" class="cover-image" alt="photo">
+                                    </a>
+                                    <a href="@img/photo.png" data-fancybox="gallery" class="product-card__gallery-item">
+                                        <img src="@img/photo.png" class="cover-image" alt="photo">
+                                    </a>
+                                </ul>
+                            </div>
+                            <ul class="product-card__faq">
+                                <li class="info__faq-item">
+                                    <button type="button" class="info__faq-button">Заблаговременное бронирование</button>
+                                    <div class="info__faq-text">
+                                        Наши салоны пользуются большой популярностью, поэтому для Вашего комфорта мы просим Вас предварительно записываться на SPA-процедуры.
+                                    </div>
+                                </li>
+                                <li class="info__faq-item">
+                                    <button type="button" class="info__faq-button">Резерв</button>
+                                    <div class="info__faq-text">
+                                        Если Вы опаздываете, просим Вас связаться по телефону с администратором, чтобы скорректировать последовательность процедур и желаемых специалистов. Резерв по предварительной записи на SPA - процедуры действует в течение 15 минут.
+                                    </div>
+                                </li>
+                                <li class="info__faq-item">
+                                    <button type="button" class="info__faq-button">Прибытие в spa</button>
+                                    <div class="info__faq-text">
+                                        Для того, чтобы настроиться на процедуру и впитать в себя спокойную атмосферу SPA-центра, рекомендуем Вам приходить за 10-15 минут до начала процедуры.
+                                    </div>
+                                </li>
+                                <li class="info__faq-item">
+                                    <button type="button" class="info__faq-button">Специальная одежда для spa-процедур</button>
+                                    <div class="info__faq-text">
+                                        По прибытии в SPA-салон Вам предоставят возможность переодеться в удобный халат, одноразовое нижнее белье и тапочки. Свою одежду Вы сможете оставить на время пребывания в салоне в индивидуальном шкафчике с электронным замком. Перед уходом не забудьте, пожалуйста, сдать ключ от раздевалки администратору, за утерю ключа взимается штраф в размере 1500 рублей.
+                                    </div>
+                                </li>
+                                <li class="info__faq-item">
+                                    <button type="button" class="info__faq-button">Ценные вещи</button>
+                                    <div class="info__faq-text">
+                                        Мы рекомендуем Вам сдавать ценные вещи на хранение в сейф, который установлен в зоне ресепшена, каждый сейф имеет индивидуальный ключ. Администрация ASIA BEAUTY SPA не несет ответственность за вещи, находящиеся в раздевалке, и вещи, оставленные без присмотра. <br>
+                                        В целях Вашей безопасности во всех салонах ASIA BEAUTY SPA ведется видеонаблюдение.
+                                    </div>
+                                </li>
+                                <li class="info__faq-item">
+                                    <button type="button" class="info__faq-button">Спа этикет</button>
+                                    <div class="info__faq-text">
+                                        Отличительной особенностью салонов ASIA BEAUTY SPA является непринужденная и спокойная атмосфера. Убедительно просим Вас разговаривать тихо, не шуметь и выключать мобильные телефоны.
+                                        <br>
+                                        Обращаем Ваше внимание, что мы не оказываем услуг эротического и интимного характера. Мастер и администратор вправе отказать в обслуживании, если Ваши действия противоречат этикету ASIA BEAUTY SPA. В случае начала процедуры и возникновения подобной ситуации, процедура должна быть оплачена Вами полностью.
+                                        <br>
+                                        Вход с питомцами в салоны ASIA BEAUTY SPA возможен, только если животное находится в сумке-переноске.
+                                        <br>
+                                        В салонах ASIA BEAUTY SPA не предусмотрено курение.
+                                    </div>
+                                </li>
+                                <li class="info__faq-item">
+                                    <button type="button" class="info__faq-button">Оплата</button>
+                                    <div class="info__faq-text">
+                                        Мы принимаем к оплате только российские рубли, а также пластиковые карты всех платежных систем Visa, MasterCard, American Express, Maestro, STB, Union Card, Diners Clab.
+                                        <br>
+                                        Пожалуйста, не забывайте Ваши депозитные карты и подарочные сертификаты.
+                                    </div>
+                                </li>
+                                <li class="info__faq-item">
+                                    <button type="button" class="info__faq-button">Заказ блюд и напитков</button>
+                                    <div class="info__faq-text">
+                                        В совместном комплексе ресторан «Тан» - ASIA BEAUTY SPA Вы можете заказать блюда из меню Ресторана «Тан». Их подадут по Вашему заказу в SPA-suite-зону комплекса или администратор салона проводит Вас в зал ресторана.
+                                        <br>
+                                        В любой из наших салонов Вы можете заказать блюда из ресторана. Стоимость доставки заказа - 1000 рублей при общей сумме счета от 3000 рублей.
+                                        <br>
+                                        Заблаговременный заказ приветствуется.
+                                        <br>
+                                        Если по какой-то причине Вы желаете сократить время процедуры или прервать ее, то стоимость этой процедуры остается неизменной, согласно действующему прайс-листу.
+                                        <br>
+                                        Если по какой-либо причине мастер Вам не подошел, Вы можете поменять мастера в течении первых 15 минут после начала процедуры массажа.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_cart.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>

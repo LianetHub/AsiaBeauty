@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', { 'title': 'Asia Beauty SPA' })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "color": "white",
+            "active": "0"
+            })
+            <main class="page">
+                <section class="main">
+                    <div class="main__slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="main__slide swiper-slide">
+                                <img src="@img/services/01.jpg" class="cover-image" alt="photo desc">
+                            </div>
+                            <div class="main__slide swiper-slide">
+                                <img src="@img/services/02.jpg" class="cover-image" alt="photo desc">
+                            </div>
+                            <div class="main__slide swiper-slide">
+                                <img src="@img/services/03.jpg" class="cover-image" alt="photo desc">
+                            </div>
+                            <div class="main__slide swiper-slide">
+                                <img src="@img/services/04.jpg" class="cover-image" alt="photo desc">
+                            </div>
+                            <div class="main__slide swiper-slide">
+                                <img src="@img/services/01.jpg" class="cover-image" alt="photo desc">
+                            </div>
+                            <div class="main__slide swiper-slide">
+                                <img src="@img/services/02.jpg" class="cover-image" alt="photo desc">
+                            </div>
+                            <div class="main__slide swiper-slide">
+                                <img src="@img/services/03.jpg" class="cover-image" alt="photo desc">
+                            </div>
+                            <div class="main__slide swiper-slide">
+                                <img src="@img/services/04.jpg" class="cover-image" alt="photo desc">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__container container">
+                        <h1 class="main__title title">asia beauty spa</h1>
+                        <p class="main__subtitle">
+                            Императорские spa-ритуалы, перерождение тела и духа
+                        </p>
+                        <div class="main__btns">
+                            <a href="/spa.html" class="main__btn btn btn_white icon-arrow-right">Узнать больше</a>
+                            <a href="/spa.html" class="main__btn btn btn_white icon-arrow-right">Каталог услуг</a>
+                        </div>
+                        <a href="" class="main__buy btn btn_red">Купить подарочный сертификат</a>
+                        <div class="main__pagination swiper-pagination"></div>
+                    </div>
+                </section>
+                <div class="main-blocks">
+                    <section class="description">
+                        <div class="description__container container container_md">
+                            <div class="description__caption">О пространстве</div>
+                            <h2 class="description__title">
+                                Отдых в spa-пространстве AsiaBeautySpa
+                            </h2>
+                            <div class="description__text">
+                                <p>
+                                    Это одно из немногих spa-пространств в Москве, где можно полноценно отдохнуть. Каждый спа-салон AsiaBeautySpa – это роскошное спа-путешествие, доступное в лучших локациях Москвы, где клиенты могут попробовать эксклюзивные спа-процедуры по уходу за собой.
+                                </p>
+                                <p>
+                                    Наши мастера – это коренные жители Бали, Таиланда и Китая, закончившие международные школы массажа, с профессиональным стажем не менее 7 лет.
+                                </p>
+                            </div>
+                            <ul class="description__services">
+                                <li class="description__service">
+                                    <a href="" class="description__service-link">
+                                        <span class="description__service-caption">Массаж</span>
+                                        <img src="@img/desc/Massage.jpg" class="cover-image" alt="Фото услуги">
+                                        <span class="description__service-more icon-chevron-down">Каталог услуг</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_cart.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', { 'title': 'Asia Beauty SPA | Старница товара' })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "color": "primary",
+            "active": "0"
+            })
+            <main class="page">
+                <section class="product-card">
+                    <div class="product-card__header">
+                        <div class="product-card__container container container_lg">
+                            <nav aria-label="Хлебные крошки" class="breadcrumbs breadcrumbs_dark">
+                                <ul class="breadcrumbs__items">
+                                    <li class="breadcrumbs__item">
+                                        <a href="/" class="breadcrumbs__link">главная</a>
+                                    </li>
+                                    <li class="breadcrumbs__item">
+                                        <a href="/apartments.html" class="breadcrumbs__link">spa-программы</a>
+                                    </li>
+                                    <li class="breadcrumbs__item">
+                                        <span class="breadcrumbs__link breadcrumbs__link_active">секрет Клеопатры</span>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="product-card__slider swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="product-card__slide swiper-slide">
+                                        <img src="@img/banners/01.jpg" class="cover-image" alt="photo desc">
+                                    </div>
+                                    <div class="product-card__slide swiper-slide">
+                                        <img src="@img/banners/02.jpg" class="cover-image" alt="photo desc">
+                                    </div>
+                                    <div class="product-card__slide swiper-slide">
+                                        <img src="@img/banners/03.jpg" class="cover-image" alt="photo desc">
+                                    </div>
+                                </div>
+                                <div class="product-card__prev swiper-button-prev"></div>
+                                <div class="product-card__next swiper-button-next"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card__body">
+                        <div class="product-card__container container">
+                            <div class="product-card__content">
+                                <div class="product-card__main">
+                                    <div class="product-card__info">
+                                        <h1 class="product-card__title">Секрет Клеопатры</h1>
+                                        <div class="product-card__info-blocks">
+                                            <div class="product-card__info-block">
+                                                <h2 class="product-card__info-caption">
+                                                    Состав программы
+                                                </h2>
+                                                <ol class="product-card__info-list">
+                                                    <li>Spa-пространство без ограничений по времени: термы, хамам, баня, сауна, купель</li>
+                                                    <li>Пилинг на выбор • 30 min</li>
+                                                    <li>Spa-обертывание • 40 min + массаж головы • 20 min</li>
+                                                    <li>Массаж лица • 20 min</li>
+                                                    <li>Массаж стоп • 20 min</li>
+                                                    <li>Relax massage • 60 min</li>
+                                                    <li>Китайский чай</li>
+                                                    <li>Комплиментарный десерт от шеф-повара Asia Beauty Spa</li>
+                                                </ol>
+                                            </div>
+                                            <div class="product-card__info-block">
+                                                <h2 class="product-card__info-caption">
+                                                    Доступно в салонах
+                                                </h2>
+                                                <div class="product-card__info-links">
+                                                    <a href="" class="product-card__info-link">
+                                                        Салон №1 в Москва-Сити, гостиница Novotel
+                                                        <span class="product-card__info-icon icon-arrow-right"></span>
+                                                    </a>
+                                                    <a href="" class="product-card__info-link">
+                                                        Салон №2 Radisson Slavyanskaya Hotel
+                                                        <span class="product-card__info-icon icon-arrow-right"></span>
+                                                    </a>
+                                                    <a href="" class="product-card__info-link">
+                                                        Салон №3 на Смоленской, в отеле AZIMUT
+                                                        <span class="product-card__info-icon icon-arrow-right"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @@include('html/_more-products.html', {
+                                    "title": "Вам может понравиться",
+                                    "btn": false
+                                    })
+                                </div>
+                                <aside class="product-card__side">
+                                    <div class="product-card__price">
+                                        30 000 ₽
+                                    </div>
+                                    <div class="product-card__options">
+                                        <label class="product-card__option">
+                                            <input type="radio" name="time" value="60" class="product-card__option-input hidden" hidden>
+                                            <span class="product-card__option-content">
+                                                60 min
+                                            </span>
+                                        </label>
+                                        <label class="product-card__option">
+                                            <input type="radio" name="time" value="120" class="product-card__option-input hidden" hidden>
+                                            <span class="product-card__option-content">
+                                                120 min
+                                            </span>
+                                        </label>
+                                        <label class="product-card__option">
+                                            <input type="radio" checked name="time" value="150" class="product-card__option-input hidden" hidden>
+                                            <span class="product-card__option-content">
+                                                150 min
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="product-card__actions">
+                                        <button type="button" class="product-card__btn btn btn_brown icon-cart">
+                                            добавить в корзину
+                                        </button>
+                                        <a href="https://wa.me/+74950217659" class="product-card__btn btn btn_primary icon-whatsapp">
+                                            записаться на услугу
+                                        </a>
+                                    </div>
+                                </aside>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_cart.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>

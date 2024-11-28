@@ -1,0 +1,155 @@
+// Использование модулей SASS
+@use "sass:math";
+// Использование модулей SASS
+// ======================================МИКСИНЫ==============================================
+@import "mixins";
+// ======================================МИКСИНЫ==============================================
+
+// ======================================ШРИФТЫ===============================================
+
+// &display=swap&subset=cyrillic-ext
+@import "fonts";
+
+// ======================================ШРИФТЫ===============================================
+// ======================================ИКОНОЧНЫЙ ШРИФТ======================================
+@import "icons";
+
+// ======================================ИКОНОЧНЫЙ ШРИФТ======================================
+
+// Шрифт по умолчанию
+$fontfamily: "Jost";
+$font-cormorant: "Cormorant";
+$font-snell: "Snell";
+
+// Шрифт по умолчанию
+
+$md0: 1599.98px;
+$md1: 1439.98px;
+$md2: 1199.98px;
+$md3: 1023.98px;
+$md4: 767.98px;
+$md5: 575.98px;
+$md6: 389.98px;
+
+// ПЕРЕМЕННЫЕ
+$minWidth: 320; // Минимальная ширина страницы
+$maxWidth: 1920; // Ширина макета
+$maxWidthContainer: rem(1180); // Максимальная ширина ограничивающего контейнера
+$containerPadding: 30;
+
+$text: #543d2f;
+$beige: #eceae0;
+$white: #f7f6f2;
+$red: #9e3522;
+$green: #1f594d;
+$yellow: #e3c272;
+$black: #232323;
+
+// Z-Index
+$ui-index-1: 1; // Для наполняющих элементов в общем потоке
+$ui-index-2: 2; // Для наполняющих элементов в общем потоке
+$ui-index-3: 3; // Для масок
+$ui-index-4: 4; // Для сайдбаров
+$ui-index-5: 5; // Для модалок
+$ui-index-6: 6; // Для элементов, перекрывающих все
+
+:root {
+	--lock-padding: 0px;
+}
+
+//ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ
+body {
+	font-family: $fontfamily, sans-serif;
+	color: $text;
+	background: $white;
+	min-height: 100%;
+	line-height: normal;
+	min-width: 320px;
+	&.lock,
+	&.lock-cart {
+		overflow: hidden;
+	}
+	&.lock-filter {
+		overflow: hidden;
+		@media (min-width: $md2) {
+			overflow: visible;
+		}
+	}
+}
+// ==================ОБОЛОЧКА==============================
+.wrapper {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow-x: clip;
+	padding-right: var(--lock-padding, 0);
+}
+
+//================== ОБОЛОЧКА==================================
+
+//=============== ОСНОВНАЯ СЕТКА===============================
+
+// Отзывчивая
+.container {
+	margin: 0 auto;
+	box-sizing: content-box;
+	max-width: 100%;
+	padding: 0 1.38rem;
+	max-width: $maxWidthContainer;
+	&.container_fluid {
+		max-width: 100%;
+		padding: 0 rem(10);
+		@media (min-width: $md6) {
+			padding: 0 1.5rem;
+		}
+		@media (min-width: $md4) {
+			padding: 0 2.5rem;
+		}
+		@media (min-width: $md2) {
+			padding: 0 rem(60);
+		}
+	}
+	&.container_lg {
+		max-width: 85rem;
+	}
+	&.container_md {
+		max-width: 82.5rem;
+	}
+}
+
+//=============== ОСНОВНАЯ СЕТКА===============================
+
+//=================Подключаем файлы стилей
+//================Общий файл для элементов страницы
+@import "ui";
+@import "forms";
+//================Общий файл для элементов страницы
+@import "header";
+@import "footer";
+//=======================================
+
+// =======================ОСНОВНОЙ БЛОК==================
+.page {
+	flex: 1 1 auto;
+	@media (min-width: $md2) {
+		// position: relative;
+		// z-index: 3;
+		// background: $white;
+		// margin-bottom: 100vh;
+	}
+}
+// ========================================================
+
+@import "pages/home";
+@import "pages/catalog";
+@import "pages/product";
+@import "pages/order";
+@import "pages/salons";
+@import "pages/info";
+@import "pages/promotion";
+@import "pages/certs";
+@import "pages/contacts";
+@import "pages/deposits";
+@import "pages/about";

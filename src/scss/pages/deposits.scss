@@ -1,0 +1,173 @@
+.deposits {
+	padding: 7.5rem 0;
+	@media (min-width: $md4) {
+		padding: 9.3rem 0 7.5rem 0;
+	}
+	@media (min-width: $md2) {
+		padding: 10.5rem 0 8.75rem 0;
+	}
+	// .deposits__container
+	&__container {
+	}
+	// .deposits__title
+	&__title {
+		margin-top: 1.2rem;
+		@media (min-width: $md2) {
+			margin-top: 1.75rem;
+		}
+	}
+	// .deposits__subtitle
+	&__subtitle {
+		margin: 1.25rem 0 0 0;
+		text-align: center;
+		font-size: 1.125rem;
+		line-height: 145%;
+	}
+	// .deposits__content
+	&__content {
+		// border-top: rem(1) solid rgba(84, 61, 47, 0.1);
+		padding-top: 1.25rem;
+		margin-top: 1.56rem;
+		@media (min-width: $md4) {
+			margin-top: 3.75rem;
+		}
+	}
+	// .deposits__image
+	&__image {
+		height: 31.25rem;
+		overflow: hidden;
+	}
+	// .deposits__benefits
+	&__benefits {
+		margin-top: 2.5rem;
+	}
+	// .deposits__benefits-caption
+	&__benefits-caption {
+		letter-spacing: -0.09rem;
+	}
+	// .deposits__benefits-list
+	&__benefits-list {
+		margin-top: 1.3rem;
+		@media (min-width: $md2) {
+			margin-top: 2rem;
+		}
+	}
+	// .deposits__benefits-item
+	&__benefits-item {
+		padding-left: 1.6rem;
+		position: relative;
+		font-size: 1.125rem;
+		&::before {
+			content: "";
+			position: absolute;
+			top: rem(10);
+			left: rem(12);
+			width: rem(3);
+			height: rem(3);
+			border-radius: 50%;
+			background: currentColor;
+		}
+	}
+	// .deposits__periods
+	&__periods {
+		margin-top: 7.5rem;
+		@media (min-width: $md2) {
+			margin-top: 8.75rem;
+		}
+	}
+	// .deposits__periods-caption
+	&__periods-caption {
+		letter-spacing: -0.09rem;
+	}
+	// .deposits__periods-list
+	&__periods-list {
+		margin-top: 1.5rem;
+		@media (min-width: $md2) {
+			margin-top: 2rem;
+		}
+	}
+	// .deposits__period
+	&__period {
+		&:not(:last-child) {
+			margin-bottom: 3.75rem;
+		}
+	}
+	// .deposits__period-header
+	&__period-header {
+		display: flex;
+		align-items: center;
+		column-gap: 0.63rem;
+	}
+	// .deposits__period-price
+	&__period-price {
+		flex: 1 1 auto;
+		line-height: 145%;
+		padding: 0.44rem;
+		background: $beige;
+		text-align: center;
+		font-size: 0.875rem;
+		@media (min-width: $md4) {
+			font-size: 1.125rem;
+		}
+		&:first-child {
+			flex: 0 1 29%;
+			@media (min-width: $md4) {
+				flex: 0 1 38.5%;
+			}
+			@media (min-width: $md2) {
+				flex: 0 1 40.5%;
+			}
+		}
+	}
+	// .deposits__period-mark
+	&__period-mark {
+		font-family: $font-cormorant;
+		line-height: 0.8;
+		padding-bottom: 0.4rem;
+		font-size: 2.5rem;
+	}
+	// .deposits__period-sale
+	&__period-sale {
+		font-size: 0.875rem;
+		@media (min-width: $md4) {
+			font-size: 1.125rem;
+		}
+		line-height: 145%;
+		padding: 0.44rem;
+		background: $red;
+		color: $white;
+	}
+	// .deposits__period-desc
+	&__period-desc {
+		margin-top: 1.75rem;
+		font-size: 1.125rem;
+		line-height: 145%;
+	}
+	// .deposits__products
+	&__products {
+		margin-top: 7.5rem;
+
+		@media (min-width: $md2) {
+			margin-top: 8.75rem;
+		}
+		.products-slider {
+			overflow: visible;
+			@media (min-width: $md4) {
+				overflow: hidden;
+			}
+		}
+		.product {
+			width: rem(287.5);
+			@media (min-width: $md4) {
+				width: rem(264);
+			}
+			@media (min-width: $md2) {
+				width: calc(25% - rem(15));
+			}
+		}
+	}
+	// .deposits__products-caption
+	&__products-caption {
+		letter-spacing: -0.09rem;
+	}
+}

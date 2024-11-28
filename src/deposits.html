@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', { 'title': 'Asia Beauty SPA | spa-депозиты' })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "color": "primary",
+            "active": "12"
+            })
+            <main class="page">
+                <section class="deposits">
+                    <div class="deposits__container container">
+                        <nav aria-label="Хлебные крошки" class="breadcrumbs breadcrumbs_dark">
+                            <ul class="breadcrumbs__items">
+                                <li class="breadcrumbs__item">
+                                    <a href="/" class="breadcrumbs__link">главная</a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <span class="breadcrumbs__link breadcrumbs__link_active">spa-депозиты</span>
+                                </li>
+                            </ul>
+                        </nav>
+                        <h1 class="deposits__title title">spa-депозиты</h1>
+                        <p class="deposits__subtitle">
+                            Депозит Asia Beauty Spa — это актив, который дает возможность больше наслаждаться spa-программами premium класса
+                        </p>
+                        <div class="deposits__content" data-animate="line">
+                            <div class="deposits__image" data-animate="parallax">
+                                <img src="@img/photo.png" class="cover-image" alt="photo">
+                            </div>
+                            <div class="deposits__benefits">
+                                <div class="deposits__benefits-caption title-md">
+                                    Что дает депозит:
+                                </div>
+                                <ul class="deposits__benefits-list">
+                                    <li class="deposits__benefits-item">консультации специалистов</li>
+                                    <li class="deposits__benefits-item">экономия от  5 000 руб</li>
+                                </ul>
+                            </div>
+                            <div class="deposits__periods">
+                                <div class="deposits__periods-caption title-md">
+                                    Депозит действует от 9 месяцев <br class="pc-only"> с момента покупки
+                                </div>
+                                <ul class="deposits__periods-list">
+                                    <li class="deposits__period">
+                                        <div class="deposits__period-header">
+                                            <div class="deposits__period-price">50 000 ₽</div>
+                                            <div class="deposits__period-mark">+</div>
+                                            <div class="deposits__period-sale">10%</div>
+                                            <div class="deposits__period-mark">=</div>
+                                            <div class="deposits__period-price">55 000 ₽</div>
+                                        </div>
+                                        <div class="deposits__period-desc">
+                                            При покупке депозита на 50 000 ₽ — получаете бонусами + 10% = оплачиваете услуги на сумму 55 000 ₽. Действует 9 месяцев.
+                                        </div>
+                                    </li>
+                                    <li class="deposits__period">
+                                        <div class="deposits__period-header">
+                                            <div class="deposits__period-price">100 000 ₽</div>
+                                            <div class="deposits__period-mark">+</div>
+                                            <div class="deposits__period-sale">15%</div>
+                                            <div class="deposits__period-mark">=</div>
+                                            <div class="deposits__period-price">115 000 ₽</div>
+                                        </div>
+                                        <div class="deposits__period-desc">
+                                            При покупке депозита на 100 000 ₽ — получаете бонусами + 15% = оплачиваете услуги на сумму 115 000 ₽. Действует 12 месяцев.
+                                        </div>
+                                    </li>
+                                    <li class="deposits__period">
+                                        <div class="deposits__period-header">
+                                            <div class="deposits__period-price">150 000 ₽</div>
+                                            <div class="deposits__period-mark">+</div>
+                                            <div class="deposits__period-sale">20%</div>
+                                            <div class="deposits__period-mark">=</div>
+                                            <div class="deposits__period-price">180 000 ₽</div>
+                                        </div>
+                                        <div class="deposits__period-desc">
+                                            При покупке депозита на 150 000 ₽ — получаете бонусами + 20% = оплачиваете услуги на сумму 180 000 ₽. Действует 18 месяцев.
+                                        </div>
+                                    </li>
+                                    <li class="deposits__period">
+                                        <div class="deposits__period-header">
+                                            <div class="deposits__period-price">300 000 ₽</div>
+                                            <div class="deposits__period-mark">+</div>
+                                            <div class="deposits__period-sale">25%</div>
+                                            <div class="deposits__period-mark">=</div>
+                                            <div class="deposits__period-price">375 000 ₽</div>
+                                        </div>
+                                        <div class="deposits__period-desc">
+                                            При покупке депозита на 300 000 ₽ — получаете бонусами + 25% = оплачиваете услуги на сумму 375 000 ₽. Действует 24 месяца.
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="deposits__products">
+                                <div class="deposits__products-caption title-md">Купить депозит:</div>
+                                <div class="products-slider swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="product swiper-slide">
+                                            <a href="/product-2.html" class="product__image">
+                                                <img src="@img/photo.png" class="cover-image" alt="photo">
+                                            </a>
+                                            <div class="product__info">
+                                                <a href="/product-2.html" class="product__name">
+                                                    Депозит на 55 000 ₽
+                                                </a>
+                                                <div class="product__price">
+                                                    <div class="product__price-item">
+                                                        Стоимость 50 000 ₽
+                                                    </div>
+                                                </div>
+                                                <div class="product__footer">
+                                                    <a href="" class="product__btn btn btn_primary">добавить в корзину</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product swiper-slide">
+                                            <a href="/product-2.html" class="product__image">
+                                                <img src="@img/photo.png" class="cover-image" alt="photo">
+                                            </a>
+                                            <div class="product__info">
+                                                <a href="/product-2.html" class="product__name">
+                                                    Депозит на 115 000 ₽
+                                                </a>
+                                                <div class="product__price">
+                                                    <div class="product__price-item">
+                                                        Стоимость 100 000 ₽
+                                                    </div>
+                                                </div>
+                                                <div class="product__footer">
+                                                    <a href="" class="product__btn btn btn_primary">добавить в корзину</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product swiper-slide">
+                                            <a href="/product-2.html" class="product__image">
+                                                <img src="@img/photo.png" class="cover-image" alt="photo">
+                                            </a>
+                                            <div class="product__info">
+                                                <a href="/product-2.html" class="product__name">
+                                                    Депозит на 180 000 ₽
+                                                </a>
+                                                <div class="product__price">
+                                                    <div class="product__price-item">
+                                                        Стоимость 150 000 ₽
+                                                    </div>
+                                                </div>
+                                                <div class="product__footer">
+                                                    <a href="" class="product__btn btn btn_primary">добавить в корзину</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product swiper-slide">
+                                            <a href="/product-2.html" class="product__image">
+                                                <img src="@img/photo.png" class="cover-image" alt="photo">
+                                            </a>
+                                            <div class="product__info">
+                                                <a href="/product-2.html" class="product__name">
+                                                    Депозит на 375 000 ₽
+                                                </a>
+                                                <div class="product__price">
+                                                    <div class="product__price-item">
+                                                        Стоимость 300 000 ₽
+                                                    </div>
+                                                </div>
+                                                <div class="product__footer">
+                                                    <a href="" class="product__btn btn btn_primary">добавить в корзину</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="products-slider__prev swiper-button-prev"></div>
+                                    <div class="products-slider__next swiper-button-next"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_cart.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>

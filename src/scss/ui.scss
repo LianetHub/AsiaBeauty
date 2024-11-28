@@ -1,0 +1,357 @@
+//============ МОДУЛИ ====================
+// @import "modules/popup";
+@import 'modules/select';
+@import 'modules/breadcrumbs';
+@import 'modules/range-slider.scss';
+@import 'modules/cart.scss';
+//============ МОДУЛИ ====================
+.title {
+	text-align: center;
+	font-family: $font-cormorant;
+	line-height: 100%;
+	font-size: 2.8125rem;
+	letter-spacing: -0.05625rem;
+	@media (min-width: $md4) {
+		letter-spacing: -0.09rem;
+		font-size: 4.5rem;
+	}
+}
+
+.title-md {
+	&::first-letter {
+		font-family: $font-snell;
+		font-weight: 500;
+	}
+	font-family: $font-cormorant;
+	line-height: 110%;
+	letter-spacing: -0.06rem;
+	font-size: 2.5rem;
+	@media (min-width: $md4) {
+		font-size: 3rem;
+	}
+}
+
+.product {
+	display: flex;
+	flex-direction: column;
+	&.product_white {
+		color: $white;
+	}
+	// .product__image
+	&__image {
+		height: 0;
+		position: relative;
+		border-radius: 0.3125rem;
+		overflow: hidden;
+		padding-bottom: 66.66%;
+		@media (min-width: $md2) {
+			padding-bottom: 75%;
+		}
+		& img {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+	// .product__video
+	&__video {
+		height: 0;
+		position: relative;
+		border-radius: 0.3125rem;
+		overflow: hidden;
+		padding-bottom: 66.66%;
+		@media (min-width: $md2) {
+			padding-bottom: 75%;
+		}
+		& video {
+			position: absolute;
+			top: 0;
+			left: 0;
+			max-width: 100%;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		&.active {
+		}
+	}
+	// .product__video-btn
+	&__video-btn {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 2.5rem;
+		height: 2.5rem;
+		border-radius: 50%;
+		background: $yellow;
+		transform: translate(-50%, -50%);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-right: 0.15rem;
+		transition: background-color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: darken($color: $yellow, $amount: 10);
+			}
+		}
+		& svg {
+			pointer-events: none;
+		}
+		&.active {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+
+	// .product__info
+	&__info {
+		margin-top: 1.5rem;
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+	}
+	// .product__name
+	&__name {
+		font-size: 1.25rem;
+		line-height: 120%;
+		& span {
+			color: rgba(84, 61, 47, 0.5);
+		}
+		& br {
+			content: '';
+			display: block;
+			margin-bottom: 0.5rem;
+		}
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $red;
+			}
+		}
+	}
+	// .product__desc
+	&__desc {
+		margin-top: 0.75rem;
+		font-size: 0.875rem;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+		overflow: hidden;
+	}
+	// .product__price
+	&__price {
+		margin-top: 1.5rem;
+		margin-bottom: auto;
+		font-size: 0.875rem;
+		line-height: 145%;
+	}
+	// .product__price-item
+	&__price-item {
+	}
+	// .product__footer
+	&__footer {
+		margin-top: 1.3rem;
+		display: flex;
+		column-gap: 0.25rem;
+	}
+	// .product__btn
+	&__btn {
+		flex: 1 1 auto;
+	}
+	// .product__link
+	&__link {
+	}
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 50%;
+	background: $beige;
+	transition: background-color 0.3s ease 0s;
+	&::after {
+		transition: color 0.3s ease 0s;
+		font-size: rem(16);
+		color: $text;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			background: $red;
+			&::after {
+				color: $white;
+			}
+		}
+	}
+}
+.swiper-button-next {
+	&::after {
+		padding-left: rem(3);
+	}
+}
+.swiper-button-prev {
+	&::after {
+		padding-right: rem(3);
+	}
+}
+
+.pc-only {
+	display: none;
+	@media (min-width: $md5) {
+		display: block;
+	}
+}
+
+.map {
+	margin-top: 7.5rem;
+	@media (min-width: $md2) {
+		margin-top: 8.75rem;
+	}
+	background: $beige;
+	height: rem(500);
+}
+
+[data-animate='parallax'] {
+	& img {
+		transform: scale(calc(1 + (var(--scroll-precent, 0) * 0.0005)));
+	}
+}
+[data-animate='line'] {
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		// width: 100%;
+		width: 0;
+		height: rem(1);
+		// display: none;
+		background: rgba(84, 61, 47, 0.1);
+		// background: red;
+		transition: width 0.6s ease 0s;
+	}
+	&.active {
+		&::before {
+			width: 100%;
+		}
+	}
+}
+[data-animate='banner'] {
+	& img {
+		transform: scale(calc(1 + (var(--scroll-precent, 0) * 0.0015)));
+	}
+}
+
+.tab-content {
+	display: none;
+	&.active {
+		display: block;
+	}
+}
+
+.buy-btn {
+	position: fixed;
+	z-index: $ui-index-3;
+	bottom: rem(20);
+	right: rem(20);
+	width: rem(80);
+	height: rem(80);
+	@media (min-width: $md4) {
+		width: rem(110);
+		height: rem(110);
+		gap: rem(10);
+		font-size: 0.875rem;
+	}
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: rem(5);
+	border-radius: 50%;
+	font-size: rem(10);
+	line-height: 1;
+	background: $red;
+	color: $white;
+	text-align: center;
+	box-shadow: 0 rem(4) rem(10) 0 rgba($color: #000000, $alpha: 0.25);
+	opacity: 0;
+	visibility: hidden;
+	transition: background-color 0.3s ease 0s, opacity 0.3s ease 0s, visibility 0.3s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			background: darken($color: $red, $amount: 10);
+		}
+	}
+	&.visible {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+//============ ОБЩИЕ ЭЛЕМЕНТЫ ============
+
+// Стилизация селекта
+// $selectBg: $orange;
+// $selectColor: $text;
+
+// ::-moz-selection {
+// 	color: $selectColor;
+// 	background-color: $selectBg;
+// 	box-shadow: none;
+// }
+// ::selection {
+// 	color: $selectColor;
+// 	background-color: $selectBg;
+// 	-webkit-box-shadow: none;
+// 	box-shadow: none;
+// }
+// ::-moz-selection {
+// 	color: $selectColor;
+// 	background-color: $selectBg;
+// 	box-shadow: none;
+// }
+
+// Стилизация скролла
+
+$scrollbarColor: $yellow;
+$scrollbarHover: darken(
+	$color: $scrollbarColor,
+	$amount: 10,
+);
+
+::-webkit-scrollbar {
+	width: rem(8);
+}
+::-webkit-scrollbar-track {
+	background: #fff;
+}
+::-webkit-scrollbar-thumb {
+	background: $scrollbarColor;
+	border-radius: rem(8);
+	@media (any-hover: hover) {
+		&:hover {
+			background: $scrollbarHover;
+		}
+	}
+}
+
+//============ ОБЩИЕ ЭЛЕМЕНТЫ ============
+
+// ========== ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ ======
+// .hidden {
+// 	position: absolute;
+// 	clip: rect(0 0 0 0);
+// 	width: 1px;
+// 	height: 1px;
+// 	margin: -1px;
+// }
+
+.cover-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+// ========== ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ ======

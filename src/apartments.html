@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', { 'title': 'Asia Beauty SPA | Апартаменты' })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "color": "white",
+            "active": "4"
+            })
+            <main class="page">
+                @@include('html/_banner.html', {
+                "title": "апартаменты",
+                "url": "@img/banners/04.jpg",
+                "position": "center"
+                })
+                <div class="catalog">
+                    <div class="catalog__container container">
+                        <aside class="catalog__sidebar">
+                            <div class="catalog__sidebar-body">
+                                <button type="button" aria-label="Закрыть фильтр каталога" class="catalog__sidebar-close icon-close"></button>
+                                <div class="catalog__filter">
+                                    <div class="catalog__filter-caption">Стоимость</div>
+                                    <div class="catalog__filter-range range-filter">
+                                        <div class="range-filter__slider"></div>
+                                        <div class="range-filter__inputs">
+                                            <label class="range-filter__label">
+                                                <input type="number" min="3500" max="18000" step="100" value="3500" class="range-filter__input range-filter__input_start">
+                                                <span class="range-filter__value range-filter__value_start"></span>
+                                            </label>
+                                            <label class="range-filter__label">
+                                                <input type="number" min="3500" max="18000" step="100" value="18000" class="range-filter__input range-filter__input_end">
+                                                <span class="range-filter__value range-filter__value_end"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__filter">
+                                    <div class="catalog__filter-caption">Категория</div>
+                                    <div class="catalog__filter-items">
+                                        <label class="catalog__filter-item checkbox">
+                                            <input type="checkbox" name="category" value="relax" class="checkbox__input hidden" hidden>
+                                            <span class="checkbox__text">Релаксирующий</span>
+                                        </label>
+                                        <label class="catalog__filter-item checkbox">
+                                            <input type="checkbox" name="category" value="soap" class="checkbox__input hidden" hidden>
+                                            <span class="checkbox__text">Мыльный</span>
+                                        </label>
+                                        <label class="catalog__filter-item checkbox">
+                                            <input type="checkbox" name="category" value="coop" class="checkbox__input hidden" hidden>
+                                            <span class="checkbox__text">Тандем (4 руки)</span>
+                                        </label>
+                                        <label class="catalog__filter-item checkbox">
+                                            <input type="checkbox" name="category" value="china" class="checkbox__input hidden" hidden>
+                                            <span class="checkbox__text">Китайский</span>
+                                        </label>
+                                        <label class="catalog__filter-item checkbox">
+                                            <input type="checkbox" name="category" value="bali" class="checkbox__input hidden" hidden>
+                                            <span class="checkbox__text">Балийский</span>
+                                        </label>
+                                        <label class="catalog__filter-item checkbox">
+                                            <input type="checkbox" name="category" value="thai" class="checkbox__input hidden" hidden>
+                                            <span class="checkbox__text">Тайский</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="catalog__filter">
+                                    <div class="catalog__filter-caption">Салон</div>
+                                    <div class="catalog__filter-items">
+                                        <label class="catalog__filter-item checkbox">
+                                            <input type="checkbox" name="place" value="polyanka" class="checkbox__input hidden" hidden>
+                                            <span class="checkbox__text">на Полянке</span>
+                                        </label>
+                                        <label class="catalog__filter-item checkbox">
+                                            <input type="checkbox" name="place" value="city" class="checkbox__input hidden" hidden>
+                                            <span class="checkbox__text">в Москва-сити</span>
+                                        </label>
+                                        <label class="catalog__filter-item checkbox">
+                                            <input type="checkbox" name="place" value="kiev" class="checkbox__input hidden" hidden>
+                                            <span class="checkbox__text">на Киевской</span>
+                                        </label>
+                                        <label class="catalog__filter-item checkbox">
+                                            <input type="checkbox" name="place" value="michurin" class="checkbox__input hidden" hidden>
+                                            <span class="checkbox__text">на Мичуринском проспекте</span>
+                                        </label>
+                                        <label class="catalog__filter-item checkbox">
+                                            <input type="checkbox" name="place" value="20" class="checkbox__input hidden" hidden>
+                                            <span class="checkbox__text">Spa-пространство на 20 этаже</span>
+                                        </label>
+                                        <label class="catalog__filter-item checkbox">
+                                            <input type="checkbox" name="place" value="smolensk" class="checkbox__input hidden" hidden>
+                                            <span class="checkbox__text">на Смоленской</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                        <div class="catalog__content">
+                            <div class="catalog__body">
+                                <div class="catalog__header">
+                                    <form action="#" class="catalog__search">
+                                        <input type="text" name="catalog-search" class="catalog__search-input" placeholder="Искать">
+                                        <button class="catalog__search-btn icon-search"></button>
+                                    </form>
+                                    <div class="catalog__select">
+                                        <select>
+                                            <option value="popular">Популярные</option>
+                                            <option value="low">По убыванию цены</option>
+                                            <option value="high">По возрастанию цены</option>
+                                        </select>
+                                    </div>
+                                    <button type="button" aria-label="Открыть фильтр" class="catalog__filter-btn icon-filter"></button>
+                                </div>
+                                <div class="catalog__sections">
+                                    <section class="catalog__section">
+                                        <h2 class="catalog__section-caption">Spa menu</h2>
+                                        <ul class="catalog__grid">
+                                            <li class="catalog__item product">
+                                                <a href="/product.html" class="product__image">
+                                                    <img src="@img/photo.png" class="cover-image" alt="photo">
+                                                </a>
+                                                <div class="product__info">
+                                                    <a href="/product.html" class="product__name">
+                                                        Standart apartments 2
+                                                    </a>
+                                                    <div class="product__desc">
+                                                        Включает в себя: массажный кабинет, гардероб, пилинговая
+                                                    </div>
+                                                    <div class="product__price">
+                                                        <div class="product__price-item">
+                                                            от 3 000 ₽
+                                                        </div>
+                                                    </div>
+                                                    <div class="product__footer">
+                                                        <a href="" class="product__btn btn btn_primary">добавить в корзину</a>
+                                                        <a href="/product.html" class="product__link btn btn_secondary icon-arrow-right"></a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="catalog__item product">
+                                                <a href="/product.html" class="product__image">
+                                                    <img src="@img/photo.png" class="cover-image" alt="photo">
+                                                </a>
+                                                <div class="product__info">
+                                                    <a href="/product.html" class="product__name">
+                                                        Standart apartments 1
+                                                    </a>
+                                                    <div class="product__desc">
+                                                        Включает в себя: массажный кабинет, хаммам, душевая
+                                                    </div>
+                                                    <div class="product__price">
+                                                        <div class="product__price-item">
+                                                            от 5 000 ₽
+                                                        </div>
+                                                    </div>
+                                                    <div class="product__footer">
+                                                        <a href="" class="product__btn btn btn_primary">добавить в корзину</a>
+                                                        <a href="/product.html" class="product__link btn btn_secondary icon-arrow-right"></a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="catalog__item product">
+                                                <a href="/product.html" class="product__image">
+                                                    <img src="@img/photo.png" class="cover-image" alt="photo">
+                                                </a>
+                                                <div class="product__info">
+                                                    <a href="/product.html" class="product__name">
+                                                        Vip hammam
+                                                    </a>
+                                                    <div class="product__desc">
+                                                        Включает в себя: хаммам, пилинговая зона на 2 персоны
+                                                    </div>
+                                                    <div class="product__price">
+                                                        <div class="product__price-item">
+                                                            от 6 000 ₽
+                                                        </div>
+                                                    </div>
+                                                    <div class="product__footer">
+                                                        <a href="" class="product__btn btn btn_primary">добавить в корзину</a>
+                                                        <a href="/product.html" class="product__link btn btn_secondary icon-arrow-right"></a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="catalog__item product">
+                                                <a href="/product.html" class="product__image">
+                                                    <img src="@img/photo.png" class="cover-image" alt="photo">
+                                                </a>
+                                                <div class="product__info">
+                                                    <a href="/product.html" class="product__name">
+                                                        Superior apartments
+                                                    </a>
+                                                    <div class="product__desc">
+                                                        Включает в себя: массажный кабинет, пилинговая зона
+                                                    </div>
+                                                    <div class="product__price">
+                                                        <div class="product__price-item">
+                                                            от 7 000 ₽
+                                                        </div>
+                                                    </div>
+                                                    <div class="product__footer">
+                                                        <a href="" class="product__btn btn btn_primary">добавить в корзину</a>
+                                                        <a href="/product.html" class="product__link btn btn_secondary icon-arrow-right"></a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="catalog__item product">
+                                                <a href="/product.html" class="product__image">
+                                                    <img src="@img/photo.png" class="cover-image" alt="photo">
+                                                </a>
+                                                <div class="product__info">
+                                                    <a href="/product.html" class="product__name">
+                                                        Superior bedroom apartments
+                                                    </a>
+                                                    <div class="product__desc">
+                                                        Включает в себя: массажный кабинет на 2 персоны, гардероб
+                                                    </div>
+                                                    <div class="product__price">
+                                                        <div class="product__price-item">
+                                                            от 9 000 ₽
+                                                        </div>
+                                                    </div>
+                                                    <div class="product__footer">
+                                                        <a href="" class="product__btn btn btn_primary">добавить в корзину</a>
+                                                        <a href="/product.html" class="product__link btn btn_secondary icon-arrow-right"></a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="catalog__item product">
+                                                <a href="/product.html" class="product__image">
+                                                    <img src="@img/photo.png" class="cover-image" alt="photo">
+                                                </a>
+                                                <div class="product__info">
+                                                    <a href="/product.html" class="product__name">
+                                                        Superior bedroom
+                                                    </a>
+                                                    <div class="product__desc">
+                                                        Включает в себя: сауна, комната отдыха с кроватью
+                                                    </div>
+                                                    <div class="product__price">
+                                                        <div class="product__price-item">
+                                                            от 10 000 ₽
+                                                        </div>
+                                                    </div>
+                                                    <div class="product__footer">
+                                                        <a href="" class="product__btn btn btn_primary">добавить в корзину</a>
+                                                        <a href="/product.html" class="product__link btn btn_secondary icon-arrow-right"></a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </section>
+                                </div>
+                            </div>
+                            @@include('html/_views.html')
+                        </div>
+                    </div>
+                </div>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+        @@include('html/_cart.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>
