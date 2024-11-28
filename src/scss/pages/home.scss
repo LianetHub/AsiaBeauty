@@ -146,7 +146,13 @@
 }
 
 .description {
-	padding: rem(140) 0;
+	padding: rem(100) 0 0;
+	@media (min-width: $md4) {
+		padding: rem(120) 0 0;
+	}
+	@media (min-width: $md2) {
+		padding: rem(140) 0 0;
+	}
 	// .description__container
 	&__container {
 	}
@@ -159,25 +165,334 @@
 	// .description__title
 	&__title {
 		margin-top: 0.94rem;
-		color: #543d2f;
-		font-family: Cormorant;
-		font-size: 3rem;
-		line-height: 110%;
-		letter-spacing: -0.06rem;
 		max-width: 35.5rem;
 	}
 	// .description__text
 	&__text {
+		margin-top: 2.5rem;
+		@media (min-width: $md2) {
+			margin-top: 0;
+		}
 		font-size: 1.125rem;
 		line-height: 145%;
-		max-width: 50%;
-		padding-left: 0.5rem;
-		margin-left: auto;
+		@media (min-width: $md3) {
+			max-width: 50%;
+			padding-left: 0.5rem;
+			margin-left: auto;
+		}
 		& p {
 			&:not(:last-child) {
-				margin-bottom: 1rem;
+				margin-bottom: 1.5rem;
+				@media (min-width: $md4) {
+					margin-bottom: 1rem;
+				}
 			}
 		}
+	}
+	// .description__services
+	&__services {
+		display: grid;
+		gap: rem(20);
+		margin-top: 2.5rem;
+		@media (min-width: $md5) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (min-width: $md3) {
+			grid-template-columns: repeat(4, 1fr);
+		}
+		@media (min-width: $md2) {
+			margin-top: rem(70);
+		}
+	}
+	// .description__service
+	&__service {
+		@media (max-width: $md5) {
+			height: 15.625rem;
+		}
+
+		@media (min-width: $md5) {
+			min-height: 18.75rem;
+		}
+	}
+	// .description__service-link
+	&__service-link {
+		position: relative;
+		display: block;
+		min-height: 100%;
+		overflow: hidden;
+		transition: background-color 0.3s ease, border-color 0.3s ease;
+		@media (any-hover: hover) {
+			&:hover {
+				& img {
+					transform: scale(1.2);
+				}
+			}
+		}
+		& img {
+			transition: transform 0.5s ease-in-out;
+			min-height: 100%;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		&.white {
+			border: 1px solid #dfded6;
+			.description__service-more {
+				color: #543d2f;
+			}
+			@media (any-hover: hover) {
+				&:hover {
+					background: #eceae0;
+					border: 1px solid #eceae0;
+					.description__service-caption {
+						background: #eceae0;
+					}
+				}
+			}
+		}
+		&.red {
+			background: #9e3522;
+			.description__service-caption {
+				background: transparent;
+				color: #fff;
+			}
+			@media (any-hover: hover) {
+				&:hover {
+					background: #7d2414;
+				}
+			}
+		}
+	}
+	// .description__service-caption
+	&__service-caption {
+		position: absolute;
+		top: rem(20);
+		left: rem(20);
+		color: #543d2f;
+		background: #f7f6f2;
+		padding: 0rem 0.3125rem;
+		font-weight: 500;
+		line-height: 120%;
+		font-family: $font-cormorant;
+		letter-spacing: -0.015rem;
+		z-index: 2;
+		transition: background-color 0.3s ease 0s;
+		font-size: 1.25rem;
+		@media (min-width: $md2) {
+			font-size: 1.5rem;
+		}
+	}
+	// .description__service-more
+	&__service-more {
+		position: absolute;
+		bottom: 1.25rem;
+		left: 1.25rem;
+		display: flex;
+		align-items: center;
+		gap: 0.31rem;
+		color: #fff;
+		z-index: 2;
+		&::before {
+			order: 1;
+			transform: rotate(-90deg);
+			width: 1rem;
+			height: 1rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}
+
+.capabilities {
+	background: url("@img/capabilities.jpg") 0 0 / cover no-repeat, $text;
+	background-attachment: fixed;
+	color: #fff;
+	padding: rem(100) 0;
+	@media (min-width: $md5) {
+		padding: 7.5rem 0;
+	}
+	@media (min-width: $md2) {
+		padding: 6.25rem 0;
+	}
+	// .capabilities__container
+	&__container {
+	}
+	// .capabilities__caption
+	&__caption {
+		opacity: 0.4;
+		font-size: 0.875rem;
+		line-height: 145%;
+	}
+	// .capabilities__heading
+	&__heading {
+		margin-top: 0.94rem;
+		max-width: 38.4375rem;
+		@media (max-width: $md5) {
+			font-size: 2.5rem;
+		}
+		@media (min-width: $md5) {
+			letter-spacing: -0.09rem;
+		}
+	}
+	// .capabilities__desc
+	&__desc {
+		margin-top: 2.56rem;
+		font-size: 1.125rem;
+		line-height: 145%;
+		max-width: 27.9375rem;
+	}
+
+	// .capabilities__cards
+	&__cards {
+		margin-top: 3.7rem;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 0.63rem;
+		@media (min-width: $md5) {
+			gap: 0;
+			grid-template-columns: 1fr;
+			margin-top: 5.37rem;
+		}
+		@media (min-width: $md2) {
+			padding-right: 7rem;
+			margin-top: 4.38rem;
+		}
+	}
+	// .capabilities__cards-row
+	&__cards-row {
+		display: contents;
+		@media (min-width: $md5) {
+			display: flex;
+			justify-content: space-between;
+			gap: 1.25rem;
+		}
+		&:not(:last-child) {
+			@media (min-width: $md5) {
+				margin-bottom: 7.5rem;
+			}
+			@media (min-width: $md2) {
+				margin-bottom: 8.75rem;
+			}
+		}
+	}
+	// .capabilities__card-num
+	&__card-num {
+		line-height: 125%;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		&::after {
+			content: "";
+			flex-shrink: 0;
+			background: currentColor;
+			width: 0.375rem;
+			height: 0.375rem;
+			@media (min-width: $md5) {
+				width: 0.5rem;
+				height: 0.5rem;
+			}
+		}
+		font-size: 0.875rem;
+		@media (min-width: $md5) {
+			font-size: 1.375rem;
+		}
+	}
+	// .capabilities__card
+	&__card {
+		border: 1px solid #f7f6f2;
+		color: #f7f6f2;
+		flex-shrink: 0;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		height: 12.5rem;
+		padding: 0.94rem;
+		@media (min-width: $md5) {
+			padding: 1.25rem;
+			min-height: 21.875rem;
+		}
+		&:first-child:last-child {
+			margin-top: -4rem;
+			@media (min-width: $md5) {
+				margin-left: 7.88rem;
+			}
+			@media (min-width: $md2) {
+				margin-left: 7rem;
+			}
+		}
+		&.capabilities__card_white {
+			@media (max-width: $md5) {
+				margin-top: -8rem;
+				background: $red;
+				color: #f7f6f2;
+				border-color: $red;
+				height: 7.5rem;
+			}
+			@media (min-width: $md5) {
+				background: #fff;
+				color: #543d2f;
+			}
+			@media (any-hover: hover) {
+				&:hover {
+					background: $red;
+					color: #f7f6f2;
+					border-color: $red;
+				}
+			}
+		}
+		&.capabilities__card_white-mobile {
+			@media (max-width: $md5) {
+				background: #fff;
+				color: #543d2f;
+				height: 16.5625rem;
+			}
+		}
+		&.capabilities__card_offset {
+			@media (max-width: $md5) {
+				height: 16.5625rem;
+			}
+		}
+		@media (min-width: $md5) {
+			&.capabilities__card_offset {
+				margin-left: auto;
+			}
+			width: 16rem;
+		}
+		@media (min-width: $md4) {
+			width: 22.3125rem;
+		}
+		@media (min-width: $md2) {
+			width: 19.6875rem;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background: #f7f6f2;
+				color: #543d2f;
+			}
+		}
+	}
+	// .capabilities__card-text
+	&__card-text {
+		line-height: 120%;
+		font-size: 1rem;
+		@media (min-width: $md5) {
+			font-size: 1.5rem;
+			letter-spacing: -0.015rem;
+		}
+	}
+	// .capabilities__card-icon
+	&__card-icon {
+		width: 1.5rem;
+		height: 1.5rem;
+		font-size: 1.5rem;
+		transform: rotate(-90deg);
+		flex-shrink: 0;
+		margin-left: auto;
 	}
 }
 

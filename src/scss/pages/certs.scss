@@ -6,8 +6,27 @@
 	@media (min-width: $md2) {
 		padding: 10.5rem 0 8.75rem 0;
 	}
+	&:has(.container_md) {
+		padding-top: rem(100);
+		@media (min-width: $md5) {
+			padding-top: rem(120);
+		}
+		@media (min-width: $md2) {
+			padding-top: rem(140);
+		}
+	}
 	// .certs__container
 	&__container {
+	}
+	// .certs__caption
+	&__caption {
+		color: rgba(84, 61, 47, 0.4);
+		font-size: 0.875rem;
+		line-height: 145%;
+	}
+	// .certs__heading
+	&__heading {
+		margin-top: 0.94rem;
 	}
 	// .certs__title
 	&__title {
@@ -25,7 +44,6 @@
 	}
 	// .certs__content
 	&__content {
-		// border-top: rem(1) solid rgba(84, 61, 47, 0.1);
 		padding-top: 1.25rem;
 		margin-top: 3.56rem;
 		@media (min-width: $md4) {

@@ -517,6 +517,13 @@
 	margin-top: 1.75rem;
 	max-width: 100%;
 	min-width: 0;
+	&:not(.swiper-initialized.swiper-backface-hidden) {
+		.product {
+			&:not(:last-child) {
+				margin-right: rem(20);
+			}
+		}
+	}
 	.product {
 		width: rem(264);
 		height: auto;

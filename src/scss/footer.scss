@@ -5,7 +5,7 @@
 	padding: 4.5rem 0 1.87rem 0;
 	color: $yellow;
 	min-height: 100vh;
-	background: url('@img/dragon.png') calc(100% + 3.6rem) 90% / 260px auto no-repeat, url('@img/footer-pattern.png') 0 0 / cover no-repeat, $text;
+	background: url("@img/dragon.png") calc(100% + 3.6rem) 90% / 260px auto no-repeat, url("@img/footer-pattern.png") 0 0 / cover no-repeat, $text;
 	&::-webkit-scrollbar {
 		width: 0;
 		height: 0;
@@ -13,10 +13,10 @@
 	}
 	scrollbar-width: none;
 	@media (min-width: $md4) {
-		background: url('@img/dragon.png') calc(100% + 4.6rem) calc(100% + 12rem) / auto no-repeat, url('@img/footer-pattern.png') 0 0 / cover no-repeat, $text;
+		background: url("@img/dragon.png") calc(100% + 4.6rem) calc(100% + 12rem) / auto no-repeat, url("@img/footer-pattern.png") 0 0 / cover no-repeat, $text;
 	}
 	@media (min-width: $md2) {
-		background: url('@img/dragon.png') -6rem calc(100% + 12rem) / auto no-repeat, url('@img/footer-pattern.png') 0 0 / cover no-repeat, $text;
+		background: url("@img/dragon.png") -6rem calc(100% + 12rem) / auto no-repeat, url("@img/footer-pattern.png") 0 0 / cover no-repeat, $text;
 		// position: fixed;
 		// bottom: 0;
 		// z-index: 2;
@@ -263,5 +263,166 @@
 	&__item-btn {
 		font-size: rem(18);
 		padding: rem(8) rem(24);
+	}
+}
+
+.footer-home {
+	padding: 4.37rem 0 1.87rem;
+	@media (min-width: $md5) {
+		padding: 7.5rem 0 1.87rem;
+	}
+	@media (min-width: $md2) {
+		padding: 8.75rem 0 1.87rem;
+	}
+	// .footer-home__container
+	&__container {
+	}
+	// .footer-home__columns
+	&__columns {
+		@media (max-width: $md4) {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 2.5rem;
+			column-gap: 0.62rem;
+		}
+		@media (min-width: $md4) {
+			display: flex;
+			justify-content: space-between;
+		}
+		@media (min-width: $md3) {
+			padding-right: 11rem;
+		}
+		@media (min-width: $md2) {
+			padding-right: 9.5rem;
+		}
+		.footer__menu {
+			grid-template-columns: 1fr;
+		}
+		.footer__menu-link {
+			@media (any-hover: hover) {
+				&:hover {
+					color: inherit;
+					text-decoration: underline;
+				}
+			}
+		}
+		.footer__socials-link {
+			@media (any-hover: hover) {
+				&:hover {
+					color: inherit;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	// .footer-home__column
+	&__column {
+	}
+	// .footer-home__caption
+	&__caption {
+		color: rgba(84, 61, 47, 0.4);
+		font-size: 0.875rem;
+		line-height: 120%;
+		margin-bottom: 1.25rem;
+	}
+	// .footer-home__banner
+	&__banner {
+		position: relative;
+		height: 31.25rem;
+		margin-top: 2.5rem;
+		@media (min-width: $md5) {
+			margin-top: 7.25rem;
+		}
+		@media (min-width: $md2) {
+			margin-top: 8.75rem;
+		}
+	}
+	// .footer-home__banner-image
+	&__banner-image {
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+	}
+	// .footer-home__banner-info
+	&__banner-info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		min-height: 100%;
+		padding: 3.3rem 0 1.25rem;
+		@media (min-width: $md5) {
+			padding: 3.3rem 0 1.88rem;
+		}
+	}
+	// .footer-home__banner-logo
+	&__banner-logo {
+		width: 10.625rem;
+		@media (min-width: $md5) {
+			width: 13.125rem;
+		}
+		margin: auto 0;
+		& img {
+			width: 100%;
+		}
+	}
+	// .footer-home__banner-reqs
+	&__banner-reqs {
+		color: rgba(255, 255, 255, 0.4);
+		text-align: center;
+		line-height: 120%;
+		font-size: 0.6875rem;
+		letter-spacing: -0.0225rem;
+		@media (min-width: $md5) {
+			font-size: 0.75rem;
+		}
+	}
+	// .footer-home__bottom
+	&__bottom {
+		margin-top: 3.75rem;
+		@media (min-width: $md5) {
+			margin-top: 1.25rem;
+		}
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		font-size: 0.8125rem;
+		line-height: 120%;
+		letter-spacing: -0.02438rem;
+		color: rgba(84, 61, 47, 0.3);
+		gap: 0.94rem;
+		@media (min-width: $md4) {
+			gap: 0.25rem;
+			justify-content: space-between;
+			align-items: center;
+			flex-direction: row;
+		}
+		@media (min-width: $md3) {
+			padding-right: 8.5rem;
+		}
+		@media (min-width: $md2) {
+			padding-right: 7.5rem;
+		}
+	}
+	// .footer-home__copy
+	&__copy {
+	}
+	// .footer-home__link
+	&__link {
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $text;
+			}
+		}
+	}
+	// .footer-home__worktime
+	&__worktime {
+		display: flex;
+		align-items: center;
+		gap: 0.31rem;
+		order: -1;
+		@media (min-width: $md4) {
+			order: 0;
+		}
 	}
 }
