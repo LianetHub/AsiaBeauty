@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', { 'title': 'Asia Beauty SPA | Авторские spa-программы' })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "color": "primary",
+            "active": "5"
+            })
+            <main class="page">
+                <section class="spa-programms">
+                    <div class="spa-programms__container container container_md">
+                        <nav aria-label="Хлебные крошки" class="breadcrumbs breadcrumbs_dark">
+                            <ul class="breadcrumbs__items">
+                                <li class="breadcrumbs__item">
+                                    <a href="/" class="breadcrumbs__link">главная</a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <span class="breadcrumbs__link breadcrumbs__link_active">выезд на дом</span>
+                                </li>
+                            </ul>
+                        </nav>
+                        <h1 class="spa-programms__title">Авторские spa-программы в теплой и&nbsp;уютной домашней обстановке</h1>
+                        <div class="spa-programms__desc">
+                            <p>Выездной массаж на дом — идеальное решение для тех, кто ценит комфорт и не желает тратить время на дорогу, экономя свое время. Наши специалисты из Китая, Бали и Тайланда предлагают индивидуальный подход для вас, что позволит сделать процедуру более эффективной. Во время сеанса, вы сможете выбрать, на какие из зон важно акцентировать внимание или продлить время массажа.</p>
+                            <p>После сеанса вы сможете полностью расслабиться, в комфортной для вас, обстановке и продолжить заниматься своими привычными делами.</p>
+                            <p>Минимальная продолжительность сеанса 2 часа</p>
+                            <p>В пределах МКАД стоимость фиксирована. Обсуждение выезда за пределы МКАД возможно.</p>
+                            <p>Заказать услугу выездного массажа можно на сайте, заполнив заявку или по телефону <br> <a href="tel:+74950217659">+7 (495) 021 7659</a></p>
+                        </div>
+                        <div class="spa-programms__image">
+                            <img src="@img/spa-programms.jpg" alt="Фото модели">
+                        </div>
+                        <div class="spa-programms__info">
+                            <div class="spa-programms__info-caption">Выездной массаж на дом или любое ваше мероприятие:</div>
+                            <ul class="spa-programms__info-list">
+                                <li>экономит ваше время;</li>
+                                <li>исключает необходимость адаптации к новому месту;</li>
+                                <li>позволяет подобрать удобные для проведения процедуры часы и не привязываться к графику работы спа-салона;</li>
+                                <li>массаж длится 2 часа;</li>
+                                <li>предоставляется весь необходимый инвентарь и одежда для массажа.</li>
+                            </ul>
+                        </div>
+                        <div class="spa-programms__details">
+                            <div class="spa-programms__details-title">
+                                Детали заказа
+                            </div>
+                            <form action="#" class="spa-programms__form">
+                                <div class="spa-programms__form-column">
+                                    <div class="form__field">
+                                        <div class="form__label">Ваше имя</div>
+                                        <input type="text" name="name" class="form__input" placeholder="Иванова Мария Ивановна">
+                                    </div>
+                                    <div class="form__field">
+                                        <div class="form__label">Желаемая дата</div>
+                                        <input type="date" name="date" class="form__input" placeholder="Выберите дату">
+                                    </div>
+                                    <div class="form__field">
+                                        <div class="form__label">Ваш телефон</div>
+                                        <input type="text" name="tel" class="form__input" placeholder="(999) 999 99 99">
+                                    </div>
+                                </div>
+                                <div class="spa-programms__form-column">
+                                    <div class="form__field">
+                                        <div class="form__label">Дополнительная информация к заказу</div>
+                                        <textarea name="comment" class="form__textarea" placeholder="Вы можете добавить комментарий для менеджера"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn_red">Оставить заявку</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="spa-programms__footer">
+                            <p>Позвольте себе сэкономить время, избавляя от необходимости тратить его на поездки в спа-салоны. Вы сможете наслаждаться процедурой в комфортной и уютной обстановке своего дома, что создает атмосферу расслабления и помогает снять стресс.</p>
+                            <p>Для тех, кто не может или не хочет покидать дом по различным причинам — будь то занятость или плохая погода  — выездной массаж становится отличным решением. Массажист сможет адаптировать сеанс под ваши личные предпочтения и потребности, что позволяет получить максимально эффективный и приятный опыт.</p>
+                            <p>Кроме того, выездной массаж гарантирует полную конфиденциальность и возможность наслаждаться процедурой без посторонних глаз. Вы также можете выбрать удобное для вас время, что делает услугу доступной даже для самых загруженных людей. Это также позволяет сочетать массаж с другими активностями, например, расслабиться с чашкой чая после сеанса или продолжить вечер в домашнем уюте, не тратя время на возвращение домой.</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer-home.html', {})
+        </div>
+        @@include('html/_cart.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>
