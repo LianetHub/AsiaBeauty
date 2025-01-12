@@ -340,17 +340,21 @@ $(function () {
         })
     }
 
-    if ($('.certs__slider').length > 0) {
+    if ($('.certs__slider-content').length > 0) {
+        const cursor = document.querySelector('.certs__main-cursor');
+        const container = document.querySelector('.certs__main-slider');
 
-        let thumbsSlider = new Swiper('.certs__thumbs-slider', {
+        const thumbsSlider = new Swiper('.certs__thumbs-slider', {
             slidesPerView: "auto",
-            spaceBetween: 4
+            spaceBetween: 10,
+            loop: true,
         })
 
-        let mainSlider = new Swiper('.certs__main-slider', {
+        const mainSlider = new Swiper('.certs__main-slider', {
             slidesPerView: 1,
             effect: "fade",
             speed: 800,
+            loop: true,
             fadeEffect: {
                 crossFade: true
             },
@@ -363,7 +367,50 @@ $(function () {
             }
         });
 
+        container.style.cursor = 'none';
+
+
+        cursor.style.position = 'absolute';
+
+
+        container.addEventListener('mousemove', (e) => {
+            const rect = container.getBoundingClientRect();
+            const cursorX = e.clientX - rect.left;
+            const cursorY = e.clientY - rect.top;
+
+            cursor.style.left = `${cursorX}px`;
+            cursor.style.top = `${cursorY}px`;
+
+
+            if (cursorX < rect.width / 2) {
+                cursor.classList.add('icon-arrow-left');
+                cursor.classList.remove('icon-arrow-right');
+            } else {
+                cursor.classList.add('icon-arrow-right');
+                cursor.classList.remove('icon-arrow-left');
+            }
+        });
+
+        container.addEventListener('click', (e) => {
+            const rect = container.getBoundingClientRect();
+            const cursorX = e.clientX - rect.left;
+
+            if (cursorX < rect.width / 2) {
+                mainSlider.slidePrev();
+            } else {
+                mainSlider.slideNext();
+            }
+        });
+
+        container.addEventListener('mouseleave', () => {
+            cursor.style.opacity = '0';
+        });
+
+        container.addEventListener('mouseenter', () => {
+            cursor.style.opacity = '1';
+        });
     }
+
 
 
     // Range Slider

@@ -65,42 +65,58 @@ export const fontsStyle = () => {
                         let fontName = fontFileName.split("-")[0]
                             ? fontFileName.split("-")[0]
                             : fontFileName;
-                        let fontWeight = fontFileName.split("-")[1]
+
+                        let fontDetails = fontFileName.split("-")[1]
                             ? fontFileName.split("-")[1]
                             : fontFileName;
-                        if (fontWeight.toLowerCase() === "thin") {
-                            fontWeight = 100;
-                        } else if (fontWeight.toLowerCase() === "extralight") {
-                            fontWeight = 200;
-                        } else if (fontWeight.toLowerCase() === "light") {
-                            fontWeight = 300;
-                        } else if (fontWeight.toLowerCase() === "book") {
-                            fontWeight = 400;
-                        } else if (fontWeight.toLowerCase() === "medium") {
-                            fontWeight = 500;
-                        } else if (fontWeight.toLowerCase() === "semibold" ||
-                            fontWeight.toLowerCase() === "demi") {
-                            fontWeight = 600;
-                        } else if (fontWeight.toLowerCase() === "bold") {
-                            fontWeight = 700;
-                        } else if (
-                            fontWeight.toLowerCase() === "extrabold" ||
-                            fontWeight.toLowerCase() === "heavy"
-                        ) {
-                            fontWeight = 800;
-                        } else if (fontWeight.toLowerCase() === "black") {
-                            fontWeight = 900;
-                        } else {
-                            fontWeight = 400;
+
+                        let fontWeight = 400;
+                        let fontStyle = "normal";
+
+                        switch (true) {
+                            case /thin/i.test(fontDetails):
+                                fontWeight = 100;
+                                break;
+                            case /extralight/i.test(fontDetails):
+                                fontWeight = 200;
+                                break;
+                            case /light/i.test(fontDetails):
+                                fontWeight = 300;
+                                break;
+                            case /book/i.test(fontDetails):
+                                fontWeight = 400;
+                                break;
+                            case /medium/i.test(fontDetails):
+                                fontWeight = 500;
+                                break;
+                            case /semibold|demi/i.test(fontDetails):
+                                fontWeight = 600;
+                                break;
+                            case /bold/i.test(fontDetails):
+                                fontWeight = 700;
+                                break;
+                            case /extrabold|heavy/i.test(fontDetails):
+                                fontWeight = 800;
+                                break;
+                            case /black/i.test(fontDetails):
+                                fontWeight = 900;
+                                break;
+                            default:
+                                fontWeight = 400;
                         }
+
+                        if (/italic/i.test(fontDetails)) {
+                            fontStyle = "italic";
+                        }
+
                         fs.appendFile(
                             fontsFile,
                             `@font-face {
-                                font-family: ${fontName};
+                                font-family: '${fontName}';
                                 font-display: swap;
                                 src: url("../fonts/${fontFileName}.woff2") format("woff2"), url("../fonts/${fontFileName}.woff") format("woff");
                                 font-weight: ${fontWeight};
-                                font-style: normal;
+                                font-style: ${fontStyle};
                             }\r\n`,
                             cb
                         );
@@ -116,5 +132,7 @@ export const fontsStyle = () => {
     });
 
     return app.gulp.src(`${app.path.srcFolder}`);
+
     function cb() { }
 };
+
