@@ -56,6 +56,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Jost";
+  font-display: swap;
+  src: url("../fonts/Jost-Bold.woff2") format("woff2"), url("../fonts/Jost-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
 .info__faq-button::before,
 .salons__item-link::before,
 .catalog__select .select::before,
@@ -1348,13 +1356,15 @@ body.lock-filter {
           order: 1;
 }
 
-.btn.btn_brown {
+.btn.btn_brown,
+.btn.news__filter.active {
   background: #543d2f;
   border-color: #543d2f;
   color: #f7f6f2;
 }
 
-.btn.btn_brown:active {
+.btn.btn_brown:active,
+.btn.news__filter.active:active {
   background: #9e3522;
   border-color: #9e3522;
 }
@@ -2230,7 +2240,7 @@ body.lock-filter {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  min-height: 100vh;
+  min-height: 60vh;
   padding: 9.47rem 0 3.13rem;
 }
 
@@ -2572,6 +2582,7 @@ body.lock-filter {
   color: #f7f6f2;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2588,6 +2599,20 @@ body.lock-filter {
 
 .capabilities__card:first-child:last-child {
   margin-top: -4rem;
+}
+
+.capabilities__card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .capabilities__card-text {
@@ -2607,6 +2632,53 @@ body.lock-filter {
   margin-left: auto;
 }
 
+.brands {
+  padding: 5.58rem 0;
+}
+
+.brands__title {
+  color: rgba(84, 61, 47, 0.4);
+  font-size: 0.875rem;
+  line-height: 145%;
+}
+
+.brands__list {
+  margin-top: 0.44rem;
+  gap: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.brands__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.brands__item img {
+  max-height: 11.375rem;
+  width: auto;
+}
+
 .banner {
   position: relative;
   background: #232323;
@@ -2619,7 +2691,7 @@ body.lock-filter {
       -ms-flex-align: end;
           align-items: flex-end;
   padding: 5rem 0em;
-  height: 100vh;
+  height: 50vh;
 }
 
 .banner__container {
@@ -3160,7 +3232,7 @@ body.lock-filter {
 }
 
 .product-card__option-content {
-  padding: 0.625rem;
+  padding: 0.525rem;
   border-radius: 6.25rem;
   border: 0.0625rem solid #eceae0;
   text-align: center;
@@ -3503,12 +3575,32 @@ body.lock-filter {
 
 .salons__title {
   margin-top: 1.2rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 2.3125rem;
+}
+
+.salons__title::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 9.375rem;
+  height: 0.0625rem;
+  background: #dbd9d7;
+}
+
+.salons__title::first-letter {
+  font-family: inherit;
 }
 
 .salons__subtitle {
-  margin: 1.25rem 0 0 0;
+  margin: 2.25rem 0 0 0;
   text-align: center;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 145%;
 }
 
@@ -3518,25 +3610,67 @@ body.lock-filter {
 
 .salons__item {
   padding: 1.25rem 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .salons__item:not(:last-child) {
-  margin-bottom: 7.5rem;
+  margin-bottom: 0.9375rem;
 }
 
-.salons__item-image {
+.salons__item-slider {
+  min-width: 0;
+  margin: 0;
+  max-width: 100%;
+  position: relative;
+}
+
+.salons__item-slider-pagination {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.salons__item-slider-pagination .swiper-pagination-bullet {
+  width: 0.625rem;
+  height: 0.625rem;
+  opacity: 0.52;
+  background: #d9d9d9;
+  margin: 0 0.1875rem;
+}
+
+.salons__item-slider-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.salons__item-prev {
+  background: #9e3522;
+}
+
+.salons__item-prev::after {
+  color: #fff;
+}
+
+.salons__item-next {
+  background: #9e3522;
+}
+
+.salons__item-next::after {
+  color: #fff;
+}
+
+.salons__item-slide {
+  width: 100%;
   overflow: hidden;
-  height: 25rem;
-}
-
-.salons__item-price {
-  margin-top: 2.5rem;
-  border-radius: 6.25rem;
-  border: 0.0625rem solid rgba(84, 61, 47, 0.1);
-  padding: 0.45rem 1rem;
-  font-size: 0.875rem;
-  line-height: 145%;
-  display: inline-block;
+  border-radius: 0.3125rem;
+  height: 24rem;
 }
 
 .salons__item-info {
@@ -3548,12 +3682,14 @@ body.lock-filter {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: 1rem;
-  gap: 1.5rem;
+  gap: 0.81rem;
+  max-width: 37.5625rem;
 }
 
 .salons__item-caption {
-  line-height: 120%;
-  font-size: 1.375rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 145%;
 }
 
 .salons__item-desc {
@@ -3570,9 +3706,35 @@ body.lock-filter {
 }
 
 .salons__item-text {
-  text-align: justify;
-  font-size: 1.125rem;
+  font-size: 0.875rem;
   line-height: 145%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.salons__item-text p:not(:first-child) {
+  margin-top: 1.25rem;
+}
+
+.salons__item-text ul {
+  list-style: disc;
+  padding-left: 1em;
+}
+
+.salons__item-text ul li::marker {
+  font-size: 0.5em;
+}
+
+.salons__item-btn {
+  margin-top: 1.5rem;
+  margin-left: auto;
+  min-width: 12.4375rem;
+  text-decoration: underline;
 }
 
 .salons__item-link {
@@ -3784,6 +3946,7 @@ body.lock-filter {
 
 .certs:has(.container_md) {
   padding-top: 7.5rem;
+  padding-bottom: 4rem;
 }
 
 .certs__header {
@@ -3848,7 +4011,8 @@ body.lock-filter {
   gap: 1.25rem;
 }
 
-.certs__caption {
+.certs__caption,
+.news__hint {
   color: rgba(84, 61, 47, 0.4);
   font-size: 0.875rem;
   line-height: 145%;
@@ -4626,6 +4790,147 @@ body.lock-filter {
   margin-bottom: 1em;
 }
 
+.news {
+  padding: 4.5rem 0 7.5rem 0;
+}
+
+.news:first-child {
+  padding: 7.5rem 0;
+}
+
+.news__title {
+  margin-top: 1.875rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 3.125rem;
+}
+
+.news__title::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 9.375rem;
+  height: 0.0625rem;
+  background: #dbd9d7;
+}
+
+.news__title::first-letter {
+  font-family: inherit;
+}
+
+.news__filters {
+  margin-top: 3.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.news__body:not(:first-child) {
+  margin-top: 2.25rem;
+}
+
+.news__hint {
+  margin-bottom: 0.9375rem;
+}
+
+.news__caption::first-letter {
+  font-family: inherit;
+}
+
+.news__list {
+  margin-top: 1.875rem;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16.875rem, 1fr));
+  gap: 1.75rem;
+  row-gap: 3.5rem;
+}
+
+.news__item-header {
+  overflow: hidden;
+  position: relative;
+  border-radius: 0.3125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.news__item-header + .news__item-btn {
+  margin-top: 1rem;
+}
+
+.news__item-image img {
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.news__item-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  padding: 1.0625rem 0.75rem 1.25rem 1.0625rem;
+}
+
+.news__item-time {
+  color: #f7f6f2;
+  font-family: Cormorant;
+  font-size: 1.25rem;
+  line-height: 110%;
+  letter-spacing: -0.025rem;
+}
+
+.news__item-title {
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: -0.025rem;
+  min-height: 4.125rem;
+}
+
+.news__item-desc {
+  margin-top: 0.75rem;
+  color: #543d2f;
+  font-family: Jost;
+  font-size: 1.125rem;
+  line-height: 145%;
+  padding: 0 0.75rem 0 0.25rem;
+}
+
+.news__item-btn {
+  margin-top: 0.5rem;
+  min-width: 12.25rem;
+}
+
+.news__more {
+  margin-top: 4.44rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 11.25rem;
+}
+
 @media (min-width: 389.98px) {
   .container.container_fluid {
     padding: 0 1.5rem;
@@ -4765,6 +5070,17 @@ body.lock-filter {
     letter-spacing: -0.015rem;
   }
 
+  .brands__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
   .catalog__grid {
     row-gap: 1.75rem;
     -ms-grid-columns: (1fr)[2];
@@ -4834,6 +5150,10 @@ body.lock-filter {
     font-size: 1.5rem;
   }
 
+  .salons__item-slide {
+    height: 40rem;
+  }
+
   .certs:has(.container_md) {
     padding-top: 8.75rem;
   }
@@ -4868,6 +5188,22 @@ body.lock-filter {
 
   .contacts__item-address {
     font-size: 1rem;
+  }
+
+  .news__title {
+    padding-bottom: 6.25rem;
+  }
+
+  .news__filter {
+    padding: 0.53125rem 1.5rem;
+  }
+
+  .news__body:not(:first-child) {
+    margin-top: 4.625rem;
+  }
+
+  .news__item-header {
+    aspect-ratio: 0.7342995169;
   }
 }
 
@@ -5228,30 +5564,11 @@ body.lock-filter {
   }
 
   .salons__list {
-    margin-top: 3.75rem;
-  }
-
-  .salons__item-image {
-    height: 31.25rem;
-  }
-
-  .salons__item-info {
-    margin-top: 1.25rem;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-
-  .salons__item-caption {
-    font-size: 1.5rem;
+    margin-top: 3.5rem;
   }
 
   .salons__item-desc {
     margin-left: auto;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
   }
 
   .info {
@@ -5541,6 +5858,10 @@ body.lock-filter {
     font-size: 1rem;
     margin: 7.81rem auto 0;
   }
+
+  .news:first-child {
+    padding: 9.3rem 0 7.5rem 0;
+  }
 }
 
 @media (min-width: 800px) {
@@ -5600,6 +5921,10 @@ body.lock-filter {
     grid-template-columns: repeat(4, 1fr);
   }
 
+  .brands {
+    padding: 13.6rem 0 5.58rem;
+  }
+
   .banner {
     height: 75rem;
   }
@@ -5650,10 +5975,29 @@ body.lock-filter {
     grid-auto-rows: 2.1875rem;
   }
 
-  .salons__item-desc {
+  .salons__item {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .salons__item:nth-child(odd) .salons__item-slider {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+
+  .salons__item-slider {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 36.25rem;
-            flex: 0 0 36.25rem;
+        -ms-flex: 0 0 28rem;
+            flex: 0 0 28rem;
   }
 
   .certs__title {
@@ -5790,7 +6134,7 @@ body.lock-filter {
   }
 
   .main {
-    min-height: 100vh;
+    min-height: 60vh;
   }
 
   .description {
@@ -5830,9 +6174,13 @@ body.lock-filter {
     width: 19.6875rem;
   }
 
+  .brands__list {
+    padding: 0 3.26rem 0 2.26rem;
+  }
+
   .banner {
     padding: 5.875rem 0em;
-    height: 100vh;
+    height: 50vh;
   }
 
   .catalog {
@@ -6034,15 +6382,25 @@ body.lock-filter {
   }
 
   .salons {
-    padding: 10.5rem 0 0 0;
+    padding: 8.75rem 0 0 0;
   }
 
   .salons__title {
-    margin-top: 1.75rem;
+    margin-top: 5.75rem;
   }
 
-  .salons__item:not(:last-child) {
-    margin-bottom: 8.75rem;
+  .salons__item-slider {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.75rem;
+            flex: 0 0 33.75rem;
+  }
+
+  .salons__item-slide {
+    height: 45.6875rem;
+  }
+
+  .salons__item-info {
+    padding-top: 7.75rem;
   }
 
   .info {
@@ -6284,11 +6642,33 @@ body.lock-filter {
   .about__info-images .about__info-image:last-child {
     height: 25rem;
   }
+
+  .news {
+    padding: 8rem 0 12.5rem 0;
+  }
+
+  .news:first-child {
+    padding: 8.75rem 0 3rem 0;
+  }
+
+  .news__list {
+    padding-right: 1.25rem;
+  }
 }
 
 @media (min-width: 1439.98px) {
   .footer__container {
     gap: 6.25rem;
+  }
+}
+
+@media (min-width: 1599.98px) {
+  .salons__item-prev {
+    left: -5rem;
+  }
+
+  .salons__item-next {
+    right: -5rem;
   }
 }
 
@@ -6402,7 +6782,8 @@ body.lock-filter {
     border-color: #d8d3bf;
   }
 
-  .btn.btn_brown:hover {
+  .btn.btn_brown:hover,
+  .btn.news__filter.active:hover {
     background: #9e3522;
     border-color: #9e3522;
   }
@@ -6513,9 +6894,19 @@ body.lock-filter {
     border-color: #9e3522;
   }
 
+  .capabilities__card:has(.capabilities__card-image):hover {
+    background: transparent;
+    color: #fff;
+  }
+
   .capabilities__card:hover {
     background: #f7f6f2;
     color: #543d2f;
+  }
+
+  .capabilities__card:hover .capabilities__card-image {
+    opacity: 1;
+    visibility: visible;
   }
 
   .catalog__search-input:hover {
@@ -6554,6 +6945,10 @@ body.lock-filter {
     color: #9e3522;
   }
 
+  .salons__item-btn:hover {
+    text-decoration: none;
+  }
+
   .salons__item-link:hover {
     border-color: currentColor;
   }
@@ -6586,6 +6981,12 @@ body.lock-filter {
 
   .spa-programms__desc a:hover {
     color: #9e3522;
+  }
+
+  .news__item-header:hover .news__item-image img {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
   }
 }
 

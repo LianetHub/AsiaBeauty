@@ -47,3 +47,11 @@
 	font-weight: 300;
 	font-style: normal;
 }
+
+@font-face {
+	font-family: "Jost";
+	font-display: swap;
+	src: url("../fonts/Jost-Bold.woff2") format("woff2"), url("../fonts/Jost-Bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}

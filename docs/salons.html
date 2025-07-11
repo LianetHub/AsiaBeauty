@@ -44,13 +44,13 @@
     <!-- Twitter -->
 
     <!-- plugins -->
-    <link rel="stylesheet" href="css/libs//swiper-bundle.min.css?_v=20250112164641" />
-    <link rel="stylesheet" href="css/libs/no-ui-slider.css?_v=20250112164641" />
-    <link rel="stylesheet" href="css/libs/fancybox.css?_v=20250112164641" />
+    <link rel="stylesheet" href="css/libs//swiper-bundle.min.css?_v=20250711204816" />
+    <link rel="stylesheet" href="css/libs/no-ui-slider.css?_v=20250711204816" />
+    <link rel="stylesheet" href="css/libs/fancybox.css?_v=20250711204816" />
     <!-- plugins -->
 
-    <link rel="stylesheet" href="css/reset.min.css?_v=20250112164641" />
-    <link rel="stylesheet" href="css/style.min.css?_v=20250112164641" />
+    <link rel="stylesheet" href="css/reset.min.css?_v=20250711204816" />
+    <link rel="stylesheet" href="css/style.min.css?_v=20250711204816" />
 
 </head>
 
@@ -138,7 +138,7 @@
 </div>
     <main class="page">
       <section class="salons">
-        <div class="salons__container container">
+        <div class="salons__container container container_md">
           <nav aria-label="Хлебные крошки" class="breadcrumbs breadcrumbs_dark">
             <ul class="breadcrumbs__items">
               <li class="breadcrumbs__item">
@@ -149,132 +149,216 @@
               </li>
             </ul>
           </nav>
-          <h1 class="salons__title title">spa-салоны asia beauty spa</h1>
+          <h1 class="salons__title title-md">Локации Asia Beauty Spa</h1>
           <p class="salons__subtitle">Все салоны открыты 24 часа в сутки</p>
           <ul class="salons__list">
-            <li class="salons__item" data-animate="line">
-              <div class="salons__item-image" data-animate="parallax">
-                <img src="img/photo.png" class="cover-image" alt="photo">
-              </div>
-              <div class="salons__item-price">
-                parking 250₽/ч
+            <li class="salons__item">
+              <div class="salons__item-slider">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div data-animate="parallax" class="salons__item-slide swiper-slide">
+                      <img src="img/salons/01.jpg" class="cover-image" alt="photo">
+                    </div>
+                    <div data-animate="parallax" class="salons__item-slide swiper-slide">
+                      <img src="img/salons/02.jpg" class="cover-image" alt="photo">
+                    </div>
+                    <div data-animate="parallax" class="salons__item-slide swiper-slide">
+                      <img src="img/salons/03.jpg" class="cover-image" alt="photo">
+                    </div>
+                    <div data-animate="parallax" class="salons__item-slide swiper-slide">
+                      <img src="img/salons/04.jpg" class="cover-image" alt="photo">
+                    </div>
+                    <div data-animate="parallax" class="salons__item-slide swiper-slide">
+                      <img src="img/salons/05.jpg" class="cover-image" alt="photo">
+                    </div>
+                  </div>
+                </div>
+                <button class="salons__item-prev swiper-button-prev"></button>
+                <button class="salons__item-next swiper-button-next"></button>
+                <div class="salons__item-slider-pagination swiper-pagination"></div>
               </div>
               <div class="salons__item-info">
                 <div class="salons__item-caption">
-                  Салон №1
-                  <br>
-                  в Москва-Сити, гостиница Novotel
+                  Отель Novotel
                 </div>
                 <div class="salons__item-desc">
-                  <p class="salons__item-text">
-                    1300 квадратных метров люксового отдыха, релакса и удовольствия. Здесь вас ждут наши знаменитые мужской и женский акватермальные комплексы с церемониями парения в бане и хаммаме. А также огромное lounge-пространство, где вы сможете насладиться тишиной после спа-программ и массажей или довести свой отдых до кульминации массажем стоп или головы
-                  </p>
-                  <a href="/salon.html" class="salons__item-link">Подробнее</a>
+                  <div class="salons__item-text">
+                    <p>
+                      в Москва-Сити, гостиница Novotel
+                    </p>
+                    <ul>
+                      <li>1300 м²</li>
+                      <li>3 VIP-апартаментов</li>
+                      <li>Свободная акватермальная зона</li>
+                      <li>В vip-апартаменты можно заказать еду и напитки</li>
+                    </ul>
+                    <p>
+                      Это spa-пространство в азиатском стиле. Интерьер создаёт величественную обстановку: его дополняют увесистые детали, тяжелая мебель, элементы из дерева. Полумрак в spa-пространстве — обеспечивает комфорт и приватную атмосферу. 
+                    </p>
+                    <p>
+                      В зоне ресепшн расположены длинные ряды витрин — в них брендовая уходовая косметика и парфюмерия, которую удобно приобрести на подарок — до или после spa-процедур.
+                    </p>
+                    <p>
+                      В spa-пространстве расположены три комнаты vip-апартаментов — с сауной и джакузи. Мужской и женский акватермальные комплексы с баней / хаммамом. Просторная lounge-зона с баром.
+                      <br>
+                      Здесь можете насладиться индивидуальным парением и spa-услугами premium класса. Посетить более 50 видов массажа. Получить удовольствие от spa-процедур по уходу за лицом и телом. Сходить на женский / мужской spa-маникюр и spa-педикюр. Провести время в уединении / с близким человеком / с компанией.
+                    </p>
+                  </div>
+                  <a href="/salon.html" class="salons__item-btn btn btn_red">Записаться в салон</a>
                 </div>
               </div>
             </li>
-            <li class="salons__item" data-animate="line">
-              <div class="salons__item-image" data-animate="parallax">
-                <img src="img/photo.png" class="cover-image" alt="photo">
-              </div>
-              <div class="salons__item-price">
-                free parking
+            <li class="salons__item">
+              <div class="salons__item-slider">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div data-animate="parallax" class="salons__item-slide swiper-slide">
+                      <img src="img/salons/02.jpg" class="cover-image" alt="photo">
+                    </div>
+                    <div data-animate="parallax" class="salons__item-slide swiper-slide">
+                      <img src="img/salons/03.jpg" class="cover-image" alt="photo">
+                    </div>
+                    <div data-animate="parallax" class="salons__item-slide swiper-slide">
+                      <img src="img/salons/04.jpg" class="cover-image" alt="photo">
+                    </div>
+                    <div data-animate="parallax" class="salons__item-slide swiper-slide">
+                      <img src="img/salons/05.jpg" class="cover-image" alt="photo">
+                    </div>
+                    <div data-animate="parallax" class="salons__item-slide swiper-slide">
+                      <img src="img/salons/01.jpg" class="cover-image" alt="photo">
+                    </div>
+                  </div>
+                </div>
+                <button class="salons__item-prev swiper-button-prev"></button>
+                <button class="salons__item-next swiper-button-next"></button>
+                <div class="salons__item-slider-pagination swiper-pagination"></div>
               </div>
               <div class="salons__item-info">
                 <div class="salons__item-caption">
-                  Салон №2
-                  <br>
-                  Radisson Slavyanskaya Hotel
+                  Отель Radisson
                 </div>
                 <div class="salons__item-desc">
-                  <p class="salons__item-text">
-                    Даже в самый обычный день можно найти время для волшебства и наслаждения, если приехать в салон Asia Beauty Spa, разместившийся в Radisson Slavyanskaya Hotel. С порога поражают королевские интерьеры — в них созвучны восточные мотивы и античная архитектура с её арочным стилем.
-                  </p>
-                  <a href="/salon.html" class="salons__item-link">Подробнее</a>
+                  <div class="salons__item-text">
+                    <p>
+                      Даже в самый обычный день можно найти время для волшебства и наслаждения, если приехать в салон Asia Beauty Spa, разместившийся в Radisson Slavyanskaya Hotel. С порога поражают королевские интерьеры — в них созвучны восточные мотивы и античная архитектура с её арочным стилем.
+                    </p>
+                  </div>
+                  <a href="/salon.html" class="salons__item-btn btn btn_red">Записаться в салон</a>
                 </div>
               </div>
             </li>
-            <li class="salons__item" data-animate="line">
-              <div class="salons__item-image" data-animate="parallax">
-                <img src="img/photo.png" class="cover-image" alt="photo">
-              </div>
-              <div class="salons__item-price">
-                parking 200₽/ч
+            <li class="salons__item">
+              <div class="salons__item-slider">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div data-animate="parallax" class="salons__item-slide swiper-slide">
+                      <img src="img/salons/03.jpg" class="cover-image" alt="photo">
+                    </div>
+                    <div data-animate="parallax" class="salons__item-slide swiper-slide">
+                      <img src="img/salons/04.jpg" class="cover-image" alt="photo">
+                    </div>
+                    <div data-animate="parallax" class="salons__item-slide swiper-slide">
+                      <img src="img/salons/05.jpg" class="cover-image" alt="photo">
+                    </div>
+                    <div data-animate="parallax" class="salons__item-slide swiper-slide">
+                      <img src="img/salons/01.jpg" class="cover-image" alt="photo">
+                    </div>
+                    <div data-animate="parallax" class="salons__item-slide swiper-slide">
+                      <img src="img/salons/02.jpg" class="cover-image" alt="photo">
+                    </div>
+                  </div>
+                </div>
+                <button class="salons__item-prev swiper-button-prev"></button>
+                <button class="salons__item-next swiper-button-next"></button>
+                <div class="salons__item-slider-pagination swiper-pagination"></div>
               </div>
               <div class="salons__item-info">
                 <div class="salons__item-caption">
-                  Салон №3
-                  <br>
-                  на Смоленской, в отеле AZIMUT
+                  Отель Azimut
                 </div>
                 <div class="salons__item-desc">
-                  <p class="salons__item-text">
-                    1700 квадратных метров удовольствия и релакса в аутентичных восточных интерьерах, 7 уникальных vip-апартаментов разной категории с индивидуальными хамамом или сауной для приватного отдыха, романтического свидания или веселой spa- вечеринки, lounge-cafe с зоной отдыха и релаксации, соляная комната, 2 отдельные акватермальные зоны для мужчин и женщин с хаммом, сауной, гардеробом и гидромассажными ваннами
-                  </p>
-                  <a href="/salon.html" class="salons__item-link">Подробнее</a>
+                  <div class="salons__item-text">
+                    <p>
+                      1700 квадратных метров удовольствия и релакса в аутентичных восточных интерьерах,7 уникальных vip-апартаментов разной категории с индивидуальными хамамом или сауной для приватного отдыха, романтического свидания или веселой spa- вечеринки, lounge-cafe с зоной отдыха и релаксации, соляная комната, 2 отдельные акватермальные зоны для мужчин и женщин с хаммом, сауной, гардеробом и гидромассажными ваннами
+                    </p>
+                  </div>
+                  <a href="/salon.html" class="salons__item-btn btn btn_red">Записаться в салон</a>
                 </div>
               </div>
             </li>
-            <li class="salons__item" data-animate="line">
-              <div class="salons__item-image" data-animate="parallax">
-                <img src="img/photo.png" class="cover-image" alt="photo">
-              </div>
-              <div class="salons__item-price">
-                free parking
+            <li class="salons__item">
+              <div class="salons__item-slider">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div data-animate="parallax" class="salons__item-slide swiper-slide">
+                      <img src="img/salons/04.jpg" class="cover-image" alt="photo">
+                    </div>
+                    <div data-animate="parallax" class="salons__item-slide swiper-slide">
+                      <img src="img/salons/05.jpg" class="cover-image" alt="photo">
+                    </div>
+                    <div data-animate="parallax" class="salons__item-slide swiper-slide">
+                      <img src="img/salons/01.jpg" class="cover-image" alt="photo">
+                    </div>
+                    <div data-animate="parallax" class="salons__item-slide swiper-slide">
+                      <img src="img/salons/02.jpg" class="cover-image" alt="photo">
+                    </div>
+                    <div data-animate="parallax" class="salons__item-slide swiper-slide">
+                      <img src="img/salons/03.jpg" class="cover-image" alt="photo">
+                    </div>
+                  </div>
+                </div>
+                <button class="salons__item-prev swiper-button-prev"></button>
+                <button class="salons__item-next swiper-button-next"></button>
+                <div class="salons__item-slider-pagination swiper-pagination"></div>
               </div>
               <div class="salons__item-info">
                 <div class="salons__item-caption">
-                  Spa-пространство в отеле AZIMUT
-                  <br>
-                  на 20 этаже
+                  Салон на Полянке
                 </div>
                 <div class="salons__item-desc">
-                  <p class="salons__item-text">
-                    Наслаждайтесь шикарным видом на Москву в панорамных апартаментах на 20 этаже. Вас ждет двойное удовольствие: погружаетесь в spa-релаксацию, вдохновляетесь видом столицы. Атмосфера помогает перезагрузиться: прогреваете тело в хаммаме, расслабляетесь в комнате отдыха. Окунаетесь в прохладный бассейн, посещаете зону пилинга. Для полного relax бронируйте spa-программы. Наслаждайтесь процедурами и видом на Москву в уединении с любимым человеком / компанией.
-                  </p>
-                  <a href="/salon.html" class="salons__item-link">Подробнее</a>
+                  <div class="salons__item-text">
+                    <p>
+                      Такой самобытный и уютный: с порога ощущаешь, как жизнь входит в фазу спокойствия и умиротворения. А суета большого города и натянутые улыбки - уже далеко, в другом измерении. Это действительно то место, где забываешь, что находишься в пределах мегаполиса.
+                    </p>
+                  </div>
+                  <a href="/salon.html" class="salons__item-btn btn btn_red">Записаться в салон</a>
                 </div>
               </div>
             </li>
-            <li class="salons__item" data-animate="line">
-              <div class="salons__item-image" data-animate="parallax">
-                <img src="img/photo.png" class="cover-image" alt="photo">
-              </div>
-              <div class="salons__item-price">
-                parking 350₽/ч
+            <li class="salons__item">
+              <div class="salons__item-slider">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div data-animate="parallax" class="salons__item-slide swiper-slide">
+                      <img src="img/salons/05.jpg" class="cover-image" alt="photo">
+                    </div>
+                    <div data-animate="parallax" class="salons__item-slide swiper-slide">
+                      <img src="img/salons/01.jpg" class="cover-image" alt="photo">
+                    </div>
+                    <div data-animate="parallax" class="salons__item-slide swiper-slide">
+                      <img src="img/salons/02.jpg" class="cover-image" alt="photo">
+                    </div>
+                    <div data-animate="parallax" class="salons__item-slide swiper-slide">
+                      <img src="img/salons/03.jpg" class="cover-image" alt="photo">
+                    </div>
+                    <div data-animate="parallax" class="salons__item-slide swiper-slide">
+                      <img src="img/salons/04.jpg" class="cover-image" alt="photo">
+                    </div>
+                  </div>
+                </div>
+                <button class="salons__item-prev swiper-button-prev"></button>
+                <button class="salons__item-next swiper-button-next"></button>
+                <div class="salons__item-slider-pagination swiper-pagination"></div>
               </div>
               <div class="salons__item-info">
                 <div class="salons__item-caption">
-                  Салон №4
-                  <br>
-                  на Полянке
+                  Салон на Маяковской
                 </div>
                 <div class="salons__item-desc">
-                  <p class="salons__item-text">
-                    Такой самобытный и уютный: с порога ощущаешь, как жизнь входит в фазу спокойствия и умиротворения. А суета большого города и натянутые улыбки - уже далеко, в другом измерении. Это действительно то место, где забываешь, что находишься в пределах мегаполиса.
-                  </p>
-                  <a href="/salon.html" class="salons__item-link">Подробнее</a>
-                </div>
-              </div>
-            </li>
-            <li class="salons__item" data-animate="line">
-              <div class="salons__item-image" data-animate="parallax">
-                <img src="img/photo.png" class="cover-image" alt="photo">
-              </div>
-              <div class="salons__item-price">
-                free parking
-              </div>
-              <div class="salons__item-info">
-                <div class="salons__item-caption">
-                  Салон №5
-                  <br>
-                  на Мичуринском проспекте
-                </div>
-                <div class="salons__item-desc">
-                  <p class="salons__item-text">
-                    Когда хочется очутиться на морском побережье прямо сейчас, приезжайте на spa-курорт на Мичуринском. Мягкий свет, приглушённая музыка и плавные движения рук наших мастеров захлестнут вас волной наслаждения и подарят безмятежный отдых.
-                  </p>
-                  <a href="/salon.html" class="salons__item-link">Подробнее</a>
+                  <div class="salons__item-text">
+                    <p>ASIA BEAUTY SPA на Маяковской — удивительный уголок китайской культуры в центре Москвы. Традиционные техники наших китайских мастеров помогут эффективнее расслабить ваш организм и снять стресс. Также мы добавили отдельные индивидуальные апартаменты, где вы сможете отдохнуть, не отвлекаясь на шум и других клиентов.</p>
+                  </div>
+                  <a href="/salon.html" class="salons__item-btn btn btn_red">Записаться в салон</a>
                 </div>
               </div>
             </li>
@@ -283,175 +367,79 @@
         <div class="salons__map map"></div>
       </section>
     </main>
-    <footer data-animate class="footer">
-    <div class="addresses">
-        <div class="addresses__container container">
-            <h2 class="addresses__title title">Адреса салонов asia beauty spa</h2>
-            <ul class="addresses__list">
-                <li class="addresses__item">
-                    <div class="addresses__item-header">
-                        <div class="addresses__item-icon">
-                            <img src="img/icons/point.svg" alt="icon">
-                        </div>
-                        <div class="addresses__item-main">
-                            <div class="addresses__item-title">Салон в Москва-Сити, гостиница Novotel</div>
-                            <address class="addresses__item-text">Москва, Пресненская набережная, 2 (м. Выставочная)</address>
-                        </div>
-                    </div>
-                    <div class="addresses__item-bottom">
-                        <a href="tel:+74959999999" class="addresses__item-phone">+7 (495) 999-99-99</a>
-                        <a href="" class="addresses__item-btn btn btn_beige btn_sm">
-                            Построить маршрут
-                            <svg width="30" height="7" viewBox="0 0 30 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M29.5 3.79999L24.5 0.913236V6.68674L29.5 3.79999ZM0 4.29999H25V3.29999H0V4.29999Z" fill="#E4C272" />
-                            </svg>
-                        </a>
-                    </div>
-                </li>
-                <li class="addresses__item">
-                    <div class="addresses__item-header">
-                        <div class="addresses__item-icon">
-                            <img src="img/icons/point.svg" alt="icon">
-                        </div>
-                        <div class="addresses__item-main">
-                            <div class="addresses__item-title">Салон в Radisson Slavyanskaya Hotel</div>
-                            <address class="addresses__item-text">Москва, площадь Европы, 2 (м.Киевская)</address>
-                        </div>
-                    </div>
-                    <div class="addresses__item-bottom">
-                        <a href="tel:+74959999999" class="addresses__item-phone">+7 (495) 999-99-99</a>
-                        <a href="" class="addresses__item-btn btn btn_beige btn_sm">
-                            Построить маршрут
-                            <svg width="30" height="7" viewBox="0 0 30 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M29.5 3.79999L24.5 0.913236V6.68674L29.5 3.79999ZM0 4.29999H25V3.29999H0V4.29999Z" fill="#E4C272" />
-                            </svg>
-                        </a>
-                    </div>
-                </li>
-                <li class="addresses__item">
-                    <div class="addresses__item-header">
-                        <div class="addresses__item-icon">
-                            <img src="img/icons/point.svg" alt="icon">
-                        </div>
-                        <div class="addresses__item-main">
-                            <div class="addresses__item-title">Салон на Смоленской, в отеле AZIMUT</div>
-                            <address class="addresses__item-text">Москва, Смоленская улица, 8 (м.Смоленская)</address>
-                        </div>
-                    </div>
-                    <div class="addresses__item-bottom">
-                        <a href="tel:+74959999999" class="addresses__item-phone">+7 (495) 999-99-99</a>
-                        <a href="" class="addresses__item-btn btn btn_beige btn_sm">
-                            Построить маршрут
-                            <svg width="30" height="7" viewBox="0 0 30 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M29.5 3.79999L24.5 0.913236V6.68674L29.5 3.79999ZM0 4.29999H25V3.29999H0V4.29999Z" fill="#E4C272" />
-                            </svg>
-                        </a>
-                    </div>
-                </li>
-                <li class="addresses__item">
-                    <div class="addresses__item-header">
-                        <div class="addresses__item-icon">
-                            <img src="img/icons/point.svg" alt="icon">
-                        </div>
-                        <div class="addresses__item-main">
-                            <div class="addresses__item-title">Салон на Полянке</div>
-                            <address class="addresses__item-text">Москва, Погорельский переулок, 6 (м. Полянка)</address>
-                        </div>
-                    </div>
-                    <div class="addresses__item-bottom">
-                        <a href="tel:+74959999999" class="addresses__item-phone">+7 (495) 999-99-99</a>
-                        <a href="" class="addresses__item-btn btn btn_beige btn_sm">
-                            Построить маршрут
-                            <svg width="30" height="7" viewBox="0 0 30 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M29.5 3.79999L24.5 0.913236V6.68674L29.5 3.79999ZM0 4.29999H25V3.29999H0V4.29999Z" fill="#E4C272" />
-                            </svg>
-                        </a>
-                    </div>
-                </li>
-                <li class="addresses__item">
-                    <div class="addresses__item-header">
-                        <div class="addresses__item-icon">
-                            <img src="img/icons/point.svg" alt="icon">
-                        </div>
-                        <div class="addresses__item-main">
-                            <div class="addresses__item-title">Spa-апартаменты в Оружейном переулке</div>
-                            <address class="addresses__item-text">Москва, Оружейный пер., д.13/1 (м. Маяковская)</address>
-                        </div>
-                    </div>
-                    <div class="addresses__item-bottom">
-                        <a href="tel:+74959999999" class="addresses__item-phone">+7 (495) 999-99-99</a>
-                        <a href="" class="addresses__item-btn btn btn_beige btn_sm">
-                            Построить маршрут
-                            <svg width="30" height="7" viewBox="0 0 30 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M29.5 3.79999L24.5 0.913236V6.68674L29.5 3.79999ZM0 4.29999H25V3.29999H0V4.29999Z" fill="#E4C272" />
-                            </svg>
-                        </a>
-                    </div>
-                </li>
-                <li class="addresses__item">
-                    <div class="addresses__item-header">
-                        <div class="addresses__item-icon">
-                            <img src="img/icons/point.svg" alt="icon">
-                        </div>
-                        <div class="addresses__item-main">
-                            <div class="addresses__item-title">Spa-апартаменты 20 этаж</div>
-                            <address class="addresses__item-text">Москва, Смоленская улица, 8 (м.Смоленская)</address>
-                        </div>
-                    </div>
-                    <div class="addresses__item-bottom">
-                        <a href="tel:+74959999999" class="addresses__item-phone">+7 (495) 999-99-99</a>
-                        <a href="" class="addresses__item-btn btn btn_beige btn_sm">
-                            Построить маршрут
-                            <svg width="30" height="7" viewBox="0 0 30 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M29.5 3.79999L24.5 0.913236V6.68674L29.5 3.79999ZM0 4.29999H25V3.29999H0V4.29999Z" fill="#E4C272" />
-                            </svg>
-                        </a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer__container container ">
-        <div class="footer__caption">
-            Красота и гармония <br>
-            в asia beauty spa
-        </div>
-        <div class="footer__main">
-            <nav aria-label="Меню в подвале" class="footer__menu">
-                <ul class="footer__menu-list">
-                    <li class="footer__menu-item"><a href="/massage.html" class="footer__menu-link">Массаж</a></li>
-                    <li class="footer__menu-item"><a href="/care.html" class="footer__menu-link">Уходовые процедуры</a></li>
-                    <li class="footer__menu-item"><a href="/spa.html" class="footer__menu-link">Spa–программы</a></li>
-                    <li class="footer__menu-item"><a href="/apartments.html" class="footer__menu-link">Апартаменты</a></li>
-                    <li class="footer__menu-item"><a href="" class="footer__menu-link">Сертификаты</a></li>
-                    <li class="footer__menu-item"><a href="" class="footer__menu-link">Asia Beauty Spa</a></li>
-                </ul>
-                <ul class="footer__menu-list">
-                    <li class="footer__menu-item"><a href="/salons.html" class="footer__menu-link">Салоны</a></li>
-                    <li class="footer__menu-item"><a href="" class="footer__menu-link">Клубная карта</a></li>
-                    <li class="footer__menu-item"><a href="/deposits.scss" class="footer__menu-link">Spa–депозит</a></li>
-                    <li class="footer__menu-item"><a href="/promotions.html" class="footer__menu-link">Акции</a></li>
-                    <li class="footer__menu-item"><a href="/payment.html" class="footer__menu-link">Оплата и доставка</a></li>
-                    <li class="footer__menu-item"><a href="/cooperation.html" class="footer__menu-link">Сотрудничество</a></li>
-                    <li class="footer__menu-item"><a href="/etiquette.html" class="footer__menu-link">Spa–этикет</a></li>
-                </ul>
+    <footer data-animate class="footer-home">
+    <div class="footer-home__container container container_md">
+        <div class="footer-home__columns">
+            <div class="footer-home__column">
+                <div class="footer-home__caption">Клиентам</div>
+                <nav aria-label="Меню в подвале" class="footer__menu">
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-item"><a href="/massage.html" class="footer__menu-link">Массаж</a></li>
+                        <li class="footer__menu-item"><a href="/care.html" class="footer__menu-link">Уходовые процедуры</a></li>
+                        <li class="footer__menu-item"><a href="/spa.html" class="footer__menu-link">Spa–программы</a></li>
+                        <li class="footer__menu-item"><a href="/apartments.html" class="footer__menu-link">Апартаменты</a></li>
+                        <li class="footer__menu-item"><a href="" class="footer__menu-link">Сертификаты</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-home__column">
+                <div class="footer-home__caption">Инфо</div>
+                <nav aria-label="Меню в подвале" class="footer__menu">
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-item"><a href="" class="footer__menu-link">Клубная карта</a></li>
+                        <li class="footer__menu-item"><a href="/deposits.scss" class="footer__menu-link">Spa–депозит</a></li>
+                        <li class="footer__menu-item"><a href="/payment.html" class="footer__menu-link">Оплата и доставка</a></li>
+                        <li class="footer__menu-item"><a href="/cooperation.html" class="footer__menu-link">Сотрудничество</a></li>
+                        <li class="footer__menu-item"><a href="/etiquette.html" class="footer__menu-link">Spa–этикет</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-home__column">
+                <div class="footer-home__caption">Asia Beauty Spa</div>
+                <nav aria-label="Меню в подвале" class="footer__menu">
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-item"><a href="/about.html" class="footer__menu-link">О компании</a></li>
+                        <li class="footer__menu-item"><a href="/promotions.html" class="footer__menu-link">Акции</a></li>
+                        <li class="footer__menu-item"><a href="/salons.html" class="footer__menu-link">Салоны</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-home__column">
+                <div class="footer-home__caption">Контакты</div>
                 <ul class="footer__socials">
                     <li class="footer__socials-item"><a href="" class="footer__socials-link">telegram</a></li>
                     <li class="footer__socials-item"><a href="" class="footer__socials-link">vk</a></li>
-                    <li class="footer__socials-item"><a href="" class="footer__socials-link">inst</a></li>
                     <li class="footer__socials-item"><a href="" class="footer__socials-link">youtube</a></li>
                 </ul>
-                <div class="footer__worktime">
-                    <div class="footer__worktime-caption">
-                        Работаем круглосуточно
-                    </div>
-                    <a href="https://wa.me/+74950217659" class="footer__worktime-btn btn btn_yellow">Записаться в WhatsApp</a>
-                </div>
-            </nav>
-            <div class="footer__bottom">
-                <div class="footer__copy">© 2011 - 2023 ASIA BEAUTY SPA</div>
-                <a href="" class="footer__prod">Design by Dina</a>
             </div>
+        </div>
+        <div class="footer-home__banner">
+            <picture class="footer-home__banner-image" data-animate="parallax">
+                <source media="(min-width: 575.98px)" srcset="img/footer-banner.jpg">
+                <img src="img/footer-banner-mobile.jpg" class="cover-image">
+            </picture>
+            <div class="footer-home__banner-info">
+                <div class="footer-home__banner-logo">
+                    <img src="img/logo-white.svg" alt="Логотип">
+                </div>
+                <div class="footer-home__banner-reqs">
+                    ИНН: 9704081980 <br> ОГРН: 121770368380
+                </div>
+            </div>
+        </div>
+        <div class="footer-home__bottom">
+            <div class="footer-home__copy">
+                © Since 2002 | ASIA BEAUTY SPA — <br>
+                сеть spa-салонов премиум-класса в Москве
+            </div>
+            <a href="" class="footer-home__link">Политика конфиденциальности</a>
+            <div class="footer-home__worktime">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M8.0013 4.66667V8L10.0013 10M0.667969 7.33333L2.0013 8.66667M2.0013 8.66667L3.33464 7.33333M2.0013 8.66667V8C2.0013 4.68629 4.6876 2 8.0013 2C9.7783 2 11.3749 2.7725 12.4735 4C12.5402 4.07449 12.605 4.15067 12.668 4.22844M12.668 8.66667L14.0013 7.33333M14.0013 7.33333L15.3346 8.66667M14.0013 7.33333V8C14.0013 11.3137 11.315 14 8.0013 14C6.11646 14 4.43461 13.1309 3.33464 11.7715" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Открыты круглосуточно
+            </div>
+            <a href="" class="footer-home__link">Разработка сайта</a>
         </div>
     </div>
 </footer>
@@ -539,15 +527,15 @@
     </div>
 </section>
   <!-- plugins -->
-<script src="js/libs/jquery-3.7.1.min.js?_v=20250112164641"></script>
-<script src="js/libs/swiper-bundle.min.js?_v=20250112164641"></script>
-<script src="js/libs/fancybox.min.js?_v=20250112164641"></script>
-<script src="js/libs/nouislider.min.js?_v=20250112164641"></script>
-<script src="js/libs/SmoothScroll.min.js?_v=20250112164641"></script>
+<script src="js/libs/jquery-3.7.1.min.js?_v=20250711204816"></script>
+<script src="js/libs/swiper-bundle.min.js?_v=20250711204816"></script>
+<script src="js/libs/fancybox.min.js?_v=20250711204816"></script>
+<script src="js/libs/nouislider.min.js?_v=20250711204816"></script>
+<script src="js/libs/SmoothScroll.min.js?_v=20250711204816"></script>
 
 <!-- plugins -->
 
-<script src="js/app.min.js?_v=20250112164641"></script>
+<script src="js/app.min.js?_v=20250711204816"></script>
 </body>
 
 </html>

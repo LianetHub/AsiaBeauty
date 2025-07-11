@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', { 'title': 'Asia Beauty SPA | Новости' })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "color": "primary",
+            "active": "7"
+            })
+            <main class="page">
+                <section class="news">
+                    <div class="news__container container container_md">
+                        <nav aria-label="Хлебные крошки" class="breadcrumbs breadcrumbs_dark">
+                            <ul class="breadcrumbs__items">
+                                <li class="breadcrumbs__item">
+                                    <a href="/" class="breadcrumbs__link">главная</a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <span class="breadcrumbs__link breadcrumbs__link_active">новости</span>
+                                </li>
+                            </ul>
+                        </nav>
+                        <h1 class="news__title title-md">Новости Asia Beauty Spa</h1>
+                        <div class="news__filters">
+                            <a href="" class="news__filter btn btn_secondary active">массажи</a>
+                            <a href="" class="news__filter btn btn_secondary">акции</a>
+                            <a href="" class="news__filter btn btn_secondary">аппартаменты</a>
+                            <a href="" class="news__filter btn btn_secondary">спа-процедуры</a>
+                        </div>
+                        <div class="news__body">
+                            <h2 class="news__caption title-md">Статьи</h2>
+                            <ul class="news__list">
+                                @@loop("./html/templates/_news-item.html", './html/json/news.json')
+                                @@loop("./html/templates/_news-item.html", './html/json/news.json')
+                            </ul>
+                            <a href="" class="news__more btn btn_brown">Еще новости</a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer-home.html', {})
+        </div>
+        @@include('html/_cart.html', {})
+        @@include('html/_js.html', {})
+    </body>
+</html>

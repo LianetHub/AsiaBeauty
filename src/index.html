@@ -444,6 +444,17 @@
                             </div>
                         </div>
                     </section>
+                    <section class="news">
+                        <div class="news__container container container_md">
+                            <div class="news__body">
+                                <div class="news__hint">Новости Asia Beauty Spa </div>
+                                <h2 class="news__caption title-md">Блог</h2>
+                                <ul class="news__list">
+                                    @@loop("./html/templates/_news-item-2.html", './html/json/news.json')
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
                     <section class="capabilities">
                         <div class="capabilities__container container container_md">
                             <div class="capabilities__caption">Возможности ABS</div>
@@ -456,22 +467,34 @@
                                     <div class="capabilities__card" data-animate="bottom">
                                         <div class="capabilities__card-num">01</div>
                                         <p class="capabilities__card-text">Панорамные апартаменты на&nbsp;20 этаже</p>
+                                        <div class="capabilities__card-image">
+                                            <img src="@img/capabilities/01.jpg" class="cover-image" alt="Фото салона">
+                                        </div>
                                     </div>
                                     <div class="capabilities__card capabilities__card_white-mobile" data-animate="bottom">
                                         <div class="capabilities__card-num">02</div>
                                         <p class="capabilities__card-text">Бесплатные акватермальные зоны</p>
+                                        <div class="capabilities__card-image">
+                                            <img src="@img/capabilities/02.jpg" class="cover-image" alt="Фото салона">
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="capabilities__cards-row">
                                     <div class="capabilities__card" data-animate="bottom">
                                         <div class="capabilities__card-num">03</div>
                                         <p class="capabilities__card-text">>120 видов <br> spa-программ</p>
+                                        <div class="capabilities__card-image">
+                                            <img src="@img/capabilities/03.jpg" class="cover-image" alt="Фото салона">
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="capabilities__cards-row">
                                     <div class="capabilities__card capabilities__card_offset" data-animate="bottom">
                                         <div class="capabilities__card-num">04</div>
                                         <p class="capabilities__card-text">5 салонов <br> в премиум-локациях</p>
+                                        <div class="capabilities__card-image">
+                                            <img src="@img/capabilities/04.jpg" class="cover-image" alt="Фото салона">
+                                        </div>
                                     </div>
                                     <a href="" class="capabilities__card capabilities__card_white" data-animate="bottom">
                                         <span class="capabilities__card-text">Записаться <br> в Whatsapp</span>
@@ -479,6 +502,28 @@
                                     </a>
                                 </div>
                             </div>
+                        </div>
+                    </section>
+                    <section class="brands">
+                        <div class="brands__container container container_md">
+                            <h2 class="brands__title">Бренды - партнеры</h2>
+                            <ul class="brands__list">
+                                <li class="brands__item">
+                                    <img src="@img/brands/thalgo.png" alt="лого">
+                                </li>
+                                <li class="brands__item">
+                                    <img src="@img/brands/valmont.png" alt="лого">
+                                </li>
+                                <li class="brands__item">
+                                    <img src="@img/brands/la-sultane-de-saba.png" alt="лого">
+                                </li>
+                                <li class="brands__item">
+                                    <img src="@img/brands/tonka.png" alt="лого">
+                                </li>
+                                <li class="brands__item">
+                                    <img src="@img/brands/davines.png" alt="лого">
+                                </li>
+                            </ul>
                         </div>
                     </section>
                 </div>

@@ -6,13 +6,13 @@
 	display: flex;
 	align-items: flex-end;
 	padding: 5rem em(0);
-	height: 100vh;
+	height: 50vh;
 	@media (min-width: $md3) {
 		height: 75rem;
 	}
 	@media (min-width: $md2) {
 		padding: rem(94) em(0);
-		height: 100vh;
+		height: 50vh;
 	}
 	// .banner__container
 	&__container {
@@ -172,7 +172,7 @@
 			border-radius: 0;
 			background: $beige;
 			&::before {
-				content: '';
+				content: "";
 				position: absolute;
 				top: 1.5rem;
 				left: 0;
@@ -327,7 +327,7 @@
 	// .catalog__views
 	&__views {
 		margin: 1.25rem em(0) em(0) em(0);
-		background: url('@img/green-pattern.jpg') 0 0 / cover no-repeat, $green;
+		background: url("@img/green-pattern.jpg") 0 0 / cover no-repeat, $green;
 		padding: 1.5rem;
 		border-radius: 0.625rem;
 	}

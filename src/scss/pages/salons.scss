@@ -4,7 +4,7 @@
 		padding: 9.3rem 0 0 0;
 	}
 	@media (min-width: $md2) {
-		padding: 10.5rem 0 0 0;
+		padding: 8.75rem 0 0 0;
 	}
 	// .salons__container
 	&__container {
@@ -12,71 +12,148 @@
 	// .salons__title
 	&__title {
 		margin-top: 1.2rem;
+		text-align: center;
+		position: relative;
+		padding-bottom: rem(37);
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: rem(150);
+			height: rem(1);
+			background: #dbd9d7;
+		}
+		&::first-letter {
+			font-family: inherit;
+		}
 		@media (min-width: $md2) {
-			margin-top: 1.75rem;
+			margin-top: 5.75rem;
 		}
 	}
 	// .salons__subtitle
 	&__subtitle {
-		margin: 1.25rem 0 0 0;
+		margin: 2.25rem 0 0 0;
 		text-align: center;
-		font-size: 1.125rem;
+		font-size: 1rem;
 		line-height: 145%;
 	}
 	// .salons__list
 	&__list {
 		margin-top: 3.56rem;
 		@media (min-width: $md4) {
-			margin-top: 3.75rem;
+			margin-top: 3.5rem;
 		}
 	}
 	// .salons__item
 	&__item {
 		padding: 1.25rem 0 0 0;
-
-		&:not(:last-child) {
-			margin-bottom: 7.5rem;
-			@media (min-width: $md2) {
-				margin-bottom: 8.75rem;
+		display: flex;
+		gap: 2rem;
+		flex-direction: column;
+		@media (min-width: $md3) {
+			justify-content: space-between;
+			align-items: center;
+			flex-direction: row;
+			&:nth-child(odd) {
+				.salons__item-slider {
+					order: 1;
+				}
 			}
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(15);
 		}
 	}
 	// .salons__item-image
-	&__item-image {
+	&__item-slider {
+		min-width: 0;
+		margin: 0;
+		max-width: 100%;
+		position: relative;
+		@media (min-width: $md3) {
+			flex: 0 0 28rem;
+		}
+		@media (min-width: $md2) {
+			flex: 0 0 33.75rem;
+		}
+	}
+	// .salons__item-slider-pagination
+	&__item-slider-pagination {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		.swiper-pagination-bullet {
+			width: rem(10);
+			height: rem(10);
+			opacity: 0.52;
+			background: #d9d9d9;
+			margin: 0 rem(3);
+			&.swiper-pagination-bullet-active {
+				opacity: 1;
+			}
+		}
+	}
+	// .salons__item-prev
+	&__item-prev {
+		@media (min-width: $md0) {
+			left: -5rem;
+		}
+		background: #9e3522;
+		&::after {
+			color: #fff;
+		}
+	}
+	// .salons__item-next
+	&__item-next {
+		@media (min-width: $md0) {
+			right: -5rem;
+		}
+		background: #9e3522;
+		&::after {
+			color: #fff;
+		}
+	}
+	&__item-slide {
+		width: 100%;
 		overflow: hidden;
-		height: 25rem;
-		@media (min-width: $md4) {
-			height: 31.25rem;
+		border-radius: 0.3125rem;
+		height: 24rem;
+		@media (min-width: $md5) {
+			height: 40rem;
+		}
+		@media (min-width: $md2) {
+			height: 45.6875rem;
 		}
 	}
 	// .salons__item-price
 	&__item-price {
-		margin-top: 2.5rem;
-		border-radius: 6.25rem;
-		border: rem(1) solid rgba(84, 61, 47, 0.1);
-		padding: 0.45rem 1rem;
-		font-size: 0.875rem;
-		line-height: 145%;
-		display: inline-block;
+		// margin-top: 2.5rem;
+		// border-radius: 6.25rem;
+		// border: rem(1) solid rgba(84, 61, 47, 0.1);
+		// padding: 0.45rem 1rem;
+		// font-size: 0.875rem;
+		// line-height: 145%;
+		// display: inline-block;
 	}
 	// .salons__item-info
 	&__item-info {
 		display: flex;
 		flex-direction: column;
 		margin-top: 1rem;
-		gap: 1.5rem;
-		@media (min-width: $md4) {
-			margin-top: 1.25rem;
-			flex-direction: row;
+		gap: 0.81rem;
+		max-width: 37.5625rem;
+		@media (min-width: $md2) {
+			padding-top: 7.75rem;
 		}
 	}
 	// .salons__item-caption
 	&__item-caption {
-		line-height: 120%;
-		font-size: 1.375rem;
-		@media (min-width: $md4) {
-			font-size: 1.5rem;
-		}
+		font-size: 1.25rem;
+		font-weight: 700;
+		line-height: 145%;
 	}
 	// .salons__item-desc
 	&__item-desc {
@@ -85,16 +162,38 @@
 		align-items: flex-start;
 		@media (min-width: $md4) {
 			margin-left: auto;
-			flex: 0 0 50%;
-		}
-		@media (min-width: $md3) {
-			flex: 0 0 36.25rem;
 		}
 	}
 	&__item-text {
-		text-align: justify;
-		font-size: 1.125rem;
+		font-size: 0.875rem;
 		line-height: 145%;
+		display: flex;
+		flex-direction: column;
+		& p {
+			&:not(:first-child) {
+				margin-top: 1.25rem;
+			}
+		}
+		& ul {
+			list-style: disc;
+			padding-left: 1em;
+			& li {
+				&::marker {
+					font-size: 0.5em;
+				}
+			}
+		}
+	}
+	&__item-btn {
+		margin-top: 1.5rem;
+		margin-left: auto;
+		min-width: 12.4375rem;
+		text-decoration: underline;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: none;
+			}
+		}
 	}
 	&__item-link {
 		margin-top: 2.5rem;
