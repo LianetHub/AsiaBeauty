@@ -1,58 +1,24 @@
 .salons {
-	padding: 7.5rem 0 0 0;
-	@media (min-width: $md4) {
-		padding: 9.3rem 0 0 0;
+	padding: rem(5) 0 rem(40);
+	@media (min-width: $md6) {
+		padding: rem(5) 1rem rem(40);
 	}
-	@media (min-width: $md2) {
-		padding: 8.75rem 0 0 0;
+	@media (min-width: $md4) {
+		padding: rem(65) 0 rem(100) 0;
 	}
 	// .salons__container
 	&__container {
 	}
-	// .salons__title
-	&__title {
-		margin-top: 1.2rem;
-		text-align: center;
-		position: relative;
-		padding-bottom: rem(37);
-		&::before {
-			content: "";
-			position: absolute;
-			bottom: 0;
-			left: 50%;
-			transform: translateX(-50%);
-			width: rem(150);
-			height: rem(1);
-			background: #dbd9d7;
-		}
-		&::first-letter {
-			font-family: inherit;
-		}
-		@media (min-width: $md2) {
-			margin-top: 5.75rem;
-		}
-	}
-	// .salons__subtitle
-	&__subtitle {
-		margin: 2.25rem 0 0 0;
-		text-align: center;
-		font-size: 1rem;
-		line-height: 145%;
-	}
 	// .salons__list
 	&__list {
-		margin-top: 3.56rem;
-		@media (min-width: $md4) {
-			margin-top: 3.5rem;
-		}
 	}
 	// .salons__item
 	&__item {
-		padding: 1.25rem 0 0 0;
 		display: flex;
-		gap: 2rem;
 		flex-direction: column;
+		gap: 1.37rem;
 		@media (min-width: $md3) {
+			gap: 2rem;
 			justify-content: space-between;
 			align-items: center;
 			flex-direction: row;
@@ -60,10 +26,22 @@
 				.salons__item-slider {
 					order: 1;
 				}
+				.salons__item-btn {
+					margin-right: auto;
+					margin-left: 0;
+				}
+			}
+		}
+		&:first-child {
+			@media (min-width: $md3) {
+				align-items: flex-end;
 			}
 		}
 		&:not(:last-child) {
-			margin-bottom: rem(15);
+			margin-bottom: 2.94rem;
+			@media (min-width: $md4) {
+				margin-bottom: rem(100);
+			}
 		}
 	}
 	// .salons__item-image
@@ -73,87 +51,87 @@
 		max-width: 100%;
 		position: relative;
 		@media (min-width: $md3) {
+			padding: 0 rem(58);
 			flex: 0 0 28rem;
 		}
 		@media (min-width: $md2) {
-			flex: 0 0 33.75rem;
+			flex: 0 0 rem(533);
 		}
 	}
-	// .salons__item-slider-pagination
 	&__item-slider-pagination {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		.swiper-pagination-bullet {
-			width: rem(10);
-			height: rem(10);
-			opacity: 0.52;
-			background: #d9d9d9;
-			margin: 0 rem(3);
-			&.swiper-pagination-bullet-active {
-				opacity: 1;
+		&.swiper-pagination {
+			position: absolute;
+			top: auto;
+			margin: 0;
+			bottom: 0.5rem;
+			@media (min-width: $md4) {
+				bottom: 1.27rem;
 			}
 		}
 	}
 	// .salons__item-prev
 	&__item-prev {
-		@media (min-width: $md0) {
-			left: -5rem;
-		}
-		background: #9e3522;
-		&::after {
-			color: #fff;
+		&.swiper-button-prev {
+			border-radius: 50%;
+			width: rem(25);
+			height: rem(25);
+			font-size: 1rem;
+			@media (min-width: $md6) {
+				left: -2rem;
+			}
+			@media (min-width: $md1) {
+				left: 0;
+			}
 		}
 	}
 	// .salons__item-next
 	&__item-next {
-		@media (min-width: $md0) {
-			right: -5rem;
-		}
-		background: #9e3522;
-		&::after {
-			color: #fff;
+		&.swiper-button-next {
+			border-radius: 50%;
+			width: rem(25);
+			height: rem(25);
+			font-size: 1rem;
+			@media (min-width: $md6) {
+				right: -2rem;
+			}
+			@media (min-width: $md1) {
+				right: 0;
+			}
 		}
 	}
 	&__item-slide {
 		width: 100%;
 		overflow: hidden;
 		border-radius: 0.3125rem;
-		height: 24rem;
+		height: 16rem;
+		@media (min-width: $md5) {
+			height: 24rem;
+		}
 		@media (min-width: $md4) {
-			height: 40rem;
+			height: rem(465);
 		}
 		@media (min-width: $md2) {
-			height: 45.6875rem;
+			height: rem(565);
 		}
 	}
 	// .salons__item-price
 	&__item-price {
-		// margin-top: 2.5rem;
-		// border-radius: 6.25rem;
-		// border: rem(1) solid rgba(84, 61, 47, 0.1);
-		// padding: 0.45rem 1rem;
-		// font-size: 0.875rem;
-		// line-height: 145%;
-		// display: inline-block;
 	}
 	// .salons__item-info
 	&__item-info {
 		display: flex;
 		flex-direction: column;
-		margin-top: 1rem;
 		gap: 0.81rem;
 		max-width: 37.5625rem;
-		@media (min-width: $md2) {
-			padding-top: 7.75rem;
-		}
 	}
 	// .salons__item-caption
 	&__item-caption {
-		font-size: 1.25rem;
 		font-weight: 700;
-		line-height: 145%;
+		line-height: 110%;
+		@media (min-width: $md4) {
+			line-height: 145%;
+			font-size: 1.25rem;
+		}
 	}
 	// .salons__item-desc
 	&__item-desc {
@@ -165,10 +143,16 @@
 		}
 	}
 	&__item-text {
-		font-size: 0.875rem;
-		line-height: 145%;
+		line-height: 120%;
 		display: flex;
 		flex-direction: column;
+		font-size: 0.75rem;
+		@media (min-width: $md5) {
+			font-size: 0.875rem;
+		}
+		@media (min-width: $md2) {
+			font-size: 1rem;
+		}
 		& p {
 			&:not(:first-child) {
 				margin-top: 1.25rem;
@@ -185,15 +169,8 @@
 		}
 	}
 	&__item-btn {
-		margin-top: 1.5rem;
+		margin-top: rem(40);
 		margin-left: auto;
-		min-width: 12.4375rem;
-		text-decoration: underline;
-		@media (any-hover: hover) {
-			&:hover {
-				text-decoration: none;
-			}
-		}
 	}
 	&__item-link {
 		margin-top: 2.5rem;
@@ -206,7 +183,7 @@
 		border-bottom: rem(1) solid transparent;
 		&::before {
 			order: 1;
-			@extend %ic, .icon-arrow-right;
+			@extend %ic, .icon-next;
 			// transition: transform 0.3s ease 0s;
 		}
 		@media (any-hover: hover) {

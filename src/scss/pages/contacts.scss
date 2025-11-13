@@ -1,116 +1,30 @@
 .contacts {
-	padding: 7.5rem 0 0 0;
+	padding: rem(25) 0;
 	@media (min-width: $md4) {
-		padding: 9.3rem 0 0 0;
+		padding: rem(50) 0;
 	}
-	@media (min-width: $md2) {
-		padding: 10.5rem 0 0 0;
-	}
-	// .contacts__container
-	&__container {
-	}
-	// .contacts__title
-	&__title {
-		margin-top: 1.2rem;
-		@media (min-width: $md2) {
-			margin-top: 1.75rem;
-		}
-	}
-	// .contacts__container
-	&__container {
-	}
-	// .contacts__title
-	&__title {
-	}
-	// .contacts__main
-	&__main {
-		margin-top: 3.75rem;
-		display: grid;
-		gap: 1.25rem;
-		row-gap: 2.5rem;
-		@media (min-width: $md4) {
-			grid-template-columns: repeat(2, 1fr);
-		}
-		@media (min-width: $md3) {
-			grid-template-columns: repeat(3, 1fr);
-		}
-	}
-	// .contacts__main-item
-	&__main-item {
-	}
-	// .contacts__main-caption
-	&__main-caption {
-		color: rgba(84, 61, 47, 0.5);
-		font-size: 0.875rem;
-		line-height: 145%;
-		margin-bottom: 1rem;
-		@media (min-width: $md2) {
-			margin-bottom: 1.5rem;
-		}
-	}
-	// .contacts__main-phone
-	&__main-phone {
-		line-height: 120%;
-		transition: color 0.3s ease 0s;
-		@media (any-hover: hover) {
-			&:hover {
-				color: $red;
-			}
-		}
-		font-size: 1.375rem;
-		@media (min-width: $md4) {
-			font-size: 1.5rem;
-		}
-	}
-	// .contacts__main-socials
-	&__main-socials {
+	// .contacts__header
+	&__header {
 		display: flex;
-		column-gap: 0.63rem;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
 	}
-	// .contacts__main-social
-	&__main-social {
-	}
-	// .contacts__list
-	&__list {
-		margin-top: 7.5rem;
-		display: grid;
-		column-gap: 1.25rem;
-		row-gap: 3.75rem;
+	// .contacts__icon
+	&__icon {
+		max-width: rem(50);
 		@media (min-width: $md4) {
-			row-gap: 2.5rem;
-			grid-template-columns: repeat(2, 1fr);
-		}
-		@media (min-width: $md3) {
-			grid-template-columns: repeat(3, 1fr);
-		}
-		@media (min-width: $md2) {
-			row-gap: 3.75rem;
-			margin-top: 8.75rem;
+			max-width: rem(138);
 		}
 	}
-	// .contacts__item
-	&__item {
-	}
-	// .contacts__item-caption
-	&__item-caption {
-		line-height: 120%;
-		margin-bottom: 1rem;
-		font-size: 1.375rem;
-		@media (min-width: $md4) {
-			font-size: 1.5rem;
-		}
-		@media (min-width: $md2) {
-			margin-bottom: 1.5rem;
-		}
-	}
-	// .contacts__item-address
-	&__item-address {
-		font-size: 1.125rem;
-		@media (min-width: $md4) {
-			font-size: 1rem;
-		}
+	// .contacts__title
+	&__title {
 	}
 	// .contacts__map
 	&__map {
+		margin-top: rem(24);
+		@media (min-width: $md4) {
+			margin-top: rem(100);
+		}
 	}
 }

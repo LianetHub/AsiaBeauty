@@ -148,13 +148,13 @@ body {
 @import "pages/certs";
 @import "pages/news";
 @import "pages/deposits";
+@import "pages/salons";
+@import "pages/contacts";
 // @import "pages/catalog";
 // @import "pages/product";
 // @import "pages/order";
-// @import "pages/salons";
 // @import "pages/info";
 // @import "pages/promotion";
-// @import "pages/contacts";
 // @import "pages/about";
 // @import "pages/spa-programms";
 
@@ -170,7 +170,7 @@ body {
 			display: flex;
 			flex-direction: column;
 			max-width: rem(340);
-			margin: 0 auto;
+
 			& span {
 				&:nth-child(3n + 1) {
 					align-self: center;
@@ -183,10 +183,7 @@ body {
 				}
 			}
 		}
-		@media (min-width: $md1) {
-			max-width: 70rem;
-			padding-left: 1rem;
-		}
+
 		.color-red {
 			@media (min-width: $md5) {
 				display: block;
