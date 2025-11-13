@@ -109,18 +109,31 @@ export const fontsStyle = () => {
                             fontStyle = "italic";
                         }
 
-                        fs.appendFile(
-                            fontsFile,
+                        // fs.appendFile(
+                        //     fontsFile,
+                        //     `@font-face {
+                        //         font-family: '${fontName}';
+                        //         font-display: swap;
+                        //         src: url("../fonts/${fontFileName}.woff2") format("woff2"), url("../fonts/${fontFileName}.woff") format("woff");
+                        //         font-weight: ${fontWeight};
+                        //         font-style: ${fontStyle};
+                        //     }\r\n`,
+                        //     cb
+                        // );
+                        // newFileOnly = fontFileName;
+                        fs.appendFile(fontsFile,
                             `@font-face {
-                                font-family: '${fontName}';
-                                font-display: swap;
-                                src: url("../fonts/${fontFileName}.woff2") format("woff2"), url("../fonts/${fontFileName}.woff") format("woff");
-                                font-weight: ${fontWeight};
-                                font-style: ${fontStyle};
-                            }\r\n`,
-                            cb
-                        );
+                            font-family: '${fontName}';
+                            src: url("../fonts/${fontFileName}.woff2") format("woff2 supports variations"),
+                                 url("../fonts/${fontFileName}.woff2") format("woff2-variations"),
+                                 url("../fonts/${fontFileName}.woff") format("woff");
+                            font-weight: 100 900;
+                            font-stretch: 75% 125%;
+                            font-style: normal;
+                            font-display: swap;
+                        }\r\n`, cb);
                         newFileOnly = fontFileName;
+
                     }
                 }
             } else {

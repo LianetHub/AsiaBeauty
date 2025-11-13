@@ -103,7 +103,7 @@
 		flex: 1 1 auto;
 		line-height: 145%;
 		padding: 0.44rem;
-		background: $beige;
+		background: $red;
 		text-align: center;
 		font-size: 0.875rem;
 		@media (min-width: $md4) {
@@ -121,7 +121,7 @@
 	}
 	// .deposits__period-mark
 	&__period-mark {
-		font-family: $font-cormorant;
+		font-family: $font-figtree;
 		line-height: 0.8;
 		padding-bottom: 0.4rem;
 		font-size: 2.5rem;
@@ -135,7 +135,7 @@
 		line-height: 145%;
 		padding: 0.44rem;
 		background: $red;
-		color: $white;
+		color: $text;
 	}
 	// .deposits__period-desc
 	&__period-desc {

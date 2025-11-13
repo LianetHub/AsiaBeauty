@@ -1,4 +1,4 @@
-<li class="news__item">
+<li class="news__item@@if(typeof className !=='undefined'){ @@className}">
     <div class="news__item-header">
         <a href="" class="news__item-image">
             <img src="@@image" class="cover-image" alt="Постер">
@@ -8,6 +8,5 @@
             <h3 class="news__item-title">@@title</h3>
         </div>
     </div>
-    <p class="news__item-desc">@@desc</p>
-    <a href="" class="news__item-btn btn btn_primary">Подробнее</a>
+    <a href="" class="news__item-btn btn btn-white-outline btn-lg">Подробнее</a>
 </li>

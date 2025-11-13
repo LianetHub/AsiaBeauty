@@ -1,0 +1,17 @@
+[
+    {
+        "image": "@img/services/01.jpg",
+        "name": "Все виды <br> массажа"
+    },
+    {
+        "image": "@img/services/02.jpg",
+        "name": "Каталог<br>спа-программ"
+    },
+    {
+        "image": "@img/services/03.jpg",
+        "name": "Уходовые <br> процедуры"
+    },
+    {
+        "name": "Выбрать <br> апартаменты"
+    }
+]

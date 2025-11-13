@@ -25,7 +25,7 @@
 	&__body {
 		cursor: default;
 		min-height: 100%;
-		background: $white;
+		background: $text;
 		transition: transform 0.3s ease 0s;
 		transform: translateX(100%);
 		width: 100%;
@@ -132,7 +132,7 @@
 		align-items: center;
 		@media (any-hover: hover) {
 			&:hover {
-				color: $yellow;
+				color: $red;
 			}
 		}
 	}

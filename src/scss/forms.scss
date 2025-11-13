@@ -84,7 +84,7 @@
 	line-height: 145%;
 	padding: 0.625rem;
 	border-radius: 0;
-	border-bottom: 1px solid $beige;
+	border-bottom: 1px solid $red;
 	color: $text;
 	&::placeholder {
 		color: #d8d3bf;
@@ -111,7 +111,7 @@
 	line-height: 145%;
 	padding: 0.625rem;
 	border-radius: 0;
-	border-bottom: 1px solid $beige;
+	border-bottom: 1px solid $red;
 	color: $text;
 	&::placeholder {
 		color: #d8d3bf;
@@ -139,142 +139,43 @@
 	white-space: nowrap;
 	color: $text;
 	text-align: center;
-	font-size: 0.875rem;
-	line-height: 120%;
+	font-size: 0.75rem;
+	padding: rem(3) rem(10);
 	border-radius: 6.25rem;
-	border: rem(1) solid;
-	padding: 0.675rem 1.25rem;
-	column-gap: 0.31rem;
 	&::before {
 		order: 1;
 	}
-	&.btn_brown {
-		background: $text;
-		border-color: $text;
-		color: $white;
-		@media (any-hover: hover) {
-			&:hover {
-				background: $red;
-				border-color: $red;
-			}
-		}
-		&:active {
-			background: $red;
-			border-color: $red;
-		}
-	}
-	&.btn_yellow {
-		background: $yellow;
-		color: $red;
-		border-color: $yellow;
-		@media (any-hover: hover) {
-			&:hover {
-				background: $white;
-			}
-		}
-		&:active {
-			background: $white;
-		}
-	}
-	&.btn_white {
-		background: $white;
-		color: $text;
-		border-color: $white;
-		@media (any-hover: hover) {
-			&:hover {
-				background: #eceae0;
-				color: #543d2f;
-				&::before {
-					color: #543d2f;
-				}
-			}
-		}
-		&:active {
-			background: #eceae0;
-			color: #543d2f;
-			&::before {
-				color: #543d2f;
-			}
-		}
-	}
-	&.btn_white-outline {
-		color: $white;
-		border-color: $white;
-		@media (any-hover: hover) {
-			&:hover {
-				background: $white;
-				color: $text;
-			}
-		}
-		&:active {
-			background: $white;
-			color: $text;
-		}
-	}
-	&.btn_primary {
-		border-color: $text;
-		color: $text;
-		background: transparent;
-		@media (any-hover: hover) {
-			&:hover {
-				border-color: $red;
-				color: $red;
-			}
-		}
-		&:active {
-			border-color: $red;
-			color: $red;
-		}
-	}
-	&.btn_beige {
-		border-color: #e4c272;
-		color: #e4c272;
-		background: transparent;
-		@media (any-hover: hover) {
-			&:hover {
-				border-color: #fff;
-				color: #fff;
-			}
-		}
-		&:active {
-			border-color: #fff;
-			color: #fff;
-		}
-	}
-	&.btn_secondary {
-		border-color: $beige;
-		color: $text;
-		@media (any-hover: hover) {
-			&:hover {
-				background: $beige;
-			}
-		}
-		&:active {
-			background: $beige;
-		}
-	}
-	&.btn_secondary-outline {
-		border-color: rgba(247, 246, 242, 0.3);
-		color: $white;
-		@media (any-hover: hover) {
-			&:hover {
-				background: rgba(247, 246, 242, 0.3);
-			}
-		}
-		&:active {
-			background: rgba(247, 246, 242, 0.3);
-		}
-	}
-	&.btn_red {
-		border-color: $red;
+
+	&.btn-primary {
 		background: $red;
-		color: $white;
-		@media (any-hover: hover) {
-			&:hover {
-				background-color: darken($color: $red, $amount: 10);
-				border-color: darken($color: $red, $amount: 10);
-			}
+		color: rgba(228, 228, 228, 0.8);
+	}
+	&.btn-secondary {
+		background: rgba(228, 228, 228, 0.8);
+		color: $black;
+	}
+	&.btn-white {
+		background: rgba(228, 228, 228, 1);
+		color: $black;
+	}
+	&.btn-white-outline {
+		border: rem(1) solid rgba(228, 228, 228, 1);
+		color: rgba(228, 228, 228, 1);
+		&:hover {
+			background: rgba(228, 228, 228, 0.8);
+			color: $black;
 		}
+		&:active,
+		&.active {
+			background: rgba(228, 228, 228, 1);
+			color: $black;
+		}
+	}
+
+	&.btn-lg {
+		min-height: rem(40);
+		font-size: rem(14);
+		padding: rem(8) rem(25);
 	}
 
 	&:disabled,

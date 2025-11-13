@@ -1,6 +1,7 @@
 "use strict";
 
 
+
 $(function () {
 
     // init Fancybox Gallery
@@ -282,158 +283,139 @@ $(function () {
 
 
     // sliders 
-    if ($(".main__slider").length > 0) {
-        new Swiper('.main__slider', {
-            slidesPerView: 1,
-            speed: 800,
-            effect: "fade",
-            loop: true,
-            autoplay: {
-                delay: 5000,
-                stopOnLastSlide: false,
-            },
-            fadeEffect: {
-                crossFade: true
-            },
-            pagination: {
-                el: '.main__pagination',
-                clickable: true,
-            },
-            on: {
-                init: (swiper) => {
-                    let speed = swiper.params.speed;
-                    let autoplaySpeed = swiper.params.autoplay.delay;
-                    $(swiper.pagination.el).css('--counting-speed', (speed + autoplaySpeed) + "ms");
-                }
-            }
-        })
-    }
+    // if ($(".main__slider").length > 0) {
+    //     new Swiper('.main__slider', {
+    //         slidesPerView: 1,
+    //         speed: 800,
+    //         effect: "fade",
+    //         loop: true,
+    //         autoplay: {
+    //             delay: 5000,
+    //             stopOnLastSlide: false,
+    //         },
+    //         fadeEffect: {
+    //             crossFade: true
+    //         },
+    //         pagination: {
+    //             el: '.main__pagination',
+    //             clickable: true,
+    //         },
+    //         on: {
+    //             init: (swiper) => {
+    //                 let speed = swiper.params.speed;
+    //                 let autoplaySpeed = swiper.params.autoplay.delay;
+    //                 $(swiper.pagination.el).css('--counting-speed', (speed + autoplaySpeed) + "ms");
+    //             }
+    //         }
+    //     })
+    // }
 
-    if ($('.products-slider').length > 0) {
-        $('.products-slider').each(function (index, slider) {
+    // if ($('.products-slider').length > 0) {
+    //     $('.products-slider').each(function (index, slider) {
 
-            let prev = $(slider).find('.products-slider__prev')[0];
-            let next = $(slider).find('.products-slider__next')[0];
+    //         let prev = $(slider).find('.products-slider__prev')[0];
+    //         let next = $(slider).find('.products-slider__next')[0];
+
+    //         new Swiper(slider, {
+    //             slidesPerView: "auto",
+    //             spaceBetween: 20,
+    //             speed: 800,
+    //             navigation: {
+    //                 nextEl: next,
+    //                 prevEl: prev
+    //             }
+    //         })
+    //     });
+    // }
+
+    // if ($('.product-card__slider').length > 0) {
+    //     new Swiper('.product-card__slider', {
+    //         slidesPerView: 1,
+    //         speed: 800,
+    //         effect: "fade",
+    //         loop: true,
+    //         navigation: {
+    //             nextEl: '.product-card__next',
+    //             prevEl: '.product-card__prev'
+    //         }
+    //     })
+    // }
+
+
+    // if ($('.salons__item-slider').length > 0) {
+    //     $('.salons__item-slider').each(function (index, slider) {
+
+    //         let swiper = $(slider).find('.swiper')[0];
+    //         let prev = $(slider).find('.salons__item-prev')[0];
+    //         let next = $(slider).find('.salons__item-next')[0];
+    //         let pagination = $(slider).find('.salons__item-slider-pagination')[0];
+
+    //         new Swiper(swiper, {
+    //             slidesPerView: 1,
+    //             speed: 800,
+    //             pagination: {
+    //                 el: pagination,
+    //                 clickable: true
+    //             },
+    //             navigation: {
+    //                 nextEl: next,
+    //                 prevEl: prev
+    //             }
+    //         })
+    //     });
+    // }
+
+    if ($('.certs__slider').length > 0) {
+        $('.certs__slider').each(function (index, sliderWrapper) {
+
+            let pagination = $(sliderWrapper).find('.certs__slider-pagination')[0];
+            let slider = $(sliderWrapper).find('.swiper')[0];
 
             new Swiper(slider, {
-                slidesPerView: "auto",
+                slidesPerView: 1,
                 spaceBetween: 20,
                 speed: 800,
-                navigation: {
-                    nextEl: next,
-                    prevEl: prev
-                }
-            })
-        });
-    }
-
-    if ($('.product-card__slider').length > 0) {
-        new Swiper('.product-card__slider', {
-            slidesPerView: 1,
-            speed: 800,
-            effect: "fade",
-            loop: true,
-            navigation: {
-                nextEl: '.product-card__next',
-                prevEl: '.product-card__prev'
-            }
-        })
-    }
-
-    if ($('.certs__slider-content').length > 0) {
-        const cursor = document.querySelector('.certs__main-cursor');
-        const container = document.querySelector('.certs__main-slider');
-
-        const thumbsSlider = new Swiper('.certs__thumbs-slider', {
-            slidesPerView: "auto",
-            spaceBetween: 10,
-            loop: true,
-        })
-
-        const mainSlider = new Swiper('.certs__main-slider', {
-            slidesPerView: 1,
-            effect: "fade",
-            speed: 800,
-            loop: true,
-            fadeEffect: {
-                crossFade: true
-            },
-            navigation: {
-                nextEl: ".certs__slider-next",
-                prevEl: ".certs__slider-prev",
-            },
-            thumbs: {
-                swiper: thumbsSlider
-            }
-        });
-
-        container.style.cursor = 'none';
-
-
-        cursor.style.position = 'absolute';
-
-
-        container.addEventListener('mousemove', (e) => {
-            const rect = container.getBoundingClientRect();
-            const cursorX = e.clientX - rect.left;
-            const cursorY = e.clientY - rect.top;
-
-            cursor.style.left = `${cursorX}px`;
-            cursor.style.top = `${cursorY}px`;
-
-
-            if (cursorX < rect.width / 2) {
-                cursor.classList.add('icon-arrow-left');
-                cursor.classList.remove('icon-arrow-right');
-            } else {
-                cursor.classList.add('icon-arrow-right');
-                cursor.classList.remove('icon-arrow-left');
-            }
-        });
-
-        container.addEventListener('click', (e) => {
-            const rect = container.getBoundingClientRect();
-            const cursorX = e.clientX - rect.left;
-
-            if (cursorX < rect.width / 2) {
-                mainSlider.slidePrev();
-            } else {
-                mainSlider.slideNext();
-            }
-        });
-
-        container.addEventListener('mouseleave', () => {
-            cursor.style.opacity = '0';
-        });
-
-        container.addEventListener('mouseenter', () => {
-            cursor.style.opacity = '1';
-        });
-    }
-
-    if ($('.salons__item-slider').length > 0) {
-        $('.salons__item-slider').each(function (index, slider) {
-
-            let swiper = $(slider).find('.swiper')[0];
-            let prev = $(slider).find('.salons__item-prev')[0];
-            let next = $(slider).find('.salons__item-next')[0];
-            let pagination = $(slider).find('.salons__item-slider-pagination')[0];
-
-            new Swiper(swiper, {
-                slidesPerView: 1,
-                speed: 800,
+                watchOverflow: true,
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    stopOnLastSlide: false,
+                    disableOnInteraction: false
+                },
                 pagination: {
                     el: pagination,
                     clickable: true
-                },
-                navigation: {
-                    nextEl: next,
-                    prevEl: prev
+
                 }
             })
         });
     }
 
+    if ($('.news__slider').length > 0) {
+        new Swiper(".news__slider", {
+            slidesPerView: "auto",
+            spaceBetween: 29,
+            speed: 800,
+            navigation: {
+                nextEl: ".news__slider-next",
+                prevEl: ".news__slider-prev"
+            }
+        })
+    }
+
+    if ($('.brands__slider').length > 0) {
+        new Swiper(".brands__slider", {
+            slidesPerView: "auto",
+            spaceBetween: 120,
+            speed: 10000,
+            loop: true,
+            autoplay: {
+                delay: 1,
+                stopOnLastSlide: false,
+                disableOnInteraction: false
+            }
+        })
+    }
 
 
     // Range Slider

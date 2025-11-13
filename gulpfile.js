@@ -35,7 +35,7 @@ function watcher() {
     gulp.watch(path.watch.scss, scss);
     gulp.watch(path.watch.normalize, normalize);
     gulp.watch(path.watch.js, js);
-    gulp.watch(path.watch.json, json);
+    gulp.watch(path.watch.json, gulp.series(json, html));
     gulp.watch(path.watch.images, images);
     gulp.watch(path.watch.php, php);
 }

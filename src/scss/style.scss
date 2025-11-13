@@ -9,7 +9,6 @@
 
 // &display=swap&subset=cyrillic-ext
 @import "fonts";
-
 // ======================================ШРИФТЫ===============================================
 // ======================================ИКОНОЧНЫЙ ШРИФТ======================================
 @import "icons";
@@ -18,8 +17,8 @@
 
 // Шрифт по умолчанию
 $fontfamily: "Jost";
+$font-figtree: "Figtree", "Inter", sans-serif;
 $font-cormorant: "Cormorant";
-$font-snell: "Snell";
 
 // Шрифт по умолчанию
 
@@ -34,16 +33,13 @@ $md6: 389.98px;
 // ПЕРЕМЕННЫЕ
 $minWidth: 320; // Минимальная ширина страницы
 $maxWidth: 1920; // Ширина макета
-$maxWidthContainer: rem(1180); // Максимальная ширина ограничивающего контейнера
+$maxWidthContainer: rem(1136); // Максимальная ширина ограничивающего контейнера
 $containerPadding: 30;
 
-$text: #543d2f;
-$beige: #eceae0;
-$white: #f7f6f2;
-$red: #9e3522;
-$green: #1f594d;
-$yellow: #e3c272;
-$black: #232323;
+$text: #e4e4e4;
+$red: #720806;
+$black: #151515;
+$grey: #e4e4e4;
 
 // Z-Index
 $ui-index-1: 1; // Для наполняющих элементов в общем потоке
@@ -55,13 +51,23 @@ $ui-index-6: 6; // Для элементов, перекрывающих все
 
 :root {
 	--lock-padding: 0px;
+	--swiper-pagination-top: 100%;
+	--swiper-pagination-bottom: auto;
+	--swiper-pagination-color: #{$grey};
+	--swiper-pagination-bullet-inactive-color: #{$grey};
+	--swiper-pagination-bullet-opacity: 1;
+	--swiper-pagination-bullet-inactive-opacity: 0.8;
+	--swiper-pagination-bullet-size: #{rem(11)};
+	--swiper-navigation-size: #{rem(40)};
+	--swiper-pagination-bullet-horizontal-gap: #{rem(3)};
+	--swiper-wrapper-transition-timing-function: linear;
 }
 
 //ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ
 body {
 	font-family: $fontfamily, sans-serif;
 	color: $text;
-	background: $white;
+	background: $black;
 	min-height: 100%;
 	line-height: normal;
 	min-width: 320px;
@@ -98,24 +104,9 @@ body {
 	max-width: 100%;
 	padding: 0 1.38rem;
 	max-width: $maxWidthContainer;
-	&.container_fluid {
-		max-width: 100%;
-		padding: 0 rem(10);
-		@media (min-width: $md6) {
-			padding: 0 1.5rem;
-		}
-		@media (min-width: $md4) {
-			padding: 0 2.5rem;
-		}
-		@media (min-width: $md2) {
-			padding: 0 rem(60);
-		}
-	}
-	&.container_lg {
-		max-width: 85rem;
-	}
-	&.container_md {
-		max-width: 82.5rem;
+
+	&.container-lg {
+		max-width: rem(1280);
 	}
 }
 
@@ -136,22 +127,22 @@ body {
 	@media (min-width: $md2) {
 		// position: relative;
 		// z-index: 3;
-		// background: $white;
+		//
 		// margin-bottom: 100vh;
 	}
 }
 // ========================================================
 
 @import "pages/home";
-@import "pages/catalog";
-@import "pages/product";
-@import "pages/order";
-@import "pages/salons";
-@import "pages/info";
-@import "pages/promotion";
 @import "pages/certs";
-@import "pages/contacts";
-@import "pages/deposits";
-@import "pages/about";
-@import "pages/spa-programms";
 @import "pages/news";
+// @import "pages/catalog";
+// @import "pages/product";
+// @import "pages/order";
+// @import "pages/salons";
+// @import "pages/info";
+// @import "pages/promotion";
+// @import "pages/contacts";
+// @import "pages/deposits";
+// @import "pages/about";
+// @import "pages/spa-programms";
