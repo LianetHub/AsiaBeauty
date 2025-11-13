@@ -1,0 +1,42 @@
+[
+    {
+        "image": "@img/deposits/01.jpg",
+        "name": "Депозит на 100 000 ₽"
+    },
+    {
+        "image": "@img/deposits/02.jpg",
+        "name": "Депозит на 150 000 ₽"
+    },
+    {
+        "image": "@img/deposits/03.jpg",
+        "name": "Депозит на 200 000 ₽"
+    },
+    {
+        "image": "@img/deposits/04.jpg",
+        "name": "Депозит на 250 000 ₽"
+    },
+    {
+        "image": "@img/deposits/05.jpg",
+        "name": "Депозит на 300 000 ₽"
+    },
+    {
+        "image": "@img/deposits/01.jpg",
+        "name": "Депозит на 350 000 ₽"
+    },
+    {
+        "image": "@img/deposits/02.jpg",
+        "name": "Депозит на 400 000 ₽"
+    },
+    {
+        "image": "@img/deposits/03.jpg",
+        "name": "Депозит на 450 000 ₽"
+    },
+    {
+        "image": "@img/deposits/04.jpg",
+        "name": "Депозит на 500 000 ₽"
+    },
+    {
+        "image": "@img/deposits/05.jpg",
+        "name": "Депозит на 550 000 ₽"
+    }
+]

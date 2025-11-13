@@ -147,6 +147,7 @@ body {
 @import "pages/home";
 @import "pages/certs";
 @import "pages/news";
+@import "pages/deposits";
 // @import "pages/catalog";
 // @import "pages/product";
 // @import "pages/order";
@@ -154,7 +155,6 @@ body {
 // @import "pages/info";
 // @import "pages/promotion";
 // @import "pages/contacts";
-// @import "pages/deposits";
 // @import "pages/about";
 // @import "pages/spa-programms";
 
@@ -222,6 +222,9 @@ body {
 	// .banner__title
 	&__title {
 		max-width: 24rem;
+		@media (max-width: $md5) {
+			font-size: rem(14);
+		}
 	}
 	// .banner__description
 	&__description {
@@ -234,7 +237,7 @@ body {
 			margin-top: rem(32);
 			text-align: center;
 			font-size: rem(10);
-			max-width: rem(280);
+			max-width: rem(288);
 			margin-inline: auto;
 			@media (min-width: $md5) {
 				display: none;

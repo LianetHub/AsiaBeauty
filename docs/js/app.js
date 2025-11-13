@@ -279,11 +279,27 @@ $(function () {
             spaceBetween: 25,
         })
     }
+
     if ($('.places__slider').length > 0) {
         new Swiper(".places__slider", {
             slidesPerView: "auto",
             spaceBetween: 11,
             watchOverflow: true,
+            breakpoints: {
+                767.98: {
+                    spaceBetween: 38,
+                }
+            }
+        })
+    }
+
+    if ($('.deposits__slider').length > 0) {
+        new Swiper(".deposits__slider", {
+            slidesPerView: "auto",
+            spaceBetween: 39,
+            watchOverflow: true,
+            speed: 300,
+            mousewheel: true,
             breakpoints: {
                 767.98: {
                     spaceBetween: 30,
