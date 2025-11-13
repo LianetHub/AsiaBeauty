@@ -49,6 +49,8 @@ $ui-index-4: 4; // Для сайдбаров
 $ui-index-5: 5; // Для модалок
 $ui-index-6: 6; // Для элементов, перекрывающих все
 
+$headerHeight: var(--header-height, rem(112));
+
 :root {
 	--lock-padding: 0px;
 	--swiper-pagination-top: 100%;
