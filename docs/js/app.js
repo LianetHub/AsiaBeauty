@@ -68,7 +68,7 @@ $(function () {
             });
 
         })
-        $('tab-btn').on('click', (e) => {
+        $('.tab-btn').on('click', (e) => {
             let $target = $(e.target);
 
             $target.addClass("active")
@@ -79,7 +79,6 @@ $(function () {
                 .removeClass('active')
                 .eq($target.index())
                 .addClass('active')
-
         })
     }
 
@@ -203,7 +202,18 @@ $(function () {
         $('.certs__slider').each(function (index, sliderWrapper) {
 
             let pagination = $(sliderWrapper).find('.certs__slider-pagination')[0];
-            let slider = $(sliderWrapper).find('.swiper')[0];
+            let slider = $(sliderWrapper).find('.certs__slider-main')[0];
+            let thumbsSlider = $(sliderWrapper).find('.certs__slider-thumbs')[0];
+
+            let thumbsSwiper = new Swiper(thumbsSlider, {
+                slidesPerView: 4,
+                spaceBetween: 8,
+                watchSlidesProgress: true,
+                watchOverflow: true,
+                speed: 800,
+                loop: true,
+                slideToClickedSlide: true,
+            });
 
             new Swiper(slider, {
                 slidesPerView: 1,
@@ -219,7 +229,9 @@ $(function () {
                 pagination: {
                     el: pagination,
                     clickable: true
-
+                },
+                thumbs: {
+                    swiper: thumbsSwiper
                 }
             })
         });
@@ -228,11 +240,16 @@ $(function () {
     if ($('.news__slider').length > 0) {
         new Swiper(".news__slider", {
             slidesPerView: "auto",
-            spaceBetween: 29,
+            spaceBetween: 20,
             speed: 800,
             navigation: {
                 nextEl: ".news__slider-next",
                 prevEl: ".news__slider-prev"
+            },
+            breakpoints: {
+                575.98: {
+                    spaceBetween: 29,
+                }
             }
         })
     }
@@ -240,13 +257,18 @@ $(function () {
     if ($('.brands__slider').length > 0) {
         new Swiper(".brands__slider", {
             slidesPerView: "auto",
-            spaceBetween: 120,
+            spaceBetween: 60,
             speed: 10000,
             loop: true,
             autoplay: {
                 delay: 1,
                 stopOnLastSlide: false,
                 disableOnInteraction: false
+            },
+            breakpoints: {
+                767.98: {
+                    spaceBetween: 120,
+                }
             }
         })
     }

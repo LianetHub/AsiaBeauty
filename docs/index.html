@@ -94,15 +94,18 @@
                         <div class="hero__year">2000</div>
                         <h1 class="hero__title title-lg">ASIA BEAUTY SPA</h1>
                         <p class="hero__subtitle">Императорские spa-ритуалы, перерождение тела и духа</p>
+                        <a href="" class="hero__buy btn btn-primary">Купить сертификат</a>
                     </div>
                 </section>
                 <div class="about">
                     <section class="description">
                         <div class="container">
-                            <div class="section-header">
+                            <div class="description__header section-header">
                                 <div class="section-header__caption caption">О пространстве</div>
                                 <h2 class="section-header__title title">
-                                    Отдых в spa-пространстве Asia Beauty Spa
+                                    <span>Отдых в spa-</span>
+                                    <span>пространстве Asia</span>
+                                    <span>Beauty Spa</span>
                                 </h2>
                             </div>
                             <div class="description__text">
@@ -167,27 +170,28 @@
         <button type="button" class="certs__tabs-btn btn btn-white-outline btn-lg tab-btn">для нее</button>
         <button type="button" class="certs__tabs-btn btn btn-white-outline btn-lg tab-btn">для него</button>
     </div>
+
     <div class="certs__tabs-content">
-        <div class="tab-content">
+        <!-- === ТАБ 1: На сумму === -->
+        <div class="tab-content active">
             <div class="certs__block">
                 <div class="certs__slider">
-                    <div class="swiper">
+                    <div class="certs__slider-main swiper">
                         <div class="swiper-wrapper">
-                            <div class="certs__slide swiper-slide">
-                                <img src="img/certs/01.jpg" class="cover-image" alt="Сертификат">
-                            </div>
-                            <div class="certs__slide swiper-slide">
-                                <img src="img/certs/02.jpg" class="cover-image" alt="Сертификат">
-                            </div>
-                            <div class="certs__slide swiper-slide">
-                                <img src="img/certs/03.jpg" class="cover-image" alt="Сертификат">
-                            </div>
-                            <div class="certs__slide swiper-slide">
-                                <img src="img/certs/04.jpg" class="cover-image" alt="Сертификат">
-                            </div>
-                            <div class="certs__slide swiper-slide">
-                                <img src="img/certs/05.jpg" class="cover-image" alt="Сертификат">
-                            </div>
+                            <div class="certs__slide swiper-slide"><img src="img/certs/01.jpg" class="cover-image" alt="Сертификат"></div>
+                            <div class="certs__slide swiper-slide"><img src="img/certs/02.jpg" class="cover-image" alt="Сертификат"></div>
+                            <div class="certs__slide swiper-slide"><img src="img/certs/03.jpg" class="cover-image" alt="Сертификат"></div>
+                            <div class="certs__slide swiper-slide"><img src="img/certs/04.jpg" class="cover-image" alt="Сертификат"></div>
+                            <div class="certs__slide swiper-slide"><img src="img/certs/05.jpg" class="cover-image" alt="Сертификат"></div>
+                        </div>
+                    </div>
+                    <div class="certs__slider-thumbs swiper">
+                        <div class="swiper-wrapper">
+                            <div class="certs__slider-thumb swiper-slide"><img src="img/certs/01.jpg" class="cover-image" alt=""></div>
+                            <div class="certs__slider-thumb swiper-slide"><img src="img/certs/02.jpg" class="cover-image" alt=""></div>
+                            <div class="certs__slider-thumb swiper-slide"><img src="img/certs/03.jpg" class="cover-image" alt=""></div>
+                            <div class="certs__slider-thumb swiper-slide"><img src="img/certs/04.jpg" class="cover-image" alt=""></div>
+                            <div class="certs__slider-thumb swiper-slide"><img src="img/certs/05.jpg" class="cover-image" alt=""></div>
                         </div>
                     </div>
                     <div class="certs__slider-pagination swiper-pagination"></div>
@@ -210,14 +214,129 @@
                 </div>
             </div>
         </div>
-        <div class="tab-content">
 
+        <!-- === ТАБ 2: Для двоих === -->
+        <div class="tab-content">
+            <div class="certs__block">
+                <div class="certs__slider">
+                    <div class="certs__slider-main swiper">
+                        <div class="swiper-wrapper">
+                            <div class="certs__slide swiper-slide"><img src="img/certs/03.jpg" class="cover-image" alt=""></div>
+                            <div class="certs__slide swiper-slide"><img src="img/certs/01.jpg" class="cover-image" alt=""></div>
+                            <div class="certs__slide swiper-slide"><img src="img/certs/05.jpg" class="cover-image" alt=""></div>
+                            <div class="certs__slide swiper-slide"><img src="img/certs/04.jpg" class="cover-image" alt=""></div>
+                            <div class="certs__slide swiper-slide"><img src="img/certs/02.jpg" class="cover-image" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="certs__slider-thumbs swiper">
+                        <div class="swiper-wrapper">
+                            <div class="certs__slider-thumb swiper-slide"><img src="img/certs/03.jpg" class="cover-image" alt=""></div>
+                            <div class="certs__slider-thumb swiper-slide"><img src="img/certs/01.jpg" class="cover-image" alt=""></div>
+                            <div class="certs__slider-thumb swiper-slide"><img src="img/certs/05.jpg" class="cover-image" alt=""></div>
+                            <div class="certs__slider-thumb swiper-slide"><img src="img/certs/04.jpg" class="cover-image" alt=""></div>
+                            <div class="certs__slider-thumb swiper-slide"><img src="img/certs/02.jpg" class="cover-image" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="certs__slider-pagination swiper-pagination"></div>
+                </div>
+                <div class="certs__block-body">
+                    <div class="certs__items">
+                        <a href="" class="certs__item text-medium">5 000 ₽</a>
+                        <a href="" class="certs__item text-medium">7 000 ₽</a>
+                        <a href="" class="certs__item text-medium">12 000 ₽</a>
+                        <a href="" class="certs__item text-medium">18 000 ₽</a>
+                        <a href="" class="certs__item text-medium">25 000 ₽</a>
+                        <a href="" class="certs__item text-medium">30 000 ₽</a>
+                        <a href="" class="certs__item text-medium">50 000 ₽</a>
+                    </div>
+                    <div class="certs__block-footer">
+                        <a href="" class="certs__btn btn btn-white btn-lg">Выбрать</a>
+                        <a href="" class="certs__cart btn btn-white-outline btn-lg icon-cart"></a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="tab-content">
 
+        <!-- === ТАБ 3: Для нее === -->
+        <div class="tab-content">
+            <div class="certs__block">
+                <div class="certs__slider">
+                    <div class="certs__slider-main swiper">
+                        <div class="swiper-wrapper">
+                            <div class="certs__slide swiper-slide"><img src="img/certs/02.jpg" class="cover-image" alt=""></div>
+                            <div class="certs__slide swiper-slide"><img src="img/certs/04.jpg" class="cover-image" alt=""></div>
+                            <div class="certs__slide swiper-slide"><img src="img/certs/01.jpg" class="cover-image" alt=""></div>
+                            <div class="certs__slide swiper-slide"><img src="img/certs/05.jpg" class="cover-image" alt=""></div>
+                            <div class="certs__slide swiper-slide"><img src="img/certs/03.jpg" class="cover-image" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="certs__slider-thumbs swiper">
+                        <div class="swiper-wrapper">
+                            <div class="certs__slider-thumb swiper-slide"><img src="img/certs/02.jpg" class="cover-image" alt=""></div>
+                            <div class="certs__slider-thumb swiper-slide"><img src="img/certs/04.jpg" class="cover-image" alt=""></div>
+                            <div class="certs__slider-thumb swiper-slide"><img src="img/certs/01.jpg" class="cover-image" alt=""></div>
+                            <div class="certs__slider-thumb swiper-slide"><img src="img/certs/05.jpg" class="cover-image" alt=""></div>
+                            <div class="certs__slider-thumb swiper-slide"><img src="img/certs/03.jpg" class="cover-image" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="certs__slider-pagination swiper-pagination"></div>
+                </div>
+                <div class="certs__block-body">
+                    <div class="certs__items">
+                        <a href="" class="certs__item text-medium">3 000 ₽</a>
+                        <a href="" class="certs__item text-medium">5 000 ₽</a>
+                        <a href="" class="certs__item text-medium">7 000 ₽</a>
+                        <a href="" class="certs__item text-medium">10 000 ₽</a>
+                        <a href="" class="certs__item text-medium">15 000 ₽</a>
+                        <a href="" class="certs__item text-medium">20 000 ₽</a>
+                    </div>
+                    <div class="certs__block-footer">
+                        <a href="" class="certs__btn btn btn-white btn-lg">Выбрать</a>
+                        <a href="" class="certs__cart btn btn-white-outline btn-lg icon-cart"></a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="tab-content">
 
+        <!-- === ТАБ 4: Для него === -->
+        <div class="tab-content">
+            <div class="certs__block">
+                <div class="certs__slider">
+                    <div class="certs__slider-main swiper">
+                        <div class="swiper-wrapper">
+                            <div class="certs__slide swiper-slide"><img src="img/certs/05.jpg" class="cover-image" alt=""></div>
+                            <div class="certs__slide swiper-slide"><img src="img/certs/03.jpg" class="cover-image" alt=""></div>
+                            <div class="certs__slide swiper-slide"><img src="img/certs/01.jpg" class="cover-image" alt=""></div>
+                            <div class="certs__slide swiper-slide"><img src="img/certs/02.jpg" class="cover-image" alt=""></div>
+                            <div class="certs__slide swiper-slide"><img src="img/certs/04.jpg" class="cover-image" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="certs__slider-thumbs swiper">
+                        <div class="swiper-wrapper">
+                            <div class="certs__slider-thumb swiper-slide"><img src="img/certs/05.jpg" class="cover-image" alt=""></div>
+                            <div class="certs__slider-thumb swiper-slide"><img src="img/certs/03.jpg" class="cover-image" alt=""></div>
+                            <div class="certs__slider-thumb swiper-slide"><img src="img/certs/01.jpg" class="cover-image" alt=""></div>
+                            <div class="certs__slider-thumb swiper-slide"><img src="img/certs/02.jpg" class="cover-image" alt=""></div>
+                            <div class="certs__slider-thumb swiper-slide"><img src="img/certs/04.jpg" class="cover-image" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="certs__slider-pagination swiper-pagination"></div>
+                </div>
+                <div class="certs__block-body">
+                    <div class="certs__items">
+                        <a href="" class="certs__item text-medium">5 000 ₽</a>
+                        <a href="" class="certs__item text-medium">8 000 ₽</a>
+                        <a href="" class="certs__item text-medium">12 000 ₽</a>
+                        <a href="" class="certs__item text-medium">20 000 ₽</a>
+                        <a href="" class="certs__item text-medium">25 000 ₽</a>
+                        <a href="" class="certs__item text-medium">35 000 ₽</a>
+                    </div>
+                    <div class="certs__block-footer">
+                        <a href="" class="certs__btn btn btn-white btn-lg">Выбрать</a>
+                        <a href="" class="certs__cart btn btn-white-outline btn-lg icon-cart"></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -507,11 +626,11 @@
         <nav aria-label="Меню в подвале" class="footer__menu">
             <a href="" class="footer__menu-policy">Политика конфиденциальности</a>
             <ul class="footer__menu-list">
-                <li class="footer__menue-item"><a href="" class="footer__menu-link">Массаж на дом</a></li>
-                <li class="footer__menue-item"><a href="" class="footer__menu-link">Новости</a></li>
-                <li class="footer__menue-item"><a href="" class="footer__menu-link">Акции</a></li>
-                <li class="footer__menue-item"><a href="" class="footer__menu-link">Партнеры</a></li>
-                <li class="footer__menue-item"><a href="" class="footer__menu-link">Салоны</a></li>
+                <li class="footer__menu-item"><a href="" class="footer__menu-link">Массаж на дом</a></li>
+                <li class="footer__menu-item"><a href="" class="footer__menu-link">Новости</a></li>
+                <li class="footer__menu-item"><a href="" class="footer__menu-link">Акции</a></li>
+                <li class="footer__menu-item"><a href="" class="footer__menu-link">Партнеры</a></li>
+                <li class="footer__menu-item"><a href="" class="footer__menu-link">Салоны</a></li>
             </ul>
         </nav>
         <div class="footer__banner">

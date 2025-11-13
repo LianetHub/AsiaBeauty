@@ -82,25 +82,43 @@
 // }
 
 .news {
-	padding: rem(60) 0 rem(100);
 	position: relative;
+	padding: rem(16) 0rem rem(32);
+	@media (min-width: $md6) {
+		padding: rem(16) 1rem rem(32);
+	}
+	@media (min-width: $md5) {
+		padding: rem(60) 0 rem(100);
+	}
 	// .news__slider
 	&__slider {
-		margin-top: rem(26);
 		overflow: visible;
+		margin-top: rem(32);
+		@media (min-width: $md4) {
+			margin-top: rem(26);
+		}
 	}
 	// .news__slider-prev
 	&__slider-prev {
 		--swiper-navigation-sides-offset: 2rem;
+		@media (max-width: $md5) {
+			display: none;
+		}
 	}
 	// .news__slider-next
 	&__slider-next {
 		--swiper-navigation-sides-offset: 2rem;
+		@media (max-width: $md5) {
+			display: none;
+		}
 	}
 	// .news__item
 	&__item {
 		&.swiper-slide {
-			width: rem(304);
+			width: rem(207);
+			@media (min-width: $md5) {
+				width: rem(304);
+			}
 		}
 	}
 	// .news__item-header
@@ -111,7 +129,10 @@
 		display: flex;
 		flex-direction: column;
 		& + .news__item-btn {
-			margin-top: 1.5rem;
+			margin-top: 1rem;
+			@media (min-width: $md4) {
+				margin-top: 1.5rem;
+			}
 		}
 		@media (min-width: $md4) {
 			aspect-ratio: math.div(304, 414);
@@ -137,27 +158,43 @@
 		left: 0;
 		right: 0;
 		color: #fff;
-		padding: rem(0) rem(6) rem(20) rem(16);
+		padding: rem(0) rem(6) rem(16) rem(12);
+		@media (min-width: $md5) {
+			padding: rem(0) rem(6) rem(20) rem(16);
+		}
 	}
 	// .news__item-time
 	&__item-time {
-		font-family: $font-cormorant;
-		font-size: 1.25rem;
-		line-height: 110%;
-		letter-spacing: -0.025rem;
+		display: none;
+		@media (min-width: $md5) {
+			display: block;
+			font-family: $font-cormorant;
+			font-size: 1.25rem;
+			line-height: 110%;
+			letter-spacing: -0.025rem;
+		}
 	}
 	// .news__item-title
 	&__item-title {
-		margin-top: 0.25rem;
-		font-size: 1.25rem;
 		font-weight: 700;
 		line-height: 110%;
-		letter-spacing: -0.025rem;
-		min-height: rem(68);
+		font-size: rem(12);
+		letter-spacing: -0.015rem;
+		min-height: rem(50);
+		@media (min-width: $md5) {
+			margin-top: 0.25rem;
+			letter-spacing: -0.025rem;
+			min-height: rem(68);
+			font-size: 1.25rem;
+		}
 	}
 	// .news__item-btn
 	&__item-btn {
-		margin-top: 0.5rem;
-		min-width: 12.25rem;
+		min-width: 8.8125rem;
+		min-height: rem(28);
+		@media (min-width: $md5) {
+			margin-top: 0.5rem;
+			min-width: 12.25rem;
+		}
 	}
 }

@@ -78,7 +78,7 @@
 		display: flex;
 		align-items: center;
 		gap: 0.44rem;
-		@media (min-width: 375px) {
+		@media (min-width: $md6) {
 			padding-inline: 1rem;
 		}
 		@media (min-width: $md5) {

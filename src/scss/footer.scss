@@ -1,10 +1,24 @@
 .footer {
-	padding: rem(100) 0;
+	padding: rem(40) 0;
+	@media (min-width: $md4) {
+		padding: rem(100) 0;
+	}
 	// .footer__top
 	&__top {
-		display: flex;
-		justify-content: space-between;
-		text-align: center;
+		display: grid;
+		row-gap: 1.25rem;
+		@media (min-width: $md5) {
+			row-gap: 2rem;
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (min-width: $md4) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		@media (min-width: $md3) {
+			display: flex;
+			justify-content: space-between;
+			text-align: center;
+		}
 	}
 	// .footer__column
 	&__column {
@@ -15,11 +29,23 @@
 	}
 	// .footer__caption
 	&__caption {
+		font-size: 0.875rem;
+		@media (min-width: $md5) {
+			font-size: 1rem;
+		}
 	}
 	// .footer__column-body
 	&__column-body {
-		margin-top: rem(40);
 		line-height: 1.2;
+		font-size: 0.875rem;
+		margin-top: rem(8);
+		@media (min-width: $md5) {
+			margin-top: rem(12);
+			font-size: 1rem;
+		}
+		@media (min-width: $md4) {
+			margin-top: rem(40);
+		}
 		& a {
 			transition: color 0.3s ease;
 			@media (any-hover: hover) {
@@ -31,18 +57,34 @@
 	}
 	// .footer__column-body
 	&__column-socials {
-		margin-top: rem(25);
+		margin-top: rem(12);
+		@media (min-width: $md5) {
+			margin-top: rem(25);
+		}
 	}
 	// .footer__menu
 	&__menu {
 		margin-top: rem(50);
 		display: flex;
 		justify-content: space-between;
-		gap: 2.5rem;
-		align-items: flex-start;
+		flex-direction: column;
+		text-align: center;
+		gap: 2rem;
+		@media (min-width: $md5) {
+			gap: 2.5rem;
+		}
+		@media (min-width: $md3) {
+			align-items: flex-start;
+			text-align: left;
+			flex-direction: row;
+		}
 	}
 	// .footer__menu-policy
 	&__menu-policy {
+		@media (max-width: $md5) {
+			font-weight: 700;
+			text-decoration: underline;
+		}
 		transition: color 0.3s ease;
 		@media (any-hover: hover) {
 			&:hover {
@@ -53,15 +95,27 @@
 	// .footer__menu-list
 	&__menu-list {
 		display: flex;
-		flex-wrap: wrap;
-		gap: 2.5rem;
+		justify-content: center;
+		flex-direction: column;
+		gap: rem(10);
+		@media (min-width: $md5) {
+			gap: 2.5rem;
+			flex-wrap: wrap;
+			flex-direction: row;
+		}
+		@media (min-width: $md3) {
+			justify-content: flex-start;
+		}
 	}
 	// .footer__menue-item
-	&__menue-item {
+	&__menu-item {
 	}
 	// .footer__menu-link
 	&__menu-link {
 		transition: color 0.3s ease;
+		@media (max-width: $md5) {
+			text-decoration: underline;
+		}
 		@media (any-hover: hover) {
 			&:hover {
 				color: $red;
@@ -71,12 +125,25 @@
 	// .footer__banner
 	&__banner {
 		margin-top: rem(60);
+		& img {
+			min-height: rem(212);
+		}
+		@media (max-width: $md4) {
+			margin-inline: -2rem;
+		}
+		@media (max-width: $md6) {
+			margin-inline: -1rem;
+		}
 	}
 	// .footer__logo
 	&__logo {
-		width: rem(140);
-		margin-top: rem(62);
 		margin-inline: auto;
+		margin-top: rem(38);
+		width: rem(100);
+		@media (min-width: $md4) {
+			width: rem(140);
+			margin-top: rem(62);
+		}
 		& img {
 			width: 100%;
 		}

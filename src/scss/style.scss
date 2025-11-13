@@ -27,6 +27,7 @@ $md2: 1199.98px;
 $md3: 991.98px;
 $md4: 767.98px;
 $md5: 575.98px;
+$md6: 374.98px;
 
 // ПЕРЕМЕННЫЕ
 $minWidth: 320; // Минимальная ширина страницы
@@ -102,7 +103,7 @@ body {
 	margin: 0 auto;
 	max-width: 100%;
 	padding: 0 1rem;
-	@media (min-width: 375px) {
+	@media (min-width: $md6) {
 		padding: 0 2rem;
 	}
 	@media (min-width: $md5) {

@@ -173,9 +173,11 @@
 	}
 
 	&.btn-lg {
-		min-height: rem(40);
-		font-size: rem(14);
-		padding: rem(8) rem(25);
+		@media (min-width: $md4) {
+			min-height: rem(40);
+			font-size: rem(14);
+			padding: rem(8) rem(25);
+		}
 	}
 
 	&:disabled,
