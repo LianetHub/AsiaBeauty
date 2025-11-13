@@ -23,7 +23,7 @@
 // 			font-family: inherit;
 // 		}
 // 		padding-bottom: rem(50);
-// 		@media (min-width: $md5) {
+// 		@media (min-width: $md4) {
 // 			padding-bottom: rem(100);
 // 		}
 // 	}
@@ -36,7 +36,7 @@
 // 	}
 // 	// .news__filter
 // 	&__filter {
-// 		@media (min-width: $md5) {
+// 		@media (min-width: $md4) {
 // 			padding: rem(8.5) rem(24);
 // 		}
 // 	}
@@ -44,7 +44,7 @@
 // 	&__body {
 // 		&:not(:first-child) {
 // 			margin-top: rem(36);
-// 			@media (min-width: $md5) {
+// 			@media (min-width: $md4) {
 // 				margin-top: rem(74);
 // 			}
 // 		}
@@ -113,7 +113,7 @@
 		& + .news__item-btn {
 			margin-top: 1.5rem;
 		}
-		@media (min-width: $md5) {
+		@media (min-width: $md4) {
 			aspect-ratio: math.div(304, 414);
 		}
 		@media (any-hover: hover) {

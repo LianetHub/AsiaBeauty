@@ -276,7 +276,7 @@
 		margin: 1.75rem em(0) em(0) em(0);
 		display: grid;
 		gap: 1.25rem;
-		@media (min-width: $md5) {
+		@media (min-width: $md4) {
 			row-gap: 1.75rem;
 			grid-template-columns: repeat(2, 1fr);
 		}

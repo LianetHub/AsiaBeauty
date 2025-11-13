@@ -22,13 +22,11 @@ $font-cormorant: "Cormorant";
 
 // Шрифт по умолчанию
 
-$md0: 1599.98px;
 $md1: 1439.98px;
 $md2: 1199.98px;
-$md3: 1023.98px;
+$md3: 991.98px;
 $md4: 767.98px;
 $md5: 575.98px;
-$md6: 389.98px;
 
 // ПЕРЕМЕННЫЕ
 $minWidth: 320; // Минимальная ширина страницы
@@ -102,13 +100,29 @@ body {
 // Отзывчивая
 .container {
 	margin: 0 auto;
-	box-sizing: content-box;
 	max-width: 100%;
-	padding: 0 1.38rem;
-	max-width: $maxWidthContainer;
-
+	padding: 0 1rem;
+	@media (min-width: 375px) {
+		padding: 0 2rem;
+	}
+	@media (min-width: $md5) {
+		box-sizing: content-box;
+		padding: 0 1rem;
+		max-width: rem(540);
+	}
+	@media (min-width: $md4) {
+		max-width: rem(720);
+	}
+	@media (min-width: $md3) {
+		max-width: rem(960);
+	}
+	@media (min-width: $md2) {
+		max-width: $maxWidthContainer;
+	}
 	&.container-lg {
-		max-width: rem(1280);
+		@media (min-width: $md1) {
+			max-width: rem(1280);
+		}
 	}
 }
 
@@ -126,12 +140,6 @@ body {
 // =======================ОСНОВНОЙ БЛОК==================
 .page {
 	flex: 1 1 auto;
-	@media (min-width: $md2) {
-		// position: relative;
-		// z-index: 3;
-		//
-		// margin-bottom: 100vh;
-	}
 }
 // ========================================================
 

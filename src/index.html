@@ -6,7 +6,6 @@
     <body>
         <div class="wrapper">
             @@include('html/_header.html', {
-            "color": "white",
             "active": "0"
             })
             <main class="page">
@@ -34,9 +33,11 @@
                                     Наши мастера – это коренные жители Бали, Таиланда и Китая, закончившие международные школы массажа, с профессиональным стажем не менее 7 лет.
                                 </p>
                             </div>
-                            <ul class="description__services services__list">
-                                @@loop('./html/templates/_service.html', './html/json/services.json')
-                            </ul>
+                            <div class="description__services services__slider swiper">
+                                <ul class="swiper-wrapper">
+                                    @@loop('./html/templates/_service.html', './html/json/services.json')
+                                </ul>
+                            </div>
                         </div>
                     </section>
                     <section class="certs">

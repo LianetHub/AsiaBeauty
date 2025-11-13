@@ -28,7 +28,7 @@
 		display: grid;
 		gap: 1.25rem;
 		row-gap: 2.5rem;
-		@media (min-width: $md5) {
+		@media (min-width: $md4) {
 			grid-template-columns: repeat(2, 1fr);
 		}
 		@media (min-width: $md3) {
@@ -58,7 +58,7 @@
 			}
 		}
 		font-size: 1.375rem;
-		@media (min-width: $md5) {
+		@media (min-width: $md4) {
 			font-size: 1.5rem;
 		}
 	}
@@ -76,7 +76,7 @@
 		display: grid;
 		column-gap: 1.25rem;
 		row-gap: 3.75rem;
-		@media (min-width: $md5) {
+		@media (min-width: $md4) {
 			row-gap: 2.5rem;
 			grid-template-columns: repeat(2, 1fr);
 		}
@@ -96,7 +96,7 @@
 		line-height: 120%;
 		margin-bottom: 1rem;
 		font-size: 1.375rem;
-		@media (min-width: $md5) {
+		@media (min-width: $md4) {
 			font-size: 1.5rem;
 		}
 		@media (min-width: $md2) {
@@ -106,7 +106,7 @@
 	// .contacts__item-address
 	&__item-address {
 		font-size: 1.125rem;
-		@media (min-width: $md5) {
+		@media (min-width: $md4) {
 			font-size: 1rem;
 		}
 	}

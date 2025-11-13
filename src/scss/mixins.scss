@@ -101,7 +101,7 @@ $dimensions: (
 	// font-size: $sizeValue + px;
 	font-size: pxToVw($sizeValueMobile, mobile);
 
-	@media (min-width: $md5) {
+	@media (min-width: $md4) {
 		font-size: pxToVw($sizeValueTablet, tablet);
 	}
 

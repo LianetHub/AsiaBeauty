@@ -13,18 +13,27 @@
 
 .title {
 	font-family: $font-figtree;
-	font-size: 4rem;
 	font-weight: 700;
 	line-height: 110%;
 	letter-spacing: -0.28rem;
 	text-transform: uppercase;
+	font-size: 3rem;
+	@media (min-width: $md3) {
+		font-size: 4rem;
+	}
 }
 
 .title-lg {
 	font-family: $font-figtree;
-	font-size: 8rem;
 	font-weight: 700;
 	text-transform: uppercase;
+	font-size: 5rem;
+	@media (min-width: $md3) {
+		font-size: 6rem;
+	}
+	@media (min-width: $md2) {
+		font-size: 8rem;
+	}
 }
 
 .section-header {
@@ -78,6 +87,7 @@
 	background: $red;
 	color: #fff;
 	font-size: 1.5rem;
+	z-index: $ui-index-1;
 	svg {
 		display: none;
 	}
@@ -102,32 +112,54 @@
 	}
 }
 
-// .title-md {
-// 	&::first-letter {
-// 		font-family: $font-figtree;
-// 		font-weight: 500;
-// 	}
-// 	font-family: $font-figtree;
-// 	line-height: 110%;
-// 	letter-spacing: -0.06rem;
-// 	font-size: 2.5rem;
-// 	@media (min-width: $md4) {
-// 		font-size: 3rem;
-// 	}
-// }
+.whatsapp-btn {
+	z-index: $ui-index-5;
+	width: rem(74);
+	height: rem(74);
+	display: block;
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	cursor: pointer;
+	overflow: visible;
+	@media (min-width: $md2) {
+		display: none;
+	}
+	&__icon {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+		background: #fff;
+		border-radius: 50%;
+		color: $red;
+		font-size: 2.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		border-radius: 50%;
+		background: rgba($red, 1);
+		z-index: -1;
+		animation: pulse-wave 2s ease-out infinite;
+	}
 
-// .title-lg {
-// 	font-family: $font-figtree;
-// 	line-height: 110%;
-// 	letter-spacing: -0.06rem;
-// 	font-size: 2.125rem;
-// 	@media (min-width: $md5) {
-// 		font-size: 2.75rem;
-// 	}
-// 	@media (min-width: $md2) {
-// 		font-size: 3rem;
-// 	}
-// }
+	@keyframes pulse-wave {
+		0% {
+			transform: scale(1);
+			opacity: 0.8;
+		}
+		100% {
+			transform: scale(1.5);
+			opacity: 0;
+		}
+	}
+}
 
 // .product {
 // 	display: flex;
@@ -303,7 +335,7 @@
 
 // .pc-only {
 // 	display: none;
-// 	@media (min-width: $md5) {
+// 	@media (min-width: $md4) {
 // 		display: block;
 // 	}
 // }

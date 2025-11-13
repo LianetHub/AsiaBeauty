@@ -187,14 +187,16 @@ $(function () {
 
     // header height
     function getHeaderHeight() {
-        const headerHeight = Math.ceil($('.header').outerHeight());
+        const headerHeight = Math.ceil($('.header__wrapper').outerHeight());
         $('body').css('--header-height', headerHeight + 'px');
     }
 
     getHeaderHeight();
 
-    $(window).on('resize scroll', getHeaderHeight);
-
+    $(window).on('resize', getHeaderHeight);
+    $('.header__wrapper').on('transitionend', function () {
+        getHeaderHeight()
+    })
 
     // sliders 
     if ($('.certs__slider').length > 0) {
@@ -248,6 +250,32 @@ $(function () {
             }
         })
     }
+
+    if ($('.services__slider').length > 0) {
+        new Swiper(".services__slider", {
+            slidesPerView: "auto",
+            spaceBetween: 25,
+        })
+    }
+
+
+
+    // animation
+
+    // add background header on scroll
+    const $header = $('.header');
+
+    const callback = function (entries, observer) {
+        if (entries[0].isIntersecting) {
+            $header.removeClass('header--has-scroll')
+        } else {
+            $header.addClass('header--has-scroll');
+        }
+    };
+
+    const headerObserver = new IntersectionObserver(callback);
+    headerObserver.observe($header[0]);
+
 
 
     // init Smooth Scroll
