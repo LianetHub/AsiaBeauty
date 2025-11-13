@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
+<head>
     <title>Asia Beauty SPA | Оформление заказа</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -8,17 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- plugins -->
-    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/libs/fancybox.css" />
+    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20251114001413" />
+    <link rel="stylesheet" href="css/libs/fancybox.css?_v=20251114001413" />
     <!-- plugins -->
 
-    <link rel="stylesheet" href="css/reset.min.css" />
-    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/reset.min.css?_v=20251114001413" />
+    <link rel="stylesheet" href="css/style.min.css?_v=20251114001413" />
 
 </head>
-    <body>
-        <div class="wrapper">
-            <header class="header">
+
+<body>
+  <div class="wrapper">
+    <header class="header">
     <div class="header__wrapper">
         <div class="container container-lg">
             <div class="header__body">
@@ -88,270 +89,270 @@
         </div>
     </div>
 </div>
-            <main class="page">
-                <section class="order">
-                    <div class="order__container container">
-                        <form action="#" class="order__form">
-                            <div class="order__steps">
-                                <div class="order__step order__step_active">
-                                    <div class="order__header">
-                                        <div class="order__progress">
-                                            <span class="order__progress-current">1</span>/<span class="order__progress-total">3</span>
-                                        </div>
-                                        <div class="order__caption">
-                                            Введите данные
-                                        </div>
-                                    </div>
-                                    <div class="order__rows">
-                                        <div class="order__row">
-                                            <div class="order__label">
-                                                1. Ваше имя
-                                            </div>
-                                            <input type="text" name="name" class="input" placeholder="Имя">
-                                        </div>
-                                        <div class="order__row">
-                                            <div class="order__label">
-                                                2. Пожелание на сертификате
-                                            </div>
-                                            <input type="text" name="wish" class="input" placeholder="Желаю хорошо провести время!">
-                                        </div>
-                                        <div class="order__row">
-                                            <div class="order__label">
-                                                3. Комментарий сотруднику
-                                            </div>
-                                            <textarea name="message" class="textarea" placeholder="Оставьте ваш комментарий здесь"></textarea>
-                                        </div>
-                                    </div>
-                                    <button type="button" class="order__btn btn btn_brown icon-arrow-right">Далее</button>
-                                </div>
-                                <div class="order__step">
-                                    <div class="order__header">
-                                        <div class="order__progress">
-                                            <span class="order__progress-current">2</span>/<span class="order__progress-total">3</span>
-                                        </div>
-                                        <div class="order__caption">
-                                            Адрес и доставка
-                                        </div>
-                                    </div>
-                                    <div class="order__rows">
-                                        <div class="order__row">
-                                            <div class="order__label">
-                                                1. Доставка
-                                            </div>
-                                            <div class="order__options">
-                                                <label class="catalog__filter-item checkbox checkbox_red">
-                                                    <input type="radio" name="delivery" checked value="email" class="checkbox__input hidden delivery-toggler" hidden>
-                                                    <span class="checkbox__text">Получить сертификат по Email</span>
-                                                </label>
-                                                <label class="catalog__filter-item checkbox checkbox_red">
-                                                    <input type="radio" name="delivery" value="salon" class="checkbox__input hidden delivery-toggler" hidden>
-                                                    <span class="checkbox__text">Забрать в салоне</span>
-                                                </label>
-                                                <label class="catalog__filter-item checkbox checkbox_red">
-                                                    <input type="radio" name="delivery" value="inside" class="checkbox__input hidden delivery-toggler" hidden>
-                                                    <span class="checkbox__text">Доставка в пределах МКАД</span>
-                                                </label>
-                                                <label class="catalog__filter-item checkbox checkbox_red">
-                                                    <input type="radio" name="delivery" value="outside" class="checkbox__input hidden delivery-toggler" hidden>
-                                                    <span class="checkbox__text">Доставка за пределами МКАД</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="order__options">
-                                            <div id="email" class="order__option order__option_active">
-                                                <div class="order__row">
-                                                    <div class="order__label">
-                                                        2. Введите ваш email
-                                                    </div>
-                                                    <input type="email" name="email" class="input" placeholder="example@mail.ru">
-                                                    <div class="order__help">
-                                                        (после оплаты электронный подарочный сертификат придет на указанный email)
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div id="salon" class="order__option" inert>
-                                                <div class="order__row">
-                                                    <div class="order__label">
-                                                        2. Введите ваш email
-                                                    </div>
-                                                    <input type="email" name="email" class="input" placeholder="example@mail.ru">
-                                                    <div class="order__help">
-                                                        (после оплаты на указанный email придет чек)
-                                                    </div>
-                                                </div>
-                                                <div class="order__row">
-                                                    <div class="order__label">
-                                                        3. Введите номер телефона для связи с вами
-                                                    </div>
-                                                    <input type="tel" name="phone" class="input" placeholder="+7 (999) 999-99-99">
-                                                </div>
-                                                <div class="order__row">
-                                                    <div class="order__label">
-                                                        4. Выберите салон
-                                                    </div>
-                                                    <div class="order__select">
-                                                        <select>
-                                                            <option value="none">Не выбрано</option>
-                                                            <option value="polyanka">на Полянке</option>
-                                                            <option value="city">в Москва-сити</option>
-                                                            <option value="kiev">на Киевской</option>
-                                                            <option value="michurin">на Мичуринском проспекте</option>
-                                                            <option value="20-floor">Spa-пространство на 20 этажe</option>
-                                                            <option value="smolensk">на Смоленской</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div id="inside" class="order__option" inert>
-                                                <div class="order__row">
-                                                    <div class="order__label">
-                                                        2. Введите ваш email
-                                                    </div>
-                                                    <input type="email" name="email" class="input" placeholder="example@mail.ru">
-                                                    <div class="order__help">
-                                                        (после оплаты на указанный email придет чек)
-                                                    </div>
-                                                </div>
-                                                <div class="order__row">
-                                                    <div class="order__label">
-                                                        3. Введите номер телефона для связи с вами
-                                                    </div>
-                                                    <input type="tel" name="phone" class="input" placeholder="+7 (999) 999-99-99">
-                                                </div>
-                                                <div class="order__row">
-                                                    <div class="order__label">
-                                                        4. Адрес доставки
-                                                    </div>
-                                                    <input type="text" name="address" class="input" placeholder="Город, улица, дом, кв.">
-                                                    <div class="order__help">
-                                                        (доставка 500 руб)
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div id="outside" class="order__option" inert>
-                                                <div class="order__row">
-                                                    <div class="order__label">
-                                                        2. Введите ваш email
-                                                    </div>
-                                                    <input type="email" name="email" class="input" placeholder="example@mail.ru">
-                                                    <div class="order__help">
-                                                        (после оплаты на указанный email придет чек)
-                                                    </div>
-                                                </div>
-                                                <div class="order__row">
-                                                    <div class="order__label">
-                                                        3. Введите номер телефона для связи с вами
-                                                    </div>
-                                                    <input type="tel" name="phone" class="input" placeholder="+7 (999) 999-99-99">
-                                                </div>
-                                                <div class="order__row">
-                                                    <div class="order__label">
-                                                        4. Адрес доставки
-                                                    </div>
-                                                    <input type="text" name="address" class="input" placeholder="Город, улица, дом, кв.">
-                                                    <div class="order__help">
-                                                        (доставка 100 руб)
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button type="button" class="order__btn btn btn_brown icon-arrow-right">Далее</button>
-                                </div>
-                                <div class="order__step">
-                                    <div class="order__header">
-                                        <div class="order__progress">
-                                            <span class="order__progress-current">3</span>/<span class="order__progress-total">3</span>
-                                        </div>
-                                        <div class="order__caption">
-                                            Оформление
-                                        </div>
-                                    </div>
-                                    <div class="order__rows">
-                                        <div class="order__row">
-                                            <div class="order__label">
-                                                1. Положим в подарочный пакет?
-                                            </div>
-                                            <div class="order__options">
-                                                <label class="catalog__filter-item checkbox checkbox_red">
-                                                    <input type="radio" name="package" checked value="yes" class="checkbox__input hidden delivery-toggler" hidden>
-                                                    <span class="checkbox__text">Да [+500 руб]</span>
-                                                </label>
-                                                <label class="catalog__filter-item checkbox checkbox_red">
-                                                    <input type="radio" name="package" value="no" class="checkbox__input hidden delivery-toggler" hidden>
-                                                    <span class="checkbox__text">Нет</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="order__row">
-                                            <div class="order__label">
-                                                2. Добавим ароматическую массажную свечу?
-                                            </div>
-                                            <div class="order__options">
-                                                <label class="catalog__filter-item checkbox checkbox_red">
-                                                    <input type="radio" name="candle" checked value="yes" class="checkbox__input hidden delivery-toggler" hidden>
-                                                    <span class="checkbox__text">Да [+1 000 руб]</span>
-                                                </label>
-                                                <label class="catalog__filter-item checkbox checkbox_red">
-                                                    <input type="radio" name="candle" value="no" class="checkbox__input hidden delivery-toggler" hidden>
-                                                    <span class="checkbox__text">Нет</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button type="submit" class="order__btn btn btn_brown icon-arrow-right">Перейти к оплате</button>
-                                </div>
-                            </div>
-                            <div class="order__footer">
-                                <div class="order__total">
-                                    <div class="order__total-text">
-                                        Итого:
-                                    </div>
-                                    <div class="order__total-value">
-                                        95 000 ₽
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                        <div class="order__products">
-                            <div class="order__products-caption">
-                                Ваш заказ
-                            </div>
-                            <ul class="order__products-list">
-                                <li class="order__item">
-                                    <div class="order__item-thumb">
-                                        <img src="img/products/01.jpg" class="cover-image" alt="thumb">
-                                    </div>
-                                    <div class="order__item-name">
-                                        Relax massage
-                                    </div>
-                                </li>
-                                <li class="order__item">
-                                    <div class="order__item-thumb">
-                                        <img src="img/products/02.jpg" class="cover-image" alt="thumb">
-                                    </div>
-                                    <div class="order__item-name">
-                                        Традиционные практики
-                                        [китайская/тайская/балийская]
-                                    </div>
-                                </li>
-                                <li class="order__item">
-                                    <div class="order__item-thumb">
-                                        <img src="img/products/03.jpg" class="cover-image" alt="thumb">
-                                    </div>
-                                    <div class="order__item-name">
-                                        President Suite
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="order__products-subtitle icon-info">
-                                Запись на услуги центра ведется через менеджера в WhatsApp. Оплатить онлайн можно только сертификат
-                            </div>
-                        </div>
+    <main class="page">
+      <section class="order">
+        <div class="order__container container">
+          <form action="#" class="order__form">
+            <div class="order__steps">
+              <div class="order__step order__step_active">
+                <div class="order__header">
+                  <div class="order__progress">
+                    <span class="order__progress-current">1</span>/<span class="order__progress-total">3</span>
+                  </div>
+                  <div class="order__caption">
+                    Введите данные
+                  </div>
+                </div>
+                <div class="order__rows">
+                  <div class="order__row">
+                    <div class="order__label">
+                      1. Ваше имя
                     </div>
-                </section>
-            </main>
-            <footer class="footer">
+                    <input type="text" name="name" class="input" placeholder="Имя">
+                  </div>
+                  <div class="order__row">
+                    <div class="order__label">
+                      2. Пожелание на сертификате
+                    </div>
+                    <input type="text" name="wish" class="input" placeholder="Желаю хорошо провести время!">
+                  </div>
+                  <div class="order__row">
+                    <div class="order__label">
+                      3. Комментарий сотруднику
+                    </div>
+                    <textarea name="message" class="textarea" placeholder="Оставьте ваш комментарий здесь"></textarea>
+                  </div>
+                </div>
+                <button type="button" class="order__btn btn btn_brown icon-arrow-right">Далее</button>
+              </div>
+              <div class="order__step">
+                <div class="order__header">
+                  <div class="order__progress">
+                    <span class="order__progress-current">2</span>/<span class="order__progress-total">3</span>
+                  </div>
+                  <div class="order__caption">
+                    Адрес и доставка
+                  </div>
+                </div>
+                <div class="order__rows">
+                  <div class="order__row">
+                    <div class="order__label">
+                      1. Доставка
+                    </div>
+                    <div class="order__options">
+                      <label class="catalog__filter-item checkbox checkbox_red">
+                        <input type="radio" name="delivery" checked value="email" class="checkbox__input hidden delivery-toggler" hidden>
+                        <span class="checkbox__text">Получить сертификат по Email</span>
+                      </label>
+                      <label class="catalog__filter-item checkbox checkbox_red">
+                        <input type="radio" name="delivery" value="salon" class="checkbox__input hidden delivery-toggler" hidden>
+                        <span class="checkbox__text">Забрать в салоне</span>
+                      </label>
+                      <label class="catalog__filter-item checkbox checkbox_red">
+                        <input type="radio" name="delivery" value="inside" class="checkbox__input hidden delivery-toggler" hidden>
+                        <span class="checkbox__text">Доставка в пределах МКАД</span>
+                      </label>
+                      <label class="catalog__filter-item checkbox checkbox_red">
+                        <input type="radio" name="delivery" value="outside" class="checkbox__input hidden delivery-toggler" hidden>
+                        <span class="checkbox__text">Доставка за пределами МКАД</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="order__options">
+                    <div id="email" class="order__option order__option_active">
+                      <div class="order__row">
+                        <div class="order__label">
+                          2. Введите ваш email
+                        </div>
+                        <input type="email" name="email" class="input" placeholder="example@mail.ru">
+                        <div class="order__help">
+                          (после оплаты электронный подарочный сертификат придет на указанный email)
+                        </div>
+                      </div>
+                    </div>
+                    <div id="salon" class="order__option" inert>
+                      <div class="order__row">
+                        <div class="order__label">
+                          2. Введите ваш email
+                        </div>
+                        <input type="email" name="email" class="input" placeholder="example@mail.ru">
+                        <div class="order__help">
+                          (после оплаты на указанный email придет чек)
+                        </div>
+                      </div>
+                      <div class="order__row">
+                        <div class="order__label">
+                          3. Введите номер телефона для связи с вами
+                        </div>
+                        <input type="tel" name="phone" class="input" placeholder="+7 (999) 999-99-99">
+                      </div>
+                      <div class="order__row">
+                        <div class="order__label">
+                          4. Выберите салон
+                        </div>
+                        <div class="order__select">
+                          <select>
+                            <option value="none">Не выбрано</option>
+                            <option value="polyanka">на Полянке</option>
+                            <option value="city">в Москва-сити</option>
+                            <option value="kiev">на Киевской</option>
+                            <option value="michurin">на Мичуринском проспекте</option>
+                            <option value="20-floor">Spa-пространство на 20 этажe</option>
+                            <option value="smolensk">на Смоленской</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="inside" class="order__option" inert>
+                      <div class="order__row">
+                        <div class="order__label">
+                          2. Введите ваш email
+                        </div>
+                        <input type="email" name="email" class="input" placeholder="example@mail.ru">
+                        <div class="order__help">
+                          (после оплаты на указанный email придет чек)
+                        </div>
+                      </div>
+                      <div class="order__row">
+                        <div class="order__label">
+                          3. Введите номер телефона для связи с вами
+                        </div>
+                        <input type="tel" name="phone" class="input" placeholder="+7 (999) 999-99-99">
+                      </div>
+                      <div class="order__row">
+                        <div class="order__label">
+                          4. Адрес доставки
+                        </div>
+                        <input type="text" name="address" class="input" placeholder="Город, улица, дом, кв.">
+                        <div class="order__help">
+                          (доставка 500 руб)
+                        </div>
+                      </div>
+                    </div>
+                    <div id="outside" class="order__option" inert>
+                      <div class="order__row">
+                        <div class="order__label">
+                          2. Введите ваш email
+                        </div>
+                        <input type="email" name="email" class="input" placeholder="example@mail.ru">
+                        <div class="order__help">
+                          (после оплаты на указанный email придет чек)
+                        </div>
+                      </div>
+                      <div class="order__row">
+                        <div class="order__label">
+                          3. Введите номер телефона для связи с вами
+                        </div>
+                        <input type="tel" name="phone" class="input" placeholder="+7 (999) 999-99-99">
+                      </div>
+                      <div class="order__row">
+                        <div class="order__label">
+                          4. Адрес доставки
+                        </div>
+                        <input type="text" name="address" class="input" placeholder="Город, улица, дом, кв.">
+                        <div class="order__help">
+                          (доставка 100 руб)
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="order__btn btn btn_brown icon-arrow-right">Далее</button>
+              </div>
+              <div class="order__step">
+                <div class="order__header">
+                  <div class="order__progress">
+                    <span class="order__progress-current">3</span>/<span class="order__progress-total">3</span>
+                  </div>
+                  <div class="order__caption">
+                    Оформление
+                  </div>
+                </div>
+                <div class="order__rows">
+                  <div class="order__row">
+                    <div class="order__label">
+                      1. Положим в подарочный пакет?
+                    </div>
+                    <div class="order__options">
+                      <label class="catalog__filter-item checkbox checkbox_red">
+                        <input type="radio" name="package" checked value="yes" class="checkbox__input hidden delivery-toggler" hidden>
+                        <span class="checkbox__text">Да [+500 руб]</span>
+                      </label>
+                      <label class="catalog__filter-item checkbox checkbox_red">
+                        <input type="radio" name="package" value="no" class="checkbox__input hidden delivery-toggler" hidden>
+                        <span class="checkbox__text">Нет</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="order__row">
+                    <div class="order__label">
+                      2. Добавим ароматическую массажную свечу?
+                    </div>
+                    <div class="order__options">
+                      <label class="catalog__filter-item checkbox checkbox_red">
+                        <input type="radio" name="candle" checked value="yes" class="checkbox__input hidden delivery-toggler" hidden>
+                        <span class="checkbox__text">Да [+1 000 руб]</span>
+                      </label>
+                      <label class="catalog__filter-item checkbox checkbox_red">
+                        <input type="radio" name="candle" value="no" class="checkbox__input hidden delivery-toggler" hidden>
+                        <span class="checkbox__text">Нет</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="order__btn btn btn_brown icon-arrow-right">Перейти к оплате</button>
+              </div>
+            </div>
+            <div class="order__footer">
+              <div class="order__total">
+                <div class="order__total-text">
+                  Итого:
+                </div>
+                <div class="order__total-value">
+                  95 000 ₽
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="order__products">
+            <div class="order__products-caption">
+              Ваш заказ
+            </div>
+            <ul class="order__products-list">
+              <li class="order__item">
+                <div class="order__item-thumb">
+                  <img src="img/products/01.jpg" class="cover-image" alt="thumb">
+                </div>
+                <div class="order__item-name">
+                  Relax massage
+                </div>
+              </li>
+              <li class="order__item">
+                <div class="order__item-thumb">
+                  <img src="img/products/02.jpg" class="cover-image" alt="thumb">
+                </div>
+                <div class="order__item-name">
+                  Традиционные практики
+                  [китайская/тайская/балийская]
+                </div>
+              </li>
+              <li class="order__item">
+                <div class="order__item-thumb">
+                  <img src="img/products/03.jpg" class="cover-image" alt="thumb">
+                </div>
+                <div class="order__item-name">
+                  President Suite
+                </div>
+              </li>
+            </ul>
+            <div class="order__products-subtitle icon-info">
+              Запись на услуги центра ведется через менеджера в WhatsApp. Оплатить онлайн можно только сертификат
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
     <div class="container">
         <div class="footer__top">
             <div class="footer__column">
@@ -412,17 +413,18 @@
 <a href="https://api.whatsapp.com/send/?phone=%2B79998708231" aria-label="Написать в WhatsApp" class="whatsapp-btn">
     <span class="whatsapp-btn__icon icon-whatsapp"></span>
 </a>
-        </div>
+  </div>
 
-        <!-- plugins -->
-<script src="js/libs/jquery-3.7.1.min.js"></script>
-<script src="js/libs/swiper-bundle.min.js"></script>
-<script src="js/libs/fancybox.min.js"></script>
-<script src="js/libs/gsap.min.js"></script>
-<script src="js/libs/ScrollTrigger.min.js"></script>
+  <!-- plugins -->
+<script src="js/libs/jquery-3.7.1.min.js?_v=20251114001413"></script>
+<script src="js/libs/swiper-bundle.min.js?_v=20251114001413"></script>
+<script src="js/libs/fancybox.min.js?_v=20251114001413"></script>
+<script src="js/libs/gsap.min.js?_v=20251114001413"></script>
+<script src="js/libs/ScrollTrigger.min.js?_v=20251114001413"></script>
 
 <!-- plugins -->
 
-<script src="js/app.min.js"></script>
-    </body>
+<script src="js/app.min.js?_v=20251114001413"></script>
+</body>
+
 </html>
