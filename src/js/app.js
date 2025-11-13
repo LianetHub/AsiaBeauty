@@ -307,6 +307,20 @@ $(function () {
             }
         })
     }
+    if ($('.recommendations__slider').length > 0) {
+        new Swiper(".recommendations__slider", {
+            slidesPerView: "auto",
+            spaceBetween: 15,
+            speed: 300,
+            loop: true,
+            grabCursor: true,
+            breakpoints: {
+                767.98: {
+                    spaceBetween: 30,
+                }
+            }
+        })
+    }
 
     if ($('.salons__item-slider').length > 0) {
         $('.salons__item-slider').each(function (index, slider) {

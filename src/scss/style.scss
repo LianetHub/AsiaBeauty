@@ -150,6 +150,7 @@ body {
 @import "pages/deposits";
 @import "pages/salons";
 @import "pages/contacts";
+@import "pages/service";
 // @import "pages/catalog";
 // @import "pages/product";
 // @import "pages/order";
@@ -422,5 +423,77 @@ body {
 				color: $red;
 			}
 		}
+	}
+}
+
+.recommendations {
+	padding: rem(20) 0 rem(60);
+	@media (min-width: $md4) {
+		padding: rem(40) 0 rem(100);
+	}
+	display: flex;
+	flex-direction: column;
+
+	// .recommendations__slider
+	&__slider {
+		margin-top: rem(40);
+		overflow: visible;
+		align-self: center;
+		padding: 0 1.25rem;
+	}
+	// .recommendations__card
+	&__card {
+		&:nth-child(4n + 1) {
+			width: rem(340);
+			@media (min-width: $md4) {
+				margin-top: rem(26);
+				width: rem(474);
+			}
+		}
+		&:nth-child(4n + 2) {
+			width: rem(228);
+			margin-top: rem(23);
+			@media (min-width: $md4) {
+				margin-top: rem(58);
+				width: rem(317);
+			}
+		}
+		&:nth-child(4n + 3) {
+			width: rem(228);
+			@media (min-width: $md4) {
+				width: rem(317);
+			}
+		}
+		&:nth-child(4n + 4) {
+			width: rem(340);
+			margin-top: rem(24);
+			@media (min-width: $md4) {
+				margin-top: rem(94);
+				width: rem(474);
+			}
+		}
+	}
+	// .recommendations__card-image
+	&__card-image {
+		width: 100%;
+		height: rem(222);
+		@media (min-width: $md4) {
+			height: rem(309);
+		}
+	}
+	// .recommendations__card-info
+	&__card-info {
+		margin-top: rem(50);
+		@media (min-width: $md4) {
+			margin-top: rem(69);
+		}
+	}
+	// .recommendations__card-name
+	&__card-name {
+	}
+	// .recommendations__card-btn
+	&__card-btn {
+		margin-top: rem(21);
+		min-width: rem(180);
 	}
 }

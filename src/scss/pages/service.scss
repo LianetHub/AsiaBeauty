@@ -1,0 +1,66 @@
+.service {
+	padding: rem(20) 0 rem(40);
+	@media (min-width: $md4) {
+		padding: rem(80) 0 rem(40);
+	}
+	// .service__body
+	&__body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 0 1rem;
+		@media (min-width: $md5) {
+			padding: 0;
+		}
+		@media (min-width: $md3) {
+			gap: 2.31rem;
+			flex-direction: row;
+		}
+	}
+	// .service__main
+	&__main {
+		display: contents;
+		@media (min-width: $md3) {
+			display: block;
+		}
+	}
+	// .service__title
+	&__title {
+		order: -1;
+	}
+	// .service__desc
+	&__desc {
+		margin-top: 1.13rem;
+		line-height: 120%;
+		font-size: rem(12);
+		padding: 0 1.5rem;
+		@media (min-width: $md5) {
+			padding: 0;
+			font-size: 1rem;
+		}
+	}
+	// .service__btn
+	&__btn {
+		margin-top: 1.13rem;
+		min-width: 12.4375rem;
+	}
+	// .service__image
+	&__image {
+		order: -1;
+		margin-top: rem(19);
+		@media (max-width: $md5) {
+			aspect-ratio: math.div(290, 242);
+			max-width: 100%;
+			display: block;
+		}
+		@media (min-width: $md3) {
+			margin-top: 0;
+			order: 0;
+			flex-shrink: 0;
+			width: 30rem;
+		}
+		@media (min-width: $md2) {
+			width: 41.0625rem;
+		}
+	}
+}
