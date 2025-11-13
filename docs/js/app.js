@@ -279,6 +279,18 @@ $(function () {
             spaceBetween: 25,
         })
     }
+    if ($('.places__slider').length > 0) {
+        new Swiper(".places__slider", {
+            slidesPerView: "auto",
+            spaceBetween: 11,
+            watchOverflow: true,
+            breakpoints: {
+                767.98: {
+                    spaceBetween: 30,
+                }
+            }
+        })
+    }
 
 
 

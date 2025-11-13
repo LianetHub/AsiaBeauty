@@ -149,14 +149,26 @@
 	&.btn-primary {
 		background: $red;
 		color: rgba(228, 228, 228, 0.8);
+		&:hover,
+		&:active,
+		&.active {
+			background: darken($color: $red, $amount: 10);
+		}
 	}
 	&.btn-secondary {
 		background: rgba(228, 228, 228, 0.8);
 		color: $black;
 	}
 	&.btn-white {
+		border: rem(1) solid rgba(228, 228, 228, 1);
 		background: rgba(228, 228, 228, 1);
 		color: $black;
+		&:hover,
+		&:active,
+		&.active {
+			background: $black;
+			color: rgba(228, 228, 228, 1);
+		}
 	}
 	&.btn-white-outline {
 		border: rem(1) solid rgba(228, 228, 228, 1);

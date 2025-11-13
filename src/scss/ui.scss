@@ -1,7 +1,7 @@
 //============ МОДУЛИ ====================
 // @import "modules/popup";
 // @import "modules/select";
-// @import "modules/breadcrumbs";
+@import "modules/breadcrumbs";
 // @import "modules/range-slider.scss";
 // @import "modules/cart.scss";
 //============ МОДУЛИ ====================
@@ -22,7 +22,7 @@
 	font-size: 2rem;
 	letter-spacing: -0.14rem;
 	@media (min-width: $md4) {
-		letter-spacing: -rem(0.28, 4);
+		letter-spacing: em(-0.28, 4);
 		font-size: 3rem;
 	}
 	@media (min-width: $md3) {
@@ -92,6 +92,10 @@
 
 .color-grey {
 	color: rgba(228, 228, 228, 0.8);
+}
+
+.color-red {
+	color: $red;
 }
 
 .swiper {

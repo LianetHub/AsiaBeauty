@@ -1,561 +1,102 @@
 <!DOCTYPE html>
 <html lang="ru">
     @@include('html/_head.html', {
-    'title': 'Asia Beauty SPA | сертификаты '
+    'title': 'Asia Beauty SPA | Cертификаты '
     })
     <body>
         <div class="wrapper">
             @@include('html/_header.html', {
-            "color": "primary",
-            "active": "5"
+            "active": "3"
             })
             <main class="page">
-                <section class="certs">
-                    <div class="certs__container container container_md">
-                        <div class="certs__header">
-                            <div class="certs__main">
-                                <nav aria-label="Хлебные крошки" class="breadcrumbs breadcrumbs_dark">
-                                    <ul class="breadcrumbs__items">
-                                        <li class="breadcrumbs__item">
-                                            <a href="/" class="breadcrumbs__link">главная</a>
-                                        </li>
-                                        <li class="breadcrumbs__item">
-                                            <span class="breadcrumbs__link breadcrumbs__link_active">сертификаты</span>
-                                        </li>
-                                    </ul>
-                                </nav>
-                                <h1 class="certs__title title-lg">
-                                    Cертификаты
-                                    на&nbsp;расслабляющие <i>spa-программы</i>
-                                </h1>
-                                <p class="certs__subtitle">Позаботьтесь о своих близких и подарите им&nbsp;сертификат на услуги в Asia Beauty Spa</p>
-                                <a href="" class="certs__btn btn btn_brown">Заказать сертификат</a>
-                            </div>
-                            <picture class="certs__picture">
-                                <source media="(min-width: 767.98px)" srcset="@img/certs/certs.jpg">
-                                <img src="@img/certs/certs-mobile.jpg" class="cover-image" alt="Фото">
-                            </picture>
+                <section class="heading">
+                    <div class="container container-lg">
+                        <nav aria-label="Хлебные крошки" class="breadcrumbs">
+                            <ul class="breadcrumbs__items">
+                                <li class="breadcrumbs__item">
+                                    <a href="index.html" class="breadcrumbs__link">Главная</a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <span class="breadcrumbs__link active">Сертификаты</span>
+                                </li>
+                            </ul>
+                        </nav>
+                        <h1 class="heading__title title">
+                            <span>ПОДАРОЧНЫЕ</span>
+                            <span>СЕРТИФИКАТЫ</span>
+                            <span class="color-red">ASIA BEAUTY SPA</span>
+                        </h1>
+                    </div>
+                </section>
+                <section class="banner">
+                    <div class="banner__wrapper">
+                        <div class="banner__offer text-center">
+                            <h2 class="banner__title text-uppercase">Cертификаты на расслабляющие <br> spa-программы</h2>
+                            <p class="banner__description banner__description--desktop">Позаботьтесь о своих близких и подарите им сертификат на услуги в Asia Beauty Spa</p>
+                            <a href="" class="banner__btn btn btn-white btn-lg">Заказать сертификат</a>
                         </div>
+                        <div class="banner__image">
+                            <img src="@img/certs.jpg" class="cover-image" alt="Фото">
+                        </div>
+                    </div>
+                    <div class="banner__description banner__description--mobile">Позаботьтесь о своих близких и подарите им сертификат на услуги в Asia Beauty Spa</div>
+                </section>
+                <section class="certs">
+                    <div class="container">
+                        <div class="section-header">
+                            <div class="section-header__caption caption">Сертификаты</div>
+                        </div>
+                        @@include('./html/_certs-2.html')
                         <div class="certs__info">
-                            <div class="certs__info-caption">Сертификат в spa</div>
+                            <div class="certs__info-caption">Выберете дизайн сертификата:</div>
                             <div class="certs__info-body">
-                                <h2 class="certs__info-title title-lg">Сертификат <br> на spa-услуги — это&nbsp;универсальный подарок</h2>
+                                <div class="certs__info-cards">
+                                    <div class="certs__card certs__card--small">
+                                        <img src="@img/certs/02.jpg" class="cover-image" alt="Фото сертификата">
+                                        <span class="certs__card-title text-uppercase text-medium">ПОДАРОЧНЫЙ СЕРТИФИКАТ</span>
+                                    </div>
+                                    <div class="certs__card certs__card--small">
+                                        <img src="@img/certs/03.jpg" class="cover-image" alt="Фото сертификата">
+                                        <span class="certs__card-title text-uppercase text-medium">ПОДАРОЧНЫЙ СЕРТИФИКАТ</span>
+                                    </div>
+                                    <div class="certs__card certs__card--small">
+                                        <img src="@img/certs/04.jpg" class="cover-image" alt="Фото сертификата">
+                                        <span class="certs__card-title text-uppercase text-medium">ПОДАРОЧНЫЙ СЕРТИФИКАТ</span>
+                                    </div>
+                                    <div class="certs__card certs__card--small">
+                                        <img src="@img/certs/05.jpg" class="cover-image" alt="Фото сертификата">
+                                        <span class="certs__card-title text-uppercase text-medium">ПОДАРОЧНЫЙ СЕРТИФИКАТ</span>
+                                    </div>
+                                </div>
                                 <div class="certs__info-desc">
                                     <p>Сертификат на spa-услуги — это универсальный подарок, который подойдет для любого случая и обязательно порадует получателя, независимо от его характера и предпочтений. Возможность насладиться расслабляющими процедурами в роскошном spa и отвлечься от повседневных забот станет приятным сюрпризом как для близких людей, так и для тех, чьи вкусы вам еще не известны. </p>
                                     <p>Подарок оценят по достоинству, и он непременно составит приятное впечатление. Сертификат действует на все услуги и товары, а визит можно совершить в любой удобный салон. В Asia Beauty Spa работают мастера с многолетним опытом из Китая, Бали и Таиланда. Программу и номинал можно выбрать на любой вкус, составив по своему желанию или выбрать из меню услуг.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="certs__products tabs">
-                            <div class="certs__products-caption">Варианты сертификатов</div>
-                            <div class="certs__subtitle">Вы можете выбрать сертификат в спа для одного, двоих и целых компаний</div>
-                            <div class="certs__products-filters">
-                                <button type="button" class="certs__products-btn tab-btn">на сумму</button>
-                                <button type="button" class="certs__products-btn tab-btn">для двоих</button>
-                                <button type="button" class="certs__products-btn tab-btn">для нее</button>
-                                <button type="button" class="certs__products-btn tab-btn">для него</button>
+                    </div>
+                </section>
+                <section class="gift">
+                    <div class="container">
+                        <div class="gift__content">
+                            <div class="gift__body">
+                                <h2 class="gift__title title">Идеальный <br> подарок <br> для <br>  близких</h2>
+                                <p class="gift__subtitle">Вы можете приобрести сертификат на нашем сайте или в нашем салоне. В каталоге есть множество программ, включая массажи, уход за лицом и телом, а также расслабляющие спа-процедуры</p>
+                                <a href="" class="gift__btn btn btn-white btn-lg">Купить</a>
                             </div>
-                            <div class="tab-content">
-                                <div class="certs__products-grid">
-                                    <div class="product">
-                                        <a href="/product-2.html" class="product__image">
-                                            <img src="@img/certs/01.jpg" class="cover-image" alt="photo">
-                                        </a>
-                                        <div class="product__info">
-                                            <a href="/product-2.html" class="product__name">
-                                                Подарочный сертификат <br>
-                                                на 7 000 ₽
-                                            </a>
-                                            <div class="product__footer">
-                                                <a href="" class="product__btn btn btn_brown">Купить</a>
-                                                <a href="" class="product__cart btn btn_secondary icon-cart"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product">
-                                        <a href="/product-2.html" class="product__image">
-                                            <img src="@img/certs/02.jpg" class="cover-image" alt="photo">
-                                        </a>
-                                        <div class="product__info">
-                                            <a href="/product-2.html" class="product__name">
-                                                Подарочный сертификат <br>
-                                                на 8 000 ₽
-                                            </a>
-                                            <div class="product__footer">
-                                                <a href="" class="product__btn btn btn_brown">Купить</a>
-                                                <a href="" class="product__cart btn btn_secondary icon-cart"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product">
-                                        <a href="/product-2.html" class="product__image">
-                                            <img src="@img/certs/03.jpg" class="cover-image" alt="photo">
-                                        </a>
-                                        <div class="product__info">
-                                            <a href="/product-2.html" class="product__name">
-                                                Подарочный сертификат <br>
-                                                на 7 000 ₽
-                                            </a>
-                                            <div class="product__footer">
-                                                <a href="" class="product__btn btn btn_brown">Купить</a>
-                                                <a href="" class="product__cart btn btn_secondary icon-cart"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product">
-                                        <a href="/product-2.html" class="product__image">
-                                            <img src="@img/certs/04.jpg" class="cover-image" alt="photo">
-                                        </a>
-                                        <div class="product__info">
-                                            <a href="/product-2.html" class="product__name">
-                                                Подарочный сертификат <br>
-                                                на 12 500 ₽
-                                            </a>
-                                            <div class="product__footer">
-                                                <a href="" class="product__btn btn btn_brown">Купить</a>
-                                                <a href="" class="product__cart btn btn_secondary icon-cart"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product">
-                                        <a href="/product-2.html" class="product__image">
-                                            <img src="@img/certs/01.jpg" class="cover-image" alt="photo">
-                                        </a>
-                                        <div class="product__info">
-                                            <a href="/product-2.html" class="product__name">
-                                                Подарочный сертификат <br>
-                                                на 15 000 ₽
-                                            </a>
-                                            <div class="product__footer">
-                                                <a href="" class="product__btn btn btn_brown">Купить</a>
-                                                <a href="" class="product__cart btn btn_secondary icon-cart"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product">
-                                        <a href="/product-2.html" class="product__image">
-                                            <img src="@img/certs/01.jpg" class="cover-image" alt="photo">
-                                        </a>
-                                        <div class="product__info">
-                                            <a href="/product-2.html" class="product__name">
-                                                Подарочный сертификат <br>
-                                                на 18 000 ₽
-                                            </a>
-                                            <div class="product__footer">
-                                                <a href="" class="product__btn btn btn_brown">Купить</a>
-                                                <a href="" class="product__cart btn btn_secondary icon-cart"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product">
-                                        <a href="/product-2.html" class="product__image">
-                                            <img src="@img/certs/01.jpg" class="cover-image" alt="photo">
-                                        </a>
-                                        <div class="product__info">
-                                            <a href="/product-2.html" class="product__name">
-                                                Подарочный сертификат <br>
-                                                на 20 000 ₽
-                                            </a>
-                                            <div class="product__footer">
-                                                <a href="" class="product__btn btn btn_brown">Купить</a>
-                                                <a href="" class="product__cart btn btn_secondary icon-cart"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product">
-                                        <a href="/product-2.html" class="product__image">
-                                            <img src="@img/certs/01.jpg" class="cover-image" alt="photo">
-                                        </a>
-                                        <div class="product__info">
-                                            <a href="/product-2.html" class="product__name">
-                                                Подарочный сертификат <br>
-                                                на 25 000 ₽
-                                            </a>
-                                            <div class="product__footer">
-                                                <a href="" class="product__btn btn btn_brown">Купить</a>
-                                                <a href="" class="product__cart btn btn_secondary icon-cart"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <a href="" class="certs__products-loadmore btn btn_primary">Показать еще</a>
-                            </div>
-                            <div class="tab-content">
-                                <div class="certs__products-grid">
-                                    <div class="product">
-                                        <a href="/product-2.html" class="product__image">
-                                            <img src="@img/certs/03.jpg" class="cover-image" alt="photo">
-                                        </a>
-                                        <div class="product__info">
-                                            <a href="/product-2.html" class="product__name">
-                                                Подарочный сертификат <br>
-                                                на 7 000 ₽
-                                            </a>
-                                            <div class="product__footer">
-                                                <a href="" class="product__btn btn btn_brown">Купить</a>
-                                                <a href="" class="product__cart btn btn_secondary icon-cart"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product">
-                                        <a href="/product-2.html" class="product__image">
-                                            <img src="@img/certs/04.jpg" class="cover-image" alt="photo">
-                                        </a>
-                                        <div class="product__info">
-                                            <a href="/product-2.html" class="product__name">
-                                                Подарочный сертификат <br>
-                                                на 12 500 ₽
-                                            </a>
-                                            <div class="product__footer">
-                                                <a href="" class="product__btn btn btn_brown">Купить</a>
-                                                <a href="" class="product__cart btn btn_secondary icon-cart"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product">
-                                        <a href="/product-2.html" class="product__image">
-                                            <img src="@img/certs/01.jpg" class="cover-image" alt="photo">
-                                        </a>
-                                        <div class="product__info">
-                                            <a href="/product-2.html" class="product__name">
-                                                Подарочный сертификат <br>
-                                                на 15 000 ₽
-                                            </a>
-                                            <div class="product__footer">
-                                                <a href="" class="product__btn btn btn_brown">Купить</a>
-                                                <a href="" class="product__cart btn btn_secondary icon-cart"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product">
-                                        <a href="/product-2.html" class="product__image">
-                                            <img src="@img/certs/03.jpg" class="cover-image" alt="photo">
-                                        </a>
-                                        <div class="product__info">
-                                            <a href="/product-2.html" class="product__name">
-                                                Подарочный сертификат <br>
-                                                на 7 000 ₽
-                                            </a>
-                                            <div class="product__footer">
-                                                <a href="" class="product__btn btn btn_brown">Купить</a>
-                                                <a href="" class="product__cart btn btn_secondary icon-cart"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product">
-                                        <a href="/product-2.html" class="product__image">
-                                            <img src="@img/certs/01.jpg" class="cover-image" alt="photo">
-                                        </a>
-                                        <div class="product__info">
-                                            <a href="/product-2.html" class="product__name">
-                                                Подарочный сертификат <br>
-                                                на 7 000 ₽
-                                            </a>
-                                            <div class="product__footer">
-                                                <a href="" class="product__btn btn btn_brown">Купить</a>
-                                                <a href="" class="product__cart btn btn_secondary icon-cart"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product">
-                                        <a href="/product-2.html" class="product__image">
-                                            <img src="@img/certs/02.jpg" class="cover-image" alt="photo">
-                                        </a>
-                                        <div class="product__info">
-                                            <a href="/product-2.html" class="product__name">
-                                                Подарочный сертификат <br>
-                                                на 8 000 ₽
-                                            </a>
-                                            <div class="product__footer">
-                                                <a href="" class="product__btn btn btn_brown">Купить</a>
-                                                <a href="" class="product__cart btn btn_secondary icon-cart"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href="" class="certs__products-loadmore btn btn_primary">Показать еще</a>
-                            </div>
-                            <div class="tab-content">
-                                <div class="certs__products-grid">
-                                    <div class="product">
-                                        <a href="/product-2.html" class="product__image">
-                                            <img src="@img/certs/01.jpg" class="cover-image" alt="photo">
-                                        </a>
-                                        <div class="product__info">
-                                            <a href="/product-2.html" class="product__name">
-                                                Подарочный сертификат <br>
-                                                на 15 000 ₽
-                                            </a>
-                                            <div class="product__footer">
-                                                <a href="" class="product__btn btn btn_brown">Купить</a>
-                                                <a href="" class="product__cart btn btn_secondary icon-cart"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product">
-                                        <a href="/product-2.html" class="product__image">
-                                            <img src="@img/certs/03.jpg" class="cover-image" alt="photo">
-                                        </a>
-                                        <div class="product__info">
-                                            <a href="/product-2.html" class="product__name">
-                                                Подарочный сертификат <br>
-                                                на 7 000 ₽
-                                            </a>
-                                            <div class="product__footer">
-                                                <a href="" class="product__btn btn btn_brown">Купить</a>
-                                                <a href="" class="product__cart btn btn_secondary icon-cart"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product">
-                                        <a href="/product-2.html" class="product__image">
-                                            <img src="@img/certs/03.jpg" class="cover-image" alt="photo">
-                                        </a>
-                                        <div class="product__info">
-                                            <a href="/product-2.html" class="product__name">
-                                                Подарочный сертификат <br>
-                                                на 7 000 ₽
-                                            </a>
-                                            <div class="product__footer">
-                                                <a href="" class="product__btn btn btn_brown">Купить</a>
-                                                <a href="" class="product__cart btn btn_secondary icon-cart"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product">
-                                        <a href="/product-2.html" class="product__image">
-                                            <img src="@img/certs/04.jpg" class="cover-image" alt="photo">
-                                        </a>
-                                        <div class="product__info">
-                                            <a href="/product-2.html" class="product__name">
-                                                Подарочный сертификат <br>
-                                                на 12 500 ₽
-                                            </a>
-                                            <div class="product__footer">
-                                                <a href="" class="product__btn btn btn_brown">Купить</a>
-                                                <a href="" class="product__cart btn btn_secondary icon-cart"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product">
-                                        <a href="/product-2.html" class="product__image">
-                                            <img src="@img/certs/01.jpg" class="cover-image" alt="photo">
-                                        </a>
-                                        <div class="product__info">
-                                            <a href="/product-2.html" class="product__name">
-                                                Подарочный сертификат <br>
-                                                на 7 000 ₽
-                                            </a>
-                                            <div class="product__footer">
-                                                <a href="" class="product__btn btn btn_brown">Купить</a>
-                                                <a href="" class="product__cart btn btn_secondary icon-cart"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product">
-                                        <a href="/product-2.html" class="product__image">
-                                            <img src="@img/certs/02.jpg" class="cover-image" alt="photo">
-                                        </a>
-                                        <div class="product__info">
-                                            <a href="/product-2.html" class="product__name">
-                                                Подарочный сертификат <br>
-                                                на 8 000 ₽
-                                            </a>
-                                            <div class="product__footer">
-                                                <a href="" class="product__btn btn btn_brown">Купить</a>
-                                                <a href="" class="product__cart btn btn_secondary icon-cart"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href="" class="certs__products-loadmore btn btn_primary">Показать еще</a>
-                            </div>
-                            <div class="tab-content">
-                                <div class="certs__products-grid">
-
-                                    <div class="product">
-                                        <a href="/product-2.html" class="product__image">
-                                            <img src="@img/certs/01.jpg" class="cover-image" alt="photo">
-                                        </a>
-                                        <div class="product__info">
-                                            <a href="/product-2.html" class="product__name">
-                                                Подарочный сертификат <br>
-                                                на 15 000 ₽
-                                            </a>
-                                            <div class="product__footer">
-                                                <a href="" class="product__btn btn btn_brown">Купить</a>
-                                                <a href="" class="product__cart btn btn_secondary icon-cart"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product">
-                                        <a href="/product-2.html" class="product__image">
-                                            <img src="@img/certs/01.jpg" class="cover-image" alt="photo">
-                                        </a>
-                                        <div class="product__info">
-                                            <a href="/product-2.html" class="product__name">
-                                                Подарочный сертификат <br>
-                                                на 18 000 ₽
-                                            </a>
-                                            <div class="product__footer">
-                                                <a href="" class="product__btn btn btn_brown">Купить</a>
-                                                <a href="" class="product__cart btn btn_secondary icon-cart"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product">
-                                        <a href="/product-2.html" class="product__image">
-                                            <img src="@img/certs/01.jpg" class="cover-image" alt="photo">
-                                        </a>
-                                        <div class="product__info">
-                                            <a href="/product-2.html" class="product__name">
-                                                Подарочный сертификат <br>
-                                                на 20 000 ₽
-                                            </a>
-                                            <div class="product__footer">
-                                                <a href="" class="product__btn btn btn_brown">Купить</a>
-                                                <a href="" class="product__cart btn btn_secondary icon-cart"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product">
-                                        <a href="/product-2.html" class="product__image">
-                                            <img src="@img/certs/01.jpg" class="cover-image" alt="photo">
-                                        </a>
-                                        <div class="product__info">
-                                            <a href="/product-2.html" class="product__name">
-                                                Подарочный сертификат <br>
-                                                на 25 000 ₽
-                                            </a>
-                                            <div class="product__footer">
-                                                <a href="" class="product__btn btn btn_brown">Купить</a>
-                                                <a href="" class="product__cart btn btn_secondary icon-cart"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <a href="" class="certs__products-loadmore btn btn_primary">Показать еще</a>
-                            </div>
-                        </div>
-                        <div class="certs__gift">
-                            <div class="certs__gift-row">
-                                <picture class="certs__gift-image">
-                                    <source media="(min-width: 767.98px)" srcset="@img/certs/gift.jpg">
-                                    <img src="@img/certs/gift-mobile.jpg" class="cover-image" alt="Фото">
-                                </picture>
-                                <div class="certs__gift-body">
-                                    <div class="certs__gift-icon">
-                                        <img src="@img/certs/gift.svg" alt="иконка">
-                                    </div>
-                                    <h2 class="certs__gift-title title-lg">Идеальный подарок для&nbsp;близких</h2>
-                                    <p class="certs__gift-desc">Вы можете приобрести сертификат на нашем сайте или в нашем салоне. В каталоге есть множество программ, включая массажи, уход за лицом и телом, а также расслабляющие спа-процедуры</p>
-                                    <a href="" class="certs__gift-btn btn btn_white">Купить сертификат</a>
-                                </div>
-                            </div>
-                            <ul class="certs__gift-cards">
-                                <li class="certs__gift-card">
-                                    <div class="certs__gift-card-icon">
-                                        <img src="@img/certs/01.svg" alt="ступень">
-                                    </div>
-                                    Срок действия сертификата: <br>
-                                    6 месяцев
-                                </li>
-                                <li class="certs__gift-card">
-                                    <div class="certs__gift-card-icon">
-                                        <img src="@img/certs/02.svg" alt="ступень">
-                                    </div>
-                                    Можно сертификат приобрести на любую сумму или услугу
-                                </li>
-                                <li class="certs__gift-card">
-                                    <div class="certs__gift-card-icon">
-                                        <img src="@img/certs/03.svg" alt="ступень">
-                                    </div>
-                                    Отправим электронный сертификат на вашу эл.почту
-                                </li>
-                                <li class="certs__gift-card">
-                                    <div class="certs__gift-card-icon">
-                                        <img src="@img/certs/04.svg" alt="ступень">
-                                    </div>
-                                    Физический сертификат можно забрать в любой* локации Asia Beauty Spa
-                                </li>
-                            </ul>
-                            <div class="certs__gift-hint">*Физический сертификат вы можете забрать на любой из локаций предварительно указав адрес сети бренда Asia Beauty Spa</div>
-                        </div>
-                        <div class="certs__list">
-                            <h2 class="certs__list-title title-lg">Сертификаты доступны в&nbsp;салонах:</h2>
-                            <ul class="certs__list-items">
-                                <li class="certs__list-item">
-                                    <div class="certs__list-caption">Салон №1 <br> в Москва-Сити, гостиница Novotel</div>
-                                    <a href="" class="certs__list-link icon-arrow-right">Написать в WhatsApp</a>
-                                </li>
-                                <li class="certs__list-item">
-                                    <div class="certs__list-caption">Салон №2 <br> Radisson Slavyanskaya Hotel</div>
-                                    <a href="" class="certs__list-link icon-arrow-right">Написать в WhatsApp</a>
-                                </li>
-                                <li class="certs__list-item">
-                                    <div class="certs__list-caption">Салон №3 <br> на Смоленской, в отеле AZIMUT</div>
-                                    <a href="" class="certs__list-link icon-arrow-right">Написать в WhatsApp</a>
-                                </li>
-                                <li class="certs__list-item">
-                                    <div class="certs__list-caption">Салон №4 <br> на Полянке</div>
-                                    <a href="" class="certs__list-link icon-arrow-right">Написать в WhatsApp</a>
-                                </li>
-                                <li class="certs__list-item">
-                                    <div class="certs__list-caption">Салон №5 <br> Spa-апартаменты в Оружейном переулке</div>
-                                    <a href="" class="certs__list-link icon-arrow-right">Написать в WhatsApp</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="certs__slider">
-                            <h2 class="certs__slider-title title-lg">
-                                Подарите своим близким отдых в Asia Beauty Spa
-                            </h2>
-                            <div class="certs__slider-content">
-                                <div class="certs__main-slider swiper">
-                                    <div class="swiper-wrapper">
-                                        <a href="@img/banners/01.jpg" data-fancybox="certs" class="certs__main-slide swiper-slide">
-                                            <img src="@img/banners/01.jpg" class="cover-image" alt="photo">
-                                        </a>
-                                        <a href="@img/banners/02.jpg" data-fancybox="certs" class="certs__main-slide swiper-slide">
-                                            <img src="@img/banners/02.jpg" class="cover-image" alt="photo">
-                                        </a>
-                                        <a href="@img/banners/03.jpg" data-fancybox="certs" class="certs__main-slide swiper-slide">
-                                            <img src="@img/banners/03.jpg" class="cover-image" alt="photo">
-                                        </a>
-                                        <a href="@img/banners/04.jpg" data-fancybox="certs" class="certs__main-slide swiper-slide">
-                                            <img src="@img/banners/04.jpg" class="cover-image" alt="photo">
-                                        </a>
-                                    </div>
-                                    <div class="certs__main-cursor"></div>
-                                    <div class="certs__slider-prev swiper-button-prev"></div>
-                                    <div class="certs__slider-next swiper-button-next"></div>
-                                </div>
-                                <div class="certs__thumbs-slider swiper">
-                                    <div class="swiper-wrapper">
-                                        <div class="certs__thumbs-slide swiper-slide">
-                                            <img src="@img/banners/01.jpg" class="cover-image" alt="photo">
-                                        </div>
-                                        <div class="certs__thumbs-slide swiper-slide">
-                                            <img src="@img/banners/02.jpg" class="cover-image" alt="photo">
-                                        </div>
-                                        <div class="certs__thumbs-slide swiper-slide">
-                                            <img src="@img/banners/03.jpg" class="cover-image" alt="photo">
-                                        </div>
-                                        <div class="certs__thumbs-slide swiper-slide">
-                                            <img src="@img/banners/04.jpg" class="cover-image" alt="photo">
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="gift__image">
+                                <img src="@img/gift.jpg" class="cover-image" alt="Фото сертификата">
                             </div>
                         </div>
                     </div>
                 </section>
+                @@include('./html/_benefits.html')
+                @@include('./html/_places.html', {
+                "title": "Сертификаты доступны в салонах:"
+                })
             </main>
             @@include('html/_footer.html', {})
         </div>
-        @@include('html/_cart.html', {})
         @@include('html/_js.html', {})
     </body>
 </html>
