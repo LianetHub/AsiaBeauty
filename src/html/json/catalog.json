@@ -1,0 +1,471 @@
+[
+    {
+        "image": "@img/goods/relax-massage.jpg",
+        "name": "Relax massage / Релакс массаж",
+        "desc": "Погружение в Нирвану. Just you, just you feelings.",
+        "prices": [
+            {
+                "time": "60 min",
+                "value": "9 500 Р"
+            },
+            {
+                "time": "90 min",
+                "value": "13 500 Р"
+            },
+            {
+                "time": "120 min",
+                "value": "16 500 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/sport-massage.jpg",
+        "name": "Sport massage / Спортивный массаж",
+        "desc": "Восстановление и легкость. Full body renovation",
+        "prices": [
+            {
+                "time": "60 min",
+                "value": "9 500 Р"
+            },
+            {
+                "time": "90 min",
+                "value": "13 500 Р"
+            },
+            {
+                "time": "120 min",
+                "value": "16 500 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/lymphatic-massage.jpg",
+        "name": "Slim / lymphatic massage / Слим массаж",
+        "desc": "Проститься с лишним. It's so beautiful",
+        "prices": [
+            {
+                "time": "30 min",
+                "value": "8 500 Р"
+            },
+            {
+                "time": "60 min",
+                "value": "10 500 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/shiatsu.jpg",
+        "name": "Шиацу",
+        "desc": "В сухой технике мануального воздействия. 12 потоков энергии Ци. The power of energy",
+        "prices": [
+            {
+                "time": "60 min",
+                "value": "9 500 Р"
+            },
+            {
+                "time": "90 min",
+                "value": "13 500 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/traditional-practices.jpg",
+        "name": "Традиционные практики",
+        "desc": "Азия на кончиках пальцев. It's tradition",
+        "prices": [
+            {
+                "time": "60 min",
+                "value": "9 500 Р"
+            },
+            {
+                "time": "90 min",
+                "value": "13 500 Р"
+            },
+            {
+                "time": "120 min",
+                "value": "16 500 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/aroma-massage.jpg",
+        "name": "Aroma massage / Арома массаж со свечей",
+        "desc": "С теплым арома-маслом натуральной свечи. Сеанс облегчения стресса. Close your eyes and relax",
+        "prices": [
+            {
+                "time": "60 min",
+                "value": "10 500 Р"
+            },
+            {
+                "time": "90 min",
+                "value": "14 500 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/stone-massage.jpg",
+        "name": "Stone massage / Массаж теплыми вулканическими камнями",
+        "desc": "Массаж теплыми вулканическими камнями. Stone - терапия. Hot and sloooooow",
+        "prices": [
+            {
+                "time": "60 min",
+                "value": "10 500 Р"
+            },
+            {
+                "time": "90 min",
+                "value": "14 500 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/tandem-massage.jpg",
+        "name": "Tandem massage / Тандем массаж",
+        "desc": "Выполняется двумя мастерами одновременно. Нарушая законы гравитации. Yes. You deserve better",
+        "prices": [
+            {
+                "time": "60 min",
+                "value": "16 500 Р"
+            },
+            {
+                "time": "90 min",
+                "value": "19 500 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/foam-and-soap-massage.jpg",
+        "name": "Пенно-мыльный массаж",
+        "desc": "Релаксирующий массаж в облаке ароматной пены.",
+        "prices": [
+            {
+                "time": "45 min",
+                "value": "9 400 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/SPA-for-hair.jpg",
+        "name": "SPA для волос",
+        "desc": "Ритуал красоты для освобождения от забот и снятия стресса.",
+        "prices": [
+            {
+                "time": "45 min",
+                "value": "10 500 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/wraps.jpg",
+        "name": "Обертывания",
+        "desc": "Придание тонуса и оздоровление кожи.",
+        "prices": [
+            {
+                "time": "40 min",
+                "value": "9 000 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/peelings.jpg",
+        "name": "Пилинги",
+        "desc": "Глубокое очищение и обновление.",
+        "prices": [
+            {
+                "time": "30 min",
+                "value": "8 500 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/male-traditions.jpg",
+        "name": "«Мужские традиции» / спа-программа для мужчин",
+        "desc": "Энергичный массаж в четыре руки совместно с уходом тела и лица. The power of energy",
+        "prices": [
+            {
+                "time": "120 min",
+                "value": "31 500 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/samurais-rest.jpg",
+        "name": "«Отдых самурая» / спа-программа для мужчин",
+        "desc": "Полное погружение в ментальное и физическое расслабление в облаке пены. As if in a cloud",
+        "prices": [
+            {
+                "time": "120 min",
+                "value": "26 500 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/cleopatras-secret.jpg",
+        "name": "«Секрет Клеопатры» / спа-программа для женщин",
+        "desc": "На пути к исцелению. Relaxing harmony",
+        "prices": [
+            {
+                "time": "150 min",
+                "value": "33 000 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/bitter-chocolate.jpg",
+        "name": "«Горький шоколад» / спа-программа для женщин",
+        "desc": "Уход за кожей и глубокая проработка тела. The power of four hands",
+        "prices": [
+            {
+                "time": "130 min",
+                "value": "32 000 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/lite.jpg",
+        "name": "«Lite» / спа-программа",
+        "desc": "Полное обновление тела изнутри и снаружи. Feel your new body",
+        "prices": [
+            {
+                "time": "130 min",
+                "value": "23 000 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/thai-fairy-tale.jpg",
+        "name": "«Тайская сказка» / спа-программа",
+        "desc": "Деликатный пилинг с релаксирующим массажем тела и стоп. Beauty and pleasure. Feel the balance",
+        "prices": [
+            {
+                "time": "120 min",
+                "value": "17 500 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/paradise-bliss.jpg",
+        "name": "«Райское блаженство» / спа-программа",
+        "desc": "Программа для глубокой релаксации и погружения в медитативное состояние. Renewal and relaxation",
+        "prices": [
+            {
+                "time": "120 min",
+                "value": "25 500 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/jumu-lanmar.jpg",
+        "name": "«Джуму Ланмар» / спа-программа для двоих",
+        "desc": "Баланс ухода и расслабления. Just relax and feel each other",
+        "prices": [
+            {
+                "time": "120 min",
+                "value": "36 500 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/anahata.jpg",
+        "name": "Анахата / спа-программа для двоих",
+        "desc": "Любовь, гармония и единение. Find the heart chakra",
+        "prices": [
+            {
+                "time": "120 min",
+                "value": "38 000 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/asian-traditions.jpg",
+        "name": "«Традиции Азии» / спа-программа",
+        "desc": "Синхронность и последовательность, уход и расслабление",
+        "prices": [
+            {
+                "time": "120 min",
+                "value": "51 500 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/sixth-sense.jpg",
+        "name": "«Шестое чувство» / спа-программа",
+        "desc": "Погружение в безмятежность. Take it easy and relax",
+        "prices": [
+            {
+                "time": "120 min",
+                "value": "55 500 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/ancient-tibet.jpg",
+        "name": "«Древний тибет» / спа-программа",
+        "desc": "Целительные тибетские практики. Dive into yourself!",
+        "prices": [
+            {
+                "time": "120 min",
+                "value": "55 500 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/in-unison.jpg",
+        "name": "«В унисон» / спа-программа для двоих",
+        "desc": "Точечная проработка тела и стоп. Full activation of energy lines",
+        "prices": [
+            {
+                "time": "90 min",
+                "value": "32 500 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/love-spa.jpg",
+        "name": "Love & спа-программа для двоих",
+        "desc": "Деликатный пилинг с релаксирующим массажем тела и стоп. Beauty and pleasure. Feel the balance",
+        "prices": [
+            {
+                "time": "120 min",
+                "value": "55 500 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/fire-massage.jpg",
+        "name": "Огненный массаж - Сила Дракона",
+        "desc": "Огненный массаж сила дракона",
+        "prices": [
+            {
+                "time": "30 min",
+                "value": "13 500 Р"
+            },
+            {
+                "time": "60 min",
+                "value": "19 500 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/thalgo-gold-cream-marine.jpg",
+        "name": "Thalgo gold cream marine / программа спа-ухода по лицу",
+        "desc": "Абсолютное укрепление, питание и увлажнение.",
+        "prices": [
+            {
+                "time": "60 min",
+                "value": "8 900 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/thermal-baths-without-massage.jpg",
+        "name": "Термы без массажа",
+        "desc": "Отдых в травяном пространстве Красоты. Tune into a state of harmony",
+        "prices": [
+            {
+                "time": "60 min",
+                "value": "6 500 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/gua-sha-massage.jpg",
+        "name": "Массаж гуаша",
+        "desc": "Сила нефритовых пластин. And your dreams come true",
+        "prices": [
+            {
+                "time": "30 min",
+                "value": "8 500 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/cupping-massage.jpg",
+        "name": "Баночный массаж",
+        "desc": "Корректирующий массаж. Skin elasticity",
+        "prices": [
+            {
+                "time": "30 min",
+                "value": "8 500 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/extending-the-massage.jpg",
+        "name": "Продление массажа",
+        "prices": [
+            {
+                "time": "30 min",
+                "value": "6 000 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/tandem-massage-extension.jpg",
+        "name": "Продление Tandem массажа",
+        "prices": [
+            {
+                "time": "30 min",
+                "value": "8 000 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/foot-massage.jpg",
+        "name": "Массаж стоп",
+        "desc": "Теплые касания и абсолютная безмятежность.",
+        "prices": [
+            {
+                "time": "60 min",
+                "value": "8 500 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/massage-by-zones.jpg",
+        "name": "Массаж по зонам",
+        "prices": [
+            {
+                "time": "45 min",
+                "value": "8 500 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/face-masks.jpg",
+        "name": "Маски для лица",
+        "prices": [
+            {
+                "value": "4 000 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/detox-relax.jpg",
+        "name": "Detox+Relax",
+        "prices": [
+            {
+                "time": "60 min",
+                "value": "11 500 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/access-bars.jpg",
+        "name": "Access Bars",
+        "prices": [
+            {
+                "time": "45 min",
+                "value": "9 500 Р"
+            }
+        ]
+    },
+    {
+        "image": "@img/goods/the-brides-secret.jpg",
+        "name": "Секрет невесты",
+        "prices": [
+            {
+                "time": "45 min",
+                "value": "20 000 Р"
+            }
+        ]
+    }
+]

@@ -1,0 +1,24 @@
+<div class="product-card">
+    <a href="service.html" class="product-card__image">
+        <img src="@@image" class="cover-image" alt="Фото товара">
+    </a>
+    <div class="product-card__info">
+        <a href="service.html" class="product-card__name text-medium">@@name</a>
+        @@if(typeof desc !== 'undefined') {
+        <p class="product-card__desc">@@desc</p>
+        }
+    </div>
+    @@if(prices.length > 0) {
+    <div class="product-card__prices">
+        @@for (var i = 0; i < prices.length; i++) { <div class="product-card__prices-item">
+            `+(prices[i].time ? '<div class="product-card__prices-property">' + prices[i].time + '</div>' : '')+`
+            <div class="product-card__prices-value">`+prices[i].value+`</div>
+    </div>
+    }
+</div>
+}
+<div class="product-card__footer">
+    <a href="" class="product-card__btn btn btn-white btn-lg">Добавить в избранное</a>
+    <button type="button" aria-label="Добавить в корзину" class="product-card__cart btn btn-white-outline btn-lg icon-cart"></button>
+</div>
+</div>
