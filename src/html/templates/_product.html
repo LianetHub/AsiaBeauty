@@ -1,4 +1,4 @@
-<div class="product-card">
+<div class="product-card" id="@@id">
     <a href="service.html" class="product-card__image">
         <img src="@@image" class="cover-image" alt="Фото товара">
     </a>
@@ -11,12 +11,24 @@
     @@if(prices.length > 0) {
     <div class="product-card__prices">
         @@for (var i = 0; i < prices.length; i++) { <div class="product-card__prices-item">
-            `+(prices[i].time ? '<div class="product-card__prices-property">' + prices[i].time + '</div>' : '')+`
-            <div class="product-card__prices-value">`+prices[i].value+`</div>
-    </div>
-    }
+
+            `+(
+
+            prices.length === 1
+            ? '<span class="product-card__prices-btn">' + prices[i].time + '</span>'
+
+
+            : (
+            prices[i].time
+            ? '<label class="product-card__prices-label">'
+                + '<input type="radio" name="time-@@id" class="product-card__prices-input hidden" hidden value="' + prices[i].time + '"' + (i === 0 ? ' checked' : '' ) + '>' + '<span class="product-card__prices-btn">' + prices[i].time + '</span>' + '</label>' : '' ) )+` <div class="product-card__prices-value">`+prices[i].value+`</div>
+
 </div>
 }
+</div>
+}
+
+
 <div class="product-card__footer">
     <a href="" class="product-card__btn btn btn-white btn-lg">Добавить в избранное</a>
     <button type="button" aria-label="Добавить в корзину" class="product-card__cart btn btn-white-outline btn-lg icon-cart"></button>

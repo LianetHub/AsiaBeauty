@@ -1,7 +1,5 @@
 "use strict";
 
-
-
 $(function () {
 
     // init Fancybox Gallery
@@ -84,7 +82,6 @@ $(function () {
 
     initTabs();
 
-
     // click handlers
 
     $(document).on('click', (e) => {
@@ -93,6 +90,12 @@ $(function () {
         // menu
         if ($target.closest('.header__menu-toggler').length) {
             toggleMenu()
+        }
+
+        // catalog filters toggler
+        if ($target.closest('.catalog__filter-toggler').length) {
+            $('.catalog__filter-toggler').toggleClass("active");
+            $('.catalog__filters').slideToggle()
         }
 
         // // cart open
@@ -146,17 +149,6 @@ $(function () {
         $('.menu').toggleClass('menu--open');
         toggleLocking()
     }
-
-    // function getFilter() {
-    //     $('.catalog__sidebar').toggleClass('catalog__sidebar_open');
-    //     toggleLocking("lock-filter")
-    // }
-
-    // function getCart() {
-    //     $('.cart').toggleClass('cart_open');
-    //     toggleLocking("lock-cart")
-    // }
-
 
     function toggleLocking(lockClass) {
 
@@ -307,6 +299,7 @@ $(function () {
             }
         })
     }
+
     if ($('.recommendations__slider').length > 0) {
         new Swiper(".recommendations__slider", {
             slidesPerView: "auto",
@@ -345,6 +338,296 @@ $(function () {
         });
     }
 
+    if ($('.services-slider').length > 0) {
+        new Swiper('.services-slider', {
+            slidesPerView: "auto",
+            speed: 300,
+            mousewheel: true,
+            spaceBetween: 9
+        })
+    }
+
+
+
+
+    // Phone Russia Mask
+
+    var phoneInputs = document.querySelectorAll('input[type="tel"]');
+    var getInputNumbersValue = function (input) {
+        return input.value.replace(/\D/g, '');
+    };
+    var onPhonePaste = function (e) {
+        var input = e.target,
+            inputNumbersValue = getInputNumbersValue(input);
+        var pasted = e.clipboardData || window.clipboardData;
+        if (pasted) {
+            var pastedText = pasted.getData('Text');
+            if (/\D/g.test(pastedText)) {
+                input.value = inputNumbersValue;
+                return;
+            }
+        }
+    };
+    var onPhoneInput = function (e) {
+        var input = e.target,
+            inputNumbersValue = getInputNumbersValue(input),
+            selectionStart = input.selectionStart,
+            formattedInputValue = "";
+        if (!inputNumbersValue) {
+            return input.value = "";
+        }
+        if (input.value.length != selectionStart) {
+            if (e.data && /\D/g.test(e.data)) {
+                input.value = inputNumbersValue;
+            }
+            return;
+        }
+        if (inputNumbersValue.length > 11) {
+            inputNumbersValue = inputNumbersValue.substring(0, 11);
+        }
+        formattedInputValue = "+7 (";
+        if (inputNumbersValue.length >= 2) {
+            formattedInputValue += inputNumbersValue.substring(1, 4);
+        }
+        if (inputNumbersValue.length >= 5) {
+            formattedInputValue += ") " + inputNumbersValue.substring(4, 7);
+        }
+        if (inputNumbersValue.length >= 8) {
+            formattedInputValue += "-" + inputNumbersValue.substring(7, 9);
+        }
+        if (inputNumbersValue.length >= 10) {
+            formattedInputValue += "-" + inputNumbersValue.substring(9, 11);
+        }
+        input.value = formattedInputValue;
+    };
+    var onPhoneKeyDown = function (e) {
+        var inputValue = e.target.value.replace(/\D/g, '');
+        if (e.keyCode == 8 && inputValue.length == 1) {
+            e.target.value = "";
+        }
+    };
+    for (var phoneInput of phoneInputs) {
+        phoneInput.addEventListener('focus', function () {
+            if (!this.value) {
+                this.value = "+7 ";
+            }
+        });
+        phoneInput.addEventListener('keydown', onPhoneKeyDown);
+        phoneInput.addEventListener('input', onPhoneInput, false);
+        phoneInput.addEventListener('paste', onPhonePaste, false);
+    }
+
+
+
+    // custom select
+    class CustomSelect {
+
+        static openDropdown = null;
+
+        constructor(selectElement) {
+            this.$select = $(selectElement);
+            this.placeholder = this.$select.data('placeholder');
+            this.listCaption = this.$select.data('list-caption');
+            this.defaultText = this.getDefaultText();
+            this.selectName = this.$select.attr('name');
+            this.$options = this.$select.find('option');
+            this.$dropdown = null;
+            this.initialState = {};
+            this.init();
+        }
+
+        init() {
+            if (!this.$select.length) return;
+            this.saveInitialState();
+            this.$select.addClass('hidden');
+            this.renderDropdown();
+            this.setupEvents();
+        }
+
+        saveInitialState() {
+            const selectedOption = this.$select.find('option:selected');
+            this.initialState = {
+                selectedText: selectedOption.text(),
+                selectedValue: selectedOption.val(),
+            };
+        }
+
+        getDefaultText() {
+            const selectedOption = this.$select.find('option[selected]');
+            if (selectedOption.length) {
+                return selectedOption.text();
+            } else {
+                return this.placeholder || this.$select.find('option:selected').text();
+            }
+        }
+
+        renderDropdown() {
+            const isDisabled = this.$select.is(':disabled');
+
+            const buttonTemplate = `
+            <button type="button" class="dropdown__button icon-arrows" 
+                    aria-expanded="false" 
+                    aria-haspopup="true" 
+                    ${isDisabled ? 'disabled' : ''}>
+                <span class="dropdown__button-text">${this.defaultText}</span>
+            </button>
+        `;
+
+            this.$dropdown = $('<div>').addClass('dropdown');
+
+            const captionTemplate = this.listCaption ? `<div class="dropdown__caption">${this.listCaption}</div>` : '';
+
+            this.$dropdown.html(`
+            ${buttonTemplate}
+            <div class="dropdown__body" aria-hidden="true">
+               <div class="dropdown__content">
+                    ${captionTemplate}
+                    <ul class="dropdown__list" role="listbox"></ul>
+                </div>
+            </div>
+        `);
+
+            const list = this.$dropdown.find('.dropdown__list');
+            this.$options.each((index, option) => {
+                const $option = $(option);
+                const value = $option.val();
+                const text = $option.text();
+                const isSelected = $option.is(':selected');
+                const isDisabled = $option.is(':disabled');
+
+                const listItem = $('<li>')
+                    .attr('role', 'option')
+                    .data('value', value)
+                    .attr('aria-checked', isSelected)
+                    .addClass('dropdown__list-item')
+                    .text(text);
+
+                if (isSelected) listItem.addClass('selected');
+                if (isDisabled) {
+                    listItem.addClass('disabled');
+                    listItem.attr('aria-disabled', 'true');
+                }
+
+                list.append(listItem);
+            });
+
+            this.$select.after(this.$dropdown);
+        }
+
+        setupEvents() {
+            const button = this.$dropdown.find('.dropdown__button');
+            button.on('click', (event) => {
+                event.stopPropagation();
+                const isOpen = this.$dropdown.hasClass('visible');
+                this.toggleDropdown(!isOpen);
+            });
+
+            this.$dropdown.on('click', '.dropdown__list-item', (event) => {
+                event.stopPropagation();
+                const item = $(event.currentTarget);
+                if (!item.hasClass('disabled')) {
+                    this.selectOption(item);
+                }
+            });
+
+            $(document).on('click', () => this.closeDropdown());
+            $(document).on('keydown', (event) => {
+                if (event.key === 'Escape') this.closeDropdown();
+            });
+
+            this.$select.closest('form').on('reset', () => this.restoreInitialState());
+        }
+
+        toggleDropdown(isOpen) {
+            if (isOpen && CustomSelect.openDropdown && CustomSelect.openDropdown !== this) {
+                CustomSelect.openDropdown.closeDropdown();
+            }
+
+            const body = this.$dropdown.find('.dropdown__body');
+            const list = this.$dropdown.find('.dropdown__list');
+            const hasScroll = list[0].scrollHeight > list[0].clientHeight;
+
+            this.$dropdown.toggleClass('visible', isOpen);
+            this.$dropdown.find('.dropdown__button').attr('aria-expanded', isOpen);
+            body.attr('aria-hidden', !isOpen);
+
+            if (isOpen) {
+                CustomSelect.openDropdown = this;
+                this.$dropdown.removeClass('dropdown-top');
+                const dropdownRect = body[0].getBoundingClientRect();
+                const viewportHeight = window.innerHeight;
+                if (dropdownRect.bottom > viewportHeight) {
+                    this.$dropdown.addClass('dropdown-top');
+                }
+                list.toggleClass('has-scroll', hasScroll);
+            } else {
+                if (CustomSelect.openDropdown === this) {
+                    CustomSelect.openDropdown = null;
+                }
+            }
+        }
+
+        closeDropdown() {
+            this.toggleDropdown(false);
+        }
+
+        selectOption(item) {
+            const value = item.data('value');
+            const text = item.text();
+
+            this.$dropdown.find('.dropdown__list-item').removeClass('selected').attr('aria-checked', 'false');
+            item.addClass('selected').attr('aria-checked', 'true');
+
+            this.$dropdown.find('.dropdown__button').addClass('selected');
+            this.$dropdown.find('.dropdown__button-text').text(text);
+            this.$select.val(value).trigger('change');
+            this.closeDropdown();
+        }
+
+        restoreInitialState() {
+            const hasPlaceholder = this.placeholder !== undefined;
+
+            if (hasPlaceholder) {
+                this.$select.prop('selectedIndex', -1).trigger('change');
+                this.$dropdown.find('.dropdown__button-text').text(this.placeholder);
+                this.$dropdown.find('.dropdown__button').removeClass('selected');
+                this.$dropdown.find('.dropdown__list-item').removeClass('selected').attr('aria-checked', 'false');
+            } else {
+                const state = this.initialState;
+                this.$select.val(state.selectedValue).trigger('change');
+
+                this.$dropdown.find('.dropdown__list-item').removeClass('selected').attr('aria-checked', 'false');
+
+                const selectedItem = this.$dropdown.find(`.dropdown__list-item[data-value="${state.selectedValue}"]`);
+                if (selectedItem.length) {
+                    selectedItem.addClass('selected').attr('aria-checked', 'true');
+                }
+
+                this.$dropdown.find('.dropdown__button-text').text(state.selectedText);
+                this.$dropdown.find('.dropdown__button').addClass('selected');
+            }
+        }
+
+        syncSelectedOption() {
+            const selectedOption = this.$select.find('option:selected');
+            const selectedValue = selectedOption.val();
+            const selectedText = selectedOption.text();
+
+            this.$dropdown.find('.dropdown__list-item').removeClass('selected').attr('aria-checked', 'false');
+
+            const selectedItem = this.$dropdown.find(`.dropdown__list-item[data-value="${selectedValue}"]`);
+            selectedItem.addClass('selected').attr('aria-checked', 'true');
+
+            this.$dropdown.find('.dropdown__button-text').text(selectedText);
+        }
+    }
+
+    $('.select').each((index, element) => {
+        new CustomSelect(element);
+    });
+
+
+
 
 
     // animation
@@ -364,6 +647,52 @@ $(function () {
     headerObserver.observe($header[0]);
 
 
+    // gsap animations
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    let mm = gsap.matchMedia();
+    let productCards = ".product-card";
+    let productGrid = ".catalog__grid";
+
+    mm.add("(min-width: 992px)", () => {
+        let desktopTL = gsap.timeline({
+            scrollTrigger: {
+                trigger: productGrid,
+                start: "top 80%",
+                end: "bottom top",
+                toggleActions: "play none none none"
+            }
+        });
+
+        desktopTL.from(productCards, {
+            opacity: 0,
+            y: 50,
+            duration: 0.6,
+            stagger: 0.15,
+            ease: "power2.out"
+        });
+    });
+
+    mm.add("(max-width: 991px)", () => {
+        let mobileTL = gsap.timeline({
+            scrollTrigger: {
+                trigger: productGrid,
+                start: "top 85%",
+                end: "bottom top",
+                toggleActions: "play none none none"
+            }
+        });
+
+        mobileTL.from(productCards, {
+            opacity: 0,
+            y: 30,
+            duration: 0.4,
+            stagger: 0.1,
+            ease: "power1.out"
+        });
+    });
+
 
     // init Smooth Scroll
 
@@ -379,6 +708,7 @@ $(function () {
     //     pulseNormalize: 1,
     //     touchpadSupport: true,
     // })
+
 
 
 

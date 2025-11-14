@@ -1,5 +1,6 @@
 [
     {
+        "id": "relax_massage",
         "image": "@img/goods/relax-massage.jpg",
         "name": "Relax massage / Релакс массаж",
         "desc": "Погружение в Нирвану. Just you, just you feelings.",
@@ -19,6 +20,7 @@
         ]
     },
     {
+        "id": "sport_massage",
         "image": "@img/goods/sport-massage.jpg",
         "name": "Sport massage / Спортивный массаж",
         "desc": "Восстановление и легкость. Full body renovation",
@@ -38,6 +40,7 @@
         ]
     },
     {
+        "id": "slim_lymphatic_massage",
         "image": "@img/goods/lymphatic-massage.jpg",
         "name": "Slim / lymphatic massage / Слим массаж",
         "desc": "Проститься с лишним. It's so beautiful",
@@ -53,6 +56,7 @@
         ]
     },
     {
+        "id": "shiatsu",
         "image": "@img/goods/shiatsu.jpg",
         "name": "Шиацу",
         "desc": "В сухой технике мануального воздействия. 12 потоков энергии Ци. The power of energy",
@@ -68,6 +72,7 @@
         ]
     },
     {
+        "id": "traditional_practices",
         "image": "@img/goods/traditional-practices.jpg",
         "name": "Традиционные практики",
         "desc": "Азия на кончиках пальцев. It's tradition",
@@ -87,6 +92,7 @@
         ]
     },
     {
+        "id": "aroma_massage_with_candle",
         "image": "@img/goods/aroma-massage.jpg",
         "name": "Aroma massage / Арома массаж со свечей",
         "desc": "С теплым арома-маслом натуральной свечи. Сеанс облегчения стресса. Close your eyes and relax",
@@ -102,6 +108,7 @@
         ]
     },
     {
+        "id": "stone_massage_volcanic_stones",
         "image": "@img/goods/stone-massage.jpg",
         "name": "Stone massage / Массаж теплыми вулканическими камнями",
         "desc": "Массаж теплыми вулканическими камнями. Stone - терапия. Hot and sloooooow",
@@ -117,6 +124,7 @@
         ]
     },
     {
+        "id": "tandem_massage",
         "image": "@img/goods/tandem-massage.jpg",
         "name": "Tandem massage / Тандем массаж",
         "desc": "Выполняется двумя мастерами одновременно. Нарушая законы гравитации. Yes. You deserve better",
@@ -132,6 +140,7 @@
         ]
     },
     {
+        "id": "foam_and_soap_massage",
         "image": "@img/goods/foam-and-soap-massage.jpg",
         "name": "Пенно-мыльный массаж",
         "desc": "Релаксирующий массаж в облаке ароматной пены.",
@@ -143,6 +152,7 @@
         ]
     },
     {
+        "id": "spa_for_hair",
         "image": "@img/goods/SPA-for-hair.jpg",
         "name": "SPA для волос",
         "desc": "Ритуал красоты для освобождения от забот и снятия стресса.",
@@ -154,6 +164,7 @@
         ]
     },
     {
+        "id": "wraps",
         "image": "@img/goods/wraps.jpg",
         "name": "Обертывания",
         "desc": "Придание тонуса и оздоровление кожи.",
@@ -165,6 +176,7 @@
         ]
     },
     {
+        "id": "peelings",
         "image": "@img/goods/peelings.jpg",
         "name": "Пилинги",
         "desc": "Глубокое очищение и обновление.",
@@ -176,6 +188,7 @@
         ]
     },
     {
+        "id": "male_traditions_spa_program",
         "image": "@img/goods/male-traditions.jpg",
         "name": "«Мужские традиции» / спа-программа для мужчин",
         "desc": "Энергичный массаж в четыре руки совместно с уходом тела и лица. The power of energy",
@@ -187,6 +200,7 @@
         ]
     },
     {
+        "id": "samurais_rest_spa_program",
         "image": "@img/goods/samurais-rest.jpg",
         "name": "«Отдых самурая» / спа-программа для мужчин",
         "desc": "Полное погружение в ментальное и физическое расслабление в облаке пены. As if in a cloud",
@@ -198,6 +212,7 @@
         ]
     },
     {
+        "id": "cleopatras_secret_spa_program",
         "image": "@img/goods/cleopatras-secret.jpg",
         "name": "«Секрет Клеопатры» / спа-программа для женщин",
         "desc": "На пути к исцелению. Relaxing harmony",
@@ -209,6 +224,7 @@
         ]
     },
     {
+        "id": "bitter_chocolate_spa_program",
         "image": "@img/goods/bitter-chocolate.jpg",
         "name": "«Горький шоколад» / спа-программа для женщин",
         "desc": "Уход за кожей и глубокая проработка тела. The power of four hands",
@@ -220,6 +236,7 @@
         ]
     },
     {
+        "id": "lite_spa_program",
         "image": "@img/goods/lite.jpg",
         "name": "«Lite» / спа-программа",
         "desc": "Полное обновление тела изнутри и снаружи. Feel your new body",
@@ -231,6 +248,7 @@
         ]
     },
     {
+        "id": "thai_fairy_tale_spa_program",
         "image": "@img/goods/thai-fairy-tale.jpg",
         "name": "«Тайская сказка» / спа-программа",
         "desc": "Деликатный пилинг с релаксирующим массажем тела и стоп. Beauty and pleasure. Feel the balance",
@@ -242,6 +260,7 @@
         ]
     },
     {
+        "id": "paradise_bliss_spa_program",
         "image": "@img/goods/paradise-bliss.jpg",
         "name": "«Райское блаженство» / спа-программа",
         "desc": "Программа для глубокой релаксации и погружения в медитативное состояние. Renewal and relaxation",
@@ -253,6 +272,7 @@
         ]
     },
     {
+        "id": "jumu_lanmar_spa_for_two",
         "image": "@img/goods/jumu-lanmar.jpg",
         "name": "«Джуму Ланмар» / спа-программа для двоих",
         "desc": "Баланс ухода и расслабления. Just relax and feel each other",
@@ -264,6 +284,7 @@
         ]
     },
     {
+        "id": "anahata_spa_for_two",
         "image": "@img/goods/anahata.jpg",
         "name": "Анахата / спа-программа для двоих",
         "desc": "Любовь, гармония и единение. Find the heart chakra",
@@ -275,6 +296,7 @@
         ]
     },
     {
+        "id": "asian_traditions_spa_program",
         "image": "@img/goods/asian-traditions.jpg",
         "name": "«Традиции Азии» / спа-программа",
         "desc": "Синхронность и последовательность, уход и расслабление",
@@ -286,6 +308,7 @@
         ]
     },
     {
+        "id": "sixth_sense_spa_program",
         "image": "@img/goods/sixth-sense.jpg",
         "name": "«Шестое чувство» / спа-программа",
         "desc": "Погружение в безмятежность. Take it easy and relax",
@@ -297,6 +320,7 @@
         ]
     },
     {
+        "id": "ancient_tibet_spa_program",
         "image": "@img/goods/ancient-tibet.jpg",
         "name": "«Древний тибет» / спа-программа",
         "desc": "Целительные тибетские практики. Dive into yourself!",
@@ -308,6 +332,7 @@
         ]
     },
     {
+        "id": "in_unison_spa_for_two",
         "image": "@img/goods/in-unison.jpg",
         "name": "«В унисон» / спа-программа для двоих",
         "desc": "Точечная проработка тела и стоп. Full activation of energy lines",
@@ -319,6 +344,7 @@
         ]
     },
     {
+        "id": "love_spa_for_two",
         "image": "@img/goods/love-spa.jpg",
         "name": "Love & спа-программа для двоих",
         "desc": "Деликатный пилинг с релаксирующим массажем тела и стоп. Beauty and pleasure. Feel the balance",
@@ -330,6 +356,7 @@
         ]
     },
     {
+        "id": "fire_massage_dragon_power",
         "image": "@img/goods/fire-massage.jpg",
         "name": "Огненный массаж - Сила Дракона",
         "desc": "Огненный массаж сила дракона",
@@ -345,6 +372,7 @@
         ]
     },
     {
+        "id": "thalgo_gold_cream_marine_face",
         "image": "@img/goods/thalgo-gold-cream-marine.jpg",
         "name": "Thalgo gold cream marine / программа спа-ухода по лицу",
         "desc": "Абсолютное укрепление, питание и увлажнение.",
@@ -356,6 +384,7 @@
         ]
     },
     {
+        "id": "thermal_baths_without_massage",
         "image": "@img/goods/thermal-baths-without-massage.jpg",
         "name": "Термы без массажа",
         "desc": "Отдых в травяном пространстве Красоты. Tune into a state of harmony",
@@ -367,6 +396,7 @@
         ]
     },
     {
+        "id": "gua_sha_massage",
         "image": "@img/goods/gua-sha-massage.jpg",
         "name": "Массаж гуаша",
         "desc": "Сила нефритовых пластин. And your dreams come true",
@@ -378,6 +408,7 @@
         ]
     },
     {
+        "id": "cupping_massage",
         "image": "@img/goods/cupping-massage.jpg",
         "name": "Баночный массаж",
         "desc": "Корректирующий массаж. Skin elasticity",
@@ -389,6 +420,7 @@
         ]
     },
     {
+        "id": "massage_extension",
         "image": "@img/goods/extending-the-massage.jpg",
         "name": "Продление массажа",
         "prices": [
@@ -399,6 +431,7 @@
         ]
     },
     {
+        "id": "tandem_massage_extension",
         "image": "@img/goods/tandem-massage-extension.jpg",
         "name": "Продление Tandem массажа",
         "prices": [
@@ -409,6 +442,7 @@
         ]
     },
     {
+        "id": "foot_massage",
         "image": "@img/goods/foot-massage.jpg",
         "name": "Массаж стоп",
         "desc": "Теплые касания и абсолютная безмятежность.",
@@ -420,6 +454,7 @@
         ]
     },
     {
+        "id": "massage_by_zones",
         "image": "@img/goods/massage-by-zones.jpg",
         "name": "Массаж по зонам",
         "prices": [
@@ -430,6 +465,7 @@
         ]
     },
     {
+        "id": "face_masks",
         "image": "@img/goods/face-masks.jpg",
         "name": "Маски для лица",
         "prices": [
@@ -439,6 +475,7 @@
         ]
     },
     {
+        "id": "detox_relax",
         "image": "@img/goods/detox-relax.jpg",
         "name": "Detox+Relax",
         "prices": [
@@ -449,6 +486,7 @@
         ]
     },
     {
+        "id": "access_bars",
         "image": "@img/goods/access-bars.jpg",
         "name": "Access Bars",
         "prices": [
@@ -459,6 +497,7 @@
         ]
     },
     {
+        "id": "brides_secret",
         "image": "@img/goods/the-brides-secret.jpg",
         "name": "Секрет невесты",
         "prices": [

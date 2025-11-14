@@ -1,6 +1,6 @@
 //============ МОДУЛИ ====================
 // @import "modules/popup";
-// @import "modules/select";
+@import "modules/select";
 @import "modules/breadcrumbs";
 // @import "modules/range-slider.scss";
 // @import "modules/cart.scss";
@@ -532,13 +532,18 @@ $scrollbarHover: darken(
 //============ ОБЩИЕ ЭЛЕМЕНТЫ ============
 
 // ========== ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ ======
-// .hidden {
-// 	position: absolute;
-// 	clip: rect(0 0 0 0);
-// 	width: 1px;
-// 	height: 1px;
-// 	margin: -1px;
-// }
+.hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
 
 .cover-image {
 	width: 100%;
