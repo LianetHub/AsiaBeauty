@@ -28,9 +28,12 @@
 	&__title {
 		order: -1;
 	}
+	// .service__info
+	&__info {
+		margin-top: 1.13rem;
+	}
 	// .service__desc
 	&__desc {
-		margin-top: 1.13rem;
 		line-height: 120%;
 		font-size: rem(12);
 		padding: 0 1.5rem;

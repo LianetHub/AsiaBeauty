@@ -356,6 +356,7 @@
 		display: flex;
 		align-items: center;
 		gap: 1.12rem;
+		flex-wrap: wrap;
 	}
 	// .product-card__prices-item
 	&__prices-item {
@@ -396,6 +397,7 @@
 		min-height: rem(3);
 		border: rem(1) solid;
 		border-radius: 6.25rem;
+		display: block;
 	}
 
 	// .product-card__prices-value

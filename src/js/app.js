@@ -737,68 +737,246 @@ $(function () {
 
     // gsap animations
 
-    // gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger);
 
-    // let mm = gsap.matchMedia();
-    // let productCards = ".product-card";
-    // let productGrid = ".catalog__grid";
+    function initGridAnimation() {
+        let mm = gsap.matchMedia();
+        let productCards = gsap.utils.toArray('[data-animate="card"]');
+        let cardsPerRow = 1;
 
-    // mm.add("(min-width: 992px)", () => {
-    //     let desktopTL = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: productGrid,
-    //             start: "top 80%",
-    //             end: "bottom top",
-    //             toggleActions: "play none none none"
-    //         }
-    //     });
+        mm.add("(min-width: 1439.98px)", () => {
+            cardsPerRow = 4;
+        });
 
-    //     desktopTL.from(productCards, {
-    //         opacity: 0,
-    //         y: 50,
-    //         duration: 0.6,
-    //         stagger: 0.15,
-    //         ease: "power2.out"
-    //     });
-    // });
+        mm.add("(min-width: 991.98px) and (max-width: 1439.97px)", () => {
+            cardsPerRow = 3;
+        });
 
-    // mm.add("(max-width: 991px)", () => {
-    //     let mobileTL = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: productGrid,
-    //             start: "top 85%",
-    //             end: "bottom top",
-    //             toggleActions: "play none none none"
-    //         }
-    //     });
+        mm.add("(min-width: 567.98px) and (max-width: 991.97px)", () => {
+            cardsPerRow = 2;
+        });
 
-    //     mobileTL.from(productCards, {
-    //         opacity: 0,
-    //         y: 30,
-    //         duration: 0.4,
-    //         stagger: 0.1,
-    //         ease: "power1.out"
-    //     });
-    // });
+        productCards.forEach((card, index) => {
+            if (index % cardsPerRow === 0) {
+                let rowStart = index;
+                let rowEnd = index + cardsPerRow;
+
+                let currentRow = productCards.slice(rowStart, rowEnd);
+
+                gsap.from(currentRow, {
+                    opacity: 0,
+                    y: 50,
+                    duration: 0.7,
+                    stagger: 0.15,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 100%",
+                        toggleActions: "play none none none"
+                    }
+                });
+            }
+        });
+    }
+
+    function initSectionAnimation() {
+        let sections = gsap.utils.toArray('[data-animate="section"]');
+
+        if (sections.length === 0) {
+            return;
+        }
+
+        sections.forEach(section => {
+
+            let photos = gsap.utils.toArray(section.querySelectorAll('[data-animate="photo"]'));
+            let title = section.querySelector('[data-animate="title"]');
+            let textBlocks = section.querySelectorAll('[data-animate="text"]');
+
+            let sectionTL = gsap.timeline({
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top 80%",
+                    toggleActions: "play none none none"
+                }
+            });
+
+            if (photos.length > 0) {
+                sectionTL.from(photos, {
+                    opacity: 0,
+                    scale: 0.75,
+                    duration: 1,
+                    stagger: 0.2,
+                    ease: "power2.out"
+                });
+            }
+
+            if (title) {
+                sectionTL.from(title, {
+                    opacity: 0,
+                    y: 30,
+                    duration: 0.6,
+                    ease: "power2.out"
+                }, photos.length > 0 ? "-=0.5" : 0);
+            }
+
+            if (textBlocks.length > 0) {
+                sectionTL.from(textBlocks, {
+                    opacity: 0,
+                    y: 20,
+                    duration: 0.5,
+                    stagger: 0.15,
+                    ease: "power1.out"
+                }, title ? "-=0.3" : photos.length > 0 ? "-=0.3" : 0);
+            }
+        });
+    }
+    function initFooterReveal() {
+        const footerRevealWrap = document.querySelector('.footer-reveal-wrap');
+        const footerRevealMask = document.querySelector('.footer-reveal-mask');
+        const footerTarget = document.querySelector('.footer');
+        const overlayFoot = document.querySelector('.footer__overlay');
+
+        if (!footerRevealWrap || !footerRevealMask || !footerTarget || !overlayFoot) return;
+
+        let mm = gsap.matchMedia();
+
+        mm.add({
+            isLarge: "(min-width: 1200px) and (min-height: 1040px)",
+            isMedium: "(min-width: 992px) and (min-height: 970px)"
+        }, (context) => {
+
+            let { isLarge, isMedium } = context.conditions;
+
+            if (isLarge || isMedium) {
+
+                gsap.set(footerRevealMask, { yPercent: 40 });
+                gsap.set(footerTarget, { filter: 'blur(5px)' });
+                gsap.set(overlayFoot, { opacity: 1 });
+
+                let tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: footerRevealWrap,
+                        start: "top bottom",
+                        end: "top top",
+                        scrub: true
+                    }
+                });
 
 
-    // init Smooth Scroll
+                tl.to(footerRevealMask, {
+                    yPercent: 0,
+                    ease: "none"
+                }, 0);
 
-    // SmoothScroll({
-    //     animationTime: 800,
-    //     stepSize: 75,
-    //     accelerationDelta: 30,
-    //     accelerationMax: 2,
-    //     keyboardSupport: true,
-    //     arrowScroll: 50,
-    //     pulseAlgorithm: true,
-    //     pulseScale: 4,
-    //     pulseNormalize: 1,
-    //     touchpadSupport: true,
-    // })
+                tl.to(footerTarget, {
+                    filter: 'blur(0px)',
+                    ease: "none"
+                }, 0);
+
+                tl.to(overlayFoot, {
+                    opacity: 0,
+                    ease: "none"
+                }, 0);
+            }
+
+            return () => {
+                gsap.set(footerRevealMask, { yPercent: 0 });
+                gsap.set(footerTarget, { filter: 'blur(0px)' });
+                gsap.set(overlayFoot, { opacity: 0 });
+            };
+        });
+    }
+
+    function initQuadrantShiftAnimation() {
+
+        const iconBlocks = gsap.utils.toArray('[data-animate="quadrant-shift"]');
+
+        if (iconBlocks.length === 0) return;
+
+        const positions = [
+            { x: 0, y: 0 },
+            { x: 19, y: 0 },
+            { x: 19, y: 19 },
+            { x: 0, y: 19 }
+        ];
+
+        const phaseDuration = 0.5;
+
+        iconBlocks.forEach(svgElement => {
+            const squares = [
+                svgElement.querySelector('.q-1'),
+                svgElement.querySelector('.q-2'),
+                svgElement.querySelector('.q-4'),
+                svgElement.querySelector('.q-3')
+            ].filter(Boolean);
+
+            if (squares.length === 0) return;
+
+            squares.forEach(sq => {
+                sq.setAttribute('x', '0');
+                sq.setAttribute('y', '0');
+            });
+
+            const totalSquares = squares.length;
+
+            const totalPositions = 4;
+
+            const startIndex = squares.map((_, i) => Math.floor(i * (totalPositions / totalSquares)));
+
+            squares.forEach((sq, i) => {
+                gsap.set(sq, {
+                    x: positions[startIndex[i]].x,
+                    y: positions[startIndex[i]].y
+                });
+            });
+
+            const tl = gsap.timeline({
+                repeat: -1,
+                repeatDelay: 0.4,
+                defaults: { duration: phaseDuration, ease: "power2.inOut" },
+                paused: true
+            });
+
+            tl.to(squares, {
+                x: i => positions[(startIndex[i] + 1) % 4].x,
+                y: i => positions[(startIndex[i] + 1) % 4].y
+            });
+
+            tl.to(squares, {
+                x: i => positions[(startIndex[i] + 2) % 4].x,
+                y: i => positions[(startIndex[i] + 2) % 4].y
+            });
+
+            tl.to(squares, {
+                x: i => positions[(startIndex[i] + 3) % 4].x,
+                y: i => positions[(startIndex[i] + 3) % 4].y
+            });
+
+            tl.to(squares, {
+                x: i => positions[startIndex[i] % 4].x,
+                y: i => positions[startIndex[i] % 4].y
+            });
+
+            ScrollTrigger.create({
+                trigger: svgElement,
+                start: "top 85%",
+                onEnter: () => tl.restart(true),
+                onLeaveBack: () => tl.pause(0)
+            });
+        });
+    }
 
 
 
+
+    function initAllAnimations() {
+        initGridAnimation();
+        initSectionAnimation();
+        initFooterReveal();
+        initQuadrantShiftAnimation()
+    }
+
+    initAllAnimations()
 
 
 
