@@ -424,6 +424,22 @@ $(function () {
         })
     }
 
+    if ($('.media__slider').length > 0) {
+        new Swiper(".media__slider", {
+            slidesPerView: "auto",
+            spaceBetween: 18,
+            watchOverflow: true,
+            speed: 300,
+            breakpoints: {
+                991.98: {
+                    slidesPerView: 4,
+                    spaceBetween: 34,
+                }
+            }
+        })
+    }
+
+
 
     // Phone Russia Mask
 

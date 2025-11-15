@@ -1,148 +1,265 @@
 <!DOCTYPE html>
 <html lang="ru">
     @@include('html/_head.html', {
-    'title': 'Asia Beauty SPA | О компании'
+    'title': 'Asia Beauty SPA | О нас'
     })
     <body>
         <div class="wrapper">
             @@include('html/_header.html', {
-            "color": "primary",
-            "active": "0"
+            "active": "1"
             })
             <main class="page">
-                <section class="about">
-                    <div class="about__container container">
-                        <nav aria-label="Хлебные крошки" class="breadcrumbs breadcrumbs_dark">
+                <section class="heading">
+                    <div class="container">
+                        <nav aria-label="Хлебные крошки" class="breadcrumbs">
                             <ul class="breadcrumbs__items">
                                 <li class="breadcrumbs__item">
-                                    <a href="/" class="breadcrumbs__link">главная</a>
+                                    <a href="index.html" class="breadcrumbs__link">Главная</a>
                                 </li>
                                 <li class="breadcrumbs__item">
-                                    <span class="breadcrumbs__link breadcrumbs__link_active">О компании</span>
+                                    <span class="breadcrumbs__link active">О нас</span>
                                 </li>
                             </ul>
                         </nav>
-                        <h1 class="about__title title">О компании Asia Beauty Spa</h1>
-                        <div class="about__content" data-animate="line">
-                            <div class="about__image" data-animate="parallax">
-                                <img src="@img/about/01.jpg" class="cover-image" alt="photo">
+                        <div class="heading__row">
+                            <h1 class="heading__title title">
+                                <span>ПРОСТРАНСТВО</span>
+                                <span>ДЛЯ</span>
+                                <span>посвящения</span>
+                                <span>времени</span>
+                                <span>себе</span>
+                            </h1>
+                            <div class="heading__image">
+                                <img src="@img/about-heading.jpg" class="cover-image" alt="Фото">
                             </div>
-                            <div class="about__desc">
-                                <div class="about__desc-caption title-md">
-                                    Миссия Asia Beauty Spa: помочь справиться со всеми вызовами современной жизни
+                        </div>
+                    </div>
+                </section>
+                <div class="benefits">
+                    <div class="container">
+                        <ul class="benefits__list">
+                            <li class="benefits__item">
+                                <div class="benefits__item-icon">
+                                    <img src="@img/icons/dotts-1.svg" alt="Иконка">
                                 </div>
-                                <div class="about__desc-text">
-                                    <p>С каждым годом для все большего количества людей забота о внутреннем состоянии становится базой. Все больше людей посещают spa-процедуры. Это обязательный элемент в графике человека, которому необходимо быть в ресурсе. </p>
+                                <div class="benefits__item-title text-uppercase text-medium">
+                                    30+ <br>
+                                    спа программ
+                                </div>
+                            </li>
+                            <li class="benefits__item">
+                                <div class="benefits__item-icon">
+                                    <img src="@img/icons/dotts-2.svg" alt="Иконка">
+                                </div>
+                                <div class="benefits__item-title text-uppercase text-medium">более 20 лет <br> работы сети</div>
+                            </li>
+                            <li class="benefits__item">
+                                <div class="benefits__item-icon">
+                                    <img src="@img/icons/dotts-3.svg" alt="Иконка">
+                                </div>
+                                <div class="benefits__item-title text-uppercase text-medium">300+ <br> штат мастеров</div>
+                            </li>
+                            <li class="benefits__item">
+                                <div class="benefits__item-icon">
+                                    <img src="@img/icons/dotts-4.svg" alt="Иконка">
+                                </div>
+                                <div class="benefits__item-title text-uppercase text-medium">более 1000 кв м площадь <br> пространства</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="banner">
+                    <div class="banner__wrapper">
+                        <div class="banner__image">
+                            <img src="@img/about-banner.jpg" class="cover-image" alt="Фото">
+                        </div>
+                    </div>
+                </div>
+                <section class="about">
+                    <div class="container">
+                        <div class="about__block">
+                            <h2 class="about__title title text-right">
+                                <span class="color-red">Миссия Asia Beauty Spa:</span>
+                                <span>помочь справиться со всеми</span>
+                                <span>вызовами современной жизни</span>
+                            </h2>
+                            <div class="about__body">
+                                <div class="about__desc">
+                                    <p>С каждым годом для все большего количества людей забота о внутреннем состоянии становится базой. Все больше людей посещают spa-процедуры. Это обязательный элемент в графике человека, которому необходимо быть в ресурсе.</p>
                                     <p>Миссия бренда отвечает этим потребностям. Spa-салон заботится о том, чтобы человек выходил с процедур энергетически заряженным, наполненным. Когда ресурс восполняется — проще справляться со всеми задачами.</p>
                                 </div>
-                            </div>
-                            <div class="about__info">
-                                <div class="about__info-main">
-                                    <h2 class="about__info-title title-md">
-                                        Аsia Beauty Spa — крупнейшая сеть spa-салонов premium класса в&nbsp;Москве
-                                    </h2>
-                                    <p class="about__info-text">
-                                        В Asia Beauty Spa можно позаботиться о ментальном здоровье и посетить медитативные практики, а так же провести ритуалы ухода за красотой лица и тела.
-                                    </p>
-                                    <ul class="about__info-list">
-                                        <li class="about__info-item">
-                                            <div class="about__info-heading">
-                                                >100 видов
-                                            </div>
-                                            <div class="about__info-subtitle">spa-программ и массажных техник</div>
-                                        </li>
-                                        <li class="about__info-item">
-                                            <div class="about__info-heading">
-                                                10% гостей
-                                            </div>
-                                            <div class="about__info-subtitle">публичные и медийные личности</div>
-                                        </li>
-                                        <li class="about__info-item">
-                                            <div class="about__info-heading">
-                                                5 салонов
-                                            </div>
-                                            <div class="about__info-subtitle">в премиум-локациях</div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="about__info-image">
-                                    <img src="@img/about/02.jpg" class="cover-image" alt="photo">
+                                <div class="about__image">
+                                    <img src="@img/about/01.jpg" class="cover-image" alt="Фото компании">
                                 </div>
                             </div>
                         </div>
-                        <div class="about__content" data-animate="line">
-                            <div class="about__image" data-animate="parallax">
-                                <img src="@img/about/03.jpg" class="cover-image" alt="photo">
-                            </div>
-                            <div class="about__desc about__desc_mobile-first">
-                                <div class="about__desc-caption title-md">
-                                    «Здоровье через воду»
+                        <div class="about__block">
+                            <h2 class="about__title title text-center">
+                                Аsia Beauty Spa — крупнейшая сеть spa-салонов premium класса в Москве
+                            </h2>
+                            <div class="about__body about__body--small">
+                                <div class="about__side">
+                                    <div class="about__image">
+                                        <img src="@img/about/02.jpg" class="cover-image" alt="Фото компании">
+                                    </div>
+                                    <p>Миссия бренда отвечает этим потребностям. Spa-салон заботится о том, чтобы человек выходил с процедур энергетически заряженным, наполненным. Когда ресурс восполняется — проще справляться со всеми задачами.</p>
                                 </div>
-                                <div class="about__desc-text">
+                                <div class="about__image">
+                                    <img src="@img/about/03.jpg" class="cover-image" alt="Фото компании">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about__block">
+                            <h2 class="about__title title text-center">
+                                «Здоровье через воду»
+                            </h2>
+                            <div class="about__body about__body--small">
+                                <div class="about__desc text-center">
                                     <p>Бренд Asia Beauty Spa основали в 2002 году китайские и российские предприниматели. Тогда китайские коллеги вдохновились Россией, которая ничего не знала о китайских практиках оздоровления. Через Asia Beauty Spa в Россию пришли глубокие знания о традиционных массажных практиках, о физическом и ментальном здоровье.</p>
-                                    <p>Asia Beauty Spa стремился популяризировать знания о настоящем spa — «здоровье через воду». Для этого было необходимо сделать китайскую философию понятной русскому человеку. Поэтому первые годы Asia Beauty Spa работал над адаптацией китайского spa под европейского гостя. </p>
-                                </div>
-                            </div>
-                            <div class="about__desc">
-                                <div class="about__desc-caption title-md">
-                                    В Китае массаж и spa — это раскрытие потенциала человека
-                                </div>
-                                <div class="about__desc-text">
-                                    <p>Бренд адаптировался под русского гостя. Мастера Asia Beauty Spa расширяли спектр услуг — чтобы принести в Россию spa, которое станет близким русскому гостю. Они ездили на обучение в китайско-европейские центры и собирали опыт по всему миру: в Азии, Европе,  восточных странах. Так в Россию пришли турецкий хаммам и пенно-мыльный массаж.</p>
-                                    <p>В Китае они не пользуются спросом, в России — приобрели популярность. Asia Beauty Spa удалось создать spa, понятное и полюбившееся русскому человеку.</p>
-                                </div>
-                            </div>
-                            <div class="about__info">
-                                <div class="about__info-main">
-                                    <h2 class="about__info-title title-md">
-                                        Mногое взято из Турции, где активно практикуют водные процедуры
-                                    </h2>
-                                    <p class="about__info-text">
-                                        Spa — это «здоровье через воду», поэтому турецкие ритуалы лаконично дополняют spa-меню.
-                                    </p>
-                                </div>
-                                <div class="about__info-images">
-                                    <div class="about__info-image">
-                                        <img src="@img/about/04.jpg" class="cover-image" alt="photo">
-                                    </div>
-                                    <div class="about__info-image">
-                                        <img src="@img/about/05.jpg" class="cover-image" alt="photo">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="about__info">
-                                <div class="about__info-main">
-                                    <h2 class="about__info-title title-md">
-                                        Аsia Beauty Spa сегодня
-                                    </h2>
-                                    <p class="about__info-text">
-                                        Это одно из немногих spa-пространств, где можно полноценно отдохнуть. Место, куда приходят заранее, чтобы расслабиться и сонастроиться с ним. Перед процедурами наши гости пьют расслабляющий чай, слушают гармоничную китайскую музыку, прогревают тело в сауне или хаммаме, окунаются в бассейн, стимулируют мышцы в джакузи, переодеваются в теплый мягкий халат, и в комфортной обстановке знакомятся с пространством. По желанию проводят медитативную практику. 
-                                    </p>
-                                    <p class="about__info-text">
-                                        Только после этих ритуалов человек физически и ментально готов взаимодействовать с мастером. Он ложится на теплую кушетку, где с его телом работают теплые руки.
-                                    </p>
-                                </div>
-                                <div class="about__info-image">
-                                    <img src="@img/about/06.jpg" class="cover-image" alt="photo">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="about__content" data-animate="line">
-                            <div class="about__image about__image_top-position" data-animate="parallax">
-                                <img src="@img/about/07.jpg" class="cover-image" alt="photo">
-                            </div>
-                            <div class="about__desc about__desc_mobile-first">
-                                <h2 class="about__desc-caption title-md">
-                                    Мастера
-                                </h2>
-                                <div class="about__desc-text">
-                                    <p>Мастера — главная ценность Asia Beauty Spa. Это коренные жители Бали, Тайланда и Китая. Выпускники международных школ массажа с опытом более 7 лет. Они проводят массажи и медитативные практики — чтобы восстановить душевные и физические силы. </p>
-                                    <p>Делятся частью родной культуры, в которой здоровье — самая важная ценность.</p>
+                                    <p>Asia Beauty Spa стремился популяризировать знания о настоящем spa — «здоровье через воду». Для этого было необходимо сделать китайскую философию понятной русскому человеку. Поэтому первые годы Asia Beauty Spa работал над адаптацией китайского spa под европейского гостя.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
+                <div class="banner">
+                    <div class="banner__wrapper">
+                        <div class="banner__image">
+                            <img src="@img/about-banner-2.jpg" class="cover-image" alt="Фото">
+                        </div>
+                    </div>
+                </div>
+                <section class="description description--about">
+                    <div class="container">
+                        <h2 class="description__heading title">
+                            <span>В Китае массаж и spa —</span>
+                            <span>это раскрытие</span>
+                            <span>потенциала</span>
+                            <span>человека</span>
+                        </h2>
+                        <div class="description__text">
+                            <p>
+                                Бренд адаптировался под русского гостя. Мастера Asia Beauty Spa расширяли спектр услуг — чтобы принести в Россию spa, которое станет близким русскому гостю. Они ездили на обучение в китайско-европейские центры и собирали опыт по всему миру: в Азии, Европе, восточных странах. Так в Россию пришли турецкий хаммам и пенно-мыльный массаж.
+                            </p>
+                            <p>
+                                В Китае они не пользуются спросом, в России — приобрели популярность. Asia Beauty Spa удалось создать spa, понятное и полюбившееся русскому человеку.
+                            </p>
+                        </div>
+                        <div class="description__poster">
+                            <img src="@img/about/04.jpg" class="cover-image" alt="Постер">
+                        </div>
+                    </div>
+                </section>
+                <section class="about">
+                    <div class="container">
+                        <div class="about__block">
+                            <div class="about__body">
+                                <div class="about__image about__image--desktop">
+                                    <img src="@img/about/05.jpg" class="cover-image" alt="Фото компании">
+                                </div>
+                                <div class="about__info">
+                                    <h2 class="about__title title text-right">
+                                        <span class="color-red">Asia Beauty Spa:</span> сегодня
+                                    </h2>
+                                    <div class="about__desc">
+                                        <p>Это одно из немногих spa-пространств, где можно полноценно отдохнуть. Место, куда приходят заранее, чтобы расслабиться и сонастроиться с ним. Перед процедурами наши гости пьют расслабляющий чай, слушают гармоничную китайскую музыку, прогревают тело в сауне или хаммаме, окунаются в бассейн, стимулируют мышцы в джакузи, переодеваются в теплый мягкий халат, и в комфортной обстановке знакомятся с пространством. По желанию проводят медитативную практику.</p>
+                                        <div class="about__desc-row">
+                                            <p>Только после этих ритуалов человек физически и ментально готов взаимодействовать с мастером. Он ложится на теплую кушетку, где с его телом работают теплые руки.</p>
+                                            <div class="about__image about__image--mobile">
+                                                <img src="@img/about/05.jpg" class="cover-image" alt="Фото компании">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="recommendations">
+                    <div class="recommendations__slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="recommendations__card swiper-slide">
+                                <div class="recommendations__card-image">
+                                    <img src="@img/recommendations/01.jpg" class="cover-image" alt="Фото услуги">
+                                </div>
+                            </div>
+                            <div class="recommendations__card swiper-slide">
+                                <div class="recommendations__card-image">
+                                    <img src="@img/recommendations/02.jpg" class="cover-image" alt="Фото услуги">
+                                </div>
+                            </div>
+                            <div class="recommendations__card swiper-slide">
+                                <div class="recommendations__card-image">
+                                    <img src="@img/recommendations/03.jpg" class="cover-image" alt="Фото услуги">
+                                </div>
+                            </div>
+                            <div class="recommendations__card swiper-slide">
+                                <div class="recommendations__card-image">
+                                    <img src="@img/recommendations/04.jpg" class="cover-image" alt="Фото услуги">
+                                </div>
+                            </div>
+                            <div class="recommendations__card swiper-slide">
+                                <div class="recommendations__card-image">
+                                    <img src="@img/recommendations/03.jpg" class="cover-image" alt="Фото услуги">
+                                </div>
+                            </div>
+                            <div class="recommendations__card swiper-slide">
+                                <div class="recommendations__card-image">
+                                    <img src="@img/recommendations/04.jpg" class="cover-image" alt="Фото услуги">
+                                </div>
+                            </div>
+                            <div class="recommendations__card swiper-slide">
+                                <div class="recommendations__card-image">
+                                    <img src="@img/recommendations/01.jpg" class="cover-image" alt="Фото услуги">
+                                </div>
+                            </div>
+                            <div class="recommendations__card swiper-slide">
+                                <div class="recommendations__card-image">
+                                    <img src="@img/recommendations/02.jpg" class="cover-image" alt="Фото услуги">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="" class="recommendations__more btn btn-white btn-lg">Меню услуг</a>
+                </div>
+                <marquee class="marquee">
+                    <span class="marquee__text title">
+                        окунитесь в атмосферу <span class="color-red">Asia Beauty Spa</span>
+                    </span>
+                    <span class="marquee__text title">
+                        окунитесь в атмосферу <span class="color-red">Asia Beauty Spa</span>
+                    </span>
+                    <span class="marquee__text title">
+                        окунитесь в атмосферу <span class="color-red">Asia Beauty Spa</span>
+                    </span>
+                    <span class="marquee__text title">
+                        окунитесь в атмосферу <span class="color-red">Asia Beauty Spa</span>
+                    </span>
+                </marquee>
+                <div class="media">
+                    <div class="container">
+                        <div class="media__slider swiper">
+                            <div class="swiper-wrapper">
+                                <a href="https://www.youtube.com/watch?v=H2BcVlp6RMo" data-fancybox class="media__slide swiper-slide icon-play">
+                                    <img src="@img/media/01.jpg" class="cover-image" alt="Постер">
+                                </a>
+                                <a href="https://www.youtube.com/watch?v=H2BcVlp6RMo" data-fancybox class="media__slide swiper-slide icon-play">
+                                    <img src="@img/media/02.jpg" class="cover-image" alt="Постер">
+                                </a>
+                                <a href="https://www.youtube.com/watch?v=H2BcVlp6RMo" data-fancybox class="media__slide swiper-slide icon-play">
+                                    <img src="@img/media/03.jpg" class="cover-image" alt="Постер">
+                                </a>
+                                <a href="https://www.youtube.com/watch?v=H2BcVlp6RMo" data-fancybox class="media__slide swiper-slide icon-play">
+                                    <img src="@img/media/04.jpg" class="cover-image" alt="Постер">
+                                </a>
+                            </div>
+                        </div>
+                        <a href="" class="media__btn btn btn-primary btn-lg">Записаться</a>
+                    </div>
+                </div>
+                @@include('./html/_places.html', {
+                "title": "локации:"
+                })
             </main>
             @@include('html/_footer.html', {})
         </div>
