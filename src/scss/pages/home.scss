@@ -450,6 +450,7 @@
 	}
 	// .brands__slider
 	&__slider {
+		--swiper-wrapper-transition-timing-function: linear;
 		margin-top: rem(12);
 		@media (min-width: $md5) {
 			margin-top: rem(40);

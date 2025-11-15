@@ -1,7 +1,7 @@
 .breadcrumbs {
 	& + * {
 		margin-top: rem(50) !important;
-		@media (min-width: $md4) {
+		@media (min-width: $md3) {
 			margin-top: rem(100) !important;
 		}
 	}
@@ -10,7 +10,7 @@
 		justify-content: center;
 		flex-wrap: wrap;
 		padding-block: 2.75rem 0;
-		@media (min-width: $md4) {
+		@media (min-width: $md3) {
 			padding-block: 6rem 0;
 		}
 	}

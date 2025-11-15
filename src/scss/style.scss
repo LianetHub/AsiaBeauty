@@ -61,7 +61,6 @@ $headerHeight: var(--header-height, rem(112));
 	--swiper-pagination-bullet-size: #{rem(11)};
 	--swiper-navigation-size: #{rem(40)};
 	--swiper-pagination-bullet-horizontal-gap: #{rem(3)};
-	--swiper-wrapper-transition-timing-function: linear;
 }
 
 //ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ
@@ -152,6 +151,7 @@ body {
 @import "pages/contacts";
 @import "pages/service";
 @import "pages/catalog";
+@import "pages/appartaments";
 // @import "pages/order";
 // @import "pages/info";
 // @import "pages/promotion";
@@ -160,10 +160,10 @@ body {
 
 .heading {
 	padding-top: rem(60);
-	@media (min-width: $md4) {
+	padding-bottom: 2rem;
+	@media (min-width: $md3) {
 		padding-top: rem(122);
 	}
-	padding-bottom: 2rem;
 	// .heading__title
 	&__title {
 		@media (max-width: $md5) {
@@ -245,7 +245,7 @@ body {
 	&__btn {
 	}
 	// .banner__offer-image
-	&__offer-image {
+	&__image {
 		& img {
 			min-height: rem(179);
 		}

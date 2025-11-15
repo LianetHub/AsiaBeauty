@@ -408,6 +408,21 @@ $(function () {
             breakpoint: 575.98
         })
     }
+    if ($('.catalog__slider').length > 0) {
+        new ConditionsSwiper('.catalog__slider', {
+            slidesPerView: "auto",
+            speed: 800,
+            spaceBetween: 90,
+            watchOverflow: true,
+            navigation: {
+                nextEl: ".catalog__slider-next",
+                prevEl: ".catalog__slider-prev",
+            }
+        }, {
+            mode: "max",
+            breakpoint: 575.98
+        })
+    }
 
 
     // Phone Russia Mask

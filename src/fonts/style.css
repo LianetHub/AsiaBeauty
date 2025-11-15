@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icons';
-  src: url('fonts/icons.eot?k4rdeu');
-  src: url('fonts/icons.eot?k4rdeu#iefix') format('embedded-opentype'),
-    url('fonts/icons.ttf?k4rdeu') format('truetype'),
-    url('fonts/icons.woff?k4rdeu') format('woff'),
-    url('fonts/icons.svg?k4rdeu#icons') format('svg');
+  src:  url('fonts/icons.eot?ivqgd1');
+  src:  url('fonts/icons.eot?ivqgd1#iefix') format('embedded-opentype'),
+    url('fonts/icons.ttf?ivqgd1') format('truetype'),
+    url('fonts/icons.woff?ivqgd1') format('woff'),
+    url('fonts/icons.svg?ivqgd1#icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,50 +25,42 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-whatsapp-outline:before {
+  content: "\e90c";
+}
 .icon-filter:before {
   content: "\e90b";
 }
-
 .icon-arrows:before {
   content: "\e90a";
 }
-
 .icon-triangle:before {
   content: "\e909";
 }
-
 .icon-location:before {
   content: "\e908";
 }
-
 .icon-whatsapp:before {
   content: "\e907";
 }
-
 .icon-cart:before {
   content: "\e900";
 }
-
 .icon-facebook:before {
   content: "\e901";
 }
-
 .icon-instagram:before {
   content: "\e902";
 }
-
 .icon-next:before {
   content: "\e903";
 }
-
 .icon-plus:before {
   content: "\e904";
 }
-
 .icon-prev:before {
   content: "\e905";
 }
-
 .icon-telegram:before {
   content: "\e906";
 }
