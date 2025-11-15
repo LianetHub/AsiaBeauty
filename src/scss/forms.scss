@@ -149,7 +149,11 @@
 	&.btn-primary {
 		background: $red;
 		color: rgba(228, 228, 228, 0.8);
-		&:hover,
+		@media (any-hover: hover) {
+			&:hover {
+				background: darken($color: $red, $amount: 10);
+			}
+		}
 		&:active,
 		&.active {
 			background: darken($color: $red, $amount: 10);
@@ -163,7 +167,11 @@
 		border: rem(1) solid rgba(228, 228, 228, 1);
 		background: rgba(228, 228, 228, 1);
 		color: $black;
-		&:hover,
+		@media (any-hover: hover) {
+			&:hover {
+				color: rgba(228, 228, 228, 1);
+			}
+		}
 		&:active,
 		&.active {
 			background: $black;
@@ -173,9 +181,11 @@
 	&.btn-white-outline {
 		border: rem(1) solid rgba(228, 228, 228, 1);
 		color: rgba(228, 228, 228, 1);
-		&:hover {
-			background: rgba(228, 228, 228, 0.8);
-			color: $black;
+		@media (any-hover: hover) {
+			&:hover {
+				background: rgba(228, 228, 228, 0.8);
+				color: $black;
+			}
 		}
 		&:active,
 		&.active {

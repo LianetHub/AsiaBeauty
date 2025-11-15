@@ -1,6 +1,7 @@
 .dropdown {
 	position: relative;
 	width: 100%;
+	flex: 1 1 auto;
 	&.visible {
 		.dropdown__body {
 			opacity: 1;
@@ -28,10 +29,11 @@
 		justify-content: center;
 		gap: 0.25rem;
 		z-index: 1;
-		padding: 0.75rem 2.25rem 0.75rem 3.72rem;
+		padding: 0.75rem 2.75rem;
 		font-size: 0.875rem;
 		line-height: 145%;
 		min-height: 2.5rem;
+		height: 100%;
 
 		&.selected {
 			color: #232c32;

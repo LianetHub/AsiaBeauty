@@ -190,6 +190,65 @@ $(function () {
     })
 
     // sliders 
+
+    class ConditionsSwiper {
+        constructor(selector, options = {}, {
+            mode = 'min',
+            breakpoint = 767.98
+        } = {}) {
+            this.selector = selector;
+            this.options = options;
+            this.mode = mode.toLowerCase();
+            this.breakpoint = breakpoint;
+            this.swiperInstance = null;
+            this.isInitialized = false;
+
+            this.handleResize = this.handleResize.bind(this);
+
+            this.handleResize();
+            window.addEventListener("resize", this.handleResize);
+        }
+
+        shouldInitialize() {
+            const currentWidth = window.innerWidth;
+
+            if (this.mode === 'min') {
+                return currentWidth <= this.breakpoint;
+            } else if (this.mode === 'max') {
+                return currentWidth > this.breakpoint;
+            }
+            return false;
+        }
+
+        initializeSwiper() {
+            if (!this.isInitialized) {
+                this.swiperInstance = new Swiper(this.selector, this.options);
+                this.isInitialized = true;
+            }
+        }
+
+        destroySwiper() {
+            if (this.isInitialized && this.swiperInstance) {
+                this.swiperInstance.destroy(true, true);
+                this.swiperInstance = null;
+                this.isInitialized = false;
+            }
+        }
+
+        handleResize() {
+            if (this.shouldInitialize()) {
+                this.initializeSwiper();
+            } else {
+                this.destroySwiper();
+            }
+        }
+
+        destroy() {
+            window.removeEventListener("resize", this.handleResize);
+            this.destroySwiper();
+        }
+    }
+
     if ($('.certs__slider').length > 0) {
         $('.certs__slider').each(function (index, sliderWrapper) {
 
@@ -339,15 +398,16 @@ $(function () {
     }
 
     if ($('.services-slider').length > 0) {
-        new Swiper('.services-slider', {
+        new ConditionsSwiper('.services-slider', {
             slidesPerView: "auto",
             speed: 300,
             mousewheel: true,
             spaceBetween: 9
+        }, {
+            mode: "max",
+            breakpoint: 575.98
         })
     }
-
-
 
 
     // Phone Russia Mask
@@ -649,49 +709,49 @@ $(function () {
 
     // gsap animations
 
-    gsap.registerPlugin(ScrollTrigger);
+    // gsap.registerPlugin(ScrollTrigger);
 
-    let mm = gsap.matchMedia();
-    let productCards = ".product-card";
-    let productGrid = ".catalog__grid";
+    // let mm = gsap.matchMedia();
+    // let productCards = ".product-card";
+    // let productGrid = ".catalog__grid";
 
-    mm.add("(min-width: 992px)", () => {
-        let desktopTL = gsap.timeline({
-            scrollTrigger: {
-                trigger: productGrid,
-                start: "top 80%",
-                end: "bottom top",
-                toggleActions: "play none none none"
-            }
-        });
+    // mm.add("(min-width: 992px)", () => {
+    //     let desktopTL = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: productGrid,
+    //             start: "top 80%",
+    //             end: "bottom top",
+    //             toggleActions: "play none none none"
+    //         }
+    //     });
 
-        desktopTL.from(productCards, {
-            opacity: 0,
-            y: 50,
-            duration: 0.6,
-            stagger: 0.15,
-            ease: "power2.out"
-        });
-    });
+    //     desktopTL.from(productCards, {
+    //         opacity: 0,
+    //         y: 50,
+    //         duration: 0.6,
+    //         stagger: 0.15,
+    //         ease: "power2.out"
+    //     });
+    // });
 
-    mm.add("(max-width: 991px)", () => {
-        let mobileTL = gsap.timeline({
-            scrollTrigger: {
-                trigger: productGrid,
-                start: "top 85%",
-                end: "bottom top",
-                toggleActions: "play none none none"
-            }
-        });
+    // mm.add("(max-width: 991px)", () => {
+    //     let mobileTL = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: productGrid,
+    //             start: "top 85%",
+    //             end: "bottom top",
+    //             toggleActions: "play none none none"
+    //         }
+    //     });
 
-        mobileTL.from(productCards, {
-            opacity: 0,
-            y: 30,
-            duration: 0.4,
-            stagger: 0.1,
-            ease: "power1.out"
-        });
-    });
+    //     mobileTL.from(productCards, {
+    //         opacity: 0,
+    //         y: 30,
+    //         duration: 0.4,
+    //         stagger: 0.1,
+    //         ease: "power1.out"
+    //     });
+    // });
 
 
     // init Smooth Scroll
