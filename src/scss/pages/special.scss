@@ -1,0 +1,21 @@
+.gallery {
+	padding: rem(25) 0;
+	@media (min-width: $md3) {
+		padding: rem(50) 0;
+	}
+	// .gallery__items
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.63rem;
+		row-gap: 3.75rem;
+	}
+	// .gallery__item
+	&__item {
+		height: 14.1875rem;
+		&--large {
+			height: 38.5rem;
+			grid-column: span 3;
+		}
+	}
+}

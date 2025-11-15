@@ -65,6 +65,14 @@
 	&__content {
 		max-width: rem(1250);
 	}
+	&__title {
+		text-transform: none;
+	}
+	&__description {
+		max-width: rem(810);
+		margin-top: rem(20);
+		margin-inline: auto;
+	}
 	&__header {
 		.section-header__caption {
 			color: rgba($color: $grey, $alpha: 0.8);
@@ -202,6 +210,10 @@
 		gap: 2rem;
 		margin-top: rem(24);
 		grid-template-columns: repeat(auto-fill, minmax(rem(220), 1fr));
+		&--small {
+			max-width: rem(932);
+			margin-inline: auto;
+		}
 		@media (min-width: $md4) {
 			grid-template-columns: repeat(auto-fill, minmax(rem(264), 1fr));
 			margin-top: rem(80);
@@ -209,6 +221,18 @@
 		@media (min-width: $md2) {
 			gap: 4rem;
 			row-gap: 5.5rem;
+		}
+	}
+	&__carousel {
+		max-width: rem(932);
+		overflow: visible;
+		margin-inline: auto;
+		margin-top: rem(40);
+		@media (min-width: $md4) {
+			margin-top: rem(60);
+		}
+		.swiper-slide {
+			width: rem(264);
 		}
 	}
 	// .catalog__slider
@@ -346,6 +370,16 @@
 	// .product-card__prices-label
 	&__prices-label {
 		display: block;
+		.product-card__prices-btn {
+			cursor: pointer;
+			transition: color 0.3s ease, background-color 0.3s ease;
+			@media (any-hover: hover) {
+				&:hover {
+					color: $black;
+					background-color: $grey;
+				}
+			}
+		}
 	}
 	// .product-card__prices-input
 	&__prices-input {
@@ -362,14 +396,6 @@
 		min-height: rem(3);
 		border: rem(1) solid;
 		border-radius: 6.25rem;
-		cursor: pointer;
-		transition: color 0.3s ease, background-color 0.3s ease;
-		@media (any-hover: hover) {
-			&:hover {
-				color: $black;
-				background-color: $grey;
-			}
-		}
 	}
 
 	// .product-card__prices-value

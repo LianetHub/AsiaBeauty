@@ -1,0 +1,41 @@
+[
+    {
+        "isInSlider": true,
+        "id": "jumu_lanmar_spa_for_two",
+        "image": "@img/goods/jumu-lanmar.jpg",
+        "name": "«Джуму Ланмар» / спа-программа для двоих",
+        "desc": "Баланс ухода и расслабления. Just relax and feel each other",
+        "prices": [
+            {
+                "time": "120 min",
+                "value": "36 500 Р"
+            }
+        ]
+    },
+    {
+        "isInSlider": true,
+        "id": "anahata_spa_for_two",
+        "image": "@img/goods/anahata.jpg",
+        "name": "Анахата / спа-программа для двоих",
+        "desc": "Любовь, гармония и единение. Find the heart chakra",
+        "prices": [
+            {
+                "time": "120 min",
+                "value": "38 000 Р"
+            }
+        ]
+    },
+    {
+        "isInSlider": true,
+        "id": "in_unison_spa_for_two",
+        "image": "@img/goods/in-unison.jpg",
+        "name": "«В унисон» / спа-программа для двоих",
+        "desc": "Точечная проработка тела и стоп. Full activation of energy lines",
+        "prices": [
+            {
+                "time": "90 min",
+                "value": "32 500 Р"
+            }
+        ]
+    }
+]

@@ -5,162 +5,198 @@
     })
     <body>
         <div class="wrapper">
-            @@include('html/_header.html', {
-            "color": "primary",
-            "active": "0"
-            })
+            @@include('html/_header.html', {})
             <main class="page">
-                <section class="product-card">
-                    <div class="product-card__header">
-                        <div class="product-card__container container ">
-                            <nav aria-label="Хлебные крошки" class="breadcrumbs breadcrumbs_dark">
-                                <ul class="breadcrumbs__items">
-                                    <li class="breadcrumbs__item">
-                                        <a href="/" class="breadcrumbs__link">главная</a>
-                                    </li>
-                                    <li class="breadcrumbs__item">
-                                        <span class="breadcrumbs__link breadcrumbs__link_active">spa для двоиx</span>
-                                    </li>
-                                </ul>
-                            </nav>
-                            <h1 class="product-card__heading title">
-                                spa для двоих: уникальное свидание <br>
-                                в центре Москвы
-                            </h1>
-                            <p class="product-card__subtitle">
-                                Массажи, хаммамы, джакузи, бани,сауны, апартаменты для двоих
-                            </p>
-                            <div class="product-card__picture" data-animate="line">
-                                <div class="product-card__image" data-animate="parallax">
-                                    <img src="@img/photo.png" class="cover-image" alt="photo desc">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card__body product-card__body_sm-offset">
-                        <div class="product-card__container container">
-                            <div class="product-card__content product-card__content_lg">
-                                <div class="product-card__main">
-                                    <div class="product-card__info">
-                                        <h2 class="product-card__caption title-md">
-                                            Вырваться из оков&nbsp;мегаполиса
-                                        </h2>
-                                    </div>
-                                </div>
-                                <aside class="product-card__side">
-                                    <div class="product-card__side-text">
-                                        <p>
-                                            Свидание в кафе утратило флёр романтики и стало чем-то обыденным. Не говоря об ужине дома. А хочется провести время с любимым человеком по-особенному.
-                                        </p>
-                                        <p>
-                                            Идеальный сценарий – пойти вдвоем в спа-салон! Вырваться из оков мегаполиса и очутиться на фешенебельном курорте в Средиземном море, который затаился в пределах Садового кольца.
-                                        </p>
-                                    </div>
-                                </aside>
-                            </div>
-                            @@include('html/_more-products.html', {
-                            "title": "Spa-программы для двоих",
-                            "btn": true
-                            })
-                            @@include('html/_more-products.html', {
-                            "title": "Апартаменты",
-                            "btn": true
-                            })
-                            <div class="product-card__gallery">
-                                <div class="product-card__gallery-caption">
-                                    Отдых для двоих
-                                </div>
-                                <ul class="product-card__gallery-list product-card__gallery-list_lg">
-                                    <a href="@img/photo.png" data-fancybox="gallery" class="product-card__gallery-item">
-                                        <img src="@img/photo.png" class="cover-image" alt="photo">
-                                    </a>
-                                    <a href="@img/photo.png" data-fancybox="gallery" class="product-card__gallery-item">
-                                        <img src="@img/photo.png" class="cover-image" alt="photo">
-                                    </a>
-                                    <a href="@img/photo.png" data-fancybox="gallery" class="product-card__gallery-item">
-                                        <img src="@img/photo.png" class="cover-image" alt="photo">
-                                    </a>
-                                    <a href="@img/photo.png" data-fancybox="gallery" class="product-card__gallery-item">
-                                        <img src="@img/photo.png" class="cover-image" alt="photo">
-                                    </a>
-                                    <a href="@img/photo.png" data-fancybox="gallery" class="product-card__gallery-item">
-                                        <img src="@img/photo.png" class="cover-image" alt="photo">
-                                    </a>
-                                    <a href="@img/photo.png" data-fancybox="gallery" class="product-card__gallery-item">
-                                        <img src="@img/photo.png" class="cover-image" alt="photo">
-                                    </a>
-                                </ul>
-                            </div>
-                            <ul class="product-card__faq">
-                                <li class="info__faq-item">
-                                    <button type="button" class="info__faq-button">Заблаговременное бронирование</button>
-                                    <div class="info__faq-text">
-                                        Наши салоны пользуются большой популярностью, поэтому для Вашего комфорта мы просим Вас предварительно записываться на SPA-процедуры.
-                                    </div>
+                <section class="heading">
+                    <div class="container">
+                        <nav aria-label="Хлебные крошки" class="breadcrumbs">
+                            <ul class="breadcrumbs__items">
+                                <li class="breadcrumbs__item">
+                                    <a href="index.html" class="breadcrumbs__link">Главная</a>
                                 </li>
-                                <li class="info__faq-item">
-                                    <button type="button" class="info__faq-button">Резерв</button>
-                                    <div class="info__faq-text">
-                                        Если Вы опаздываете, просим Вас связаться по телефону с администратором, чтобы скорректировать последовательность процедур и желаемых специалистов. Резерв по предварительной записи на SPA - процедуры действует в течение 15 минут.
-                                    </div>
-                                </li>
-                                <li class="info__faq-item">
-                                    <button type="button" class="info__faq-button">Прибытие в spa</button>
-                                    <div class="info__faq-text">
-                                        Для того, чтобы настроиться на процедуру и впитать в себя спокойную атмосферу SPA-центра, рекомендуем Вам приходить за 10-15 минут до начала процедуры.
-                                    </div>
-                                </li>
-                                <li class="info__faq-item">
-                                    <button type="button" class="info__faq-button">Специальная одежда для spa-процедур</button>
-                                    <div class="info__faq-text">
-                                        По прибытии в SPA-салон Вам предоставят возможность переодеться в удобный халат, одноразовое нижнее белье и тапочки. Свою одежду Вы сможете оставить на время пребывания в салоне в индивидуальном шкафчике с электронным замком. Перед уходом не забудьте, пожалуйста, сдать ключ от раздевалки администратору, за утерю ключа взимается штраф в размере 1500 рублей.
-                                    </div>
-                                </li>
-                                <li class="info__faq-item">
-                                    <button type="button" class="info__faq-button">Ценные вещи</button>
-                                    <div class="info__faq-text">
-                                        Мы рекомендуем Вам сдавать ценные вещи на хранение в сейф, который установлен в зоне ресепшена, каждый сейф имеет индивидуальный ключ. Администрация ASIA BEAUTY SPA не несет ответственность за вещи, находящиеся в раздевалке, и вещи, оставленные без присмотра. <br>
-                                        В целях Вашей безопасности во всех салонах ASIA BEAUTY SPA ведется видеонаблюдение.
-                                    </div>
-                                </li>
-                                <li class="info__faq-item">
-                                    <button type="button" class="info__faq-button">Спа этикет</button>
-                                    <div class="info__faq-text">
-                                        Отличительной особенностью салонов ASIA BEAUTY SPA является непринужденная и спокойная атмосфера. Убедительно просим Вас разговаривать тихо, не шуметь и выключать мобильные телефоны.
-                                        <br>
-                                        Обращаем Ваше внимание, что мы не оказываем услуг эротического и интимного характера. Мастер и администратор вправе отказать в обслуживании, если Ваши действия противоречат этикету ASIA BEAUTY SPA. В случае начала процедуры и возникновения подобной ситуации, процедура должна быть оплачена Вами полностью.
-                                        <br>
-                                        Вход с питомцами в салоны ASIA BEAUTY SPA возможен, только если животное находится в сумке-переноске.
-                                        <br>
-                                        В салонах ASIA BEAUTY SPA не предусмотрено курение.
-                                    </div>
-                                </li>
-                                <li class="info__faq-item">
-                                    <button type="button" class="info__faq-button">Оплата</button>
-                                    <div class="info__faq-text">
-                                        Мы принимаем к оплате только российские рубли, а также пластиковые карты всех платежных систем Visa, MasterCard, American Express, Maestro, STB, Union Card, Diners Clab.
-                                        <br>
-                                        Пожалуйста, не забывайте Ваши депозитные карты и подарочные сертификаты.
-                                    </div>
-                                </li>
-                                <li class="info__faq-item">
-                                    <button type="button" class="info__faq-button">Заказ блюд и напитков</button>
-                                    <div class="info__faq-text">
-                                        В совместном комплексе ресторан «Тан» - ASIA BEAUTY SPA Вы можете заказать блюда из меню Ресторана «Тан». Их подадут по Вашему заказу в SPA-suite-зону комплекса или администратор салона проводит Вас в зал ресторана.
-                                        <br>
-                                        В любой из наших салонов Вы можете заказать блюда из ресторана. Стоимость доставки заказа - 1000 рублей при общей сумме счета от 3000 рублей.
-                                        <br>
-                                        Заблаговременный заказ приветствуется.
-                                        <br>
-                                        Если по какой-то причине Вы желаете сократить время процедуры или прервать ее, то стоимость этой процедуры остается неизменной, согласно действующему прайс-листу.
-                                        <br>
-                                        Если по какой-либо причине мастер Вам не подошел, Вы можете поменять мастера в течении первых 15 минут после начала процедуры массажа.
-                                    </div>
+                                <li class="breadcrumbs__item">
+                                    <span class="breadcrumbs__link active">Спа для двоих</span>
                                 </li>
                             </ul>
+                        </nav>
+                        <div class="heading__row">
+                            <h1 class="heading__title title">
+                                <span>Spa для</span>
+                                <span>двоих:</span>
+                                <span>уникальное</span>
+                                <span>свидание в</span>
+                                <span>центре Москвы</span>
+                            </h1>
+                            <div class="heading__image">
+                                <img src="@img/specialoffer.jpg" class="cover-image" alt="Фото">
+                            </div>
                         </div>
                     </div>
                 </section>
+                <div class="media">
+                    <div class="container">
+                        <div class="media__slider swiper">
+                            <div class="swiper-wrapper">
+                                <div class="media__slide swiper-slide">
+                                    <a href="https://www.youtube.com/watch?v=H2BcVlp6RMo" data-fancybox class="media__poster icon-play">
+                                        <img src="@img/media/05.jpg" class="cover-image" alt="Постер">
+                                    </a>
+                                    <div class="media__footer">
+                                        <div class="media__name">Локации</div>
+                                        <button type="button" class="media__favorite favorite-btn"></button>
+                                    </div>
+                                </div>
+                                <div class="media__slide swiper-slide">
+                                    <a href="https://www.youtube.com/watch?v=H2BcVlp6RMo" data-fancybox class="media__poster icon-play">
+                                        <img src="@img/media/06.jpg" class="cover-image" alt="Постер">
+                                    </a>
+                                    <div class="media__footer">
+                                        <div class="media__name">Джакузи</div>
+                                        <button type="button" class="media__favorite favorite-btn"></button>
+                                    </div>
+                                </div>
+                                <div class="media__slide swiper-slide">
+                                    <a href="https://www.youtube.com/watch?v=H2BcVlp6RMo" data-fancybox class="media__poster icon-play">
+                                        <img src="@img/media/07.jpg" class="cover-image" alt="Постер">
+                                    </a>
+                                    <div class="media__footer">
+                                        <div class="media__name">Хаммам</div>
+                                        <button type="button" class="media__favorite favorite-btn"></button>
+                                    </div>
+                                </div>
+                                <div class="media__slide swiper-slide">
+                                    <a href="https://www.youtube.com/watch?v=H2BcVlp6RMo" data-fancybox class="media__poster icon-play">
+                                        <img src="@img/media/08.jpg" class="cover-image" alt="Постер">
+                                    </a>
+                                    <div class="media__footer">
+                                        <div class="media__name">Спа - программы</div>
+                                        <button type="button" class="media__favorite favorite-btn"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="benefits">
+                    <div class="container">
+                        <ul class="benefits__list">
+                            <li class="benefits__item">
+                                <div class="benefits__item-icon">
+                                    <img src="@img/icons/dotts-1.svg" alt="Иконка">
+                                </div>
+                                <div class="benefits__item-title text-uppercase text-medium">
+                                    Зона <br> SPA-релаксации
+                                </div>
+                            </li>
+                            <li class="benefits__item">
+                                <div class="benefits__item-icon">
+                                    <img src="@img/icons/dotts-2.svg" alt="Иконка">
+                                </div>
+                                <div class="benefits__item-title text-uppercase text-medium">
+                                    Хаммам, джакузи, <br> бассейны, бани, сауны
+                                </div>
+                            </li>
+                            <li class="benefits__item">
+                                <div class="benefits__item-icon">
+                                    <img src="@img/icons/dotts-3.svg" alt="Иконка">
+                                </div>
+                                <div class="benefits__item-title text-uppercase text-medium">
+                                    Тайские, китайские, <br> европейские массажи
+                                </div>
+                            </li>
+                            <li class="benefits__item">
+                                <div class="benefits__item-icon">
+                                    <img src="@img/icons/dotts-4.svg" alt="Иконка">
+                                </div>
+                                <div class="benefits__item-title text-uppercase text-medium">
+                                    Отдельные Luxury <br> апартаменты
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="" class="benefits__more btn btn-primary btn-lg">Забронировать</a>
+                    </div>
+                </div>
+                <section class="catalog">
+                    <div class="container container-lg">
+                        <div class="catalog__content">
+                            <h2 class="catalog__title title text-center">SPA-программы <br> для двоих</h2>
+                            <div class="catalog__carousel swiper">
+                                <div class="swiper-wrapper">
+                                    @@loop('./html/templates/_product.html', './html/json/catalog-specials.json')
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="about">
+                    <div class="container">
+                        <div class="about__block">
+                            <div class="about__body">
+                                <div class="about__desc">
+                                    <p>Мечтаете вдвоём со своей второй половинкой очутиться на берегу океана хотя бы на день? Тогда курорт Asia Beauty Spa - идеальное место для романтического спа для двоих!</p>
+                                    <p>В нашем spa-меню много строчек занимают заготовленные программы для влюблённых, в которых шаг за шагом прописано, что вас и вашего любимого человека будет ожидать во время сеанса.</p>
+                                    <p>Если хотите сделать свидание авторским, можете «сконструировать» его сами из любых процедур и массажей меню. Наши мастера из Тайланда, Китая и с Бали подарят вам море релакса и наслаждения.</p>
+                                    <p>Процедуры для двоих могут проходить в разных акватермальных зонах. А также у вас есть возможность уединиться в роскошных VIP-апартаментах. Мы украсим для вас номер композициями из лепестков роз. И прямо сюда можно будет заказать шампанское и любимые блюда из культового ресторана ТАН.</p>
+                                    <p>Пригласите любимого человека на свидание в Asia Beauty Spa и освежите чувства в атмосфере релакса и роскоши.</p>
+                                </div>
+                                <div class="about__slider swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="about__slide swiper-slide">
+                                            <img src="@img/about/06.jpg" class="cover-image" alt="Фото">
+                                        </div>
+                                        <div class="about__slide swiper-slide">
+                                            <img src="@img/about/01.jpg" class="cover-image" alt="Фото">
+                                        </div>
+                                        <div class="about__slide swiper-slide">
+                                            <img src="@img/about/02.jpg" class="cover-image" alt="Фото">
+                                        </div>
+                                        <div class="about__slide swiper-slide">
+                                            <img src="@img/about/03.jpg" class="cover-image" alt="Фото">
+                                        </div>
+                                    </div>
+                                    <div class="about__slider-pagination swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <section class="catalog">
+                    <div class="container container-lg">
+                        <div class="catalog__content">
+                            <h2 class="catalog__title title text-center">SPA-программы для двоих в <br> аппартаментах</h2>
+                            <p class="catalog__description text-center">
+                                В Asia Beauty Spa есть 8 готовых романтических программ для вас и вашей половинки! 
+                                А также вы можете самостоятельно спланировать свидание, выбрав любые процедуры из нашего спа-меню. Мы скомпонуем их так, чтобы на термометре удовольствия температура зашкаливала!
+                                Воспользуйтесь помощью наших специалистов 
+                                по телефону:   +7(495) 021 58 09
+                            </p>
+                            <div class="catalog__carousel swiper">
+                                <div class="swiper-wrapper">
+                                    @@loop('./html/templates/_product.html', './html/json/catalog-for-two.json')
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="gallery">
+                    <div class="container">
+                        <div class="gallery__items">
+                            <a href="@img/special/01.jpg" data-fancybox="gallery" class="gallery__item">
+                                <img src="@img/special/01.jpg" class="cover-image" alt="Галлерея">
+                            </a>
+                            <a href="@img/special/02.jpg" data-fancybox="gallery" class="gallery__item">
+                                <img src="@img/special/02.jpg" class="cover-image" alt="Галлерея">
+                            </a>
+                            <a href="@img/special/03.jpg" data-fancybox="gallery" class="gallery__item">
+                                <img src="@img/special/03.jpg" class="cover-image" alt="Галлерея">
+                            </a>
+                            <a href="@img/special/04.jpg" data-fancybox="gallery" class="gallery__item gallery__item--large">
+                                <img src="@img/special/04.jpg" class="cover-image" alt="Галлерея">
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </main>
             @@include('html/_footer.html', {})
         </div>

@@ -153,6 +153,7 @@ body {
 @import "pages/catalog";
 @import "pages/apartaments";
 @import "pages/about";
+@import "pages/special";
 // @import "pages/order";
 // @import "pages/info";
 // @import "pages/promotion";
@@ -334,6 +335,15 @@ body {
 		@media (max-width: $md5) {
 			display: none;
 		}
+	}
+	// .benefits__more
+	&__more {
+		margin-top: rem(60);
+		width: fit-content;
+		min-width: 11.25rem;
+		min-height: rem(40);
+		display: flex;
+		margin-inline: auto;
 	}
 }
 

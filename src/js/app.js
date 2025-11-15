@@ -98,46 +98,10 @@ $(function () {
             $('.catalog__filters').slideToggle()
         }
 
-        // // cart open
-        // if ($target.hasClass('header__cart') ||
-        //     $target.hasClass('cart__close') ||
-        //     $target.hasClass('cart')) {
-        //     getCart()
-        // }
-
-        // play video
-        // if ($target.is('.product__video-btn')) {
-
-        //     $target.addClass('active');
-        //     let video = $target.prev().addClass('active')[0];
-
-        //     if (video.play) {
-        //         let playPromise = video.play();
-
-        //         if (playPromise !== undefined && typeof playPromise.then === 'function') {
-        //             playPromise
-        //                 .then(() => {
-        //                     console.log('Video is playing');
-        //                 })
-        //                 .catch(error => {
-        //                     console.log('Autoplay was prevented:', error);
-        //                     video.pause();
-        //                 });
-        //         } else {
-        //             video.play();
-        //         }
-        //     }
-        // }
-
-        // if ($target.is('.product__video video.active')) {
-        //     let video = $target[0];
-
-        //     if (video.pause) {
-        //         video.pause();
-        //     }
-        //     $target.removeClass('active');
-        //     $target.next().removeClass('active');
-        // }
+        // favorite btn
+        if ($target.is('.favorite-btn')) {
+            $target.toggleClass('active')
+        }
 
 
     });
@@ -408,6 +372,7 @@ $(function () {
             breakpoint: 575.98
         })
     }
+
     if ($('.catalog__slider').length > 0) {
         new ConditionsSwiper('.catalog__slider', {
             slidesPerView: "auto",
@@ -438,6 +403,38 @@ $(function () {
             }
         })
     }
+
+    if ($('.catalog__carousel').length > 0) {
+        $('.catalog__carousel').each(function (index, slider) {
+            new Swiper(slider, {
+                spaceBetween: 30,
+                slidesPerView: "auto",
+                speed: 800,
+                watchOverflow: true,
+                breakpoints: {
+                    767.98: {
+                        spaceBetween: 65,
+                    }
+                }
+            })
+        });
+    }
+    if ($('.about__slider').length > 0) {
+        $('.about__slider').each(function (index, slider) {
+
+            let pagination = $(slider).find('.about__slider-pagination')[0];
+
+            new Swiper(slider, {
+                slidesPerView: 1,
+                watchOverflow: true,
+                pagination: {
+                    el: pagination,
+                    clickable: true
+                },
+            })
+        });
+    }
+
 
 
 

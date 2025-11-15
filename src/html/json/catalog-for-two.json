@@ -1,0 +1,41 @@
+[
+    {
+        "isInSlider": true,
+        "id": "sixth_sense_spa_program",
+        "image": "@img/goods/sixth-sense.jpg",
+        "name": "«Шестое чувство» / спа-программа",
+        "desc": "Погружение в безмятежность. Take it easy and relax",
+        "prices": [
+            {
+                "time": "120 min",
+                "value": "55 500 Р"
+            }
+        ]
+    },
+    {
+        "isInSlider": true,
+        "id": "ancient_tibet_spa_program",
+        "image": "@img/goods/ancient-tibet.jpg",
+        "name": "«Древний тибет» / спа-программа",
+        "desc": "Целительные тибетские практики. Dive into yourself!",
+        "prices": [
+            {
+                "time": "120 min",
+                "value": "55 500 Р"
+            }
+        ]
+    },
+    {
+        "isInSlider": true,
+        "id": "love_spa_for_two",
+        "image": "@img/goods/love-spa.jpg",
+        "name": "Love & спа-программа для двоих",
+        "desc": "Деликатный пилинг с релаксирующим массажем тела и стоп. Beauty and pleasure. Feel the balance",
+        "prices": [
+            {
+                "time": "120 min",
+                "value": "55 500 Р"
+            }
+        ]
+    }
+]
