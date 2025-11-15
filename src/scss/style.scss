@@ -170,13 +170,18 @@ body {
 			display: flex;
 			flex-direction: column;
 			max-width: rem(340);
-
 			& span {
 				&:nth-child(3n + 1) {
 					align-self: center;
+					&:nth-last-child(2) {
+						align-self: flex-start;
+					}
 				}
 				&:nth-child(3n + 2) {
 					align-self: flex-start;
+					&:last-child {
+						align-self: flex-end;
+					}
 				}
 				&:nth-child(3n + 3) {
 					align-self: flex-end;
@@ -189,6 +194,9 @@ body {
 				display: block;
 				text-align: right;
 				margin-left: auto;
+				&:nth-child(2) {
+					text-align: center;
+				}
 			}
 		}
 	}
@@ -432,7 +440,9 @@ body {
 	}
 	display: flex;
 	flex-direction: column;
-
+	&__header {
+		width: 100%;
+	}
 	// .recommendations__slider
 	&__slider {
 		margin-top: rem(40);
@@ -443,7 +453,10 @@ body {
 	// .recommendations__card
 	&__card {
 		&:nth-child(4n + 1) {
-			width: rem(340);
+			width: 100%;
+			@media (min-width: $md6) {
+				width: rem(340);
+			}
 			@media (min-width: $md4) {
 				margin-top: rem(26);
 				width: rem(474);
@@ -464,8 +477,11 @@ body {
 			}
 		}
 		&:nth-child(4n + 4) {
-			width: rem(340);
 			margin-top: rem(24);
+			width: 100%;
+			@media (min-width: $md6) {
+				width: rem(340);
+			}
 			@media (min-width: $md4) {
 				margin-top: rem(94);
 				width: rem(474);
@@ -493,6 +509,7 @@ body {
 	// .recommendations__card-btn
 	&__card-btn {
 		margin-top: rem(21);
+		min-height: rem(40);
 		min-width: rem(180);
 	}
 }
