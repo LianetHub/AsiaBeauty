@@ -1519,10 +1519,21 @@ body.lock-filter {
 
 .footer__banner {
   margin-top: 3.75rem;
+  width: 100%;
+  aspect-ratio: 2.679245283;
 }
 
-.footer__banner img {
+.footer__banner img,
+.footer__banner video {
   min-height: 13.25rem;
+}
+
+.footer__video {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .footer__logo {
@@ -1566,10 +1577,9 @@ body.lock-filter {
 }
 
 .hero {
+  position: relative;
+  z-index: 1;
   background-color: #151515;
-  background-image: url("../img/hero.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
   color: rgba(228, 228, 228, 0.8);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1605,6 +1615,17 @@ body.lock-filter {
 
 .hero__buy {
   margin-top: 12rem;
+}
+
+.hero__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
 }
 
 .description {
