@@ -23,7 +23,9 @@
 			}
 		}
 		.header__wrapper {
-			background: $red;
+			background: transparent;
+			backdrop-filter: blur(rem(10));
+			-webkit-backdrop-filter: blur(rem(10));
 		}
 		&.header--has-scroll {
 			.header__wrapper {
@@ -61,7 +63,9 @@
 	&.header--has-scroll {
 		.header__wrapper {
 			padding: 1rem 0;
-			background: $black;
+			background: transparent;
+			backdrop-filter: blur(rem(10));
+			-webkit-backdrop-filter: blur(rem(10));
 		}
 	}
 	// .header__wrapper

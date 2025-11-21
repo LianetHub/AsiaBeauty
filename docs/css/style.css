@@ -1077,7 +1077,9 @@ body.lock-filter {
 }
 
 .header.header--open-menu .header__wrapper {
-  background: #720806;
+  background: transparent;
+  backdrop-filter: blur(0.625rem);
+  -webkit-backdrop-filter: blur(0.625rem);
 }
 
 .header.header--open-menu.header--has-scroll .header__wrapper {
@@ -1098,7 +1100,9 @@ body.lock-filter {
 
 .header.header--has-scroll .header__wrapper {
   padding: 1rem 0;
-  background: #151515;
+  background: transparent;
+  backdrop-filter: blur(0.625rem);
+  -webkit-backdrop-filter: blur(0.625rem);
 }
 
 .header__wrapper {
