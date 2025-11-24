@@ -1841,6 +1841,11 @@ body.lock-filter {
 
 .locations__video {
   margin-top: 2rem;
+  width: 100%;
+  min-height: 10.5rem;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .locations__video img {

@@ -350,6 +350,10 @@
 	}
 	&__video {
 		margin-top: rem(32);
+		width: 100%;
+		min-height: rem(168);
+		height: 100%;
+		object-fit: cover;
 		@media (min-width: $md4) {
 			margin-top: rem(50);
 		}
