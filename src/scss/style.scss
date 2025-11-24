@@ -224,6 +224,12 @@ body {
 			}
 		}
 	}
+	&__video {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		max-height: rem(397);
+	}
 }
 
 .banner {
@@ -276,10 +282,20 @@ body {
 	// .banner__btn
 	&__btn {
 	}
-	// .banner__offer-image
+	// .banner__image
 	&__image {
 		& img {
 			min-height: rem(179);
+		}
+	}
+	// .banner__video
+	&__video {
+		min-height: rem(179);
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		&--small {
+			height: rem(300);
 		}
 	}
 }

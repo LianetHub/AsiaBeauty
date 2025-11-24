@@ -46,9 +46,9 @@
                 </section>
                 @@include('./html/_recommendations.html')
                 <div class="video">
-                    <div class="video__poster">
-                        <img src="@img/video-poster-2.jpg" class="cover-image" alt="Постер">
-                    </div>
+                    <video class="video__block" muted loop playsinline autoplay="true" preload="metadata" poster="@img/service-video-poster.jpg">
+                        <source src="./files/service-video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+                    </video>
                 </div>
             </main>
             @@include('html/_footer.html', {})
