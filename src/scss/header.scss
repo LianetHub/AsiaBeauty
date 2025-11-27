@@ -155,7 +155,7 @@
 			border-radius: 6.25rem;
 			font-size: 1rem;
 			line-height: 120%;
-			padding: 0.9375rem 1.1875rem;
+			padding: 0.9375rem 1rem;
 			display: inline-block;
 			transition: color 0.3s ease, background-color 0.3s ease;
 			@media (any-hover: hover) {
@@ -164,6 +164,9 @@
 					color: rgba(228, 228, 228, 0.8);
 				}
 			}
+		}
+		@media (min-width: $md1) {
+			padding: 0.9375rem 1.1875rem;
 		}
 		&.active {
 			background: #151515;

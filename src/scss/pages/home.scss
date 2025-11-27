@@ -68,7 +68,7 @@
 
 .home-about {
 	@media (min-width: $md5) {
-		background: url("@img/about.jpg") 0 0 / cover no-repeat;
+		background: url("@img/about.jpg") 0 center / cover no-repeat;
 	}
 }
 

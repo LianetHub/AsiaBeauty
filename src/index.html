@@ -95,8 +95,8 @@
                     </div>
                 </section>
                 <section class="tagline" style="background-image: url('@img/banner-home.png');">
-                    <div class="container">
-                        <h2 class="tagline__title title text-center text-uppercase">
+                    <div class="container" data-animate="section">
+                        <h2 class="tagline__title title text-center text-uppercase" data-animate="title">
                             <span class="color-grey">Asia Beauty Spa</span> — крупнейшая сеть <br> spa-салонов premium класса <span class="color-grey">в&nbsp;Москве</span>
                         </h2>
                     </div>
@@ -182,9 +182,9 @@
                     </div>
                 </section>
                 <div class="video">
-                    <div class="video__poster">
-                        <img src="@img/video-poster.jpg" class="cover-image" alt="Постер">
-                    </div>
+                    <video class="video__block" muted loop playsinline autoplay="true" preload="metadata" poster="@img/video-poster.jpg">
+                        <source src="./files/home-video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+                    </video>
                 </div>
             </main>
             @@include('html/_footer.html', {})

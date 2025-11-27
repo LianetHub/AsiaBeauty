@@ -4013,7 +4013,7 @@ body.lock-filter {
   }
 
   .home-about {
-    background: url("../img/about.jpg") 0 0/cover no-repeat;
+    background: url("../img/about.jpg") 0 center/cover no-repeat;
   }
 
   .description {
@@ -4870,7 +4870,7 @@ body.lock-filter {
     border-radius: 6.25rem;
     font-size: 1rem;
     line-height: 120%;
-    padding: 0.9375rem 1.1875rem;
+    padding: 0.9375rem 1rem;
     display: inline-block;
     -webkit-transition: color 0.3s ease, background-color 0.3s ease;
     -o-transition: color 0.3s ease, background-color 0.3s ease;
@@ -5350,6 +5350,10 @@ body.lock-filter {
 @media (min-width: 1439.98px) {
   .container.container-lg {
     max-width: 80rem;
+  }
+
+  .header__menu-link {
+    padding: 0.9375rem 1.1875rem;
   }
 
   .capabilities__list {

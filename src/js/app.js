@@ -830,6 +830,7 @@ $(function () {
             }
         });
     }
+
     function initFooterReveal() {
         const footerRevealWrap = document.querySelector('.footer-reveal-wrap');
         const footerRevealMask = document.querySelector('.footer-reveal-mask');
