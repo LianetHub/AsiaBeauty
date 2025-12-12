@@ -126,17 +126,17 @@
 	// .footer__banner
 	&__banner {
 		margin-top: rem(60);
-		width: 100%;
+		min-width: 100%;
 		aspect-ratio: math.div(1136, 424);
-		& img,
-		& video {
-			min-height: rem(212);
-		}
 		@media (max-width: $md4) {
 			margin-inline: -2rem;
 		}
 		@media (max-width: $md6) {
 			margin-inline: -1rem;
+		}
+		& img,
+		& video {
+			min-height: rem(212);
 		}
 	}
 	&__video {

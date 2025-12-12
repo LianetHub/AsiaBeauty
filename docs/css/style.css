@@ -967,12 +967,22 @@ body.lock-filter {
 
 .btn.btn-primary {
   background: #720806;
-  color: rgba(228, 228, 228, 0.8);
+  color: #e4e4e4;
 }
 
 .btn.btn-primary:active,
 .btn.btn-primary.active {
   background: #420503;
+}
+
+.btn.btn-primary-outline {
+  border: 0.1875rem solid #720806;
+  color: #e4e4e4;
+}
+
+.btn.btn-primary-outline:active,
+.btn.btn-primary-outline.active {
+  background: #720806;
 }
 
 .btn.btn-secondary {
@@ -1523,7 +1533,7 @@ body.lock-filter {
 
 .footer__banner {
   margin-top: 3.75rem;
-  width: 100%;
+  min-width: 100%;
   aspect-ratio: 2.679245283;
 }
 
@@ -2619,8 +2629,40 @@ body.lock-filter {
   padding: 0 1.5rem;
 }
 
-.service__btn {
+.service__prices {
+  margin-top: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.service__prices .product-card__prices-item {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.service__btns {
   margin-top: 1.13rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.service__btn {
   min-width: 12.4375rem;
 }
 
@@ -2951,6 +2993,11 @@ body.lock-filter {
   border: 0.0625rem solid;
   border-radius: 6.25rem;
   display: block;
+}
+
+.product-card__prices-btn.active {
+  background: #e4e4e4;
+  color: #151515;
 }
 
 .product-card__footer {
@@ -5641,6 +5688,11 @@ body.lock-filter {
 
   .btn.btn-primary:hover {
     background: #420503;
+  }
+
+  .btn.btn-primary-outline:hover {
+    background: #720806;
+    color: #fff;
   }
 
   .btn.btn-white:hover,

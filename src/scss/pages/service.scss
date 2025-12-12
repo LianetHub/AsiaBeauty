@@ -42,9 +42,27 @@
 			font-size: 1rem;
 		}
 	}
+	// .service__prices
+	&__prices {
+		margin-top: 1.5rem;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 1rem;
+		.product-card__prices-item {
+			flex-direction: row;
+		}
+	}
+	// .service__btns
+	&__btns {
+		margin-top: 1.13rem;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: rem(12);
+	}
 	// .service__btn
 	&__btn {
-		margin-top: 1.13rem;
 		min-width: 12.4375rem;
 	}
 	// .service__image

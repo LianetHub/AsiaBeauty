@@ -148,7 +148,7 @@
 
 	&.btn-primary {
 		background: $red;
-		color: rgba(228, 228, 228, 0.8);
+		color: #e4e4e4;
 		@media (any-hover: hover) {
 			&:hover {
 				background: darken($color: $red, $amount: 10);
@@ -157,6 +157,20 @@
 		&:active,
 		&.active {
 			background: darken($color: $red, $amount: 10);
+		}
+	}
+	&.btn-primary-outline {
+		border: rem(3) solid $red;
+		color: #e4e4e4;
+		@media (any-hover: hover) {
+			&:hover {
+				background: $red;
+				color: #fff;
+			}
+		}
+		&:active,
+		&.active {
+			background: $red;
 		}
 	}
 	&.btn-secondary {

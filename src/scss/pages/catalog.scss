@@ -398,6 +398,10 @@
 		border: rem(1) solid;
 		border-radius: 6.25rem;
 		display: block;
+		&.active {
+			background: #e4e4e4;
+			color: #151515;
+		}
 	}
 
 	// .product-card__prices-value
