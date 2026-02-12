@@ -185,6 +185,10 @@
 		flex-direction: column;
 		gap: rem(4);
 		margin-bottom: rem(30);
+		.certs__item {
+			white-space: normal !important;
+			padding: 0.625rem 2.4375rem !important;
+		}
 		@media (min-width: $md4) {
 			align-items: flex-start;
 			gap: 1.25rem;
@@ -195,8 +199,6 @@
 		display: block;
 		&:is(a) {
 			@extend .certs__item-btn;
-			white-space: normal !important;
-			padding: 0.625rem 2.4375rem !important;
 		}
 	}
 	// .certs__item-input

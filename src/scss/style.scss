@@ -233,6 +233,59 @@ body {
 		object-fit: cover;
 		max-height: rem(397);
 	}
+	// .heading__slider
+	&__slider {
+		margin-top: 4.44rem;
+	}
+	// .heading__image
+	&__image {
+	}
+	// .heading__desc
+	&__desc {
+		margin-top: 1.52rem;
+		max-width: 63.4375rem;
+		margin-inline: auto;
+		text-align: center;
+	}
+	// .heading__desc-caption
+	&__desc-caption {
+		font-size: 1.25rem;
+		font-weight: 500;
+		line-height: 110%;
+	}
+	// .heading__desc-body
+	&__desc-body {
+		margin-top: 1.5rem;
+		line-height: 120%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-size: 0.75rem;
+		@media (min-width: $md5) {
+			font-size: 0.875rem;
+		}
+		@media (min-width: $md2) {
+			font-size: 1rem;
+		}
+		& p {
+			&:not(:first-child) {
+				margin-top: 1.25rem;
+			}
+		}
+		& ul {
+			list-style: disc;
+			padding-left: 1em;
+			text-align: left;
+			& li {
+				&::marker {
+					font-size: 0.5em;
+				}
+			}
+		}
+	}
+	&__desc-btn {
+		margin-top: 1.44rem;
+	}
 }
 
 .banner {

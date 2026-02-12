@@ -443,6 +443,36 @@ $(function () {
         });
     }
 
+    if ($('.heading__slider').length > 0) {
+        $('.heading__slider').each(function (index, sliderWrapper) {
+
+            let pagination = $(sliderWrapper).find('.heading__slider-pagination')[0];
+            let slider = $(sliderWrapper)[0];
+
+            console.log(slider);
+
+
+
+            new Swiper(slider, {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                speed: 800,
+                watchOverflow: true,
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    stopOnLastSlide: false,
+                    disableOnInteraction: false
+                },
+                pagination: {
+                    el: pagination,
+                    clickable: true
+                },
+
+            })
+        });
+    }
+
 
 
 
@@ -995,11 +1025,12 @@ $(function () {
 
     function initHeroHomepageAnimation() {
         const hero = document.querySelector('.hero');
+        if (!hero) return;
+
         const mask = hero.querySelector('.hero__banner-mask');
+
         const content = hero.querySelector('.container');
         const nextSection = hero.nextElementSibling;
-
-        if (!hero || !mask) return;
 
         let mm = gsap.matchMedia();
 

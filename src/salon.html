@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Asia Beauty SPA | Апартаменты'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": "4"
+            })
+            <main class="page">
+                <section class="heading">
+                    <div class="container">
+                        <nav aria-label="Хлебные крошки" class="breadcrumbs">
+                            <ul class="breadcrumbs__items">
+                                <li class="breadcrumbs__item">
+                                    <a href="index.html" class="breadcrumbs__link">Главная</a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <a href="salons.html" class="breadcrumbs__link">Салоны</a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <span class="breadcrumbs__link active">Салон сити</span>
+                                </li>
+                            </ul>
+                        </nav>
+                        <h1 class="heading__title title text-center">
+                            spa-салон москва-сити
+                        </h1>
+                        <div class="heading__slider swiper">
+                            <div class="swiper-wrapper">
+                                <div class="heading__image swiper-slide">
+                                    <img src="@img/salons/city.jpg" class="cover-image" alt="Фото салона">
+                                </div>
+                                <div class="heading__image swiper-slide">
+                                    <img src="@img/salons/city.jpg" class="cover-image" alt="Фото салона">
+                                </div>
+                                <div class="heading__image swiper-slide">
+                                    <img src="@img/salons/city.jpg" class="cover-image" alt="Фото салона">
+                                </div>
+                                <div class="heading__image swiper-slide">
+                                    <img src="@img/salons/city.jpg" class="cover-image" alt="Фото салона">
+                                </div>
+                                <div class="heading__image swiper-slide">
+                                    <img src="@img/salons/city.jpg" class="cover-image" alt="Фото салона">
+                                </div>
+                            </div>
+                            <div class="heading__slider-pagination swiper-pagination"></div>
+                        </div>
+                        <div class="heading__desc">
+                            <div class="heading__desc-caption">
+                                Отель Novotel
+                            </div>
+                            <div class="heading__desc-body">
+                                <p>Это spa-пространство в азиатском стиле. Интерьер создаёт величественную обстановку: его дополняют увесистые детали, тяжелая мебель, элементы из дерева. Полумрак в spa-пространстве — обеспечивает комфорт и приватную атмосферу.</p>
+                                <p>В зоне ресепшн расположены длинные ряды витрин — в них брендовая уходовая косметика и парфюмерия, которую удобно приобрести на подарок — до или после spa-процедур.</p>
+                                <p>
+                                    В spa-пространстве расположены три комнаты vip-апартаментов — с сауной и джакузи. Мужской и женский акватермальные комплексы с баней / хаммамом. Просторная lounge-зона с баром.  <br> Здесь можете насладиться индивидуальным парением и spa-услугами premium класса. Посетить более 50 видов массажа. Получить удовольствие от spa-процедур по уходу за лицом и телом. Сходить на женский / мужской spa-маникюр и spa-педикюр. Провести время в уединении / с близким человеком / с компанией.
+                                </p>
+                            </div>
+                            <a href="" class="heading__desc-btn btn btn-primary btn-lg">Написать менеджеру</a>
+                        </div>
+                    </div>
+                </section>
+                <div id="map" class="contacts__map">
+                    <img src="@img/map.png" class="cover-image" alt="Фото">
+                </div>
+                <section class="more-services">
+                    <div class="container container-lg">
+                        <h2 class="more-services__title title">апартаменты <br> в сити</h2>
+                        <ul class="more-services__list">
+                            <li class="more-services__item">
+                                <a href="place.html" class="more-services__image">
+                                    <img src="@img/apartaments/tan-chao.jpg" class="cover-image" alt="Фото аппартаметов">
+                                </a>
+                                <div class="more-services__info">
+                                    <a href="place.html" class="more-services__name text-uppercase text-medium">Апартаменты тан чао</a>
+                                    <ul class="more-services__stats">
+                                        <li class="more-services__stat">
+                                            <div class="more-services__stat-icon">
+                                                <img src="@img/icons/people.svg" alt="Иконка">
+                                            </div>
+                                            <div class="more-services__stat-value">4 чел</div>
+                                        </li>
+                                        <li class="more-services__stat">
+                                            <div class="more-services__stat-icon">
+                                                <img src="@img/icons/square.svg" alt="Иконка">
+                                            </div>
+                                            <div class="more-services__stat-value">30 кв.м</div>
+                                        </li>
+                                        <li class="more-services__stat">
+                                            <div class="more-services__stat-icon">
+                                                <img src="@img/icons/coctail.svg" alt="Иконка">
+                                            </div>
+                                            <div class="more-services__stat-value">Бар, кухня</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p class="more-services__desc">Уютные апартаменты спа-салона оформлены в расслабляющем стиле с современными удобствами, создавая идеальную атмосферу для отдыха и восстановления.</p>
+                                <div class="more-services__actions">
+                                    <a href="place.html" class="more-services__action btn btn-primary btn-lg">Подробнее</a>
+                                    <a href="" class="more-services__whatsapp icon-whatsapp-outline"></a>
+                                </div>
+                            </li>
+                            <li class="more-services__item">
+                                <a href="place.html" class="more-services__image">
+                                    <img src="@img/apartaments/tan-chao-2.jpg" class="cover-image" alt="Фото аппартаметов">
+                                </a>
+                                <div class="more-services__info">
+                                    <a href="place.html" class="more-services__name text-uppercase text-medium">Апартаменты тан чао</a>
+                                    <ul class="more-services__stats">
+                                        <li class="more-services__stat">
+                                            <div class="more-services__stat-icon">
+                                                <img src="@img/icons/people.svg" alt="Иконка">
+                                            </div>
+                                            <div class="more-services__stat-value">4 чел</div>
+                                        </li>
+                                        <li class="more-services__stat">
+                                            <div class="more-services__stat-icon">
+                                                <img src="@img/icons/square.svg" alt="Иконка">
+                                            </div>
+                                            <div class="more-services__stat-value">30 кв.м</div>
+                                        </li>
+                                        <li class="more-services__stat">
+                                            <div class="more-services__stat-icon">
+                                                <img src="@img/icons/coctail.svg" alt="Иконка">
+                                            </div>
+                                            <div class="more-services__stat-value">Бар, кухня</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p class="more-services__desc">Уютные апартаменты спа-салона оформлены в расслабляющем стиле с современными удобствами, создавая идеальную атмосферу для отдыха и восстановления.</p>
+                                <div class="more-services__actions">
+                                    <a href="place.html" class="more-services__action btn btn-primary btn-lg">Подробнее</a>
+                                    <a href="" class="more-services__whatsapp icon-whatsapp-outline"></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                @@include('./html/_recommendations.html')
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+
+        @@include('html/_js.html', {})
+    </body>
+</html>
