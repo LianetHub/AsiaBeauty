@@ -20,73 +20,80 @@
                     <video muted loop playsinline autoplay="true" preload="metadata" poster="@img/hero-video-poster.jpg" class="hero__video">
                         <source src="./files/hero-video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
                     </video>
-                </section>
-                <section class="description" data-animate="section">
-                    <div class="container">
-                        <div class="description__header section-header">
-                            <div class="section-header__caption caption" data-animate="text">О пространстве</div>
-                            <h2 class="section-header__title title" data-animate="title">
-                                <span>Отдых в spa-</span>
-                                <span>пространстве Asia</span>
-                                <span>Beauty Spa</span>
-                            </h2>
-                        </div>
-                        <div class="description__text">
-                            <p data-animate="text">
-                                Это одно из немногих spa-пространств в Москве, где можно полноценно отдохнуть. Каждый спа-салон AsiaBeautySpa – это роскошное спа-путешествие, доступное в лучших локациях Москвы, где клиенты могут попробовать эксклюзивные спа-процедуры по уходу за собой.
-                            </p>
-                            <p data-animate="text">
-                                Наши мастера – это коренные жители Бали, Таиланда и Китая, закончившие международные школы массажа, с профессиональным стажем не менее 7 лет.
-                            </p>
-                        </div>
-                        <div class="description__services services__slider swiper">
-                            <ul class="swiper-wrapper">
-                                @@loop('./html/templates/_service.html', './html/json/services.json')
-                            </ul>
+                    <div class="hero__banner">
+                        <div class="hero__banner-mask">
+                            <img src="@img/promo-animation.jpg" class="cover-image" alt="Вид с 20 этажа">
                         </div>
                     </div>
                 </section>
-                <section class="certs">
-                    <div class="container">
-                        <div class="section-header" data-animate="section">
-                            <div class="section-header__caption caption" data-animate="text">Сертификаты</div>
-                            <h2 class="section-header__title title" data-animate="title">
-                                сертификаты <br> Asia Beauty Spa
-                            </h2>
+                <div class="home-about">
+                    <section class="description" data-animate="section">
+                        <div class="container">
+                            <div class="description__header section-header">
+                                <div class="section-header__caption caption" data-animate="text">О пространстве</div>
+                                <h2 class="section-header__title title" data-animate="title">
+                                    <span>Отдых в spa-</span>
+                                    <span>пространстве Asia</span>
+                                    <span>Beauty Spa</span>
+                                </h2>
+                            </div>
+                            <div class="description__text">
+                                <p data-animate="text">
+                                    Это одно из немногих spa-пространств в Москве, где можно полноценно отдохнуть. Каждый спа-салон AsiaBeautySpa – это роскошное спа-путешествие, доступное в лучших локациях Москвы, где клиенты могут попробовать эксклюзивные спа-процедуры по уходу за собой.
+                                </p>
+                                <p data-animate="text">
+                                    Наши мастера – это коренные жители Бали, Таиланда и Китая, закончившие международные школы массажа, с профессиональным стажем не менее 7 лет.
+                                </p>
+                            </div>
+                            <div class="description__services services__slider swiper">
+                                <ul class="swiper-wrapper">
+                                    @@loop('./html/templates/_service.html', './html/json/services.json')
+                                </ul>
+                            </div>
                         </div>
-                        @@include('./html/_certs.html')
-                        <div class="certs__info certs__info--small">
-                            <div class="certs__info-caption small">Выберете дизайн сертификата:</div>
-                            <div class="certs__info-body">
-                                <div class="certs__info-cards">
-                                    <div class="certs__card certs__card--small">
-                                        <img src="@img/certs/02.jpg" class="cover-image" alt="Фото сертификата">
-                                        <span class="certs__card-title text-uppercase text-medium">ПОДАРОЧНЫЙ СЕРТИФИКАТ</span>
+                    </section>
+                    <section class="certs">
+                        <div class="container">
+                            <div class="section-header" data-animate="section">
+                                <div class="section-header__caption caption" data-animate="text">Сертификаты</div>
+                                <h2 class="section-header__title title" data-animate="title">
+                                    сертификаты <br> Asia Beauty Spa
+                                </h2>
+                            </div>
+                            @@include('./html/_certs.html')
+                            <div class="certs__info certs__info--small">
+                                <div class="certs__info-caption small">Выберете дизайн сертификата:</div>
+                                <div class="certs__info-body">
+                                    <div class="certs__info-cards">
+                                        <div class="certs__card certs__card--small">
+                                            <img src="@img/certs/02.jpg" class="cover-image" alt="Фото сертификата">
+                                            <span class="certs__card-title text-uppercase text-medium">ПОДАРОЧНЫЙ СЕРТИФИКАТ</span>
+                                        </div>
+                                        <div class="certs__card certs__card--small">
+                                            <img src="@img/certs/03.jpg" class="cover-image" alt="Фото сертификата">
+                                            <span class="certs__card-title text-uppercase text-medium">ПОДАРОЧНЫЙ СЕРТИФИКАТ</span>
+                                        </div>
+                                        <div class="certs__card certs__card--small">
+                                            <img src="@img/certs/04.jpg" class="cover-image" alt="Фото сертификата">
+                                            <span class="certs__card-title text-uppercase text-medium">ПОДАРОЧНЫЙ СЕРТИФИКАТ</span>
+                                        </div>
+                                        <div class="certs__card certs__card--small">
+                                            <img src="@img/certs/05.jpg" class="cover-image" alt="Фото сертификата">
+                                            <span class="certs__card-title text-uppercase text-medium">ПОДАРОЧНЫЙ СЕРТИФИКАТ</span>
+                                        </div>
                                     </div>
-                                    <div class="certs__card certs__card--small">
-                                        <img src="@img/certs/03.jpg" class="cover-image" alt="Фото сертификата">
-                                        <span class="certs__card-title text-uppercase text-medium">ПОДАРОЧНЫЙ СЕРТИФИКАТ</span>
+                                    <div class="certs__info-desc certs__info-desc--large">
+                                        <p>Вы можете приобрести сертификат на нашем сайте или в нашем салоне. В каталоге есть множество программ, включая массажи, уход за лицом и телом, а также расслабляющие спа-процедуры</p>
+                                        <p class="certs__info-links">
+                                            <a href="">Условия использования</a>
+                                            <a href="">Регламент использования</a>
+                                        </p>
                                     </div>
-                                    <div class="certs__card certs__card--small">
-                                        <img src="@img/certs/04.jpg" class="cover-image" alt="Фото сертификата">
-                                        <span class="certs__card-title text-uppercase text-medium">ПОДАРОЧНЫЙ СЕРТИФИКАТ</span>
-                                    </div>
-                                    <div class="certs__card certs__card--small">
-                                        <img src="@img/certs/05.jpg" class="cover-image" alt="Фото сертификата">
-                                        <span class="certs__card-title text-uppercase text-medium">ПОДАРОЧНЫЙ СЕРТИФИКАТ</span>
-                                    </div>
-                                </div>
-                                <div class="certs__info-desc certs__info-desc--large">
-                                    <p>Вы можете приобрести сертификат на нашем сайте или в нашем салоне. В каталоге есть множество программ, включая массажи, уход за лицом и телом, а также расслабляющие спа-процедуры</p>
-                                    <p class="certs__info-links">
-                                        <a href="">Условия использования</a>
-                                        <a href="">Регламент использования</a>
-                                    </p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
+                </div>
                 <section class="locations">
                     <div class="container">
                         <div class="locations__header" data-animate="section">

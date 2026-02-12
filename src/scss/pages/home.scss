@@ -16,10 +16,32 @@
 		background-position: center 0;
 	}
 	@media (min-width: $md4) {
-		height: 50rem;
+		min-height: 50rem;
+		height: 100svh;
 	}
 	@media (min-width: $md2) {
-		height: 65.9375rem;
+		min-height: 65.9375rem;
+	}
+	// .hero__banner
+	&__banner {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+		z-index: 2;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&-mask {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			will-change: transform;
+			opacity: 0;
+			clip-path: polygon(0% 80%, 0% 30%, 50% 30%, 50% 0%, 100% 0%, 100% 100%, 25% 100%, 25% 80%);
+		}
 	}
 	// .hero__year
 	&__year {
@@ -75,6 +97,8 @@
 .description {
 	background: linear-gradient(180deg, rgba(180, 2, 0, 0.63) 0%, rgba(36, 1, 1, 0.63) 100%);
 	padding: 2rem 0 rem(20);
+	position: relative;
+	z-index: 2;
 	@media (min-width: $md6) {
 		padding: 2rem 1rem rem(20);
 	}

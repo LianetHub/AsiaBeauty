@@ -993,14 +993,76 @@ $(function () {
         });
     }
 
+    function initHeroHomepageAnimation() {
+        const hero = document.querySelector('.hero');
+        const mask = hero.querySelector('.hero__banner-mask');
+        const content = hero.querySelector('.container');
+        const nextSection = hero.nextElementSibling;
 
+        if (!hero || !mask) return;
+
+        let mm = gsap.matchMedia();
+
+        mm.add("(min-width: 991.98px)", () => {
+            gsap.set(mask, {
+                opacity: 1,
+                clipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%)"
+            });
+
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: hero,
+                    start: "top top",
+                    end: "+=150%",
+                    scrub: 1.25,
+                    pin: true,
+                    anticipatePin: 1
+                }
+            });
+
+            tl.to(content, {
+                opacity: 0,
+                y: -100,
+                duration: 2
+            }, 0);
+
+            tl.to(mask, {
+                clipPath: "polygon(0% 82%, 0% 32%, 50% 32%, 50% 0%, 100% 0%, 100% 100%, 26% 100%, 26% 82%)",
+                duration: 2,
+                ease: "power2.inOut"
+            }, 0);
+
+            tl.to(mask, {
+                clipPath: "polygon(0% 0%, 0% 0%, 100% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 100%)",
+                duration: 1.5,
+                ease: "expo.inOut"
+            }, 2);
+
+            if (nextSection) {
+                gsap.set(nextSection, { position: "relative", zIndex: 10 });
+
+                tl.to(nextSection, {
+                    marginTop: "-100vh",
+                    duration: 1.5,
+                    ease: "none"
+                }, 2.5);
+            }
+
+            tl.to({}, { duration: 0.5 });
+
+            return () => {
+                gsap.set([mask, content, nextSection], { clearProps: "all" });
+            };
+        });
+    }
 
 
     function initAllAnimations() {
         initGridAnimation();
         initSectionAnimation();
         initFooterReveal();
-        initQuadrantShiftAnimation()
+        initQuadrantShiftAnimation();
+        initHeroHomepageAnimation();
     }
 
     initAllAnimations()
