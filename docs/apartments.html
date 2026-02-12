@@ -8,12 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- plugins -->
-    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20260212203458" />
-    <link rel="stylesheet" href="css/libs/fancybox.css?_v=20260212203458" />
+    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20260212205733" />
+    <link rel="stylesheet" href="css/libs/fancybox.css?_v=20260212205733" />
     <!-- plugins -->
 
-    <link rel="stylesheet" href="css/reset.min.css?_v=20260212203458" />
-    <link rel="stylesheet" href="css/style.min.css?_v=20260212203458" />
+    <link rel="stylesheet" href="css/reset.min.css?_v=20260212205733" />
+    <link rel="stylesheet" href="css/style.min.css?_v=20260212205733" />
 
 </head>
 
@@ -36,7 +36,7 @@
                     <a href="https://api.whatsapp.com/send/?phone=%2B79998708231" class="header__callback btn btn-secondary">
                         Записаться в WhatsApp
                     </a>
-                    <a href="" aria-label="Корзина" class="header__cart icon-shopping-bag"></a>
+                    <a href="#cart" data-fancybox aria-label="Корзина" class="header__cart icon-shopping-bag"></a>
                 </div>
                 <nav class="header__menu" aria-label="Навигация">
                     <ul class="header__menu-list">
@@ -51,7 +51,7 @@
                 <div class="header__actions header__actions--right">
                     <a href="tel:+74950217659" class="header__phone">+7 495 021 76 59</a>
                     <a href="" class="header__buy btn btn-primary">Купить сертификат</a>
-                    <a href="" aria-label="Корзина" class="header__cart icon-shopping-bag"></a>
+                    <a href="#cart" data-fancybox aria-label="Корзина" class="header__cart icon-shopping-bag"></a>
                 </div>
             </div>
         </div>
@@ -595,18 +595,57 @@
         <a href="tel:+74950217659" class="socials-widget__link icon-phone">Позвонить</a>
     </div>
 </div>
+<div id="cart" class="cart">
+    <div class="cart__header">
+        <h2 class="cart__title">
+            Ваш заказ
+        </h2>
+        <button type="button" class="cart__clear">удалить всё</button>
+    </div>
+    <ul class="cart__list">
+        <li class="cart__item">
+            <div class="cart__item-main">
+                <div class="cart__item-thumb">
+                    <img src="img/products/02.jpg" class="cover-image" alt="thumb">
+                </div>
+                <div class="cart__item-name">
+                    Aroma massage/Арома <br> массаж со свечей
+                </div>
+                <div class="cart__item-counter">
+                    <button type="button" class="cart__item-btn icon-minus-circle"></button>
+                    <div class="cart__counter-value">
+                        1
+                    </div>
+                    <button type="button" class="cart__item-btn icon-plus-circle"></button>
+                </div>
+            </div>
+            <div class="cart__item-price">13 500 ₽</div>
+        </li>
+    </ul>
+    <div class="cart__footer">
+        <div class="cart__total">
+            <div class="cart__total-caption">
+                Итого:
+            </div>
+            <div class="cart__total-value">13 500 ₽</div>
+        </div>
+        <a href="" class="cart__btn btn btn-primary ">
+            Оформить заказ
+        </a>
+    </div>
+</div>
   </div>
 
   <!-- plugins -->
-<script src="js/libs/jquery-3.7.1.min.js?_v=20260212203458"></script>
-<script src="js/libs/swiper-bundle.min.js?_v=20260212203458"></script>
-<script src="js/libs/fancybox.min.js?_v=20260212203458"></script>
-<script src="js/libs/gsap.min.js?_v=20260212203458"></script>
-<script src="js/libs/ScrollTrigger.min.js?_v=20260212203458"></script>
+<script src="js/libs/jquery-3.7.1.min.js?_v=20260212205733"></script>
+<script src="js/libs/swiper-bundle.min.js?_v=20260212205733"></script>
+<script src="js/libs/fancybox.min.js?_v=20260212205733"></script>
+<script src="js/libs/gsap.min.js?_v=20260212205733"></script>
+<script src="js/libs/ScrollTrigger.min.js?_v=20260212205733"></script>
 
 <!-- plugins -->
 
-<script src="js/app.min.js?_v=20260212203458"></script>
+<script src="js/app.min.js?_v=20260212205733"></script>
 </body>
 
 </html>

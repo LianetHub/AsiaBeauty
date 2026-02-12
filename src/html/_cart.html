@@ -1,78 +1,39 @@
-<section class="cart">
-    <div class="cart__body">
-        <button type="button" aria-label="Закрыть корзину" class="cart__close icon-close"></button>
-        <div class="cart__header">
-            <h2 class="cart__title">
-                Ваш заказ
-            </h2>
-            <button type="button" class="cart__clear">удалить всё</button>
-        </div>
-        <ul class="cart__list">
-            <li class="cart__item">
-                <div class="cart__item-main">
-                    <div class="cart__item-thumb">
-                        <img src="@img/products/01.jpg" class="cover-image" alt="thumb">
-                    </div>
-                    <div class="cart__item-name">
-                        Relax massage
-                    </div>
-                    <div class="cart__item-counter">
-                        <button type="button" class="cart__item-btn icon-minus-circle"></button>
-                        <div class="cart__counter-value">
-                            1
-                        </div>
-                        <button type="button" class="cart__item-btn icon-add-circle"></button>
-                    </div>
-                </div>
-                <div class="cart__item-price">30 000 ₽</div>
-            </li>
-            <li class="cart__item">
-                <div class="cart__item-main">
-                    <div class="cart__item-thumb">
-                        <img src="@img/products/02.jpg" class="cover-image" alt="thumb">
-                    </div>
-                    <div class="cart__item-name">
-                        Традиционные практики [китайская/тайская/балийская]
-                    </div>
-                    <div class="cart__item-counter">
-                        <button type="button" class="cart__item-btn icon-minus-circle"></button>
-                        <div class="cart__counter-value">
-                            1
-                        </div>
-                        <button type="button" class="cart__item-btn icon-add-circle"></button>
-                    </div>
-                </div>
-                <div class="cart__item-price">15 000 ₽</div>
-            </li>
-            <li class="cart__item">
-                <div class="cart__item-main">
-                    <div class="cart__item-thumb">
-                        <img src="@img/products/03.jpg" class="cover-image" alt="thumb">
-                    </div>
-                    <div class="cart__item-name">
-                        President Suite
-                    </div>
-                    <div class="cart__item-counter">
-                        <button type="button" class="cart__item-btn icon-minus-circle"></button>
-                        <div class="cart__counter-value">
-                            12 ч.
-                        </div>
-                        <button type="button" class="cart__item-btn icon-add-circle"></button>
-                    </div>
-                </div>
-                <div class="cart__item-price">50 000 ₽</div>
-            </li>
-        </ul>
-        <div class="cart__footer">
-            <div class="cart__total">
-                <div class="cart__total-caption">
-                    Итого:
-                </div>
-                <div class="cart__total-value">95 000 ₽</div>
-            </div>
-            <a href="/order.html" class="cart__btn btn btn_brown">
-                оформить заказ
-            </a>
-        </div>
+<div id="cart" class="cart">
+    <div class="cart__header">
+        <h2 class="cart__title">
+            Ваш заказ
+        </h2>
+        <button type="button" class="cart__clear">удалить всё</button>
     </div>
-</section>
+    <ul class="cart__list">
+        <li class="cart__item">
+            <div class="cart__item-main">
+                <div class="cart__item-thumb">
+                    <img src="@img/products/02.jpg" class="cover-image" alt="thumb">
+                </div>
+                <div class="cart__item-name">
+                    Aroma massage/Арома <br> массаж со свечей
+                </div>
+                <div class="cart__item-counter">
+                    <button type="button" class="cart__item-btn icon-minus-circle"></button>
+                    <div class="cart__counter-value">
+                        1
+                    </div>
+                    <button type="button" class="cart__item-btn icon-plus-circle"></button>
+                </div>
+            </div>
+            <div class="cart__item-price">13 500 ₽</div>
+        </li>
+    </ul>
+    <div class="cart__footer">
+        <div class="cart__total">
+            <div class="cart__total-caption">
+                Итого:
+            </div>
+            <div class="cart__total-value">13 500 ₽</div>
+        </div>
+        <a href="" class="cart__btn btn btn-primary ">
+            Оформить заказ
+        </a>
+    </div>
+</div>
