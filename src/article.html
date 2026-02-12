@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Asia Beauty SPA | Апартаменты'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": "4"
+            })
+            <main class="page">
+                <section class="heading">
+                    <div class="container">
+                        <nav aria-label="Хлебные крошки" class="breadcrumbs">
+                            <ul class="breadcrumbs__items">
+                                <li class="breadcrumbs__item">
+                                    <a href="index.html" class="breadcrumbs__link">Главная</a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <a href="salons.html" class="breadcrumbs__link">Салоны</a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <span class="breadcrumbs__link active">Салон сити</span>
+                                </li>
+                            </ul>
+                        </nav>
+                        <h1 class="heading__title title text-center">
+                            Asia Beauty Spa предлагает услуги премиального спа-оператора
+                        </h1>
+                    </div>
+                </section>
+                <div class="article">
+                    <div class="container">
+                        <div class="article__body">
+                            <div class="article__image">
+                                <img src="@img/article.jpg" class="cover-image" alt="Постер статьи">
+                            </div>
+                            <div class="article__content">
+                                <div class="article__text typography-block">
+                                    <p>Сеть спа-комплексов премиум-класса Asia Beauty Spa развивает новое направление и предлагает услуги оформления спа-зоны в отелях под ключ. Атмосферное пространство для отдыха гостей создается на индивидуальных условиях, с готовой командой и системой управления.</p>
+                                    <p>Бренд Asia Beauty Spa давно зарекомендовал себя как знак качества и высококлассную сеть салонов премиум-класса, где можно полноценно отдохнуть и расслабиться. Каждый проект Asia Beauty Spa – это роскошное spa-путешествие, где клиенты могут попробовать эксклюзивные спа-процедуры по уходу за собой.</p>
+                                    <p>Пространства сети, доступные в лучших локациях столицы, теперь можно будет посетить в отелях и гостиничных комплексах. Гости Asia Beauty Spa смогут позаботиться о ментальном здоровье и посетить медитативные практики, провести ритуалы ухода за красотой лица и тела от мастеров из Таиланда, Бали и Китая, окончивших международные школы массажа, с профессиональным стажем не менее 7 лет.</p>
+                                </div>
+                                <a href="" class="btn btn-white btn-lg">Каталог услуг</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @@include('./html/_recommendations.html')
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+
+        @@include('html/_js.html', {})
+    </body>
+</html>
