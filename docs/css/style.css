@@ -4209,6 +4209,10 @@ body.lock-filter {
   max-width: 24rem;
 }
 
+.banner__title:first-child:last-child {
+  max-width: 100%;
+}
+
 .banner__description--mobile {
   margin-top: 2rem;
   text-align: center;
@@ -4219,6 +4223,7 @@ body.lock-filter {
 
 .banner__image img {
   min-height: 11.1875rem;
+  width: 100%;
 }
 
 .banner__video {

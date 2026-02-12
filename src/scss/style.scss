@@ -351,6 +351,9 @@ body {
 	// .banner__title
 	&__title {
 		max-width: 24rem;
+		&:first-child:last-child {
+			max-width: 100%;
+		}
 		@media (max-width: $md5) {
 			font-size: rem(14);
 		}
@@ -380,6 +383,7 @@ body {
 	&__image {
 		& img {
 			min-height: rem(179);
+			width: 100%;
 		}
 	}
 	// .banner__video

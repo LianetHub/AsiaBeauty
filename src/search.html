@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Asia Beauty SPA | Поиск'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": "4"
+            })
+            <main class="page">
+                <section class="heading">
+                    <div class="container">
+                        <nav aria-label="Хлебные крошки" class="breadcrumbs">
+                            <ul class="breadcrumbs__items">
+                                <li class="breadcrumbs__item">
+                                    <a href="index.html" class="breadcrumbs__link">Главная</a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <span class="breadcrumbs__link active">Поиск</span>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </section>
+                <section class="banner">
+                    <div class="banner__wrapper">
+                        <div class="banner__offer text-center">
+                            <h2 class="banner__title title">РЕЗУЛЬТАТЫ ПОИСКА</h2>
+                        </div>
+                        <div class="banner__image">
+                            <img src="@img/banner-home.png" alt="Баннер">
+                        </div>
+                    </div>
+                </section>
+                <div class="catalog">
+                    <div class="container container-lg">
+                        <div class="catalog__content">
+                            <div class="catalog__grid">
+                                @@loop('./html/templates/_product.html', './html/json/catalog.json')
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+
+        @@include('html/_js.html', {})
+    </body>
+</html>
