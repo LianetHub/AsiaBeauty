@@ -2530,6 +2530,56 @@ body.lock-filter {
   min-height: 1.75rem;
 }
 
+.news__item-desc {
+  margin-top: 0.6875rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  margin-bottom: 1.5rem;
+}
+
+.news__filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.news__title {
+  font-family: "Cormorant";
+  font-size: 3rem;
+  line-height: 110%;
+  letter-spacing: -0.06rem;
+}
+
+.news__title:not(:first-child) {
+  margin-top: 1.56rem;
+}
+
+.news__grid {
+  margin-top: 1.875rem;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  gap: 1.75rem;
+  row-gap: 3.38rem;
+}
+
+.news__more {
+  margin-top: 4.4375rem;
+  max-width: 12.3125rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-inline: auto;
+}
+
 .deposits {
   padding: 1.25rem 0rem;
 }

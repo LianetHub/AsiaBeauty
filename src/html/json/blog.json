@@ -1,0 +1,58 @@
+[
+    {
+        "image": "@img/news/05.jpg",
+        "time": "05.10",
+        "datetime": "2025-10-05",
+        "title": "Осеннее обновление кожи: ритуалы омоложения с экстрактами женьшеня и лотоса",
+        "desc": "Восточная культура - не просто дело тонкое. Она состоит из тонких нитей, сплетенных в Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, iste!"
+    },
+    {
+        "image": "@img/news/06.jpg",
+        "time": "14.10",
+        "datetime": "2025-10-14",
+        "title": "СПА-день для двух: идеальный способ восстановить гармонию вместе",
+        "desc": "Восточная культура - не просто дело тонкое. Она состоит из тонких нитей, сплетенных в Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, iste!"
+    },
+    {
+        "image": "@img/news/07.jpg",
+        "time": "22.10",
+        "datetime": "2025-10-22",
+        "title": "Детокс-программа в Asia Beauty Spa: перезагрузка тела и ума",
+        "desc": "Восточная культура - не просто дело тонкое. Она состоит из тонких нитей, сплетенных в Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, iste!"
+    },
+    {
+        "image": "@img/news/08.jpg",
+        "time": "02.11",
+        "datetime": "2025-11-02",
+        "title": "Встречаем зиму в гармонии: прогрев камнями и ароматерапия для глубокого расслабления",
+        "desc": "Восточная культура - не просто дело тонкое. Она состоит из тонких нитей, сплетенных в Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, iste!"
+    },
+    {
+        "image": "@img/news/01.jpg",
+        "time": "17.08",
+        "datetime": "2025-08-17",
+        "title": "Топ 3 must-have уходов в Asia Beauty Spa для поддержания красоты этой осенью",
+        "desc": "Восточная культура - не просто дело тонкое. Она состоит из тонких нитей, сплетенных в Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, iste!"
+    },
+    {
+        "image": "@img/news/02.jpg",
+        "time": "19.09",
+        "datetime": "2025-09-19",
+        "title": "Слим-массаж: 60 минут к фигуре мечты в Asia Beauty Spa",
+        "desc": "Восточная культура - не просто дело тонкое. Она состоит из тонких нитей, сплетенных в Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, iste!"
+    },
+    {
+        "image": "@img/news/03.jpg",
+        "time": "23.09",
+        "datetime": "2025-09-23",
+        "title": "Традиции чаепития в Asia Beauty Spa: согреваем душу и тело полезным китайским чаем",
+        "desc": "Восточная культура - не просто дело тонкое. Она состоит из тонких нитей, сплетенных в Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, iste!"
+    },
+    {
+        "image": "@img/news/04.jpg",
+        "time": "27.09",
+        "datetime": "2025-09-27",
+        "title": "Забудьте о хлопотах с выбором подарка: подарите блаженство с сертификатом Asia Beauty Spa!",
+        "desc": "Восточная культура - не просто дело тонкое. Она состоит из тонких нитей, сплетенных в Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, iste!"
+    }
+]
