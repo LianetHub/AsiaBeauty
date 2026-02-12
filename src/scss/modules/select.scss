@@ -2,6 +2,15 @@
 	position: relative;
 	width: 100%;
 	flex: 1 1 auto;
+	&--grey {
+		&.visible {
+			.dropdown__button {
+				&::before {
+					transform: rotate(-90deg);
+				}
+			}
+		}
+	}
 	&.visible {
 		.dropdown__body {
 			opacity: 1;
@@ -34,7 +43,24 @@
 		line-height: 145%;
 		min-height: 2.5rem;
 		height: 100%;
-
+		.dropdown--grey & {
+			border-radius: 0.3125rem;
+			padding: em(1.3, 1.25) em(0.87, 1.25);
+			background: rgba(217, 217, 217, 0.67);
+			color: #151515;
+			font-weight: 300;
+			line-height: 110%;
+			font-size: 1rem;
+			justify-content: space-between;
+			@media (min-width: $md4) {
+				font-size: 1.25rem;
+			}
+			&::before {
+				transform: rotate(90deg);
+				transition: transform 0.3s ease;
+				@extend %ic, .icon-next;
+			}
+		}
 		&.selected {
 			color: #232c32;
 		}
@@ -77,7 +103,9 @@
 		border-radius: 0.5rem;
 		border: rem(1) solid rgba($color: $grey, $alpha: 0.8);
 		background: $black;
-		box-shadow: 0 rem(12) 1rem rem(-4) rgba(16, 24, 40, 0.08), 0 rem(4) rem(6) rem(-2) rgba(16, 24, 40, 0.03);
+		box-shadow:
+			0 rem(12) 1rem rem(-4) rgba(16, 24, 40, 0.08),
+			0 rem(4) rem(6) rem(-2) rgba(16, 24, 40, 0.03);
 		transition: 0.2s ease;
 
 		opacity: 0;

@@ -426,6 +426,7 @@ $(function () {
             })
         });
     }
+
     if ($('.about__slider').length > 0) {
         $('.about__slider').each(function (index, slider) {
 
@@ -523,6 +524,7 @@ $(function () {
             this.$select = $(selectElement);
             this.placeholder = this.$select.data('placeholder');
             this.listCaption = this.$select.data('list-caption');
+            this.theme = this.$select.data('theme');
             this.defaultText = this.getDefaultText();
             this.selectName = this.$select.attr('name');
             this.$options = this.$select.find('option');
@@ -569,6 +571,10 @@ $(function () {
         `;
 
             this.$dropdown = $('<div>').addClass('dropdown');
+
+            if (this.theme === 'grey') {
+                this.$dropdown.addClass('dropdown--grey');
+            }
 
             const captionTemplate = this.listCaption ? `<div class="dropdown__caption">${this.listCaption}</div>` : '';
 
@@ -722,6 +728,19 @@ $(function () {
     });
 
 
+    // certs block price calc
+    $('.certs__block').each(function () {
+        const $block = $(this);
+        const $totalValue = $block.find('.certs__total-value');
+        const $inputs = $block.find('.certs__item-input');
+
+        $inputs.on('change', function () {
+            const $checkedInput = $block.find('.certs__item-input:checked');
+            const newValue = $checkedInput.closest('.certs__item').find('.certs__item-btn').text();
+
+            $totalValue.text(newValue);
+        });
+    });
 
 
 
