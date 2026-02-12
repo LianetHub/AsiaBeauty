@@ -945,9 +945,7 @@ $(function () {
     }
 
     function initQuadrantShiftAnimation() {
-
         const iconBlocks = gsap.utils.toArray('[data-animate="quadrant-shift"]');
-
         if (iconBlocks.length === 0) return;
 
         const positions = [
@@ -957,14 +955,21 @@ $(function () {
             { x: 0, y: 19 }
         ];
 
-        const phaseDuration = 0.5;
+        const positionsExtra = [
+            { x: 0, y: 0 },
+            { x: 20, y: 0 },
+            { x: 39, y: 0 },
+            { x: 20, y: 19 },
+            { x: 0, y: 19 }
+        ];
 
         iconBlocks.forEach(svgElement => {
             const squares = [
                 svgElement.querySelector('.q-1'),
                 svgElement.querySelector('.q-2'),
+                svgElement.querySelector('.q-3'),
                 svgElement.querySelector('.q-4'),
-                svgElement.querySelector('.q-3')
+                svgElement.querySelector('.q-5')
             ].filter(Boolean);
 
             if (squares.length === 0) return;
@@ -974,50 +979,37 @@ $(function () {
                 sq.setAttribute('y', '0');
             });
 
-            const totalSquares = squares.length;
+            const isExtra = squares.length === 5;
+            const currentPositions = isExtra ? positionsExtra : positions;
+            const totalPos = currentPositions.length;
 
-            const totalPositions = 4;
-
-            const startIndex = squares.map((_, i) => Math.floor(i * (totalPositions / totalSquares)));
+            const startIndex = squares.map((_, i) => i % totalPos);
 
             squares.forEach((sq, i) => {
                 gsap.set(sq, {
-                    x: positions[startIndex[i]].x,
-                    y: positions[startIndex[i]].y
+                    x: currentPositions[startIndex[i]].x,
+                    y: currentPositions[startIndex[i]].y
                 });
             });
 
             const tl = gsap.timeline({
                 repeat: -1,
                 repeatDelay: 0.4,
-                defaults: { duration: phaseDuration, ease: "power2.inOut" },
+                defaults: { duration: 0.5, ease: "power2.inOut" },
                 paused: true
             });
 
-            tl.to(squares, {
-                x: i => positions[(startIndex[i] + 1) % 4].x,
-                y: i => positions[(startIndex[i] + 1) % 4].y
-            });
-
-            tl.to(squares, {
-                x: i => positions[(startIndex[i] + 2) % 4].x,
-                y: i => positions[(startIndex[i] + 2) % 4].y
-            });
-
-            tl.to(squares, {
-                x: i => positions[(startIndex[i] + 3) % 4].x,
-                y: i => positions[(startIndex[i] + 3) % 4].y
-            });
-
-            tl.to(squares, {
-                x: i => positions[startIndex[i] % 4].x,
-                y: i => positions[startIndex[i] % 4].y
-            });
+            for (let step = 1; step <= totalPos; step++) {
+                tl.to(squares, {
+                    x: i => currentPositions[(startIndex[i] + step) % totalPos].x,
+                    y: i => currentPositions[(startIndex[i] + step) % totalPos].y
+                });
+            }
 
             ScrollTrigger.create({
                 trigger: svgElement,
                 start: "top 85%",
-                onEnter: () => tl.restart(true),
+                onEnter: () => tl.play(),
                 onLeaveBack: () => tl.pause(0)
             });
         });

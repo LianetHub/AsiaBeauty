@@ -161,6 +161,7 @@ body {
 @import "pages/apartaments";
 @import "pages/about";
 @import "pages/special";
+@import "pages/homevisit";
 // @import "pages/order";
 // @import "pages/info";
 // @import "pages/promotion";
@@ -279,6 +280,17 @@ body {
 			& li {
 				&::marker {
 					font-size: 0.5em;
+				}
+			}
+		}
+		& a {
+			font-size: 1.25em;
+			font-weight: 500;
+			line-height: 110%;
+			transition: color 0.3s ease;
+			@media (any-hover: hover) {
+				&:hover {
+					color: $red;
 				}
 			}
 		}
@@ -410,6 +422,13 @@ body {
 		@media (min-width: $md3) {
 			display: flex;
 			justify-content: space-between;
+			&--large {
+				flex-wrap: wrap;
+				justify-content: center;
+				.benefits__item {
+					flex: 0 0 calc(33.33% - rem(40));
+				}
+			}
 		}
 	}
 	// .benefits__item
