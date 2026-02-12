@@ -1574,13 +1574,15 @@ body.lock-filter {
   padding: 2.5rem 0;
 }
 
-.footer__top {
+.footer__top,
+.heading__contacts {
   display: -ms-grid;
   display: grid;
   row-gap: 1.25rem;
 }
 
-.footer__column {
+.footer__column,
+.heading__contacts-column {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1594,23 +1596,27 @@ body.lock-filter {
   text-align: center;
 }
 
-.footer__caption {
+.footer__caption,
+.heading__contacts-column-caption {
   font-size: 0.875rem;
 }
 
-.footer__column-body {
+.footer__column-body,
+.heading__contacts-column-body {
   line-height: 1.2;
   font-size: 0.875rem;
   margin-top: 0.5rem;
 }
 
-.footer__column-body a {
+.footer__column-body a,
+.heading__contacts-column-body a {
   -webkit-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 
-.footer__column-socials {
+.footer__column-socials,
+.heading__contacts-column-socials {
   margin-top: 0.75rem;
 }
 
@@ -2851,6 +2857,16 @@ body.lock-filter {
   margin-top: 1.5rem;
 }
 
+.yandex-map {
+  margin: 3.125rem 0 1.5625rem;
+  height: 30.0625rem;
+}
+
+[class*=ymaps-2-1-][class*=-ground-pane] {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
 .service {
   padding: 1.25rem 0 2.5rem;
 }
@@ -3892,6 +3908,11 @@ body.lock-filter {
   margin-top: 1.44rem;
 }
 
+.heading__contacts {
+  margin-top: 3.75rem;
+  padding-bottom: 3.75rem;
+}
+
 .banner__wrapper {
   position: relative;
 }
@@ -4312,22 +4333,26 @@ body.lock-filter {
     width: 6.875rem;
   }
 
-  .footer__top {
+  .footer__top,
+  .heading__contacts {
     row-gap: 2rem;
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .footer__caption {
+  .footer__caption,
+  .heading__contacts-column-caption {
     font-size: 1rem;
   }
 
-  .footer__column-body {
+  .footer__column-body,
+  .heading__contacts-column-body {
     margin-top: 0.75rem;
     font-size: 1rem;
   }
 
-  .footer__column-socials {
+  .footer__column-socials,
+  .heading__contacts-column-socials {
     margin-top: 1.5625rem;
   }
 
@@ -4777,12 +4802,14 @@ body.lock-filter {
     padding: 6.25rem 0;
   }
 
-  .footer__top {
+  .footer__top,
+  .heading__contacts {
     -ms-grid-columns: (1fr)[3];
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .footer__column-body {
+  .footer__column-body,
+  .heading__contacts-column-body {
     margin-top: 2.5rem;
   }
 
@@ -5020,6 +5047,10 @@ body.lock-filter {
     margin-top: 6.25rem;
   }
 
+  .yandex-map {
+    margin: 11.5625rem 0 3.125rem;
+  }
+
   .service {
     padding: 5rem 0 2.5rem;
   }
@@ -5175,6 +5206,11 @@ body.lock-filter {
             flex: 0 1 auto;
   }
 
+  .heading__contacts {
+    margin-top: 8.0625rem;
+    padding-bottom: 7.5rem;
+  }
+
   .places__location {
     padding: 1.56rem 0.94rem 3.56rem;
     gap: 2.75rem;
@@ -5312,7 +5348,8 @@ body.lock-filter {
     display: none;
   }
 
-  .footer__top {
+  .footer__top,
+  .heading__contacts {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -6161,7 +6198,8 @@ body.lock-filter {
     text-decoration: none;
   }
 
-  .footer__column-body a:hover {
+  .footer__column-body a:hover,
+  .heading__contacts-column-body a:hover {
     color: #720806;
   }
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title>Asia Beauty SPA | Страница услуги</title>
+    <title>Asia Beauty SPA | Контакты</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -40,7 +40,7 @@
                 </div>
                 <nav class="header__menu" aria-label="Навигация">
                     <ul class="header__menu-list">
-                        <li class="header__menu-item"><a href="about.html" class="header__menu-link">О бренде</a></li>
+                        <li class="header__menu-item"><a href="about.html" class="header__menu-link active">О бренде</a></li>
                         <li class="header__menu-item"><a href="services.html" class="header__menu-link">Меню услуг</a></li>
                         <li class="header__menu-item"><a href="certs.html" class="header__menu-link">Сертификаты</a></li>
                         <li class="header__menu-item"><a href="apartments.html" class="header__menu-link">Апартаменты</a></li>
@@ -93,144 +93,87 @@
     </div>
 </div>
     <main class="page">
-      <div class="heading">
-        <div class="container container-lg">
+      <section class="heading">
+        <div class="container">
           <nav aria-label="Хлебные крошки" class="breadcrumbs">
             <ul class="breadcrumbs__items">
               <li class="breadcrumbs__item">
                 <a href="index.html" class="breadcrumbs__link">Главная</a>
               </li>
               <li class="breadcrumbs__item">
-                <a href="services.html" class="breadcrumbs__link">Услуги</a>
-              </li>
-              <li class="breadcrumbs__item">
-                <span class="breadcrumbs__link active">Relax massage</span>
+                <span class="breadcrumbs__link active">Контакты</span>
               </li>
             </ul>
           </nav>
-        </div>
-      </div>
-      <section class="service">
-        <div class="container">
-          <div class="service__body" data-animate="section">
-            <div class="service__main text-center">
-              <h1 class="service__title title-sm" data-animate="title">
-                RELAX MASSAGE/ РЕЛАКС МАССАЖ
-              </h1>
-              <div class="service__info" data-animate="text">
-                <p class="service__desc">
-                  Релаксирующий массаж отлично подходит для мягкой проработки тела, снятия напряжения и восстановления общего тонуса организма. Идеальный вариант для тех, кто хочет полноценно расслабиться и отдохнуть от темпа большого города. Мягкое и бережное промятие мышц поможет чувствовать себя более энергичным и живым после процедуры. Регулярные сеансы релаксирующего массажа помогут повысить общий тонус организма, избежать спатичности мышц и настроиться на позитивный лад.
-                </p>
-                <div class="service__prices">
-                  <div class="product-card__prices-item">
-                    <div class="product-card__prices-btn active">60 min</div>
-                    <div class="product-card__prices-value">9 500 ₽</div>
-                  </div>
-                </div>
-                <div class="service__btns">
-                  <a href="" class="service__btn btn btn-primary btn-lg">Записаться</a>
-                  <a href="" class="service__btn btn btn-primary-outline btn-lg">Купить сертификат</a>
-                </div>
+          <h1 class="heading__title title text-center">СВЯЗАТЬСЯ С НАМИ</h1>
+          <div class="heading__contacts">
+            <div class="heading__contacts-column">
+              <div class="heading__contacts-column-caption">ТЕЛЕФОН</div>
+              <div class="heading__contacts-column-body">
+                <a href="tel:+74959999999">+7 (495) 999 99-99</a>
               </div>
             </div>
-            <div class="service__image" data-animate="photo">
-              <img src="img/massage.jpg" class="cover-image" alt="Фото услуги">
+            <div class="heading__contacts-column">
+              <div class="heading__contacts-column-caption">ПОЧТА</div>
+              <div class="heading__contacts-column-body">
+                <a href="mailto:info@ab-spa.ru">info@ab-spa.ru</a>
+              </div>
+            </div>
+            <div class="heading__contacts-column">
+              <div class="heading__contacts-column-caption">КЛИЕНТАМ</div>
+              <div class="heading__contacts-column-body">
+                <a href="">Условия посещения</a>
+              </div>
+            </div>
+            <div class="heading__contacts-column">
+              <div class="heading__contacts-column-caption">СОЦ.СЕТИ</div>
+              <div class="heading__contacts-column-socials socials">
+                <a href="" class="socials__link icon-telegram"></a>
+                <a href="" class="socials__link icon-instagram"></a>
+                <a href="" class="socials__link icon-facebook"></a>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="recommendations">
-    <div class="recommendations__header">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-header__title title">
-                    ВАМ МОЖЕТ ПОНРАВИТЬСЯ
-                </h2>
-            </div>
+
+      <section class="places">
+    <div class="container">
+        <div class="places__header">
+            <h2 class="places__caption caption">локации:</h2>
+            <a href="" class="places__more icon-next">Все филиалы</a>
         </div>
-    </div>
-    <div class="recommendations__slider swiper">
-        <div class="swiper-wrapper">
-            <div class="recommendations__card swiper-slide">
-                <div class="recommendations__card-image">
-                    <img src="img/recommendations/01.jpg" class="cover-image" alt="Фото услуги">
+        <div class="places__slider swiper">
+            <div class="swiper-wrapper">
+                <div class="places__location swiper-slide icon-location">
+                    <div class="places__location-content">
+                        <div class="places__location-name">Asia Beauty Spa Смоленская</div>
+                        <address class="places__location-address">ул. Смоленская , 8</address>
+                        <div class="places__location-metro">м. Смоленская</div>
+                        <a href="tel:+74951234567" class="places__location-phone">+7 (495) 123-45-67</a>
+                    </div>
                 </div>
-                <div class="recommendations__card-info">
-                    <div class="recommendations__card-name text-medium">Relax massage / Релакс массаж</div>
-                    <a href="" class="recommendations__card-btn btn btn-white btn-lg">Подробнее</a>
+                <div class="places__location swiper-slide icon-location">
+                    <div class="places__location-content">
+                        <div class="places__location-name">Asia Beauty Spa Киевская</div>
+                        <address class="places__location-address">Площадь Евразии, 2</address>
+                        <div class="places__location-metro">м. Киевская</div>
+                        <a href="tel:+74951234567" class="places__location-phone">+7 (495) 123-45-67</a>
+                    </div>
                 </div>
-            </div>
-            <div class="recommendations__card swiper-slide">
-                <div class="recommendations__card-image">
-                    <img src="img/recommendations/02.jpg" class="cover-image" alt="Фото услуги">
-                </div>
-                <div class="recommendations__card-info">
-                    <div class="recommendations__card-name text-medium">Relax massage / Релакс массаж</div>
-                    <a href="" class="recommendations__card-btn btn btn-white btn-lg">Подробнее</a>
-                </div>
-            </div>
-            <div class="recommendations__card swiper-slide">
-                <div class="recommendations__card-image">
-                    <img src="img/recommendations/03.jpg" class="cover-image" alt="Фото услуги">
-                </div>
-                <div class="recommendations__card-info">
-                    <div class="recommendations__card-name text-medium">Relax massage / Релакс массаж</div>
-                    <a href="" class="recommendations__card-btn btn btn-white btn-lg">Подробнее</a>
-                </div>
-            </div>
-            <div class="recommendations__card swiper-slide">
-                <div class="recommendations__card-image">
-                    <img src="img/recommendations/04.jpg" class="cover-image" alt="Фото услуги">
-                </div>
-                <div class="recommendations__card-info">
-                    <div class="recommendations__card-name text-medium">Relax massage / Релакс массаж</div>
-                    <a href="" class="recommendations__card-btn btn btn-white btn-lg">Подробнее</a>
-                </div>
-            </div>
-            <div class="recommendations__card swiper-slide">
-                <div class="recommendations__card-image">
-                    <img src="img/recommendations/03.jpg" class="cover-image" alt="Фото услуги">
-                </div>
-                <div class="recommendations__card-info">
-                    <div class="recommendations__card-name text-medium">Relax massage / Релакс массаж</div>
-                    <a href="" class="recommendations__card-btn btn btn-white btn-lg">Подробнее</a>
-                </div>
-            </div>
-            <div class="recommendations__card swiper-slide">
-                <div class="recommendations__card-image">
-                    <img src="img/recommendations/04.jpg" class="cover-image" alt="Фото услуги">
-                </div>
-                <div class="recommendations__card-info">
-                    <div class="recommendations__card-name text-medium">Relax massage / Релакс массаж</div>
-                    <a href="" class="recommendations__card-btn btn btn-white btn-lg">Подробнее</a>
-                </div>
-            </div>
-            <div class="recommendations__card swiper-slide">
-                <div class="recommendations__card-image">
-                    <img src="img/recommendations/01.jpg" class="cover-image" alt="Фото услуги">
-                </div>
-                <div class="recommendations__card-info">
-                    <div class="recommendations__card-name text-medium">Relax massage / Релакс массаж</div>
-                    <a href="" class="recommendations__card-btn btn btn-white btn-lg">Подробнее</a>
-                </div>
-            </div>
-            <div class="recommendations__card swiper-slide">
-                <div class="recommendations__card-image">
-                    <img src="img/recommendations/02.jpg" class="cover-image" alt="Фото услуги">
-                </div>
-                <div class="recommendations__card-info">
-                    <div class="recommendations__card-name text-medium">Relax massage / Релакс массаж</div>
-                    <a href="" class="recommendations__card-btn btn btn-white btn-lg">Подробнее</a>
+                <div class="places__location swiper-slide icon-location">
+                    <div class="places__location-content">
+                        <div class="places__location-name">Asia Beauty Spa Сити</div>
+                        <address class="places__location-address">Пресненская наб, 4</address>
+                        <div class="places__location-metro">м. Москва-Сити</div>
+                        <a href="tel:+74951234567" class="places__location-phone">+7 (495) 123-45-67</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-      <div class="video">
-        <video class="video__block" muted loop playsinline autoplay="true" preload="metadata" poster="img/service-video-poster.jpg">
-          <source src="./files/service-video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-        </video>
-      </div>
+      <div id="map" class="yandex-map"></div>
     </main>
     <div class="footer-reveal-wrap">
     <div class="footer-reveal-mask">
@@ -326,6 +269,91 @@
 <!-- plugins -->
 
 <script src="js/app.min.js?_v=20260212185657"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20260212185657"></script>
+  <script>
+            ymaps.ready(function () {
+                var myMap = new ymaps.Map('map', {
+                    center: [55.746611, 37.580616],
+                    zoom: 12
+                }, {
+                    searchControlProvider: 'yandex#search'
+                }),
+
+                    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                        '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+                    ),
+
+                    asia_beauty_spa_mayakovka = new ymaps.Placemark([55.771936, 37.599546], {
+                        hintContent: 'Asia Beauty Spa в Оружейном переулке',
+                        balloonContent: '<h4>Asia Beauty Spa в Оружейном переулке</h4>Россия, г. Москва, Оружейный пер., д.13/1 <br/>м. Маяковская<br>тел: <a href="tel:74950238881"> +7 (495) 023-88-81</a><br/><span class="pe-7s-car float-left taxi-icon"></span> <a target="_blank" href="https://3.redirect.appmetrica.yandex.com/route?end-lat=55.771773&amp;end-lon=37.599543&amp;ref=ab-spa.ru&amp;appmetrica_tracking_id=1178268795219780156">Вызвать такси до Asia Beauty Spa</a>'
+                    }, {
+                        iconLayout: 'default#image',
+                        iconImageHref: 'img/marker.svg',
+                        iconImageSize: [42, 47],
+                        iconImageOffset: [-5, -38]
+                    }),
+
+                    asia_beauty_spa_polynka = new ymaps.Placemark([55.732681, 37.622047], {
+                        hintContent: 'Asia Beauty Spa в Погорельском переулке',
+                        balloonContent: '<h4>Asia Beauty Spa в Погорельском переулке</h4>Россия, Москва, Погорельский переулок, 6<br/>м. Полянка<br>тел: <a href="tel:74950238884">+7 (495) 023-88-84</a> <br><span class="pe-7s-car float-left taxi-icon"></span>  <a target="_blank" href="https://3.redirect.appmetrica.yandex.com/route?end-lat=55.732839&amp;end-lon=37.622306&amp;ref=ab-spa.ru&amp;appmetrica_tracking_id=1178268795219780156"> Вызвать такси до Asia Beauty Spa</a>'
+                    }, {
+                        iconLayout: 'default#image',
+                        iconImageHref: 'img/marker.svg',
+                        iconImageSize: [42, 47],
+                        iconImageOffset: [-5, -38]
+                    }),
+
+                    asia_beauty_spa_azimut = new ymaps.Placemark([55.746536, 37.580681], {
+                        hintContent: 'Asia Beauty Spa гостиница AZIMUT',
+                        balloonContent: '<h4>Asia Beauty Spa гостиница AZIMUT</h4>Россия, Москва, Смоленская улица, 8<br/>м.Смоленская<br>тел: <a href="tel:74950238886"> +7(495) 023-88-86</a> <br><span class="pe-7s-car float-left taxi-icon"></span>  <a target="_blank" href="https://3.redirect.appmetrica.yandex.com/route?end-lat=55.746233&amp;end-lon=37.5804&amp;ref=ab-spa.ru&amp;appmetrica_tracking_id=1178268795219780156">Вызвать такси до Asia Beauty Spa</a>'
+                    }, {
+                        iconLayout: 'default#image',
+                        iconImageHref: 'img/marker.svg',
+                        iconImageSize: [42, 47],
+                        iconImageOffset: [-5, -38]
+                    }),
+
+                    asia_beauty_spa_michur = new ymaps.Placemark([55.701500, 37.504062], {
+                        hintContent: 'Asia Beauty Spa на Мичуринском проспекте',
+                        balloonContent: '<h4>Asia Beauty Spa на Мичуринском проспекте</h4>г. Россия, Москва, Мичуринский проспект, 22, корпус 1<br/>м. Раменки<br>тел: <a href="tel:74950238885"> +7 (495) 023-88-85</a> <br><span class="pe-7s-car float-left taxi-icon"></span> <a target="_blank" href="https://3.redirect.appmetrica.yandex.com/route?end-lat=55.701298&amp;end-lon=37.503837&amp;ref=ab-spa.ru&amp;appmetrica_tracking_id=1178268795219780156">Вызвать такси до Asia Beauty Spa</a>'
+                    }, {
+                        iconLayout: 'default#image',
+                        iconImageHref: 'img/marker.svg',
+                        iconImageSize: [42, 47],
+                        iconImageOffset: [-5, -38]
+                    }),
+
+                    asia_beauty_spa_europ = new ymaps.Placemark([55.741472, 37.565995], {
+                        hintContent: 'Asia Beauty Spa отель Radisson Slavyanskaya',
+                        balloonContent: '<h4>Asia Beauty Spa отель Radisson Slavyanskaya</h4>Россия, Москва, площадь Европы, 2<br/>м.Киевская<br>тел: <a href="tel:74950238882"> +7 (495) 023-88-82</a><br> <span class="pe-7s-car float-left taxi-icon"></span>  <a target="_blank" href="https://3.redirect.appmetrica.yandex.com/route?end-lat=55.741804&amp;end-lon=37.567779&amp;ref=ab-spa.ru&amp;appmetrica_tracking_id=1178268795219780156">Вызвать такси до Asia Beauty Spa</a>'
+                    }, {
+                        iconLayout: 'default#image',
+                        iconImageHref: 'img/marker.svg',
+                        iconImageSize: [42, 47],
+                        iconImageOffset: [-5, -38]
+                    }),
+
+                    asia_beauty_spa_presnja = new ymaps.Placemark([55.750088, 37.541413], {
+                        hintContent: 'Asia Beauty Spa Гостиница NOVOTEL',
+                        balloonContent: '<h4>Asia Beauty Spa Гостиница NOVOTEL</h4>Россия, Москва, Пресненская набережная, 2<br/>м. Выставочная<br>тел: <a href="tel:74950238883"> +7 (495) 023-88-83</a><br> <span class="pe-7s-car float-left taxi-icon"></span>  <a target="_blank" href="https://3.redirect.appmetrica.yandex.com/route?end-lat=55.749299&amp;end-lon=37.539644&amp;ref=ab-spa.ru&amp;appmetrica_tracking_id=1178268795219780156">Вызвать такси до Asia Beauty Spa</a>'
+                    }, {
+                        iconLayout: 'default#imageWithContent',
+                        iconImageHref: 'img/marker.svg',
+                        iconImageSize: [42, 47],
+                        iconImageOffset: [-24, -24],
+                        iconContentOffset: [15, 15],
+                        iconContentLayout: MyIconContentLayout
+                    });
+
+                myMap.geoObjects
+                    .add(asia_beauty_spa_mayakovka)
+                    .add(asia_beauty_spa_michur)
+                    .add(asia_beauty_spa_europ)
+                    .add(asia_beauty_spa_polynka)
+                    .add(asia_beauty_spa_azimut)
+                    .add(asia_beauty_spa_presnja);
+            });
+        </script>
 </body>
 
 </html>

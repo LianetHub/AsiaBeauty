@@ -23,8 +23,20 @@
 	// .contacts__map
 	&__map {
 		margin-top: rem(24);
+
 		@media (min-width: $md4) {
 			margin-top: rem(100);
 		}
 	}
+}
+
+.yandex-map {
+	margin: rem(50) 0 rem(25);
+	height: 30.0625rem;
+	@media (min-width: $md4) {
+		margin: rem(185) 0 rem(50);
+	}
+}
+[class*="ymaps-2-1-"][class*="-ground-pane"] {
+	filter: grayscale(1);
 }

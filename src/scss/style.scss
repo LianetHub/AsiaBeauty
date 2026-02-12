@@ -286,6 +286,32 @@ body {
 	&__desc-btn {
 		margin-top: 1.44rem;
 	}
+	// .heading__contacts
+	&__contacts {
+		margin-top: rem(60);
+		padding-bottom: rem(60);
+		@media (min-width: $md4) {
+			margin-top: rem(129);
+			padding-bottom: rem(120);
+		}
+		@extend .footer__top;
+	}
+	// .heading__contacts-column
+	&__contacts-column {
+		@extend .footer__column;
+	}
+	// .heading__contacts-column-caption
+	&__contacts-column-caption {
+		@extend .footer__caption;
+	}
+	// .heading__contacts-column-body
+	&__contacts-column-body {
+		@extend .footer__column-body;
+	}
+	// .heading__contacts-column-socials
+	&__contacts-column-socials {
+		@extend .footer__column-socials;
+	}
 }
 
 .banner {
