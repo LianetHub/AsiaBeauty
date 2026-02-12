@@ -75,7 +75,9 @@
 		left: 0;
 		width: 100%;
 		z-index: $ui-index-6;
-		transition: padding 0.3s ease, background-color 0.3s ease;
+		transition:
+			padding 0.3s ease,
+			background-color 0.3s ease;
 		padding-top: rem(34);
 		@media (min-width: $md3) {
 			padding-top: 2.75rem;
@@ -157,7 +159,9 @@
 			line-height: 120%;
 			padding: 0.9375rem 1rem;
 			display: inline-block;
-			transition: color 0.3s ease, background-color 0.3s ease;
+			transition:
+				color 0.3s ease,
+				background-color 0.3s ease;
 			@media (any-hover: hover) {
 				&:hover {
 					background: #151515;
@@ -178,19 +182,44 @@
 		display: flex;
 		align-items: center;
 		gap: 1rem;
-		&--left {
+
+		&.header__actions--left {
 			order: 1;
 			flex-shrink: 0;
+			.header__cart {
+				order: -1;
+				@media (min-width: $md3) {
+					order: 0;
+				}
+				@media (min-width: $md2) {
+					display: none;
+				}
+			}
 			@media (min-width: $md3) {
 				order: 0;
 			}
 		}
-		&--right {
+		&.header__actions--right {
+			@media (min-width: $md3) {
+				flex-wrap: wrap;
+				justify-content: center;
+				width: min-content;
+				row-gap: 0.25rem;
+			}
+			@media (min-width: $md2) {
+				width: auto;
+			}
 			@media (max-width: $md5) {
 				display: none;
 			}
+			.header__cart {
+				@media (max-width: $md2) {
+					display: none;
+				}
+			}
 		}
 	}
+
 	// .header__actions-navigation
 	&__actions-navigation {
 		@media (max-width: $md3) {
@@ -222,6 +251,7 @@
 		color: rgba(228, 228, 228, 0.8);
 		font-size: 0.75rem;
 		transition: color 0.3s ease;
+		flex-shrink: 0;
 		@media (any-hover: hover) {
 			&:hover {
 				color: rgba(228, 228, 228, 1);
@@ -231,6 +261,18 @@
 	// .header__buy
 	&__buy {
 		padding-inline: rem(25);
+	}
+	&__cart {
+		flex-shrink: 0;
+		font-size: rem(24);
+		width: rem(24);
+		height: rem(24);
+		transition: color 0.3s ease;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $red;
+			}
+		}
 	}
 }
 
@@ -250,7 +292,9 @@
 	display: flex;
 	flex-direction: column;
 	overflow-y: auto;
-	transition: opacity 0.3s ease, visibility 0.3s ease;
+	transition:
+		opacity 0.3s ease,
+		visibility 0.3s ease;
 	.container {
 		width: 100%;
 		flex: 1 1 auto;
@@ -382,7 +426,9 @@
 		display: block;
 		padding: rem(2);
 		align-self: stretch;
-		transition: transform 0.4s ease 0.4s, opacity 0.4s ease 0.4s;
+		transition:
+			transform 0.4s ease 0.4s,
+			opacity 0.4s ease 0.4s;
 		will-change: transform;
 		&::before {
 			content: "";
@@ -401,9 +447,13 @@
 		color: $grey;
 		background: transparent;
 		& span {
-			transition: transform 0.3s ease 0s, opacity 0.3s ease 0s;
+			transition:
+				transform 0.3s ease 0s,
+				opacity 0.3s ease 0s;
 			&::before {
-				transition: transform 0.45s ease 0.35s, width 0.3s ease 0s;
+				transition:
+					transform 0.45s ease 0.35s,
+					width 0.3s ease 0s;
 			}
 			&:first-child {
 				transform: translateY(rem(6));

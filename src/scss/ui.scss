@@ -160,19 +160,38 @@
 }
 
 .whatsapp-btn {
-	z-index: $ui-index-5;
-	width: rem(74);
-	height: rem(74);
-	display: block;
+	&__icon {
+	}
+}
+
+.socials-widget {
 	position: fixed;
+	z-index: $ui-index-5;
 	bottom: 1rem;
 	right: 1.5rem;
-	cursor: pointer;
 	overflow: visible;
+
 	@media (min-width: $md2) {
 		display: none;
 	}
-	&__icon {
+	// .socials-widget__btn
+	&__btn {
+		width: rem(74);
+		height: rem(74);
+		display: block;
+		cursor: pointer;
+		&::after {
+			content: "";
+			position: absolute;
+			inset: 0;
+			border-radius: 50%;
+			background: rgba($red, 1);
+			z-index: -1;
+			animation: pulse-wave 2s ease-out infinite;
+		}
+	}
+	// .socials-widget__btn-icon
+	&__btn-icon {
 		position: relative;
 		width: 100%;
 		height: 100%;
@@ -186,16 +205,6 @@
 		align-items: center;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	}
-	&::after {
-		content: "";
-		position: absolute;
-		inset: 0;
-		border-radius: 50%;
-		background: rgba($red, 1);
-		z-index: -1;
-		animation: pulse-wave 2s ease-out infinite;
-	}
-
 	@keyframes pulse-wave {
 		0% {
 			transform: scale(1);
@@ -204,6 +213,49 @@
 		100% {
 			transform: scale(1.5);
 			opacity: 0;
+		}
+	}
+	// .socials-widget__body
+	&__body {
+		position: absolute;
+		bottom: rem(58);
+		right: rem(74);
+		border-radius: 0.625rem;
+		background: rgba(217, 217, 217, 0.75);
+		color: #000000;
+		padding: rem(15) rem(17) rem(13);
+		display: flex;
+		flex-direction: column;
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.3s ease;
+		&.visible {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	// .socials-widget__link
+	&__link {
+		display: flex;
+		align-items: center;
+		font-size: 0.875rem;
+		font-weight: 500;
+		line-height: 100%;
+		gap: 0.56rem;
+		width: 9.8125rem;
+		border-radius: 0.3125rem;
+		background: rgba(217, 217, 217, 0.75);
+		padding: rem(7.5) rem(12);
+		&::before {
+			width: 2rem;
+			height: 2rem;
+			font-size: 1.875rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(7);
 		}
 	}
 }

@@ -120,8 +120,11 @@ body {
 		max-width: $maxWidthContainer;
 	}
 	&.container-lg {
+		@media (min-width: $md2) {
+			max-width: rem(1170);
+		}
 		@media (min-width: $md1) {
-			max-width: rem(1280);
+			max-width: rem(1310);
 		}
 	}
 }

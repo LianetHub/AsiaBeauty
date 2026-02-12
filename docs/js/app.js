@@ -103,6 +103,13 @@ $(function () {
             $target.toggleClass('active')
         }
 
+        // socials widget
+        if ($target.closest('.socials-widget__btn').length) {
+            $('.socials-widget__body').toggleClass('visible');
+        } else if (!$target.closest('.socials-widget').length) {
+            $('.socials-widget__body').removeClass('visible');
+        }
+
 
     });
 
