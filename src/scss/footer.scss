@@ -125,6 +125,7 @@
 	}
 	// .footer__banner
 	&__banner {
+		position: relative;
 		margin-top: rem(60);
 		min-width: 100%;
 		aspect-ratio: math.div(1136, 424);
@@ -137,6 +138,16 @@
 		& img,
 		& video {
 			min-height: rem(212);
+		}
+		.footer__logo {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			margin: 0;
+			@media (min-width: $md4) {
+				width: 14.5625rem;
+			}
 		}
 	}
 	&__video {
@@ -167,6 +178,28 @@
 			background-color: $black;
 			position: absolute;
 			inset: 0%;
+		}
+	}
+	&__reqs {
+		margin-top: 3.78rem;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		color: rgba(228, 228, 228, 0.8);
+		font-size: 1rem;
+		line-height: 120%;
+		gap: 1rem;
+		@media (min-width: $md4) {
+			flex-direction: row;
+		}
+	}
+	// .footer__reqs-copyright
+	&__reqs-copyright {
+	}
+	// .footer__reqs-text
+	&__reqs-text {
+		@media (min-width: $md4) {
+			text-align: right;
 		}
 	}
 }
