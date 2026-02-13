@@ -17,83 +17,69 @@
 		display: block;
 	}
 }
-
+.icon-search:before {
+	content: "\e915";
+}
+.icon-minus:before {
+	content: "\e914";
+}
 .icon-plus-circle:before {
 	content: "\e912";
 }
-
 .icon-minus-circle:before {
 	content: "\e913";
 }
-
 .icon-phone:before {
 	content: "\e910";
 }
-
 .icon-shopping-bag:before {
 	content: "\e911";
 }
-
 .icon-whatsapp-outline:before {
 	content: "\e90c";
 }
-
 .icon-filter:before {
 	content: "\e90b";
 }
-
 .icon-arrows:before {
 	content: "\e90a";
 }
-
 .icon-triangle:before {
 	content: "\e909";
 }
-
 .icon-heart:before {
 	content: "\e90e";
 }
-
 .icon-heart-fill:before {
 	content: "\e90f";
 }
-
 .icon-location:before {
 	content: "\e908";
 }
-
 .icon-play:before {
 	content: "\e90d";
 }
-
 .icon-whatsapp:before {
 	content: "\e907";
 }
-
 .icon-cart:before {
 	content: "\e900";
 }
-
 .icon-facebook:before {
 	content: "\e901";
 }
-
 .icon-instagram:before {
 	content: "\e902";
 }
-
 .icon-next:before {
 	content: "\e903";
 }
-
 .icon-plus:before {
 	content: "\e904";
 }
-
 .icon-prev:before {
 	content: "\e905";
 }
-
 .icon-telegram:before {
 	content: "\e906";
 }

@@ -169,7 +169,6 @@
 		width: 100%;
 		text-overflow: ellipsis;
 		background: transparent;
-		border-bottom: rem(1) solid rgba($color: $grey, $alpha: 0.8);
 		color: $grey;
 		border-radius: 0;
 		&:focus {
@@ -373,7 +372,9 @@
 		display: block;
 		.product-card__prices-btn {
 			cursor: pointer;
-			transition: color 0.3s ease, background-color 0.3s ease;
+			transition:
+				color 0.3s ease,
+				background-color 0.3s ease;
 			@media (any-hover: hover) {
 				&:hover {
 					color: $black;

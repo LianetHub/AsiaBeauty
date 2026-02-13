@@ -1,3 +1,11 @@
+.pin-spacer {
+	& ~ section {
+		position: relative;
+		z-index: 2;
+		background: $black;
+	}
+}
+
 .hero {
 	position: relative;
 	z-index: 1;
@@ -22,6 +30,7 @@
 	@media (min-width: $md2) {
 		min-height: 65.9375rem;
 	}
+
 	// .hero__banner
 	&__banner {
 		display: none;
@@ -89,6 +98,9 @@
 		object-fit: cover;
 		z-index: -1;
 	}
+}
+.home-page {
+	background: #000;
 }
 
 .home-about {
@@ -264,14 +276,57 @@
 		width: 100%;
 		height: 100%;
 		&::before {
-			position: absolute;
-			top: rem(10);
-			right: rem(12);
+		}
+		&:hover {
+			.services__card-info {
+				&::before {
+					@extend %ic, .icon-minus;
+					transform: rotate(360deg);
+				}
+				& span {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
+	// .services__card-info
+	&__card-info {
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		display: flex;
+		flex-direction: column;
+		padding: rem(10) rem(40) rem(10) rem(12);
+		& span {
+			position: relative;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.2s ease;
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0.65rem;
+				right: calc(100% + 0.7rem);
+				width: 0.2rem;
+				height: 0.2rem;
+				border-radius: 50%;
+				background: currentColor;
+			}
+		}
+		@media (min-width: $md5) {
+			padding: rem(19) rem(50) rem(19) rem(25);
+		}
+		&::before {
 			font-size: rem(34);
+			color: rgba(228, 228, 228, 0.8);
+			position: absolute;
+			top: rem(19);
+			right: rem(25);
+			transition: transform 0.2s ease;
 			@media (min-width: $md5) {
-				top: rem(14);
-				right: rem(16);
-				font-size: rem(42);
+				font-size: 1.875rem;
 			}
 		}
 	}

@@ -44,6 +44,7 @@
 }
 
 .salons__item-link::before,
+.services__card-link:hover .services__card-info::before,
 .favorite-btn.active::before,
 .favorite-btn::before,
 .swiper-button-next::before,
@@ -65,6 +66,15 @@
 [class^=icon-]:before,
 [class*=" icon-"]:before {
   display: block;
+}
+
+.icon-search:before {
+  content: "\e915";
+}
+
+.icon-minus:before,
+.services__card-link:hover .services__card-info:before {
+  content: "\e914";
 }
 
 .icon-plus-circle:before {
@@ -1880,6 +1890,12 @@ body.lock-filter {
   background: #151515;
 }
 
+.pin-spacer ~ section {
+  position: relative;
+  z-index: 2;
+  background: #151515;
+}
+
 .hero {
   position: relative;
   z-index: 1;
@@ -1934,6 +1950,10 @@ body.lock-filter {
   -o-object-fit: cover;
      object-fit: cover;
   z-index: -1;
+}
+
+.home-page {
+  background: #000;
 }
 
 .description {
@@ -2056,11 +2076,63 @@ body.lock-filter {
   height: 100%;
 }
 
-.services__card-link::before {
+.services__card-link:hover .services__card-info::before {
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.services__card-link:hover .services__card-info span {
+  opacity: 1;
+  visibility: visible;
+}
+
+.services__card-info {
   position: absolute;
-  top: 0.625rem;
-  right: 0.75rem;
+  left: 0;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0.625rem 2.5rem 0.625rem 0.75rem;
+}
+
+.services__card-info span {
+  position: relative;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.services__card-info span::before {
+  content: "";
+  position: absolute;
+  top: 0.65rem;
+  right: calc(100% + 0.7rem);
+  width: 0.2rem;
+  height: 0.2rem;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.services__card-info::before {
   font-size: 2.125rem;
+  color: rgba(228, 228, 228, 0.8);
+  position: absolute;
+  top: 1.1875rem;
+  right: 1.5625rem;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  -o-transition: transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
 }
 
 .services__card-text {
@@ -3431,7 +3503,6 @@ body.lock-filter {
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
   background: transparent;
-  border-bottom: 0.0625rem solid rgba(228, 228, 228, 0.8);
   color: #e4e4e4;
   border-radius: 0;
 }
@@ -4858,10 +4929,12 @@ body.lock-filter {
     width: 16.625rem;
   }
 
-  .services__card-link::before {
-    top: 0.875rem;
-    right: 1rem;
-    font-size: 2.625rem;
+  .services__card-info {
+    padding: 1.1875rem 3.125rem 1.1875rem 1.5625rem;
+  }
+
+  .services__card-info::before {
+    font-size: 1.875rem;
   }
 
   .capabilities {

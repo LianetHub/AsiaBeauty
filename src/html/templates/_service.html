@@ -1,5 +1,8 @@
 <li class="services__card swiper-slide" data-animate="card">
-    <a href="service.html" class="services__card-link icon-plus">
+    <a href="service.html" class="services__card-link ">
+        <span class="services__card-info icon-plus">
+            @@for (var i = 0; i < info.length; i++) { <span> `+info[i]+`</span>}
+        </span>
         @@if(typeof image !== 'undefined') {
         <span class="services__card-image">
             <img src="@@image" class="cover-image" alt="Фото услуги">
