@@ -380,6 +380,45 @@
 	// .certs__gift-image
 	&__gift-image {
 	}
+	// .certs__faq
+	&__faq {
+		margin-top: rem(43);
+		display: flex;
+		flex-direction: column;
+	}
+	// .certs__faq-item
+	&__faq-item {
+		&:not(:last-child) {
+			border-bottom: rem(1) solid #fff;
+		}
+	}
+	// .certs__faq-question
+	&__faq-question {
+		font-size: 1.25rem;
+		font-weight: 500;
+		line-height: 110%;
+		padding-block: 1.875rem;
+		cursor: pointer;
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+		&::before {
+			order: 1;
+			transition: transform 0.3s ease;
+		}
+		&._active {
+			&::before {
+				transform: rotate(-90deg);
+			}
+		}
+	}
+	// .certs__faq-answer
+	&__faq-answer {
+		display: none;
+		font-size: 1rem;
+		line-height: 120%;
+		padding-bottom: 2.13rem;
+	}
 }
 
 .gift {

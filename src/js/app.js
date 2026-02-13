@@ -474,6 +474,139 @@ $(function () {
     }
 
 
+    class Spollers {
+        constructor() {
+            this.$spollersArray = $("[data-spollers]");
+            if (this.$spollersArray.length > 0) {
+                this.init();
+            }
+        }
+
+        init() {
+            const $spollersRegular = this.$spollersArray.filter((index, item) => {
+                return !$(item).data("spollers").split(",")[0];
+            });
+
+            if ($spollersRegular.length > 0) {
+                this.initSpollers($spollersRegular);
+            }
+
+            const $spollersMedia = this.$spollersArray.filter((index, item) => {
+                return $(item).data("spollers").split(",")[0];
+            });
+
+            if ($spollersMedia.length > 0) {
+                this.initMediaSpollers($spollersMedia);
+            }
+        }
+
+        initMediaSpollers($spollersMedia) {
+            const breakpointsArray = [];
+            $spollersMedia.each(function () {
+                const params = $(this).data("spollers");
+                const paramsArray = params.split(",");
+                breakpointsArray.push({
+                    value: paramsArray[0],
+                    type: paramsArray[1] ? paramsArray[1].trim() : "max",
+                    item: $(this)
+                });
+            });
+
+            let mediaQueries = breakpointsArray.map((item) => {
+                return `(${item.type}-width: ${item.value}px),${item.value},${item.type}`;
+            });
+            mediaQueries = [...new Set(mediaQueries)];
+
+            mediaQueries.forEach((breakpoint) => {
+                const paramsArray = breakpoint.split(",");
+                const mediaBreakpoint = paramsArray[1];
+                const mediaType = paramsArray[2];
+                const matchMedia = window.matchMedia(paramsArray[0]);
+
+                const filteredSpollers = breakpointsArray.filter((item) => {
+                    return item.value === mediaBreakpoint && item.type === mediaType;
+                });
+
+                matchMedia.addEventListener("change", () => {
+                    this.initSpollers(filteredSpollers, matchMedia);
+                });
+                this.initSpollers(filteredSpollers, matchMedia);
+            });
+        }
+
+        initSpollers(spollersArray, matchMedia = false) {
+            const items = Array.isArray(spollersArray) ? spollersArray : spollersArray.toArray();
+
+            items.forEach((spollerItem) => {
+                const $spollersBlock = matchMedia ? spollerItem.item : $(spollerItem);
+                if (!matchMedia || matchMedia.matches) {
+                    $spollersBlock.addClass("_init");
+                    this.initSpollerBody($spollersBlock, true);
+                    $spollersBlock.off("click", "[data-spoller]").on("click", "[data-spoller]", (e) => this.setSpollerAction(e));
+                } else {
+                    $spollersBlock.removeClass("_init");
+                    this.initSpollerBody($spollersBlock, false);
+                    $spollersBlock.off("click", "[data-spoller]");
+                }
+            });
+        }
+
+        initSpollerBody($spollersBlock, hideSpollerBody = true) {
+            const $spollerTitles = $spollersBlock.find("[data-spoller]");
+            if ($spollerTitles.length > 0) {
+                $spollerTitles.each(function () {
+                    const $title = $(this);
+                    const $body = $title.next();
+                    const $parent = $title.parent();
+                    if (hideSpollerBody) {
+                        $title.removeAttr("tabindex");
+                        if (!$title.hasClass("_active")) {
+                            $body.hide();
+                            $parent.removeClass("_spoller-open");
+                        } else {
+                            $body.show();
+                            $parent.addClass("_spoller-open");
+                        }
+                    } else {
+                        $title.attr("tabindex", "-1");
+                        $body.show();
+                        $parent.removeClass("_spoller-open");
+                    }
+                });
+            }
+        }
+
+        setSpollerAction(e) {
+            const $el = $(e.target);
+            const $spollerTitle = $el.closest("[data-spoller]");
+            const $spollersBlock = $spollerTitle.closest("[data-spollers]");
+            const isOneSpoller = $spollersBlock.is("[data-one-spoller]");
+            const $body = $spollerTitle.next();
+            const $parent = $spollerTitle.parent();
+
+            if (!$spollersBlock.find(":animated").length) {
+                if (isOneSpoller && !$spollerTitle.hasClass("_active")) {
+                    this.hideSpollersBody($spollersBlock);
+                }
+
+                $spollerTitle.toggleClass("_active");
+                $parent.toggleClass("_spoller-open");
+                $body.slideToggle(300);
+            }
+            e.preventDefault();
+        }
+
+        hideSpollersBody($spollersBlock) {
+            const $activeTitle = $spollersBlock.find("[data-spoller]._active");
+            if ($activeTitle.length) {
+                $activeTitle.removeClass("_active");
+                $activeTitle.parent().removeClass("_spoller-open");
+                $activeTitle.next().slideUp(300);
+            }
+        }
+    }
+
+    window.spollers = new Spollers();
 
 
     // Phone Russia Mask

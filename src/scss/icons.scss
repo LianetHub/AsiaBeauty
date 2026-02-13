@@ -17,6 +17,10 @@
 		display: block;
 	}
 }
+
+.icon-chevron-down:before {
+	content: "\e916";
+}
 .icon-search:before {
 	content: "\e915";
 }
