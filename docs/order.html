@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Asia Beauty SPA | Оформление заказа</title>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- plugins -->
+    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20260217183114" />
+    <link rel="stylesheet" href="css/libs/fancybox.css?_v=20260217183114" />
+    <!-- plugins -->
+
+    <link rel="stylesheet" href="css/reset.min.css?_v=20260217183114" />
+    <link rel="stylesheet" href="css/style.min.css?_v=20260217183114" />
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+    <div class="header__wrapper">
+        <div class="container container-lg">
+            <div class="header__body">
+                <a href="index.html" class="header__logo">
+                    <img src="img/logo-white.svg" alt="Логотип">
+                </a>
+                <div class="header__actions header__actions--left">
+                    <div class="header__actions-navigation">
+                        <a href="index.html" class="header__actions-home">Главная</a>
+                        <button type="button" aria-label="Открыть меню" class="header__menu-toggler icon-menu">
+                            <span></span><span></span><span></span>
+                        </button>
+                    </div>
+                    <a href="https://api.whatsapp.com/send/?phone=%2B79998708231" class="header__callback btn btn-secondary">
+                        Записаться в WhatsApp
+                    </a>
+                    <a href="#cart" data-fancybox aria-label="Корзина" class="header__cart icon-shopping-bag"></a>
+                </div>
+                <nav class="header__menu" aria-label="Навигация">
+                    <ul class="header__menu-list">
+                        <li class="header__menu-item"><a href="about.html" class="header__menu-link">О бренде</a></li>
+                        <li class="header__menu-item"><a href="services.html" class="header__menu-link">Меню услуг</a></li>
+                        <li class="header__menu-item"><a href="certs.html" class="header__menu-link">Сертификаты</a></li>
+                        <li class="header__menu-item"><a href="apartments.html" class="header__menu-link">Апартаменты</a></li>
+                        <li class="header__menu-item"><a href="deposits.html" class="header__menu-link">Депозиты</a></li>
+                        <li class="header__menu-item"><a href="salons.html" class="header__menu-link">Локации</a></li>
+                    </ul>
+                </nav>
+                <div class="header__actions header__actions--right">
+                    <a href="tel:+74950217659" class="header__phone">+7 495 021 76 59</a>
+                    <a href="" class="header__buy btn btn-primary">Купить сертификат</a>
+                    <a href="#cart" data-fancybox aria-label="Корзина" class="header__cart icon-shopping-bag"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="menu">
+    <div class="container container-lg">
+        <div class="menu__body">
+            <nav aria-label="Главное меню" class="menu__navigation">
+                <ul class="menu__navigation-list">
+                    <li class="menu__navigation-item"><a href="about.html" class="menu__navigation-link">О НАС</a></li>
+                    <li class="menu__navigation-item"><a href="services.html" class="menu__navigation-link">МЕНЮ УСЛУГ</a></li>
+                    <li class="menu__navigation-item"><a href="certs.html" class="menu__navigation-link">СЕРТИФИКАТЫ</a></li>
+                    <li class="menu__navigation-item"><a href="deposits.html" class="menu__navigation-link">ДЕПОЗИТЫ</a></li>
+                    <li class="menu__navigation-item"><a href="apartments.html" class="menu__navigation-link">АПАРТАМЕНТЫ</a></li>
+                    <li class="menu__navigation-item"><a href="salons.html" class="menu__navigation-link">ЛОКАЦИИ</a></li>
+                    <li class="menu__navigation-item"><a href="" class="menu__navigation-link">БЛОГ</a></li>
+                    <li class="menu__navigation-item"><a href="contacts.html" class="menu__navigation-link">КОНТАКТЫ</a></li>
+                </ul>
+            </nav>
+            <div class="menu__side">
+                <nav aria-label="Меню услуг" class="menu__services">
+                    <ul class="menu__services-list">
+                        <li class="menu__services-item"><a href="" class="menu__services-link">Массажи</a></li>
+                        <li class="menu__services-item"><a href="" class="menu__services-link">Спа-процедуры</a></li>
+                        <li class="menu__services-item"><a href="" class="menu__services-link">Спа-меню</a></li>
+                        <li class="menu__services-item"><a href="specialoffer.html" class="menu__services-link">Спа для двоих</a></li>
+                        <li class="menu__services-item"><a href="" class="menu__services-link">Спа день</a></li>
+                        <li class="menu__services-item"><a href="" class="menu__services-link">Спа для мужчин</a></li>
+                    </ul>
+                </nav>
+                <div class="menu__socials">
+                    <a href="" class="menu__social">telegram</a>
+                    <a href="" class="menu__social">whatsapp</a>
+                    <a href="" class="menu__social">vk</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <main class="page page--small">
+      <section class="order">
+        <div class="order__container container">
+          <form action="#" class="order__form">
+            <div class="order__steps">
+              <div class="order__step order__step_active">
+                <div class="order__header">
+                  <div class="order__progress">
+                    <span class="order__progress-current">1</span>/<span class="order__progress-total">2</span>
+                  </div>
+                  Введите данные
+                </div>
+                <div class="order__rows">
+                  <div class="order__row">
+                    <input type="text" name="name" class="input" placeholder="Ваше имя">
+                  </div>
+                  <div class="order__row">
+                    <input type="tel" name="phone" class="input" placeholder="Номер телефона для связи">
+                  </div>
+                  <div class="order__row">
+                    <input type="text" name="wish" class="input" placeholder="Пожелание на сертификате">
+                  </div>
+                  <div class="order__row">
+                    <input type="text" name="message" class="input" placeholder="Укажите предпочитаемый Вами салон и комментарии сотрудникам">
+                  </div>
+                </div>
+                <button type="button" aria-label="Далее" class="order__btn btn btn-white-outline icon-arrow-right"></button>
+              </div>
+              <div id="step2" class="order__step">
+                <div class="order__header">
+                  <div class="order__progress">
+                    <span class="order__progress-current">2</span>/<span class="order__progress-total">2</span>
+                  </div>
+                  <div class="order__caption">
+                    Адрес и доставка
+                  </div>
+                </div>
+                <div class="order__rows">
+                  <div class="order__row" id="payments">
+                    <div class="order__label">
+                      1. Доставка
+                    </div>
+                    <div class="form-group order__options">
+                      <label class="catalog__filter-item checkbox">
+                        <input type="radio" name="delivery" value="6" id="delivery_6" data-payments="[18]" class="checkbox__input hidden delivery-toggler" checked="" hidden="">
+                        <span class="checkbox__text">Получить сертификат на email</span>
+                      </label>
+                      <label class="catalog__filter-item checkbox">
+                        <input type="radio" name="delivery" value="2" id="delivery_2" data-payments="[18]" class="checkbox__input hidden delivery-toggler" hidden="">
+                        <span class="checkbox__text">Доставка в пределах МКАД</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="order__row">
+                    <div class="order__label">
+                      2. Введите ваш email
+                    </div>
+                    <input type="email" id="email" name="email" value="" class="input form-control required" placeholder="example@mail.ru" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                    <div class="order__help">
+                      после оплаты чек и электронный подарочный сертификат придет на указанный email
+                    </div>
+                  </div>
+                  <div class="order__row">
+                    <div class="order__label">
+                      3. Выберите способ оплаты
+                    </div>
+                    <div class="order__select select">
+                      <select id="payment" name="payment" class="payment">
+                        <option value="18">Банковские карты VISA, MasterCard, МИР</option>
+                        <option value="18">Наличный рассчет</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="order__submit btn btn-primary">
+                  Перейти к оплате
+                </button>
+                <div class="order__policy">
+                  Нажимая на кнопку «Сделать заказ!» я соглашаюсь с <a href="" target="_blank">политикой конфиденциальности</a>, <a href="" target="_blank">условиями приобретения и использования подарочного сертификата</a> и разрешаю обработку своих персональных данных
+                </div>
+              </div>
+            </div>
+            <div class="order__footer">
+              <div class="order__total">
+                <div class="order__total-text">
+                  Итого:
+                </div>
+                <div class="order__total-value">
+                  95 000 ₽
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="order__products">
+            <div class="order__products-caption">
+              Ваш заказ: Подарочный сертификат
+            </div>
+            <ul class="order__products-list">
+              <li class="order__item">
+                <div class="order__item-cert">
+                  <img src="img/certs/01.jpg" class="cover-image" alt="thumb">
+                </div>
+              </li>
+            </ul>
+            <div class="order__products-subtitle">
+              Нажимая на кнопку «Сделать заказ!» я соглашаюсь с политикой конфиденциальности, условиями приобретения и использования подарочного сертификата и разрешаю обработку своих персональных данных
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+    <div class="container">
+        <div class="footer__top">
+            <div class="footer__column">
+                <div class="footer__caption">АДРЕС</div>
+                <div class="footer__column-body">
+                    <address>Смоленская, 8</address>
+                    <address>Площадь Европы, 2</address>
+                    <address>Пресненская наб., 2</address>
+                    <address>Погорельский пер., 6</address>
+                    <address>Оружейный пер., 13/1</address>
+                </div>
+            </div>
+            <div class="footer__column">
+                <div class="footer__caption">ТЕЛЕФОН</div>
+                <div class="footer__column-body">
+                    <a href="tel:+74959999999">+7 (495) 999 99-99</a>
+                </div>
+            </div>
+            <div class="footer__column">
+                <div class="footer__caption">ПОЧТА</div>
+                <div class="footer__column-body">
+                    <a href="mailto:info@ab-spa.ru">info@ab-spa.ru</a>
+                </div>
+            </div>
+            <div class="footer__column">
+                <div class="footer__caption">КЛИЕНТАМ</div>
+                <div class="footer__column-body">
+                    <a href="">Условия посещения</a>
+                </div>
+            </div>
+            <div class="footer__column">
+                <div class="footer__caption">СОЦ.СЕТИ</div>
+                <div class="footer__column-socials socials">
+                    <a href="" class="socials__link icon-telegram"></a>
+                    <a href="" class="socials__link icon-instagram"></a>
+                    <a href="" class="socials__link icon-facebook"></a>
+                </div>
+            </div>
+        </div>
+        <nav aria-label="Меню в подвале" class="footer__menu">
+            <a href="" class="footer__menu-policy">Политика конфиденциальности</a>
+            <ul class="footer__menu-list">
+                <li class="footer__menu-item"><a href="" class="footer__menu-link">Массаж на дом</a></li>
+                <li class="footer__menu-item"><a href="" class="footer__menu-link">Новости</a></li>
+                <li class="footer__menu-item"><a href="" class="footer__menu-link">Акции</a></li>
+                <li class="footer__menu-item"><a href="" class="footer__menu-link">Партнеры</a></li>
+                <li class="footer__menu-item"><a href="" class="footer__menu-link">Салоны</a></li>
+            </ul>
+        </nav>
+        <div class="footer__banner">
+            <video class="footer__video" muted loop playsinline autoplay="true" preload="metadata" poster="img/footer-video-poster.jpg">
+                <source src="./files/footer-video-block.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+            </video>
+            <div class="footer__logo">
+                <img src="img/logo-white.svg" alt="Логотип">
+            </div>
+        </div>
+        <div class="footer__reqs">
+            <div class="footer__reqs-copyright">© 2011 - 2026 ASIA BEAUTY SPA</div>
+            <div class="footer__reqs-text">
+                ООО ‘СИНАСТРИ’ <br>
+                ИНН 000000000 ОГРН 0000000000
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="socials-widget">
+    <button target="_blank" class="socials-widget__btn">
+        <span class="socials-widget__btn-icon icon-whatsapp"></span>
+    </button>
+    <div class="socials-widget__body">
+        <a href="https://tlgg.ru/asiabeautyspa" target="_blank" class="socials-widget__link icon-telegram">Написать в telegram</a>
+        <a href="tel:+74950217659" class="socials-widget__link icon-phone">Позвонить</a>
+    </div>
+</div>
+<div id="cart" class="cart">
+    <div class="cart__header">
+        <h2 class="cart__title">
+            Ваш заказ
+        </h2>
+        <button type="button" class="cart__clear">удалить всё</button>
+    </div>
+    <ul class="cart__list">
+        <li class="cart__item">
+            <div class="cart__item-main">
+                <div class="cart__item-thumb">
+                    <img src="img/products/02.jpg" class="cover-image" alt="thumb">
+                </div>
+                <div class="cart__item-name">
+                    Aroma massage/Арома <br> массаж со свечей
+                </div>
+                <div class="cart__item-counter">
+                    <button type="button" class="cart__item-btn icon-minus-circle"></button>
+                    <div class="cart__counter-value">
+                        1
+                    </div>
+                    <button type="button" class="cart__item-btn icon-plus-circle"></button>
+                </div>
+            </div>
+            <div class="cart__item-price">13 500 ₽</div>
+        </li>
+    </ul>
+    <div class="cart__footer">
+        <div class="cart__total">
+            <div class="cart__total-caption">
+                Итого:
+            </div>
+            <div class="cart__total-value">13 500 ₽</div>
+        </div>
+        <a href="" class="cart__btn btn btn-primary ">
+            Оформить заказ
+        </a>
+    </div>
+</div>
+  </div>
+
+  <!-- plugins -->
+<script src="js/libs/jquery-3.7.1.min.js?_v=20260217183114"></script>
+<script src="js/libs/swiper-bundle.min.js?_v=20260217183114"></script>
+<script src="js/libs/fancybox.min.js?_v=20260217183114"></script>
+<script src="js/libs/gsap.min.js?_v=20260217183114"></script>
+<script src="js/libs/ScrollTrigger.min.js?_v=20260217183114"></script>
+
+<!-- plugins -->
+
+<script src="js/app.min.js?_v=20260217183114"></script>
+</body>
+
+</html>

@@ -150,6 +150,7 @@
 			}
 		}
 	}
+	// .footer__video
 	&__video {
 		width: 100%;
 		height: 100%;
@@ -169,6 +170,7 @@
 			width: 100%;
 		}
 	}
+	// .footer__overlay
 	&__overlay {
 		display: none;
 		@media (min-height: 1040px) and (min-width: $md2), (min-height: 970px) and (min-width: $md3) {
@@ -180,6 +182,7 @@
 			inset: 0%;
 		}
 	}
+	// .footer__reqs
 	&__reqs {
 		margin-top: 3.78rem;
 		display: flex;

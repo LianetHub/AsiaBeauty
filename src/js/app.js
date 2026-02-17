@@ -111,6 +111,17 @@ $(function () {
         }
 
 
+        // order steps switch
+        if ($target.hasClass('order__btn')) {
+            let $step = $target.closest('.order__step');
+            let $nextStep = $step.next();
+            if ($nextStep.length > 0) {
+                $step.removeClass('order__step_active');
+                $nextStep.addClass('order__step_active');
+            }
+        }
+
+
     });
 
 

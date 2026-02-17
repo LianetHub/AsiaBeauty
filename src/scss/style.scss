@@ -147,6 +147,9 @@ body {
 	z-index: 4;
 	min-height: 100vh;
 	background: $black;
+	&.page--small {
+		min-height: auto;
+	}
 }
 // ========================================================
 
@@ -162,7 +165,7 @@ body {
 @import "pages/about";
 @import "pages/special";
 @import "pages/homevisit";
-// @import "pages/order";
+@import "pages/order";
 // @import "pages/info";
 // @import "pages/promotion";
 // @import "pages/spa-programms";

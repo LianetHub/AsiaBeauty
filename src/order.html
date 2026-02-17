@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Asia Beauty SPA | Оформление заказа'
+    })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": "0"
+            })
+            <main class="page page--small">
+                <section class="order">
+                    <div class="order__container container">
+                        <form action="#" class="order__form">
+                            <div class="order__steps">
+                                <div class="order__step order__step_active">
+                                    <div class="order__header">
+                                        <div class="order__progress">
+                                            <span class="order__progress-current">1</span>/<span class="order__progress-total">2</span>
+                                        </div>
+                                        Введите данные
+                                    </div>
+                                    <div class="order__rows">
+                                        <div class="order__row">
+                                            <input type="text" name="name" class="input" placeholder="Ваше имя">
+                                        </div>
+                                        <div class="order__row">
+                                            <input type="tel" name="phone" class="input" placeholder="Номер телефона для связи">
+                                        </div>
+                                        <div class="order__row">
+                                            <input type="text" name="wish" class="input" placeholder="Пожелание на сертификате">
+                                        </div>
+                                        <div class="order__row">
+                                            <input type="text" name="message" class="input" placeholder="Укажите предпочитаемый Вами салон и комментарии сотрудникам">
+                                        </div>
+                                    </div>
+                                    <button type="button" aria-label="Далее" class="order__btn btn btn-white-outline icon-arrow-right"></button>
+                                </div>
+                                <div id="step2" class="order__step">
+                                    <div class="order__header">
+                                        <div class="order__progress">
+                                            <span class="order__progress-current">2</span>/<span class="order__progress-total">2</span>
+                                        </div>
+                                        <div class="order__caption">
+                                            Адрес и доставка
+                                        </div>
+                                    </div>
+                                    <div class="order__rows">
+                                        <div class="order__row" id="payments">
+                                            <div class="order__label">
+                                                1. Доставка
+                                            </div>
+                                            <div class="form-group order__options">
+                                                <label class="catalog__filter-item checkbox">
+                                                    <input type="radio" name="delivery" value="6" id="delivery_6" data-payments="[18]" class="checkbox__input hidden delivery-toggler" checked="" hidden="">
+                                                    <span class="checkbox__text">Получить сертификат на email</span>
+                                                </label>
+                                                <label class="catalog__filter-item checkbox">
+                                                    <input type="radio" name="delivery" value="2" id="delivery_2" data-payments="[18]" class="checkbox__input hidden delivery-toggler" hidden="">
+                                                    <span class="checkbox__text">Доставка в пределах МКАД</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="order__row">
+                                            <div class="order__label">
+                                                2. Введите ваш email
+                                            </div>
+                                            <input type="email" id="email" name="email" value="" class="input form-control required" placeholder="example@mail.ru" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                                            <div class="order__help">
+                                                после оплаты чек и электронный подарочный сертификат придет на указанный email
+                                            </div>
+                                        </div>
+                                        <div class="order__row">
+                                            <div class="order__label">
+                                                3. Выберите способ оплаты
+                                            </div>
+                                            <div class="order__select select">
+                                                <select id="payment" name="payment" class="payment">
+                                                    <option value="18">Банковские карты VISA, MasterCard, МИР</option>
+                                                    <option value="18">Наличный рассчет</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="order__submit btn btn-primary">
+                                        Перейти к оплате
+                                    </button>
+                                    <div class="order__policy">
+                                        Нажимая на кнопку «Сделать заказ!» я соглашаюсь с <a href="" target="_blank">политикой конфиденциальности</a>, <a href="" target="_blank">условиями приобретения и использования подарочного сертификата</a> и разрешаю обработку своих персональных данных
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order__footer">
+                                <div class="order__total">
+                                    <div class="order__total-text">
+                                        Итого:
+                                    </div>
+                                    <div class="order__total-value">
+                                        95 000 ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="order__products">
+                            <div class="order__products-caption">
+                                Ваш заказ: Подарочный сертификат
+                            </div>
+                            <ul class="order__products-list">
+                                <li class="order__item">
+                                    <div class="order__item-cert">
+                                        <img src="@img/certs/01.jpg" class="cover-image" alt="thumb">
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="order__products-subtitle">
+                                Нажимая на кнопку «Сделать заказ!» я соглашаюсь с политикой конфиденциальности, условиями приобретения и использования подарочного сертификата и разрешаю обработку своих персональных данных
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer-no-anim.html', {})
+        </div>
+
+        @@include('html/_js.html', {})
+    </body>
+</html>

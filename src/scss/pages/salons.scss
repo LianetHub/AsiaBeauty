@@ -142,6 +142,7 @@
 			margin-left: auto;
 		}
 	}
+	// .salons__item-text
 	&__item-text {
 		line-height: 120%;
 		display: flex;
@@ -168,9 +169,23 @@
 			}
 		}
 	}
+	// .salons__item-btns
+	&__item-btns {
+		margin-top: rem(40);
+		display: flex;
+		gap: rem(12);
+		.salons__item-btn {
+			margin-top: 0;
+		}
+	}
+	// .salons__item-btn
 	&__item-btn {
 		margin-top: rem(40);
 		margin-left: auto;
+		&.btn.btn-lg {
+			padding: rem(5) rem(20);
+			min-height: rem(31);
+		}
 	}
 	&__item-link {
 		margin-top: 2.5rem;

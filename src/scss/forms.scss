@@ -208,28 +208,13 @@
 
 .checkbox {
 	display: block;
-	&.checkbox_red {
-		& .checkbox__text {
-			&::before {
-				border-radius: rem(4);
-			}
-		}
-		& .checkbox__input {
-			&:checked {
-				& + .checkbox__text {
-					&::before {
-						background: $red;
-					}
-				}
-			}
-		}
-	}
+
 	// .checkbox__input
 	&__input {
 		&:checked {
 			& + .checkbox__text {
 				&::before {
-					background: #d8d3bf;
+					background: $red;
 				}
 			}
 		}
@@ -239,7 +224,7 @@
 		display: flex;
 		align-items: center;
 		column-gap: 0.62rem;
-		color: #543d2f;
+
 		font-size: 0.875rem;
 		line-height: 120%;
 		cursor: pointer;
@@ -249,7 +234,7 @@
 			width: 1.25rem;
 			height: 1.25rem;
 			align-self: flex-start;
-			border-radius: 50%;
+			border-radius: rem(4);
 			border: rem(1) solid #eceae0;
 		}
 	}
