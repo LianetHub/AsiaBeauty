@@ -53,19 +53,7 @@ $(function () {
 
     // tabs
     function initTabs() {
-        $('.tabs').each(function () {
-            $(this).find('.tab-btn').each(function (index) {
-                if (index == 0) $(this).addClass('active');
-            });
-            $(this).find(".tab-content").each(function (index) {
-                if (index == 0) {
-                    $(this).addClass('active');
-                } else {
-                    $(this).removeClass('active');
-                }
-            });
-
-        })
+       
         $('.tab-btn').on('click', (e) => {
             let $target = $(e.target);
 
