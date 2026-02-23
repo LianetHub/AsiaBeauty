@@ -355,6 +355,13 @@
 		font-size: 1.5rem;
 		line-height: 120%;
 
+		&.hidden-mobile {
+
+			@media (max-width:$md5) {
+				display: none;
+			}
+		}
+
 		&.small {
 			font-size: 0.875rem;
 		}
@@ -375,10 +382,11 @@
 
 	// .certs__info-cards
 	&__info-cards {
-		display: grid;
-		gap: rem(22);
+		display: none;
 
 		@media (min-width: $md5) {
+			gap: rem(22);
+			display: grid;
 			grid-template-columns: repeat(2, 1fr);
 		}
 

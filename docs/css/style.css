@@ -2655,9 +2655,7 @@ body.lock-filter {
 }
 
 .certs__info-cards {
-  display: -ms-grid;
-  display: grid;
-  gap: 1.375rem;
+  display: none;
 }
 
 .certs__info-desc {
@@ -5321,6 +5319,9 @@ body.lock-filter {
   }
 
   .certs__info-cards {
+    gap: 1.375rem;
+    display: -ms-grid;
+    display: grid;
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
   }
@@ -6970,6 +6971,10 @@ body.lock-filter {
 
   .capabilities__desc p:nth-child(even) {
     margin-left: auto;
+  }
+
+  .certs__info-caption.hidden-mobile {
+    display: none;
   }
 
   .gift .container {
