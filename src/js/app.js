@@ -53,7 +53,7 @@ $(function () {
 
     // tabs
     function initTabs() {
-       
+
         $('.tab-btn').on('click', (e) => {
             let $target = $(e.target);
 

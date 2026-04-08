@@ -20,14 +20,6 @@
 	line-height: 110%;
 	text-transform: uppercase;
 	font-size: 2rem;
-	letter-spacing: -0.14rem;
-	@media (min-width: $md4) {
-		letter-spacing: em(-0.28, 4);
-		font-size: 3rem;
-	}
-	@media (min-width: $md3) {
-		font-size: 4rem;
-	}
 }
 
 .title-lg {
@@ -35,17 +27,13 @@
 	font-weight: 700;
 	text-transform: uppercase;
 	font-size: 2.25rem;
+	line-height: 110%;
+	letter-spacing: -0.28rem;
 	@media (min-width: $md5) {
 		font-size: 3.5rem;
 	}
-	@media (min-width: $md4) {
-		font-size: 5rem;
-	}
-	@media (min-width: $md3) {
-		font-size: 6rem;
-	}
 	@media (min-width: $md2) {
-		font-size: 8rem;
+		font-size: 4rem;
 	}
 }
 
@@ -82,7 +70,7 @@
 		@media (min-width: $md5) {
 			order: 0;
 			margin-left: auto;
-			width: 65%;
+			width: 60%;
 		}
 	}
 }

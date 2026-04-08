@@ -8,12 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- plugins -->
-    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20260223162756" />
-    <link rel="stylesheet" href="css/libs/fancybox.css?_v=20260223162756" />
+    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20260408112907" />
+    <link rel="stylesheet" href="css/libs/fancybox.css?_v=20260408112907" />
     <!-- plugins -->
 
-    <link rel="stylesheet" href="css/reset.min.css?_v=20260223162756" />
-    <link rel="stylesheet" href="css/style.min.css?_v=20260223162756" />
+    <link rel="stylesheet" href="css/reset.min.css?_v=20260408112907" />
+    <link rel="stylesheet" href="css/style.min.css?_v=20260408112907" />
 
 </head>
 
@@ -115,9 +115,8 @@
             <div class="description__header section-header">
               <div class="section-header__caption caption" data-animate="text">О пространстве</div>
               <h2 class="section-header__title title" data-animate="title">
-                <span>Отдых в spa-</span>
-                <span>пространстве Asia</span>
-                <span>Beauty Spa</span>
+                Отдых в spa-пространстве
+                AsiaBeauty Spa
               </h2>
             </div>
             <div class="description__text">
@@ -191,20 +190,18 @@
           </div>
           <div class="certs__tabs tabs">
     <div class="certs__tabs-btns">
-        <button type="button" class="certs__tabs-btn btn btn-white-outline btn-lg tab-btn">на сумму</button>
-        <button type="button" class="certs__tabs-btn btn btn-white-outline btn-lg tab-btn">для двоих</button>
-        <button type="button" class="certs__tabs-btn btn btn-white-outline btn-lg tab-btn">для нее</button>
-        <button type="button" class="certs__tabs-btn btn btn-white-outline btn-lg tab-btn active">для него</button>
+        <button type="button" class="certs__tabs-btn btn btn-grey btn-lg tab-btn active">на сумму</button>
+        <button type="button" class="certs__tabs-btn btn btn-grey btn-lg tab-btn">для двоих</button>
+        <button type="button" class="certs__tabs-btn btn btn-grey btn-lg tab-btn">для нее</button>
+        <button type="button" class="certs__tabs-btn btn btn-grey btn-lg tab-btn">для него</button>
     </div>
 
     <div class="certs__tabs-content">
         <!-- === ТАБ 1: На сумму === -->
-        <div class="tab-content">
+        <div class="tab-content active">
             <div class="certs__block">
-                <div class="certs__image">
-                    <img src="img/certs/01.jpg" class="cover-image" alt="Сертификат">
-                </div>
                 <div class="certs__block-body">
+                    <div class="certs__caption">Номинал сертификата:</div>
                     <div class="certs__items">
                         <label class="certs__item text-medium">
                             <input type="radio" name="cert_amount" value="10000" class="certs__item-input hidden" hidden>
@@ -219,10 +216,6 @@
                             <span class="certs__item-btn">20 000 ₽</span>
                         </label>
                         <label class="certs__item text-medium">
-                            <input type="radio" name="cert_amount" value="30000" class="certs__item-input hidden" hidden>
-                            <span class="certs__item-btn">30 000 ₽</span>
-                        </label>
-                        <label class="certs__item text-medium">
                             <input type="radio" checked name="cert_amount" value="40000" class="certs__item-input hidden" hidden>
                             <span class="certs__item-btn">40 000 ₽</span>
                         </label>
@@ -233,10 +226,6 @@
                         <label class="certs__item text-medium">
                             <input type="radio" name="cert_amount" value="100000" class="certs__item-input hidden" hidden>
                             <span class="certs__item-btn">100 000 ₽</span>
-                        </label>
-                        <label class="certs__item text-medium">
-                            <input type="radio" name="cert_amount" value="200000" class="certs__item-input hidden" hidden>
-                            <span class="certs__item-btn">200 000 ₽</span>
                         </label>
                     </div>
                     <div class="certs__total">
@@ -251,10 +240,44 @@
                             </div>
                         </div>
                     </div>
-                    <div class="certs__block-footer">
-                        <button type="submit" class="certs__btn btn btn-primary btn-lg">Выбрать</button>
-                        <a href="" class="certs__cart btn btn-white-outline btn-lg icon-cart"></a>
+                </div>
+                <div class="certs__side">
+                    <div class="certs__caption">Выбрать дизайн сертификата:</div>
+                    <div class="certs__cards">
+                        <div class="certs__card active">
+                            <img src="img/certs/01.jpg" class="cover-image" alt="Фото сертификата">
+                        </div>
+                        <div class="certs__card">
+                            <img src="img/certs/02.jpg" class="cover-image" alt="Фото сертификата">
+                        </div>
+                        <div class="certs__card">
+                            <img src="img/certs/03.jpg" class="cover-image" alt="Фото сертификата">
+                        </div>
+                        <div class="certs__card">
+                            <img src="img/certs/04.jpg" class="cover-image" alt="Фото сертификата">
+                        </div>
+                        <div class="certs__card">
+                            <img src="img/certs/05.jpg" class="cover-image" alt="Фото сертификата">
+                        </div>
+                        <div class="certs__card">
+                            <img src="img/certs/02.jpg" class="cover-image" alt="Фото сертификата">
+                        </div>
                     </div>
+                    <div class="certs__types">
+                        <label class="certs__type">
+                            <input type="radio" name="cert_type" checked value="1" class="certs__type-input hidden" hidden>
+                            <span class="certs__type-btn">пластиковая</span>
+                        </label>
+                        <label class="certs__type">
+                            <input type="radio" name="cert_type" value="2" class="certs__type-input hidden" hidden>
+                            <span class="certs__type-btn">виртуальная</span>
+                        </label>
+                    </div>
+                    <div class="certs__sum">
+                        <div class="certs__sum-caption">Итого:</div>
+                        <div class="certs__sum-value">= 80 000 ₽</div>
+                    </div>
+                    <button class="certs__add-to-cart btn btn-primary btn-lg icon-shopping-bag">Добавить в корзину</button>
                 </div>
             </div>
         </div>
@@ -350,7 +373,7 @@
         </div>
 
         <!-- === ТАБ 4: Для него === -->
-        <div class="tab-content active">
+        <div class="tab-content ">
             <div class="certs__block">
                 <div class="certs__slider">
                     <div class="certs__slider-main swiper">
@@ -389,36 +412,6 @@
         </div>
     </div>
 </div>
-          <div class="certs__info certs__info--small">
-            <div class="certs__info-caption small hidden-mobile">Выберете дизайн сертификата:</div>
-            <div class="certs__info-body">
-              <div class="certs__info-cards">
-                <div class="certs__card certs__card--small">
-                  <img src="img/certs/02.jpg" class="cover-image" alt="Фото сертификата">
-                  <span class="certs__card-title text-uppercase text-medium">ПОДАРОЧНЫЙ СЕРТИФИКАТ</span>
-                </div>
-                <div class="certs__card certs__card--small">
-                  <img src="img/certs/03.jpg" class="cover-image" alt="Фото сертификата">
-                  <span class="certs__card-title text-uppercase text-medium">ПОДАРОЧНЫЙ СЕРТИФИКАТ</span>
-                </div>
-                <div class="certs__card certs__card--small">
-                  <img src="img/certs/04.jpg" class="cover-image" alt="Фото сертификата">
-                  <span class="certs__card-title text-uppercase text-medium">ПОДАРОЧНЫЙ СЕРТИФИКАТ</span>
-                </div>
-                <div class="certs__card certs__card--small">
-                  <img src="img/certs/05.jpg" class="cover-image" alt="Фото сертификата">
-                  <span class="certs__card-title text-uppercase text-medium">ПОДАРОЧНЫЙ СЕРТИФИКАТ</span>
-                </div>
-              </div>
-              <div class="certs__info-desc certs__info-desc--large">
-                <p>Вы можете приобрести сертификат на нашем сайте или в нашем салоне. В каталоге есть множество программ, включая массажи, уход за лицом и телом, а также расслабляющие спа-процедуры</p>
-                <p class="certs__info-links">
-                  <a href="">Условия использования</a>
-                  <a href="">Регламент использования</a>
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
       <section class="locations">
@@ -450,6 +443,9 @@
         </div>
         <video class="locations__video" muted loop playsinline autoplay="true" preload="metadata" poster="img/locations-video.png">
           <source src="./files/location.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+        </video>
+        <video class="locations__video" muted loop playsinline autoplay="true" preload="metadata" poster="img/video-poster.jpg">
+          <source src="./files/home-video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
         </video>
       </section>
       <section class="news">
@@ -554,15 +550,40 @@
           <button type="button" class="news__slider-next swiper-button-next"></button>
         </div>
       </section>
-      <section class="tagline" style="background-image: url('img/banner-home.png');">
+      <section class="tagline" style="background-image: url('img/banner-home.jpg');">
         <div class="container" data-animate="section">
-          <h2 class="tagline__title title text-center text-uppercase" data-animate="title">
-            <span class="color-grey">Asia Beauty Spa</span> — крупнейшая сеть
-            <br> spa-салонов premium класса <span class="color-grey">в&nbsp;Москве</span>
-          </h2>
+          <div class="tagline__header">
+            <h2 class="tagline__title title-lg text-uppercase" data-animate="title">
+              Asia Beauty Spa — крупнейшая сеть spa-салонов premium класса в&nbsp;Москве
+            </h2>
+            <p class="tagline__desc" data-animate="text">В Asia Beauty Spa можно позаботиться о ментальном здоровье и посетить медитативные практики, а также провести ритуалы ухода за красотой лица и тела.</p>
+          </div>
+          <ul class="tagline__list">
+            <li class="capability-item" data-animate="card">
+    <div class="capability-item__image">
+        <img src="img/capabilities/01.jpg" class="cover-image" alt="Фото салона">
+    </div>
+    <div class="capability-item__title text-medium text-uppercase">ПАНОРАМНЫЕ АПАРТАМЕНТЫ</div>
+</li><li class="capability-item" data-animate="card">
+    <div class="capability-item__image">
+        <img src="img/capabilities/02.jpg" class="cover-image" alt="Фото салона">
+    </div>
+    <div class="capability-item__title text-medium text-uppercase">БЕСПЛАТНЫЕ <br/> АКВАТЕРМАЛЬНЫЕ ЗОНЫ</div>
+</li><li class="capability-item" data-animate="card">
+    <div class="capability-item__image">
+        <img src="img/capabilities/03.jpg" class="cover-image" alt="Фото салона">
+    </div>
+    <div class="capability-item__title text-medium text-uppercase">120 ВИДОВ <br/> SPA-ПРОГРАММ</div>
+</li><li class="capability-item" data-animate="card">
+    <div class="capability-item__image">
+        <img src="img/capabilities/04.jpg" class="cover-image" alt="Фото салона">
+    </div>
+    <div class="capability-item__title text-medium text-uppercase">5 САЛОНОВ В <br/> ПРЕМИУМ ЛОКАЦИЯХ</div>
+</li>
+          </ul>
         </div>
       </section>
-      <section class="capabilities">
+      <section class="capabilities capabilities-mobile">
         <div class="capabilities__header">
           <div class="container">
             <div class="section-header">
@@ -573,30 +594,26 @@
         <div class="capabilities__content">
           <div class="container container-lg">
             <ul class="capabilities__list">
-              <li class="capabilities__item" data-animate="card">
-    <div class="capabilities__item-image">
+              <li class="capability-item" data-animate="card">
+    <div class="capability-item__image">
         <img src="img/capabilities/01.jpg" class="cover-image" alt="Фото салона">
     </div>
-    <div class="capabilities__item-title text-medium text-uppercase">ПАНОРАМНЫЕ АПАРТАМЕНТЫ</div>
-    <p class="capabilities__item-desc">Расположены на 20-м этаже <br> Отеля Азимут с видом на Москва-Сити</p>
-</li><li class="capabilities__item" data-animate="card">
-    <div class="capabilities__item-image">
+    <div class="capability-item__title text-medium text-uppercase">ПАНОРАМНЫЕ АПАРТАМЕНТЫ</div>
+</li><li class="capability-item" data-animate="card">
+    <div class="capability-item__image">
         <img src="img/capabilities/02.jpg" class="cover-image" alt="Фото салона">
     </div>
-    <div class="capabilities__item-title text-medium text-uppercase">ПАНОРАМНЫЕ АПАРТАМЕНТЫ</div>
-    <p class="capabilities__item-desc">Расположены на 20-м этаже <br> Отеля Азимут с видом на Москва-Сити</p>
-</li><li class="capabilities__item" data-animate="card">
-    <div class="capabilities__item-image">
+    <div class="capability-item__title text-medium text-uppercase">БЕСПЛАТНЫЕ <br/> АКВАТЕРМАЛЬНЫЕ ЗОНЫ</div>
+</li><li class="capability-item" data-animate="card">
+    <div class="capability-item__image">
         <img src="img/capabilities/03.jpg" class="cover-image" alt="Фото салона">
     </div>
-    <div class="capabilities__item-title text-medium text-uppercase">ПАНОРАМНЫЕ АПАРТАМЕНТЫ</div>
-    <p class="capabilities__item-desc">Расположены на 20-м этаже <br> Отеля Азимут с видом на Москва-Сити</p>
-</li><li class="capabilities__item" data-animate="card">
-    <div class="capabilities__item-image">
+    <div class="capability-item__title text-medium text-uppercase">120 ВИДОВ <br/> SPA-ПРОГРАММ</div>
+</li><li class="capability-item" data-animate="card">
+    <div class="capability-item__image">
         <img src="img/capabilities/04.jpg" class="cover-image" alt="Фото салона">
     </div>
-    <div class="capabilities__item-title text-medium text-uppercase">ПАНОРАМНЫЕ АПАРТАМЕНТЫ</div>
-    <p class="capabilities__item-desc">Расположены на 20-м этаже <br> Отеля Азимут с видом на Москва-Сити</p>
+    <div class="capability-item__title text-medium text-uppercase">5 САЛОНОВ В <br/> ПРЕМИУМ ЛОКАЦИЯХ</div>
 </li>
             </ul>
           </div>
@@ -666,11 +683,6 @@
           </ul>
         </div>
       </section>
-      <div class="video">
-        <video class="video__block" muted loop playsinline autoplay="true" preload="metadata" poster="img/video-poster.jpg">
-          <source src="./files/home-video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-        </video>
-      </div>
     </main>
     <div class="footer-reveal-wrap">
     <div class="footer-reveal-mask">
@@ -796,15 +808,15 @@
   </div>
 
   <!-- plugins -->
-<script src="js/libs/jquery-3.7.1.min.js?_v=20260223162756"></script>
-<script src="js/libs/swiper-bundle.min.js?_v=20260223162756"></script>
-<script src="js/libs/fancybox.min.js?_v=20260223162756"></script>
-<script src="js/libs/gsap.min.js?_v=20260223162756"></script>
-<script src="js/libs/ScrollTrigger.min.js?_v=20260223162756"></script>
+<script src="js/libs/jquery-3.7.1.min.js?_v=20260408112907"></script>
+<script src="js/libs/swiper-bundle.min.js?_v=20260408112907"></script>
+<script src="js/libs/fancybox.min.js?_v=20260408112907"></script>
+<script src="js/libs/gsap.min.js?_v=20260408112907"></script>
+<script src="js/libs/ScrollTrigger.min.js?_v=20260408112907"></script>
 
 <!-- plugins -->
 
-<script src="js/app.min.js?_v=20260223162756"></script>
+<script src="js/app.min.js?_v=20260408112907"></script>
 </body>
 
 </html>

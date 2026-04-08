@@ -1,31 +1,38 @@
 .services-slider {
 	width: 100%;
 	padding: 0 rem(16);
+
 	@media (min-width: $md6) {
 		padding: 0 rem(50);
 	}
+
 	@media (max-width: $md5) {
 		.swiper-wrapper {
 			flex-direction: column;
 			gap: rem(11);
 		}
 	}
+
 	@media (min-width: $md5) {
 		width: fit-content;
 		padding: 0;
 	}
+
 	// .services-slider__slide
 	&__slide {
 		position: relative;
 		overflow: hidden;
 		aspect-ratio: math.div(394, 293);
 		width: 100%;
+
 		@media (min-width: $md5) {
 			width: rem(220);
 		}
+
 		@media (min-width: $md3) {
 			width: rem(394);
 		}
+
 		@media (any-hover: hover) {
 			&:hover {
 				.services-slider__slide-image img {
@@ -34,12 +41,14 @@
 			}
 		}
 	}
+
 	// .services-slider__slide-image
 	&__slide-image {
 		& img {
 			transition: transform 0.3s ease;
 		}
 	}
+
 	// .services-slider__slide-name
 	&__slide-name {
 		position: absolute;
@@ -47,6 +56,7 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		font-size: rem(16);
+
 		@media (min-width: $md3) {
 			font-size: rem(20);
 		}
@@ -55,91 +65,105 @@
 
 .catalog {
 	padding: rem(26) 0rem rem(32);
+
 	@media (min-width: $md6) {
 		padding: rem(26) 1rem rem(32);
 	}
+
 	@media (min-width: $md5) {
 		padding: rem(60) 0 rem(100);
 	}
+
 	// .catalog__content
 	&__content {
 		max-width: rem(1250);
 	}
+
 	&__title {
 		text-transform: none;
 	}
+
 	&__description {
 		max-width: rem(810);
 		margin-top: rem(20);
 		margin-inline: auto;
 	}
+
 	&__header {
 		.section-header__caption {
 			color: rgba($color: $grey, $alpha: 0.8);
 		}
 	}
+
 	// .catalog__caption
 	&__caption {
 		display: flex;
 		gap: rem(7);
 		margin-top: rem(10);
+
 		@media (min-width: $md3) {
-			margin-top: rem(28);
+			margin-top: rem(40);
 			gap: rem(20);
 		}
 	}
+
 	// .catalog__filter-toggler
 	&__filter-toggler {
 		gap: 0.25rem;
-		min-width: rem(70);
-		@media (min-width: $md3) {
-			min-width: rem(190);
-		}
+
+
 		&::before {
 			font-size: 0.5rem;
 			transform: rotate(180deg);
 			transition: transform 0.3s ease;
+
 			@media (max-width: $md3) {
 				display: none;
 			}
 		}
+
 		&.active {
 			&.btn {
 				background: $grey;
 				color: $black;
 			}
+
 			&::before {
 				transform: none;
 			}
 		}
 	}
+
 	&__filter-text {
 		display: none;
+
 		@media (min-width: $md3) {
 			display: inline;
 		}
 	}
-	&__filter-icon {
-		@media (min-width: $md3) {
-			display: none;
-		}
-	}
+
+	&__filter-icon {}
+
 	// .catalog__select
 	&__select {
 		display: none;
+
 		@media (min-width: $md3) {
 			display: flex;
 			flex-direction: column;
 			flex-shrink: 0;
-			min-width: rem(245);
 		}
 	}
+
 	// .catalog__search
 	&__search {
 		position: relative;
-		flex: 1 1 auto;
 		display: block;
+		margin-left: auto;
+		width: 14.3125rem;
+		transition: all 0.3s ease;
 	}
+
 	// .catalog__search-submit
 	&__search-submit {
 		color: rgba(228, 228, 228, 0.8);
@@ -158,22 +182,31 @@
 			}
 		}
 	}
+
 	// .catalog__search-input
 	&__search-input {
 		width: 100%;
 		text-overflow: ellipsis;
 		background: transparent;
-		color: $grey;
+		color: #fff;
 		border: rem(1) solid $grey;
 		padding: rem(4) rem(12) rem(4) 2.31rem;
 		border-radius: 6.25rem;
+
 		@media (min-width: $md5) {
-			padding: 0.62rem 1.44rem 0.62rem 2.31rem;
+			padding: 0.55rem 1.44rem 0.55rem 2.31rem;
 		}
+
+		&::placeholder {
+			color: rgba(228, 228, 228, 0.80);
+			opacity: 1;
+		}
+
 		&:focus {
 			border-bottom: rem(1) solid $grey;
 		}
 	}
+
 	// .catalog__filters
 	&__filters {
 		display: flex;
@@ -181,105 +214,128 @@
 		gap: rem(4);
 		max-width: rem(850);
 		margin-top: rem(24);
+
 		@media (min-width: $md3) {
-			margin-top: rem(60);
+			margin-top: 1.25rem;
 			row-gap: rem(13);
 		}
 	}
+
 	// .catalog__filter
 	&__filter {
 		cursor: pointer;
 	}
+
 	// .catalog__filter-input
 	&__filter-input {
 		&:checked {
-			& ~ .catalog__filter-btn {
+			&~.catalog__filter-btn {
 				background: rgba(228, 228, 228, 1);
 				color: $black;
 			}
 		}
 	}
+
 	// .catalog__filter-btn
-	&__filter-btn {
-	}
+	&__filter-btn {}
+
 	// .catalog__grid
 	&__grid {
 		display: grid;
 		gap: 2rem;
 		margin-top: rem(24);
 		grid-template-columns: repeat(auto-fill, minmax(rem(220), 1fr));
+
 		&--small {
 			max-width: rem(932);
 			margin-inline: auto;
 		}
+
 		@media (min-width: $md4) {
 			grid-template-columns: repeat(auto-fill, minmax(rem(264), 1fr));
 			margin-top: rem(80);
 		}
+
 		@media (min-width: $md2) {
 			gap: 4rem;
 			row-gap: 5.5rem;
 		}
 	}
+
 	&__carousel {
 		max-width: rem(932);
 		overflow: visible;
 		margin-inline: auto;
 		margin-top: rem(40);
+
 		@media (min-width: $md4) {
 			margin-top: rem(60);
 		}
+
 		.swiper-slide {
 			width: rem(264);
 		}
 	}
+
 	// .catalog__slider
 	&__slider {
 		margin-top: rem(24);
+
 		@media (max-width: $md5) {
 			.swiper-wrapper {
 				flex-direction: column;
 				gap: 3.25rem;
 			}
 		}
+
 		@media (min-width: $md5) {
 			overflow: visible;
 		}
+
 		@media (min-width: $md4) {
 			margin-top: rem(80);
 		}
 	}
+
 	// .catalog__slide
 	&__slide {
 		width: 100%;
+
 		@media (min-width: $md5) {
 			width: rem(380);
 		}
+
 		.product-card__footer {
 			margin-top: rem(40);
 			gap: 1.5rem;
 			align-self: flex-start;
 		}
 	}
+
 	// .catalog__slider-prev
 	&__slider-prev {
 		@media (max-width: $md5) {
 			display: none;
 		}
+
 		&.swiper-button-prev {
 			left: 0;
+
 			@media (min-width: $md1) {
 				left: -5rem;
 			}
 		}
 	}
+
 	// .catalog__slider-next
 	&__slider-next {
 		@media (max-width: $md5) {
 			display: none;
 		}
+
 		&.swiper-button-next {
 			right: 0;
+
 			@media (min-width: $md1) {
 				right: -5rem;
 			}
@@ -290,15 +346,18 @@
 .product-card {
 	display: flex;
 	flex-direction: column;
+
 	// .product-card__image
 	&__image {
 		display: block;
 		border-radius: 0.0625rem;
 		overflow: hidden;
 		aspect-ratio: math.div(264, 200);
+
 		& img {
 			transition: transform 0.3s ease;
 		}
+
 		@media (any-hover: hover) {
 			&:hover {
 				& img {
@@ -307,21 +366,25 @@
 			}
 		}
 	}
+
 	// .product-card__info
 	&__info {
 		margin-top: 1.5rem;
 		flex: 1 1 auto;
 	}
+
 	// .product-card__name
 	&__name {
 		font-size: rem(20);
 		transition: color 0.3s ease;
+
 		@media (any-hover: hover) {
 			&:hover {
 				color: $red;
 			}
 		}
 	}
+
 	// .product-card__stats
 	&__stats {
 		margin-top: rem(40);
@@ -329,18 +392,20 @@
 		display: flex;
 		justify-content: space-between;
 	}
+
 	// .product-card__stat
 	&__stat {
 		display: flex;
 		align-items: center;
 		gap: rem(10);
 	}
+
 	// .product-card__stat-icon
-	&__stat-icon {
-	}
+	&__stat-icon {}
+
 	// .product-card__stat-value
-	&__stat-value {
-	}
+	&__stat-value {}
+
 	// .product-card__desc
 	&__desc {
 		margin-top: 0.88rem;
@@ -348,6 +413,7 @@
 		line-height: 120%;
 		color: rgba(228, 228, 228, 0.8);
 	}
+
 	// .product-card__prices
 	&__prices {
 		margin-top: 1.75rem;
@@ -356,6 +422,7 @@
 		gap: 1.12rem;
 		flex-wrap: wrap;
 	}
+
 	// .product-card__prices-item
 	&__prices-item {
 		display: flex;
@@ -366,14 +433,17 @@
 		font-size: 1rem;
 		line-height: 120%;
 	}
+
 	// .product-card__prices-label
 	&__prices-label {
 		display: block;
+
 		.product-card__prices-btn {
 			cursor: pointer;
 			transition:
 				color 0.3s ease,
 				background-color 0.3s ease;
+
 			@media (any-hover: hover) {
 				&:hover {
 					color: $black;
@@ -382,15 +452,17 @@
 			}
 		}
 	}
+
 	// .product-card__prices-input
 	&__prices-input {
 		&:checked {
-			& ~ .product-card__prices-btn {
+			&~.product-card__prices-btn {
 				background: $grey;
 				color: $black;
 			}
 		}
 	}
+
 	// .product-card__prices-btn
 	&__prices-btn {
 		padding: 0.1rem 0.5rem;
@@ -398,6 +470,7 @@
 		border: rem(1) solid;
 		border-radius: 6.25rem;
 		display: block;
+
 		&.active {
 			background: #e4e4e4;
 			color: #151515;
@@ -405,29 +478,33 @@
 	}
 
 	// .product-card__prices-value
-	&__prices-value {
-	}
+	&__prices-value {}
+
 	// .product-card__footer
 	&__footer {
 		margin-top: 1.12rem;
 		display: flex;
 		gap: 0.31rem;
 	}
+
 	// .product-card__btn
 	&__btn {
 		flex: 1 1 auto;
 		min-height: rem(40);
 		width: rem(180);
 	}
+
 	// .product-card__cart
 	&__cart {
 		min-height: rem(40);
 		width: 3.75rem;
 		flex-shrink: 0;
 	}
+
 	&__whatsapp {
 		font-size: rem(36);
 		transition: color 0.3s ease;
+
 		@media (any-hover: hover) {
 			&:hover {
 				color: $red;

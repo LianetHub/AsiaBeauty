@@ -8,12 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- plugins -->
-    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20260223162756" />
-    <link rel="stylesheet" href="css/libs/fancybox.css?_v=20260223162756" />
+    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20260408112907" />
+    <link rel="stylesheet" href="css/libs/fancybox.css?_v=20260408112907" />
     <!-- plugins -->
 
-    <link rel="stylesheet" href="css/reset.min.css?_v=20260223162756" />
-    <link rel="stylesheet" href="css/style.min.css?_v=20260223162756" />
+    <link rel="stylesheet" href="css/reset.min.css?_v=20260408112907" />
+    <link rel="stylesheet" href="css/style.min.css?_v=20260408112907" />
 
 </head>
 
@@ -134,20 +134,18 @@
           </div>
           <div class="certs__tabs tabs">
     <div class="certs__tabs-btns">
-        <button type="button" class="certs__tabs-btn btn btn-white-outline btn-lg tab-btn">на сумму</button>
-        <button type="button" class="certs__tabs-btn btn btn-white-outline btn-lg tab-btn">для двоих</button>
-        <button type="button" class="certs__tabs-btn btn btn-white-outline btn-lg tab-btn">для нее</button>
-        <button type="button" class="certs__tabs-btn btn btn-white-outline btn-lg tab-btn active">для него</button>
+        <button type="button" class="certs__tabs-btn btn btn-grey btn-lg tab-btn active">на сумму</button>
+        <button type="button" class="certs__tabs-btn btn btn-grey btn-lg tab-btn">для двоих</button>
+        <button type="button" class="certs__tabs-btn btn btn-grey btn-lg tab-btn">для нее</button>
+        <button type="button" class="certs__tabs-btn btn btn-grey btn-lg tab-btn">для него</button>
     </div>
 
     <div class="certs__tabs-content">
         <!-- === ТАБ 1: На сумму === -->
-        <div class="tab-content">
+        <div class="tab-content active">
             <div class="certs__block">
-                <div class="certs__image">
-                    <img src="img/certs/01.jpg" class="cover-image" alt="Сертификат">
-                </div>
                 <div class="certs__block-body">
+                    <div class="certs__caption">Номинал сертификата:</div>
                     <div class="certs__items">
                         <label class="certs__item text-medium">
                             <input type="radio" name="cert_amount" value="10000" class="certs__item-input hidden" hidden>
@@ -162,10 +160,6 @@
                             <span class="certs__item-btn">20 000 ₽</span>
                         </label>
                         <label class="certs__item text-medium">
-                            <input type="radio" name="cert_amount" value="30000" class="certs__item-input hidden" hidden>
-                            <span class="certs__item-btn">30 000 ₽</span>
-                        </label>
-                        <label class="certs__item text-medium">
                             <input type="radio" checked name="cert_amount" value="40000" class="certs__item-input hidden" hidden>
                             <span class="certs__item-btn">40 000 ₽</span>
                         </label>
@@ -176,10 +170,6 @@
                         <label class="certs__item text-medium">
                             <input type="radio" name="cert_amount" value="100000" class="certs__item-input hidden" hidden>
                             <span class="certs__item-btn">100 000 ₽</span>
-                        </label>
-                        <label class="certs__item text-medium">
-                            <input type="radio" name="cert_amount" value="200000" class="certs__item-input hidden" hidden>
-                            <span class="certs__item-btn">200 000 ₽</span>
                         </label>
                     </div>
                     <div class="certs__total">
@@ -194,10 +184,44 @@
                             </div>
                         </div>
                     </div>
-                    <div class="certs__block-footer">
-                        <button type="submit" class="certs__btn btn btn-primary btn-lg">Выбрать</button>
-                        <a href="" class="certs__cart btn btn-white-outline btn-lg icon-cart"></a>
+                </div>
+                <div class="certs__side">
+                    <div class="certs__caption">Выбрать дизайн сертификата:</div>
+                    <div class="certs__cards">
+                        <div class="certs__card active">
+                            <img src="img/certs/01.jpg" class="cover-image" alt="Фото сертификата">
+                        </div>
+                        <div class="certs__card">
+                            <img src="img/certs/02.jpg" class="cover-image" alt="Фото сертификата">
+                        </div>
+                        <div class="certs__card">
+                            <img src="img/certs/03.jpg" class="cover-image" alt="Фото сертификата">
+                        </div>
+                        <div class="certs__card">
+                            <img src="img/certs/04.jpg" class="cover-image" alt="Фото сертификата">
+                        </div>
+                        <div class="certs__card">
+                            <img src="img/certs/05.jpg" class="cover-image" alt="Фото сертификата">
+                        </div>
+                        <div class="certs__card">
+                            <img src="img/certs/02.jpg" class="cover-image" alt="Фото сертификата">
+                        </div>
                     </div>
+                    <div class="certs__types">
+                        <label class="certs__type">
+                            <input type="radio" name="cert_type" checked value="1" class="certs__type-input hidden" hidden>
+                            <span class="certs__type-btn">пластиковая</span>
+                        </label>
+                        <label class="certs__type">
+                            <input type="radio" name="cert_type" value="2" class="certs__type-input hidden" hidden>
+                            <span class="certs__type-btn">виртуальная</span>
+                        </label>
+                    </div>
+                    <div class="certs__sum">
+                        <div class="certs__sum-caption">Итого:</div>
+                        <div class="certs__sum-value">= 80 000 ₽</div>
+                    </div>
+                    <button class="certs__add-to-cart btn btn-primary btn-lg icon-shopping-bag">Добавить в корзину</button>
                 </div>
             </div>
         </div>
@@ -293,7 +317,7 @@
         </div>
 
         <!-- === ТАБ 4: Для него === -->
-        <div class="tab-content active">
+        <div class="tab-content ">
             <div class="certs__block">
                 <div class="certs__slider">
                     <div class="certs__slider-main swiper">
@@ -603,15 +627,15 @@
 </div>
   </div>
   <!-- plugins -->
-<script src="js/libs/jquery-3.7.1.min.js?_v=20260223162756"></script>
-<script src="js/libs/swiper-bundle.min.js?_v=20260223162756"></script>
-<script src="js/libs/fancybox.min.js?_v=20260223162756"></script>
-<script src="js/libs/gsap.min.js?_v=20260223162756"></script>
-<script src="js/libs/ScrollTrigger.min.js?_v=20260223162756"></script>
+<script src="js/libs/jquery-3.7.1.min.js?_v=20260408112907"></script>
+<script src="js/libs/swiper-bundle.min.js?_v=20260408112907"></script>
+<script src="js/libs/fancybox.min.js?_v=20260408112907"></script>
+<script src="js/libs/gsap.min.js?_v=20260408112907"></script>
+<script src="js/libs/ScrollTrigger.min.js?_v=20260408112907"></script>
 
 <!-- plugins -->
 
-<script src="js/app.min.js?_v=20260223162756"></script>
+<script src="js/app.min.js?_v=20260408112907"></script>
 </body>
 
 </html>
