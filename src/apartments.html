@@ -40,8 +40,34 @@
                                 <div class="section-header">
                                     <div class="section-header__caption caption">Апартаменты</div>
                                 </div>
-                               <div class="catalog__caption">
-                                    <button type="button" class="catalog__filter-toggler btn btn-white btn-lg icon-triangle active">
+                                <div class="catalog__filters">
+                                    <label class="catalog__filter">
+                                        <input type="checkbox" name="place" checked value="mayakovskaya" class="catalog__filter-input hidden" hidden>
+                                        <span class="catalog__filter-btn btn btn-white-outline btn-lg">Маяковская</span>
+                                    </label>
+
+                                    <label class="catalog__filter">
+                                        <input type="checkbox" name="place" value="smolenskaya" class="catalog__filter-input hidden" hidden>
+                                        <span class="catalog__filter-btn btn btn-white-outline btn-lg">Смоленская</span>
+                                    </label>
+
+                                    <label class="catalog__filter">
+                                        <input type="checkbox" name="place" value="siti" class="catalog__filter-input hidden" hidden>
+                                        <span class="catalog__filter-btn btn btn-white-outline btn-lg">Сити</span>
+                                    </label>
+
+                                    <label class="catalog__filter">
+                                        <input type="checkbox" name="place" value="polyanka" class="catalog__filter-input hidden" hidden>
+                                        <span class="catalog__filter-btn btn btn-white-outline btn-lg">Полянка</span>
+                                    </label>
+
+                                    <label class="catalog__filter">
+                                        <input type="checkbox" name="place" value="kievskaya" class="catalog__filter-input hidden" hidden>
+                                        <span class="catalog__filter-btn btn btn-white-outline btn-lg">Киевская</span>
+                                    </label>
+                                </div>
+                                <div class="catalog__caption">
+                                    <button type="button" class="catalog__filter-toggler btn btn-grey btn-lg active">
                                         <span class="catalog__filter-text">Фильтр</span>
                                         <span class="catalog__filter-icon icon-filter"></span>
                                     </button>
@@ -63,54 +89,27 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="catalog__filters">
-                                <label class="catalog__filter">
-                                    <input type="checkbox" name="place" checked value="mayakovskaya" class="catalog__filter-input hidden" hidden>
-                                    <span class="catalog__filter-btn btn btn-white-outline btn-lg">Маяковская</span>
-                                </label>
-
-                                <label class="catalog__filter">
-                                    <input type="checkbox" name="place" value="smolenskaya" class="catalog__filter-input hidden" hidden>
-                                    <span class="catalog__filter-btn btn btn-white-outline btn-lg">Смоленская</span>
-                                </label>
-
-                                <label class="catalog__filter">
-                                    <input type="checkbox" name="place" value="siti" class="catalog__filter-input hidden" hidden>
-                                    <span class="catalog__filter-btn btn btn-white-outline btn-lg">Сити</span>
-                                </label>
-
-                                <label class="catalog__filter">
-                                    <input type="checkbox" name="place" value="polyanka" class="catalog__filter-input hidden" hidden>
-                                    <span class="catalog__filter-btn btn btn-white-outline btn-lg">Полянка</span>
-                                </label>
-
-                                <label class="catalog__filter">
-                                    <input type="checkbox" name="place" value="kievskaya" class="catalog__filter-input hidden" hidden>
-                                    <span class="catalog__filter-btn btn btn-white-outline btn-lg">Киевская</span>
-                                </label>
-                            </div>
-
                             <div class="catalog__slider swiper">
                                 <div class="swiper-wrapper">
-                                    <div class="catalog__slide swiper-slide">
+                                    <div class="catalog__slide catalog__slide--large swiper-slide">
                                         @@include('./html/templates/_appartaments-card.html')
                                     </div>
-                                    <div class="catalog__slide swiper-slide">
+                                    <div class="catalog__slide catalog__slide--large swiper-slide">
                                         @@include('./html/templates/_appartaments-card.html')
                                     </div>
-                                    <div class="catalog__slide swiper-slide">
+                                    <div class="catalog__slide catalog__slide--large swiper-slide">
                                         @@include('./html/templates/_appartaments-card.html')
                                     </div>
-                                    <div class="catalog__slide swiper-slide">
+                                    <div class="catalog__slide catalog__slide--large swiper-slide">
                                         @@include('./html/templates/_appartaments-card.html')
                                     </div>
-                                    <div class="catalog__slide swiper-slide">
+                                    <div class="catalog__slide catalog__slide--large swiper-slide">
                                         @@include('./html/templates/_appartaments-card.html')
                                     </div>
-                                    <div class="catalog__slide swiper-slide">
+                                    <div class="catalog__slide catalog__slide--large swiper-slide">
                                         @@include('./html/templates/_appartaments-card.html')
                                     </div>
-                                    <div class="catalog__slide swiper-slide">
+                                    <div class="catalog__slide catalog__slide--large swiper-slide">
                                         @@include('./html/templates/_appartaments-card.html')
                                     </div>
                                 </div>

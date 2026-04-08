@@ -383,7 +383,7 @@ $(function () {
         new ConditionsSwiper('.catalog__slider', {
             slidesPerView: "auto",
             speed: 800,
-            spaceBetween: 90,
+            spaceBetween: 20,
             watchOverflow: true,
             navigation: {
                 nextEl: ".catalog__slider-next",

@@ -8,12 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- plugins -->
-    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20260408112907" />
-    <link rel="stylesheet" href="css/libs/fancybox.css?_v=20260408112907" />
+    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20260408113753" />
+    <link rel="stylesheet" href="css/libs/fancybox.css?_v=20260408113753" />
     <!-- plugins -->
 
-    <link rel="stylesheet" href="css/reset.min.css?_v=20260408112907" />
-    <link rel="stylesheet" href="css/style.min.css?_v=20260408112907" />
+    <link rel="stylesheet" href="css/reset.min.css?_v=20260408113753" />
+    <link rel="stylesheet" href="css/style.min.css?_v=20260408113753" />
 
 </head>
 
@@ -125,8 +125,34 @@
               <div class="section-header">
                 <div class="section-header__caption caption">Апартаменты</div>
               </div>
+              <div class="catalog__filters">
+                <label class="catalog__filter">
+                  <input type="checkbox" name="place" checked value="mayakovskaya" class="catalog__filter-input hidden" hidden>
+                  <span class="catalog__filter-btn btn btn-white-outline btn-lg">Маяковская</span>
+                </label>
+
+                <label class="catalog__filter">
+                  <input type="checkbox" name="place" value="smolenskaya" class="catalog__filter-input hidden" hidden>
+                  <span class="catalog__filter-btn btn btn-white-outline btn-lg">Смоленская</span>
+                </label>
+
+                <label class="catalog__filter">
+                  <input type="checkbox" name="place" value="siti" class="catalog__filter-input hidden" hidden>
+                  <span class="catalog__filter-btn btn btn-white-outline btn-lg">Сити</span>
+                </label>
+
+                <label class="catalog__filter">
+                  <input type="checkbox" name="place" value="polyanka" class="catalog__filter-input hidden" hidden>
+                  <span class="catalog__filter-btn btn btn-white-outline btn-lg">Полянка</span>
+                </label>
+
+                <label class="catalog__filter">
+                  <input type="checkbox" name="place" value="kievskaya" class="catalog__filter-input hidden" hidden>
+                  <span class="catalog__filter-btn btn btn-white-outline btn-lg">Киевская</span>
+                </label>
+              </div>
               <div class="catalog__caption">
-                <button type="button" class="catalog__filter-toggler btn btn-white btn-lg icon-triangle active">
+                <button type="button" class="catalog__filter-toggler btn btn-grey btn-lg active">
                   <span class="catalog__filter-text">Фильтр</span>
                   <span class="catalog__filter-icon icon-filter"></span>
                 </button>
@@ -148,276 +174,207 @@
                 </div>
               </div>
             </div>
-            <div class="catalog__filters">
-              <label class="catalog__filter">
-                <input type="checkbox" name="place" checked value="mayakovskaya" class="catalog__filter-input hidden" hidden>
-                <span class="catalog__filter-btn btn btn-white-outline btn-lg">Маяковская</span>
-              </label>
-
-              <label class="catalog__filter">
-                <input type="checkbox" name="place" value="smolenskaya" class="catalog__filter-input hidden" hidden>
-                <span class="catalog__filter-btn btn btn-white-outline btn-lg">Смоленская</span>
-              </label>
-
-              <label class="catalog__filter">
-                <input type="checkbox" name="place" value="siti" class="catalog__filter-input hidden" hidden>
-                <span class="catalog__filter-btn btn btn-white-outline btn-lg">Сити</span>
-              </label>
-
-              <label class="catalog__filter">
-                <input type="checkbox" name="place" value="polyanka" class="catalog__filter-input hidden" hidden>
-                <span class="catalog__filter-btn btn btn-white-outline btn-lg">Полянка</span>
-              </label>
-
-              <label class="catalog__filter">
-                <input type="checkbox" name="place" value="kievskaya" class="catalog__filter-input hidden" hidden>
-                <span class="catalog__filter-btn btn btn-white-outline btn-lg">Киевская</span>
-              </label>
-            </div>
-
             <div class="catalog__slider swiper">
               <div class="swiper-wrapper">
-                <div class="catalog__slide swiper-slide">
-                  <div class="product-card" data-animate="card">
+                <div class="catalog__slide catalog__slide--large swiper-slide">
+                  <div class="product-card product-card--appartament" data-animate="card">
     <a href="place.html" class="product-card__image">
         <img src="img/apartaments-photo.png" class="cover-image" alt="Фото товара">
     </a>
     <div class="product-card__info">
         <a href="place.html" class="product-card__name text-medium text-uppercase">Апартаменты Смоленская</a>
+        <p class="product-card__desc">Уютные апартаменты спа-салона оформлены в расслабляющем стиле с современными удобствами, создавая идеальную атмосферу для отдыха и восстановления.</p>
         <div class="product-card__stats">
             <div class="product-card__stat">
                 <div class="product-card__stat-icon">
-                    <img src="img/icons/people.svg" alt="Иконка">
+                    <img src="img/icons/clock.svg" alt="Иконка">
                 </div>
-                <div class="product-card__stat-value">4 чел</div>
+                <div class="product-card__stat-value">2 часа</div>
             </div>
             <div class="product-card__stat">
                 <div class="product-card__stat-icon">
-                    <img src="img/icons/square.svg" alt="Иконка">
+                    <img src="img/icons/rubble.svg" alt="Иконка">
                 </div>
-                <div class="product-card__stat-value">30 кв.м</div>
-            </div>
-            <div class="product-card__stat">
-                <div class="product-card__stat-icon">
-                    <img src="img/icons/coctail.svg" alt="Иконка">
-                </div>
-                <div class="product-card__stat-value">Бар, кухня</div>
+                <div class="product-card__stat-value">22 000 -28 000 ₽</div>
             </div>
         </div>
-        <p class="product-card__desc">Уютные апартаменты спа-салона оформлены в расслабляющем стиле с современными удобствами, создавая идеальную атмосферу для отдыха и восстановления.</p>
     </div>
     <div class="product-card__footer">
-        <a href="place.html" class="product-card__btn btn btn-white btn-lg">Подробнее</a>
+        <a href="place.html" class="product-card__btn btn btn-primary btn-lg">Забронировать</a>
         <a href="" class="product-card__whatsapp icon-whatsapp-outline"></a>
     </div>
 </div>
                 </div>
-                <div class="catalog__slide swiper-slide">
-                  <div class="product-card" data-animate="card">
+                <div class="catalog__slide catalog__slide--large swiper-slide">
+                  <div class="product-card product-card--appartament" data-animate="card">
     <a href="place.html" class="product-card__image">
         <img src="img/apartaments-photo.png" class="cover-image" alt="Фото товара">
     </a>
     <div class="product-card__info">
         <a href="place.html" class="product-card__name text-medium text-uppercase">Апартаменты Смоленская</a>
+        <p class="product-card__desc">Уютные апартаменты спа-салона оформлены в расслабляющем стиле с современными удобствами, создавая идеальную атмосферу для отдыха и восстановления.</p>
         <div class="product-card__stats">
             <div class="product-card__stat">
                 <div class="product-card__stat-icon">
-                    <img src="img/icons/people.svg" alt="Иконка">
+                    <img src="img/icons/clock.svg" alt="Иконка">
                 </div>
-                <div class="product-card__stat-value">4 чел</div>
+                <div class="product-card__stat-value">2 часа</div>
             </div>
             <div class="product-card__stat">
                 <div class="product-card__stat-icon">
-                    <img src="img/icons/square.svg" alt="Иконка">
+                    <img src="img/icons/rubble.svg" alt="Иконка">
                 </div>
-                <div class="product-card__stat-value">30 кв.м</div>
-            </div>
-            <div class="product-card__stat">
-                <div class="product-card__stat-icon">
-                    <img src="img/icons/coctail.svg" alt="Иконка">
-                </div>
-                <div class="product-card__stat-value">Бар, кухня</div>
+                <div class="product-card__stat-value">22 000 -28 000 ₽</div>
             </div>
         </div>
-        <p class="product-card__desc">Уютные апартаменты спа-салона оформлены в расслабляющем стиле с современными удобствами, создавая идеальную атмосферу для отдыха и восстановления.</p>
     </div>
     <div class="product-card__footer">
-        <a href="place.html" class="product-card__btn btn btn-white btn-lg">Подробнее</a>
+        <a href="place.html" class="product-card__btn btn btn-primary btn-lg">Забронировать</a>
         <a href="" class="product-card__whatsapp icon-whatsapp-outline"></a>
     </div>
 </div>
                 </div>
-                <div class="catalog__slide swiper-slide">
-                  <div class="product-card" data-animate="card">
+                <div class="catalog__slide catalog__slide--large swiper-slide">
+                  <div class="product-card product-card--appartament" data-animate="card">
     <a href="place.html" class="product-card__image">
         <img src="img/apartaments-photo.png" class="cover-image" alt="Фото товара">
     </a>
     <div class="product-card__info">
         <a href="place.html" class="product-card__name text-medium text-uppercase">Апартаменты Смоленская</a>
+        <p class="product-card__desc">Уютные апартаменты спа-салона оформлены в расслабляющем стиле с современными удобствами, создавая идеальную атмосферу для отдыха и восстановления.</p>
         <div class="product-card__stats">
             <div class="product-card__stat">
                 <div class="product-card__stat-icon">
-                    <img src="img/icons/people.svg" alt="Иконка">
+                    <img src="img/icons/clock.svg" alt="Иконка">
                 </div>
-                <div class="product-card__stat-value">4 чел</div>
+                <div class="product-card__stat-value">2 часа</div>
             </div>
             <div class="product-card__stat">
                 <div class="product-card__stat-icon">
-                    <img src="img/icons/square.svg" alt="Иконка">
+                    <img src="img/icons/rubble.svg" alt="Иконка">
                 </div>
-                <div class="product-card__stat-value">30 кв.м</div>
-            </div>
-            <div class="product-card__stat">
-                <div class="product-card__stat-icon">
-                    <img src="img/icons/coctail.svg" alt="Иконка">
-                </div>
-                <div class="product-card__stat-value">Бар, кухня</div>
+                <div class="product-card__stat-value">22 000 -28 000 ₽</div>
             </div>
         </div>
-        <p class="product-card__desc">Уютные апартаменты спа-салона оформлены в расслабляющем стиле с современными удобствами, создавая идеальную атмосферу для отдыха и восстановления.</p>
     </div>
     <div class="product-card__footer">
-        <a href="place.html" class="product-card__btn btn btn-white btn-lg">Подробнее</a>
+        <a href="place.html" class="product-card__btn btn btn-primary btn-lg">Забронировать</a>
         <a href="" class="product-card__whatsapp icon-whatsapp-outline"></a>
     </div>
 </div>
                 </div>
-                <div class="catalog__slide swiper-slide">
-                  <div class="product-card" data-animate="card">
+                <div class="catalog__slide catalog__slide--large swiper-slide">
+                  <div class="product-card product-card--appartament" data-animate="card">
     <a href="place.html" class="product-card__image">
         <img src="img/apartaments-photo.png" class="cover-image" alt="Фото товара">
     </a>
     <div class="product-card__info">
         <a href="place.html" class="product-card__name text-medium text-uppercase">Апартаменты Смоленская</a>
+        <p class="product-card__desc">Уютные апартаменты спа-салона оформлены в расслабляющем стиле с современными удобствами, создавая идеальную атмосферу для отдыха и восстановления.</p>
         <div class="product-card__stats">
             <div class="product-card__stat">
                 <div class="product-card__stat-icon">
-                    <img src="img/icons/people.svg" alt="Иконка">
+                    <img src="img/icons/clock.svg" alt="Иконка">
                 </div>
-                <div class="product-card__stat-value">4 чел</div>
+                <div class="product-card__stat-value">2 часа</div>
             </div>
             <div class="product-card__stat">
                 <div class="product-card__stat-icon">
-                    <img src="img/icons/square.svg" alt="Иконка">
+                    <img src="img/icons/rubble.svg" alt="Иконка">
                 </div>
-                <div class="product-card__stat-value">30 кв.м</div>
-            </div>
-            <div class="product-card__stat">
-                <div class="product-card__stat-icon">
-                    <img src="img/icons/coctail.svg" alt="Иконка">
-                </div>
-                <div class="product-card__stat-value">Бар, кухня</div>
+                <div class="product-card__stat-value">22 000 -28 000 ₽</div>
             </div>
         </div>
-        <p class="product-card__desc">Уютные апартаменты спа-салона оформлены в расслабляющем стиле с современными удобствами, создавая идеальную атмосферу для отдыха и восстановления.</p>
     </div>
     <div class="product-card__footer">
-        <a href="place.html" class="product-card__btn btn btn-white btn-lg">Подробнее</a>
+        <a href="place.html" class="product-card__btn btn btn-primary btn-lg">Забронировать</a>
         <a href="" class="product-card__whatsapp icon-whatsapp-outline"></a>
     </div>
 </div>
                 </div>
-                <div class="catalog__slide swiper-slide">
-                  <div class="product-card" data-animate="card">
+                <div class="catalog__slide catalog__slide--large swiper-slide">
+                  <div class="product-card product-card--appartament" data-animate="card">
     <a href="place.html" class="product-card__image">
         <img src="img/apartaments-photo.png" class="cover-image" alt="Фото товара">
     </a>
     <div class="product-card__info">
         <a href="place.html" class="product-card__name text-medium text-uppercase">Апартаменты Смоленская</a>
+        <p class="product-card__desc">Уютные апартаменты спа-салона оформлены в расслабляющем стиле с современными удобствами, создавая идеальную атмосферу для отдыха и восстановления.</p>
         <div class="product-card__stats">
             <div class="product-card__stat">
                 <div class="product-card__stat-icon">
-                    <img src="img/icons/people.svg" alt="Иконка">
+                    <img src="img/icons/clock.svg" alt="Иконка">
                 </div>
-                <div class="product-card__stat-value">4 чел</div>
+                <div class="product-card__stat-value">2 часа</div>
             </div>
             <div class="product-card__stat">
                 <div class="product-card__stat-icon">
-                    <img src="img/icons/square.svg" alt="Иконка">
+                    <img src="img/icons/rubble.svg" alt="Иконка">
                 </div>
-                <div class="product-card__stat-value">30 кв.м</div>
-            </div>
-            <div class="product-card__stat">
-                <div class="product-card__stat-icon">
-                    <img src="img/icons/coctail.svg" alt="Иконка">
-                </div>
-                <div class="product-card__stat-value">Бар, кухня</div>
+                <div class="product-card__stat-value">22 000 -28 000 ₽</div>
             </div>
         </div>
-        <p class="product-card__desc">Уютные апартаменты спа-салона оформлены в расслабляющем стиле с современными удобствами, создавая идеальную атмосферу для отдыха и восстановления.</p>
     </div>
     <div class="product-card__footer">
-        <a href="place.html" class="product-card__btn btn btn-white btn-lg">Подробнее</a>
+        <a href="place.html" class="product-card__btn btn btn-primary btn-lg">Забронировать</a>
         <a href="" class="product-card__whatsapp icon-whatsapp-outline"></a>
     </div>
 </div>
                 </div>
-                <div class="catalog__slide swiper-slide">
-                  <div class="product-card" data-animate="card">
+                <div class="catalog__slide catalog__slide--large swiper-slide">
+                  <div class="product-card product-card--appartament" data-animate="card">
     <a href="place.html" class="product-card__image">
         <img src="img/apartaments-photo.png" class="cover-image" alt="Фото товара">
     </a>
     <div class="product-card__info">
         <a href="place.html" class="product-card__name text-medium text-uppercase">Апартаменты Смоленская</a>
+        <p class="product-card__desc">Уютные апартаменты спа-салона оформлены в расслабляющем стиле с современными удобствами, создавая идеальную атмосферу для отдыха и восстановления.</p>
         <div class="product-card__stats">
             <div class="product-card__stat">
                 <div class="product-card__stat-icon">
-                    <img src="img/icons/people.svg" alt="Иконка">
+                    <img src="img/icons/clock.svg" alt="Иконка">
                 </div>
-                <div class="product-card__stat-value">4 чел</div>
+                <div class="product-card__stat-value">2 часа</div>
             </div>
             <div class="product-card__stat">
                 <div class="product-card__stat-icon">
-                    <img src="img/icons/square.svg" alt="Иконка">
+                    <img src="img/icons/rubble.svg" alt="Иконка">
                 </div>
-                <div class="product-card__stat-value">30 кв.м</div>
-            </div>
-            <div class="product-card__stat">
-                <div class="product-card__stat-icon">
-                    <img src="img/icons/coctail.svg" alt="Иконка">
-                </div>
-                <div class="product-card__stat-value">Бар, кухня</div>
+                <div class="product-card__stat-value">22 000 -28 000 ₽</div>
             </div>
         </div>
-        <p class="product-card__desc">Уютные апартаменты спа-салона оформлены в расслабляющем стиле с современными удобствами, создавая идеальную атмосферу для отдыха и восстановления.</p>
     </div>
     <div class="product-card__footer">
-        <a href="place.html" class="product-card__btn btn btn-white btn-lg">Подробнее</a>
+        <a href="place.html" class="product-card__btn btn btn-primary btn-lg">Забронировать</a>
         <a href="" class="product-card__whatsapp icon-whatsapp-outline"></a>
     </div>
 </div>
                 </div>
-                <div class="catalog__slide swiper-slide">
-                  <div class="product-card" data-animate="card">
+                <div class="catalog__slide catalog__slide--large swiper-slide">
+                  <div class="product-card product-card--appartament" data-animate="card">
     <a href="place.html" class="product-card__image">
         <img src="img/apartaments-photo.png" class="cover-image" alt="Фото товара">
     </a>
     <div class="product-card__info">
         <a href="place.html" class="product-card__name text-medium text-uppercase">Апартаменты Смоленская</a>
+        <p class="product-card__desc">Уютные апартаменты спа-салона оформлены в расслабляющем стиле с современными удобствами, создавая идеальную атмосферу для отдыха и восстановления.</p>
         <div class="product-card__stats">
             <div class="product-card__stat">
                 <div class="product-card__stat-icon">
-                    <img src="img/icons/people.svg" alt="Иконка">
+                    <img src="img/icons/clock.svg" alt="Иконка">
                 </div>
-                <div class="product-card__stat-value">4 чел</div>
+                <div class="product-card__stat-value">2 часа</div>
             </div>
             <div class="product-card__stat">
                 <div class="product-card__stat-icon">
-                    <img src="img/icons/square.svg" alt="Иконка">
+                    <img src="img/icons/rubble.svg" alt="Иконка">
                 </div>
-                <div class="product-card__stat-value">30 кв.м</div>
-            </div>
-            <div class="product-card__stat">
-                <div class="product-card__stat-icon">
-                    <img src="img/icons/coctail.svg" alt="Иконка">
-                </div>
-                <div class="product-card__stat-value">Бар, кухня</div>
+                <div class="product-card__stat-value">22 000 -28 000 ₽</div>
             </div>
         </div>
-        <p class="product-card__desc">Уютные апартаменты спа-салона оформлены в расслабляющем стиле с современными удобствами, создавая идеальную атмосферу для отдыха и восстановления.</p>
     </div>
     <div class="product-card__footer">
-        <a href="place.html" class="product-card__btn btn btn-white btn-lg">Подробнее</a>
+        <a href="place.html" class="product-card__btn btn btn-primary btn-lg">Забронировать</a>
         <a href="" class="product-card__whatsapp icon-whatsapp-outline"></a>
     </div>
 </div>
@@ -637,15 +594,15 @@
   </div>
 
   <!-- plugins -->
-<script src="js/libs/jquery-3.7.1.min.js?_v=20260408112907"></script>
-<script src="js/libs/swiper-bundle.min.js?_v=20260408112907"></script>
-<script src="js/libs/fancybox.min.js?_v=20260408112907"></script>
-<script src="js/libs/gsap.min.js?_v=20260408112907"></script>
-<script src="js/libs/ScrollTrigger.min.js?_v=20260408112907"></script>
+<script src="js/libs/jquery-3.7.1.min.js?_v=20260408113753"></script>
+<script src="js/libs/swiper-bundle.min.js?_v=20260408113753"></script>
+<script src="js/libs/fancybox.min.js?_v=20260408113753"></script>
+<script src="js/libs/gsap.min.js?_v=20260408113753"></script>
+<script src="js/libs/ScrollTrigger.min.js?_v=20260408113753"></script>
 
 <!-- plugins -->
 
-<script src="js/app.min.js?_v=20260408112907"></script>
+<script src="js/app.min.js?_v=20260408113753"></script>
 </body>
 
 </html>
