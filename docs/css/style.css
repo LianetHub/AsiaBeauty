@@ -500,6 +500,11 @@ body.lock-filter {
   padding: 2.12rem 3rem;
 }
 
+.cart .f-button.is-close-button {
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
 .cart__header {
   margin-top: 0.62rem;
   display: -webkit-box;
