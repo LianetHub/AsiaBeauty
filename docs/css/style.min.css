@@ -1630,63 +1630,63 @@ body.lock-filter {
     padding: 6.25rem 0;
   }
 }
-.footer__top, .heading__contacts {
+.footer__top {
   display: grid;
   row-gap: 1.25rem;
 }
 @media (min-width: 575.98px) {
-  .footer__top, .heading__contacts {
+  .footer__top {
     row-gap: 2rem;
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (min-width: 767.98px) {
-  .footer__top, .heading__contacts {
+  .footer__top {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (min-width: 991.98px) {
-  .footer__top, .heading__contacts {
+  .footer__top {
     display: flex;
     justify-content: space-between;
     text-align: center;
   }
 }
-.footer__column, .heading__contacts-column {
+.footer__column {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
-.footer__caption, .heading__contacts-column-caption {
+.footer__caption {
   font-size: 0.875rem;
 }
 @media (min-width: 575.98px) {
-  .footer__caption, .heading__contacts-column-caption {
+  .footer__caption {
     font-size: 1rem;
   }
 }
-.footer__column-body, .heading__contacts-column-body {
+.footer__column-body {
   line-height: 1.2;
   font-size: 0.875rem;
   margin-top: 0.5rem;
 }
 @media (min-width: 575.98px) {
-  .footer__column-body, .heading__contacts-column-body {
+  .footer__column-body {
     margin-top: 0.75rem;
     font-size: 1rem;
   }
 }
 @media (min-width: 767.98px) {
-  .footer__column-body, .heading__contacts-column-body {
+  .footer__column-body {
     margin-top: 2.5rem;
   }
 }
-.footer__column-body a, .heading__contacts-column-body a {
+.footer__column-body a {
   transition: color 0.3s ease;
 }
 @media (any-hover: hover) {
-  .footer__column-body a:hover, .heading__contacts-column-body a:hover {
+  .footer__column-body a:hover {
     color: #720806;
   }
 }
@@ -5490,13 +5490,35 @@ body.lock-filter {
 .heading__contacts {
   margin-top: 3.75rem;
   padding-bottom: 3.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
 }
 @media (min-width: 767.98px) {
   .heading__contacts {
-    margin-top: 8.0625rem;
     padding-bottom: 7.5rem;
   }
 }
+.heading__contacts-rows {
+  margin-top: 2rem;
+}
+.heading__contacts-row a {
+  text-decoration: underline;
+}
+@media (any-hover: hover) {
+  .heading__contacts-row a:hover {
+    text-decoration: none;
+  }
+}
+.heading__contacts-column {
+  margin-top: 2rem;
+}
+.heading__contacts-column-socials {
+  margin-top: 0.5rem !important;
+}
+
 .banner__wrapper {
   position: relative;
 }
