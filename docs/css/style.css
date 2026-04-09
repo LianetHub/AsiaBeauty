@@ -781,11 +781,6 @@ body.lock-filter {
   right: 1.5rem;
   overflow: visible;
 }
-@media (min-width: 1199.98px) {
-  .socials-widget {
-    display: none;
-  }
-}
 .socials-widget__btn {
   width: 4.625rem;
   height: 4.625rem;
