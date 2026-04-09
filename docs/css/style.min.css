@@ -2036,14 +2036,8 @@ body.lock-filter {
   background: #000;
 }
 
-@media (min-width: 575.98px) {
-  .home-about {
-    background: url("../img/about.jpg") 0 center/cover no-repeat;
-  }
-}
-
 .description {
-  background: linear-gradient(180deg, rgba(180, 2, 0, 0.63) 0%, rgba(36, 1, 1, 0.63) 100%);
+  background: linear-gradient(180deg, rgba(180, 2, 0, 0.63) 0%, rgba(36, 1, 1, 0.63) 100%), #151515;
   padding: 2rem 0 1.25rem;
   position: relative;
   z-index: 2;
