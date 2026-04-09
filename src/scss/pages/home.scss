@@ -500,6 +500,29 @@
 		}
 	}
 
+	// .locations__videos
+	&__videos {
+		margin-top: rem(32);
+
+		@media (min-width: $md4) {
+			margin-top: rem(50);
+		}
+
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: rem(32);
+
+		@media (min-width:$md4) {
+			gap: rem(50);
+
+		}
+
+		.locations__video {
+			margin-top: 0;
+		}
+	}
+
+	// .locations__video
 	&__video {
 		margin-top: rem(32);
 		width: 100%;
