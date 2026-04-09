@@ -5100,6 +5100,7 @@ body.lock-filter {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  pointer-events: none;
 }
 
 .banner__video--small {
