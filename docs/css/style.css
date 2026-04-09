@@ -2727,6 +2727,7 @@ body.lock-filter {
   background: #282828;
   border: 0.1875rem solid #282828;
   transition: border-color 0.3s ease;
+  cursor: pointer;
 }
 .certs__card {
   position: relative;
@@ -2875,6 +2876,11 @@ body.lock-filter {
   grid-template-columns: repeat(auto-fit, minmax(4.375rem, 1fr));
   gap: 0.25rem;
   max-width: 32.8125rem;
+}
+.certs__items.certs__items--column {
+  display: flex;
+  flex-direction: column;
+  align-items: fs;
 }
 @media (min-width: 767.98px) {
   .certs__items {

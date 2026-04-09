@@ -898,16 +898,28 @@ $(function () {
     $('.certs__block').each(function () {
         const $block = $(this);
         const $totalValue = $block.find('.certs__total-value');
+        const $sumValue = $block.find('.certs__sum-value');
+        const $quantitySelect = $block.find('select');
         const $inputs = $block.find('.certs__item-input');
 
-        $inputs.on('change', function () {
+        function updatePrices() {
             const $checkedInput = $block.find('.certs__item-input:checked');
-            const newValue = $checkedInput.closest('.certs__item').find('.certs__item-btn').text();
+            if ($checkedInput.length) {
+                const price = parseFloat($checkedInput.val());
+                const quantity = parseInt($quantitySelect.val()) || 1;
+                const total = price * quantity;
 
-            $totalValue.text(newValue);
-        });
+                const formattedPrice = price.toLocaleString('ru-RU') + ' ₽';
+                const formattedTotal = '= ' + total.toLocaleString('ru-RU') + ' ₽';
+
+                $totalValue.text(formattedPrice);
+                $sumValue.text(formattedTotal);
+            }
+        }
+
+        $inputs.on('change', updatePrices);
+        $quantitySelect.on('change', updatePrices);
     });
-
 
 
     // animation
