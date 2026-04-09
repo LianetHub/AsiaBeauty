@@ -2395,6 +2395,7 @@ body.lock-filter {
 @media (min-width: 767.98px) {
   .locations__video {
     margin-top: 3.125rem;
+    min-height: 31.6875rem;
   }
 }
 .locations__video img {
@@ -5694,6 +5695,16 @@ body.lock-filter {
 }
 .banner__video--small {
   height: 18.75rem;
+}
+.banner__order {
+  margin-top: 2.5rem;
+  width: fit-content;
+  display: flex;
+  margin-inline: auto;
+  min-height: 2.5rem;
+  min-width: 11.25rem;
+  margin-bottom: 4rem;
+  font-size: 0.875rem;
 }
 
 .benefits {

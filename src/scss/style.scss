@@ -471,6 +471,17 @@ body {
 			height: rem(300);
 		}
 	}
+
+	&__order {
+		margin-top: 2.5rem;
+		width: fit-content;
+		display: flex;
+		margin-inline: auto;
+		min-height: 2.5rem;
+		min-width: 11.25rem;
+		margin-bottom: 4rem;
+		font-size: 0.875rem;
+	}
 }
 
 .benefits {
