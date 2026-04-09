@@ -3,12 +3,14 @@
 @import "modules/select";
 @import "modules/breadcrumbs";
 @import "modules/cart";
+
 // @import "modules/range-slider.scss";
 //============ МОДУЛИ ====================
 .caption {
 	line-height: 145%;
 	text-transform: uppercase;
 	font-size: 0.75rem;
+
 	@media (min-width: $md5) {
 		font-size: 0.875rem;
 	}
@@ -28,10 +30,12 @@
 	text-transform: uppercase;
 	font-size: 2.25rem;
 	line-height: 110%;
-	letter-spacing: -0.28rem;
+
 	@media (min-width: $md5) {
+		letter-spacing: -0.28rem;
 		font-size: 3.5rem;
 	}
+
 	@media (min-width: $md2) {
 		font-size: 4rem;
 	}
@@ -44,6 +48,7 @@
 	text-transform: uppercase;
 	font-size: 2rem;
 	letter-spacing: -0.14rem;
+
 	@media (min-width: $md4) {
 		letter-spacing: em(-0.28, 4);
 		font-size: 3rem;
@@ -55,18 +60,21 @@
 	flex-direction: column;
 	width: 100%;
 	gap: 0.75rem;
+
 	@media (min-width: $md5) {
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: flex-start;
 	}
+
 	// .section-header__caption
-	&__caption {
-	}
+	&__caption {}
+
 	// .section-header__title
 	&__title {
 		text-align: right;
 		order: -1;
+
 		@media (min-width: $md5) {
 			order: 0;
 			margin-left: auto;
@@ -79,6 +87,7 @@
 	font-weight: 500;
 	line-height: 110%;
 	font-size: rem(12);
+
 	@media (min-width: $md4) {
 		font-size: 1.25rem;
 	}
@@ -112,6 +121,7 @@
 .swiper-pagination {
 	margin-top: rem(12);
 	position: static;
+
 	.swiper-pagination-bullet {
 		background: $grey;
 	}
@@ -123,14 +133,17 @@
 	color: #fff;
 	font-size: 1.5rem;
 	z-index: $ui-index-1;
+
 	svg {
 		display: none;
 	}
+
 	&:disabled,
 	&[aria-disabled="true"] {
 		opacity: 0;
 		visibility: hidden;
 	}
+
 	&::before {
 		@extend %ic;
 	}
@@ -141,6 +154,7 @@
 		@extend .icon-next;
 	}
 }
+
 .swiper-button-prev {
 	&::before {
 		@extend .icon-prev;
@@ -148,8 +162,7 @@
 }
 
 .whatsapp-btn {
-	&__icon {
-	}
+	&__icon {}
 }
 
 .socials-widget {
@@ -162,12 +175,14 @@
 	@media (min-width: $md2) {
 		display: none;
 	}
+
 	// .socials-widget__btn
 	&__btn {
 		width: rem(74);
 		height: rem(74);
 		display: block;
 		cursor: pointer;
+
 		&::after {
 			content: "";
 			position: absolute;
@@ -178,6 +193,7 @@
 			animation: pulse-wave 2s ease-out infinite;
 		}
 	}
+
 	// .socials-widget__btn-icon
 	&__btn-icon {
 		position: relative;
@@ -193,16 +209,19 @@
 		align-items: center;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	}
+
 	@keyframes pulse-wave {
 		0% {
 			transform: scale(1);
 			opacity: 0.8;
 		}
+
 		100% {
 			transform: scale(1.5);
 			opacity: 0;
 		}
 	}
+
 	// .socials-widget__body
 	&__body {
 		position: absolute;
@@ -217,11 +236,13 @@
 		opacity: 0;
 		visibility: hidden;
 		transition: all 0.3s ease;
+
 		&.visible {
 			opacity: 1;
 			visibility: visible;
 		}
 	}
+
 	// .socials-widget__link
 	&__link {
 		display: flex;
@@ -234,6 +255,7 @@
 		border-radius: 0.3125rem;
 		background: rgba(217, 217, 217, 0.75);
 		padding: rem(7.5) rem(12);
+
 		&::before {
 			width: 2rem;
 			height: 2rem;
@@ -242,6 +264,7 @@
 			justify-content: center;
 			align-items: center;
 		}
+
 		&:not(:last-child) {
 			margin-bottom: rem(7);
 		}
@@ -256,6 +279,7 @@
 	font-size: 1.125rem;
 	cursor: pointer;
 	user-select: none;
+
 	&::before {
 		display: flex;
 		justify-content: center;
@@ -268,26 +292,32 @@
 		order: 1;
 		@extend %ic, .icon-heart;
 	}
+
 	&.active {
 		&::before {
 			@extend %ic, .icon-heart-fill;
 			color: $red;
 			animation: pulse 0.3s ease-in-out;
+
 			@keyframes pulse {
 				0% {
 					transform: scale(1);
 				}
+
 				50% {
 					transform: scale(1.4);
 				}
+
 				100% {
 					transform: scale(1);
 				}
 			}
 		}
 	}
+
 	& span {
 		display: none;
+
 		@media (min-width: $md4) {
 			display: inline;
 		}
@@ -341,6 +371,7 @@
 
 .tab-content {
 	display: none;
+
 	&.active {
 		display: block;
 	}
@@ -411,20 +442,22 @@
 // Стилизация скролла
 
 $scrollbarColor: $red;
-$scrollbarHover: darken(
-	$color: $scrollbarColor,
-	$amount: 10,
-);
+$scrollbarHover: darken($color: $scrollbarColor,
+		$amount: 10,
+	);
 
 ::-webkit-scrollbar {
 	width: rem(8);
 }
+
 ::-webkit-scrollbar-track {
 	background: #fff;
 }
+
 ::-webkit-scrollbar-thumb {
 	background: $scrollbarColor;
 	border-radius: rem(8);
+
 	@media (any-hover: hover) {
 		&:hover {
 			background: $scrollbarHover;

@@ -2,7 +2,7 @@
 	&~section {
 		position: relative;
 		z-index: 2;
-		background: $black;
+		background-color: $black;
 	}
 }
 
@@ -14,15 +14,16 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: flex-end;
+	justify-content: center;
 	text-align: center;
 	min-height: rem(683);
 	background-position: 75% 0;
-	padding: $headerHeight 0 11.75rem;
+	padding: $headerHeight 0 2rem;
 	height: 100svh;
 
 	@media (min-width: $md5) {
-		justify-content: center;
+		padding: $headerHeight 0 11.75rem;
+
 		background-position: center 0;
 	}
 
@@ -83,6 +84,7 @@
 		font-size: 0.875rem;
 		line-height: 110%;
 		text-transform: uppercase;
+		margin-top: 0.5rem;
 
 		@media (min-width: $md5) {
 			text-transform: none;
@@ -92,7 +94,9 @@
 	}
 
 	&__buy {
-		margin-top: 12rem;
+		margin-top: rem(23);
+		min-height: rem(28);
+		min-width: rem(141);
 
 		@media (min-width: $md5) {
 			display: none;
@@ -543,7 +547,7 @@
 .tagline {
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: center top;
+	background-position: top center;
 	padding: 5rem 0;
 
 	@media (min-width: $md4) {
@@ -552,6 +556,7 @@
 	}
 
 	@media (min-width: $md3) {
+		background-position: right top;
 		min-height: 33.9375rem;
 	}
 

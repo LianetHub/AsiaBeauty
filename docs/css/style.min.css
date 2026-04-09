@@ -660,10 +660,10 @@ body.lock-filter {
   text-transform: uppercase;
   font-size: 2.25rem;
   line-height: 110%;
-  letter-spacing: -0.28rem;
 }
 @media (min-width: 575.98px) {
   .title-lg {
+    letter-spacing: -0.28rem;
     font-size: 3.5rem;
   }
 }
@@ -1906,7 +1906,7 @@ body.lock-filter {
 .pin-spacer ~ section {
   position: relative;
   z-index: 2;
-  background: #151515;
+  background-color: #151515;
 }
 
 .hero {
@@ -1917,16 +1917,16 @@ body.lock-filter {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   text-align: center;
   min-height: 42.6875rem;
   background-position: 75% 0;
-  padding: var(--header-height, 7rem) 0 11.75rem;
+  padding: var(--header-height, 7rem) 0 2rem;
   height: 100svh;
 }
 @media (min-width: 575.98px) {
   .hero {
-    justify-content: center;
+    padding: var(--header-height, 7rem) 0 11.75rem;
     background-position: center 0;
   }
 }
@@ -1980,6 +1980,7 @@ body.lock-filter {
   font-size: 0.875rem;
   line-height: 110%;
   text-transform: uppercase;
+  margin-top: 0.5rem;
 }
 @media (min-width: 575.98px) {
   .hero__subtitle {
@@ -1989,7 +1990,9 @@ body.lock-filter {
   }
 }
 .hero__buy {
-  margin-top: 12rem;
+  margin-top: 1.4375rem;
+  min-height: 1.75rem;
+  min-width: 8.8125rem;
 }
 @media (min-width: 575.98px) {
   .hero__buy {
@@ -2384,7 +2387,7 @@ body.lock-filter {
 .tagline {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: top center;
   padding: 5rem 0;
 }
 @media (min-width: 767.98px) {
@@ -2395,6 +2398,7 @@ body.lock-filter {
 }
 @media (min-width: 991.98px) {
   .tagline {
+    background-position: right top;
     min-height: 33.9375rem;
   }
 }
