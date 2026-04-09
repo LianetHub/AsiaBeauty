@@ -738,6 +738,10 @@ $(function () {
                 this.$dropdown.addClass('dropdown--grey');
             }
 
+            if (this.theme === 'outline') {
+                this.$dropdown.addClass('dropdown--outline');
+            }
+
             const captionTemplate = this.listCaption ? `<div class="dropdown__caption">${this.listCaption}</div>` : '';
 
             this.$dropdown.html(`

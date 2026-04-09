@@ -13,6 +13,16 @@
 		}
 	}
 
+	&--outline {
+		&.visible {
+			.dropdown__button {
+				&::before {
+					transform: rotate(-90deg);
+				}
+			}
+		}
+	}
+
 	&.visible {
 		.dropdown__body {
 			opacity: 1;
@@ -66,6 +76,32 @@
 				transform: rotate(90deg);
 				transition: transform 0.3s ease;
 				@extend %ic, .icon-next;
+			}
+		}
+
+		.dropdown--outline & {
+			border-radius: 6.25rem;
+			border: rem(1) solid #E4E4E4;
+
+			background: #151515;
+			font-weight: 300;
+			line-height: 110%;
+			justify-content: space-between;
+			font-size: 0.75rem;
+			padding: em(0.25, 1.25) em(0.5, 1.25);
+			min-height: 0;
+
+			@media (min-width:$md4) {
+				padding: em(0.75, 1.25) em(0.87, 1.25);
+				font-size: 0.875rem;
+
+			}
+
+
+			&::before {
+				font-size: 0.35rem;
+				transition: transform 0.3s ease;
+				@extend %ic, .icon-triangle;
 			}
 		}
 
