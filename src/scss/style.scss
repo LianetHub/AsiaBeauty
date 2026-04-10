@@ -468,6 +468,9 @@ body {
 		object-fit: cover;
 		pointer-events: none;
 
+		@media (min-width:$md4) {
+			height: 28.25rem;
+		}
 
 		&--small {
 			height: rem(300);

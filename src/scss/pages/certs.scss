@@ -318,6 +318,7 @@
 			gap: 1.25rem;
 			row-gap: 1rem;
 			grid-template-columns: repeat(auto-fit, minmax(rem(150), 1fr));
+			grid-auto-rows: 1fr;
 		}
 	}
 
@@ -340,7 +341,19 @@
 
 	// .certs__item
 	&__item {
-		display: block;
+		display: flex;
+		flex-direction: column;
+
+		&.certs__item--column {
+			text-align: left;
+
+			.certs__item-btn {
+				align-items: flex-start;
+				white-space: normal;
+				text-align: left;
+
+			}
+		}
 
 		&:is(a) {
 			@extend .certs__item-btn;
@@ -359,15 +372,16 @@
 
 	// .certs__item-btn
 	&__item-btn {
+		flex: 1 1 auto;
 		border-radius: 0.3125rem;
 		border: rem(1) solid #e4e4e4;
 		text-align: center;
-		white-space: nowrap;
 		transition:
 			border-color 0.3s ease,
 			box-shadow 0.3s ease;
 		padding: rem(8);
 		display: block;
+		align-content: center;
 		cursor: pointer;
 
 		@media (min-width: $md4) {
