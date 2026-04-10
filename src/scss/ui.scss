@@ -60,6 +60,14 @@
 	}
 }
 
+.text-nowrap {
+	white-space: nowrap;
+}
+
+.text-opacity {
+	opacity: 0.8;
+}
+
 .section-header {
 	display: flex;
 	flex-direction: column;

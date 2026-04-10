@@ -712,6 +712,14 @@ body.lock-filter {
   font-size: 1.25rem;
 }
 
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.text-opacity {
+  opacity: 0.8;
+}
+
 .section-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7372,6 +7380,12 @@ body.lock-filter {
 
   .locations__item {
     font-size: 1rem;
+  }
+
+  .tagline__title {
+    letter-spacing: -0.14rem;
+    font-size: 2rem;
+    margin: 0 -1.5rem;
   }
 
   .capabilities__desc p:nth-child(even) {

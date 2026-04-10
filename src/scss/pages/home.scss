@@ -572,7 +572,15 @@
 	}
 
 	// .tagline__title
-	&__title {}
+	&__title {
+
+
+		@media (max-width:$md5) {
+			letter-spacing: -0.14rem;
+			font-size: 2rem;
+			margin: 0 -1.5rem;
+		}
+	}
 
 	// .tagline__desc
 	&__desc {
