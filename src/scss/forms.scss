@@ -1,10 +1,12 @@
 .form {
+
 	// .form__field
 	&__field {
 		&:not(:last-child) {
 			margin-bottom: 1.31rem;
 		}
 	}
+
 	// .form__label
 	&__label {
 		color: #9e3522;
@@ -13,6 +15,7 @@
 		line-height: 145%;
 		margin-bottom: 0.5rem;
 	}
+
 	// .form__input
 	&__input {
 		transition: color 0.3s ease 0s;
@@ -27,11 +30,13 @@
 
 		font-size: 0.875rem;
 		line-height: 145%;
+
 		&::placeholder {
 			color: inherit;
 			opacity: 0.5;
 		}
 	}
+
 	// .form__textarea
 	&__textarea {
 		transition: color 0.3s ease 0s;
@@ -47,25 +52,30 @@
 		border-radius: 1.875rem;
 		color: rgba(84, 61, 47, 1);
 		border: 1px solid rgba(84, 61, 47, 0.5);
+
 		&::placeholder {
 			color: inherit;
 			opacity: 0.5;
 		}
 	}
+
 	// .form__btn
 	&__btn {
 		margin-top: 0.75rem;
 		align-self: center;
 	}
+
 	// .form__privacy
 	&__privacy {
 		max-width: 22.5rem;
 		margin: 4.63rem auto 0;
 		text-align: center;
 		font-size: 1rem;
+
 		& a {
 			color: #1aedfa;
 			transition: color 0.3s ease 0s;
+
 			@media (any-hover: hover) {
 				&:hover {
 					color: darken($color: #1aedfa, $amount: 10);
@@ -89,17 +99,21 @@
 	border: rem(1) solid #e4e4e4;
 	text-align: center;
 	color: $text;
+
 	&::placeholder {
 		opacity: 0.7;
 	}
+
 	@media (any-hover: hover) {
 		&:hover {
 			border-color: #d8d3bf;
 		}
 	}
+
 	&:focus {
 		border-color: $text;
 	}
+
 	&:is(textarea) {
 		height: rem(100);
 		resize: none;
@@ -119,54 +133,49 @@
 	white-space: nowrap;
 	color: $text;
 	text-align: center;
+	color: #FFF;
 	font-size: 0.75rem;
-	padding: rem(3) rem(10);
-	border-radius: 6.25rem;
+	font-weight: 600;
+	line-height: 110%;
+	padding: 1rem 3.1875rem;
+
 	&::before {
 		order: 1;
 	}
 
 	&.btn-primary {
-		background: $red;
-		color: #e4e4e4;
+		border: 2px solid #FFF;
+		background: #AF290E;
+		color: #fff;
+
 		@media (any-hover: hover) {
 			&:hover {
 				background: darken($color: $red, $amount: 10);
 			}
 		}
+
 		&:active,
 		&.active {
 			background: darken($color: $red, $amount: 10);
 		}
 	}
-	&.btn-primary-outline {
-		border: rem(3) solid $red;
-		color: #e4e4e4;
-		@media (any-hover: hover) {
-			&:hover {
-				background: $red;
-				color: #fff;
-			}
-		}
-		&:active,
-		&.active {
-			background: $red;
-		}
-	}
+
 	&.btn-secondary {
-		background: rgba(228, 228, 228, 0.8);
-		color: $black;
+		background: #FAF9F5;
+		color: #413F3F;
 	}
-	
+
 	&.btn-grey {
 		background: #282828;
 		color: #E4E4E4;
+
 		@media (any-hover: hover) {
 			&:hover {
 				background: $red;
 				color: #fff;
 			}
 		}
+
 		&:active,
 		&.active {
 			background: #E4E4E4;
@@ -178,27 +187,32 @@
 		border: rem(1) solid rgba(228, 228, 228, 1);
 		background: rgba(228, 228, 228, 1);
 		color: $black;
+
 		@media (any-hover: hover) {
 			&:hover {
 				background: $black;
 				color: rgba(228, 228, 228, 1);
 			}
 		}
+
 		&:active,
 		&.active {
 			background: $black;
 			color: rgba(228, 228, 228, 1);
 		}
 	}
+
 	&.btn-white-outline {
 		border: rem(1) solid rgba(228, 228, 228, 1);
 		color: rgba(228, 228, 228, 1);
+
 		@media (any-hover: hover) {
 			&:hover {
 				background: rgba(228, 228, 228, 0.8);
 				color: $black;
 			}
 		}
+
 		&:active,
 		&.active {
 			background: rgba(228, 228, 228, 1);
@@ -229,13 +243,14 @@
 	// .checkbox__input
 	&__input {
 		&:checked {
-			& + .checkbox__text {
+			&+.checkbox__text {
 				&::before {
 					background: $red;
 				}
 			}
 		}
 	}
+
 	// .checkbox__text
 	&__text {
 		display: flex;
@@ -246,6 +261,7 @@
 		line-height: 120%;
 		cursor: pointer;
 		user-select: none;
+
 		&::before {
 			content: "";
 			width: 1.25rem;

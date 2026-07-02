@@ -16,9 +16,10 @@
 // ======================================ИКОНОЧНЫЙ ШРИФТ======================================
 
 // Шрифт по умолчанию
-$fontfamily: "Jost";
+$fontfamily: "Inter", sans-serif;
 $font-figtree: "Figtree", "Inter", sans-serif;
 $font-cormorant: "Cormorant";
+$font-bebas: "BebasNeue";
 
 // Шрифт по умолчанию
 
@@ -32,12 +33,13 @@ $md6: 374.98px;
 // ПЕРЕМЕННЫЕ
 $minWidth: 320; // Минимальная ширина страницы
 $maxWidth: 1920; // Ширина макета
-$maxWidthContainer: rem(1136); // Максимальная ширина ограничивающего контейнера
+$maxWidthContainer: rem(1378); // Максимальная ширина ограничивающего контейнера
 $containerPadding: 30;
 
 $text: #e4e4e4;
 $red: #720806;
-$black: #151515;
+$black: #2B2727;
+$beige: #F9F0E2;
 $grey: #e4e4e4;
 
 // Z-Index
@@ -66,8 +68,8 @@ $headerHeight: var(--header-height, rem(112));
 //ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ
 body {
 	font-family: $fontfamily, sans-serif;
-	color: $text;
-	background: $black;
+	color: $black;
+	background: $beige;
 	min-height: 100%;
 	line-height: normal;
 	min-width: 320px;
@@ -129,15 +131,7 @@ body {
 		max-width: $maxWidthContainer;
 	}
 
-	&.container-lg {
-		@media (min-width: $md2) {
-			max-width: rem(1170);
-		}
 
-		@media (min-width: $md1) {
-			max-width: rem(1310);
-		}
-	}
 }
 
 //=============== ОСНОВНАЯ СЕТКА===============================
@@ -157,7 +151,6 @@ body {
 	position: relative;
 	z-index: 4;
 	min-height: 100vh;
-	background: $black;
 
 	&.page--small {
 		min-height: auto;

@@ -101,7 +101,7 @@
 			&::before {
 				font-size: 0.35rem;
 				transition: transform 0.3s ease;
-				@extend %ic, .icon-triangle;
+				@extend %ic, .icon-chevron-down;
 			}
 		}
 

@@ -1,128 +1,49 @@
-.pin-spacer {
-	&~section {
-		position: relative;
-		z-index: 2;
-		background-color: $black;
-	}
-}
-
 .hero {
 	position: relative;
 	z-index: 1;
-	background-color: $black;
-	color: rgba(228, 228, 228, 0.8);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	min-height: rem(683);
-	background-position: 75% 0;
-	padding: $headerHeight 0 2rem;
-	height: 100svh;
+	padding: 1.75rem 0;
 
-	@media (min-width: $md5) {
-		padding: $headerHeight 0 11.75rem;
 
-		background-position: center 0;
-	}
-
-	@media (min-width: $md4) {
-		min-height: 50rem;
-
-	}
-
-	@media (min-width: $md2) {
-		min-height: 65.9375rem;
-	}
-
-	// .hero__banner
 	&__banner {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		pointer-events: none;
-		z-index: 2;
+		min-height: rem(671);
+		color: #F9F0E2;
 		display: flex;
+		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-
-		&-mask {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			will-change: transform;
-			opacity: 0;
-			clip-path: polygon(0% 80%, 0% 30%, 50% 30%, 50% 0%, 100% 0%, 100% 100%, 25% 100%, 25% 80%);
-		}
-	}
-
-	// .hero__year
-	&__year {
-		display: none;
-
-		@media (min-width: $md5) {
-			display: block;
-			font-size: 1.25rem;
-			font-weight: 500;
-			line-height: 110%;
-		}
+		text-align: center;
 	}
 
 	// .hero__title
 	&__title {
-		margin-top: 0.5rem;
+		max-width: 24rem;
 	}
 
 	// .hero__subtitle
 	&__subtitle {
-
-		max-width: 16.5625rem;
-		margin-inline: auto;
-		font-size: 0.875rem;
+		margin-top: 1.56rem;
+		font-size: 1.25rem;
+		font-weight: 500;
 		line-height: 110%;
-		text-transform: uppercase;
-		margin-top: 0.5rem;
-
-		@media (min-width: $md5) {
-			text-transform: none;
-			font-size: 1.25rem;
-			font-weight: 500;
-		}
+		max-width: 37.5625rem;
 	}
 
-	&__buy {
-		margin-top: rem(23);
-		min-height: rem(28);
-		min-width: rem(141);
 
-		@media (min-width: $md5) {
-			display: none;
-		}
+	// .hero__btns
+	&__btns {
+		margin-top: rem(24);
+		display: flex;
+		gap: rem(14);
 	}
 
-	// .hero__video
-	&__video {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		z-index: -1;
-	}
-}
+	// .hero__btn
+	&__btn {}
 
-.home-page {
-	background: #000;
 }
 
 
 .description {
 	background: linear-gradient(180deg, rgba(180, 2, 0, 0.63) 0%, rgba(36, 1, 1, 0.63) 100%), $black;
-	;
 	padding: 2rem 0 rem(20);
 	position: relative;
 	z-index: 2;
@@ -324,7 +245,7 @@
 		&:hover {
 			.services__card-info {
 				&::before {
-					@extend %ic, .icon-minus;
+					// @extend %ic, .icon-minus;
 					transform: rotate(360deg);
 				}
 

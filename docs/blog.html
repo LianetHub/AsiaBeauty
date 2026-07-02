@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
+    <head>
     <title>Asia Beauty SPA | Новости</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -8,117 +8,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- plugins -->
-    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20260410121300" />
-    <link rel="stylesheet" href="css/libs/fancybox.css?_v=20260410121300" />
+    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/libs/fancybox.css" />
     <!-- plugins -->
 
-    <link rel="stylesheet" href="css/reset.min.css?_v=20260410121300" />
-    <link rel="stylesheet" href="css/style.min.css?_v=20260410121300" />
+    <link rel="stylesheet" href="css/reset.min.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
 
 </head>
-
-<body>
-  <div class="wrapper">
-    <header class="header">
-    <div class="header__wrapper">
-        <div class="container container-lg">
-            <div class="header__body">
-                <a href="index.html" class="header__logo">
-                    <img src="img/logo-white.svg" alt="Логотип">
-                </a>
-                <div class="header__actions header__actions--left">
-                    <div class="header__actions-navigation">
-                        <a href="index.html" class="header__actions-home">Главная</a>
-                        <button type="button" aria-label="Открыть меню" class="header__menu-toggler icon-menu">
-                            <span></span><span></span><span></span>
-                        </button>
-                    </div>
-                    <a href="https://api.whatsapp.com/send/?phone=%2B79998708231" class="header__callback btn btn-secondary">
-                        Записаться в WhatsApp
-                    </a>
-                    <a href="#cart" data-fancybox aria-label="Корзина" class="header__cart icon-shopping-bag"></a>
-                </div>
-                <nav class="header__menu" aria-label="Навигация">
-                    <ul class="header__menu-list">
-                        <li class="header__menu-item"><a href="about.html" class="header__menu-link">О бренде</a></li>
-                        <li class="header__menu-item"><a href="services.html" class="header__menu-link">Меню услуг</a></li>
-                        <li class="header__menu-item"><a href="certs.html" class="header__menu-link">Сертификаты</a></li>
-                        <li class="header__menu-item"><a href="apartments.html" class="header__menu-link">Апартаменты</a></li>
-                        <li class="header__menu-item"><a href="deposits.html" class="header__menu-link">Депозиты</a></li>
-                        <li class="header__menu-item"><a href="salons.html" class="header__menu-link">Локации</a></li>
-                    </ul>
-                </nav>
-                <div class="header__actions header__actions--right">
-                    <a href="tel:+74950217659" class="header__phone">+7 495 021 76 59</a>
-                    <a href="" class="header__buy btn btn-primary">Купить сертификат</a>
-                    <a href="#cart" data-fancybox aria-label="Корзина" class="header__cart icon-shopping-bag"></a>
+    <body>
+        <div class="wrapper">
+            <header class="header">
+    <div class="header__marquee">
+        <div class="header__marquee-container container">
+            <span class="header__marquee-item">РАБОТАЕМ ЕЖЕДНЕВНО ВО ВСЕХ ЛОКАЦИЯХ 24/7</span>
+            <span class="header__marquee-item">БАЛИЙСКИЕ ТАЙСКИЕ И КИТАЙСКИЕ ТЕХНИКИ МАССАЖА</span>
+            <span class="header__marquee-item">120+ спа-программ</span>
+        </div>
+    </div>
+    <div class="container container-lg">
+        <div class="header__body">
+            <nav class="header__menu" aria-label="Навигация">
+                <ul class="header__menu-list">
+                    <li class="header__menu-item"><a href="about.html" class="header__menu-link">О нас</a></li>
+                    <li class="header__menu-item"><a href="spa.html" class="header__menu-link">Спа-меню</a></li>
+                </ul>
+            </nav>
+            <a href="index.html" class="header__logo">
+                <img src="img/logo.svg" alt="Логотип">
+            </a>
+            <div class="header__side">
+                <a href="tel:+74950217659" class="header__phone">+7 495 021 76 59</a>
+                <div class="header__actions">
+                    <a href="" aria-label="Поиск" class="header__action icon-search"></a>
+                    <a href="" aria-label="Избранное" class="header__action icon-heart"></a>
+                    <a href="" aria-label="Корзина" class="header__action icon-cart"></a>
                 </div>
             </div>
         </div>
     </div>
 </header>
-<div class="menu">
-    <div class="container container-lg">
-        <div class="menu__body">
-            <nav aria-label="Главное меню" class="menu__navigation">
-                <ul class="menu__navigation-list">
-                    <li class="menu__navigation-item"><a href="about.html" class="menu__navigation-link">О НАС</a></li>
-                    <li class="menu__navigation-item"><a href="services.html" class="menu__navigation-link">МЕНЮ УСЛУГ</a></li>
-                    <li class="menu__navigation-item"><a href="certs.html" class="menu__navigation-link">СЕРТИФИКАТЫ</a></li>
-                    <li class="menu__navigation-item"><a href="deposits.html" class="menu__navigation-link">ДЕПОЗИТЫ</a></li>
-                    <li class="menu__navigation-item"><a href="apartments.html" class="menu__navigation-link">АПАРТАМЕНТЫ</a></li>
-                    <li class="menu__navigation-item"><a href="salons.html" class="menu__navigation-link">ЛОКАЦИИ</a></li>
-                    <li class="menu__navigation-item"><a href="" class="menu__navigation-link">БЛОГ</a></li>
-                    <li class="menu__navigation-item"><a href="contacts.html" class="menu__navigation-link">КОНТАКТЫ</a></li>
-                </ul>
-            </nav>
-            <div class="menu__side">
-                <nav aria-label="Меню услуг" class="menu__services">
-                    <ul class="menu__services-list">
-                        <li class="menu__services-item"><a href="" class="menu__services-link">Массажи</a></li>
-                        <li class="menu__services-item"><a href="" class="menu__services-link">Спа-процедуры</a></li>
-                        <li class="menu__services-item"><a href="" class="menu__services-link">Спа-меню</a></li>
-                        <li class="menu__services-item"><a href="specialoffer.html" class="menu__services-link">Спа для двоих</a></li>
-                        <li class="menu__services-item"><a href="" class="menu__services-link">Спа день</a></li>
-                        <li class="menu__services-item"><a href="" class="menu__services-link">Спа для мужчин</a></li>
-                    </ul>
-                </nav>
-                <div class="menu__socials">
-                    <a href="" class="menu__social">telegram</a>
-                    <a href="" class="menu__social">whatsapp</a>
-                    <a href="" class="menu__social">vk</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-    <main class="page">
-      <section class="heading">
-        <div class="container">
-          <nav aria-label="Хлебные крошки" class="breadcrumbs">
-            <ul class="breadcrumbs__items">
-              <li class="breadcrumbs__item">
-                <a href="index.html" class="breadcrumbs__link">Главная</a>
-              </li>
-              <li class="breadcrumbs__item">
-                <span class="breadcrumbs__link active">Новости</span>
-              </li>
-            </ul>
-          </nav>
-          <h1 class="heading__title title text-center">блог Asia Beauty Spa</h1>
-        </div>
-      </section>
-      <section class="news">
-        <div class="container container-lg">
-          <div class="news__filters">
-            <a href="" class="news__filter btn btn-white-outline btn-lg active">массажи</a>
-            <a href="" class="news__filter btn btn-white-outline btn-lg">акции</a>
-            <a href="" class="news__filter btn btn-white-outline btn-lg">аппартаменты</a>
-            <a href="" class="news__filter btn btn-white-outline btn-lg">спа-процедуры</a>
-          </div>
-          <h2 class="news__title">Статьи</h2>
-          <ul class="news__grid">
-            <li class="news__item" data-animate="card">
+            <main class="page">
+                <section class="heading">
+                    <div class="container">
+                        <nav aria-label="Хлебные крошки" class="breadcrumbs">
+                            <ul class="breadcrumbs__items">
+                                <li class="breadcrumbs__item">
+                                    <a href="index.html" class="breadcrumbs__link">Главная</a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <span class="breadcrumbs__link active">Новости</span>
+                                </li>
+                            </ul>
+                        </nav>
+                        <h1 class="heading__title title text-center">блог Asia Beauty Spa</h1>
+                    </div>
+                </section>
+                <section class="news">
+                    <div class="container container-lg">
+                        <div class="news__filters">
+                            <a href="" class="news__filter btn btn-white-outline btn-lg active">массажи</a>
+                            <a href="" class="news__filter btn btn-white-outline btn-lg">акции</a>
+                            <a href="" class="news__filter btn btn-white-outline btn-lg">аппартаменты</a>
+                            <a href="" class="news__filter btn btn-white-outline btn-lg">спа-процедуры</a>
+                        </div>
+                        <h2 class="news__title">Статьи</h2>
+                        <ul class="news__grid">
+                            <li class="news__item" data-animate="card">
     <div class="news__item-header">
         <a href="" class="news__item-image">
             <img src="img/news/05.jpg" class="cover-image" alt="Постер">
@@ -215,84 +171,78 @@
     <div class="news__item-desc">Восточная культура - не просто дело тонкое. Она состоит из тонких нитей, сплетенных в Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, iste!</div>
     <a href="" class="news__item-btn btn btn-white-outline btn-lg">Подробнее</a>
 </li>
-          </ul>
-          <a href="" class="news__more btn btn-white btn-lg">Еще новости</a>
-        </div>
-      </section>
-    </main>
-    <div class="footer-reveal-wrap">
-    <div class="footer-reveal-mask">
-        <footer class="footer">
-            <div class="container">
-                <div class="footer__top">
-                    <div class="footer__column">
-                        <div class="footer__caption">АДРЕС</div>
-                        <div class="footer__column-body">
-                            <address>Смоленская, 8</address>
-                            <address>Площадь Европы, 2</address>
-                            <address>Пресненская наб., 2</address>
-                            <address>Погорельский пер., 6</address>
-                            <address>Оружейный пер., 13/1</address>
-                        </div>
+                        </ul>
+                        <a href="" class="news__more btn btn-white btn-lg">Еще новости</a>
                     </div>
-                    <div class="footer__column">
-                        <div class="footer__caption">ТЕЛЕФОН</div>
-                        <div class="footer__column-body">
-                            <a href="tel:+74959999999">+7 (495) 999 99-99</a>
-                        </div>
-                    </div>
-                    <div class="footer__column">
-                        <div class="footer__caption">ПОЧТА</div>
-                        <div class="footer__column-body">
-                            <a href="mailto:info@ab-spa.ru">info@ab-spa.ru</a>
-                        </div>
-                    </div>
-                    <div class="footer__column">
-                        <div class="footer__caption">КЛИЕНТАМ</div>
-                        <div class="footer__column-body">
-                            <a href="">Условия посещения</a>
-                        </div>
-                    </div>
-                    <div class="footer__column">
-                        <div class="footer__caption">СОЦ.СЕТИ</div>
-                        <div class="footer__column-socials socials">
-                            <a href="" class="socials__link icon-telegram"></a>
-                            <a href="" class="socials__link icon-instagram"></a>
-                            <a href="" class="socials__link icon-facebook"></a>
-                        </div>
-                    </div>
-                </div>
-                <nav aria-label="Меню в подвале" class="footer__menu">
-                    <a href="" class="footer__menu-policy">Политика конфиденциальности</a>
-                    <ul class="footer__menu-list">
-                        <li class="footer__menu-item"><a href="" class="footer__menu-link">Массаж на дом</a></li>
-                        <li class="footer__menu-item"><a href="" class="footer__menu-link">Новости</a></li>
-                        <li class="footer__menu-item"><a href="" class="footer__menu-link">Акции</a></li>
-                        <li class="footer__menu-item"><a href="" class="footer__menu-link">Партнеры</a></li>
-                        <li class="footer__menu-item"><a href="" class="footer__menu-link">Салоны</a></li>
-                    </ul>
-                </nav>
-                <div class="footer__banner">
-                    <video class="footer__video" muted loop playsinline autoplay="true" preload="metadata" poster="img/footer-video-poster.jpg">
-                        <source src="./files/footer-video-block.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-                    </video>
-                    <div class="footer__logo">
-                        <img src="img/logo-white.svg" alt="Логотип">
-                    </div>
-                </div>
-                <div class="footer__reqs">
-                    <div class="footer__reqs-copyright">© 2011 - 2026 ASIA BEAUTY SPA</div>
-                    <div class="footer__reqs-text">
-                        ООО ‘СИНАСТРИ’ <br>
-                        ИНН 000000000 ОГРН 0000000000
-                    </div>
+                </section>
+            </main>
+            <footer class="footer">
+    <div class="container">
+        <div class="footer__top">
+            <div class="footer__column">
+                <div class="footer__caption">АДРЕС</div>
+                <div class="footer__column-body">
+                    <address>Смоленская, 8</address>
+                    <address>Площадь Европы, 2</address>
+                    <address>Пресненская наб., 2</address>
+                    <address>Погорельский пер., 6</address>
+                    <address>Оружейный пер., 13/1</address>
                 </div>
             </div>
-            <div class="footer__overlay"></div>
-        </footer>
+            <div class="footer__column">
+                <div class="footer__caption">ТЕЛЕФОН</div>
+                <div class="footer__column-body">
+                    <a href="tel:+74959999999">+7 (495) 999 99-99</a>
+                </div>
+            </div>
+            <div class="footer__column">
+                <div class="footer__caption">ПОЧТА</div>
+                <div class="footer__column-body">
+                    <a href="mailto:info@ab-spa.ru">info@ab-spa.ru</a>
+                </div>
+            </div>
+            <div class="footer__column">
+                <div class="footer__caption">КЛИЕНТАМ</div>
+                <div class="footer__column-body">
+                    <a href="">Условия посещения</a>
+                </div>
+            </div>
+            <div class="footer__column">
+                <div class="footer__caption">СОЦ.СЕТИ</div>
+                <div class="footer__column-socials socials">
+                    <a href="" class="socials__link icon-telegram"></a>
+                    <a href="" class="socials__link icon-instagram"></a>
+                    <a href="" class="socials__link icon-facebook"></a>
+                </div>
+            </div>
+        </div>
+        <nav aria-label="Меню в подвале" class="footer__menu">
+            <a href="" class="footer__menu-policy">Политика конфиденциальности</a>
+            <ul class="footer__menu-list">
+                <li class="footer__menu-item"><a href="" class="footer__menu-link">Массаж на дом</a></li>
+                <li class="footer__menu-item"><a href="" class="footer__menu-link">Новости</a></li>
+                <li class="footer__menu-item"><a href="" class="footer__menu-link">Акции</a></li>
+                <li class="footer__menu-item"><a href="" class="footer__menu-link">Партнеры</a></li>
+                <li class="footer__menu-item"><a href="" class="footer__menu-link">Салоны</a></li>
+            </ul>
+        </nav>
+        <div class="footer__banner">
+            <video class="footer__video" muted loop playsinline autoplay="true" preload="metadata" poster="img/footer-video-poster.jpg">
+                <source src="./files/footer-video-block.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+            </video>
+            <div class="footer__logo">
+                <img src="img/logo-white.svg" alt="Логотип">
+            </div>
+        </div>
+        <div class="footer__reqs">
+            <div class="footer__reqs-copyright">© 2011 - 2026 ASIA BEAUTY SPA</div>
+            <div class="footer__reqs-text">
+                ООО ‘СИНАСТРИ’ <br>
+                ИНН 000000000 ОГРН 0000000000
+            </div>
+        </div>
     </div>
-</div>
-
+</footer>
 <div class="socials-widget">
     <button target="_blank" class="socials-widget__btn">
         <span class="socials-widget__btn-icon icon-whatsapp"></span>
@@ -341,18 +291,17 @@
         </a>
     </div>
 </div>
-  </div>
+        </div>
 
-  <!-- plugins -->
-<script src="js/libs/jquery-3.7.1.min.js?_v=20260410121300"></script>
-<script src="js/libs/swiper-bundle.min.js?_v=20260410121300"></script>
-<script src="js/libs/fancybox.min.js?_v=20260410121300"></script>
-<script src="js/libs/gsap.min.js?_v=20260410121300"></script>
-<script src="js/libs/ScrollTrigger.min.js?_v=20260410121300"></script>
+        <!-- plugins -->
+<script src="js/libs/jquery-3.7.1.min.js"></script>
+<script src="js/libs/swiper-bundle.min.js"></script>
+<script src="js/libs/fancybox.min.js"></script>
+<script src="js/libs/gsap.min.js"></script>
+<script src="js/libs/ScrollTrigger.min.js"></script>
 
 <!-- plugins -->
 
-<script src="js/app.min.js?_v=20260410121300"></script>
-</body>
-
+<script src="js/app.min.js"></script>
+    </body>
 </html>
