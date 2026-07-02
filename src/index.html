@@ -13,9 +13,12 @@
                 <section class="hero">
                     <div class="container">
                         <div class="hero__banner" style="background-image: url('@img/hero.jpg');">
-                            <h1 class="hero__title title-lg">ВАШ ИДЕАЛЬНЫЙ ОТДЫХ В&nbsp;СЕРДЦЕ МОСКВЫ</h1>
-                            <p class="hero__subtitle">120+ SPA-программ, панорманые аппартаменты и акватермальные зоны. Салоны площадью более 15000 кв.м</p>
+                            <div class="hero__offer">
+                                <h1 class="hero__title title-lg">ВАШ ИДЕАЛЬНЫЙ ОТДЫХ В&nbsp;СЕРДЦЕ МОСКВЫ</h1>
+                                <p class="hero__subtitle">120+ SPA-программ, панорманые аппартаменты и акватермальные зоны. Салоны площадью более 15000 кв.м</p>
+                            </div>
                             <form action="#" class="hero__search">
+                                <button type="submit" aria-label="Искать" class="hero__search-btn icon-search"></button>
                                 <input type="text" name="q" class="hero__search-input" placeholder="Поиск услуг...">
                             </form>
                             <div class="hero__btns">
@@ -25,30 +28,16 @@
                         </div>
                     </div>
                 </section>
-                <section class="description" data-animate="section">
+                <div class="benefits">
                     <div class="container">
-                        <div class="description__header section-header">
-                            <div class="section-header__caption caption" data-animate="text">О пространстве</div>
-                            <h2 class="section-header__title title" data-animate="title">
-                                Отдых в spa-пространстве
-                                AsiaBeauty Spa
-                            </h2>
-                        </div>
-                        <div class="description__text">
-                            <p data-animate="text">
-                                Это одно из немногих spa-пространств в Москве, где можно полноценно отдохнуть. Каждый спа-салон AsiaBeautySpa – это роскошное спа-путешествие, доступное в лучших локациях Москвы, где клиенты могут попробовать эксклюзивные спа-процедуры по уходу за собой.
-                            </p>
-                            <p data-animate="text">
-                                Наши мастера – это коренные жители Бали, Таиланда и Китая, закончившие международные школы массажа, с профессиональным стажем не менее 7 лет.
-                            </p>
-                        </div>
-                        <div class="description__services services__slider swiper">
-                            <ul class="swiper-wrapper">
-                                @@loop('./html/templates/_service.html', './html/json/services.json')
-                            </ul>
-                        </div>
+                        <ul class="benefits__list">
+                            <li>5 премиальных локаций в&nbsp;центре Москвы и 1 в Сочи</li>
+                            <li>Мастера с Бали, Китая и&nbsp;Тайланда со стажем от 7 лет </li>
+                            <li>Включены <br> акватермальные зоны</li>
+                            <li>Премиальный <br> сервис</li>
+                        </ul>
                     </div>
-                </section>
+                </div>
                 <section class="certs">
                     <div class="container">
                         <div class="section-header" data-animate="section">
@@ -60,32 +49,23 @@
                         @@include('./html/_certs.html')
                     </div>
                 </section>
-                <section class="locations">
+                <section class="gift">
                     <div class="container">
-                        <div class="locations__header" data-animate="section">
-                            <h2 class="locations__title title" data-animate="title">
-                                <span>уникальное</span>
-                                <span>расположение</span>
-                                <span>пространств</span>
-                            </h2>
-                            <ul class="locations__list text-medium">
-                                <li class="locations__item" data-animate="text"><a href="" class="locations__link">Смоленская</a></li>
-                                <li class="locations__item" data-animate="text"><a href="" class="locations__link">Оружейный переулок</a></li>
-                                <li class="locations__item" data-animate="text"><a href="" class="locations__link">Пресненская набережная</a></li>
-                                <li class="locations__item" data-animate="text"><a href="" class="locations__link">Полянка</a></li>
-                                <li class="locations__item" data-animate="text"><a href="" class="locations__link">Площадь Евразии</a></li>
-                            </ul>
+                        <div class="gift__content">
+                            <div class="gift__body">
+                                <h2 class="gift__title title">Идеальный <br> подарок <br> для <br>  близких</h2>
+                                <p class="gift__subtitle">Вы можете приобрести сертификат на нашем сайте или в нашем салоне. В каталоге есть множество программ, включая массажи, уход за лицом и телом, а также расслабляющие спа-процедуры</p>
+                                <a href="" class="gift__btn btn btn-white btn-lg">ПРИОБРЕСТИ СЕРТИФИКАТ</a>
+                            </div>
+                            <div class="gift__image">
+                                <img src="img/gift.jpg" class="cover-image" alt="Фото сертификата">
+                            </div>
                         </div>
                     </div>
-                    <div class="locations__videos">
-                        <video class="locations__video" muted loop playsinline autoplay="true" preload="metadata" poster="@img/locations-video.png">
-                            <source src="./files/location.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-                        </video>
-                        <video class="locations__video" muted loop playsinline autoplay="true" preload="metadata" poster="@img/video-poster.jpg">
-                            <source src="./files/home-video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-                        </video>
-                    </div>
                 </section>
+                @@include('./html/_places.html', {
+                "title": "локации:"
+                })
                 <section class="news">
                     <div class="container">
                         <div class="section-header">
@@ -129,60 +109,27 @@
                         </div>
                     </div>
                 </section>
-                <section class="brands">
+                <section class="certs">
                     <div class="container">
                         <div class="section-header">
-                            <h2 class="section-header__caption caption">Бренды - партнеры</h2>
+                            <div class="section-header__caption caption">Сертификаты</div>
                         </div>
-                    </div>
-                    <div class="brands__slider swiper">
-                        <ul class="swiper-wrapper">
-                            <li class="brands__slide swiper-slide">
-                                <img src="@img/brands/thalgo.png" alt="лого">
-                            </li>
-                            <li class="brands__slide swiper-slide">
-                                <img src="@img/brands/valmont.png" alt="лого">
-                            </li>
-                            <li class="brands__slide swiper-slide">
-                                <img src="@img/brands/la-sultane-de-saba.png" alt="лого">
-                            </li>
-                            <li class="brands__slide swiper-slide">
-                                <img src="@img/brands/tonka.png" alt="лого">
-                            </li>
-                            <li class="brands__slide swiper-slide">
-                                <img src="@img/brands/davines.png" alt="лого">
-                            </li>
-                            <li class="brands__slide swiper-slide">
-                                <img src="@img/brands/thalgo.png" alt="лого">
-                            </li>
-                            <li class="brands__slide swiper-slide">
-                                <img src="@img/brands/valmont.png" alt="лого">
-                            </li>
-                            <li class="brands__slide swiper-slide">
-                                <img src="@img/brands/la-sultane-de-saba.png" alt="лого">
-                            </li>
-                            <li class="brands__slide swiper-slide">
-                                <img src="@img/brands/tonka.png" alt="лого">
-                            </li>
-                            <li class="brands__slide swiper-slide">
-                                <img src="@img/brands/davines.png" alt="лого">
-                            </li>
-                            <li class="brands__slide swiper-slide">
-                                <img src="@img/brands/thalgo.png" alt="лого">
-                            </li>
-                            <li class="brands__slide swiper-slide">
-                                <img src="@img/brands/valmont.png" alt="лого">
-                            </li>
-                            <li class="brands__slide swiper-slide">
-                                <img src="@img/brands/la-sultane-de-saba.png" alt="лого">
-                            </li>
-                            <li class="brands__slide swiper-slide">
-                                <img src="@img/brands/tonka.png" alt="лого">
-                            </li>
-                            <li class="brands__slide swiper-slide">
-                                <img src="@img/brands/davines.png" alt="лого">
-                            </li>
-                        </ul>
+                        @@include('./html/_certs.html')
+
+                        <div class="certs__faq" data-spollers data-one-spoller>
+                            <div class="certs__faq-item">
+                                <div data-spoller class="certs__faq-question icon-chevron-down _active">Какой срок действия подарочной карты?</div>
+                                <div class="certs__faq-answer">Оба вида подарочной карты одинаково удобны в использовании и дают возможность совершать покупки в ASIA BEAUTY SPA как онлайн, так и оффлайн. Виртуальная подарочная карта будет доставлена на e-mail сразу же после оформления — ею будет можно воспользоваться мгновенно. Пластиковая карта — элегантный физический носитель в фирменной упаковке, который приятно вручить лично.</div>
+                            </div>
+                            <div class="certs__faq-item">
+                                <div data-spoller class="certs__faq-question icon-chevron-down">Как узнать баланс подарочной карты?</div>
+                                <div class="certs__faq-answer">После оплаты сертификата на сайте Вам на почту в течение суток придет письмо с номером подарочной карты. Или свяжитесь с нами по номеру телефона <br> +7 (495) 021 76 59</div>
+                            </div>
+                            <div class="certs__faq-item">
+                                <div data-spoller class="certs__faq-question icon-chevron-down">Какую карту выбрать виртуальную или пластиковую?</div>
+                                <div class="certs__faq-answer">Оба вида подарочной карты одинаково удобны в использовании и дают возможность совершать покупки в ASIA BEAUTY SPA как онлайн, так и оффлайн. Виртуальная подарочная карта будет доставлена на e-mail сразу же после оформления — ею будет можно воспользоваться мгновенно. Пластиковая карта — элегантный физический носитель в фирменной упаковке, который приятно вручить лично.</div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </main>

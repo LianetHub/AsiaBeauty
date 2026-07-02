@@ -638,7 +638,7 @@ body {
 	// .places__location
 	&__location {
 		border-radius: 1rem;
-		border: rem(1) solid rgba(228, 228, 228, 0.8);
+		border: rem(1) solid #290F0A;
 		display: flex;
 		position: relative;
 		transition: box-shadow 0.3s ease;
@@ -669,7 +669,7 @@ body {
 
 		@media (any-hover: hover) {
 			&:hover {
-				box-shadow: inset 0 0 0 rem(2) #bababa;
+				box-shadow: inset 0 0 0 rem(2) #290F0A;
 			}
 		}
 	}
@@ -689,7 +689,6 @@ body {
 	// .places__location-address
 	&__location-address {
 		margin-top: 0.69rem;
-		color: rgba(228, 228, 228, 0.8);
 	}
 
 	// .places__location-metro

@@ -1,9 +1,10 @@
 .header {
 	position: sticky;
-	top: 0;
+	top: rem(-33);
 	left: 0;
 	width: 100%;
 	z-index: 6;
+	background: #F9F0E2;
 
 	// .header__marquee
 	&__marquee {
@@ -14,6 +15,7 @@
 		font-weight: 500;
 		line-height: 120%;
 		text-transform: uppercase;
+		min-height: rem(33);
 	}
 
 	// .header__marquee-container

@@ -1,6 +1,8 @@
 .footer {
 	margin: auto 0;
 	padding: rem(40) 0;
+	background: #290F0A;
+	color: #E4E4E4;
 
 	@media (min-width: $md4) {
 		padding: rem(100) 0;
@@ -79,118 +81,6 @@
 		}
 	}
 
-	// .footer__menu
-	&__menu {
-		margin-top: rem(50);
-		display: flex;
-		justify-content: space-between;
-		flex-direction: column;
-		text-align: center;
-		gap: 2rem;
-
-		@media (min-width: $md5) {
-			gap: 2.5rem;
-		}
-
-		@media (min-width: $md3) {
-			align-items: flex-start;
-			text-align: left;
-			flex-direction: row;
-		}
-	}
-
-	// .footer__menu-policy
-	&__menu-policy {
-		@media (max-width: $md5) {
-			font-weight: 700;
-			text-decoration: underline;
-		}
-
-		transition: color 0.3s ease;
-
-		@media (any-hover: hover) {
-			&:hover {
-				color: $red;
-			}
-		}
-	}
-
-	// .footer__menu-list
-	&__menu-list {
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
-		gap: rem(10);
-
-		@media (min-width: $md5) {
-			gap: 2.5rem;
-			flex-wrap: wrap;
-			flex-direction: row;
-		}
-
-		@media (min-width: $md3) {
-			justify-content: flex-start;
-		}
-	}
-
-	// .footer__menue-item
-	&__menu-item {}
-
-	// .footer__menu-link
-	&__menu-link {
-		transition: color 0.3s ease;
-
-		@media (max-width: $md5) {
-			text-decoration: underline;
-		}
-
-		@media (any-hover: hover) {
-			&:hover {
-				color: $red;
-			}
-		}
-	}
-
-	// .footer__banner
-	&__banner {
-		position: relative;
-		margin-top: rem(60);
-		min-width: 100%;
-		aspect-ratio: math.div(1136, 424);
-
-		@media (max-width: $md4) {
-			margin-inline: -2rem;
-		}
-
-		@media (max-width: $md6) {
-			margin-inline: -1rem;
-		}
-
-		& img,
-		& video {
-			min-height: rem(212);
-		}
-
-		.footer__logo {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			margin: 0;
-
-			@media (min-width: $md4) {
-				width: 14.5625rem;
-			}
-		}
-	}
-
-	// .footer__video
-	&__video {
-		width: 100%;
-		height: 100%;
-		max-width: 100%;
-		object-fit: cover;
-	}
 
 	// .footer__logo
 	&__logo {
@@ -208,31 +98,6 @@
 		}
 	}
 
-	// .footer__reqs
-	&__reqs {
-		margin-top: 3.78rem;
-		display: flex;
-		justify-content: space-between;
-		flex-direction: column;
-		color: rgba(228, 228, 228, 0.8);
-		font-size: 1rem;
-		line-height: 120%;
-		gap: 1rem;
-
-		@media (min-width: $md4) {
-			flex-direction: row;
-		}
-	}
-
-	// .footer__reqs-copyright
-	&__reqs-copyright {}
-
-	// .footer__reqs-text
-	&__reqs-text {
-		@media (min-width: $md4) {
-			text-align: right;
-		}
-	}
 }
 
 

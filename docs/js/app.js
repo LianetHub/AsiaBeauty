@@ -275,32 +275,6 @@ $(function () {
         })
     }
 
-    if ($('.brands__slider').length > 0) {
-        new Swiper(".brands__slider", {
-            slidesPerView: "auto",
-            spaceBetween: 60,
-            speed: 10000,
-            loop: true,
-            autoplay: {
-                delay: 1,
-                stopOnLastSlide: false,
-                disableOnInteraction: false
-            },
-            breakpoints: {
-                767.98: {
-                    spaceBetween: 120,
-                }
-            }
-        })
-    }
-
-    if ($('.services__slider').length > 0) {
-        new Swiper(".services__slider", {
-            slidesPerView: "auto",
-            spaceBetween: 25,
-        })
-    }
-
     if ($('.places__slider').length > 0) {
         new Swiper(".places__slider", {
             slidesPerView: "auto",
