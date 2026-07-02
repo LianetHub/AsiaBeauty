@@ -1,5 +1,7 @@
 "use strict";
 
+import { initQuiz } from "./modules/quiz.js";
+
 $(function () {
 
     // init Fancybox Gallery
@@ -580,6 +582,8 @@ $(function () {
     }
 
     window.spollers = new Spollers();
+
+    initQuiz();
 
 
     // Phone Russia Mask

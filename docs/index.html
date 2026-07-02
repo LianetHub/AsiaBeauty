@@ -21,9 +21,10 @@
             <header class="header">
     <div class="header__marquee">
         <div class="header__marquee-container container">
-            <span class="header__marquee-item">РАБОТАЕМ ЕЖЕДНЕВНО ВО ВСЕХ ЛОКАЦИЯХ 24/7</span>
-            <span class="header__marquee-item">БАЛИЙСКИЕ ТАЙСКИЕ И КИТАЙСКИЕ ТЕХНИКИ МАССАЖА</span>
-            <span class="header__marquee-item">120+ спа-программ</span>
+            <span class="header__marquee-item">РАБОТАЕМ ЕЖЕДНЕВНО ВО ВСЕХ ЛОКАЦИЯХ 24/7</span>  
+            <span class="header__marquee-item">БАЛИЙСКИЕ ТАЙСКИЕ И КИТАЙСКИЕ ТЕХНИКИ МАССАЖА</span> 
+            <span class="header__marquee-item">120+ спа-программ</span> 
+            <span class="header__marquee-item">6 локаций</span> 
         </div>
     </div>
     <div class="container container-lg">
@@ -46,7 +47,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> 
 </header>
             <main class="page">
                 <section class="hero">
@@ -390,9 +391,192 @@
                         </div>
                     </div>
                 </section>
-                <!-- new 
-                 quiz
-                 block -->
+                <section class="quiz" data-quiz>
+    <div class="container">
+        <div class="quiz__card">
+            <div class="quiz__main">
+                <div class="quiz__step quiz__step--active" data-quiz-step="start">
+                    <h2 class="quiz__title">Подберите идеальную SPA-программу</h2>
+                    <p class="quiz__desc">Ответьте на 4 вопроса и получите список программ индивидуально для вас, а&nbsp;также бонус 1000 приветственных баллов на&nbsp;ваш первый визит</p>
+                    <button type="button" class="quiz__start btn btn-primary" data-quiz-start>Пройти тест</button>
+                </div>
+
+                <div class="quiz__step" data-quiz-step="1">
+                    <div class="quiz__counter">Вопрос <span data-quiz-current>1</span> из <span data-quiz-total>4</span></div>
+                    <h3 class="quiz__question">Какая спа-программа подойдёт вам больше всего?</h3>
+                    <div class="quiz__options">
+                        <label class="quiz__option">
+                            <input type="radio" name="quiz_goal" value="Релакс и снятие стресса" class="quiz__option-input hidden" hidden>
+                            <span class="quiz__option-card">
+                                <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
+                                <span class="quiz__option-text">Релакс и&nbsp;снятие стресса</span>
+                            </span>
+                        </label>
+                        <label class="quiz__option">
+                            <input type="radio" name="quiz_goal" value="Уход за лицом и телом" class="quiz__option-input hidden" hidden>
+                            <span class="quiz__option-card">
+                                <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
+                                <span class="quiz__option-text">Уход за&nbsp;лицом и&nbsp;телом</span>
+                            </span>
+                        </label>
+                        <label class="quiz__option">
+                            <input type="radio" name="quiz_goal" value="Программы для двоих" class="quiz__option-input hidden" hidden>
+                            <span class="quiz__option-card">
+                                <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
+                                <span class="quiz__option-text">Программы для&nbsp;двоих</span>
+                            </span>
+                        </label>
+                        <label class="quiz__option">
+                            <input type="radio" name="quiz_goal" value="Детокс и восстановление" class="quiz__option-input hidden" hidden>
+                            <span class="quiz__option-card">
+                                <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
+                                <span class="quiz__option-text">Детокс и&nbsp;восстановление</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="quiz__step" data-quiz-step="2">
+                    <div class="quiz__counter">Вопрос <span data-quiz-current>2</span> из <span data-quiz-total>4</span></div>
+                    <h3 class="quiz__question">Сколько времени вы планируете провести в&nbsp;салоне?</h3>
+                    <div class="quiz__options">
+                        <label class="quiz__option">
+                            <input type="radio" name="quiz_duration" value="1–2 часа" class="quiz__option-input hidden" hidden>
+                            <span class="quiz__option-card">
+                                <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
+                                <span class="quiz__option-text">1–2 часа</span>
+                            </span>
+                        </label>
+                        <label class="quiz__option">
+                            <input type="radio" name="quiz_duration" value="2–3 часа" class="quiz__option-input hidden" hidden>
+                            <span class="quiz__option-card">
+                                <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
+                                <span class="quiz__option-text">2–3 часа</span>
+                            </span>
+                        </label>
+                        <label class="quiz__option">
+                            <input type="radio" name="quiz_duration" value="Полдня" class="quiz__option-input hidden" hidden>
+                            <span class="quiz__option-card">
+                                <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
+                                <span class="quiz__option-text">Полдня</span>
+                            </span>
+                        </label>
+                        <label class="quiz__option">
+                            <input type="radio" name="quiz_duration" value="Целый день" class="quiz__option-input hidden" hidden>
+                            <span class="quiz__option-card">
+                                <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
+                                <span class="quiz__option-text">Целый день</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="quiz__step" data-quiz-step="3">
+                    <div class="quiz__counter">Вопрос <span data-quiz-current>3</span> из <span data-quiz-total>4</span></div>
+                    <h3 class="quiz__question">Какой формат посещения вам ближе?</h3>
+                    <div class="quiz__options">
+                        <label class="quiz__option">
+                            <input type="radio" name="quiz_format" value="Классический салон" class="quiz__option-input hidden" hidden>
+                            <span class="quiz__option-card">
+                                <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
+                                <span class="quiz__option-text">Классический салон</span>
+                            </span>
+                        </label>
+                        <label class="quiz__option">
+                            <input type="radio" name="quiz_format" value="Апартаменты с сауной" class="quiz__option-input hidden" hidden>
+                            <span class="quiz__option-card">
+                                <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
+                                <span class="quiz__option-text">Апартаменты с&nbsp;сауной</span>
+                            </span>
+                        </label>
+                        <label class="quiz__option">
+                            <input type="radio" name="quiz_format" value="С акватермальной зоной" class="quiz__option-input hidden" hidden>
+                            <span class="quiz__option-card">
+                                <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
+                                <span class="quiz__option-text">С&nbsp;акватермальной зоной</span>
+                            </span>
+                        </label>
+                        <label class="quiz__option">
+                            <input type="radio" name="quiz_format" value="Выезд мастера на дом" class="quiz__option-input hidden" hidden>
+                            <span class="quiz__option-card">
+                                <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
+                                <span class="quiz__option-text">Выезд мастера на&nbsp;дом</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="quiz__step" data-quiz-step="4">
+                    <div class="quiz__counter">Вопрос <span data-quiz-current>4</span> из <span data-quiz-total>4</span></div>
+                    <h3 class="quiz__question">Как часто вы посещаете SPA?</h3>
+                    <div class="quiz__options">
+                        <label class="quiz__option">
+                            <input type="radio" name="quiz_frequency" value="Впервые" class="quiz__option-input hidden" hidden>
+                            <span class="quiz__option-card">
+                                <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
+                                <span class="quiz__option-text">Впервые</span>
+                            </span>
+                        </label>
+                        <label class="quiz__option">
+                            <input type="radio" name="quiz_frequency" value="Несколько раз в год" class="quiz__option-input hidden" hidden>
+                            <span class="quiz__option-card">
+                                <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
+                                <span class="quiz__option-text">Несколько раз в&nbsp;год</span>
+                            </span>
+                        </label>
+                        <label class="quiz__option">
+                            <input type="radio" name="quiz_frequency" value="Раз в месяц" class="quiz__option-input hidden" hidden>
+                            <span class="quiz__option-card">
+                                <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
+                                <span class="quiz__option-text">Раз в&nbsp;месяц</span>
+                            </span>
+                        </label>
+                        <label class="quiz__option">
+                            <input type="radio" name="quiz_frequency" value="Регулярно" class="quiz__option-input hidden" hidden>
+                            <span class="quiz__option-card">
+                                <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
+                                <span class="quiz__option-text">Регулярно</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="quiz__step" data-quiz-step="success">
+                    <h2 class="quiz__title">Вы прошли тест</h2>
+                    <p class="quiz__desc">Мы подготовим персональный список программ и&nbsp;начислим 1000 приветственных баллов</p>
+                    <form action="#" class="quiz__form">
+                        <input type="hidden" name="quiz_goal_result" value="">
+                        <input type="hidden" name="quiz_duration_result" value="">
+                        <input type="hidden" name="quiz_format_result" value="">
+                        <input type="hidden" name="quiz_frequency_result" value="">
+                        <div class="quiz__form-fields">
+                            <input type="text" name="name" class="input" placeholder="Ваше имя" required>
+                            <input type="tel" name="phone" class="input" placeholder="Номер телефона для связи" required>
+                            <input type="email" name="email" class="input" placeholder="Email (необязательно)">
+                        </div>
+                        <button type="submit" class="quiz__submit btn btn-primary">Получить рекомендации</button>
+                    </form>
+                </div>
+
+                <div class="quiz__progress-wrap">
+                    <progress class="quiz__progress" value="0" max="4"></progress>
+                </div>
+            </div>
+
+            <aside class="quiz__aside">
+                <div class="quiz__aside-image">
+                    <img src="img/quiz-aside.jpg" class="cover-image" alt="">
+                </div>
+                <div class="quiz__aside-note" data-quiz-note>Прохождения теста вас ни&nbsp;к&nbsp;чему не&nbsp;обязывает</div>
+                <div class="quiz__nav">
+                    <button type="button" class="quiz__nav-btn icon-prev" data-quiz-prev aria-label="Назад" aria-disabled="true" disabled></button>
+                    <button type="button" class="quiz__nav-btn icon-next" data-quiz-next aria-label="Далее" aria-disabled="true" disabled></button>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
                 <section class="places">
     <div class="container">
         <div class="places__header">
