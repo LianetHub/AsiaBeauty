@@ -120,7 +120,11 @@
 		margin-top: rem(6);
 
 		min-height: rem(68);
-		font-size: rem(20);
+
+		@media (min-width:$md4) {
+			font-size: rem(20);
+
+		}
 	}
 
 	// .news__item-btn
@@ -160,11 +164,37 @@
 	}
 }
 
+.heading--article {
+	padding-bottom: rem(28);
+
+	.breadcrumbs {
+		&+.heading__title {
+			margin-top: rem(12) !important;
+		}
+
+		&__items {
+			padding-block: rem(20) 0;
+
+			@media (min-width: $md3) {
+				padding-block: rem(28) 0;
+			}
+		}
+
+		&__item {
+			color: rgba(41, 15, 10, 0.8);
+		}
+
+		&__link.active {
+			color: #290f0a;
+		}
+	}
+}
+
 .article {
-	padding: rem(30) 0 rem(50);
+	padding: rem(28) 0 rem(40);
 
 	@media (min-width: $md4) {
-		padding: rem(60) 0 rem(100);
+		padding: rem(48) 0 rem(60);
 	}
 
 	// .article__body
@@ -176,39 +206,93 @@
 		@media (min-width: $md3) {
 			align-items: flex-start;
 			flex-direction: row;
+			gap: rem(59);
+			padding-left: 2rem;
 		}
+	}
 
-		@media (min-width: $md2) {
-			gap: rem(75);
+	// .article__aside
+	&__aside {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: rem(48);
+		width: 100%;
+
+		@media (min-width: $md3) {
+			flex: 0 0 rem(436);
+			max-width: rem(436);
 		}
 	}
 
 	// .article__image
 	&__image {
+		width: 100%;
 		border-radius: rem(5);
 		overflow: hidden;
+		aspect-ratio: math.div(436, 594);
+	}
+
+	// .article__btn
+	&__btn {
+		max-width: rem(197);
+		width: 100%;
+	}
+
+	// .article__content
+	&__content {
+		flex: 1 1 auto;
+		min-width: 0;
+		max-width: 41.1875rem;
+	}
+
+	// .article__title
+	&__title {
+		margin-bottom: rem(22);
+		line-height: 1.1;
 
 		@media (min-width: $md3) {
-			flex: 0 0 rem(380);
+			margin-bottom: rem(30);
+		}
+
+		span {
+			display: block;
 		}
 	}
 
 	// .article__text
 	&__text {
-		padding-top: rem(22);
+		&.typography-block {
+			padding-top: 0;
+			font-size: rem(16);
+			line-height: 1.2;
+
+			p:not(:last-child) {
+				margin-bottom: rem(16);
+			}
+
+			ol {
+				margin-top: 0;
+
+				li {
+					padding-left: rem(24);
+				}
+			}
+		}
+	}
+}
+
+.news--article {
+	padding-top: rem(40);
+	padding-bottom: rem(60);
+
+	@media (min-width: $md5) {
+		padding-top: rem(60);
+		padding-bottom: rem(100);
 	}
 
-	&__content {
-		flex: 1 1 auto;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		gap: 2rem;
-
-		.btn {
-			max-width: rem(200);
-			width: 100%;
-		}
+	.news__slider {
+		margin-top: 0;
 	}
 }
 

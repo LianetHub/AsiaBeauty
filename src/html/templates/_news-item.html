@@ -8,5 +8,6 @@
             <h3 class="news__item-title">@@title</h3>
         </div>
     </div>
-    <a href="" class="news__item-btn btn btn-white-outline btn-lg">Подробнее</a>
+    @@if(typeof desc !== 'undefined'){<div class="news__item-desc">@@desc</div>}
+    <a href="" class="news__item-btn btn btn-brown">Читать статью</a>
 </li>

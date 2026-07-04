@@ -1,52 +1,61 @@
 <!DOCTYPE html>
 <html lang="ru">
     @@include('html/_head.html', {
-    'title': 'Asia Beauty SPA | Апартаменты'
+    'title': 'Asia Beauty SPA | Курорт в городе'
     })
     <body>
         <div class="wrapper">
             @@include('html/_header.html', {
-            "active": "4"
+            "active": "0"
             })
             <main class="page">
-                <section class="heading">
-                    <div class="container">
-                        <nav aria-label="Хлебные крошки" class="breadcrumbs">
-                            <ul class="breadcrumbs__items">
-                                <li class="breadcrumbs__item">
-                                    <a href="index.html" class="breadcrumbs__link">Главная</a>
-                                </li>
-                                <li class="breadcrumbs__item">
-                                    <a href="locations.html" class="breadcrumbs__link">Локации</a>
-                                </li>
-                                <li class="breadcrumbs__item">
-                                    <span class="breadcrumbs__link active">Салон сити</span>
-                                </li>
-                            </ul>
-                        </nav>
-                        <h1 class="heading__title title text-center">
-                            Asia Beauty Spa предлагает услуги премиального спа-оператора
-                        </h1>
+                <section class="heading heading--article">
+                    <div class="container container-lg">
+                        <h1 class="heading__title title-lg text-center">блог Asia Beauty Spa</h1>
                     </div>
                 </section>
-                <div class="article">
-                    <div class="container">
+                <article class="article">
+                    <div class="container container-lg">
                         <div class="article__body">
-                            <div class="article__image">
-                                <img src="@img/article.jpg" class="cover-image" alt="Постер статьи">
+                            <div class="article__aside">
+                                <div class="article__image">
+                                    <img src="@img/news/05.jpg" class="cover-image" alt="Курорт в городе: Asia Beauty Spa и ФЕН DRY BAR">
+                                </div>
+                                <a href="" class="article__btn btn btn-brown btn-lg">Записаться</a>
                             </div>
                             <div class="article__content">
+                                <h2 class="article__title title-lg">
+                                    Курорт в городе:
+                                    <span>Asia Beauty Spa и ФЕН DRY BAR</span>
+                                </h2>
                                 <div class="article__text typography-block">
-                                    <p>Сеть спа-комплексов премиум-класса Asia Beauty Spa развивает новое направление и предлагает услуги оформления спа-зоны в отелях под ключ. Атмосферное пространство для отдыха гостей создается на индивидуальных условиях, с готовой командой и системой управления.</p>
-                                    <p>Бренд Asia Beauty Spa давно зарекомендовал себя как знак качества и высококлассную сеть салонов премиум-класса, где можно полноценно отдохнуть и расслабиться. Каждый проект Asia Beauty Spa – это роскошное spa-путешествие, где клиенты могут попробовать эксклюзивные спа-процедуры по уходу за собой.</p>
-                                    <p>Пространства сети, доступные в лучших локациях столицы, теперь можно будет посетить в отелях и гостиничных комплексах. Гости Asia Beauty Spa смогут позаботиться о ментальном здоровье и посетить медитативные практики, провести ритуалы ухода за красотой лица и тела от мастеров из Таиланда, Бали и Китая, окончивших международные школы массажа, с профессиональным стажем не менее 7 лет.</p>
+                                    <p>Этим летом, чтобы по чувствовать себя на лучшем мировом курорте Азии, жительницам столицы не понадобятся заграничные паспорта и перелеты.</p>
+                                    <p>Крупнейшие сети премиальных спа Asia Beauty Spa и салонов ФЕН DRY BAR объявили о запуске совместного проекта «Курорт в городе». Проекты объединили динамичный ритм мегаполиса и глубокую философию осознанного расслабления, чтобы создать идеальный сценарий городского отпуска — staycation.</p>
+                                    <p>В течение месяца с 15 июня салоны ФЕН DRY BAR превращаются в телепорты в уникальное спа-путешествие с Asia Beauty Spa к лучшим мастерам из Тайланда, Китая и Бали. Здесь гости смогут попробовать эксклюзивные ритуалы (более 120 спа-программ) по уходу за собой, а самое главное, высочайший уровень сервиса и индивидуальный подход к каждому. Истинная красота невозможна без внутреннего спокойствия.</p>
+                                    <p>И пока Asia Beauty Spa отвечает за глубокое физическое и ментальное восстановление, ФЕН DRY BAR мгновенно транслирует эту внутреннюю гармонию во внешний мир через легкие и естественные образы, а также ритуалы красоты, которые помогают восстановить структуру волос и придать им здоровый вид, будто вы только вернулись с отдыха. В меню уходов ФЕН DRY BAR есть как услуги уже полюбившихся брендов: Nashi Argan, ADVANTE, TOKIO INKARAMI, LebeL, Moroccanoil, так и новинки, которые непременно нужно попробовать — Mattea Verde и ESLA.</p>
+                                    <p>До 15 июля в рамках коллаборации «Курорт в городе» гостей пространств Asia Beauty Spa и ФЕН DRY BAR ждут эксклюзивные предложения и привилегии:</p>
+                                    <ol>
+                                        <li>при бронировании любого ритуала от 10 тысяч рублей в Asia Beauty Spa гости получают подарочные сертификаты на фирменные уходы для волос в ФЕН DRY BAR;</li>
+                                        <li>от чека в 10 тысяч рублей гости ФЕН DRY BAR получают спа рук или ног или скидку в 15% на первый визит в Asia Beauty Spa; от чека в 15 тысяч рублей в ФЕН DRY BAR дарят часовой релакс массаж или депозиты в 9500 рублей в Asia Beauty Spa;</li>
+                                        <li>приятным бонусом при выборе любого ритуала станет безлимитное пользование акватермальной зоной в любом из пяти спа-салонов Asia Beauty Spa.</li>
+                                        <li>«Курорт в городе» — это проект для тех, кто не готов выбирать между безупречной укладкой и внутренним покоем, а доказательство, что полноценный премиальный отпуск можно прожить за пару часов, не покидая центра Москвы.</li>
+                                    </ol>
                                 </div>
-                                <a href="" class="btn btn-white btn-lg">Каталог услуг</a>
                             </div>
                         </div>
                     </div>
-                </div>
-                @@include('./html/_recommendations.html')
+                </article>
+                <section class="news news--article">
+                    <div class="container container-lg">
+                        <div class="news__slider swiper">
+                            <ul class="swiper-wrapper">
+                                @@loop('./html/templates/_news-item.html', './html/json/article-news.json')
+                            </ul>
+                            <button type="button" class="news__slider-prev swiper-button-prev" aria-label="Предыдущая новость"></button>
+                            <button type="button" class="news__slider-next swiper-button-next" aria-label="Следующая новость"></button>
+                        </div>
+                    </div>
+                </section>
             </main>
             @@include('html/_footer.html', {})
         </div>
