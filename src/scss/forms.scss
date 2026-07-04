@@ -176,6 +176,24 @@
 		}
 	}
 
+	&.btn-brown {
+		background: #290F0A;
+		color: #E4E4E4;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background: $red;
+				color: #fff;
+			}
+		}
+
+		&:active,
+		&.active {
+			background: $red;
+			color: #fff;
+		}
+	}
+
 	&.btn-grey {
 		background: #282828;
 		color: #E4E4E4;

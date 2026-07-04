@@ -166,7 +166,7 @@ export function initCatalogFilter() {
 				updateUnitPosition(endInput);
 			}
 
-			document.querySelectorAll(".catalog-toolbar__chip input").forEach((input) => {
+			document.querySelectorAll(".catalog-toolbar__chips .chip input").forEach((input) => {
 				input.checked = false;
 			});
 

@@ -1,0 +1,39 @@
+.chips {
+	display: flex;
+	flex-wrap: wrap;
+	gap: rem(9);
+}
+
+.chip {
+	cursor: pointer;
+
+	&__btn {
+		&.btn {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			min-height: rem(51);
+			padding: rem(10) rem(20);
+			border: rem(2) solid #290f0a;
+			background: #290f0a;
+			color: $beige;
+			font-family: $font-jost;
+			font-size: rem(20);
+			font-weight: 400;
+			line-height: 1.1;
+			text-transform: none;
+			white-space: nowrap;
+			transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+		}
+	}
+
+	input:checked~.chip__btn {
+		background: $beige;
+		color: #290f0a;
+		border-color: #290f0a;
+	}
+}
+
+.chips--catalog {
+	gap: rem(9);
+}

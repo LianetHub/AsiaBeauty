@@ -10,33 +10,34 @@
             })
             <main class="page">
                 <section class="heading">
-                    <div class="container">
-                        <nav aria-label="Хлебные крошки" class="breadcrumbs">
-                            <ul class="breadcrumbs__items">
-                                <li class="breadcrumbs__item">
-                                    <a href="index.html" class="breadcrumbs__link">Главная</a>
-                                </li>
-                                <li class="breadcrumbs__item">
-                                    <span class="breadcrumbs__link active">Новости</span>
-                                </li>
-                            </ul>
-                        </nav>
-                        <h1 class="heading__title title text-center">блог Asia Beauty Spa</h1>
+                    <div class="container container-lg">
+                        <h1 class="heading__title title-lg text-center">блог Asia Beauty Spa</h1>
                     </div>
                 </section>
                 <section class="news">
                     <div class="container container-lg">
-                        <div class="news__filters">
-                            <a href="" class="news__filter btn btn-white-outline btn-lg active">массажи</a>
-                            <a href="" class="news__filter btn btn-white-outline btn-lg">акции</a>
-                            <a href="" class="news__filter btn btn-white-outline btn-lg">аппартаменты</a>
-                            <a href="" class="news__filter btn btn-white-outline btn-lg">спа-процедуры</a>
+                        <div class="news__filters chips chips--catalog">
+                            <label class="chip">
+                                <input type="radio" name="category" value="massage" class="hidden" hidden checked>
+                                <span class="chip__btn btn">массажи</span>
+                            </label>
+                            <label class="chip">
+                                <input type="radio" name="category" value="promo" class="hidden" hidden>
+                                <span class="chip__btn btn">акции</span>
+                            </label>
+                            <label class="chip">
+                                <input type="radio" name="category" value="apartments" class="hidden" hidden>
+                                <span class="chip__btn btn">аппартаменты</span>
+                            </label>
+                            <label class="chip">
+                                <input type="radio" name="category" value="spa" class="hidden" hidden>
+                                <span class="chip__btn btn">спа-процедуры</span>
+                            </label>
                         </div>
-                        <h2 class="news__title">Статьи</h2>
+                        <h2 class="news__title title-lg">Статьи</h2>
                         <ul class="news__grid">
                             @@loop("./html/templates/_blog-item.html", './html/json/blog.json')
                         </ul>
-                        <a href="" class="news__more btn btn-white btn-lg">Еще новости</a>
                     </div>
                 </section>
             </main>
