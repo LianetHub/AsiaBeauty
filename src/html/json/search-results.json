@@ -1,0 +1,18 @@
+[
+    {
+        "id": "relax_massage",
+        "image": "@img/goods/relax-massage.jpg",
+        "name": "Relax massage / Релакс массаж",
+        "desc": "Погружение в Нирвану. Just you, just you feelings.",
+        "price": "9 500 Р",
+        "time": "60 min"
+    },
+    {
+        "id": "sport_massage",
+        "image": "@img/goods/sport-massage.jpg",
+        "name": "Sport massage / Спортивный массаж",
+        "desc": "Восстановление и легкость. Full body renovation",
+        "price": "9 500 Р",
+        "time": "60 min"
+    }
+]

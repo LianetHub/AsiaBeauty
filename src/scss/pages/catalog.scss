@@ -66,10 +66,6 @@
 .catalog {
 	padding: rem(26) 0rem rem(32);
 
-	@media (min-width: $md6) {
-		padding: rem(26) 1rem rem(32);
-	}
-
 	@media (min-width: $md5) {
 		padding: rem(36) 0;
 	}
@@ -792,6 +788,42 @@
 		&.active {
 			background: #e4e4e4;
 			color: #151515;
+		}
+	}
+}
+
+.page--search {
+	.heading {
+		padding-bottom: rem(16);
+	}
+}
+
+.catalog--search {
+	padding-top: rem(36);
+	padding-bottom: rem(60);
+
+	@media (min-width: $md4) {
+		padding-top: rem(40);
+		padding-bottom: rem(80);
+	}
+
+	.catalog__query {
+		font-family: $fontfamily;
+		font-weight: 700;
+		font-size: rem(24);
+		line-height: 0.8;
+		text-transform: uppercase;
+		color: $black;
+		margin-bottom: rem(25);
+	}
+
+	.catalog__grid {
+		margin-top: 0;
+		grid-template-columns: repeat(auto-fill, minmax(rem(270), 1fr));
+		gap: rem(19);
+
+		@media (min-width: $md2) {
+			gap: rem(20);
 		}
 	}
 }

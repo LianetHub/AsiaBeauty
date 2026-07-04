@@ -109,13 +109,8 @@ body {
 	max-width: 100%;
 	padding: 0 1rem;
 
-	@media (min-width: $md6) {
-		padding: 0 2rem;
-	}
-
 	@media (min-width: $md5) {
 		box-sizing: content-box;
-		padding: 0 1rem;
 		max-width: rem(540);
 	}
 
@@ -169,7 +164,7 @@ body {
 @import "pages/certs";
 @import "pages/news";
 @import "pages/deposits";
-@import "pages/salons";
+@import "pages/locations";
 @import "pages/service";
 @import "pages/catalog";
 @import "pages/apartaments";

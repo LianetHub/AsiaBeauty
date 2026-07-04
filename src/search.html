@@ -8,40 +8,33 @@
             @@include('html/_header.html', {
             "active": "4"
             })
-            <main class="page">
-                <section class="heading">
-                    <div class="container">
-                        <nav aria-label="Хлебные крошки" class="breadcrumbs">
-                            <ul class="breadcrumbs__items">
-                                <li class="breadcrumbs__item">
-                                    <a href="index.html" class="breadcrumbs__link">Главная</a>
-                                </li>
-                                <li class="breadcrumbs__item">
-                                    <span class="breadcrumbs__link active">Поиск</span>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </section>
-                <section class="banner">
-                    <div class="banner__wrapper">
-                        <div class="banner__offer text-center">
-                            <h2 class="banner__title title">РЕЗУЛЬТАТЫ ПОИСКА</h2>
-                        </div>
-                        <div class="banner__image">
-                            <img src="@img/banner-home.png" alt="Баннер">
-                        </div>
-                    </div>
-                </section>
-                <div class="catalog">
+            <main class="page page--search">
+                <section class="hero hero--search">
                     <div class="container container-lg">
-                        <div class="catalog__content">
-                            <div class="catalog__grid">
-                                @@loop('./html/templates/_product.html', './html/json/catalog.json')
+                        <div class="hero__banner" style="background-image: url('@img/hero.jpg');">
+                            <div class="hero__offer">
+                                <h1 class="hero__title title-lg">РЕЗУЛЬТАТЫ ПОИСКА</h1>
                             </div>
+                            <form action="search.html" method="get" class="hero__search">
+                                <button type="submit" aria-label="Искать" class="hero__search-btn icon-search"></button>
+                                <input type="text" name="q" value="тайский массаж" class="hero__search-input" placeholder="Поиск услуг...">
+                            </form>
+                        </div>
+                        <form action="search.html" method="get" class="hero__search hero__search--mobile">
+                            <button type="submit" aria-label="Искать" class="hero__search-btn icon-search"></button>
+                            <input type="text" name="q" value="тайский массаж" class="hero__search-input" placeholder="Поиск услуг...">
+                        </form>
+                    </div>
+                </section>
+
+                <section class="catalog catalog--search">
+                    <div class="container container-lg">
+                        <h2 class="catalog__query">тайский массаж</h2>
+                        <div class="catalog__grid">
+                            @@loop('./html/templates/_product.html', './html/json/search-results.json')
                         </div>
                     </div>
-                </div>
+                </section>
             </main>
             @@include('html/_footer.html', {})
         </div>

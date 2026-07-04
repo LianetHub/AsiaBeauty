@@ -369,12 +369,12 @@ $(function () {
 		});
 	}
 
-	if ($(".salons__item-slider").length > 0) {
-		$(".salons__item-slider").each(function (index, slider) {
+	if ($(".locations__item-slider").length > 0) {
+		$(".locations__item-slider").each(function (index, slider) {
 			let swiper = $(slider).find(".swiper")[0];
-			let prev = $(slider).find(".salons__item-prev")[0];
-			let next = $(slider).find(".salons__item-next")[0];
-			let pagination = $(slider).find(".salons__item-slider-pagination")[0];
+			let prev = $(slider).find(".locations__item-prev")[0];
+			let next = $(slider).find(".locations__item-next")[0];
+			let pagination = $(slider).find(".locations__item-slider-pagination")[0];
 
 			new Swiper(swiper, {
 				slidesPerView: 1,
