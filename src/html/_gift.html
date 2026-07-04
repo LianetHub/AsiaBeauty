@@ -1,0 +1,16 @@
+<section class="gift@@if(typeof modifier !== 'undefined' && modifier) { @@modifier}">
+    <div class="container container-lg">
+        <div class="gift__content">
+            <div class="gift__body">
+                <h2 class="gift__title@@if(typeof titleClass !== 'undefined' && titleClass) { @@titleClass}">@@title@@if(typeof titleLine2 !== 'undefined') {<br>@@titleLine2}</h2>
+                @@if(typeof subtitle !== 'undefined') {
+                <p class="gift__subtitle">@@subtitle</p>
+                }
+                <a href="@@if(typeof btnHref !== 'undefined') {@@btnHref}@@if(typeof btnHref === 'undefined') {#}" class="gift__btn btn btn-white btn-lg">@@btnText</a>
+            </div>
+            <div class="gift__image">
+                <img src="@@image" class="cover-image" alt="@@if(typeof imageAlt !== 'undefined') {@@imageAlt}@@if(typeof imageAlt === 'undefined') {Изображение}">
+            </div>
+        </div>
+    </div>
+</section>

@@ -168,8 +168,7 @@
 
 
 		&.active {
-			background: #151515;
-			color: rgba(228, 228, 228, 0.8);
+			color: #AF290E;
 		}
 	}
 
@@ -177,7 +176,12 @@
 	&__actions {
 		display: flex;
 		align-items: center;
-		gap: rem(15);
+		gap: rem(8);
+
+		@media (min-width:$md4) {
+			gap: rem(15);
+
+		}
 	}
 
 
@@ -198,11 +202,11 @@
 		cursor: pointer;
 
 		@media (max-width:$md4) {
-			display: none;
+			// display: none;
 
-			&.header__action--search {
-				display: flex;
-			}
+			// &.header__action--search {
+			// 	display: flex;
+			// }
 		}
 
 		@media (any-hover: hover) {

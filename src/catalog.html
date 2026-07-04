@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', { 'title': 'Asia Beauty SPA | Каталог' })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.html', {
+            "active": "2"
+            })
+            <main class="page page--catalog">
+                @@include('./html/_hero.html', {
+                "modifier": "hero--catalog",
+                "title": "КАТАЛОГ",
+                "titleLine2": "СПА-УСЛУГ",
+                "subtitle": "120+ SPA-программ, панорманые аппартаменты и акватермальные зоны. Салоны площадью более 15000 кв.м"
+                })
+                @@include('./html/_catalog-toolbar.html')
+                <section class="catalog">
+                    <div class="container container-lg">
+                        <div class="catalog__layout">
+                            @@include('./html/_catalog-sidebar.html')
+                            <div class="catalog__main">
+                                <h2 class="catalog__section-title">массажи</h2>
+                                <div class="catalog__grid">
+                                    @@loop('./html/templates/_product.html', './html/json/catalog-showcase.json')
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                @@include('./html/_gift.html', {
+                "title": "СПА-ДЕПОЗИТЫ И",
+                "titleLine2": "КЛУБ ПРИВЕЛЕГИЙ",
+                "titleClass": "gift__title--catalog",
+                "btnText": "Приобрести депозит",
+                "btnHref": "deposits.html",
+                "image": "@img/deposits.jpg",
+                "imageAlt": "СПА-депозиты и клуб привилегий"
+                })
+            </main>
+            @@include('html/_footer.html', {})
+        </div>
+
+        @@include('html/_js.html', {})
+    </body>
+</html>

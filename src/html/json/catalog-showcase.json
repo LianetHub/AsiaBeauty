@@ -1,0 +1,91 @@
+[
+    {
+        "id": "showcase_relax",
+        "image": "@img/goods/relax-massage.jpg",
+        "name": "Релакс массаж",
+        "price": "12 500 ₽",
+        "time": "90 мин",
+        "badge": "guest",
+        "theme": "light"
+    },
+    {
+        "id": "showcase_aroma",
+        "image": "@img/goods/aroma-massage.jpg",
+        "name": "Арома массаж со свечей",
+        "price": "12 500 ₽",
+        "time": "90 мин",
+        "badge": "guest",
+        "theme": "light"
+    },
+    {
+        "id": "showcase_tandem",
+        "image": "@img/goods/tandem-massage.jpg",
+        "name": "Тандем массаж",
+        "price": "12 500 ₽",
+        "time": "90 мин",
+        "badge": "guest"
+    },
+    {
+        "id": "showcase_sport",
+        "image": "@img/goods/sport-massage.jpg",
+        "name": "Спортивный массаж",
+        "price": "12 500 ₽",
+        "time": "90 мин",
+        "badge": "hit",
+        "video": true
+    },
+    {
+        "id": "showcase_cupping",
+        "name": "Баночный массаж",
+        "price": "12 500 ₽",
+        "time": "90 мин"
+    },
+    {
+        "id": "showcase_shiatsu",
+        "image": "@img/goods/shiatsu.jpg",
+        "name": "Шиацу",
+        "price": "12 500 ₽",
+        "time": "90 мин",
+        "video": true,
+        "theme": "light"
+    },
+    {
+        "id": "showcase_guasha",
+        "name": "Массаж guasha",
+        "price": "12 500 ₽",
+        "time": "90 мин"
+    },
+    {
+        "id": "showcase_herbal",
+        "name": "Массаж травяными мешочками",
+        "price": "12 500 ₽",
+        "time": "90 мин"
+    },
+    {
+        "id": "showcase_stone",
+        "image": "@img/goods/stone-massage.jpg",
+        "name": "Массаж теплыми вулканическими камнями",
+        "price": "12 500 ₽",
+        "time": "90 мин"
+    },
+    {
+        "id": "showcase_foot",
+        "name": "Массаж стоп",
+        "price": "12 500 ₽",
+        "time": "90 мин",
+        "video": true
+    },
+    {
+        "id": "showcase_zones",
+        "name": "Массаж по зонам",
+        "price": "12 500 ₽",
+        "time": "90 мин"
+    },
+    {
+        "id": "showcase_fire",
+        "image": "@img/goods/fire-massage.jpg",
+        "name": "Огненный массаж",
+        "price": "12 500 ₽",
+        "time": "90 мин"
+    }
+]

@@ -64,20 +64,15 @@
                         </div>
                     </div>
                 </section>
-                <section class="gift">
-                    <div class="container">
-                        <div class="gift__content">
-                            <div class="gift__body">
-                                <h2 class="gift__title title">Идеальный <br> подарок <br> для <br>  близких</h2>
-                                <p class="gift__subtitle">Вы можете приобрести сертификат на нашем сайте или в нашем салоне. В каталоге есть множество программ, включая массажи, уход за лицом и телом, а также расслабляющие спа-процедуры</p>
-                                <a href="" class="gift__btn btn btn-white btn-lg">Купить</a>
-                            </div>
-                            <div class="gift__image">
-                                <img src="@img/gift.jpg" class="cover-image" alt="Фото сертификата">
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                @@include('./html/_gift.html', {
+                "title": "Идеальный подарок для близких",
+                "titleClass": "title",
+                "subtitle": "Вы можете приобрести сертификат на нашем сайте или в нашем салоне. В каталоге есть множество программ, включая массажи, уход за лицом и телом, а также расслабляющие спа-процедуры",
+                "btnText": "Купить",
+                "btnHref": "certs.html",
+                "image": "@img/gift.jpg",
+                "imageAlt": "Фото сертификата"
+                })
                 @@include('./html/_benefits.html')
                 @@include('./html/_places.html', {
                 "title": "Сертификаты доступны в салонах:"

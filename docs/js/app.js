@@ -2,6 +2,7 @@
 
 import { initQuiz } from "./modules/quiz.js";
 import { initHeaderSearch } from "./modules/header-search.js";
+import { initCatalogFilter, initCatalogToolbar } from "./modules/catalog-filter.js";
 
 $(function () {
 	// init Fancybox Gallery
@@ -67,7 +68,7 @@ $(function () {
 			toggleMenu();
 		}
 
-		// catalog filters toggler
+		// catalog filters toggler (legacy pages)
 		if ($target.closest(".catalog__filter-toggler").length) {
 			$(".catalog__filter-toggler").toggleClass("active");
 			$(".catalog__filters").slideToggle();
@@ -641,6 +642,8 @@ $(function () {
 
 	initQuiz();
 	initHeaderSearch();
+	initCatalogFilter();
+	initCatalogToolbar();
 
 	// Phone Russia Mask
 

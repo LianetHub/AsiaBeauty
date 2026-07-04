@@ -1,0 +1,40 @@
+<div class="catalog-toolbar">
+    <div class="container container-lg">
+        <form action="search.html" method="get" class="catalog-toolbar__search">
+            <div class="catalog-toolbar__field">
+                <button type="submit" aria-label="Искать" class="catalog-toolbar__search-icon icon-search"></button>
+                <input type="text" name="q" class="catalog-toolbar__input" placeholder="Поиск">
+            </div>
+            <button type="submit" class="catalog-toolbar__submit btn">Поиск</button>
+        </form>
+        <div class="catalog-toolbar__filters">
+            <button type="button" class="catalog-toolbar__filter-btn catalog-toolbar__chips-toggler icon-filter active" aria-label="Показать фильтры" aria-expanded="true"></button>
+            <div class="catalog-toolbar__chips">
+                <label class="catalog-toolbar__chip">
+                    <input type="checkbox" name="quick" value="for-two" class="hidden" hidden>
+                    <span class="catalog-toolbar__chip-btn btn">Для двоих</span>
+                </label>
+                <label class="catalog-toolbar__chip">
+                    <input type="checkbox" name="quick" value="antistress" class="hidden" hidden>
+                    <span class="catalog-toolbar__chip-btn btn">Антистресс</span>
+                </label>
+                <label class="catalog-toolbar__chip">
+                    <input type="checkbox" name="quick" value="relax" class="hidden" hidden>
+                    <span class="catalog-toolbar__chip-btn btn">Расслабление</span>
+                </label>
+                <label class="catalog-toolbar__chip">
+                    <input type="checkbox" name="quick" value="hammam" class="hidden" hidden>
+                    <span class="catalog-toolbar__chip-btn btn">Хаммам</span>
+                </label>
+                <label class="catalog-toolbar__chip">
+                    <input type="checkbox" name="quick" value="solo" class="hidden" hidden>
+                    <span class="catalog-toolbar__chip-btn btn">Для одного</span>
+                </label>
+                <label class="catalog-toolbar__chip">
+                    <input type="checkbox" name="quick" value="event" class="hidden" hidden>
+                    <span class="catalog-toolbar__chip-btn btn">Мероприятие</span>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>

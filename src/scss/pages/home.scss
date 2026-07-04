@@ -253,6 +253,41 @@
 			}
 		}
 	}
+
+	&--catalog {
+		padding: 0 0 rem(20);
+
+		@media (min-width: $md2) {
+			padding: 1.75rem 0 rem(20);
+		}
+
+		.hero__banner {
+			min-height: rem(322);
+			gap: rem(24);
+
+			@media (min-width: $md4) {
+				min-height: rem(322);
+			}
+		}
+
+		.hero__offer {
+			@media (min-width: $md4) {
+				position: static;
+				transform: none;
+				padding-bottom: 0;
+			}
+		}
+
+		.hero__title {
+			max-width: none;
+		}
+
+		.hero__video,
+		.hero__search,
+		.hero__btns {
+			display: none;
+		}
+	}
 }
 
 .benefits {

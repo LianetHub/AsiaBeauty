@@ -11,6 +11,9 @@
             }
         </a>
         }
+        @@if(typeof video !== 'undefined' && (typeof image === 'undefined' || image === '')) {
+        <span class="product-card__play icon-play" aria-hidden="true"></span>
+        }
         <div class="product-card__header">
             @@if(typeof mod === 'undefined' || mod !== 'extra') {
             <a href="service.html" class="product-card__name">@@name</a>
