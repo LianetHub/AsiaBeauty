@@ -3,11 +3,12 @@
 import { initQuiz } from "./modules/quiz.js";
 import { initHeaderSearch } from "./modules/header-search.js";
 import { initCatalogFilter, initCatalogSidebarFancybox, initCatalogToolbar } from "./modules/catalog-filter.js";
+import { initCartFancybox } from "./modules/cart.js";
 
 $(function () {
 	// init Fancybox Gallery
 	if (typeof Fancybox !== "undefined" && Fancybox !== null) {
-		Fancybox.bind("[data-fancybox]:not([data-fancybox='catalog-filters'])", {
+		Fancybox.bind("[data-fancybox]:not([data-fancybox='catalog-filters']):not([data-fancybox='cart'])", {
 			dragToClose: false,
 		});
 	}
@@ -645,6 +646,7 @@ $(function () {
 	initCatalogFilter();
 	initCatalogToolbar();
 	initCatalogSidebarFancybox();
+	initCartFancybox();
 
 	// Phone Russia Mask
 
