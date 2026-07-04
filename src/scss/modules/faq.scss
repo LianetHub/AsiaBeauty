@@ -6,12 +6,12 @@
 	}
 
 	@media (min-width: $md5) {
-		padding: rem(60) 0;
+		padding: rem(30) 0 rem(60);
 	}
 
 	// .faq__list
 	&__list {
-		margin-top: rem(43);
+		margin-top: 1rem;
 		display: flex;
 		flex-direction: column;
 	}
@@ -25,11 +25,12 @@
 
 	// .faq__question
 	&__question {
-		font-size: 1.25rem;
+		font-size: 1rem;
 		font-weight: 500;
 		line-height: 110%;
-		padding-block: 1.875rem;
+		padding-block: 1rem;
 		cursor: pointer;
+		text-align: left;
 		display: flex;
 		justify-content: space-between;
 		gap: 1rem;
@@ -49,7 +50,7 @@
 	// .faq__answer
 	&__answer {
 		display: none;
-		font-size: 1rem;
+		font-size: 0.875rem;
 		line-height: 120%;
 		padding-bottom: 2.13rem;
 	}

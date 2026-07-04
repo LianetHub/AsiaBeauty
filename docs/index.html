@@ -549,6 +549,7 @@
             <div class="quiz__main">
                 <div class="quiz__step quiz__step--active" data-quiz-step="start">
                     <h2 class="quiz__title">Подберите идеальную SPA-программу</h2>
+                    <p class="quiz__subtitle">Короткий тест поможет подобрать программу под&nbsp;ваши задачи и&nbsp;пожелания</p>
                     <p class="quiz__desc">Ответьте на 4 вопроса и получите список программ индивидуально для вас, а&nbsp;также бонус 1000 приветственных баллов на&nbsp;ваш первый визит</p>
                     <button type="button" class="quiz__start btn btn-primary" data-quiz-start>Пройти тест</button>
                 </div>
@@ -556,6 +557,7 @@
                 <div class="quiz__step" data-quiz-step="1">
                     <div class="quiz__counter">Вопрос <span data-quiz-current>1</span> из <span data-quiz-total>4</span></div>
                     <h3 class="quiz__question">Какая спа-программа подойдёт вам больше всего?</h3>
+                    <p class="quiz__subtitle">Выберите основную цель визита — так мы подберём подходящие процедуры</p>
                     <div class="quiz__options">
                         <label class="quiz__option">
                             <input type="radio" name="quiz_goal" value="Релакс и снятие стресса" class="quiz__option-input hidden" hidden>
@@ -591,6 +593,7 @@
                 <div class="quiz__step" data-quiz-step="2">
                     <div class="quiz__counter">Вопрос <span data-quiz-current>2</span> из <span data-quiz-total>4</span></div>
                     <h3 class="quiz__question">Сколько времени вы планируете провести в&nbsp;салоне?</h3>
+                    <p class="quiz__subtitle">Это поможет составить программу комфортной длительности</p>
                     <div class="quiz__options">
                         <label class="quiz__option">
                             <input type="radio" name="quiz_duration" value="1–2 часа" class="quiz__option-input hidden" hidden>
@@ -626,6 +629,7 @@
                 <div class="quiz__step" data-quiz-step="3">
                     <div class="quiz__counter">Вопрос <span data-quiz-current>3</span> из <span data-quiz-total>4</span></div>
                     <h3 class="quiz__question">Какой формат посещения вам ближе?</h3>
+                    <p class="quiz__subtitle">Салоны, апартаменты с&nbsp;сауной, акватермальные зоны или выезд мастера на&nbsp;дом</p>
                     <div class="quiz__options">
                         <label class="quiz__option">
                             <input type="radio" name="quiz_format" value="Классический салон" class="quiz__option-input hidden" hidden>
@@ -661,6 +665,7 @@
                 <div class="quiz__step" data-quiz-step="4">
                     <div class="quiz__counter">Вопрос <span data-quiz-current>4</span> из <span data-quiz-total>4</span></div>
                     <h3 class="quiz__question">Как часто вы посещаете SPA?</h3>
+                    <p class="quiz__subtitle">Для новых гостей начисляем 1000 приветственных баллов на&nbsp;первый визит</p>
                     <div class="quiz__options">
                         <label class="quiz__option">
                             <input type="radio" name="quiz_frequency" value="Впервые" class="quiz__option-input hidden" hidden>
@@ -695,6 +700,7 @@
 
                 <div class="quiz__step" data-quiz-step="success">
                     <h2 class="quiz__title">Вы прошли тест</h2>
+                    <p class="quiz__subtitle">Оставьте контакты — мы отправим персональную подборку программ</p>
                     <p class="quiz__desc">Мы подготовим персональный список программ и&nbsp;начислим 1000 приветственных баллов</p>
                     <form action="#" class="quiz__form">
                         <input type="hidden" name="quiz_goal_result" value="">
@@ -719,7 +725,8 @@
                 <div class="quiz__aside-image">
                     <img src="img/quiz-aside.jpg" class="cover-image" alt="">
                 </div>
-                <div class="quiz__aside-note" data-quiz-note>Прохождения теста вас ни&nbsp;к&nbsp;чему не&nbsp;обязывает</div>
+                <div class="quiz__aside-note" data-quiz-note="default">Прохождения теста вас ни&nbsp;к&nbsp;чему не&nbsp;обязывает</div>
+                <div class="quiz__aside-note" data-quiz-note="gift">После прохождения квиза, вас ждет подарок от Asia&nbsp;Beauty&nbsp;Spa</div>
                 <div class="quiz__nav">
                     <button type="button" class="quiz__nav-btn icon-prev" data-quiz-prev aria-label="Назад" aria-disabled="true" disabled></button>
                     <button type="button" class="quiz__nav-btn icon-next" data-quiz-next aria-label="Далее" aria-disabled="true" disabled></button>
@@ -728,7 +735,6 @@
         </div>
     </div>
 </section>
-
                 <section class="places">
     <div class="container">
         <h2 class="places__caption title">наши локации</h2>
@@ -746,7 +752,7 @@
                 <div class="places__location swiper-slide icon-location">
                     <div class="places__location-content">
                         <div class="places__location-name">Asia Beauty Spa Киевская</div>
-                        <address class="places__location-address">Москва, Площадь Европы, 2</address>
+                        <address class="places__location-address">Площадь Евразии, 2</address>
                         <div class="places__location-metro">м. Киевская</div>
                         <a href="tel:+74950238882" class="places__location-phone">+7 (495) 023-88-82</a>
                         <a href="https://yandex.ru/maps/?rtext=~55.741804,37.567779&rtt=auto" class="places__location-route" target="_blank" rel="noopener noreferrer">Проложить маршрут</a>
@@ -782,8 +788,7 @@
                 <div class="places__location swiper-slide icon-location">
                     <div class="places__location-content">
                         <div class="places__location-name">Asia Beauty Spa Сочи</div>
-                        <address class="places__location-address">Сочи, Орджоникидзе, 11 А 16 этаж</address>
-                        <div class="places__location-metro">отель Pullman</div>
+                        <address class="places__location-address">Сочи, Орджоникидзе, 11 А 16 этаж, отель Pullman</address>
                         <a href="tel:+74950217659" class="places__location-phone">+7 (495) 021-76-59</a>
                         <a href="https://yandex.ru/maps/?rtext=~43.578556,39.722882&rtt=auto" class="places__location-route" target="_blank" rel="noopener noreferrer">Проложить маршрут</a>
                     </div>
@@ -843,7 +848,7 @@
                 </section>
             </main>
             <footer class="footer">
-    <div class="container">
+    <div class="container container-lg">
         <div class="footer__logo">
             <img src="img/logo-white.svg" alt="Логотип">
         </div>

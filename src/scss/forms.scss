@@ -90,34 +90,38 @@
 		color 0.3s ease 0s,
 		border-color 0.3s ease 0s;
 	width: 100%;
+	min-height: rem(36);
+	padding: 0 0 rem(16);
 	background: transparent;
-	color: #e4e4e4;
-	font-size: 0.875rem;
-	line-height: 145%;
-	padding: 0.625rem;
-	border-radius: 6.25rem;
-	border: rem(1) solid #e4e4e4;
-	text-align: center;
+	border: none;
+	border-bottom: rem(1) solid $text;
+	border-radius: 0;
 	color: $text;
+	font-family: $font-jost;
+	font-size: rem(14);
+	font-weight: 400;
+	line-height: 145%;
+	text-align: left;
 
 	&::placeholder {
-		opacity: 0.7;
+		color: inherit;
+		opacity: 0.75;
 	}
 
 	@media (any-hover: hover) {
 		&:hover {
-			border-color: #d8d3bf;
+			border-bottom-color: #d8d3bf;
 		}
 	}
 
 	&:focus {
-		border-color: $text;
+		border-bottom-color: $text;
+		outline: none;
 	}
 
 	&:is(textarea) {
-		height: rem(100);
+		min-height: rem(100);
 		resize: none;
-		border-radius: 1rem;
 	}
 }
 

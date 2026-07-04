@@ -332,7 +332,7 @@ $(function () {
 			watchOverflow: true,
 			breakpoints: {
 				767.98: {
-					spaceBetween: 38,
+					spaceBetween: 32,
 				},
 			},
 		});

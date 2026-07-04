@@ -17,6 +17,7 @@
 
 // Шрифт по умолчанию
 $fontfamily: "Inter", sans-serif;
+$font-jost: "Jost", sans-serif;
 $font-cormorant: "Cormorant";
 $font-bebas: "BebasNeue", sans-serif;
 
@@ -493,11 +494,11 @@ body {
 	padding: 1.375rem 0rem;
 
 	@media (min-width: $md6) {
-		padding: 1.375rem 1rem;
+		padding: 1.375rem 0;
 	}
 
 	@media (min-width: $md5) {
-		padding: 2.5rem 0;
+		padding: 2.5rem 0 1.5rem;
 	}
 
 	// .places__header
@@ -548,7 +549,7 @@ body {
 		margin-top: rem(10);
 
 		@media (min-width: $md5) {
-			margin-top: 1.75rem;
+			margin-top: 2.5rem;
 		}
 	}
 
@@ -563,8 +564,8 @@ body {
 		padding: rem(25) rem(17);
 
 		@media (min-width: $md4) {
-			padding: 1.56rem 0.94rem 3.56rem;
-			gap: 2.75rem;
+			padding: rem(25) rem(15) rem(23) rem(18);
+			gap: rem(47);
 		}
 
 		&.swiper-slide {
@@ -572,7 +573,7 @@ body {
 			height: auto;
 
 			@media (min-width: $md4) {
-				width: rem(356);
+				width: rem(355);
 			}
 		}
 
@@ -581,7 +582,7 @@ body {
 			height: 1.5rem;
 			font-size: 1.5rem;
 			flex-shrink: 0;
-			color: $red;
+			color: #290F0A;
 		}
 
 		@media (any-hover: hover) {
@@ -596,8 +597,10 @@ body {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+		font-family: "Jost", sans-serif;
 		font-size: 1rem;
 		line-height: 120%;
+		color: #290F0A;
 	}
 
 	// .places__location-name

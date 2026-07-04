@@ -3,9 +3,6 @@ export function initQuiz() {
 
     if (!$quizzes.length) return;
 
-    const NOTE_DEFAULT = 'Прохождения теста вас ни\u00a0к\u00a0чему не\u00a0обязывает';
-    const NOTE_GIFT = 'После прохождения квиза, вас ждет подарок от Asia Beauty Spa';
-
     const STEPS = ['start', '1', '2', '3', '4', 'success'];
     const QUESTION_STEPS = ['1', '2', '3', '4'];
     const FIELD_NAMES = ['quiz_goal', 'quiz_duration', 'quiz_format', 'quiz_frequency'];
@@ -17,7 +14,6 @@ export function initQuiz() {
         const $progressWrap = $quiz.find('.quiz__progress-wrap');
         const $prevBtn = $quiz.find('[data-quiz-prev]');
         const $nextBtn = $quiz.find('[data-quiz-next]');
-        const $note = $quiz.find('[data-quiz-note]');
         const $form = $quiz.find('.quiz__form');
 
         let currentStep = 'start';
@@ -53,14 +49,6 @@ export function initQuiz() {
             const stepNumber = Number(currentStep);
             $progress.val(stepNumber);
             $progressWrap.css('--quiz-progress', `${(stepNumber / 4) * 100}%`);
-        }
-
-        function updateNote() {
-            if (currentStep === '3' || currentStep === '4' || currentStep === 'success') {
-                $note.html(NOTE_GIFT.replace('Asia Beauty Spa', 'Asia&nbsp;Beauty&nbsp;Spa'));
-            } else {
-                $note.html(NOTE_DEFAULT);
-            }
         }
 
         function updateNav() {
@@ -101,7 +89,6 @@ export function initQuiz() {
             }
 
             updateProgress();
-            updateNote();
             updateNav();
         }
 

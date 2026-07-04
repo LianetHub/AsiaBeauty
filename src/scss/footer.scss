@@ -3,12 +3,12 @@
 	padding: rem(40) 0 rem(24);
 	background: #290F0A;
 	color: #E4E4E4;
-	font-family: "Jost", $fontfamily;
+	font-family: $font-jost;
 	font-size: rem(16);
 	line-height: 1.2;
 
 	@media (min-width: $md4) {
-		padding: rem(60) 0 rem(32);
+		padding: rem(40) 0 rem(32);
 	}
 
 	// .footer__logo
@@ -18,7 +18,7 @@
 		text-align: center;
 
 		@media (min-width: $md4) {
-			width: rem(140);
+			width: rem(194);
 		}
 
 		& img {
@@ -35,7 +35,7 @@
 		margin-top: rem(32);
 
 		@media (min-width: $md4) {
-			margin-top: rem(48);
+			margin-top: rem(54);
 		}
 	}
 
@@ -50,7 +50,7 @@
 		margin-top: rem(24);
 
 		@media (min-width: $md4) {
-			margin-top: rem(32);
+			margin-top: rem(40);
 		}
 	}
 
@@ -60,7 +60,7 @@
 		transition: color 0.3s ease;
 
 		@media (min-width: $md4) {
-			margin-top: rem(40);
+			margin-top: rem(50);
 		}
 
 		@media (any-hover: hover) {
@@ -78,7 +78,7 @@
 		margin-top: rem(32);
 
 		@media (min-width: $md4) {
-			margin-top: rem(40);
+			margin-top: rem(50);
 		}
 	}
 
@@ -87,20 +87,21 @@
 		margin-top: rem(12);
 
 		@media (min-width: $md4) {
-			margin-top: rem(16);
+			margin-top: rem(24);
 		}
 	}
 
 	// .footer__bottom
 	&__bottom {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		gap: rem(16);
 		margin-top: rem(40);
-		padding-top: rem(24);
-		border-top: 1px solid rgba(228, 228, 228, 0.2);
-		color: #fff;
+		padding-top: rem(20);
+
+		color: #F9F0E2;
 		text-align: center;
 
 		@media (min-width: $md3) {
@@ -108,9 +109,20 @@
 			justify-content: space-between;
 			align-items: flex-start;
 			gap: rem(24);
-			margin-top: rem(48);
+			margin-top: rem(28);
 			padding-top: rem(32);
 			text-align: left;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 100vw;
+			height: 1px;
+			background: #F9F0E2;
 		}
 	}
 
