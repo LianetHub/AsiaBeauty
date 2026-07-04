@@ -259,7 +259,6 @@
 
 		@media (min-width: $md2) {
 			gap: rem(20);
-
 		}
 	}
 
@@ -268,41 +267,15 @@
 		margin-top: rem(24);
 		overflow: visible;
 
-		.swiper-wrapper {
-			list-style: none;
-			padding: 0;
-			margin: 0;
-		}
-
 		@media (min-width: $md4) {
 			margin-top: rem(18);
-
-			.swiper-wrapper {
-				display: grid;
-				grid-template-columns: repeat(auto-fill, minmax(rem(264), 1fr));
-				gap: 2rem;
-				transform: none !important;
-			}
-
-			.swiper-slide {
-				width: auto !important;
-				margin: 0 !important;
-			}
 		}
 
-		@media (min-width: $md2) {
-			.swiper-wrapper {
-				gap: rem(20);
-			}
-		}
 
-		@media (max-width: ($md4 - 0.02)) {
-			.swiper-slide {
-				width: rem(220);
-			}
-		}
 
 		.swiper-slide {
+			width: 16.875rem;
+
 			.product-card {
 				width: 100%;
 			}

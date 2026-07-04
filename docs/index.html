@@ -35,6 +35,9 @@
     <div class="header__main">
         <div class="container container-lg">
             <div class="header__body">
+                <button type="button" class="header__menu-toggler icon-menu">
+                    <span></span><span></span><span></span>
+                </button>
                 <nav class="header__menu" aria-label="Навигация">
                     <ul class="header__menu-list">
                         <li class="header__menu-item"><a href="about.html" class="header__menu-link">О нас</a></li>
@@ -45,7 +48,7 @@
                     <img src="img/logo.svg" alt="Логотип">
                 </a>
                 <div class="header__side">
-                    <a href="tel:+74950217659" class="header__phone">+7 495 021 76 59</a>
+                    <a href="tel:+74950217659" class="header__phone icon-phone"><span>+7 495 021 76 59</span></a>
                     <div class="header__actions">
                         <button type="button" aria-label="Поиск" aria-expanded="false" aria-controls="header-search" class="header__action header__action--search icon-search"></button>
                         <a href="" aria-label="Избранное" class="header__action icon-heart"></a>
@@ -73,12 +76,12 @@
             <main class="page">
                 <section class="hero">
                     <div class="container container-lg">
-                        <div class="hero__banner" style="background-image: url('img/hero.jpg');">
+                        <div class="hero__banner hero__banner--large" style="background-image: url('img/hero.jpg');">
                             <div class="hero__offer">
                                 <h1 class="hero__title title-lg">ВАШ ИДЕАЛЬНЫЙ ОТДЫХ В&nbsp;СЕРДЦЕ МОСКВЫ</h1>
                                 <p class="hero__subtitle">120+ SPA-программ, панорманые аппартаменты и акватермальные зоны. Салоны площадью более 15000 кв.м</p>
                             </div>
-                            <form action="#" class="hero__search">
+                            <form action="search.html" method="get" class="hero__search">
                                 <button type="submit" aria-label="Искать" class="hero__search-btn icon-search"></button>
                                 <input type="text" name="q" class="hero__search-input" placeholder="Поиск услуг...">
                             </form>
@@ -393,8 +396,11 @@
                 <section class="extras">
     <div class="container">
         <h2 class="extras__title title">Часто выбирают вместе</h2>
-        <div class="extras__list">
-            
+        <div class="extras__carousel swiper">
+            <ul class="swiper-wrapper">
+                
+<li class="swiper-slide">
+    
 
     <div class="product-card product-card--extra" id="anahata_traditions_1" data-animate="card">
         
@@ -444,7 +450,11 @@
     </div>
 
     
+</li>
 
+
+<li class="swiper-slide">
+    
 
     <div class="product-card product-card--extra" id="anahata_traditions_2" data-animate="card">
         
@@ -494,7 +504,11 @@
     </div>
 
     
+</li>
 
+
+<li class="swiper-slide">
+    
 
     <div class="product-card product-card--extra" id="anahata_traditions_3" data-animate="card">
         
@@ -544,7 +558,10 @@
     </div>
 
     
+</li>
 
+
+            </ul>
         </div>
     </div>
 </section>

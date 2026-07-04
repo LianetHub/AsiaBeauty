@@ -1,18 +1,40 @@
 .hero {
 	position: relative;
 	z-index: 1;
-	padding: 1.75rem 0 rem(20);
+
+	@media (min-width:$md2) {
+		padding: 1.75rem 0 rem(20);
+	}
+
+	.container {
+		@media (max-width:$md5) {
+			padding: 0;
+		}
+	}
+
 
 	// .hero__banner
 	&__banner {
-		min-height: rem(671);
-		padding: rem(50) 0 rem(50);
+		padding: rem(50) 1rem;
 		color: #F9F0E2;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		position: relative;
+		min-height: rem(332);
+		gap: 2rem;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+
+		&.hero__banner--large {
+
+			@media (min-width:$md4) {
+				min-height: rem(671);
+			}
+
+		}
 
 	}
 
@@ -27,9 +49,17 @@
 		align-items: center;
 		position: absolute;
 		right: 4rem;
-		top: 50%;
-		transform: translateY(-50%);
+		top: 4rem;
 		transition: background-color 0.3s ease, color 0.3s ease;
+
+		@media (max-width:$md4) {
+			display: none;
+		}
+
+		@media (min-width:$md1) {
+			top: 50%;
+			transform: translateY(-50%);
+		}
 
 		&::before {
 			font-size: 2.6875rem;
@@ -54,12 +84,17 @@
 		text-align: center;
 		align-items: center;
 		margin: auto;
-		max-width: 37.5625rem;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		padding-bottom: 2.25rem;
+
+		@media (min-width:$md4) {
+			max-width: 37.5625rem;
+			width: 100%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			padding-bottom: 2.25rem;
+
+		}
 	}
 
 
@@ -71,9 +106,12 @@
 	// .hero__subtitle
 	&__subtitle {
 		margin-top: 1rem;
-		font-size: 1.25rem;
 		font-weight: 500;
 		line-height: 110%;
+
+		@media (min-width:$md4) {
+			font-size: 1.25rem;
+		}
 
 	}
 
@@ -121,9 +159,13 @@
 
 	// .hero__btns
 	&__btns {
-		margin-top: rem(24);
 		display: flex;
 		gap: rem(14);
+
+		@media (min-width:$md4) {
+			margin-top: rem(24);
+
+		}
 	}
 
 	// .hero__btn
@@ -136,12 +178,12 @@
 
 	// .benefits__list
 	&__list {
-		display: flex;
-		justify-content: space-between;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
 		align-items: center;
-		gap: 2rem;
+		font-size: 1.25rem;
 		font-family: $font-bebas;
-		font-size: 1.5rem;
+		gap: 1.5rem;
 		font-weight: 400;
 		font-synthesis: none;
 		line-height: 110%;
@@ -149,8 +191,20 @@
 		border-bottom: rem(2) solid #290F0A;
 		padding-bottom: rem(43);
 
-		& li {
-			max-width: 18rem;
+		@media (min-width:$md3) {
+
+			font-size: 1.5rem;
+
+			& li {
+				max-width: 18rem;
+			}
+
+			display: flex;
+			justify-content: space-between;
+		}
+
+		@media (min-width:$md1) {
+			gap: 2rem;
 		}
 	}
 }
@@ -162,8 +216,18 @@
 	&__list {
 		margin-top: 1.25rem;
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		gap: rem(20);
+		grid-template-columns: repeat(2, 1fr);
+		gap: rem(16);
+
+		@media (min-width:$md4) {
+			grid-template-columns: repeat(3, 1fr);
+			gap: rem(20);
+		}
+
+		@media (min-width:$md3) {
+			grid-template-columns: repeat(4, 1fr);
+
+		}
 	}
 
 	// .categories__card
@@ -177,7 +241,7 @@
 		color: #290F0A;
 		font-size: 1rem;
 		font-weight: 500;
-		line-height: 80%;
+
 		text-transform: uppercase;
 		display: flex;
 		flex-direction: column;
@@ -186,6 +250,9 @@
 		overflow: hidden;
 		transition: background-color 0.3s ease;
 
+		@media (min-width:$md4) {
+			line-height: 80%;
+		}
 
 		&:has(.categories__card-image) {
 			border-color: transparent;
@@ -231,25 +298,25 @@
 		color: #290F0A;
 	}
 
-	// .extras__list
-	&__list {
-		display: grid;
-		gap: rem(20);
-		margin: rem(24) 0 0;
-		padding: 0;
-		list-style: none;
+	// .extras__carousel
+	&__carousel {
+		margin-top: rem(24);
+		overflow: visible;
 
 		@media (min-width: $md4) {
-			grid-template-columns: repeat(3, 1fr);
 			margin-top: rem(18);
 		}
 
-		@media (max-width: ($md4 - 0.02)) {
-			grid-template-columns: repeat(auto-fill, minmax(rem(280), 1fr));
-		}
+		.swiper-slide {
+			width: rem(280);
 
-		.product-card {
-			width: 100%;
+			@media (min-width: $md4) {
+				width: rem(377);
+			}
+
+			.product-card {
+				width: 100%;
+			}
 		}
 	}
 }

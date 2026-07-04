@@ -7,16 +7,22 @@
 
 	// .quiz__card
 	&__card {
+		position: relative;
 		display: grid;
 		border: rem(1) solid #27110d;
 		background: $beige;
 		color: #290f0a;
-		padding: rem(25) rem(17) rem(20);
+		padding: rem(25) rem(24) rem(20);
+		gap: 2rem;
 
 		@media (min-width: $md4) {
 			grid-template-columns: 1fr rem(223);
-			gap: 2rem;
+
+		}
+
+		@media (min-width:$md2) {
 			padding: rem(53) rem(38) rem(48) rem(63);
+
 		}
 	}
 
@@ -101,9 +107,13 @@
 	// .quiz__options
 	&__options {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
 		gap: rem(8);
 		margin-top: rem(24);
+
+		@media (min-width:$md5) {
+			grid-template-columns: repeat(2, 1fr);
+
+		}
 
 		@media (min-width: $md3) {
 			grid-template-columns: repeat(4, 1fr);
@@ -264,11 +274,7 @@
 	&__aside {
 		display: flex;
 		flex-direction: column;
-		border-top: rem(1) solid #27110d;
 
-		@media (min-width: $md4) {
-			border-top: none;
-		}
 	}
 
 	// .quiz__aside-image
@@ -313,6 +319,12 @@
 		gap: rem(3);
 		justify-content: flex-start;
 		background: $beige;
+
+		@media (max-width:$md4) {
+			position: absolute;
+			top: 1rem;
+			right: 1rem;
+		}
 
 		@media (min-width: $md4) {
 			margin-top: rem(14);

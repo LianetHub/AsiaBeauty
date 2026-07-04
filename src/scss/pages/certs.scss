@@ -616,6 +616,7 @@
 		flex-direction: column;
 		align-items: center;
 		padding: rem(25) rem(50);
+		gap: 2rem;
 
 		@media (min-width: $md5) {
 			padding: 2.5rem 1.44rem rem(46) 3.13rem;

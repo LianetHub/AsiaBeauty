@@ -1,8 +1,10 @@
 <section class="extras">
     <div class="container">
         <h2 class="extras__title title">Часто выбирают вместе</h2>
-        <div class="extras__list">
-            @@loop('./templates/_product.html', './html/json/extras.json')
+        <div class="extras__carousel swiper">
+            <ul class="swiper-wrapper">
+                @@loop('./templates/_product.html', './html/json/extras.json')
+            </ul>
         </div>
     </div>
 </section>

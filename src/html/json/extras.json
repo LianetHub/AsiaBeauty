@@ -1,5 +1,6 @@
 [
     {
+        "isInSlider": true,
         "mod": "extra",
         "id": "anahata_traditions_1",
         "image": "@img/extras/01.jpg",
@@ -11,6 +12,7 @@
         "btnText": "Выбрать комплект"
     },
     {
+        "isInSlider": true,
         "mod": "extra",
         "id": "anahata_traditions_2",
         "image": "@img/extras/02.jpg",
@@ -22,6 +24,7 @@
         "btnText": "Выбрать комплект"
     },
     {
+        "isInSlider": true,
         "mod": "extra",
         "id": "anahata_traditions_3",
         "image": "@img/extras/03.jpg",

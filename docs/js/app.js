@@ -444,28 +444,23 @@ $(function () {
 
 	if ($(".catalog__carousel").length > 0) {
 		$(".catalog__carousel").each(function (index, sliderEl) {
-			let swiperInstance = null;
-			const breakpoint = 767.98;
-			const options = {
-				spaceBetween: 32,
+			new Swiper(sliderEl, {
+				spaceBetween: 20,
 				slidesPerView: "auto",
 				speed: 800,
 				watchOverflow: true,
-			};
+			});
+		});
+	}
 
-			const handleResize = () => {
-				if (window.innerWidth <= breakpoint) {
-					if (!swiperInstance) {
-						swiperInstance = new Swiper(sliderEl, options);
-					}
-				} else if (swiperInstance) {
-					swiperInstance.destroy(true, true);
-					swiperInstance = null;
-				}
-			};
-
-			handleResize();
-			window.addEventListener("resize", handleResize);
+	if ($(".extras__carousel").length > 0) {
+		$(".extras__carousel").each(function (index, sliderEl) {
+			new Swiper(sliderEl, {
+				spaceBetween: 20,
+				slidesPerView: "auto",
+				speed: 800,
+				watchOverflow: true,
+			});
 		});
 	}
 
