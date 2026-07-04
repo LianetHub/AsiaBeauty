@@ -2,7 +2,7 @@
 <li class="swiper-slide">
     }
 
-    <div class="product-card@@if(typeof image === 'undefined' || image === '') { product-card--empty}@@if(typeof theme !== 'undefined' && theme === 'light') { product-card--theme-light}" id="@@id" data-animate="card">
+    <div class="product-card@@if(typeof mod !== 'undefined' && mod === 'extra') { product-card--extra}@@if(typeof image === 'undefined' || image === '') { product-card--empty}@@if(typeof theme !== 'undefined' && theme === 'light') { product-card--theme-light}" id="@@id" data-animate="card">
         @@if(typeof image !== 'undefined' && image !== '') {
         <a href="service.html" class="product-card__image">
             <img src="@@image" class="cover-image" alt="@@name">
@@ -12,16 +12,33 @@
         </a>
         }
         <div class="product-card__header">
+            @@if(typeof mod === 'undefined' || mod !== 'extra') {
             <a href="service.html" class="product-card__name">@@name</a>
             @@for (var bi = 0; bi < 1; bi++) { `+( typeof badge !=='undefined' ? '<span class="product-card__badge product-card__badge--' +badge+'">'+( badge === 'guest' ? 'Выбор гостя' : badge === 'hit' ? 'Хит' : badge )+'</span>' : '' )+`
                 }
+            }
+            @@if(typeof mod !== 'undefined' && mod === 'extra') {
+            <button type="button" class="product-card__favorite favorite-btn icon-heart" aria-label="Добавить в избранное"></button>
+            }
         </div>
         <div class="product-card__body">
-            @@if(typeof price !== 'undefined' || typeof time !== 'undefined') {
+            @@if(typeof mod !== 'undefined' && mod === 'extra') {
+            <a href="service.html" class="product-card__name">@@name</a>
+            @@if(typeof desc !== 'undefined') {
+            <p class="product-card__desc">@@desc</p>
+            }
+            }
+            @@if(typeof price !== 'undefined' || typeof time !== 'undefined' || typeof oldPrice !== 'undefined') {
             <div class="product-card__meta">
                 <div class="product-card__details">
                     @@if(typeof price !== 'undefined') {
                     <span class="product-card__price">@@price</span>
+                    }
+                    @@if(typeof oldPrice !== 'undefined') {
+                    <span class="product-card__old-price">@@oldPrice</span>
+                    }
+                    @@if(typeof discount !== 'undefined') {
+                    <span class="product-card__badge product-card__badge--discount">@@discount</span>
                     }
                     @@if(typeof time !== 'undefined') {
                     <span class="product-card__time">
@@ -30,11 +47,18 @@
                     </span>
                     }
                 </div>
+                @@if(typeof mod === 'undefined' || mod !== 'extra') {
                 <button type="button" class="product-card__favorite favorite-btn icon-heart" aria-label="Добавить в избранное"></button>
+                }
             </div>
             }
             <div class="product-card__footer">
+                @@if(typeof btnText !== 'undefined') {
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">@@btnText</a>
+                }
+                @@if(typeof btnText === 'undefined') {
                 <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
+                }
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>

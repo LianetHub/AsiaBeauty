@@ -184,6 +184,43 @@
 	}
 }
 
+.extras {
+	padding: rem(26) 0 rem(32);
+
+	@media (min-width: $md5) {
+		padding: rem(36) 0;
+	}
+
+	// .extras__title
+	&__title {
+		font-weight: 400;
+		line-height: 0.8;
+		color: #290F0A;
+	}
+
+	// .extras__list
+	&__list {
+		display: grid;
+		gap: rem(20);
+		margin: rem(24) 0 0;
+		padding: 0;
+		list-style: none;
+
+		@media (min-width: $md4) {
+			grid-template-columns: repeat(3, 1fr);
+			margin-top: rem(18);
+		}
+
+		@media (max-width: ($md4 - 0.02)) {
+			grid-template-columns: repeat(auto-fill, minmax(rem(280), 1fr));
+		}
+
+		.product-card {
+			width: 100%;
+		}
+	}
+}
+
 .video-block {
 	padding: 1.25rem 0;
 	position: relative;
