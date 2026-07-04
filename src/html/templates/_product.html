@@ -4,15 +4,17 @@
 
     <div class="product-card@@if(typeof mod !== 'undefined' && mod === 'extra') { product-card--extra}@@if(typeof image === 'undefined' || image === '') { product-card--empty}@@if(typeof theme !== 'undefined' && theme === 'light') { product-card--theme-light}" id="@@id" data-animate="card">
         @@if(typeof image !== 'undefined' && image !== '') {
-        <a href="service.html" class="product-card__image">
-            <img src="@@image" class="cover-image" alt="@@name">
+        <div class="product-card__image">
+            <a href="service.html" class="product-card__image-link">
+                <img src="@@image" class="cover-image" alt="@@name">
+            </a>
             @@if(typeof video !== 'undefined') {
-            <span class="product-card__play icon-play" aria-hidden="true"></span>
+            <a href="files/service-video.mp4" data-fancybox class="product-card__play icon-play" aria-label="Смотреть видео"></a>
             }
-        </a>
+        </div>
         }
         @@if(typeof video !== 'undefined' && (typeof image === 'undefined' || image === '')) {
-        <span class="product-card__play icon-play" aria-hidden="true"></span>
+        <a href="files/service-video.mp4" data-fancybox class="product-card__play icon-play" aria-label="Смотреть видео"></a>
         }
         <div class="product-card__header">
             @@if(typeof mod === 'undefined' || mod !== 'extra') {

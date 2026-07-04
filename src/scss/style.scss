@@ -82,7 +82,7 @@ body {
 	&.lock-filter {
 		overflow: hidden;
 
-		@media (min-width: $md2) {
+		@media (min-width: $md3) {
 			overflow: visible;
 		}
 	}

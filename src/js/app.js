@@ -2,12 +2,12 @@
 
 import { initQuiz } from "./modules/quiz.js";
 import { initHeaderSearch } from "./modules/header-search.js";
-import { initCatalogFilter, initCatalogToolbar } from "./modules/catalog-filter.js";
+import { initCatalogFilter, initCatalogSidebarFancybox, initCatalogToolbar } from "./modules/catalog-filter.js";
 
 $(function () {
 	// init Fancybox Gallery
 	if (typeof Fancybox !== "undefined" && Fancybox !== null) {
-		Fancybox.bind("[data-fancybox]", {
+		Fancybox.bind("[data-fancybox]:not([data-fancybox='catalog-filters'])", {
 			dragToClose: false,
 		});
 	}
@@ -644,6 +644,7 @@ $(function () {
 	initHeaderSearch();
 	initCatalogFilter();
 	initCatalogToolbar();
+	initCatalogSidebarFancybox();
 
 	// Phone Russia Mask
 

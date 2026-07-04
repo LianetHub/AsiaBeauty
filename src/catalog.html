@@ -19,6 +19,7 @@
                         <div class="catalog__layout">
                             @@include('./html/_catalog-sidebar.html')
                             <div class="catalog__main">
+                                <a href="#catalog-sidebar" data-fancybox="catalog-filters" data-type="inline" class="catalog__sidebar-toggler btn">Показать все фильтры</a>
                                 <h2 class="catalog__section-title">массажи</h2>
                                 <div class="catalog__grid">
                                     @@loop('./html/templates/_product.html', './html/json/catalog-showcase.json')

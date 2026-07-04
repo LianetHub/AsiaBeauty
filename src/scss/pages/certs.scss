@@ -629,14 +629,9 @@
 		font-weight: 400;
 		max-width: 24rem;
 		margin: auto;
-
-		&--catalog {
-			font-family: $fontfamily;
-			font-size: rem(32);
-			line-height: 1;
-			text-transform: uppercase;
-			max-width: rem(450);
-		}
+		text-transform: uppercase;
+		font-family: $fontfamily;
+		font-size: 2rem;
 	}
 
 	// .gift__btn

@@ -198,3 +198,18 @@ export function initCatalogToolbar() {
 		toggler.setAttribute("aria-expanded", String(!isHidden));
 	});
 }
+
+export function initCatalogSidebarFancybox() {
+	if (typeof Fancybox === "undefined" || !document.querySelector("[data-fancybox='catalog-filters']")) return;
+
+	Fancybox.bind("[data-fancybox='catalog-filters']", {
+		dragToClose: false,
+		autoFocus: false,
+		mainClass: "catalog-filters-modal",
+		on: {
+			done: () => {
+				window.dispatchEvent(new Event("resize"));
+			},
+		},
+	});
+}

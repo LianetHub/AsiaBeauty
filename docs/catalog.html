@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
+    <head>
     <title>Asia Beauty SPA | Каталог</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -8,19 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- plugins -->
-    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20260704182113" />
-    <link rel="stylesheet" href="css/libs/fancybox.css?_v=20260704182113" />
-    <link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20260704182113" />
+    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/libs/fancybox.css" />
+    <link rel="stylesheet" href="css/libs/nouislider.min.css" />
     <!-- plugins -->
 
-    <link rel="stylesheet" href="css/reset.min.css?_v=20260704182113" />
-    <link rel="stylesheet" href="css/style.min.css?_v=20260704182113" />
+    <link rel="stylesheet" href="css/reset.min.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
 
 </head>
-
-<body>
-  <div class="wrapper">
-    <header class="header">
+    <body>
+        <div class="wrapper">
+            <header class="header">
     <div class="header__marquee">
         <div class="header__marquee-container container container-lg ">
             <div class="header__marquee-slider swiper">
@@ -90,8 +89,8 @@
         </nav>
     </div>
 </div>
-    <main class="page page--catalog">
-      <section class="hero hero--catalog">
+            <main class="page page--catalog">
+                <section class="hero hero--catalog">
     <div class="container container-lg">
         <div class="hero__banner" style="background-image: url('img/hero.jpg');">
             <div class="hero__offer">
@@ -107,8 +106,8 @@
         
     </div>
 </section>
-      <div class="catalog-toolbar">
-    <div class="container container-lg">
+                <div class="catalog-toolbar">
+    <div class="container">
         <form action="search.html" method="get" class="catalog-toolbar__search">
             <div class="catalog-toolbar__field">
                 <button type="submit" aria-label="Искать" class="catalog-toolbar__search-icon icon-search"></button>
@@ -147,11 +146,10 @@
         </div>
     </div>
 </div>
-
-      <section class="catalog">
-        <div class="container container-lg">
-          <div class="catalog__layout">
-            <aside class="catalog__sidebar" id="catalog-sidebar">
+                <section class="catalog">
+                    <div class="container container-lg">
+                        <div class="catalog__layout">
+                            <aside class="catalog__sidebar" id="catalog-sidebar">
     <form action="#" class="catalog__sidebar-form">
         <div class="catalog__sidebar-inner" data-spollers>
             <div class="catalog__sidebar-group _spoller-open">
@@ -478,17 +476,20 @@
     </form>
 </aside>
 
-            <div class="catalog__main">
-              <h2 class="catalog__section-title">массажи</h2>
-              <div class="catalog__grid">
-                
+                            <div class="catalog__main">
+                                <a href="#catalog-sidebar" data-fancybox="catalog-filters" data-type="inline" class="catalog__sidebar-toggler btn">Показать все фильтры</a>
+                                <h2 class="catalog__section-title">массажи</h2>
+                                <div class="catalog__grid">
+                                    
 
     <div class="product-card product-card--theme-light" id="showcase_relax" data-animate="card">
         
-        <a href="service.html" class="product-card__image">
-            <img src="img/goods/relax-massage.jpg" class="cover-image" alt="Релакс массаж">
+        <div class="product-card__image">
+            <a href="service.html" class="product-card__image-link">
+                <img src="img/goods/relax-massage.jpg" class="cover-image" alt="Релакс массаж">
+            </a>
             
-        </a>
+        </div>
         
         
         <div class="product-card__header">
@@ -536,10 +537,12 @@
 
     <div class="product-card product-card--theme-light" id="showcase_aroma" data-animate="card">
         
-        <a href="service.html" class="product-card__image">
-            <img src="img/goods/aroma-massage.jpg" class="cover-image" alt="Арома массаж со свечей">
+        <div class="product-card__image">
+            <a href="service.html" class="product-card__image-link">
+                <img src="img/goods/aroma-massage.jpg" class="cover-image" alt="Арома массаж со свечей">
+            </a>
             
-        </a>
+        </div>
         
         
         <div class="product-card__header">
@@ -587,10 +590,12 @@
 
     <div class="product-card" id="showcase_tandem" data-animate="card">
         
-        <a href="service.html" class="product-card__image">
-            <img src="img/goods/tandem-massage.jpg" class="cover-image" alt="Тандем массаж">
+        <div class="product-card__image">
+            <a href="service.html" class="product-card__image-link">
+                <img src="img/goods/tandem-massage.jpg" class="cover-image" alt="Тандем массаж">
+            </a>
             
-        </a>
+        </div>
         
         
         <div class="product-card__header">
@@ -638,12 +643,14 @@
 
     <div class="product-card" id="showcase_sport" data-animate="card">
         
-        <a href="service.html" class="product-card__image">
-            <img src="img/goods/sport-massage.jpg" class="cover-image" alt="Спортивный массаж">
+        <div class="product-card__image">
+            <a href="service.html" class="product-card__image-link">
+                <img src="img/goods/sport-massage.jpg" class="cover-image" alt="Спортивный массаж">
+            </a>
             
-            <span class="product-card__play icon-play" aria-hidden="true"></span>
+            <a href="files/service-video.mp4" data-fancybox class="product-card__play icon-play" aria-label="Смотреть видео"></a>
             
-        </a>
+        </div>
         
         
         <div class="product-card__header">
@@ -737,12 +744,14 @@
 
     <div class="product-card product-card--theme-light" id="showcase_shiatsu" data-animate="card">
         
-        <a href="service.html" class="product-card__image">
-            <img src="img/goods/shiatsu.jpg" class="cover-image" alt="Шиацу">
+        <div class="product-card__image">
+            <a href="service.html" class="product-card__image-link">
+                <img src="img/goods/shiatsu.jpg" class="cover-image" alt="Шиацу">
+            </a>
             
-            <span class="product-card__play icon-play" aria-hidden="true"></span>
+            <a href="files/service-video.mp4" data-fancybox class="product-card__play icon-play" aria-label="Смотреть видео"></a>
             
-        </a>
+        </div>
         
         
         <div class="product-card__header">
@@ -882,10 +891,12 @@
 
     <div class="product-card" id="showcase_stone" data-animate="card">
         
-        <a href="service.html" class="product-card__image">
-            <img src="img/goods/stone-massage.jpg" class="cover-image" alt="Массаж теплыми вулканическими камнями">
+        <div class="product-card__image">
+            <a href="service.html" class="product-card__image-link">
+                <img src="img/goods/stone-massage.jpg" class="cover-image" alt="Массаж теплыми вулканическими камнями">
+            </a>
             
-        </a>
+        </div>
         
         
         <div class="product-card__header">
@@ -934,7 +945,7 @@
     <div class="product-card product-card--empty" id="showcase_foot" data-animate="card">
         
         
-        <span class="product-card__play icon-play" aria-hidden="true"></span>
+        <a href="files/service-video.mp4" data-fancybox class="product-card__play icon-play" aria-label="Смотреть видео"></a>
         
         <div class="product-card__header">
             
@@ -1027,10 +1038,12 @@
 
     <div class="product-card" id="showcase_fire" data-animate="card">
         
-        <a href="service.html" class="product-card__image">
-            <img src="img/goods/fire-massage.jpg" class="cover-image" alt="Огненный массаж">
+        <div class="product-card__image">
+            <a href="service.html" class="product-card__image-link">
+                <img src="img/goods/fire-massage.jpg" class="cover-image" alt="Огненный массаж">
+            </a>
             
-        </a>
+        </div>
         
         
         <div class="product-card__header">
@@ -1075,16 +1088,16 @@
 
     
 
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="gift">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="gift">
     <div class="container container-lg">
         <div class="gift__content">
             <div class="gift__body">
-                <h2 class="gift__title gift__title--catalog">СПА-ДЕПОЗИТЫ И<br>КЛУБ ПРИВЕЛЕГИЙ</h2>
+                <h2 class="gift__title">СПА-ДЕПОЗИТЫ И<br>КЛУБ ПРИВЕЛЕГИЙ</h2>
                 
                 <a href="deposits.html" class="gift__btn btn btn-white btn-lg">Приобрести депозит</a>
             </div>
@@ -1094,9 +1107,8 @@
         </div>
     </div>
 </section>
-
-    </main>
-    <footer class="footer">
+            </main>
+            <footer class="footer">
     <div class="container container-lg">
         <div class="footer__logo">
             <img src="img/logo-white.svg" alt="Логотип">
@@ -1184,19 +1196,18 @@
         </a>
     </div>
 </div>
-  </div>
+        </div>
 
-  <!-- plugins -->
-<script src="js/libs/jquery-4.0.0.min.js?_v=20260704182113"></script>
-<script src="js/libs/swiper-bundle.min.js?_v=20260704182113"></script>
-<script src="js/libs/fancybox.min.js?_v=20260704182113"></script>
-<script src="js/libs/nouislider.min.js?_v=20260704182113"></script>
-<!-- <script src="js/libs/gsap.min.js?_v=20260704182113"></script>
-<script src="js/libs/ScrollTrigger.min.js?_v=20260704182113"></script> -->
+        <!-- plugins -->
+<script src="js/libs/jquery-4.0.0.min.js"></script>
+<script src="js/libs/swiper-bundle.min.js"></script>
+<script src="js/libs/fancybox.min.js"></script>
+<script src="js/libs/nouislider.min.js"></script>
+<!-- <script src="js/libs/gsap.min.js"></script>
+<script src="js/libs/ScrollTrigger.min.js"></script> -->
 
 <!-- plugins -->
 
-<script src="js/app.min.js?_v=20260704182113"></script>
-</body>
-
+<script src="js/app.min.js"></script>
+    </body>
 </html>
