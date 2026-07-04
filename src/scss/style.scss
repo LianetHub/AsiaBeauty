@@ -170,7 +170,6 @@ body {
 @import "pages/news";
 @import "pages/deposits";
 @import "pages/salons";
-@import "pages/contacts";
 @import "pages/service";
 @import "pages/catalog";
 @import "pages/apartaments";
@@ -752,3 +751,5 @@ body {
 		margin-inline: auto;
 	}
 }
+
+@import "pages/contacts";
