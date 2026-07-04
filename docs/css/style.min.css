@@ -65,6 +65,14 @@
   display: block;
 }
 
+.icon-max:before {
+  content: "\e910";
+}
+
+.icon-whatsapp:before {
+  content: "\e911";
+}
+
 .icon-heart-fill:before, .favorite-btn.active:before {
   content: "\e90f";
 }
