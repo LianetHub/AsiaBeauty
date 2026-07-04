@@ -1,6 +1,6 @@
 <section class="hero@@if(typeof modifier !== 'undefined' && modifier) { @@modifier}">
     <div class="container container-lg">
-        <div class="hero__banner@@if(typeof bannerLarge !== 'undefined' && bannerLarge) { hero__banner--large}" style="background-image: url('@img/hero.jpg');">
+        <div class="hero__banner@@if(typeof bannerLarge !== 'undefined' && bannerLarge) { hero__banner--large}" style="background-image: url('@@if(typeof bgImage !== 'undefined') {@@bgImage}@@if(typeof bgImage === 'undefined') {@img/hero.jpg}');">
             <div class="hero__offer">
                 <h1 class="hero__title title-lg">@@title@@if(typeof titleLine2 !== 'undefined') {<br>@@titleLine2}</h1>
                 @@if(typeof subtitle !== 'undefined') {

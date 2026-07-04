@@ -1120,76 +1120,82 @@ $(function () {
 	//     });
 	// }
 
-	// function initQuadrantShiftAnimation() {
-	//     const iconBlocks = gsap.utils.toArray('[data-animate="quadrant-shift"]');
-	//     if (iconBlocks.length === 0) return;
+	function initQuadrantShiftAnimation() {
+		if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
 
-	//     const positions = [
-	//         { x: 0, y: 0 },
-	//         { x: 19, y: 0 },
-	//         { x: 19, y: 19 },
-	//         { x: 0, y: 19 }
-	//     ];
+		gsap.registerPlugin(ScrollTrigger);
 
-	//     const positionsExtra = [
-	//         { x: 0, y: 0 },
-	//         { x: 20, y: 0 },
-	//         { x: 39, y: 0 },
-	//         { x: 20, y: 19 },
-	//         { x: 0, y: 19 }
-	//     ];
+		const iconBlocks = gsap.utils.toArray('[data-animate="quadrant-shift"]');
+		if (iconBlocks.length === 0) return;
 
-	//     iconBlocks.forEach(svgElement => {
-	//         const squares = [
-	//             svgElement.querySelector('.q-1'),
-	//             svgElement.querySelector('.q-2'),
-	//             svgElement.querySelector('.q-3'),
-	//             svgElement.querySelector('.q-4'),
-	//             svgElement.querySelector('.q-5')
-	//         ].filter(Boolean);
+		const positions = [
+			{ x: 0, y: 0 },
+			{ x: 19, y: 0 },
+			{ x: 19, y: 19 },
+			{ x: 0, y: 19 }
+		];
 
-	//         if (squares.length === 0) return;
+		const positionsExtra = [
+			{ x: 0, y: 0 },
+			{ x: 20, y: 0 },
+			{ x: 39, y: 0 },
+			{ x: 20, y: 19 },
+			{ x: 0, y: 19 }
+		];
 
-	//         squares.forEach(sq => {
-	//             sq.setAttribute('x', '0');
-	//             sq.setAttribute('y', '0');
-	//         });
+		iconBlocks.forEach(svgElement => {
+			const squares = [
+				svgElement.querySelector('.q-1'),
+				svgElement.querySelector('.q-2'),
+				svgElement.querySelector('.q-3'),
+				svgElement.querySelector('.q-4'),
+				svgElement.querySelector('.q-5')
+			].filter(Boolean);
 
-	//         const isExtra = squares.length === 5;
-	//         const currentPositions = isExtra ? positionsExtra : positions;
-	//         const totalPos = currentPositions.length;
+			if (squares.length === 0) return;
 
-	//         const startIndex = squares.map((_, i) => i % totalPos);
+			squares.forEach(sq => {
+				sq.setAttribute('x', '0');
+				sq.setAttribute('y', '0');
+			});
 
-	//         squares.forEach((sq, i) => {
-	//             gsap.set(sq, {
-	//                 x: currentPositions[startIndex[i]].x,
-	//                 y: currentPositions[startIndex[i]].y
-	//             });
-	//         });
+			const isExtra = squares.length === 5;
+			const currentPositions = isExtra ? positionsExtra : positions;
+			const totalPos = currentPositions.length;
 
-	//         const tl = gsap.timeline({
-	//             repeat: -1,
-	//             repeatDelay: 0.4,
-	//             defaults: { duration: 0.5, ease: "power2.inOut" },
-	//             paused: true
-	//         });
+			const startIndex = squares.map((_, i) => i % totalPos);
 
-	//         for (let step = 1; step <= totalPos; step++) {
-	//             tl.to(squares, {
-	//                 x: i => currentPositions[(startIndex[i] + step) % totalPos].x,
-	//                 y: i => currentPositions[(startIndex[i] + step) % totalPos].y
-	//             });
-	//         }
+			squares.forEach((sq, i) => {
+				gsap.set(sq, {
+					x: currentPositions[startIndex[i]].x,
+					y: currentPositions[startIndex[i]].y
+				});
+			});
 
-	//         ScrollTrigger.create({
-	//             trigger: svgElement,
-	//             start: "top 85%",
-	//             onEnter: () => tl.play(),
-	//             onLeaveBack: () => tl.pause(0)
-	//         });
-	//     });
-	// }
+			const tl = gsap.timeline({
+				repeat: -1,
+				repeatDelay: 0.4,
+				defaults: { duration: 0.5, ease: "power2.inOut" },
+				paused: true
+			});
+
+			for (let step = 1; step <= totalPos; step++) {
+				tl.to(squares, {
+					x: i => currentPositions[(startIndex[i] + step) % totalPos].x,
+					y: i => currentPositions[(startIndex[i] + step) % totalPos].y
+				});
+			}
+
+			ScrollTrigger.create({
+				trigger: svgElement,
+				start: "top 85%",
+				onEnter: () => tl.play(),
+				onLeaveBack: () => tl.pause(0)
+			});
+		});
+	}
+
+	initQuadrantShiftAnimation();
 
 	// function initHeroHomepageAnimation() {
 	//     const hero = document.querySelector('.hero');
