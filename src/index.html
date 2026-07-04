@@ -100,16 +100,7 @@
                         </ul>
                     </div>
                 </section>
-                <section class="catalog">
-                    <div class="container">
-                        <h2 class="catalog__title title">ПОПУЛЯРНЫЕ услуги</h2>
-                        <div class="catalog__carousel swiper">
-                            <ul class="swiper-wrapper">
-                                @@loop('./html/templates/_product.html', './html/json/popular.json')
-                            </ul>
-                        </div>
-                    </div>
-                </section>
+                @@include('./html/_popular.html')
                 <a href="" data-fancybox class="video-block icon-play">
                     <img src="@img/home-video-poster.jpg" alt="Постер">
                 </a>
