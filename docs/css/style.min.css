@@ -65,6 +65,10 @@
   display: block;
 }
 
+.icon-phone:before {
+  content: "\e912";
+}
+
 .icon-max:before {
   content: "\e910";
 }
