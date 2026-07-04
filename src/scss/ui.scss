@@ -20,7 +20,10 @@
 
 .title {
 	font-family: $font-bebas;
-	font-weight: 700;
+	font-weight: 400;
+	font-synthesis: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	line-height: 110%;
 	text-transform: uppercase;
 	font-size: 1.25rem;
@@ -33,7 +36,10 @@
 
 .title-lg {
 	font-family: $font-bebas;
-	font-weight: 700;
+	font-weight: 400;
+	font-synthesis: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	text-transform: uppercase;
 	font-size: 2.25rem;
 	line-height: 100%;
@@ -47,7 +53,10 @@
 
 .title-sm {
 	font-family: $font-bebas;
-	font-weight: 700;
+	font-weight: 400;
+	font-synthesis: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	line-height: 110%;
 	text-transform: uppercase;
 	font-size: 1.25rem;

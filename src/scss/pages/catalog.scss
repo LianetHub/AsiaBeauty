@@ -451,7 +451,7 @@
 		}
 
 		.product-card__details {
-			align-items: flex-start;
+			align-items: center;
 			justify-content: flex-start;
 			flex-wrap: wrap;
 			gap: rem(8);
@@ -612,7 +612,7 @@
 			z-index: 1;
 			flex: none;
 			min-width: auto;
-			font-weight: 500;
+			font-weight: 400;
 			font-size: rem(16);
 			line-height: 1;
 			color: #ECEAE0;

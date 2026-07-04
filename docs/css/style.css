@@ -7,14 +7,6 @@
   font-display: swap;
 }
 @font-face {
-  font-family: "Cormorant";
-  src: url("../fonts/Cormorant.woff2") format("woff2 supports variations"), url("../fonts/Cormorant.woff2") format("woff2-variations"), url("../fonts/Cormorant.woff") format("woff");
-  font-weight: 100 900;
-  font-stretch: 75% 125%;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
   font-family: "Inter";
   src: url("../fonts/Inter.woff2") format("woff2 supports variations"), url("../fonts/Inter.woff2") format("woff2-variations"), url("../fonts/Inter.woff") format("woff");
   font-weight: 100 900;
@@ -23,16 +15,8 @@
   font-display: swap;
 }
 @font-face {
-  font-family: "Figtree";
-  src: url("../fonts/Figtree.woff2") format("woff2 supports variations"), url("../fonts/Figtree.woff2") format("woff2-variations"), url("../fonts/Figtree.woff") format("woff");
-  font-weight: 100 900;
-  font-stretch: 75% 125%;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "icons";
-  src: url("../fonts/icons.woff2") format("woff2 supports variations"), url("../fonts/icons.woff2") format("woff2-variations"), url("../fonts/icons.woff") format("woff");
+  font-family: "Cormorant";
+  src: url("../fonts/Cormorant.woff2") format("woff2 supports variations"), url("../fonts/Cormorant.woff2") format("woff2-variations"), url("../fonts/Cormorant.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
@@ -41,6 +25,14 @@
 @font-face {
   font-family: "Jost";
   src: url("../fonts/Jost.woff2") format("woff2 supports variations"), url("../fonts/Jost.woff2") format("woff2-variations"), url("../fonts/Jost.woff") format("woff");
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons.woff2") format("woff2 supports variations"), url("../fonts/icons.woff2") format("woff2-variations"), url("../fonts/icons.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
@@ -991,7 +983,10 @@ body.lock-filter {
 
 .title {
   font-family: "BebasNeue", sans-serif;
-  font-weight: 700;
+  font-weight: 400;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   line-height: 110%;
   text-transform: uppercase;
   font-size: 1.25rem;
@@ -1004,7 +999,10 @@ body.lock-filter {
 
 .title-lg {
   font-family: "BebasNeue", sans-serif;
-  font-weight: 700;
+  font-weight: 400;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-transform: uppercase;
   font-size: 2.25rem;
   line-height: 100%;
@@ -1017,7 +1015,10 @@ body.lock-filter {
 
 .title-sm {
   font-family: "BebasNeue", sans-serif;
-  font-weight: 700;
+  font-weight: 400;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   line-height: 110%;
   text-transform: uppercase;
   font-size: 1.25rem;
@@ -1896,7 +1897,8 @@ body.lock-filter {
   gap: 2rem;
   font-family: "BebasNeue", sans-serif;
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 400;
+  font-synthesis: none;
   line-height: 110%;
   text-transform: uppercase;
   border-bottom: 0.125rem solid #290F0A;
@@ -4096,7 +4098,7 @@ body.lock-filter {
   align-items: flex-start;
 }
 .product-card--extra .product-card__details {
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -4229,7 +4231,7 @@ body.lock-filter {
   z-index: 1;
   flex: none;
   min-width: auto;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1rem;
   line-height: 1;
   color: #ECEAE0;
