@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
+    <head>
     <title>Asia Beauty SPA | Услуги</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -8,25 +8,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- plugins -->
-    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20260704132229" />
-    <link rel="stylesheet" href="css/libs/fancybox.css?_v=20260704132229" />
-    <link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20260704132229" />
+    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/libs/fancybox.css" />
+    <link rel="stylesheet" href="css/libs/nouislider.min.css" />
     <!-- plugins -->
 
-    <link rel="stylesheet" href="css/reset.min.css?_v=20260704132229" />
-    <link rel="stylesheet" href="css/style.min.css?_v=20260704132229" />
+    <link rel="stylesheet" href="css/reset.min.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
 
 </head>
-
-<body>
-  <div class="wrapper">
-    <header class="header">
+    <body>
+        <div class="wrapper">
+            <header class="header">
     <div class="header__marquee">
-        <div class="header__marquee-container container container-lg">
-            <span class="header__marquee-item">РАБОТАЕМ ЕЖЕДНЕВНО ВО ВСЕХ ЛОКАЦИЯХ 24/7</span>
-            <span class="header__marquee-item">БАЛИЙСКИЕ ТАЙСКИЕ И КИТАЙСКИЕ ТЕХНИКИ МАССАЖА</span>
-            <span class="header__marquee-item">120+ спа-программ</span>
-            <span class="header__marquee-item">6 локаций</span>
+        <div class="header__marquee-container container container-lg ">
+            <div class="header__marquee-slider swiper">
+                <div class="swiper-wrapper">
+                    <span class="header__marquee-item swiper-slide">РАБОТАЕМ ЕЖЕДНЕВНО ВО ВСЕХ ЛОКАЦИЯХ 24/7</span>
+                    <span class="header__marquee-item swiper-slide">БАЛИЙСКИЕ ТАЙСКИЕ И КИТАЙСКИЕ ТЕХНИКИ МАССАЖА</span>
+                    <span class="header__marquee-item swiper-slide">120+ спа-программ</span>
+                    <span class="header__marquee-item swiper-slide">6 локаций</span>
+                </div>
+            </div>
         </div>
     </div>
     <div class="container container-lg">
@@ -51,145 +54,146 @@
         </div>
     </div>
 </header>
-    <main class="page">
-      <div class="heading">
-        <div class="container container-lg">
-          <nav aria-label="Хлебные крошки" class="breadcrumbs">
-            <ul class="breadcrumbs__items">
-              <li class="breadcrumbs__item">
-                <a href="index.html" class="breadcrumbs__link">Главная</a>
-              </li>
-              <li class="breadcrumbs__item">
-                <span class="breadcrumbs__link active">Услуги</span>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <div class="services-slider swiper">
-        <div class="swiper-wrapper">
-          <a href="service.html" class="services-slider__slide swiper-slide">
-            <span class="services-slider__slide-image">
-              <img src="img/services/spa-menu.jpg" class="cover-image" alt="Фото услуги">
-            </span>
-            <span class="services-slider__slide-name text-medium text-uppercase">spa-меню</span>
-          </a>
-          <a href="service.html" class="services-slider__slide swiper-slide">
-            <span class="services-slider__slide-image">
-              <img src="img/services/spa-woman.jpg" class="cover-image" alt="Фото услуги">
-            </span>
-            <span class="services-slider__slide-name text-medium text-uppercase">spa для нее</span>
-          </a>
-          <a href="service.html" class="services-slider__slide swiper-slide">
-            <span class="services-slider__slide-image">
-              <img src="img/services/spa-man.jpg" class="cover-image" alt="Фото услуги">
-            </span>
-            <span class="services-slider__slide-name text-medium text-uppercase">spa для него</span>
-          </a>
-          <a href="service.html" class="services-slider__slide swiper-slide">
-            <span class="services-slider__slide-image">
-              <img src="img/services/spa.jpg" class="cover-image" alt="Фото услуги">
-            </span>
-            <span class="services-slider__slide-name text-medium text-uppercase">spa для двоих</span>
-          </a>
-        </div>
-      </div>
-      <section class="catalog">
-        <div class="container container-lg">
-          <div class="catalog__content">
-            <div class="catalog__header">
-              <div class="section-header">
-                <div class="section-header__caption caption">все Услуги</div>
-              </div>
-              <div class="catalog__filters">
-                <label class="catalog__filter">
-                  <input type="checkbox" name="category" checked value="massazhi" class="catalog__filter-input hidden" hidden>
-                  <span class="catalog__filter-btn btn btn-grey btn-lg">массажи</span>
-                </label>
-
-                <label class="catalog__filter">
-                  <input type="checkbox" name="category" value="kitayskie-massazhi" class="catalog__filter-input hidden" hidden>
-                  <span class="catalog__filter-btn btn btn-grey btn-lg">китайские массажи</span>
-                </label>
-
-                <label class="catalog__filter">
-                  <input type="checkbox" name="category" value="relaksiruyushchie-massazhi" class="catalog__filter-input hidden" hidden>
-                  <span class="catalog__filter-btn btn btn-grey btn-lg">релаксирующие массажи</span>
-                </label>
-
-                <label class="catalog__filter">
-                  <input type="checkbox" name="category" value="tandem-massazhi" class="catalog__filter-input hidden" hidden>
-                  <span class="catalog__filter-btn btn btn-grey btn-lg">тандем-массажи</span>
-                </label>
-
-                <label class="catalog__filter">
-                  <input type="checkbox" name="category" value="obertyvaniya" class="catalog__filter-input hidden" hidden>
-                  <span class="catalog__filter-btn btn btn-grey btn-lg">обертывания</span>
-                </label>
-
-                <label class="catalog__filter">
-                  <input type="checkbox" name="category" value="baliyskie-massazhi" class="catalog__filter-input hidden" hidden>
-                  <span class="catalog__filter-btn btn btn-grey btn-lg">балийские массажи</span>
-                </label>
-
-                <label class="catalog__filter">
-                  <input type="checkbox" name="category" value="tayskie-massazhi" class="catalog__filter-input hidden" hidden>
-                  <span class="catalog__filter-btn btn btn-grey btn-lg">тайские массажи</span>
-                </label>
-
-                <label class="catalog__filter">
-                  <input type="checkbox" name="category" value="spa-volosy" class="catalog__filter-input hidden" hidden>
-                  <span class="catalog__filter-btn btn btn-grey btn-lg">SPA программы для волос</span>
-                </label>
-
-                <label class="catalog__filter">
-                  <input type="checkbox" name="category" value="pilingi" class="catalog__filter-input hidden" hidden>
-                  <span class="catalog__filter-btn btn btn-grey btn-lg">пилинги</span>
-                </label>
-
-                <label class="catalog__filter">
-                  <input type="checkbox" name="category" value="mylnyy-massazh" class="catalog__filter-input hidden" hidden>
-                  <span class="catalog__filter-btn btn btn-grey btn-lg">мыльный массаж</span>
-                </label>
-              </div>
-              <div class="catalog__caption">
-                <button type="button" class="catalog__filter-toggler btn btn-grey btn-lg active">
-                  <span class="catalog__filter-text">Фильтр</span>
-                  <span class="catalog__filter-icon icon-filter"></span>
-                </button>
-                <form action="#" class="catalog__search">
-                  <button type="submit" aria-label="Искать" class="catalog__search-submit icon-search"></button>
-                  <input type="text" name="s" class="catalog__search-input" placeholder="Поиск услуг...">
-                </form>
-                <div class="catalog__select">
-                  <div class="select">
-                    <select name="sort">
-                      <option selected value="popularity">По популярности</option>
-                      <option value="price_asc">Сначала недорогие</option>
-                      <option value="price_desc">Сначала дорогие</option>
-                      <option value="duration_asc">Сначала короткие</option>
-                      <option value="duration_desc">Сначала длинные</option>
-                      <option value="newest">Новинки</option>
-                    </select>
-                  </div>
+            <main class="page">
+                <div class="heading">
+                    <div class="container container-lg">
+                        <nav aria-label="Хлебные крошки" class="breadcrumbs">
+                            <ul class="breadcrumbs__items">
+                                <li class="breadcrumbs__item">
+                                    <a href="index.html" class="breadcrumbs__link">Главная</a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <span class="breadcrumbs__link active">Услуги</span>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="catalog__grid">
-              
+                <div class="services-slider swiper">
+                    <div class="swiper-wrapper">
+                        <a href="service.html" class="services-slider__slide swiper-slide">
+                            <span class="services-slider__slide-image">
+                                <img src="img/services/spa-menu.jpg" class="cover-image" alt="Фото услуги">
+                            </span>
+                            <span class="services-slider__slide-name text-medium text-uppercase">spa-меню</span>
+                        </a>
+                        <a href="service.html" class="services-slider__slide swiper-slide">
+                            <span class="services-slider__slide-image">
+                                <img src="img/services/spa-woman.jpg" class="cover-image" alt="Фото услуги">
+                            </span>
+                            <span class="services-slider__slide-name text-medium text-uppercase">spa для нее</span>
+                        </a>
+                        <a href="service.html" class="services-slider__slide swiper-slide">
+                            <span class="services-slider__slide-image">
+                                <img src="img/services/spa-man.jpg" class="cover-image" alt="Фото услуги">
+                            </span>
+                            <span class="services-slider__slide-name text-medium text-uppercase">spa для него</span>
+                        </a>
+                        <a href="service.html" class="services-slider__slide swiper-slide">
+                            <span class="services-slider__slide-image">
+                                <img src="img/services/spa.jpg" class="cover-image" alt="Фото услуги">
+                            </span>
+                            <span class="services-slider__slide-name text-medium text-uppercase">spa для двоих</span>
+                        </a>
+                    </div>
+                </div>
+                <section class="catalog">
+                    <div class="container container-lg">
+                        <div class="catalog__content">
+                            <div class="catalog__header">
+                                <div class="section-header">
+                                    <div class="section-header__caption caption">все Услуги</div>
+                                </div>
+                                <div class="catalog__filters">
+                                    <label class="catalog__filter">
+                                        <input type="checkbox" name="category" checked value="massazhi" class="catalog__filter-input hidden" hidden>
+                                        <span class="catalog__filter-btn btn btn-grey btn-lg">массажи</span>
+                                    </label>
+
+                                    <label class="catalog__filter">
+                                        <input type="checkbox" name="category" value="kitayskie-massazhi" class="catalog__filter-input hidden" hidden>
+                                        <span class="catalog__filter-btn btn btn-grey btn-lg">китайские массажи</span>
+                                    </label>
+
+                                    <label class="catalog__filter">
+                                        <input type="checkbox" name="category" value="relaksiruyushchie-massazhi" class="catalog__filter-input hidden" hidden>
+                                        <span class="catalog__filter-btn btn btn-grey btn-lg">релаксирующие массажи</span>
+                                    </label>
+
+                                    <label class="catalog__filter">
+                                        <input type="checkbox" name="category" value="tandem-massazhi" class="catalog__filter-input hidden" hidden>
+                                        <span class="catalog__filter-btn btn btn-grey btn-lg">тандем-массажи</span>
+                                    </label>
+
+                                    <label class="catalog__filter">
+                                        <input type="checkbox" name="category" value="obertyvaniya" class="catalog__filter-input hidden" hidden>
+                                        <span class="catalog__filter-btn btn btn-grey btn-lg">обертывания</span>
+                                    </label>
+
+                                    <label class="catalog__filter">
+                                        <input type="checkbox" name="category" value="baliyskie-massazhi" class="catalog__filter-input hidden" hidden>
+                                        <span class="catalog__filter-btn btn btn-grey btn-lg">балийские массажи</span>
+                                    </label>
+
+                                    <label class="catalog__filter">
+                                        <input type="checkbox" name="category" value="tayskie-massazhi" class="catalog__filter-input hidden" hidden>
+                                        <span class="catalog__filter-btn btn btn-grey btn-lg">тайские массажи</span>
+                                    </label>
+
+                                    <label class="catalog__filter">
+                                        <input type="checkbox" name="category" value="spa-volosy" class="catalog__filter-input hidden" hidden>
+                                        <span class="catalog__filter-btn btn btn-grey btn-lg">SPA программы для волос</span>
+                                    </label>
+
+                                    <label class="catalog__filter">
+                                        <input type="checkbox" name="category" value="pilingi" class="catalog__filter-input hidden" hidden>
+                                        <span class="catalog__filter-btn btn btn-grey btn-lg">пилинги</span>
+                                    </label>
+
+                                    <label class="catalog__filter">
+                                        <input type="checkbox" name="category" value="mylnyy-massazh" class="catalog__filter-input hidden" hidden>
+                                        <span class="catalog__filter-btn btn btn-grey btn-lg">мыльный массаж</span>
+                                    </label>
+                                </div>
+                                <div class="catalog__caption">
+                                    <button type="button" class="catalog__filter-toggler btn btn-grey btn-lg active">
+                                        <span class="catalog__filter-text">Фильтр</span>
+                                        <span class="catalog__filter-icon icon-filter"></span>
+                                    </button>
+                                    <form action="#" class="catalog__search">
+                                        <button type="submit" aria-label="Искать" class="catalog__search-submit icon-search"></button>
+                                        <input type="text" name="s" class="catalog__search-input" placeholder="Поиск услуг...">
+                                    </form>
+                                    <div class="catalog__select">
+                                        <div class="select">
+                                            <select name="sort">
+                                                <option selected value="popularity">По популярности</option>
+                                                <option value="price_asc">Сначала недорогие</option>
+                                                <option value="price_desc">Сначала дорогие</option>
+                                                <option value="duration_asc">Сначала короткие</option>
+                                                <option value="duration_desc">Сначала длинные</option>
+                                                <option value="newest">Новинки</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="catalog__grid">
+                                
 
     <div class="product-card" id="relax_massage" data-animate="card">
         
         <a href="service.html" class="product-card__image">
             <img src="img/goods/relax-massage.jpg" class="cover-image" alt="Relax massage / Релакс массаж">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">Relax massage / Релакс массаж</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -207,7 +211,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -220,13 +224,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/sport-massage.jpg" class="cover-image" alt="Sport massage / Спортивный массаж">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">Sport massage / Спортивный массаж</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -244,7 +249,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -257,13 +262,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/lymphatic-massage.jpg" class="cover-image" alt="Slim / lymphatic massage / Слим массаж">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">Slim / lymphatic massage / Слим массаж</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -281,7 +287,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -294,13 +300,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/shiatsu.jpg" class="cover-image" alt="Шиацу">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">Шиацу</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -318,7 +325,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -331,13 +338,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/traditional-practices.jpg" class="cover-image" alt="Традиционные практики">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">Традиционные практики</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -355,7 +363,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -368,13 +376,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/aroma-massage.jpg" class="cover-image" alt="Aroma massage / Арома массаж со свечей">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">Aroma massage / Арома массаж со свечей</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -392,7 +401,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -405,13 +414,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/stone-massage.jpg" class="cover-image" alt="Stone massage / Массаж теплыми вулканическими камнями">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">Stone massage / Массаж теплыми вулканическими камнями</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -429,7 +439,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -442,13 +452,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/tandem-massage.jpg" class="cover-image" alt="Tandem massage / Тандем массаж">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">Tandem massage / Тандем массаж</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -466,7 +477,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -479,13 +490,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/foam-and-soap-massage.jpg" class="cover-image" alt="Пенно-мыльный массаж">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">Пенно-мыльный массаж</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -503,7 +515,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -516,13 +528,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/SPA-for-hair.jpg" class="cover-image" alt="SPA для волос">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">SPA для волос</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -540,7 +553,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -553,13 +566,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/wraps.jpg" class="cover-image" alt="Обертывания">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">Обертывания</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -577,7 +591,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -590,13 +604,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/peelings.jpg" class="cover-image" alt="Пилинги">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">Пилинги</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -614,7 +629,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -627,13 +642,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/male-traditions.jpg" class="cover-image" alt="«Мужские традиции» / спа-программа для мужчин">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">«Мужские традиции» / спа-программа для мужчин</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -651,7 +667,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -664,13 +680,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/samurais-rest.jpg" class="cover-image" alt="«Отдых самурая» / спа-программа для мужчин">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">«Отдых самурая» / спа-программа для мужчин</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -688,7 +705,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -701,13 +718,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/cleopatras-secret.jpg" class="cover-image" alt="«Секрет Клеопатры» / спа-программа для женщин">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">«Секрет Клеопатры» / спа-программа для женщин</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -725,7 +743,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -738,13 +756,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/bitter-chocolate.jpg" class="cover-image" alt="«Горький шоколад» / спа-программа для женщин">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">«Горький шоколад» / спа-программа для женщин</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -762,7 +781,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -775,13 +794,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/lite.jpg" class="cover-image" alt="«Lite» / спа-программа">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">«Lite» / спа-программа</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -799,7 +819,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -812,13 +832,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/thai-fairy-tale.jpg" class="cover-image" alt="«Тайская сказка» / спа-программа">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">«Тайская сказка» / спа-программа</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -836,7 +857,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -849,13 +870,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/paradise-bliss.jpg" class="cover-image" alt="«Райское блаженство» / спа-программа">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">«Райское блаженство» / спа-программа</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -873,7 +895,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -886,13 +908,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/jumu-lanmar.jpg" class="cover-image" alt="«Джуму Ланмар» / спа-программа для двоих">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">«Джуму Ланмар» / спа-программа для двоих</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -910,7 +933,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -923,13 +946,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/anahata.jpg" class="cover-image" alt="Анахата / спа-программа для двоих">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">Анахата / спа-программа для двоих</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -947,7 +971,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -960,13 +984,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/asian-traditions.jpg" class="cover-image" alt="«Традиции Азии» / спа-программа">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">«Традиции Азии» / спа-программа</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -984,7 +1009,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -997,13 +1022,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/sixth-sense.jpg" class="cover-image" alt="«Шестое чувство» / спа-программа">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">«Шестое чувство» / спа-программа</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -1021,7 +1047,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -1034,13 +1060,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/ancient-tibet.jpg" class="cover-image" alt="«Древний тибет» / спа-программа">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">«Древний тибет» / спа-программа</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -1058,7 +1085,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -1071,13 +1098,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/in-unison.jpg" class="cover-image" alt="«В унисон» / спа-программа для двоих">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">«В унисон» / спа-программа для двоих</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -1095,7 +1123,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -1108,13 +1136,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/love-spa.jpg" class="cover-image" alt="Love & спа-программа для двоих">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">Love & спа-программа для двоих</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -1132,7 +1161,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -1145,13 +1174,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/fire-massage.jpg" class="cover-image" alt="Огненный массаж - Сила Дракона">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">Огненный массаж - Сила Дракона</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -1169,7 +1199,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -1182,13 +1212,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/thalgo-gold-cream-marine.jpg" class="cover-image" alt="Thalgo gold cream marine / программа спа-ухода по лицу">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">Thalgo gold cream marine / программа спа-ухода по лицу</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -1206,7 +1237,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -1219,13 +1250,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/thermal-baths-without-massage.jpg" class="cover-image" alt="Термы без массажа">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">Термы без массажа</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -1243,7 +1275,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -1256,13 +1288,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/gua-sha-massage.jpg" class="cover-image" alt="Массаж гуаша">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">Массаж гуаша</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -1280,7 +1313,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -1293,13 +1326,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/cupping-massage.jpg" class="cover-image" alt="Баночный массаж">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">Баночный массаж</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -1317,7 +1351,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -1330,13 +1364,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/extending-the-massage.jpg" class="cover-image" alt="Продление массажа">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">Продление массажа</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -1354,7 +1389,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -1367,13 +1402,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/tandem-massage-extension.jpg" class="cover-image" alt="Продление Tandem массажа">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">Продление Tandem массажа</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -1391,7 +1427,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -1404,13 +1440,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/foot-massage.jpg" class="cover-image" alt="Массаж стоп">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">Массаж стоп</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -1428,7 +1465,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -1441,13 +1478,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/massage-by-zones.jpg" class="cover-image" alt="Массаж по зонам">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">Массаж по зонам</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -1465,7 +1503,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -1478,13 +1516,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/face-masks.jpg" class="cover-image" alt="Маски для лица">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">Маски для лица</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -1497,7 +1536,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -1510,13 +1549,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/detox-relax.jpg" class="cover-image" alt="Detox+Relax">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">Detox+Relax</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -1534,7 +1574,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -1547,13 +1587,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/access-bars.jpg" class="cover-image" alt="Access Bars">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">Access Bars</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -1571,7 +1612,7 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
@@ -1584,13 +1625,14 @@
         <a href="service.html" class="product-card__image">
             <img src="img/goods/the-brides-secret.jpg" class="cover-image" alt="Секрет невесты">
             
-            
-            
-            
         </a>
         
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">Секрет невесты</a>
+             
+                
+        </div>
+        <div class="product-card__body">
             
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -1608,19 +1650,19 @@
             </div>
             
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
     </div>
 
     
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer class="footer">
     <div class="container">
         <div class="footer__logo">
             <img src="img/logo-white.svg" alt="Логотип">
@@ -1708,19 +1750,18 @@
     </div>
 </div>
 
-  </div>
+        </div>
 
-  <!-- plugins -->
-<script src="js/libs/jquery-4.0.0.min.js?_v=20260704132229"></script>
-<script src="js/libs/swiper-bundle.min.js?_v=20260704132229"></script>
-<script src="js/libs/fancybox.min.js?_v=20260704132229"></script>
-<script src="js/libs/nouislider.min.js?_v=20260704132229"></script>
-<!-- <script src="js/libs/gsap.min.js?_v=20260704132229"></script>
-<script src="js/libs/ScrollTrigger.min.js?_v=20260704132229"></script> -->
+        <!-- plugins -->
+<script src="js/libs/jquery-4.0.0.min.js"></script>
+<script src="js/libs/swiper-bundle.min.js"></script>
+<script src="js/libs/fancybox.min.js"></script>
+<script src="js/libs/nouislider.min.js"></script>
+<!-- <script src="js/libs/gsap.min.js"></script>
+<script src="js/libs/ScrollTrigger.min.js"></script> -->
 
 <!-- plugins -->
 
-<script src="js/app.min.js?_v=20260704132229"></script>
-</body>
-
+<script src="js/app.min.js"></script>
+    </body>
 </html>

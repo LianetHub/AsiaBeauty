@@ -11,22 +11,39 @@
 		padding: rem(8) 0;
 		background: #290F0A;
 		color: #FFF;
-		font-size: 0.875rem;
 		font-weight: 500;
 		line-height: 120%;
 		text-transform: uppercase;
 		min-height: rem(33);
+		font-size: 0.75rem;
+
+		@media (min-width:$md1) {
+			font-size: 0.875rem;
+
+		}
 	}
 
 	// .header__marquee-container
-	&__marquee-container {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+	&__marquee-container {}
+
+	&__marquee-slider {
+		overflow: visible;
+
+		&:not(.swiper-initialized) .swiper-wrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+		}
 	}
 
 	// .header__marquee-item
-	&__marquee-item {}
+	&__marquee-item {
+		&.swiper-slide {
+			width: auto;
+			flex-shrink: 0;
+		}
+	}
 
 	// .header__body
 	&__body {
@@ -110,7 +127,9 @@
 			transition: color 0.3s ease;
 
 			@media (any-hover: hover) {
-				&:hover {}
+				&:hover {
+					color: #AF290E;
+				}
 			}
 		}
 
@@ -135,6 +154,13 @@
 		background: #290F0A;
 		border-radius: 50%;
 		flex-shrink: 0;
+		transition: background-color 0.3s ease;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #AF290E;
+			}
+		}
 	}
 
 	// .header__phone
@@ -146,7 +172,7 @@
 
 		@media (any-hover: hover) {
 			&:hover {
-				color: rgba(228, 228, 228, 1);
+				color: #AF290E;
 			}
 		}
 	}

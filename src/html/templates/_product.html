@@ -6,16 +6,17 @@
         @@if(typeof image !== 'undefined' && image !== '') {
         <a href="service.html" class="product-card__image">
             <img src="@@image" class="cover-image" alt="@@name">
-            @@for (var bi = 0; bi < 1; bi++) {
-            `+( typeof badge !== 'undefined' ? '<span class="product-card__badge product-card__badge--'+badge+'">'+( badge === 'guest' ? 'Выбор гостя' : badge === 'hit' ? 'Хит' : badge )+'</span>' : '' )+`
-            }
             @@if(typeof video !== 'undefined') {
             <span class="product-card__play icon-play" aria-hidden="true"></span>
             }
         </a>
         }
-        <div class="product-card__body">
+        <div class="product-card__header">
             <a href="service.html" class="product-card__name">@@name</a>
+            @@for (var bi = 0; bi < 1; bi++) { `+( typeof badge !=='undefined' ? '<span class="product-card__badge product-card__badge--' +badge+'">'+( badge === 'guest' ? 'Выбор гостя' : badge === 'hit' ? 'Хит' : badge )+'</span>' : '' )+`
+                }
+        </div>
+        <div class="product-card__body">
             @@if(typeof price !== 'undefined' || typeof time !== 'undefined') {
             <div class="product-card__meta">
                 <div class="product-card__details">
@@ -33,7 +34,7 @@
             </div>
             }
             <div class="product-card__footer">
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn btn-lg">Записаться</a>
+                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
                 <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
             </div>
         </div>
