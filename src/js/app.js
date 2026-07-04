@@ -442,18 +442,29 @@ $(function () {
 	}
 
 	if ($(".catalog__carousel").length > 0) {
-		$(".catalog__carousel").each(function (index, slider) {
-			new Swiper(slider, {
-				spaceBetween: 30,
+		$(".catalog__carousel").each(function (index, sliderEl) {
+			let swiperInstance = null;
+			const breakpoint = 767.98;
+			const options = {
+				spaceBetween: 32,
 				slidesPerView: "auto",
 				speed: 800,
 				watchOverflow: true,
-				breakpoints: {
-					767.98: {
-						spaceBetween: 65,
-					},
-				},
-			});
+			};
+
+			const handleResize = () => {
+				if (window.innerWidth <= breakpoint) {
+					if (!swiperInstance) {
+						swiperInstance = new Swiper(sliderEl, options);
+					}
+				} else if (swiperInstance) {
+					swiperInstance.destroy(true, true);
+					swiperInstance = null;
+				}
+			};
+
+			handleResize();
+			window.addEventListener("resize", handleResize);
 		});
 	}
 

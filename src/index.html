@@ -100,9 +100,11 @@
                 <section class="catalog">
                     <div class="container">
                         <h2 class="catalog__title title">ПОПУЛЯРНЫЕ услуги</h2>
-                        <ul class="catalog__grid">
-                            @@loop('./html/templates/_product.html', './html/json/popular.json')
-                        </ul>
+                        <div class="catalog__carousel swiper">
+                            <ul class="swiper-wrapper">
+                                @@loop('./html/templates/_product.html', './html/json/popular.json')
+                            </ul>
+                        </div>
                     </div>
                 </section>
                 <a href="" data-fancybox class="video-block icon-play">
