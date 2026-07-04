@@ -115,12 +115,30 @@
 
 	}
 
+	// .hero__bottom
+	&__bottom {
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.5rem;
+		width: 100%;
+
+	}
+
+
 	// .hero__search
 	&__search {
-		margin-top: auto;
-		position: relative;
-		max-width: rem(230);
-		width: 100%;
+		display: none;
+
+		@media (min-width:$md4) {
+			display: block;
+			margin-top: auto;
+			position: relative;
+			width: 100%;
+			max-width: rem(230);
+
+		}
 	}
 
 	// .hero__search-btn
@@ -131,16 +149,25 @@
 		top: 50%;
 		transform: translateY(-50%);
 		left: 0.56rem;
+		color: #F9F0E2;
+		transition: color 0.3s ease;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $red;
+			}
+		}
 	}
 
 	// .hero__search-input
 	&__search-input {
 		border-radius: 6.25rem;
 		border: rem(1) solid #E4E4E4;
-		padding: 0.5rem 1.25rem 0.5rem 2rem;
+		padding: 0.5rem 1.25rem 0.5rem 2.5rem;
 		background: transparent;
-		color: #fff;
+		color: #F9F0E2;
 		font-family: Inter;
+		width: 100%;
 		font-size: 0.875rem;
 		font-weight: 400;
 		line-height: 145%;
@@ -161,11 +188,16 @@
 	&__btns {
 		display: flex;
 		gap: rem(14);
+		flex-direction: column;
+		width: 100%;
 
-		@media (min-width:$md4) {
-			margin-top: rem(24);
-
+		@media (min-width:$md5) {
+			flex-direction: row;
+			justify-content: center;
+			flex-wrap: wrap;
 		}
+
+
 	}
 
 	// .hero__btn
@@ -217,7 +249,7 @@
 		margin-top: 1.25rem;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		gap: rem(16);
+		gap: rem(12);
 
 		@media (min-width:$md4) {
 			grid-template-columns: repeat(3, 1fr);
@@ -239,18 +271,19 @@
 		aspect-ratio: 1;
 		border: rem(1) solid #290F0A;
 		color: #290F0A;
-		font-size: 1rem;
-		font-weight: 500;
 
+		font-weight: 500;
+		font-size: 0.75rem;
 		text-transform: uppercase;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
-		padding: 1rem;
+		padding: 1em;
 		overflow: hidden;
 		transition: background-color 0.3s ease;
 
 		@media (min-width:$md4) {
+			font-size: 1rem;
 			line-height: 80%;
 		}
 
@@ -346,13 +379,21 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		color: #F9F0E2;
-		font-size: 5.8125rem;
 		transform-origin: 0 0;
 		transition: transform 0.3s ease, color 0.3s ease;
+		font-size: 3.5rem;
+
+		@media (min-width:$md4) {
+			font-size: 5.8125rem;
+
+		}
 	}
 
 	& img {
+		min-height: rem(320);
 		width: 100%;
+		height: auto;
+		object-fit: cover;
 	}
 }
 
