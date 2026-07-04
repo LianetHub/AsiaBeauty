@@ -49,7 +49,7 @@
 
 	// .quiz__title
 	&__title {
-		font-family: $font-figtree;
+
 		font-size: 1.25rem;
 		font-weight: 500;
 		line-height: 110%;
@@ -145,7 +145,7 @@
 		}
 	}
 
-	&__option-input:checked + &__option-card {
+	&__option-input:checked+&__option-card {
 		background: #290f0a;
 		color: $beige;
 
@@ -334,6 +334,7 @@
 
 	&[data-quiz-state="start"],
 	&[data-quiz-state="success"] {
+
 		.quiz__nav,
 		.quiz__progress-wrap {
 			display: none;

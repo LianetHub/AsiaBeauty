@@ -191,14 +191,14 @@
 	}
 
 	&.btn-white {
-		border: rem(1) solid rgba(228, 228, 228, 1);
-		background: rgba(228, 228, 228, 1);
-		color: $black;
+		border: rem(1) solid #F9F0E2;
+		background: #F9F0E2;
+		color: #290F0A;
 
 		@media (any-hover: hover) {
 			&:hover {
 				background: $black;
-				color: rgba(228, 228, 228, 1);
+				color: #F9F0E2;
 			}
 		}
 

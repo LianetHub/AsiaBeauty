@@ -11,7 +11,7 @@
             })
             <main class="page">
                 <section class="hero">
-                    <div class="container">
+                    <div class="container container-lg">
                         <div class="hero__banner" style="background-image: url('@img/hero.jpg');">
                             <div class="hero__offer">
                                 <h1 class="hero__title title-lg">ВАШ ИДЕАЛЬНЫЙ ОТДЫХ В&nbsp;СЕРДЦЕ МОСКВЫ</h1>
@@ -38,13 +38,82 @@
                         </ul>
                     </div>
                 </div>
-                <section class="gift">
+                <section class="categories">
                     <div class="container">
+                        <h2 class="title title">категории услуг</h2>
+                        <ul class="categories__list">
+                            <li class="categories__card">
+                                <a href="" class="categories__card-link">
+                                    <span class="categories__card-image">
+                                        <img src="@img/categories/services.jpg" alt="Постер">
+                                    </span>
+                                    <span class="categories__card-name">МЕНЮ УСЛУГ</span>
+                                </a>
+                            </li>
+                            <li class="categories__card">
+                                <a href="" class="categories__card-link">
+                                    <span class="categories__card-name">спа-программы</span>
+                                </a>
+                            </li>
+                            <li class="categories__card">
+                                <a href="" class="categories__card-link">
+                                    <span class="categories__card-name">хамам</span>
+                                </a>
+                            </li>
+                            <li class="categories__card">
+                                <a href="" class="categories__card-link">
+                                    <span class="categories__card-image">
+                                        <img src="@img/categories/body-wraps.jpg" alt="Постер">
+                                    </span>
+                                    <span class="categories__card-name">обертывания</span>
+                                </a>
+                            </li>
+                            <li class="categories__card">
+                                <a href="" class="categories__card-link">
+                                    <span class="categories__card-name">20 этаж</span>
+                                </a>
+                            </li>
+                            <li class="categories__card">
+                                <a href="" class="categories__card-link">
+                                    <span class="categories__card-image">
+                                        <img src="@img/categories/personal-space.jpg" alt="Постер">
+                                    </span>
+                                    <span class="categories__card-name">индивидуальное пространство</span>
+                                </a>
+                            </li>
+                            <li class="categories__card">
+                                <a href="" class="categories__card-link">
+                                    <span class="categories__card-name">акватермальные зоны</span>
+                                </a>
+                            </li>
+                            <li class="categories__card">
+                                <a href="" class="categories__card-link">
+                                    <span class="categories__card-image">
+                                        <img src="@img/categories/bar.jpg" alt="Постер">
+                                    </span>
+                                    <span class="categories__card-name">БАР</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="catalog">
+                    <div class="container">
+                        <h2 class="catalog__title title">ПОПУЛЯРНЫЕ услуги</h2>
+                        <ul class="catalog__grid">
+                            @@loop('./html/templates/_product.html', './html/json/catalog.json')
+                        </ul>
+                    </div>
+                </section>
+                <a href="" data-fancybox class="video-block icon-play">
+                    <img src="@img/home-video-poster.jpg" alt="Постер">
+                </a>
+                <section class="gift">
+                    <div class="container container-lg">
                         <div class="gift__content">
                             <div class="gift__body">
-                                <h2 class="gift__title title">Идеальный <br> подарок <br> для <br> близких</h2>
-                                <p class="gift__subtitle">Вы можете приобрести сертификат на нашем сайте или в нашем салоне. В каталоге есть множество программ, включая массажи, уход за лицом и телом, а также расслабляющие спа-процедуры</p>
-                                <a href="" class="gift__btn btn btn-white btn-lg">ПРИОБРЕСТИ СЕРТИФИКАТ</a>
+                                <h2 class="gift__title title">Идеальный подарок для&nbsp;близких</h2>
+                                <a href="" class="gift__btn btn btn-white btn-lg">Приобрести сертификат</a>
                             </div>
                             <div class="gift__image">
                                 <img src="img/gift.jpg" class="cover-image" alt="Фото сертификата">
@@ -52,57 +121,15 @@
                         </div>
                     </div>
                 </section>
+
                 @@include('./html/_quiz.html')
                 @@include('./html/_places.html', {
-                "title": "локации:"
+                "title": "наши локации"
                 })
-                <section class="news">
-                    <div class="container">
-                        <div class="section-header">
-                            <h2 class="section-header__caption caption">Новости Asia Beauty Spa</h2>
-                        </div>
-                        <div class="news__slider swiper">
-                            <ul class="swiper-wrapper">
-                                @@loop("./html/templates/_news-item.html", './html/json/news.json')
-                            </ul>
-                        </div>
-                        <button type="button" class="news__slider-prev swiper-button-prev"></button>
-                        <button type="button" class="news__slider-next swiper-button-next"></button>
-                    </div>
-                </section>
-                <section class="tagline" style="background-image: url('@img/banner-home.jpg');">
-                    <div class="container" data-animate="section">
-                        <div class="tagline__header">
-                            <h2 class="tagline__title title-lg text-uppercase" data-animate="title">
-                                <span class="text-opacity">Asia Beauty Spa</span> — крупнейшая сеть <span class="text-nowrap">spa-салонов</span> premium класса <span class="text-opacity">в&nbsp;Москве</span>
-                            </h2>
-                            <p class="tagline__desc" data-animate="text">В Asia Beauty Spa можно позаботиться о ментальном здоровье и посетить медитативные практики, а также провести ритуалы ухода за красотой лица и тела.</p>
-                        </div>
-                        <ul class="tagline__list">
-                            @@loop('./html/templates/_capability-item.html', './html/json/capabilities.json')
-                        </ul>
-                    </div>
-                </section>
-                <section class="capabilities capabilities-mobile">
-                    <div class="capabilities__header">
-                        <div class="container">
-                            <div class="section-header">
-                                <h2 class="section-header__caption caption">ВОЗМОЖНОСТИ Asia Beauty Spa</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="capabilities__content">
-                        <div class="container container-lg">
-                            <ul class="capabilities__list">
-                                @@loop('./html/templates/_capability-item.html', './html/json/capabilities.json')
-                            </ul>
-                        </div>
-                    </div>
-                </section>
                 <section class="faq">
                     <div class="container">
                         <div class="section-header">
-                            <div class="section-header__caption caption">часто задаваемые вопросы</div>
+                            <div class="section-header__caption title">часто задаваемые вопросы</div>
                         </div>
                         <div class="faq__list" data-spollers data-one-spoller>
                             <div class="faq__item">

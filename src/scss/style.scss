@@ -128,7 +128,13 @@ body {
 	}
 
 	@media (min-width: $md2) {
-		max-width: $maxWidthContainer;
+		max-width: rem(1140);
+	}
+
+	&.container-lg {
+		@media (min-width:$md1) {
+			max-width: $maxWidthContainer;
+		}
 	}
 
 
@@ -483,94 +489,6 @@ body {
 	}
 }
 
-.benefits {
-	padding: 1.375rem 0rem;
-
-	@media (min-width: $md6) {
-		padding: 1.375rem 1rem;
-	}
-
-	@media (min-width: $md5) {
-		padding: 2.5rem 0;
-	}
-
-	// .benefits__title
-	&__title {}
-
-	// .benefits__list
-	&__list {
-		display: grid;
-		gap: 2rem;
-
-		&:not(:first-child) {
-			margin-top: 4.75rem;
-		}
-
-		@media (min-width: $md5) {
-			gap: rem(40);
-			grid-template-columns: repeat(2, 1fr);
-
-			&:not(:first-child) {
-				margin-top: rem(100);
-			}
-		}
-
-		@media (min-width: $md3) {
-			display: flex;
-			justify-content: space-between;
-
-			&--large {
-				flex-wrap: wrap;
-				justify-content: center;
-
-				.benefits__item {
-					flex: 0 0 calc(33.33% - rem(40));
-				}
-			}
-		}
-	}
-
-	// .benefits__item
-	&__item {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-	}
-
-	// .benefits__item-icon
-	&__item-icon {}
-
-	// .benefits__item-title
-	&__item-title {
-		margin-top: rem(32);
-
-		@media (max-width: $md5) {
-			font-size: 1rem;
-			margin-top: 1rem;
-		}
-	}
-
-	// .benefits__note
-	&__note {
-		margin-top: rem(40);
-		color: rgba($color: #fff, $alpha: 0.6);
-
-		@media (max-width: $md5) {
-			display: none;
-		}
-	}
-
-	// .benefits__more
-	&__more {
-		margin-top: rem(60);
-		width: fit-content;
-		min-width: 11.25rem;
-		min-height: rem(40);
-		display: flex;
-		margin-inline: auto;
-	}
-}
 
 .places {
 	padding: 1.375rem 0rem;
@@ -631,7 +549,7 @@ body {
 		margin-top: rem(10);
 
 		@media (min-width: $md5) {
-			margin-top: 2.69rem;
+			margin-top: 1.75rem;
 		}
 	}
 

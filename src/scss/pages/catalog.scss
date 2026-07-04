@@ -75,9 +75,7 @@
 	}
 
 	// .catalog__content
-	&__content {
-		max-width: rem(1250);
-	}
+	&__content {}
 
 	&__title {
 		text-transform: none;
@@ -254,20 +252,14 @@
 		margin-top: rem(24);
 		grid-template-columns: repeat(auto-fill, minmax(rem(220), 1fr));
 
-		&--small {
-			max-width: rem(932);
-			margin-inline: auto;
-		}
-
 		@media (min-width: $md4) {
 			grid-template-columns: repeat(auto-fill, minmax(rem(264), 1fr));
-			margin-top: rem(80);
+			margin-top: rem(20);
 		}
 
 		@media (min-width: $md2) {
-			margin-inline: -1rem;
-			gap: 2rem;
-			row-gap: 2.5rem;
+			gap: rem(20);
+
 		}
 	}
 
@@ -361,8 +353,6 @@
 	flex-direction: column;
 
 	@media (min-width:$md4) {
-		padding: 1rem 1.5rem;
-		border-radius: 1.875rem;
 		transition: background-color 0.3s ease;
 
 		@media (any-hover: hover) {
