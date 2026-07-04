@@ -32,24 +32,40 @@
             </div>
         </div>
     </div>
-    <div class="container container-lg">
-        <div class="header__body">
-            <nav class="header__menu" aria-label="Навигация">
-                <ul class="header__menu-list">
-                    <li class="header__menu-item"><a href="about.html" class="header__menu-link active">О нас</a></li>
-                    <li class="header__menu-item"><a href="spa.html" class="header__menu-link">Спа-меню</a></li>
-                </ul>
-            </nav>
-            <a href="index.html" class="header__logo">
-                <img src="img/logo.svg" alt="Логотип">
-            </a>
-            <div class="header__side">
-                <a href="tel:+74950217659" class="header__phone">+7 495 021 76 59</a>
-                <div class="header__actions">
-                    <a href="" aria-label="Поиск" class="header__action icon-search"></a>
-                    <a href="" aria-label="Избранное" class="header__action icon-heart"></a>
-                    <a href="" aria-label="Корзина" class="header__action icon-cart"></a>
+    <div class="header__main">
+        <div class="container container-lg">
+            <div class="header__body">
+                <nav class="header__menu" aria-label="Навигация">
+                    <ul class="header__menu-list">
+                        <li class="header__menu-item"><a href="about.html" class="header__menu-link active">О нас</a></li>
+                        <li class="header__menu-item"><a href="spa.html" class="header__menu-link">Спа-меню</a></li>
+                    </ul>
+                </nav>
+                <a href="index.html" class="header__logo">
+                    <img src="img/logo.svg" alt="Логотип">
+                </a>
+                <div class="header__side">
+                    <a href="tel:+74950217659" class="header__phone">+7 495 021 76 59</a>
+                    <div class="header__actions">
+                        <button type="button" aria-label="Поиск" aria-expanded="false" aria-controls="header-search" class="header__action header__action--search icon-search"></button>
+                        <a href="" aria-label="Избранное" class="header__action icon-heart"></a>
+                        <a href="" aria-label="Корзина" class="header__action icon-cart"></a>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-search" id="header-search" aria-hidden="true">
+        <div class="header-search__overlay" aria-hidden="true"></div>
+        <div class="header-search__panel">
+            <div class="container container-lg">
+                <form action="search.html" method="get" class="header-search__form">
+                    <div class="header-search__field">
+                        <button type="submit" class="header-search__submit icon-search" aria-label="Искать"></button>
+                        <input type="search" name="q" class="header-search__input" placeholder="Поиск услуг..." autocomplete="off">
+                    </div>
+                    <button type="button" class="header-search__close icon-close" aria-label="Закрыть поиск"></button>
+                </form>
             </div>
         </div>
     </div>

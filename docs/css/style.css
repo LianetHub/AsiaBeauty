@@ -57,6 +57,10 @@
   display: block;
 }
 
+.icon-close:before {
+  content: "\e913";
+}
+
 .icon-phone:before {
   content: "\e912";
 }
@@ -1555,8 +1559,13 @@ body.lock-filter {
   width: 100%;
   z-index: 6;
   background: #F9F0E2;
+  overflow: visible;
+}
+.header--search-open .header__action--search {
+  background-color: #AF290E;
 }
 .header__marquee {
+  position: relative;
   padding: 0.5rem 0;
   background: #290F0A;
   color: #FFF;
@@ -1565,11 +1574,17 @@ body.lock-filter {
   text-transform: uppercase;
   min-height: 2.0625rem;
   font-size: 0.75rem;
+  z-index: 5;
 }
 @media (min-width: 1439.98px) {
   .header__marquee {
     font-size: 0.875rem;
   }
+}
+.header__main {
+  position: relative;
+  z-index: 5;
+  background: #F9F0E2;
 }
 .header__marquee-slider {
   overflow: visible;
@@ -1663,6 +1678,10 @@ body.lock-filter {
   border-radius: 50%;
   flex-shrink: 0;
   transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
 }
 @media (any-hover: hover) {
   .header__action:hover {
@@ -1678,6 +1697,152 @@ body.lock-filter {
 @media (any-hover: hover) {
   .header__phone:hover {
     color: #AF290E;
+  }
+}
+
+.header-search {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  visibility: hidden;
+  z-index: 4;
+}
+.header-search.is-open {
+  pointer-events: auto;
+  visibility: visible;
+}
+.header-search.is-open .header-search__overlay {
+  opacity: 1;
+  visibility: visible;
+}
+.header-search.is-open .header-search__panel {
+  opacity: 1;
+  transform: translateY(0);
+}
+.header-search__overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(41, 15, 10, 0.45);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+  z-index: -1;
+}
+.header-search__panel {
+  background: #290F0A;
+  padding: 1.25rem 0 1.75rem;
+  opacity: 0;
+  transform: translateY(-1rem);
+  transition: opacity 0.35s ease, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+@media (min-width: 767.98px) {
+  .header-search__panel {
+    padding: 1.75rem 0 2.25rem;
+  }
+}
+.header-search__form {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 45rem;
+  margin: 0 auto;
+}
+@media (min-width: 767.98px) {
+  .header-search__form {
+    gap: 1.25rem;
+  }
+}
+.header-search__field {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.header-search__submit {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(228, 228, 228, 0.75);
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+@media (min-width: 767.98px) {
+  .header-search__submit {
+    left: 1.5rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 1.25rem;
+  }
+}
+@media (any-hover: hover) {
+  .header-search__submit:hover {
+    color: #fff;
+  }
+}
+.header-search__input {
+  width: 100%;
+  border-radius: 6.25rem;
+  border: 0.0625rem solid rgba(228, 228, 228, 0.25);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  padding: 0.75rem 1.25rem 0.75rem 3rem;
+  font-size: 0.875rem;
+  line-height: 145%;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+@media (min-width: 767.98px) {
+  .header-search__input {
+    padding: 1rem 1.75rem 1rem 4rem;
+    font-size: 1rem;
+  }
+}
+.header-search__input::placeholder {
+  color: rgba(228, 228, 228, 0.55);
+}
+.header-search__input:focus {
+  outline: none;
+  border-color: rgba(228, 228, 228, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+}
+.header-search__input::-webkit-search-cancel-button {
+  display: none;
+}
+.header-search__close {
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 0.0625rem solid rgba(228, 228, 228, 0.25);
+  background: transparent;
+  color: rgba(228, 228, 228, 0.85);
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+@media (min-width: 767.98px) {
+  .header-search__close {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+}
+@media (any-hover: hover) {
+  .header-search__close:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(228, 228, 228, 0.45);
+    color: #fff;
   }
 }
 

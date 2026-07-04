@@ -1,6 +1,7 @@
 "use strict";
 
 import { initQuiz } from "./modules/quiz.js";
+import { initHeaderSearch } from "./modules/header-search.js";
 
 $(function () {
 	// init Fancybox Gallery
@@ -644,6 +645,7 @@ $(function () {
 	window.spollers = new Spollers();
 
 	initQuiz();
+	initHeaderSearch();
 
 	// Phone Russia Mask
 
