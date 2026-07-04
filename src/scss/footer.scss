@@ -1,96 +1,24 @@
 .footer {
 	margin: auto 0;
-	padding: rem(40) 0;
+	padding: rem(40) 0 rem(24);
 	background: #290F0A;
 	color: #E4E4E4;
+	font-family: "Jost", $fontfamily;
+	font-size: rem(16);
+	line-height: 1.2;
 
 	@media (min-width: $md4) {
-		padding: rem(100) 0;
+		padding: rem(60) 0 rem(32);
 	}
-
-	// .footer__top
-	&__top {
-		display: grid;
-		row-gap: 1.25rem;
-
-		@media (min-width: $md5) {
-			row-gap: 2rem;
-			grid-template-columns: repeat(2, 1fr);
-		}
-
-		@media (min-width: $md4) {
-			grid-template-columns: repeat(3, 1fr);
-		}
-
-		@media (min-width: $md3) {
-			display: flex;
-			justify-content: space-between;
-			text-align: center;
-		}
-	}
-
-	// .footer__column
-	&__column {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-	}
-
-	// .footer__caption
-	&__caption {
-		font-size: 0.875rem;
-
-		@media (min-width: $md5) {
-			font-size: 1rem;
-		}
-	}
-
-	// .footer__column-body
-	&__column-body {
-		line-height: 1.2;
-		font-size: 0.875rem;
-		margin-top: rem(8);
-
-		@media (min-width: $md5) {
-			margin-top: rem(12);
-			font-size: 1rem;
-		}
-
-		@media (min-width: $md4) {
-			margin-top: rem(40);
-		}
-
-		& a {
-			transition: color 0.3s ease;
-
-			@media (any-hover: hover) {
-				&:hover {
-					color: $red;
-				}
-			}
-		}
-	}
-
-	// .footer__column-socials
-	&__column-socials {
-		margin-top: rem(12);
-
-		@media (min-width: $md5) {
-			margin-top: rem(25);
-		}
-	}
-
 
 	// .footer__logo
 	&__logo {
 		margin-inline: auto;
-		margin-top: rem(38);
 		width: rem(100);
+		text-align: center;
 
 		@media (min-width: $md4) {
 			width: rem(140);
-			margin-top: rem(62);
 		}
 
 		& img {
@@ -98,19 +26,143 @@
 		}
 	}
 
+	// .footer__content
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		margin-top: rem(32);
+
+		@media (min-width: $md4) {
+			margin-top: rem(48);
+		}
+	}
+
+	// .footer__caption
+	&__caption {
+		font-size: rem(16);
+	}
+
+	// .footer__addresses
+	&__addresses {
+		max-width: rem(255);
+		margin-top: rem(24);
+
+		@media (min-width: $md4) {
+			margin-top: rem(32);
+		}
+	}
+
+	// .footer__email
+	&__email {
+		margin-top: rem(32);
+		transition: color 0.3s ease;
+
+		@media (min-width: $md4) {
+			margin-top: rem(40);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $red;
+			}
+		}
+	}
+
+	// .footer__socials-wrap
+	&__socials-wrap {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: rem(32);
+
+		@media (min-width: $md4) {
+			margin-top: rem(40);
+		}
+	}
+
+	// .footer__socials
+	&__socials {
+		margin-top: rem(12);
+
+		@media (min-width: $md4) {
+			margin-top: rem(16);
+		}
+	}
+
+	// .footer__bottom
+	&__bottom {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: rem(16);
+		margin-top: rem(40);
+		padding-top: rem(24);
+		border-top: 1px solid rgba(228, 228, 228, 0.2);
+		color: #fff;
+		text-align: center;
+
+		@media (min-width: $md3) {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: flex-start;
+			gap: rem(24);
+			margin-top: rem(48);
+			padding-top: rem(32);
+			text-align: left;
+		}
+	}
+
+	// .footer__legal
+	&__legal {
+		max-width: rem(420);
+	}
+
+	// .footer__menu
+	&__menu {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: rem(8) rem(16);
+
+		@media (min-width: $md3) {
+			justify-content: flex-end;
+			flex-shrink: 0;
+		}
+	}
+
+	// .footer__menu-link
+	&__menu-link {
+		text-decoration: underline;
+		text-underline-offset: rem(2);
+		transition: color 0.3s ease;
+		white-space: nowrap;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $red;
+			}
+		}
+	}
+
+	// legacy class for contacts page
+	&__column-socials {
+		@extend .footer__socials;
+	}
 }
 
 
 
 .socials {
 	display: flex;
-	gap: 1rem;
+	gap: rem(16);
 
 	// .socials__link
 	&__link {
-		width: 1.25rem;
-		height: 1.25rem;
-		font-size: 1.25rem;
+		width: rem(20);
+		height: rem(20);
+		font-size: rem(20);
 		transition: color 0.3s ease;
 
 		@media (any-hover: hover) {
