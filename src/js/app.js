@@ -341,21 +341,6 @@ $(function () {
 		});
 	}
 
-	if ($(".deposits__slider").length > 0) {
-		new Swiper(".deposits__slider", {
-			slidesPerView: "auto",
-			spaceBetween: 39,
-			watchOverflow: true,
-			speed: 300,
-			mousewheel: true,
-			breakpoints: {
-				767.98: {
-					spaceBetween: 30,
-				},
-			},
-		});
-	}
-
 	if ($(".recommendations__slider").length > 0) {
 		new Swiper(".recommendations__slider", {
 			slidesPerView: "auto",
