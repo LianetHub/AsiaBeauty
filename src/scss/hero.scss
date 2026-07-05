@@ -177,6 +177,7 @@
 	&__banner {
 		padding: rem(50) 1rem;
 		color: #F9F0E2;
+		background-color: #290f0a;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -199,6 +200,7 @@
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
+		background-color: #290f0a;
 	}
 
 	&__video {

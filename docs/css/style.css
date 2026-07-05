@@ -3286,6 +3286,7 @@ body.lock-filter {
 .hero__banner {
   padding: 3.125rem 1rem;
   color: #F9F0E2;
+  background-color: #290f0a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3311,6 +3312,7 @@ body.lock-filter {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: #290f0a;
 }
 
 .hero__video {
