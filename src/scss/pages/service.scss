@@ -1,39 +1,4 @@
 .page--service {
-	.breadcrumbs {
-		&+* {
-			margin-top: 0 !important;
-		}
-
-		&__items {
-			justify-content: flex-start;
-			padding-block: rem(20) 0;
-
-			@media (min-width: $md4) {
-				padding-block: rem(32) 0;
-			}
-		}
-
-		&__item {
-			color: #290F0A;
-			font-weight: 700;
-			font-size: rem(14);
-			line-height: 1.2;
-			text-transform: none;
-
-			@media (min-width: $md4) {
-				font-size: rem(16);
-			}
-		}
-
-		&__link {
-			color: #290F0A;
-
-			&.active {
-				color: #290F0A;
-			}
-		}
-	}
-
 	.catalog {
 		padding-top: rem(32);
 

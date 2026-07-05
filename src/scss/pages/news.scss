@@ -3,7 +3,7 @@
 	padding: 0 0 rem(40);
 
 	@media (min-width: $md5) {
-		padding-bottom: rem(80);
+		padding: rem(40) 0 rem(80);
 	}
 
 	&__filters {

@@ -56,8 +56,14 @@ export function initQuiz() {
             const onSuccess = currentStep === 'success';
             const onFirstQuestion = currentStep === '1';
 
-            if (onStart || onSuccess) {
+            if (onStart) {
                 $prevBtn.prop('disabled', true).attr('aria-disabled', 'true');
+                $nextBtn.prop('disabled', true).attr('aria-disabled', 'true');
+                return;
+            }
+
+            if (onSuccess) {
+                $prevBtn.prop('disabled', false).attr('aria-disabled', 'false');
                 $nextBtn.prop('disabled', true).attr('aria-disabled', 'true');
                 return;
             }
@@ -122,6 +128,16 @@ export function initQuiz() {
 
         $quiz.on('change', '.quiz__option-input', function () {
             updateNav();
+
+            if (!isQuestionStep(currentStep)) return;
+
+            const stepAtSelection = currentStep;
+
+            window.setTimeout(() => {
+                if (currentStep === stepAtSelection && isCurrentStepAnswered()) {
+                    goNext();
+                }
+            }, 200);
         });
 
         $form.on('submit', function (e) {

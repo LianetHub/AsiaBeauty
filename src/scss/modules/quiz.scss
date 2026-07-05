@@ -360,11 +360,20 @@
 		}
 	}
 
-	&[data-quiz-state="start"],
-	&[data-quiz-state="success"] {
+	&[data-quiz-state="start"] {
 
 		.quiz__nav,
 		.quiz__progress-wrap {
+			display: none;
+		}
+	}
+
+	&[data-quiz-state="success"] {
+		.quiz__progress-wrap {
+			display: none;
+		}
+
+		[data-quiz-next] {
 			display: none;
 		}
 	}
