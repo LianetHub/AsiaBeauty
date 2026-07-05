@@ -1,0 +1,204 @@
+.salons {
+	padding: rem(5) 0 rem(40);
+
+	@media (min-width: $md6) {
+		padding: rem(5) 1rem rem(40);
+	}
+
+	@media (min-width: $md4) {
+		padding: rem(5) 0 rem(100);
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		gap: 1.37rem;
+
+		@media (min-width: $md3) {
+			gap: rem(58);
+			justify-content: space-between;
+			align-items: center;
+			flex-direction: row;
+		}
+
+		&:nth-child(odd) {
+			@media (min-width: $md3) {
+				.salons__item-slider {
+					order: 1;
+				}
+
+				.salons__item-btn {
+					margin-left: 0;
+				}
+			}
+		}
+
+		&:first-child {
+			@media (min-width: $md3) {
+				margin-top: rem(20);
+			}
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 2.94rem;
+
+			@media (min-width: $md4) {
+				margin-bottom: rem(100);
+			}
+		}
+	}
+
+	&__item-slider {
+		min-width: 0;
+		margin: 0;
+		max-width: 100%;
+		position: relative;
+
+		@media (min-width: $md3) {
+			padding: 0 rem(58);
+			flex: 0 0 28rem;
+		}
+
+		@media (min-width: $md2) {
+			flex: 0 0 rem(533);
+		}
+	}
+
+	&__item-slider-pagination {
+		&.swiper-pagination {
+			position: absolute;
+			top: auto;
+			margin: 0;
+			bottom: rem(10);
+
+			@media (min-width: $md3) {
+				bottom: rem(20);
+			}
+		}
+	}
+
+	&__item-prev {
+		&.swiper-button-prev {
+			border-radius: 50%;
+			width: rem(25);
+			height: rem(25);
+			font-size: 1rem;
+
+			@media (min-width: $md6) {
+				left: -2rem;
+			}
+
+			@media (min-width: $md1) {
+				left: 0;
+			}
+		}
+	}
+
+	&__item-next {
+		&.swiper-button-next {
+			border-radius: 50%;
+			width: rem(25);
+			height: rem(25);
+			font-size: 1rem;
+
+			@media (min-width: $md6) {
+				right: -2rem;
+			}
+
+			@media (min-width: $md1) {
+				right: 0;
+			}
+		}
+	}
+
+	&__item-slide {
+		width: 100%;
+		overflow: hidden;
+		border-radius: rem(5);
+		height: 16rem;
+
+		@media (min-width: $md5) {
+			height: 24rem;
+		}
+
+		@media (min-width: $md4) {
+			height: rem(465);
+		}
+
+		@media (min-width: $md2) {
+			height: rem(565);
+		}
+	}
+
+	&__item-info {
+		display: flex;
+		flex-direction: column;
+		gap: 0.81rem;
+	}
+
+	&__item-caption {
+		font-weight: 700;
+		line-height: 1.1;
+
+		@media (min-width: $md4) {
+			font-size: rem(20);
+		}
+	}
+
+	&__item-desc {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	&__item-text {
+		line-height: 1.2;
+		display: flex;
+		flex-direction: column;
+
+		& p {
+			&:not(:first-child) {
+				margin-top: 1.25rem;
+			}
+		}
+
+		& ul {
+			list-style: disc;
+			padding-left: 1em;
+
+			& li {
+				&::marker {
+					font-size: 0.5em;
+				}
+			}
+		}
+	}
+
+	&__item-btns {
+		margin-top: rem(40);
+		display: flex;
+		gap: rem(12);
+
+		.salons__item-btn {
+			margin-top: 0;
+		}
+	}
+
+	&__item-btn {
+		margin-top: rem(40);
+		margin-left: auto;
+
+		&.btn.btn-lg {
+			padding: rem(5) rem(20);
+			min-height: rem(31);
+		}
+	}
+
+	&__map {
+		margin-top: rem(40);
+
+		@media (min-width: $md4) {
+			margin-top: rem(100);
+		}
+	}
+}

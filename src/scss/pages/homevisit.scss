@@ -157,6 +157,12 @@
 	margin-inline: auto;
 	border-bottom: none;
 	padding-bottom: 0;
+	list-style: none;
+
+	@media (min-width: $md3) {
+		display: grid;
+		justify-content: initial;
+	}
 
 	@media (min-width: $md4) {
 		grid-template-columns: repeat(6, 1fr);

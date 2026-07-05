@@ -378,6 +378,28 @@ $(function () {
 		});
 	}
 
+	if ($(".salons__item-slider").length > 0) {
+		$(".salons__item-slider").each(function (index, slider) {
+			let swiper = $(slider).find(".swiper")[0];
+			let prev = $(slider).find(".salons__item-prev")[0];
+			let next = $(slider).find(".salons__item-next")[0];
+			let pagination = $(slider).find(".salons__item-slider-pagination")[0];
+
+			new Swiper(swiper, {
+				slidesPerView: 1,
+				speed: 800,
+				pagination: {
+					el: pagination,
+					clickable: true,
+				},
+				navigation: {
+					nextEl: next,
+					prevEl: prev,
+				},
+			});
+		});
+	}
+
 	if ($(".catalog__slider").length > 0) {
 		new ConditionsSwiper(
 			".catalog__slider",
@@ -466,12 +488,6 @@ $(function () {
 			spaceBetween: 12,
 			speed: 800,
 			watchOverflow: true,
-			autoplay: {
-				delay: 3000,
-				stopOnLastSlide: false,
-				disableOnInteraction: false,
-			},
-			loop: true,
 			pagination: {
 				el: ".about-locations__pagination",
 				clickable: true,

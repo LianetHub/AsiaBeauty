@@ -166,22 +166,24 @@ body {
 @import "pages/news";
 @import "pages/deposits";
 @import "pages/locations";
+@import "pages/salons";
 @import "pages/salon";
 @import "pages/service";
 @import "pages/catalog";
 @import "pages/apartaments";
 @import "pages/about";
-@import "pages/special";
 @import "pages/specialoffer";
 @import "pages/homevisit";
 @import "pages/order";
 @import "pages/events";
-// @import "pages/info";
-// @import "pages/promotion";
-// @import "pages/spa-programms";
 
 .heading {
-	padding-top: rem(80);
+	padding-top: rem(40);
+
+	@media (min-width:$md4) {
+		padding-top: rem(100);
+
+	}
 
 	// .heading__title
 	&__title {
