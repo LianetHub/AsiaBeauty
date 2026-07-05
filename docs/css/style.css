@@ -550,10 +550,6 @@ body.lock-filter {
   display: none;
 }
 
-.breadcrumbs + * {
-  margin-top: 0 !important;
-}
-
 .breadcrumbs__items {
   display: -webkit-box;
   display: -ms-flexbox;
