@@ -11,7 +11,7 @@
                 </div>
                 @@if(typeof showCatalogBtn !== 'undefined' && showCatalogBtn) {
                 <div class="hero__btns">
-                    <a href="catalog.html" class="hero__btn btn btn-secondary">Подобрать спа-программу</a>
+                    <a href="@@if(typeof catalogBtnHref !== 'undefined') {@@catalogBtnHref}@@if(typeof catalogBtnHref === 'undefined') {catalog.html}" class="hero__btn btn btn-secondary">@@if(typeof catalogBtnText !== 'undefined') {@@catalogBtnText}@@if(typeof catalogBtnText === 'undefined') {Подобрать спа-программу}</a>
                 </div>
                 }
                 @@if(typeof showVideo !== 'undefined' && showVideo) {

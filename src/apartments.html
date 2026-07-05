@@ -6,164 +6,162 @@
     <body>
         <div class="wrapper">
             @@include('html/_header.html', {
+            "className": "header--light",
+            "lightLogo": true,
             "active": "4"
             })
-            <main class="page">
-                <section class="heading">
+            <main class="page page--apartments">
+                @@include('./html/_hero.html', {
+                "modifier": " hero--apartments",
+                "fullWidth": true,
+                "bgImage": "@img/apartaments.jpg",
+                "title": "ОТДЫХ В&nbsp;ИНДИВИДУАЛЬНЫХ<br> СПА ПРОСТРАНСТВАХ",
+                "showCatalogBtn": true,
+                "catalogBtnText": "Подобрать апартаменты",
+                "catalogBtnHref": "#apartments-spaces"
+                })
+                <section class="apartments-spaces" id="apartments-spaces">
                     <div class="container">
-                        <nav aria-label="Хлебные крошки" class="breadcrumbs">
-                            <ul class="breadcrumbs__items">
-                                <li class="breadcrumbs__item">
-                                    <a href="index.html" class="breadcrumbs__link">Главная</a>
-                                </li>
-                                <li class="breadcrumbs__item">
-                                    <span class="breadcrumbs__link active">Апартаменты</span>
-                                </li>
-                            </ul>
-                        </nav>
+                        <h2 class="apartments-spaces__title title-lg">Выбрать спа-программу для отдыха для любого повода</h2>
+                        <p class="apartments-spaces__caption">Индивидуальные спа-пространства</p>
+                        <ul class="apartments-spaces__list">
+                            <li class="apartments-spaces__item">
+                                <article class="events-card">
+                                    <a href="place.html" class="events-card__image">
+                                        <img src="@img/apartaments/01-service.jpg" class="cover-image" alt="Индивидуальное пространство на Маяковской">
+                                        <span class="events-card__name">Индивидуальное<br> пространство на<br> Маяковской</span>
+                                    </a>
+                                    <div class="events-card__footer">
+                                        <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="events-card__btn btn btn-lg">Забронировать</a>
+                                        <a href="place.html" class="events-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
+                                    </div>
+                                </article>
+                            </li>
+                            <li class="apartments-spaces__item">
+                                <article class="events-card">
+                                    <a href="place.html" class="events-card__image">
+                                        <img src="@img/apartaments/02-service.jpg" class="cover-image" alt="Индивидуальное пространство на Смоленской">
+                                        <span class="events-card__name">Индивидуальное<br> пространство на<br> Смоленской</span>
+                                    </a>
+                                    <div class="events-card__footer">
+                                        <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="events-card__btn btn btn-lg">Забронировать</a>
+                                        <a href="place.html" class="events-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
+                                    </div>
+                                </article>
+                            </li>
+                            <li class="apartments-spaces__item">
+                                <article class="events-card">
+                                    <a href="place.html" class="events-card__image">
+                                        <img src="@img/apartaments/04-service.jpg" class="cover-image" alt="Индивидуальное пространство на Полянке">
+                                        <span class="events-card__name">Индивидуальное<br> пространство на<br> Полянке</span>
+                                    </a>
+                                    <div class="events-card__footer">
+                                        <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="events-card__btn btn btn-lg">Забронировать</a>
+                                        <a href="place.html" class="events-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
+                                    </div>
+                                </article>
+                            </li>
+                            <li class="apartments-spaces__item">
+                                <article class="events-card">
+                                    <a href="place.html" class="events-card__image">
+                                        <img src="@img/apartaments/05-service.jpg" class="cover-image" alt="Индивидуальное пространство в Сити">
+                                        <span class="events-card__name">Индивидуальное<br> пространство<br> Сити</span>
+                                    </a>
+                                    <div class="events-card__footer">
+                                        <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="events-card__btn btn btn-lg">Забронировать</a>
+                                        <a href="place.html" class="events-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
+                                    </div>
+                                </article>
+                            </li>
+                        </ul>
                     </div>
                 </section>
-                <div class="services-slider swiper">
-                    <div class="swiper-wrapper">
-                        <a href="place.html" class="services-slider__slide swiper-slide">
-                            <span class="services-slider__slide-image">
-                                <img src="@img/apartaments/01-service.jpg" class="cover-image" alt="Фото услуги">
-                            </span>
-                            <span class="services-slider__slide-name text-medium text-uppercase text-center">АПАРТАМЕНТЫ <br> НА 20 ЭТАЖЕ</span>
-                        </a>
-                        <a href="place.html" class="services-slider__slide swiper-slide">
-                            <span class="services-slider__slide-image">
-                                <img src="@img/apartaments/02-service.jpg" class="cover-image" alt="Фото услуги">
-                            </span>
-                            <span class="services-slider__slide-name text-medium text-uppercase text-center">АПАРТАМЕНТЫ <br> НА МАЯКОВСКОЙ</span>
-                        </a>
-                        <a href="place.html" class="services-slider__slide swiper-slide">
-                            <span class="services-slider__slide-image">
-                                <img src="@img/apartaments/03-service.jpg" class="cover-image" alt="Фото услуги">
-                            </span>
-                            <span class="services-slider__slide-name text-medium text-uppercase text-center">АПАРТАМЕНТЫ НА&nbsp;СМОЛЕНСКОЙ</span>
-                        </a>
-                        <a href="place.html" class="services-slider__slide swiper-slide">
-                            <span class="services-slider__slide-image">
-                                <img src="@img/apartaments/04-service.jpg" class="cover-image" alt="Фото услуги">
-                            </span>
-                            <span class="services-slider__slide-name text-medium text-uppercase text-center">АПАРТАМЕНТЫ НА&nbsp;ПОЛЯНКЕ</span>
-                        </a>
-                        <a href="place.html" class="services-slider__slide swiper-slide">
-                            <span class="services-slider__slide-image">
-                                <img src="@img/apartaments/05-service.jpg" class="cover-image" alt="Фото услуги">
-                            </span>
-                            <span class="services-slider__slide-name text-medium text-uppercase text-center">АПАРТАМЕНТЫ<br> СИТИ</span>
-                        </a>
-                        <a href="place.html" class="services-slider__slide swiper-slide">
-                            <span class="services-slider__slide-image">
-                                <img src="@img/apartaments/06-service.jpg" class="cover-image" alt="Фото услуги">
-                            </span>
-                            <span class="services-slider__slide-name text-medium text-uppercase text-center">АПАРТАМЕНТЫ <br> КИЕВСКАЯ</span>
-                        </a>
-                    </div>
-                </div>
-                <section class="catalog">
+                @@include('./html/_spa-benefits.html', {
+                "title": "Asia Beauty Spa — крупнейшая сеть spa-салонов premium класса в&nbsp;Москве"
+                })
+                <section class="apartments-programs">
                     <div class="container">
-                        <div class="catalog__content">
-                            <div class="catalog__header">
-                                <div class="section-header">
-                                    <div class="section-header__caption caption">Апартаменты</div>
-                                </div>
-                                <div class="catalog__filters">
-                                    <label class="catalog__filter">
-                                        <input type="checkbox" name="place" checked value="mayakovskaya" class="catalog__filter-input hidden" hidden>
-                                        <span class="catalog__filter-btn btn btn-white-outline btn-lg">Маяковская</span>
-                                    </label>
-
-                                    <label class="catalog__filter">
-                                        <input type="checkbox" name="place" value="smolenskaya" class="catalog__filter-input hidden" hidden>
-                                        <span class="catalog__filter-btn btn btn-white-outline btn-lg">Смоленская</span>
-                                    </label>
-
-                                    <label class="catalog__filter">
-                                        <input type="checkbox" name="place" value="siti" class="catalog__filter-input hidden" hidden>
-                                        <span class="catalog__filter-btn btn btn-white-outline btn-lg">Сити</span>
-                                    </label>
-
-                                    <label class="catalog__filter">
-                                        <input type="checkbox" name="place" value="polyanka" class="catalog__filter-input hidden" hidden>
-                                        <span class="catalog__filter-btn btn btn-white-outline btn-lg">Полянка</span>
-                                    </label>
-
-                                    <label class="catalog__filter">
-                                        <input type="checkbox" name="place" value="kievskaya" class="catalog__filter-input hidden" hidden>
-                                        <span class="catalog__filter-btn btn btn-white-outline btn-lg">Киевская</span>
-                                    </label>
-                                </div>
-                                <div class="catalog__caption">
-                                    <button type="button" class="catalog__filter-toggler btn btn-grey btn-lg active">
-                                        <span class="catalog__filter-text">Фильтр</span>
-                                        <span class="catalog__filter-icon icon-filter"></span>
-                                    </button>
-                                    <form action="#" class="catalog__search">
-                                        <button type="submit" aria-label="Искать" class="catalog__search-submit icon-search"></button>
-                                        <input type="text" name="s" class="catalog__search-input" placeholder="Поиск услуг...">
-                                    </form>
-                                    <div class="catalog__select">
-                                        <div class="select">
-                                            <select name="sort">
-                                                <option selected value="popularity">По популярности</option>
-                                                <option value="price_asc">Сначала недорогие</option>
-                                                <option value="price_desc">Сначала дорогие</option>
-                                                <option value="duration_asc">Сначала короткие</option>
-                                                <option value="duration_desc">Сначала длинные</option>
-                                                <option value="newest">Новинки</option>
-                                            </select>
-                                        </div>
+                        <h2 class="apartments-programs__title title">Программы спа для двоих в&nbsp;индивидуальных пространствах</h2>
+                        <ul class="apartments-programs__list">
+                            <li class="apartments-programs__item">
+                                <article class="program-card">
+                                    <a href="service.html" class="program-card__image">
+                                        <img src="@img/goods/in-unison.jpg" class="cover-image" alt="«В унисон»">
+                                        <span class="program-card__name">В унисон</span>
+                                    </a>
+                                    <div class="program-card__includes">
+                                        <p class="program-card__includes-title">Включает:</p>
+                                        <ul class="program-card__includes-list">
+                                            <li>Теплое масло</li>
+                                            <li>Массаж</li>
+                                            <li>Массаж стоп</li>
+                                            <li>Комплимент от шефа</li>
+                                        </ul>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="catalog__slider swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="catalog__slide catalog__slide--large swiper-slide">
-                                        @@include('./html/templates/_appartaments-card.html')
+                                    <div class="program-card__meta">
+                                        <span class="program-card__price">58 000 ₽</span>
+                                        <span class="program-card__time icon-clock">90 мин</span>
                                     </div>
-                                    <div class="catalog__slide catalog__slide--large swiper-slide">
-                                        @@include('./html/templates/_appartaments-card.html')
+                                    <div class="program-card__footer">
+                                        <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="program-card__btn btn btn-lg">Забронировать</a>
+                                        <a href="service.html" class="program-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
                                     </div>
-                                    <div class="catalog__slide catalog__slide--large swiper-slide">
-                                        @@include('./html/templates/_appartaments-card.html')
+                                </article>
+                            </li>
+                            <li class="apartments-programs__item">
+                                <article class="program-card">
+                                    <a href="service.html" class="program-card__image">
+                                        <img src="@img/goods/anahata.jpg" class="cover-image" alt="Анахата">
+                                        <span class="program-card__name">Анахата</span>
+                                    </a>
+                                    <div class="program-card__includes">
+                                        <p class="program-card__includes-title">Включает:</p>
+                                        <ul class="program-card__includes-list">
+                                            <li>Теплое масло</li>
+                                            <li>Массаж</li>
+                                            <li>Массаж стоп</li>
+                                            <li>Комплимент от шефа</li>
+                                        </ul>
                                     </div>
-                                    <div class="catalog__slide catalog__slide--large swiper-slide">
-                                        @@include('./html/templates/_appartaments-card.html')
+                                    <div class="program-card__meta">
+                                        <span class="program-card__price">58 000 ₽</span>
+                                        <span class="program-card__time icon-clock">90 мин</span>
                                     </div>
-                                    <div class="catalog__slide catalog__slide--large swiper-slide">
-                                        @@include('./html/templates/_appartaments-card.html')
+                                    <div class="program-card__footer">
+                                        <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="program-card__btn btn btn-lg">Забронировать</a>
+                                        <a href="service.html" class="program-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
                                     </div>
-                                    <div class="catalog__slide catalog__slide--large swiper-slide">
-                                        @@include('./html/templates/_appartaments-card.html')
+                                </article>
+                            </li>
+                            <li class="apartments-programs__item">
+                                <article class="program-card">
+                                    <a href="service.html" class="program-card__image">
+                                        <img src="@img/goods/ancient-tibet.jpg" class="cover-image" alt="Древний Тибет">
+                                        <span class="program-card__name">Древний Тибет</span>
+                                    </a>
+                                    <div class="program-card__includes">
+                                        <p class="program-card__includes-title">Включает:</p>
+                                        <ul class="program-card__includes-list">
+                                            <li>Теплое масло</li>
+                                            <li>Массаж</li>
+                                            <li>Массаж стоп</li>
+                                            <li>Комплимент от шефа</li>
+                                        </ul>
                                     </div>
-                                    <div class="catalog__slide catalog__slide--large swiper-slide">
-                                        @@include('./html/templates/_appartaments-card.html')
+                                    <div class="program-card__meta">
+                                        <span class="program-card__price">58 000 ₽</span>
+                                        <span class="program-card__time icon-clock">90 мин</span>
                                     </div>
-                                </div>
-                                <button type="button" class="catalog__slider-prev swiper-button-prev"></button>
-                                <button type="button" class="catalog__slider-next swiper-button-next"></button>
-                            </div>
-                        </div>
+                                    <div class="program-card__footer">
+                                        <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="program-card__btn btn btn-lg">Забронировать</a>
+                                        <a href="service.html" class="program-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
+                                    </div>
+                                </article>
+                            </li>
+                        </ul>
                     </div>
                 </section>
-                <section class="heading">
-                    <div class="container">
-                        <h1 class="heading__title title-lg">
-                            20 этаж с видом <br> на москва-сити и собственным бассейном
-                        </h1>
-                    </div>
-                </section>
-                <div class="banner">
-                    <div class="banner__wrapper">
-                        <div class="banner__image">
-                            <img src="@img/apartaments-banner.jpg" class="cover-image" alt="Фото">
-                        </div>
-                        <a href="" class="banner__order btn btn-white">Забронировать</a>
-                    </div>
-                </div>
+                @@include('html/_about-locations.html', {})
             </main>
             @@include('html/_footer.html', {})
         </div>

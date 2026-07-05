@@ -97,45 +97,9 @@
                         </ul>
                     </div>
                 </section>
-                <section class="events-relax">
-                    <div class="container">
-                        <div class="events-relax__layout">
-                            <div class="events-relax__content">
-                                <h2 class="events-relax__title title-lg">Отдых в&nbsp;индивидуальных спа-пространствах</h2>
-                                <div class="events-relax__text">
-                                    <p>Это одно из немногих spa-пространств, где можно полноценно отдохнуть. Место, куда приходят заранее, чтобы расслабиться и сонастроиться с ним. Перед процедурами наши гости пьют расслабляющий чай, слушают гармоничную китайскую музыку, прогревают тело в сауне или хаммаме, окунаются в бассейн, стимулируют мышцы в джакузи, переодеваются в теплый мягкий халат, и в комфортной обстановке знакомятся с пространством. По желанию проводят медитативную практику.</p>
-                                    <p>Только после этих ритуалов человек физически и ментально готов взаимодействовать с мастером. Он ложится на теплую кушетку, где с его телом работают теплые руки.</p>
-                                </div>
-                            </div>
-                            <ul class="events-relax__features">
-                                <li class="events-relax__feature">
-                                    <div class="events-relax__feature-icon">
-                                        <img src="@img/icons/bar.svg" alt="">
-                                    </div>
-                                    <div class="events-relax__feature-name">Бар</div>
-                                </li>
-                                <li class="events-relax__feature">
-                                    <div class="events-relax__feature-icon">
-                                        <img src="@img/icons/food.svg" alt="">
-                                    </div>
-                                    <div class="events-relax__feature-name">Закуски</div>
-                                </li>
-                                <li class="events-relax__feature">
-                                    <div class="events-relax__feature-icon">
-                                        <img src="@img/icons/massage.svg" alt="">
-                                    </div>
-                                    <div class="events-relax__feature-name">Спа-программы</div>
-                                </li>
-                                <li class="events-relax__feature">
-                                    <div class="events-relax__feature-icon">
-                                        <img src="@img/icons/support-agent.svg" alt="">
-                                    </div>
-                                    <div class="events-relax__feature-name">Яндекс-алиса</div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
+                @@include('./html/_spa-benefits.html', {
+                "title": "Отдых в&nbsp;индивидуальных спа-пространствах"
+                })
                 @@include('html/_about-locations.html', {})
             </main>
             @@include('html/_footer.html', {})

@@ -108,7 +108,8 @@
 		}
 	}
 
-	&.hero--events {
+	&.hero--events,
+	&.hero--apartments {
 		.hero__offer {
 			@media (min-width: $md4) {
 				max-width: rem(742);

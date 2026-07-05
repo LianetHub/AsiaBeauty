@@ -378,22 +378,6 @@ $(function () {
 		});
 	}
 
-	if ($(".services-slider").length > 0) {
-		new ConditionsSwiper(
-			".services-slider",
-			{
-				slidesPerView: "auto",
-				speed: 300,
-				mousewheel: true,
-				spaceBetween: 9,
-			},
-			{
-				mode: "max",
-				breakpoint: 575.98,
-			},
-		);
-	}
-
 	if ($(".catalog__slider").length > 0) {
 		new ConditionsSwiper(
 			".catalog__slider",
@@ -1149,7 +1133,7 @@ $(function () {
 			{ x: 0, y: 0 },
 			{ x: 19, y: 0 },
 			{ x: 19, y: 19 },
-			{ x: 0, y: 19 }
+			{ x: 0, y: 19 },
 		];
 
 		const positionsExtra = [
@@ -1157,23 +1141,23 @@ $(function () {
 			{ x: 20, y: 0 },
 			{ x: 39, y: 0 },
 			{ x: 20, y: 19 },
-			{ x: 0, y: 19 }
+			{ x: 0, y: 19 },
 		];
 
-		iconBlocks.forEach(svgElement => {
+		iconBlocks.forEach((svgElement) => {
 			const squares = [
-				svgElement.querySelector('.q-1'),
-				svgElement.querySelector('.q-2'),
-				svgElement.querySelector('.q-3'),
-				svgElement.querySelector('.q-4'),
-				svgElement.querySelector('.q-5')
+				svgElement.querySelector(".q-1"),
+				svgElement.querySelector(".q-2"),
+				svgElement.querySelector(".q-3"),
+				svgElement.querySelector(".q-4"),
+				svgElement.querySelector(".q-5"),
 			].filter(Boolean);
 
 			if (squares.length === 0) return;
 
-			squares.forEach(sq => {
-				sq.setAttribute('x', '0');
-				sq.setAttribute('y', '0');
+			squares.forEach((sq) => {
+				sq.setAttribute("x", "0");
+				sq.setAttribute("y", "0");
 			});
 
 			const isExtra = squares.length === 5;
@@ -1185,7 +1169,7 @@ $(function () {
 			squares.forEach((sq, i) => {
 				gsap.set(sq, {
 					x: currentPositions[startIndex[i]].x,
-					y: currentPositions[startIndex[i]].y
+					y: currentPositions[startIndex[i]].y,
 				});
 			});
 
@@ -1193,13 +1177,13 @@ $(function () {
 				repeat: -1,
 				repeatDelay: 0.4,
 				defaults: { duration: 0.5, ease: "power2.inOut" },
-				paused: true
+				paused: true,
 			});
 
 			for (let step = 1; step <= totalPos; step++) {
 				tl.to(squares, {
-					x: i => currentPositions[(startIndex[i] + step) % totalPos].x,
-					y: i => currentPositions[(startIndex[i] + step) % totalPos].y
+					x: (i) => currentPositions[(startIndex[i] + step) % totalPos].x,
+					y: (i) => currentPositions[(startIndex[i] + step) % totalPos].y,
 				});
 			}
 
@@ -1207,7 +1191,7 @@ $(function () {
 				trigger: svgElement,
 				start: "top 85%",
 				onEnter: () => tl.play(),
-				onLeaveBack: () => tl.pause(0)
+				onLeaveBack: () => tl.pause(0),
 			});
 		});
 	}
