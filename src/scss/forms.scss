@@ -212,6 +212,24 @@
 		}
 	}
 
+	&.btn-grey-outline {
+		border: rem(1) solid #282828;
+		color: #282828;
+
+		@media (any-hover: hover) {
+			&:hover {
+				border-color: $red;
+				color: $red;
+			}
+		}
+
+		&:active,
+		&.active {
+			background: #E4E4E4;
+			color: #151515;
+		}
+	}
+
 	&.btn-white {
 		border: rem(1) solid #F9F0E2;
 		background: #F9F0E2;

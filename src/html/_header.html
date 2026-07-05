@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header@@if(typeof className !== 'undefined' && className){ @@className}">
     <div class="header__marquee">
         <div class="header__marquee-container container container-lg ">
             <div class="header__marquee-slider swiper">
@@ -24,7 +24,13 @@
                     </ul>
                 </nav>
                 <a href="index.html" class="header__logo">
-                    <img src="@img/logo.svg" alt="Логотип">
+                    @@if(typeof lightLogo !== 'undefined' && lightLogo) {
+                    <img src="@img/logo-white.svg" alt="Логотип" class="header__logo-img header__logo-img--light">
+                    <img src="@img/logo.svg" alt="Логотип" class="header__logo-img header__logo-img--dark">
+                    }
+                    @@if(typeof lightLogo === 'undefined' || !lightLogo) {
+                    <img src="@img/logo.svg" alt="Логотип" class="header__logo-img">
+                    }
                 </a>
                 <div class="header__side">
                     <a href="tel:+74950217659" class="header__phone icon-phone"><span>+7 495 021 76 59</span></a>

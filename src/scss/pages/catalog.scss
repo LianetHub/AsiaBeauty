@@ -379,6 +379,12 @@
 		margin-top: rem(24);
 		grid-template-columns: repeat(auto-fill, minmax(rem(220), 1fr));
 
+		&.catalog__grid--small {
+			max-width: rem(844);
+			margin-inline: auto;
+
+		}
+
 		@media (min-width: $md4) {
 			grid-template-columns: repeat(auto-fill, minmax(rem(264), 1fr));
 			margin-top: rem(18);

@@ -1,10 +1,27 @@
-<section class="catalog">
+<section class="catalog@@if(typeof catalogModifier !== 'undefined' && catalogModifier) { @@catalogModifier}">
     <div class="container">
-        <h2 class="catalog__title title">@@if(typeof title !== 'undefined') {@@title}@@if(typeof title === 'undefined') {ПОПУЛЯРНЫЕ услуги}</h2>
+        <h2 class="catalog__title title@@if(typeof titleClass !== 'undefined') { @@titleClass}">@@if(typeof title !== 'undefined') {@@title}@@if(typeof title === 'undefined') {ПОПУЛЯРНЫЕ услуги}</h2>
+        @@if(typeof layout !== 'undefined' && layout === 'grid') {
+        <ul class="catalog__grid catalog__grid--small">
+            @@if(typeof jsonFile !== 'undefined') {
+            @@loop('./templates/_product.html', '@@jsonFile')
+            }
+            @@if(typeof jsonFile === 'undefined') {
+            @@loop('./templates/_product.html', './html/json/popular.json')
+            }
+        </ul>
+        }
+        @@if(typeof layout === 'undefined' || layout !== 'grid') {
         <div class="catalog__carousel swiper">
             <ul class="swiper-wrapper">
+                @@if(typeof jsonFile !== 'undefined') {
+                @@loop('./templates/_product.html', '@@jsonFile')
+                }
+                @@if(typeof jsonFile === 'undefined') {
                 @@loop('./templates/_product.html', './html/json/popular.json')
+                }
             </ul>
         </div>
+        }
     </div>
 </section>

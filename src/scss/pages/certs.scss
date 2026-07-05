@@ -39,23 +39,6 @@
 	}
 }
 
-.hero--certs {
-	padding-top: 0;
-
-	@media (min-width: $md2) {
-		padding-top: 0;
-	}
-
-	.hero__title {
-		font-size: rem(32);
-		line-height: 1;
-
-		@media (min-width: $md4) {
-			font-size: rem(48);
-		}
-	}
-}
-
 .certs {
 	padding: rem(20) 0 rem(32);
 	color: #290F0A;

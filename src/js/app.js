@@ -440,6 +440,16 @@ $(function () {
 		});
 	}
 
+	const $lightHeader = $(".header--light");
+	if ($lightHeader.length > 0) {
+		const toggleLightHeader = () => {
+			$lightHeader.toggleClass("header--scrolled", window.scrollY > 0);
+		};
+
+		toggleLightHeader();
+		$(window).on("scroll", toggleLightHeader);
+	}
+
 	if ($(".extras__carousel").length > 0) {
 		$(".extras__carousel").each(function (index, sliderEl) {
 			new Swiper(sliderEl, {
@@ -463,6 +473,24 @@ $(function () {
 					clickable: true,
 				},
 			});
+		});
+	}
+
+	if ($(".about-locations__gallery").length > 0) {
+		new Swiper(".about-locations__gallery", {
+			slidesPerView: "auto",
+			spaceBetween: 12,
+			speed: 800,
+			watchOverflow: true,
+			pagination: {
+				el: ".about-locations__pagination",
+				clickable: true,
+			},
+			breakpoints: {
+				767.98: {
+					spaceBetween: 0,
+				},
+			},
 		});
 	}
 

@@ -145,7 +145,11 @@
 	position: static;
 
 	.swiper-pagination-bullet {
-		background: $grey;
+		background: rgba(39, 38, 38, 0.50);
+
+		&.swiper-pagination-bullet-active {
+			background: #D9D9D9;
+		}
 	}
 }
 

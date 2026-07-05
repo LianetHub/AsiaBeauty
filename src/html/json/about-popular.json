@@ -1,0 +1,54 @@
+[
+    {
+        "id": "relax_massage",
+        "image": "@img/goods/relax-massage.jpg",
+        "name": "Relax massage / Релакс массаж",
+        "desc": "Погружение в Нирвану. Just you, just you feelings.",
+        "price": "9 500 Р",
+        "time": "60 min",
+        "badge": "guest"
+    },
+    {
+        "id": "sport_massage",
+        "image": "@img/goods/sport-massage.jpg",
+        "name": "Sport massage / Спортивный массаж",
+        "desc": "Восстановление и легкость. Full body renovation",
+        "price": "9 500 Р",
+        "time": "60 min",
+        "badge": "hit"
+    },
+    {
+        "id": "slim_lymphatic_massage",
+        "image": "@img/goods/lymphatic-massage.jpg",
+        "name": "Slim / lymphatic massage / Слим массаж",
+        "desc": "Проститься с лишним. It's so beautiful",
+        "price": "8 500 Р",
+        "time": "30 min"
+    },
+    {
+        "id": "shiatsu",
+        "image": "@img/goods/shiatsu.jpg",
+        "name": "Шиацу",
+        "desc": "В сухой технике мануального воздействия. 12 потоков энергии Ци. The power of energy",
+        "price": "9 500 Р",
+        "time": "60 min",
+        "badge": "guest"
+    },
+    {
+        "id": "aroma_massage",
+        "image": "@img/goods/aroma-massage.jpg",
+        "name": "Aroma massage / Арома массаж",
+        "desc": "Relaxation and harmony. Feel the aroma of bliss",
+        "price": "9 500 Р",
+        "time": "60 min",
+        "badge": "guest"
+    },
+    {
+        "id": "foot_massage",
+        "image": "@img/goods/foot-massage.jpg",
+        "name": "Foot massage / Массаж стоп",
+        "desc": "Deep relaxation through feet. Energy lines activation",
+        "price": "6 500 Р",
+        "time": "45 min"
+    }
+]

@@ -1,29 +1,3 @@
-.hero--homevisit {
-	padding: 0 0 rem(20);
-
-	@media (min-width: $md2) {
-		padding: 0 0 rem(20);
-	}
-
-	.hero__banner {
-		min-height: rem(400);
-
-		@media (min-width: $md4) {
-			min-height: rem(671);
-		}
-	}
-
-	.hero__offer {
-		@media (min-width: $md4) {
-			max-width: rem(602);
-		}
-	}
-
-	.hero__title {
-		max-width: none;
-	}
-}
-
 .homevisit {
 	padding: rem(40) 0 rem(60);
 

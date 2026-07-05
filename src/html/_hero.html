@@ -1,4 +1,41 @@
-<section class="hero@@if(typeof modifier !== 'undefined' && modifier) { @@modifier}">
+<section class="hero@@if(typeof modifier !== 'undefined' && modifier) { @@modifier}@@if(typeof fullWidth !== 'undefined' && fullWidth) { hero--fullwidth}">
+    @@if(typeof fullWidth !== 'undefined' && fullWidth) {
+    <div class="hero__bg" style="background-image: url('@@if(typeof bgImage !== 'undefined') {@@bgImage}@@if(typeof bgImage === 'undefined') {@img/hero.jpg}');">
+        <div class="container container-lg">
+            <div class="hero__banner@@if(typeof bannerLarge !== 'undefined' && bannerLarge) { hero__banner--large}">
+                <div class="hero__offer">
+                    <h1 class="hero__title title-lg">@@title</h1>
+                    @@if(typeof subtitle !== 'undefined') {
+                    <p class="hero__subtitle">@@subtitle</p>
+                    }
+                </div>
+                @@if(typeof showVideo !== 'undefined' && showVideo) {
+                <a href="files/hero-video.mp4" data-fancybox class="hero__video icon-play">
+                    Посмотреть <br> видео-тур по салону
+                </a>
+                }
+                @@if(typeof showSearch !== 'undefined' && showSearch) {
+                <form action="@@searchAction" method="get" class="hero__search">
+                    <button type="submit" aria-label="Искать" class="hero__search-btn icon-search"></button>
+                    @@if(typeof searchValue !== 'undefined') {
+                    <input type="text" name="q" value="@@searchValue" class="hero__search-input" placeholder="Поиск услуг...">
+                    }
+                    @@if(typeof searchValue === 'undefined') {
+                    <input type="text" name="q" class="hero__search-input" placeholder="Поиск услуг...">
+                    }
+                </form>
+                }
+                @@if(typeof showBtns !== 'undefined' && showBtns) {
+                <div class="hero__btns">
+                    <a href="" class="hero__btn btn btn-primary">Приобрести сертификат</a>
+                    <a href="catalog.html" class="hero__btn btn btn-secondary">Подобрать спа-программу</a>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+    }
+    @@if(typeof fullWidth === 'undefined' || !fullWidth) {
     <div class="container container-lg">
         <div class="hero__banner@@if(typeof bannerLarge !== 'undefined' && bannerLarge) { hero__banner--large}" style="background-image: url('@@if(typeof bgImage !== 'undefined') {@@bgImage}@@if(typeof bgImage === 'undefined') {@img/hero.jpg}');">
             <div class="hero__offer">
@@ -42,4 +79,5 @@
         </form>
         }
     </div>
+    }
 </section>
