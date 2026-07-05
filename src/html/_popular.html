@@ -1,6 +1,6 @@
 <section class="catalog">
     <div class="container">
-        <h2 class="catalog__title title">ПОПУЛЯРНЫЕ услуги</h2>
+        <h2 class="catalog__title title">@@if(typeof title !== 'undefined') {@@title}@@if(typeof title === 'undefined') {ПОПУЛЯРНЫЕ услуги}</h2>
         <div class="catalog__carousel swiper">
             <ul class="swiper-wrapper">
                 @@loop('./templates/_product.html', './html/json/popular.json')

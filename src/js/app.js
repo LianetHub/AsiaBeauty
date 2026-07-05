@@ -779,6 +779,10 @@ $(function () {
 				this.$dropdown.addClass("dropdown--outline");
 			}
 
+			if (this.theme === "service") {
+				this.$dropdown.addClass("dropdown--service");
+			}
+
 			const captionTemplate = this.listCaption ? `<div class="dropdown__caption">${this.listCaption}</div>` : "";
 
 			this.$dropdown.html(`

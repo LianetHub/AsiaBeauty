@@ -178,12 +178,7 @@ body {
 // @import "pages/spa-programms";
 
 .heading {
-	padding-top: rem(60);
-	padding-bottom: 2rem;
-
-	@media (min-width: $md3) {
-		padding-top: rem(122);
-	}
+	padding-top: rem(8);
 
 	// .heading__title
 	&__title {
