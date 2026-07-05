@@ -460,9 +460,8 @@ body.lock-filter {
      text-overflow: ellipsis;
   overflow: hidden;
   word-break: break-all;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
+  -ms-hyphens: auto;
+      hyphens: auto;
   min-width: 2.13rem;
 }
 
@@ -2128,8 +2127,7 @@ body.lock-filter {
 
 .hidden {
   clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
+  clip-path: inset(50%);
   height: 1px;
   overflow: hidden;
   position: absolute;

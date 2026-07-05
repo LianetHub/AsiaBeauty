@@ -6,7 +6,6 @@ import formatHTML from "gulp-format-html";
 export const html = () => {
     return app.gulp
         .src(app.path.src.html)
-        .pipe(app.plugins.if(app.isBuild, formatHTML()))
         .pipe(
             app.plugins.plumber(
                 app.plugins.notify.onError({
@@ -17,6 +16,7 @@ export const html = () => {
         )
         .pipe(fileinclude())
         .pipe(app.plugins.replace(/@img\//g, "img/"))
+        .pipe(app.plugins.if(app.isBuild, formatHTML()))
         // .pipe(app.plugins.if(app.isBuild, webpHtmlNosvg()))
         .pipe(
             app.plugins.if(
