@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
-    <title>Asia Beauty SPA | Страница спецпредложений</title>
+    <title>Asia Beauty SPA | Спа для двоих</title>
     <meta charset="UTF-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,7 +19,7 @@
 </head>
     <body>
         <div class="wrapper">
-            <header class="header">
+            <header class="header header--light">
     <div class="header__marquee">
         <div class="header__marquee-container container container-lg ">
             <div class="header__marquee-slider swiper">
@@ -46,8 +46,9 @@
                 </nav>
                 <a href="index.html" class="header__logo">
                     
+                    <img src="img/logo-white.svg" alt="Логотип" class="header__logo-img header__logo-img--light">
+                    <img src="img/logo.svg" alt="Логотип" class="header__logo-img header__logo-img--dark">
                     
-                    <img src="img/logo.svg" alt="Логотип" class="header__logo-img">
                     
                 </a>
                 <div class="header__side">
@@ -93,552 +94,483 @@
     </div>
 </div>
 
-            <main class="page">
-                <section class="heading">
-                    <div class="container">
-                        <nav aria-label="Хлебные крошки" class="breadcrumbs">
-                            <ul class="breadcrumbs__items">
-                                <li class="breadcrumbs__item">
-                                    <a href="index.html" class="breadcrumbs__link">Главная</a>
-                                </li>
-                                <li class="breadcrumbs__item">
-                                    <span class="breadcrumbs__link active">Спа для двоих</span>
-                                </li>
+            <main class="page page--specialoffer">
+                <section class="specialoffer-hero" style="background-image: url('img/apartaments.jpg');">
+                    <div class="container container-lg">
+                        <div class="specialoffer-hero__content">
+                            <h1 class="specialoffer-hero__title">Спа свидание<br> для двоих</h1>
+                            <p class="specialoffer-hero__subtitle">Незабываемый вечер только для вас</p>
+                            <ul class="specialoffer-hero__features">
+                                <li class="specialoffer-hero__feature">Приватная спа-зона<br> только для вас двоих</li>
+                                <li class="specialoffer-hero__feature">Профессиональные<br> массажи</li>
+                                <li class="specialoffer-hero__feature">Включены<br> акватермальные зоны</li>
+                                <li class="specialoffer-hero__feature">Премиальный<br> сервис</li>
                             </ul>
-                        </nav>
-                        <div class="heading__row" data-animate="section">
-                            <h1 class="heading__title title" data-animate="title">
-                                <span>Spa для</span>
-                                <span>двоих:</span>
-                                <span>уникальное</span>
-                                <span>свидание в</span>
-                                <span>центре Москвы</span>
-                            </h1>
-                            <div class="heading__image" data-animate="photo">
-                                <img src="img/specialoffer.jpg" class="cover-image" alt="Фото">
-                            </div>
+                            <a href="#specialoffer-apartments" class="specialoffer-hero__btn btn btn-lg">Подобрать аппартаменты</a>
                         </div>
                     </div>
                 </section>
-                <div class="media">
-                    <div class="container">
-                        <div class="media__slider swiper">
-                            <div class="swiper-wrapper">
-                                <div data-animate="card" class="media__slide swiper-slide">
-                                    <a href="https://www.youtube.com/watch?v=H2BcVlp6RMo" data-fancybox class="media__poster icon-play">
-                                        <img src="img/media/05.jpg" class="cover-image" alt="Постер">
-                                    </a>
-                                    <div class="media__footer">
-                                        <div class="media__name">Локации</div>
-                                        <button type="button" class="media__favorite favorite-btn"></button>
-                                    </div>
-                                </div>
-                                <div data-animate="card" class="media__slide swiper-slide">
-                                    <a href="https://www.youtube.com/watch?v=H2BcVlp6RMo" data-fancybox class="media__poster icon-play">
-                                        <img src="img/media/06.jpg" class="cover-image" alt="Постер">
-                                    </a>
-                                    <div class="media__footer">
-                                        <div class="media__name">Джакузи</div>
-                                        <button type="button" class="media__favorite favorite-btn"></button>
-                                    </div>
-                                </div>
-                                <div data-animate="card" class="media__slide swiper-slide">
-                                    <a href="https://www.youtube.com/watch?v=H2BcVlp6RMo" data-fancybox class="media__poster icon-play">
-                                        <img src="img/media/07.jpg" class="cover-image" alt="Постер">
-                                    </a>
-                                    <div class="media__footer">
-                                        <div class="media__name">Хаммам</div>
-                                        <button type="button" class="media__favorite favorite-btn"></button>
-                                    </div>
-                                </div>
-                                <div data-animate="card" class="media__slide swiper-slide">
-                                    <a href="https://www.youtube.com/watch?v=H2BcVlp6RMo" data-fancybox class="media__poster icon-play">
-                                        <img src="img/media/08.jpg" class="cover-image" alt="Постер">
-                                    </a>
-                                    <div class="media__footer">
-                                        <div class="media__name">Спа - программы</div>
-                                        <button type="button" class="media__favorite favorite-btn"></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
+                <section class="quiz" data-quiz>
+    <div class="container">
+        <div class="quiz__card">
+            <div class="quiz__main">
+                <div class="quiz__step quiz__step--active" data-quiz-step="start">
+                    <h2 class="quiz__title">Подберите идеальную SPA-программу</h2>
+                    <p class="quiz__subtitle">Короткий тест поможет подобрать программу под&nbsp;ваши задачи и&nbsp;пожелания</p>
+                    <p class="quiz__desc">Ответьте на 4 вопроса и получите список программ индивидуально для вас, а&nbsp;также бонус 1000 приветственных баллов на&nbsp;ваш первый визит</p>
+                    <button type="button" class="quiz__start btn btn-primary" data-quiz-start>Пройти тест</button>
+                </div>
+
+                <div class="quiz__step" data-quiz-step="1">
+                    <div class="quiz__counter">Вопрос <span data-quiz-current>1</span> из <span data-quiz-total>4</span></div>
+                    <h3 class="quiz__question">Какая спа-программа подойдёт вам больше всего?</h3>
+                    <p class="quiz__subtitle">Выберите основную цель визита — так мы подберём подходящие процедуры</p>
+                    <div class="quiz__options">
+                        <label class="quiz__option">
+                            <input type="radio" name="quiz_goal" value="Релакс и снятие стресса" class="quiz__option-input hidden" hidden>
+                            <span class="quiz__option-card">
+                                <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
+                                <span class="quiz__option-text">Релакс и&nbsp;снятие стресса</span>
+                            </span>
+                        </label>
+                        <label class="quiz__option">
+                            <input type="radio" name="quiz_goal" value="Уход за лицом и телом" class="quiz__option-input hidden" hidden>
+                            <span class="quiz__option-card">
+                                <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
+                                <span class="quiz__option-text">Уход за&nbsp;лицом и&nbsp;телом</span>
+                            </span>
+                        </label>
+                        <label class="quiz__option">
+                            <input type="radio" name="quiz_goal" value="Программы для двоих" class="quiz__option-input hidden" hidden>
+                            <span class="quiz__option-card">
+                                <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
+                                <span class="quiz__option-text">Программы для&nbsp;двоих</span>
+                            </span>
+                        </label>
+                        <label class="quiz__option">
+                            <input type="radio" name="quiz_goal" value="Детокс и восстановление" class="quiz__option-input hidden" hidden>
+                            <span class="quiz__option-card">
+                                <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
+                                <span class="quiz__option-text">Детокс и&nbsp;восстановление</span>
+                            </span>
+                        </label>
                     </div>
                 </div>
-                <div class="benefits">
+
+                <div class="quiz__step" data-quiz-step="2">
+                    <div class="quiz__counter">Вопрос <span data-quiz-current>2</span> из <span data-quiz-total>4</span></div>
+                    <h3 class="quiz__question">Сколько времени вы планируете провести в&nbsp;салоне?</h3>
+                    <p class="quiz__subtitle">Это поможет составить программу комфортной длительности</p>
+                    <div class="quiz__options">
+                        <label class="quiz__option">
+                            <input type="radio" name="quiz_duration" value="1–2 часа" class="quiz__option-input hidden" hidden>
+                            <span class="quiz__option-card">
+                                <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
+                                <span class="quiz__option-text">1–2 часа</span>
+                            </span>
+                        </label>
+                        <label class="quiz__option">
+                            <input type="radio" name="quiz_duration" value="2–3 часа" class="quiz__option-input hidden" hidden>
+                            <span class="quiz__option-card">
+                                <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
+                                <span class="quiz__option-text">2–3 часа</span>
+                            </span>
+                        </label>
+                        <label class="quiz__option">
+                            <input type="radio" name="quiz_duration" value="Полдня" class="quiz__option-input hidden" hidden>
+                            <span class="quiz__option-card">
+                                <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
+                                <span class="quiz__option-text">Полдня</span>
+                            </span>
+                        </label>
+                        <label class="quiz__option">
+                            <input type="radio" name="quiz_duration" value="Целый день" class="quiz__option-input hidden" hidden>
+                            <span class="quiz__option-card">
+                                <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
+                                <span class="quiz__option-text">Целый день</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="quiz__step" data-quiz-step="3">
+                    <div class="quiz__counter">Вопрос <span data-quiz-current>3</span> из <span data-quiz-total>4</span></div>
+                    <h3 class="quiz__question">Какой формат посещения вам ближе?</h3>
+                    <p class="quiz__subtitle">Салоны, апартаменты с&nbsp;сауной, акватермальные зоны или выезд мастера на&nbsp;дом</p>
+                    <div class="quiz__options">
+                        <label class="quiz__option">
+                            <input type="radio" name="quiz_format" value="Классический салон" class="quiz__option-input hidden" hidden>
+                            <span class="quiz__option-card">
+                                <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
+                                <span class="quiz__option-text">Классический салон</span>
+                            </span>
+                        </label>
+                        <label class="quiz__option">
+                            <input type="radio" name="quiz_format" value="Апартаменты с сауной" class="quiz__option-input hidden" hidden>
+                            <span class="quiz__option-card">
+                                <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
+                                <span class="quiz__option-text">Апартаменты с&nbsp;сауной</span>
+                            </span>
+                        </label>
+                        <label class="quiz__option">
+                            <input type="radio" name="quiz_format" value="С акватермальной зоной" class="quiz__option-input hidden" hidden>
+                            <span class="quiz__option-card">
+                                <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
+                                <span class="quiz__option-text">С&nbsp;акватермальной зоной</span>
+                            </span>
+                        </label>
+                        <label class="quiz__option">
+                            <input type="radio" name="quiz_format" value="Выезд мастера на дом" class="quiz__option-input hidden" hidden>
+                            <span class="quiz__option-card">
+                                <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
+                                <span class="quiz__option-text">Выезд мастера на&nbsp;дом</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="quiz__step" data-quiz-step="4">
+                    <div class="quiz__counter">Вопрос <span data-quiz-current>4</span> из <span data-quiz-total>4</span></div>
+                    <h3 class="quiz__question">Как часто вы посещаете SPA?</h3>
+                    <p class="quiz__subtitle">Для новых гостей начисляем 1000 приветственных баллов на&nbsp;первый визит</p>
+                    <div class="quiz__options">
+                        <label class="quiz__option">
+                            <input type="radio" name="quiz_frequency" value="Впервые" class="quiz__option-input hidden" hidden>
+                            <span class="quiz__option-card">
+                                <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
+                                <span class="quiz__option-text">Впервые</span>
+                            </span>
+                        </label>
+                        <label class="quiz__option">
+                            <input type="radio" name="quiz_frequency" value="Несколько раз в год" class="quiz__option-input hidden" hidden>
+                            <span class="quiz__option-card">
+                                <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
+                                <span class="quiz__option-text">Несколько раз в&nbsp;год</span>
+                            </span>
+                        </label>
+                        <label class="quiz__option">
+                            <input type="radio" name="quiz_frequency" value="Раз в месяц" class="quiz__option-input hidden" hidden>
+                            <span class="quiz__option-card">
+                                <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
+                                <span class="quiz__option-text">Раз в&nbsp;месяц</span>
+                            </span>
+                        </label>
+                        <label class="quiz__option">
+                            <input type="radio" name="quiz_frequency" value="Регулярно" class="quiz__option-input hidden" hidden>
+                            <span class="quiz__option-card">
+                                <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
+                                <span class="quiz__option-text">Регулярно</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="quiz__step" data-quiz-step="success">
+                    <h2 class="quiz__title">Вы прошли тест</h2>
+                    <p class="quiz__subtitle">Оставьте контакты — мы отправим персональную подборку программ</p>
+                    <p class="quiz__desc">Мы подготовим персональный список программ и&nbsp;начислим 1000 приветственных баллов</p>
+                    <form action="#" class="quiz__form">
+                        <input type="hidden" name="quiz_goal_result" value="">
+                        <input type="hidden" name="quiz_duration_result" value="">
+                        <input type="hidden" name="quiz_format_result" value="">
+                        <input type="hidden" name="quiz_frequency_result" value="">
+                        <div class="quiz__form-fields">
+                            <input type="text" name="name" class="input" placeholder="Ваше имя" required>
+                            <input type="tel" name="phone" class="input" placeholder="Номер телефона для связи" required>
+                            <input type="email" name="email" class="input" placeholder="Email (необязательно)">
+                        </div>
+                        <button type="submit" class="quiz__submit btn btn-primary">Получить рекомендации</button>
+                    </form>
+                </div>
+
+                <div class="quiz__progress-wrap">
+                    <progress class="quiz__progress" value="0" max="4"></progress>
+                </div>
+            </div>
+
+            <aside class="quiz__aside">
+                <div class="quiz__aside-image">
+                    <img src="img/quiz-aside.jpg" class="cover-image" alt="">
+                </div>
+                <div class="quiz__aside-note" data-quiz-note="default">Прохождения теста вас ни&nbsp;к&nbsp;чему не&nbsp;обязывает</div>
+                <div class="quiz__aside-note" data-quiz-note="gift">После прохождения квиза, вас ждет подарок от Asia&nbsp;Beauty&nbsp;Spa</div>
+                <div class="quiz__nav">
+                    <button type="button" class="quiz__nav-btn icon-prev" data-quiz-prev aria-label="Назад" aria-disabled="true" disabled></button>
+                    <button type="button" class="quiz__nav-btn icon-next" data-quiz-next aria-label="Далее" aria-disabled="true" disabled></button>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+                <section class="apartments-programs" id="specialoffer-programs">
                     <div class="container">
-                        <ul class="benefits__list">
-                            <li class="benefits__item">
-                                <div class="benefits__item-icon">
-                                    <svg data-animate="quadrant-shift" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <rect class="q-1" x="0" y="0" width="15" height="15" fill="#720806" />
-                                    </svg>
-                                </div>
-                                <div class="benefits__item-title text-uppercase text-medium">
-                                    Зона <br> SPA-релаксации
-                                </div>
+                        <h2 class="apartments-programs__title title">Программы спа для двоих</h2>
+                        <ul class="apartments-programs__list">
+                            <li class="apartments-programs__item">
+                                <article class="program-card">
+                                    <a href="service.html" class="program-card__image">
+                                        <img src="img/goods/in-unison.jpg" class="cover-image" alt="«В унисон»">
+                                        <span class="program-card__name">В унисон</span>
+                                    </a>
+                                    <div class="program-card__includes">
+                                        <p class="program-card__includes-title">Включает:</p>
+                                        <ul class="program-card__includes-list">
+                                            <li>Теплое масло</li>
+                                            <li>Массаж</li>
+                                            <li>Массаж стоп</li>
+                                            <li>Комплимент от шефа</li>
+                                        </ul>
+                                    </div>
+                                    <div class="program-card__meta">
+                                        <span class="program-card__price">58 000 ₽</span>
+                                        <span class="program-card__time icon-clock">90 мин</span>
+                                    </div>
+                                    <div class="program-card__footer">
+                                        <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="program-card__btn btn btn-lg">Забронировать</a>
+                                        <a href="service.html" class="program-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
+                                    </div>
+                                </article>
                             </li>
-                            <li class="benefits__item">
-                                <div class="benefits__item-icon">
-                                    <svg data-animate="quadrant-shift" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <rect class="q-1" x="0" y="0" width="15" height="15" fill="#720806" />
-                                        <rect class="q-2" x="19" y="0" width="15" height="15" fill="#720806" />
-                                    </svg>
-                                </div>
-                                <div class="benefits__item-title text-uppercase text-medium">
-                                    Хаммам, джакузи, <br> бассейны, бани, сауны
-                                </div>
+                            <li class="apartments-programs__item">
+                                <article class="program-card">
+                                    <a href="service.html" class="program-card__image">
+                                        <img src="img/goods/anahata.jpg" class="cover-image" alt="Анахата">
+                                        <span class="program-card__name">Анахата</span>
+                                    </a>
+                                    <div class="program-card__includes">
+                                        <p class="program-card__includes-title">Включает:</p>
+                                        <ul class="program-card__includes-list">
+                                            <li>Теплое масло</li>
+                                            <li>Массаж</li>
+                                            <li>Массаж стоп</li>
+                                            <li>Комплимент от шефа</li>
+                                        </ul>
+                                    </div>
+                                    <div class="program-card__meta">
+                                        <span class="program-card__price">58 000 ₽</span>
+                                        <span class="program-card__time icon-clock">90 мин</span>
+                                    </div>
+                                    <div class="program-card__footer">
+                                        <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="program-card__btn btn btn-lg">Забронировать</a>
+                                        <a href="service.html" class="program-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
+                                    </div>
+                                </article>
                             </li>
-                            <li class="benefits__item">
-                                <div class="benefits__item-icon">
-                                    <svg data-animate="quadrant-shift" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <rect class="q-1" x="0" y="0" width="15" height="15" fill="#720806" />
-                                        <rect class="q-2" x="19" y="0" width="15" height="15" fill="#720806" />
-                                        <rect class="q-3" x="0" y="19" width="15" height="15" fill="#720806" />
-                                    </svg>
-                                </div>
-                                <div class="benefits__item-title text-uppercase text-medium">
-                                    Тайские, китайские, <br> европейские массажи
-                                </div>
+                            <li class="apartments-programs__item">
+                                <article class="program-card">
+                                    <a href="service.html" class="program-card__image">
+                                        <img src="img/goods/ancient-tibet.jpg" class="cover-image" alt="Древний Тибет">
+                                        <span class="program-card__name">Древний Тибет</span>
+                                    </a>
+                                    <div class="program-card__includes">
+                                        <p class="program-card__includes-title">Включает:</p>
+                                        <ul class="program-card__includes-list">
+                                            <li>Теплое масло</li>
+                                            <li>Массаж</li>
+                                            <li>Массаж стоп</li>
+                                            <li>Комплимент от шефа</li>
+                                        </ul>
+                                    </div>
+                                    <div class="program-card__meta">
+                                        <span class="program-card__price">58 000 ₽</span>
+                                        <span class="program-card__time icon-clock">90 мин</span>
+                                    </div>
+                                    <div class="program-card__footer">
+                                        <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="program-card__btn btn btn-lg">Забронировать</a>
+                                        <a href="service.html" class="program-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
+                                    </div>
+                                </article>
                             </li>
-                            <li class="benefits__item">
-                                <div class="benefits__item-icon">
-                                    <svg data-animate="quadrant-shift" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <rect class="q-1" x="0" y="0" width="15" height="15" fill="#720806" />
-                                        <rect class="q-2" x="19" y="0" width="15" height="15" fill="#720806" />
-                                        <rect class="q-3" x="0" y="19" width="15" height="15" fill="#720806" />
-                                        <rect class="q-4" x="19" y="19" width="15" height="15" fill="#720806" />
-                                    </svg>
-                                </div>
-                                <div class="benefits__item-title text-uppercase text-medium">
-                                    Отдельные Luxury <br> апартаменты
-                                </div>
+                            <li class="apartments-programs__item">
+                                <article class="program-card">
+                                    <a href="place.html" class="program-card__image">
+                                        <img src="img/apartaments/01-service.jpg" class="cover-image" alt="Индивидуальное пространство на Маяковской">
+                                        <span class="program-card__name">Индивидуальное<br> пространство на<br> Маяковской</span>
+                                    </a>
+                                    <div class="program-card__includes">
+                                        <p class="program-card__includes-title">Включает:</p>
+                                        <ul class="program-card__includes-list">
+                                            <li>Теплое масло</li>
+                                            <li>Массаж</li>
+                                            <li>Массаж стоп</li>
+                                            <li>Комплимент от шефа</li>
+                                        </ul>
+                                    </div>
+                                    <div class="program-card__meta">
+                                        <span class="program-card__price">58 000 ₽</span>
+                                        <span class="program-card__time icon-clock">90 мин</span>
+                                    </div>
+                                    <div class="program-card__footer">
+                                        <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="program-card__btn btn btn-lg">Забронировать</a>
+                                        <a href="place.html" class="program-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
+                                    </div>
+                                </article>
                             </li>
                         </ul>
-                        <a href="" class="benefits__more btn btn-primary btn-lg">Забронировать</a>
-                    </div>
-                </div>
-                <section class="catalog">
-                    <div class="container container-lg">
-                        <div class="catalog__content">
-                            <h2 class="catalog__title title text-center">SPA-программы <br> для двоих</h2>
-                            <div class="catalog__carousel swiper">
-                                <ul class="swiper-wrapper">
-                                    
-<li class="swiper-slide">
-    
-
-    <div class="product-card" id="jumu_lanmar_spa_for_two" data-animate="card">
-        
-        <div class="product-card__image">
-            <a href="service.html" class="product-card__image-link">
-                <img src="img/goods/jumu-lanmar.jpg" class="cover-image" alt="«Джуму Ланмар» / спа-программа для двоих">
-            </a>
-            
-        </div>
-        
-        
-        <div class="product-card__header">
-            
-            <a href="service.html" class="product-card__name">«Джуму Ланмар» / спа-программа для двоих</a>
-             
-                
-            
-            
-        </div>
-        <div class="product-card__body">
-            
-            
-            <div class="product-card__meta">
-                <div class="product-card__details">
-                    
-                    <span class="product-card__price">36 500 Р</span>
-                    
-                    
-                    
-                    
-                    <span class="product-card__time">
-                        <span class="product-card__time-icon icon-clock" aria-hidden="true"></span>
-                        <span class="product-card__time-value">120 min</span>
-                    </span>
-                    
-                </div>
-                
-                <button type="button" class="product-card__favorite favorite-btn icon-heart" aria-label="Добавить в избранное"></button>
-                
-            </div>
-            
-            <div class="product-card__footer">
-                
-                
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
-                
-                <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
-            </div>
-        </div>
-    </div>
-
-    
-</li>
-
-
-<li class="swiper-slide">
-    
-
-    <div class="product-card" id="anahata_spa_for_two" data-animate="card">
-        
-        <div class="product-card__image">
-            <a href="service.html" class="product-card__image-link">
-                <img src="img/goods/anahata.jpg" class="cover-image" alt="Анахата / спа-программа для двоих">
-            </a>
-            
-        </div>
-        
-        
-        <div class="product-card__header">
-            
-            <a href="service.html" class="product-card__name">Анахата / спа-программа для двоих</a>
-             
-                
-            
-            
-        </div>
-        <div class="product-card__body">
-            
-            
-            <div class="product-card__meta">
-                <div class="product-card__details">
-                    
-                    <span class="product-card__price">38 000 Р</span>
-                    
-                    
-                    
-                    
-                    <span class="product-card__time">
-                        <span class="product-card__time-icon icon-clock" aria-hidden="true"></span>
-                        <span class="product-card__time-value">120 min</span>
-                    </span>
-                    
-                </div>
-                
-                <button type="button" class="product-card__favorite favorite-btn icon-heart" aria-label="Добавить в избранное"></button>
-                
-            </div>
-            
-            <div class="product-card__footer">
-                
-                
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
-                
-                <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
-            </div>
-        </div>
-    </div>
-
-    
-</li>
-
-
-<li class="swiper-slide">
-    
-
-    <div class="product-card" id="in_unison_spa_for_two" data-animate="card">
-        
-        <div class="product-card__image">
-            <a href="service.html" class="product-card__image-link">
-                <img src="img/goods/in-unison.jpg" class="cover-image" alt="«В унисон» / спа-программа для двоих">
-            </a>
-            
-        </div>
-        
-        
-        <div class="product-card__header">
-            
-            <a href="service.html" class="product-card__name">«В унисон» / спа-программа для двоих</a>
-             
-                
-            
-            
-        </div>
-        <div class="product-card__body">
-            
-            
-            <div class="product-card__meta">
-                <div class="product-card__details">
-                    
-                    <span class="product-card__price">32 500 Р</span>
-                    
-                    
-                    
-                    
-                    <span class="product-card__time">
-                        <span class="product-card__time-icon icon-clock" aria-hidden="true"></span>
-                        <span class="product-card__time-value">90 min</span>
-                    </span>
-                    
-                </div>
-                
-                <button type="button" class="product-card__favorite favorite-btn icon-heart" aria-label="Добавить в избранное"></button>
-                
-            </div>
-            
-            <div class="product-card__footer">
-                
-                
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
-                
-                <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
-            </div>
-        </div>
-    </div>
-
-    
-</li>
-
-
-                                </ul>
-                            </div>
-                        </div>
                     </div>
                 </section>
-                <div class="about">
+
+                <section class="apartments-programs apartments-programs--spaces" id="specialoffer-apartments">
                     <div class="container">
-                        <div class="about__block">
-                            <div class="about__body" data-animate="section">
-                                <div class="about__desc">
-                                    <p data-animate="text">Мечтаете вдвоём со своей второй половинкой очутиться на берегу океана хотя бы на день? Тогда курорт Asia Beauty Spa - идеальное место для романтического спа для двоих!</p>
-                                    <p data-animate="text">В нашем spa-меню много строчек занимают заготовленные программы для влюблённых, в которых шаг за шагом прописано, что вас и вашего любимого человека будет ожидать во время сеанса.</p>
-                                    <p data-animate="text">Если хотите сделать свидание авторским, можете «сконструировать» его сами из любых процедур и массажей меню. Наши мастера из Тайланда, Китая и с Бали подарят вам море релакса и наслаждения.</p>
-                                    <p data-animate="text">Процедуры для двоих могут проходить в разных акватермальных зонах. А также у вас есть возможность уединиться в роскошных VIP-апартаментах. Мы украсим для вас номер композициями из лепестков роз. И прямо сюда можно будет заказать шампанское и любимые блюда из культового ресторана ТАН.</p>
-                                    <p data-animate="text">Пригласите любимого человека на свидание в Asia Beauty Spa и освежите чувства в атмосфере релакса и роскоши.</p>
-                                </div>
-                                <div class="about__slider swiper" data-animate="photo">
-                                    <div class="swiper-wrapper">
-                                        <div class="about__slide swiper-slide">
-                                            <img src="img/about/06.jpg" class="cover-image" alt="Фото">
-                                        </div>
-                                        <div class="about__slide swiper-slide">
-                                            <img src="img/about/01.jpg" class="cover-image" alt="Фото">
-                                        </div>
-                                        <div class="about__slide swiper-slide">
-                                            <img src="img/about/02.jpg" class="cover-image" alt="Фото">
-                                        </div>
-                                        <div class="about__slide swiper-slide">
-                                            <img src="img/about/03.jpg" class="cover-image" alt="Фото">
-                                        </div>
+                        <h2 class="apartments-programs__title title">Программы спа для двоих в&nbsp;индивидуальных пространствах</h2>
+                        <ul class="apartments-programs__list">
+                            <li class="apartments-programs__item">
+                                <article class="program-card">
+                                    <a href="service.html" class="program-card__image">
+                                        <img src="img/goods/in-unison.jpg" class="cover-image" alt="«В унисон»">
+                                        <span class="program-card__name">В унисон</span>
+                                    </a>
+                                    <div class="program-card__includes">
+                                        <p class="program-card__includes-title">Включает:</p>
+                                        <ul class="program-card__includes-list">
+                                            <li>Теплое масло</li>
+                                            <li>Массаж</li>
+                                            <li>Массаж стоп</li>
+                                            <li>Комплимент от шефа</li>
+                                        </ul>
                                     </div>
-                                    <div class="about__slider-pagination swiper-pagination"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <section class="catalog">
-                    <div class="container container-lg">
-                        <div class="catalog__content">
-                            <h2 class="catalog__title title text-center">SPA-программы для двоих в <br> аппартаментах</h2>
-                            <p class="catalog__description text-center">
-                                В Asia Beauty Spa есть 8 готовых романтических программ для вас и вашей половинки! 
-                                А также вы можете самостоятельно спланировать свидание, выбрав любые процедуры из нашего спа-меню. Мы скомпонуем их так, чтобы на термометре удовольствия температура зашкаливала!
-                                Воспользуйтесь помощью наших специалистов 
-                                по телефону:   +7(495) 021 58 09
-                            </p>
-                            <div class="catalog__carousel swiper">
-                                <ul class="swiper-wrapper">
-                                    
-<li class="swiper-slide">
-    
-
-    <div class="product-card" id="sixth_sense_spa_program" data-animate="card">
-        
-        <div class="product-card__image">
-            <a href="service.html" class="product-card__image-link">
-                <img src="img/goods/sixth-sense.jpg" class="cover-image" alt="«Шестое чувство» / спа-программа">
-            </a>
-            
-        </div>
-        
-        
-        <div class="product-card__header">
-            
-            <a href="service.html" class="product-card__name">«Шестое чувство» / спа-программа</a>
-             
-                
-            
-            
-        </div>
-        <div class="product-card__body">
-            
-            
-            <div class="product-card__meta">
-                <div class="product-card__details">
-                    
-                    <span class="product-card__price">55 500 Р</span>
-                    
-                    
-                    
-                    
-                    <span class="product-card__time">
-                        <span class="product-card__time-icon icon-clock" aria-hidden="true"></span>
-                        <span class="product-card__time-value">120 min</span>
-                    </span>
-                    
-                </div>
-                
-                <button type="button" class="product-card__favorite favorite-btn icon-heart" aria-label="Добавить в избранное"></button>
-                
-            </div>
-            
-            <div class="product-card__footer">
-                
-                
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
-                
-                <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
-            </div>
-        </div>
-    </div>
-
-    
-</li>
-
-
-<li class="swiper-slide">
-    
-
-    <div class="product-card" id="ancient_tibet_spa_program" data-animate="card">
-        
-        <div class="product-card__image">
-            <a href="service.html" class="product-card__image-link">
-                <img src="img/goods/ancient-tibet.jpg" class="cover-image" alt="«Древний тибет» / спа-программа">
-            </a>
-            
-        </div>
-        
-        
-        <div class="product-card__header">
-            
-            <a href="service.html" class="product-card__name">«Древний тибет» / спа-программа</a>
-             
-                
-            
-            
-        </div>
-        <div class="product-card__body">
-            
-            
-            <div class="product-card__meta">
-                <div class="product-card__details">
-                    
-                    <span class="product-card__price">55 500 Р</span>
-                    
-                    
-                    
-                    
-                    <span class="product-card__time">
-                        <span class="product-card__time-icon icon-clock" aria-hidden="true"></span>
-                        <span class="product-card__time-value">120 min</span>
-                    </span>
-                    
-                </div>
-                
-                <button type="button" class="product-card__favorite favorite-btn icon-heart" aria-label="Добавить в избранное"></button>
-                
-            </div>
-            
-            <div class="product-card__footer">
-                
-                
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
-                
-                <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
-            </div>
-        </div>
-    </div>
-
-    
-</li>
-
-
-<li class="swiper-slide">
-    
-
-    <div class="product-card" id="love_spa_for_two" data-animate="card">
-        
-        <div class="product-card__image">
-            <a href="service.html" class="product-card__image-link">
-                <img src="img/goods/love-spa.jpg" class="cover-image" alt="Love & спа-программа для двоих">
-            </a>
-            
-        </div>
-        
-        
-        <div class="product-card__header">
-            
-            <a href="service.html" class="product-card__name">Love & спа-программа для двоих</a>
-             
-                
-            
-            
-        </div>
-        <div class="product-card__body">
-            
-            
-            <div class="product-card__meta">
-                <div class="product-card__details">
-                    
-                    <span class="product-card__price">55 500 Р</span>
-                    
-                    
-                    
-                    
-                    <span class="product-card__time">
-                        <span class="product-card__time-icon icon-clock" aria-hidden="true"></span>
-                        <span class="product-card__time-value">120 min</span>
-                    </span>
-                    
-                </div>
-                
-                <button type="button" class="product-card__favorite favorite-btn icon-heart" aria-label="Добавить в избранное"></button>
-                
-            </div>
-            
-            <div class="product-card__footer">
-                
-                
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
-                
-                <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
-            </div>
-        </div>
-    </div>
-
-    
-</li>
-
-
-                                </ul>
-                            </div>
-                        </div>
+                                    <div class="program-card__meta">
+                                        <span class="program-card__price">58 000 ₽</span>
+                                        <span class="program-card__time icon-clock">90 мин</span>
+                                    </div>
+                                    <div class="program-card__footer">
+                                        <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="program-card__btn btn btn-lg">Забронировать</a>
+                                        <a href="service.html" class="program-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
+                                    </div>
+                                </article>
+                            </li>
+                            <li class="apartments-programs__item">
+                                <article class="program-card">
+                                    <a href="service.html" class="program-card__image">
+                                        <img src="img/goods/anahata.jpg" class="cover-image" alt="Анахата">
+                                        <span class="program-card__name">Анахата</span>
+                                    </a>
+                                    <div class="program-card__includes">
+                                        <p class="program-card__includes-title">Включает:</p>
+                                        <ul class="program-card__includes-list">
+                                            <li>Теплое масло</li>
+                                            <li>Массаж</li>
+                                            <li>Массаж стоп</li>
+                                            <li>Комплимент от шефа</li>
+                                        </ul>
+                                    </div>
+                                    <div class="program-card__meta">
+                                        <span class="program-card__price">58 000 ₽</span>
+                                        <span class="program-card__time icon-clock">90 мин</span>
+                                    </div>
+                                    <div class="program-card__footer">
+                                        <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="program-card__btn btn btn-lg">Забронировать</a>
+                                        <a href="service.html" class="program-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
+                                    </div>
+                                </article>
+                            </li>
+                            <li class="apartments-programs__item">
+                                <article class="program-card">
+                                    <a href="service.html" class="program-card__image">
+                                        <img src="img/goods/ancient-tibet.jpg" class="cover-image" alt="Древний Тибет">
+                                        <span class="program-card__name">Древний Тибет</span>
+                                    </a>
+                                    <div class="program-card__includes">
+                                        <p class="program-card__includes-title">Включает:</p>
+                                        <ul class="program-card__includes-list">
+                                            <li>Теплое масло</li>
+                                            <li>Массаж</li>
+                                            <li>Массаж стоп</li>
+                                            <li>Комплимент от шефа</li>
+                                        </ul>
+                                    </div>
+                                    <div class="program-card__meta">
+                                        <span class="program-card__price">58 000 ₽</span>
+                                        <span class="program-card__time icon-clock">90 мин</span>
+                                    </div>
+                                    <div class="program-card__footer">
+                                        <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="program-card__btn btn btn-lg">Забронировать</a>
+                                        <a href="service.html" class="program-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
+                                    </div>
+                                </article>
+                            </li>
+                        </ul>
                     </div>
                 </section>
-                <div class="gallery">
-                    <div class="container">
-                        <div class="gallery__items">
-                            <a href="img/special/01.jpg" data-fancybox="gallery" class="gallery__item">
-                                <img src="img/special/01.jpg" class="cover-image" alt="Галлерея">
-                            </a>
-                            <a href="img/special/02.jpg" data-fancybox="gallery" class="gallery__item">
-                                <img src="img/special/02.jpg" class="cover-image" alt="Галлерея">
-                            </a>
-                            <a href="img/special/03.jpg" data-fancybox="gallery" class="gallery__item">
-                                <img src="img/special/03.jpg" class="cover-image" alt="Галлерея">
-                            </a>
-                            <a href="img/special/04.jpg" data-fancybox="gallery" class="gallery__item gallery__item--large">
-                                <img src="img/special/04.jpg" class="cover-image" alt="Галлерея">
-                            </a>
-                        </div>
+
+                <section class="gift">
+    <div class="container container-lg">
+        <div class="gift__content">
+            <div class="gift__body">
+                <h2 class="gift__title">Идеальный подарок для&nbsp;близких</h2>
+                
+                <a href="certs.html" class="gift__btn btn btn-white btn-lg">Приобрести сертификат</a>
+            </div>
+            <div class="gift__image">
+                <img src="img/gift.jpg" class="cover-image" alt="Фото сертификата">
+            </div>
+        </div>
+    </div>
+</section>
+                <section class="places">
+    <div class="container">
+        <h2 class="places__caption title">наши локации</h2>
+        <div class="places__slider swiper">
+            <div class="swiper-wrapper">
+                <div class="places__location swiper-slide icon-location">
+                    <div class="places__location-content">
+                        <div class="places__location-name">Asia Beauty Spa Смоленская</div>
+                        <address class="places__location-address">Москва, Смоленская, 8</address>
+                        <div class="places__location-metro">м. Смоленская</div>
+                        <a href="tel:+74950238886" class="places__location-phone">+7 (495) 023-88-86</a>
+                        <a href="https://yandex.ru/maps/?rtext=~55.746233,37.5804&rtt=auto" class="places__location-route" target="_blank" rel="noopener noreferrer">Проложить маршрут</a>
                     </div>
                 </div>
+                <div class="places__location swiper-slide icon-location">
+                    <div class="places__location-content">
+                        <div class="places__location-name">Asia Beauty Spa Киевская</div>
+                        <address class="places__location-address">Площадь Евразии, 2</address>
+                        <div class="places__location-metro">м. Киевская</div>
+                        <a href="tel:+74950238882" class="places__location-phone">+7 (495) 023-88-82</a>
+                        <a href="https://yandex.ru/maps/?rtext=~55.741804,37.567779&rtt=auto" class="places__location-route" target="_blank" rel="noopener noreferrer">Проложить маршрут</a>
+                    </div>
+                </div>
+                <div class="places__location swiper-slide icon-location">
+                    <div class="places__location-content">
+                        <div class="places__location-name">Asia Beauty Spa Сити</div>
+                        <address class="places__location-address">Москва, Пресненская наб., 2</address>
+                        <div class="places__location-metro">м. Москва-Сити</div>
+                        <a href="tel:+74950238883" class="places__location-phone">+7 (495) 023-88-83</a>
+                        <a href="https://yandex.ru/maps/?rtext=~55.749299,37.539644&rtt=auto" class="places__location-route" target="_blank" rel="noopener noreferrer">Проложить маршрут</a>
+                    </div>
+                </div>
+                <div class="places__location swiper-slide icon-location">
+                    <div class="places__location-content">
+                        <div class="places__location-name">Asia Beauty Spa Полянка</div>
+                        <address class="places__location-address">Москва, Погорельский пер., 6</address>
+                        <div class="places__location-metro">м. Полянка</div>
+                        <a href="tel:+74950238884" class="places__location-phone">+7 (495) 023-88-84</a>
+                        <a href="https://yandex.ru/maps/?rtext=~55.732839,37.622306&rtt=auto" class="places__location-route" target="_blank" rel="noopener noreferrer">Проложить маршрут</a>
+                    </div>
+                </div>
+                <div class="places__location swiper-slide icon-location">
+                    <div class="places__location-content">
+                        <div class="places__location-name">Asia Beauty Spa Маяковская</div>
+                        <address class="places__location-address">Москва, Оружейный пер., 13/1</address>
+                        <div class="places__location-metro">м. Маяковская</div>
+                        <a href="tel:+74950238881" class="places__location-phone">+7 (495) 023-88-81</a>
+                        <a href="https://yandex.ru/maps/?rtext=~55.771773,37.599543&rtt=auto" class="places__location-route" target="_blank" rel="noopener noreferrer">Проложить маршрут</a>
+                    </div>
+                </div>
+                <div class="places__location swiper-slide icon-location">
+                    <div class="places__location-content">
+                        <div class="places__location-name">Asia Beauty Spa Сочи</div>
+                        <address class="places__location-address">Сочи, Орджоникидзе, 11 А 16 этаж, отель Pullman</address>
+                        <a href="tel:+74950217659" class="places__location-phone">+7 (495) 021-76-59</a>
+                        <a href="https://yandex.ru/maps/?rtext=~43.578556,39.722882&rtt=auto" class="places__location-route" target="_blank" rel="noopener noreferrer">Проложить маршрут</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
             </main>
             <footer class="footer">
     <div class="container container-lg">
