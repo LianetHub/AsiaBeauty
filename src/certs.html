@@ -9,74 +9,167 @@
             "active": "3"
             })
             <main class="page">
-                <section class="heading">
-                    <div class="container container-lg">
-                        <nav aria-label="Хлебные крошки" class="breadcrumbs">
-                            <ul class="breadcrumbs__items">
-                                <li class="breadcrumbs__item">
-                                    <a href="index.html" class="breadcrumbs__link">Главная</a>
-                                </li>
-                                <li class="breadcrumbs__item">
-                                    <span class="breadcrumbs__link active">Сертификаты</span>
-                                </li>
-                            </ul>
-                        </nav>
-                        <h1 class="heading__title title-lg">
-                            <span>ПОДАРОЧНЫЕ</span>
-                            <span>СЕРТИФИКАТЫ</span>
-                            <span class="color-red">ASIA BEAUTY SPA</span>
-                        </h1>
+                @@include('./html/_hero.html', {
+                "modifier": " hero--certs",
+                "bannerLarge": false,
+                "title": "ПОДАРОЧНЫЕ&nbsp;СЕРТИФИКАТЫ Asia beuty spa",
+                "bgImage": "@img/hero.jpg"
+                })
+                <div class="benefits benefits--no-border">
+                    <div class="container">
+                        <ul class="benefits__list">
+                            <li>действует 12 месяцев</li>
+                            <li>можно забрать в&nbsp;салоне или оформить доставку</li>
+                            <li>без скрытых <br> условий</li>
+                            <li>действует обмен <br> и&nbsp;возврат</li>
+                        </ul>
                     </div>
-                </section>
-                <section class="banner">
-                    <div class="banner__wrapper">
-                        <div class="banner__offer text-center">
-                            <h2 class="banner__title text-medium text-uppercase">Cертификаты на расслабляющие <br> spa-программы</h2>
-                            <p class="banner__description banner__description--desktop">Позаботьтесь о своих близких и подарите им сертификат на услуги в Asia Beauty Spa</p>
-                            <a href="" class="banner__btn btn btn-white btn-lg">Заказать сертификат</a>
-                        </div>
-                        <video class="banner__video" muted loop playsinline autoplay="true" preload="metadata" poster="@img/certs-video-poster.jpg">
-                            <source src="./files/certs-video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-                        </video>
-                    </div>
-                    <div class="banner__description banner__description--mobile">Позаботьтесь о своих близких и подарите им сертификат на услуги в Asia Beauty Spa</div>
-                </section>
+                </div>
                 <section class="certs">
                     <div class="container">
-                        <div class="section-header">
-                            <div class="section-header__caption caption">Сертификаты</div>
-                        </div>
                         @@include('./html/_certs.html')
-
-                        <div class="faq__list" data-spollers data-one-spoller>
-                            <div class="faq__item">
-                                <div data-spoller class="faq__question icon-chevron-down _active">Какой срок действия подарочной карты?</div>
-                                <div class="faq__answer">Оба вида подарочной карты одинаково удобны в использовании и дают возможность совершать покупки в ASIA BEAUTY SPA как онлайн, так и оффлайн. Виртуальная подарочная карта будет доставлена на e-mail сразу же после оформления — ею будет можно воспользоваться мгновенно. Пластиковая карта — элегантный физический носитель в фирменной упаковке, который приятно вручить лично.</div>
-                            </div>
-                            <div class="faq__item">
-                                <div data-spoller class="faq__question icon-chevron-down">Как узнать баланс подарочной карты?</div>
-                                <div class="faq__answer">После оплаты сертификата на сайте Вам на почту в течение суток придет письмо с номером подарочной карты. Или свяжитесь с нами по номеру телефона <br> +7 (495) 021 76 59</div>
-                            </div>
-                            <div class="faq__item">
-                                <div data-spoller class="faq__question icon-chevron-down">Какую карту выбрать виртуальную или пластиковую?</div>
-                                <div class="faq__answer">Оба вида подарочной карты одинаково удобны в использовании и дают возможность совершать покупки в ASIA BEAUTY SPA как онлайн, так и оффлайн. Виртуальная подарочная карта будет доставлена на e-mail сразу же после оформления — ею будет можно воспользоваться мгновенно. Пластиковая карта — элегантный физический носитель в фирменной упаковке, который приятно вручить лично.</div>
-                            </div>
-                        </div>
                     </div>
                 </section>
-                @@include('./html/_gift.html', {
-                "title": "Идеальный подарок для близких",
-                "titleClass": "title",
-                "subtitle": "Вы можете приобрести сертификат на нашем сайте или в нашем салоне. В каталоге есть множество программ, включая массажи, уход за лицом и телом, а также расслабляющие спа-процедуры",
-                "btnText": "Купить",
-                "btnHref": "certs.html",
-                "image": "@img/gift.jpg",
-                "imageAlt": "Фото сертификата"
-                })
-                @@include('./html/_benefits.html')
+                <section class="certs-occasions">
+                    <div class="container">
+                        <h2 class="certs-occasions__title title">поводы для подарка</h2>
+                        <ul class="certs-occasions__list">
+                            <li class="certs-occasions__item">
+                                <span class="certs-occasions__icon" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M14 8C14 7.46957 13.7893 6.96086 13.4142 6.58579C13.0391 6.21071 12.5304 6 12 6" stroke="#290F0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M12 17C15.314 17 18 12.97 18 8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8C6 12.97 8.686 17 12 17ZM12 17V18C12 18.5304 11.7893 19.0391 11.4142 19.4142C11.0391 19.7893 10.5304 20 10 20H7C6.46957 20 5.96086 20.2107 5.58579 20.5858C5.21071 20.9609 5 21.4696 5 22" stroke="#290F0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                <span class="certs-occasions__name">день рождения</span>
+                            </li>
+                            <li class="certs-occasions__item">
+                                <span class="certs-occasions__icon" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M14 8C14 7.46957 13.7893 6.96086 13.4142 6.58579C13.0391 6.21071 12.5304 6 12 6" stroke="#290F0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M12 17C15.314 17 18 12.97 18 8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8C6 12.97 8.686 17 12 17ZM12 17V18C12 18.5304 11.7893 19.0391 11.4142 19.4142C11.0391 19.7893 10.5304 20 10 20H7C6.46957 20 5.96086 20.2107 5.58579 20.5858C5.21071 20.9609 5 21.4696 5 22" stroke="#290F0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                <span class="certs-occasions__name">годовщина</span>
+                            </li>
+                            <li class="certs-occasions__item">
+                                <span class="certs-occasions__icon" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M14 8C14 7.46957 13.7893 6.96086 13.4142 6.58579C13.0391 6.21071 12.5304 6 12 6" stroke="#290F0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M12 17C15.314 17 18 12.97 18 8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8C6 12.97 8.686 17 12 17ZM12 17V18C12 18.5304 11.7893 19.0391 11.4142 19.4142C11.0391 19.7893 10.5304 20 10 20H7C6.46957 20 5.96086 20.2107 5.58579 20.5858C5.21071 20.9609 5 21.4696 5 22" stroke="#290F0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                <span class="certs-occasions__name">8 марта</span>
+                            </li>
+                            <li class="certs-occasions__item">
+                                <span class="certs-occasions__icon" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M14 8C14 7.46957 13.7893 6.96086 13.4142 6.58579C13.0391 6.21071 12.5304 6 12 6" stroke="#290F0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M12 17C15.314 17 18 12.97 18 8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8C6 12.97 8.686 17 12 17ZM12 17V18C12 18.5304 11.7893 19.0391 11.4142 19.4142C11.0391 19.7893 10.5304 20 10 20H7C6.46957 20 5.96086 20.2107 5.58579 20.5858C5.21071 20.9609 5 21.4696 5 22" stroke="#290F0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                <span class="certs-occasions__name">новый год</span>
+                            </li>
+                            <li class="certs-occasions__item">
+                                <span class="certs-occasions__icon" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M14 8C14 7.46957 13.7893 6.96086 13.4142 6.58579C13.0391 6.21071 12.5304 6 12 6" stroke="#290F0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M12 17C15.314 17 18 12.97 18 8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8C6 12.97 8.686 17 12 17ZM12 17V18C12 18.5304 11.7893 19.0391 11.4142 19.4142C11.0391 19.7893 10.5304 20 10 20H7C6.46957 20 5.96086 20.2107 5.58579 20.5858C5.21071 20.9609 5 21.4696 5 22" stroke="#290F0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                <span class="certs-occasions__name">благодарность</span>
+                            </li>
+                            <li class="certs-occasions__item">
+                                <span class="certs-occasions__icon" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M14 8C14 7.46957 13.7893 6.96086 13.4142 6.58579C13.0391 6.21071 12.5304 6 12 6" stroke="#290F0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M12 17C15.314 17 18 12.97 18 8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8C6 12.97 8.686 17 12 17ZM12 17V18C12 18.5304 11.7893 19.0391 11.4142 19.4142C11.0391 19.7893 10.5304 20 10 20H7C6.46957 20 5.96086 20.2107 5.58579 20.5858C5.21071 20.9609 5 21.4696 5 22" stroke="#290F0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                <span class="certs-occasions__name">без повода</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="certs-popular">
+                    <div class="container">
+                        <h2 class="certs-popular__title title">популярные сертификаты</h2>
+                        <ul class="certs-popular__list">
+                            <li class="certs-popular__item">
+                                <div class="certs-popular__image">
+                                    <img src="@img/certs/01.jpg" class="cover-image" alt="Сертификат для двоих «В унисон»">
+                                    <span class="certs-popular__label">СЕРТИФИКАТ для двоих<br>«В УНИСОН»</span>
+                                    <span class="certs-popular__price">39 500 ₽</span>
+                                    <button type="button" class="certs-popular__favorite favorite-btn icon-heart" aria-label="Добавить в избранное"></button>
+                                </div>
+                                <div class="certs-popular__actions">
+                                    <a href="#" class="certs-popular__btn btn btn-brown">купить</a>
+                                    <a href="#" class="certs-popular__arrow" aria-label="Подробнее">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="8" viewBox="0 0 19 8" fill="none" aria-hidden="true">
+                                            <path d="M0 4H17" stroke="#290F0A" stroke-width="1.5" stroke-linecap="round" />
+                                            <path d="M13 1L17 4L13 7" stroke="#290F0A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="certs-popular__item">
+                                <div class="certs-popular__image">
+                                    <img src="@img/certs/02.jpg" class="cover-image" alt="Сертификат для двоих «В унисон»">
+                                    <span class="certs-popular__label">СЕРТИФИКАТ для двоих<br>«В УНИСОН»</span>
+                                    <span class="certs-popular__price">39 500 ₽</span>
+                                    <button type="button" class="certs-popular__favorite favorite-btn icon-heart" aria-label="Добавить в избранное"></button>
+                                </div>
+                                <div class="certs-popular__actions">
+                                    <a href="#" class="certs-popular__btn btn btn-brown">купить</a>
+                                    <a href="#" class="certs-popular__arrow" aria-label="Подробнее">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="8" viewBox="0 0 19 8" fill="none" aria-hidden="true">
+                                            <path d="M0 4H17" stroke="#290F0A" stroke-width="1.5" stroke-linecap="round" />
+                                            <path d="M13 1L17 4L13 7" stroke="#290F0A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="certs-popular__item">
+                                <div class="certs-popular__image">
+                                    <img src="@img/certs/03.jpg" class="cover-image" alt="Сертификат для двоих «В унисон»">
+                                    <span class="certs-popular__label">СЕРТИФИКАТ для двоих<br>«В УНИСОН»</span>
+                                    <span class="certs-popular__price">39 500 ₽</span>
+                                    <button type="button" class="certs-popular__favorite favorite-btn icon-heart" aria-label="Добавить в избранное"></button>
+                                </div>
+                                <div class="certs-popular__actions">
+                                    <a href="#" class="certs-popular__btn btn btn-brown">купить</a>
+                                    <a href="#" class="certs-popular__arrow" aria-label="Подробнее">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="8" viewBox="0 0 19 8" fill="none" aria-hidden="true">
+                                            <path d="M0 4H17" stroke="#290F0A" stroke-width="1.5" stroke-linecap="round" />
+                                            <path d="M13 1L17 4L13 7" stroke="#290F0A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="certs-popular__item">
+                                <div class="certs-popular__image">
+                                    <img src="@img/certs/04.jpg" class="cover-image" alt="Сертификат для двоих «В унисон»">
+                                    <span class="certs-popular__label">СЕРТИФИКАТ для двоих<br>«В УНИСОН»</span>
+                                    <span class="certs-popular__price">39 500 ₽</span>
+                                    <button type="button" class="certs-popular__favorite favorite-btn icon-heart" aria-label="Добавить в избранное"></button>
+                                </div>
+                                <div class="certs-popular__actions">
+                                    <a href="#" class="certs-popular__btn btn btn-brown">купить</a>
+                                    <a href="#" class="certs-popular__arrow" aria-label="Подробнее">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="8" viewBox="0 0 19 8" fill="none" aria-hidden="true">
+                                            <path d="M0 4H17" stroke="#290F0A" stroke-width="1.5" stroke-linecap="round" />
+                                            <path d="M13 1L17 4L13 7" stroke="#290F0A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
                 @@include('./html/_places.html', {
-                "title": "Сертификаты доступны в салонах:"
+                "title": "наши локации"
                 })
+                @@include('./html/_faq.html')
             </main>
             @@include('html/_footer.html', {})
         </div>

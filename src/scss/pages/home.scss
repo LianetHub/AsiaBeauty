@@ -92,7 +92,7 @@
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-			padding-bottom: 2.25rem;
+
 
 		}
 	}
@@ -100,7 +100,7 @@
 
 	// .hero__title
 	&__title {
-		max-width: 24rem;
+		max-width: 26rem;
 	}
 
 	// .hero__subtitle
@@ -323,6 +323,13 @@
 
 		@media (min-width:$md1) {
 			gap: 2rem;
+		}
+	}
+
+	&--no-border {
+		.benefits__list {
+			border-bottom: none;
+			padding-bottom: 0;
 		}
 	}
 }

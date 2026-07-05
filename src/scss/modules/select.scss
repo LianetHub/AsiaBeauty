@@ -7,8 +7,57 @@
 		&.visible {
 			.dropdown__button {
 				&::before {
-					transform: rotate(-90deg);
+					transform: rotate(180deg);
 				}
+			}
+		}
+
+		.dropdown__body {
+			padding: rem(4);
+			border-radius: rem(5);
+			border: rem(1) solid #290F0A;
+			background: #F9F0E2;
+			box-shadow: none;
+		}
+
+		.dropdown__list {
+			&::-webkit-scrollbar-track {
+				background: #F9F0E2;
+			}
+
+			&::-webkit-scrollbar-thumb {
+				background: #290F0A;
+
+				@media (any-hover: hover) {
+					&:hover {
+						background: darken(#290F0A, 5%);
+					}
+				}
+			}
+		}
+
+		.dropdown__list-item {
+			color: #290F0A;
+			font-family: $font-jost;
+			font-size: rem(16);
+			font-weight: 300;
+			line-height: 1.1;
+			padding: rem(6) rem(8);
+			border-radius: rem(3);
+
+			&:not(.active, [aria-checked="true"]) {
+				@media (any-hover: hover) {
+					&:hover {
+						color: #290F0A;
+						background: rgba(#290F0A, 0.08);
+					}
+				}
+			}
+
+			&.active,
+			&[aria-checked="true"] {
+				color: #ECEAE0;
+				background: #290F0A;
 			}
 		}
 	}
@@ -116,23 +165,29 @@
 		height: 100%;
 
 		.dropdown--grey & {
-			border-radius: 0.3125rem;
-			padding: em(0.875, 1.25) em(0.87, 1.25);
-			background: #D9D9D9;
-			color: #151515;
+			border-radius: rem(5);
+			border: 0;
+			padding: rem(6) rem(12);
+			background: #E1DECF;
+			color: #290F0A;
+			font-family: $font-jost;
 			font-weight: 300;
-			line-height: 110%;
-			font-size: 1rem;
+			line-height: 1.1;
+			font-size: rem(16);
 			justify-content: space-between;
+			min-height: rem(40);
 
 			@media (min-width: $md4) {
-				font-size: 1.25rem;
+				font-size: rem(20);
 			}
 
 			&::before {
-				transform: rotate(90deg);
+				font-size: rem(12);
+				width: rem(12);
+				height: rem(12);
+				color: #290F0A;
 				transition: transform 0.3s ease;
-				@extend %ic, .icon-next;
+				@extend %ic, .icon-chevron-down;
 			}
 		}
 
@@ -156,7 +211,7 @@
 
 
 			&::before {
-				font-size: 0.35rem;
+				font-size: 0.75rem;
 				transition: transform 0.3s ease;
 				@extend %ic, .icon-chevron-down;
 			}

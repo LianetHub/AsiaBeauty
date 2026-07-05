@@ -84,7 +84,7 @@ $cart-brown: #290f0a;
 
 	&__item {
 		display: grid;
-		grid-template-columns: rem(72) minmax(0, 1fr);
+		grid-template-columns: rem(72) 1fr;
 		grid-template-areas:
 			"thumb name"
 			"actions actions";
@@ -98,7 +98,7 @@ $cart-brown: #290f0a;
 		}
 
 		@media (min-width: $md4) {
-			grid-template-columns: rem(104) minmax(0, 1fr) auto;
+			grid-template-columns: rem(104) 1fr auto;
 			grid-template-areas:
 				"thumb name counter"
 				"thumb price price";
