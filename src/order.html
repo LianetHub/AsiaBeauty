@@ -8,7 +8,7 @@
             @@include('html/_header.html', {
             "active": "0"
             })
-            <main class="page page--small">
+            <main class="page page--small page--order">
                 <section class="order">
                     <div class="order__container container">
                         <form action="#" class="order__form">
@@ -18,7 +18,9 @@
                                         <div class="order__progress">
                                             <span class="order__progress-current">1</span>/<span class="order__progress-total">2</span>
                                         </div>
-                                        Введите данные
+                                        <div class="order__caption">
+                                            Введите данные
+                                        </div>
                                     </div>
                                     <div class="order__rows">
                                         <div class="order__row">
@@ -34,7 +36,7 @@
                                             <input type="text" name="message" class="input" placeholder="Укажите предпочитаемый Вами салон и комментарии сотрудникам">
                                         </div>
                                     </div>
-                                    <button type="button" aria-label="Далее" class="order__btn btn btn-white-outline icon-arrow-right"></button>
+                                    <button type="button" aria-label="Далее" class="order__btn btn btn-brown icon-next"></button>
                                 </div>
                                 <div id="step2" class="order__step">
                                     <div class="order__header">
@@ -74,7 +76,7 @@
                                             <div class="order__label">
                                                 3. Выберите способ оплаты
                                             </div>
-                                            <div class="order__select select">
+                                            <div class="order__select select" data-theme="service">
                                                 <select id="payment" name="payment" class="payment">
                                                     <option value="18">Банковские карты VISA, MasterCard, МИР</option>
                                                     <option value="18">Наличный рассчет</option>
