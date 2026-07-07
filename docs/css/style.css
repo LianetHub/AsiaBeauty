@@ -1643,6 +1643,13 @@ body.lock-filter {
   padding: 1rem 3.375rem;
 }
 
+.gift__btn.btn.btn-white:active,
+.gift__btn.btn.btn-white.active {
+  background: #420503;
+  border-color: #420503;
+  color: #F9F0E2;
+}
+
 .spa-benefits {
   padding: 2.5rem 0 4rem;
 }
@@ -2753,36 +2760,44 @@ body.lock-filter {
   color: #F9F0E2;
 }
 
-.header--light.header--scrolled {
+.header--light.header--scrolled,
+.header--light.header--open-menu {
   background: #F9F0E2;
 }
 
-.header--light.header--scrolled .header__main {
+.header--light.header--scrolled .header__main,
+.header--light.header--open-menu .header__main {
   background: #F9F0E2;
 }
 
-.header--light.header--scrolled .header__body {
+.header--light.header--scrolled .header__body,
+.header--light.header--open-menu .header__body {
   color: #290F0A;
 }
 
-.header--light.header--scrolled .header__phone {
+.header--light.header--scrolled .header__phone,
+.header--light.header--open-menu .header__phone {
   color: #290F0A;
 }
 
-.header--light.header--scrolled .header__logo-img--light {
+.header--light.header--scrolled .header__logo-img--light,
+.header--light.header--open-menu .header__logo-img--light {
   display: none;
 }
 
-.header--light.header--scrolled .header__logo-img--dark {
+.header--light.header--scrolled .header__logo-img--dark,
+.header--light.header--open-menu .header__logo-img--dark {
   display: block;
 }
 
-.header--light.header--scrolled .header__action {
+.header--light.header--scrolled .header__action,
+.header--light.header--open-menu .header__action {
   background: #290F0A;
   color: #F9F0E2;
 }
 
-.header--light.header--scrolled .icon-menu {
+.header--light.header--scrolled .icon-menu,
+.header--light.header--open-menu .icon-menu {
   background: #290F0A;
   color: #F9F0E2;
 }
@@ -2794,6 +2809,19 @@ body.lock-filter {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.0625rem;
+}
+
+.header__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2885,7 +2913,7 @@ body.lock-filter {
   z-index: 5;
   opacity: 0;
   visibility: hidden;
-  padding-block: var(--header-height, 7rem);
+  padding-block: var(--header-height, 7.5rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9392,16 +9420,14 @@ html:has(.page--specialoffer) {
     color: #F9F0E2;
   }
 
-  .header--light.header--scrolled .header__menu-link {
+  .header--light.header--scrolled .header__menu-link,
+  .header--light.header--open-menu .header__menu-link {
     color: #290F0A;
   }
 
-  .header--light.header--scrolled .header__menu-link.active {
+  .header--light.header--scrolled .header__menu-link.active,
+  .header--light.header--open-menu .header__menu-link.active {
     color: #AF290E;
-  }
-
-  .header__menu-toggler {
-    display: none !important;
   }
 
   .header__menu {
@@ -10159,7 +10185,8 @@ html:has(.page--specialoffer) {
     color: rgba(249, 240, 226, 0.75);
   }
 
-  .header--light.header--scrolled .header__menu-link:hover {
+  .header--light.header--scrolled .header__menu-link:hover,
+  .header--light.header--open-menu .header__menu-link:hover {
     color: #AF290E;
   }
 
@@ -10598,7 +10625,7 @@ html:has(.page--specialoffer) {
 
   .catalog__sidebar {
     position: sticky;
-    top: calc(var(--header-height, 7rem) + 1.25rem);
+    top: calc(var(--header-height, 7.5rem) + 1.25rem);
   }
 
   .page--apartments .hero--fullwidth {
@@ -11180,6 +11207,12 @@ html:has(.page--specialoffer) {
     border-bottom-color: #f9f0e2;
   }
 
+  .gift__btn.btn.btn-white:hover {
+    background: #720806;
+    border-color: #720806;
+    color: #F9F0E2;
+  }
+
   ::-webkit-scrollbar-thumb:hover {
     background: #420503;
   }
@@ -11234,11 +11267,13 @@ html:has(.page--specialoffer) {
     background: rgba(249, 240, 226, 0.28);
   }
 
-  .header--light.header--scrolled .header__phone:hover {
+  .header--light.header--scrolled .header__phone:hover,
+  .header--light.header--open-menu .header__phone:hover {
     color: #AF290E;
   }
 
-  .header--light.header--scrolled .header__action:hover {
+  .header--light.header--scrolled .header__action:hover,
+  .header--light.header--open-menu .header__action:hover {
     background-color: #AF290E;
   }
 

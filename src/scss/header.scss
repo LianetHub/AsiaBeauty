@@ -171,7 +171,8 @@
 			color: $beige;
 		}
 
-		&.header--scrolled {
+		&.header--scrolled,
+		&.header--open-menu {
 			background: $beige;
 
 			.header__main {
@@ -242,14 +243,16 @@
 		gap: rem(17);
 	}
 
+	&__left {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		gap: rem(17);
+	}
 
 
 	// .header__menu-toggler
-	&__menu-toggler {
-		@media (min-width:$md4) {
-			display: none !important;
-		}
-	}
+	&__menu-toggler {}
 
 	// .header__callback
 	&__callback {

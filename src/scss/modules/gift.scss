@@ -49,6 +49,23 @@
 			padding: 1rem 3.375rem;
 		}
 
+		&.btn.btn-white {
+			@media (any-hover: hover) {
+				&:hover {
+					background: $red;
+					border-color: $red;
+					color: $beige;
+				}
+			}
+
+			&:active,
+			&.active {
+				background: darken($color: $red, $amount: 10);
+				border-color: darken($color: $red, $amount: 10);
+				color: $beige;
+			}
+		}
+
 		@media (min-width: $md5) {
 			min-width: 15.625rem;
 		}
