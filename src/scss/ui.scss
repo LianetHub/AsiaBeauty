@@ -157,7 +157,7 @@
 .swiper-button-next,
 .swiper-button-prev {
 	background: $red;
-	color: #fff;
+	color: $beige;
 	font-size: 1.5rem;
 	z-index: $ui-index-1;
 
@@ -225,7 +225,7 @@
 		width: 100%;
 		height: 100%;
 		z-index: 2;
-		background: #fff;
+		background: $beige;
 		border-radius: 50%;
 		color: $red;
 		font-size: 2.5rem;
@@ -476,7 +476,7 @@ $scrollbarHover: darken($color: $scrollbarColor,
 }
 
 ::-webkit-scrollbar-track {
-	background: #fff;
+	background: $beige;
 }
 
 ::-webkit-scrollbar-thumb {

@@ -38,7 +38,7 @@ $containerPadding: 30;
 
 $text: #e4e4e4;
 $red: #720806;
-$black: #2B2727;
+$black: #290F0A;
 $beige: #F9F0E2;
 $grey: #e4e4e4;
 
@@ -54,6 +54,7 @@ $headerHeight: var(--header-height, rem(112));
 
 :root {
 	--lock-padding: 0px;
+	--f-button-bg: #{$beige};
 	--swiper-pagination-top: 100%;
 	--swiper-pagination-bottom: auto;
 	--swiper-pagination-color: #{$grey};

@@ -137,7 +137,7 @@
 	white-space: nowrap;
 	color: $text;
 	text-align: center;
-	color: #FFF;
+	color: $beige;
 	font-size: 0.75rem;
 	font-weight: 600;
 	line-height: 110%;
@@ -148,9 +148,9 @@
 	}
 
 	&.btn-primary {
-		border: 2px solid #FFF;
+		border: 2px solid $beige;
 		background: #AF290E;
-		color: #fff;
+		color: $beige;
 
 		@media (any-hover: hover) {
 			&:hover {
@@ -165,13 +165,13 @@
 	}
 
 	&.btn-secondary {
-		background: #FAF9F5;
+		background: $beige;
 		color: #413F3F;
 
 		@media (any-hover: hover) {
 			&:hover {
 				background: $red;
-				color: #fff;
+				color: $beige;
 			}
 		}
 	}
@@ -183,14 +183,14 @@
 		@media (any-hover: hover) {
 			&:hover {
 				background: $red;
-				color: #fff;
+				color: $beige;
 			}
 		}
 
 		&:active,
 		&.active {
 			background: $red;
-			color: #fff;
+			color: $beige;
 		}
 	}
 
@@ -201,7 +201,7 @@
 		@media (any-hover: hover) {
 			&:hover {
 				background: $red;
-				color: #fff;
+				color: $beige;
 			}
 		}
 
@@ -278,7 +278,7 @@
 	&:disabled,
 	&[aria-disabled="true"] {
 		cursor: default;
-		color: #fff;
+		color: $beige;
 		background: #dfe0e1;
 		pointer-events: none;
 	}

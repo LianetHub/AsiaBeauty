@@ -64,7 +64,7 @@
 			&:not(.active):hover {
 				background: $red;
 				border-color: $red;
-				color: #fff;
+				color: $beige;
 			}
 		}
 	}
@@ -143,7 +143,7 @@
 			&+.certs__type-btn {
 				background: #282828;
 				border: rem(3) solid #720806;
-				color: #fff;
+				color: $beige;
 			}
 		}
 	}

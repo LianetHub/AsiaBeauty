@@ -1,345 +1,378 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-    <title>Asia Beauty SPA | Поиск</title>
-    <meta charset="UTF-8" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- plugins -->
-    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/libs/fancybox.css" />
-    <link rel="stylesheet" href="css/libs/nouislider.min.css" />
-    <!-- plugins -->
+<head>
+  <title>Asia Beauty SPA | Поиск</title>
+  <meta charset="UTF-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="css/reset.min.css" />
-    <link rel="stylesheet" href="css/style.min.css" />
+  <!-- plugins -->
+  <link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20260707210508" />
+  <link rel="stylesheet" href="css/libs/fancybox.css?_v=20260707210508" />
+  <link rel="stylesheet" href="css/libs/nouislider.min.css?_v=20260707210508" />
+  <!-- plugins -->
+
+  <link rel="stylesheet" href="css/reset.min.css?_v=20260707210508" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20260707210508" />
 
 </head>
-    <body>
-        <div class="wrapper">
-            <header class="header">
-    <div class="header__marquee">
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__marquee">
         <div class="header__marquee-container container container-lg ">
-            <div class="header__marquee-slider swiper">
-                <div class="swiper-wrapper">
-                    <span class="header__marquee-item swiper-slide">РАБОТАЕМ ЕЖЕДНЕВНО ВО ВСЕХ ЛОКАЦИЯХ 24/7</span>
-                    <span class="header__marquee-item swiper-slide">БАЛИЙСКИЕ ТАЙСКИЕ И КИТАЙСКИЕ ТЕХНИКИ МАССАЖА</span>
-                    <span class="header__marquee-item swiper-slide">120+ спа-программ</span>
-                    <span class="header__marquee-item swiper-slide">6 локаций</span>
-                </div>
+          <div class="header__marquee-slider swiper">
+            <div class="swiper-wrapper">
+              <span class="header__marquee-item swiper-slide">РАБОТАЕМ ЕЖЕДНЕВНО ВО ВСЕХ ЛОКАЦИЯХ 24/7</span>
+              <span class="header__marquee-item swiper-slide">БАЛИЙСКИЕ ТАЙСКИЕ И КИТАЙСКИЕ ТЕХНИКИ МАССАЖА</span>
+              <span class="header__marquee-item swiper-slide">120+ спа-программ</span>
+              <span class="header__marquee-item swiper-slide">6 локаций</span>
             </div>
+          </div>
         </div>
-    </div>
-    <div class="header__main">
+      </div>
+      <div class="header__main">
         <div class="container container-lg">
-            <div class="header__body">
-                <button type="button" class="header__menu-toggler icon-menu">
-                    <span></span><span></span><span></span>
-                </button>
-                <nav class="header__menu" aria-label="Навигация">
-                    <ul class="header__menu-list">
-                        <li class="header__menu-item"><a href="about.html" class="header__menu-link">О нас</a></li>
-                        <li class="header__menu-item"><a href="catalog.html" class="header__menu-link">Спа-меню</a></li>
-                    </ul>
-                </nav>
-                <a href="index.html" class="header__logo">
-                    
-                    
-                    <img src="img/logo.svg" alt="Логотип" class="header__logo-img">
-                    
-                </a>
-                <div class="header__side">
-                    <a href="tel:+74950217659" class="header__phone icon-phone"><span>+7 495 021 76 59</span></a>
-                    <div class="header__actions">
-                        <button type="button" aria-label="Поиск" aria-expanded="false" aria-controls="header-search" class="header__action header__action--search icon-search"></button>
-                        <a href="" aria-label="Избранное" class="header__action icon-heart"></a>
-                        <a href="#cart" data-fancybox="cart" data-type="inline" aria-label="Корзина" class="header__action icon-cart"></a>
-                    </div>
-                </div>
+          <div class="header__body">
+            <button type="button" class="header__menu-toggler icon-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <nav class="header__menu" aria-label="Навигация">
+              <ul class="header__menu-list">
+                <li class="header__menu-item">
+                  <a href="about.html" class="header__menu-link">О нас</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="catalog.html" class="header__menu-link">Спа-меню</a>
+                </li>
+              </ul>
+            </nav>
+            <a href="index.html" class="header__logo">
+
+
+              <img src="img/logo.svg" alt="Логотип" class="header__logo-img">
+
+            </a>
+            <div class="header__side">
+              <a href="tel:+74950217659" class="header__phone icon-phone">
+                <span>+7 495 021 76 59</span>
+              </a>
+              <div class="header__actions">
+                <button type="button" aria-label="Поиск" aria-expanded="false" aria-controls="header-search" class="header__action header__action--search icon-search"></button>
+                <a href="" aria-label="Избранное" class="header__action icon-heart"></a>
+                <a href="#cart" data-fancybox="cart" data-type="inline" aria-label="Корзина" class="header__action icon-cart"></a>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-    <div class="header-search" id="header-search" aria-hidden="true">
+      </div>
+      <div class="header-search" id="header-search" aria-hidden="true">
         <div class="header-search__overlay" aria-hidden="true"></div>
         <div class="header-search__panel">
-            <div class="container container-lg">
-                <form action="search.html" method="get" class="header-search__form">
-                    <div class="header-search__field">
-                        <button type="submit" class="header-search__submit icon-search" aria-label="Искать"></button>
-                        <input type="search" name="q" class="header-search__input" placeholder="Поиск услуг..." autocomplete="off">
-                    </div>
-                    <button type="button" class="header-search__close icon-close" aria-label="Закрыть поиск"></button>
-                </form>
-            </div>
-        </div>
-    </div>
-</header>
-<div class="menu">
-    <div class="container">
-        <nav aria-label="Главное меню" class="menu__navigation">
-            <ul class="menu__navigation-list">
-                <li class="menu__navigation-item"><a href="about.html" class="menu__navigation-link">О НАС</a></li>
-                <li class="menu__navigation-item"><a href="catalog.html" class="menu__navigation-link">МЕНЮ УСЛУГ</a></li>
-                <li class="menu__navigation-item"><a href="certs.html" class="menu__navigation-link">СЕРТИФИКАТЫ</a></li>
-                <li class="menu__navigation-item"><a href="deposits.html" class="menu__navigation-link">ДЕПОЗИТЫ</a></li>
-                <li class="menu__navigation-item"><a href="apartments.html" class="menu__navigation-link">АПАРТАМЕНТЫ</a></li>
-                <li class="menu__navigation-item"><a href="locations.html" class="menu__navigation-link">ЛОКАЦИИ</a></li>
-                <li class="menu__navigation-item"><a href="" class="menu__navigation-link">БЛОГ</a></li>
-                <li class="menu__navigation-item"><a href="contacts.html" class="menu__navigation-link">КОНТАКТЫ</a></li>
-            </ul>
-        </nav>
-    </div>
-</div>
-
-            <main class="page page--search">
-                <section class="hero hero--search">
-    
-    
-    <div class="container container-lg">
-        <div class="hero__banner" style="background-image: url('img/hero.jpg');">
-            <div class="hero__offer">
-                <h1 class="hero__title title-lg">РЕЗУЛЬТАТЫ ПОИСКА</h1>
-                
-            </div>
-            
-            
-            <form action="search.html" method="get" class="hero__search">
-                <button type="submit" aria-label="Искать" class="hero__search-btn icon-search"></button>
-                
-                <input type="text" name="q" value="тайский массаж" class="hero__search-input" placeholder="Поиск услуг...">
-                
-                
+          <div class="container container-lg">
+            <form action="search.html" method="get" class="header-search__form">
+              <div class="header-search__field">
+                <button type="submit" class="header-search__submit icon-search" aria-label="Искать"></button>
+                <input type="search" name="q" class="header-search__input" placeholder="Поиск услуг..." autocomplete="off">
+              </div>
+              <button type="button" class="header-search__close icon-close" aria-label="Закрыть поиск"></button>
             </form>
-            
-            
+          </div>
         </div>
-        
-        <form action="search.html" method="get" class="hero__search hero__search--mobile">
+      </div>
+    </header>
+    <div class="menu">
+      <div class="container">
+        <nav aria-label="Главное меню" class="menu__navigation">
+          <ul class="menu__navigation-list">
+            <li class="menu__navigation-item">
+              <a href="about.html" class="menu__navigation-link">О НАС</a>
+            </li>
+            <li class="menu__navigation-item">
+              <a href="catalog.html" class="menu__navigation-link">МЕНЮ УСЛУГ</a>
+            </li>
+            <li class="menu__navigation-item">
+              <a href="certs.html" class="menu__navigation-link">СЕРТИФИКАТЫ</a>
+            </li>
+            <li class="menu__navigation-item">
+              <a href="deposits.html" class="menu__navigation-link">ДЕПОЗИТЫ</a>
+            </li>
+            <li class="menu__navigation-item">
+              <a href="apartments.html" class="menu__navigation-link">АПАРТАМЕНТЫ</a>
+            </li>
+            <li class="menu__navigation-item">
+              <a href="locations.html" class="menu__navigation-link">ЛОКАЦИИ</a>
+            </li>
+            <li class="menu__navigation-item">
+              <a href="" class="menu__navigation-link">БЛОГ</a>
+            </li>
+            <li class="menu__navigation-item">
+              <a href="contacts.html" class="menu__navigation-link">КОНТАКТЫ</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <main class="page page--search">
+      <section class="hero hero--search">
+
+
+        <div class="container container-lg">
+          <div class="hero__banner" style="background-image: url('img/hero.jpg');">
+            <div class="hero__offer">
+              <h1 class="hero__title title-lg">РЕЗУЛЬТАТЫ ПОИСКА</h1>
+
+            </div>
+
+
+            <form action="search.html" method="get" class="hero__search">
+              <button type="submit" aria-label="Искать" class="hero__search-btn icon-search"></button>
+
+              <input type="text" name="q" value="тайский массаж" class="hero__search-input" placeholder="Поиск услуг...">
+
+
+            </form>
+
+
+          </div>
+
+          <form action="search.html" method="get" class="hero__search hero__search--mobile">
             <button type="submit" aria-label="Искать" class="hero__search-btn icon-search"></button>
-            
+
             <input type="text" name="q" value="тайский массаж" class="hero__search-input" placeholder="Поиск услуг...">
-            
-            
-        </form>
-        
-    </div>
-    
-</section>
 
-                <section class="catalog catalog--search">
-                    <div class="container container-lg">
-                        <h2 class="catalog__query">тайский массаж</h2>
-                        <div class="catalog__grid">
-                            
 
-    <div class="product-card" id="relax_massage" data-animate="card">
-        
-        <div class="product-card__image">
-            <a href="service.html" class="product-card__image-link">
-                <img src="img/goods/relax-massage.jpg" class="cover-image" alt="Relax massage / Релакс массаж">
-            </a>
-            
+          </form>
+
         </div>
-        
-        
-        <div class="product-card__header">
-            
-            <a href="service.html" class="product-card__name">Relax massage / Релакс массаж</a>
-             
-                
-            
-            
-        </div>
-        <div class="product-card__body">
-            
-            
-            <div class="product-card__meta">
-                <div class="product-card__details">
-                    
+
+      </section>
+
+      <section class="catalog catalog--search">
+        <div class="container container-lg">
+          <h2 class="catalog__query">тайский массаж</h2>
+          <div class="catalog__grid">
+
+
+            <div class="product-card" id="relax_massage" data-animate="card">
+
+              <div class="product-card__image">
+                <a href="service.html" class="product-card__image-link">
+                  <img src="img/goods/relax-massage.jpg" class="cover-image" alt="Relax massage / Релакс массаж">
+                </a>
+
+              </div>
+
+
+              <div class="product-card__header">
+
+                <a href="service.html" class="product-card__name">Relax massage / Релакс массаж</a>
+
+
+
+
+              </div>
+              <div class="product-card__body">
+
+
+                <div class="product-card__meta">
+                  <div class="product-card__details">
+
                     <span class="product-card__price">9 500 Р</span>
-                    
-                    
-                    
-                    
+
+
+
+
                     <span class="product-card__time">
-                        <span class="product-card__time-icon icon-clock" aria-hidden="true"></span>
-                        <span class="product-card__time-value">60 min</span>
+                      <span class="product-card__time-icon icon-clock" aria-hidden="true"></span>
+                      <span class="product-card__time-value">60 min</span>
                     </span>
-                    
+
+                  </div>
+
+                  <button type="button" class="product-card__favorite favorite-btn icon-heart" aria-label="Добавить в избранное"></button>
+
                 </div>
-                
-                <button type="button" class="product-card__favorite favorite-btn icon-heart" aria-label="Добавить в избранное"></button>
-                
+
+                <div class="product-card__footer">
+
+
+                  <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
+
+                  <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
+                </div>
+              </div>
             </div>
-            
-            <div class="product-card__footer">
-                
-                
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
-                
-                <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
-            </div>
-        </div>
-    </div>
-
-    
 
 
-    <div class="product-card" id="sport_massage" data-animate="card">
-        
-        <div class="product-card__image">
-            <a href="service.html" class="product-card__image-link">
-                <img src="img/goods/sport-massage.jpg" class="cover-image" alt="Sport massage / Спортивный массаж">
-            </a>
-            
-        </div>
-        
-        
-        <div class="product-card__header">
-            
-            <a href="service.html" class="product-card__name">Sport massage / Спортивный массаж</a>
-             
-                
-            
-            
-        </div>
-        <div class="product-card__body">
-            
-            
-            <div class="product-card__meta">
-                <div class="product-card__details">
-                    
+
+
+            <div class="product-card" id="sport_massage" data-animate="card">
+
+              <div class="product-card__image">
+                <a href="service.html" class="product-card__image-link">
+                  <img src="img/goods/sport-massage.jpg" class="cover-image" alt="Sport massage / Спортивный массаж">
+                </a>
+
+              </div>
+
+
+              <div class="product-card__header">
+
+                <a href="service.html" class="product-card__name">Sport massage / Спортивный массаж</a>
+
+
+
+
+              </div>
+              <div class="product-card__body">
+
+
+                <div class="product-card__meta">
+                  <div class="product-card__details">
+
                     <span class="product-card__price">9 500 Р</span>
-                    
-                    
-                    
-                    
+
+
+
+
                     <span class="product-card__time">
-                        <span class="product-card__time-icon icon-clock" aria-hidden="true"></span>
-                        <span class="product-card__time-value">60 min</span>
+                      <span class="product-card__time-icon icon-clock" aria-hidden="true"></span>
+                      <span class="product-card__time-value">60 min</span>
                     </span>
-                    
+
+                  </div>
+
+                  <button type="button" class="product-card__favorite favorite-btn icon-heart" aria-label="Добавить в избранное"></button>
+
                 </div>
-                
-                <button type="button" class="product-card__favorite favorite-btn icon-heart" aria-label="Добавить в избранное"></button>
-                
+
+                <div class="product-card__footer">
+
+
+                  <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
+
+                  <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
+                </div>
+              </div>
             </div>
-            
-            <div class="product-card__footer">
-                
-                
-                <a href="https://www.yclients.com/" target="_blank" rel="noopener noreferrer" class="product-card__btn btn">Записаться</a>
-                
-                <a href="service.html" class="product-card__link btn btn-lg icon-long-arrow" aria-label="Подробнее"></a>
-            </div>
+
+
+
+          </div>
         </div>
-    </div>
-
-    
-
-                        </div>
-                    </div>
-                </section>
-            </main>
-            <footer class="footer">
-    <div class="container container-lg">
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container container-lg">
         <div class="footer__logo">
-            <img src="img/logo-white.svg" alt="Логотип">
+          <img src="img/logo-white.svg" alt="Логотип">
         </div>
         <div class="footer__content">
-            <div class="footer__caption">АДРЕСА ЛОКАЦИЙ</div>
-            <div class="footer__addresses">
-                Москва:<br>
-                Смоленская, 8<br>
-                Площадь Европы, 2<br>
-                Пресненская наб., 2<br>
-                Погорельский пер., 6<br>
-                Оружейный пер., 13/1<br>
-                <br>
-                Сочи, Орджоникидзе 11А 16 этаж
+          <div class="footer__caption">АДРЕСА ЛОКАЦИЙ</div>
+          <div class="footer__addresses">
+            Москва:
+            <br>
+            Смоленская, 8
+            <br>
+            Площадь Европы, 2
+            <br>
+            Пресненская наб., 2
+            <br>
+            Погорельский пер., 6
+            <br>
+            Оружейный пер., 13/1
+            <br>
+            <br>
+            Сочи, Орджоникидзе 11А 16 этаж
+          </div>
+          <a href="mailto:info@ab-spa.ru" class="footer__email">info@ab-spa.ru</a>
+          <div class="footer__socials-wrap">
+            <div class="footer__caption">СОЦ.СЕТИ</div>
+            <div class="footer__socials socials">
+              <a href="" class="socials__link icon-telegram"></a>
+              <a href="" class="socials__link icon-instagram"></a>
+              <a href="" class="socials__link icon-facebook"></a>
             </div>
-            <a href="mailto:info@ab-spa.ru" class="footer__email">info@ab-spa.ru</a>
-            <div class="footer__socials-wrap">
-                <div class="footer__caption">СОЦ.СЕТИ</div>
-                <div class="footer__socials socials">
-                    <a href="" class="socials__link icon-telegram"></a>
-                    <a href="" class="socials__link icon-instagram"></a>
-                    <a href="" class="socials__link icon-facebook"></a>
-                </div>
-            </div>
+          </div>
         </div>
         <div class="footer__bottom">
-            <p class="footer__legal">ООО «АЗИЯ ГРУПП»&nbsp; ИНН 5043092365 ОГРН 1255000106844</p>
-            <nav class="footer__menu" aria-label="Навигация в подвале">
-                <a href="" class="footer__menu-link">Политика конфиденциальности</a>
-                <a href="homevisit.html" class="footer__menu-link">Массаж на дом</a>
-                <a href="blog.html" class="footer__menu-link">Новости</a>
-                <a href="locations.html" class="footer__menu-link">Салоны</a>
-                <a href="" class="footer__menu-link">Партнеры</a>
-            </nav>
+          <p class="footer__legal">ООО «АЗИЯ ГРУПП»&nbsp; ИНН 5043092365 ОГРН 1255000106844</p>
+          <nav class="footer__menu" aria-label="Навигация в подвале">
+            <a href="" class="footer__menu-link">Политика конфиденциальности</a>
+            <a href="homevisit.html" class="footer__menu-link">Массаж на дом</a>
+            <a href="blog.html" class="footer__menu-link">Новости</a>
+            <a href="locations.html" class="footer__menu-link">Салоны</a>
+            <a href="" class="footer__menu-link">Партнеры</a>
+          </nav>
         </div>
-    </div>
-</footer>
-<div class="socials-widget">
-    <button target="_blank" class="socials-widget__btn">
+      </div>
+    </footer>
+    <div class="socials-widget">
+      <button target="_blank" class="socials-widget__btn">
         <span class="socials-widget__btn-icon icon-whatsapp"></span>
-    </button>
-    <div class="socials-widget__body">
+      </button>
+      <div class="socials-widget__body">
         <a href="https://max.ru/u/f9LHodD0cOKCwnDi7Hj_4Oop5Qn2qpZg0jXK-PixhzzCTTmz4TnsAVzbSes" class="socials-widget__link icon-max">Написать в&nbsp;MAX</a>
         <a href="https://t.me/asiabeauty_spa" class="socials-widget__link icon-telegram">Написать в&nbsp;telegram</a>
         <a href="tel:+74950217659" class="socials-widget__link icon-phone">Позвонить</a>
+      </div>
     </div>
-</div>
-<div id="cart" class="cart">
-    <div class="cart__header">
+    <div id="cart" class="cart">
+      <div class="cart__header">
         <h2 class="cart__title">Ваш заказ</h2>
         <button type="button" class="cart__clear">Удалить все</button>
-    </div>
-    <ul class="cart__list">
+      </div>
+      <ul class="cart__list">
         <li class="cart__item">
-            <div class="cart__item-thumb">
-                <img src="img/products/02.jpg" class="cover-image" alt="">
+          <div class="cart__item-thumb">
+            <img src="img/products/02.jpg" class="cover-image" alt="">
+          </div>
+          <div class="cart__item-name">
+            Aroma massage/Арома массаж со свечей
+          </div>
+          <div class="cart__item-actions">
+            <div class="cart__item-counter">
+              <button type="button" class="cart__item-btn cart__item-btn--minus" aria-label="Уменьшить количество"></button>
+              <div class="cart__counter-value">1</div>
+              <button type="button" class="cart__item-btn cart__item-btn--plus" aria-label="Увеличить количество"></button>
             </div>
-            <div class="cart__item-name">
-                Aroma massage/Арома массаж со свечей
-            </div>
-            <div class="cart__item-actions">
-                <div class="cart__item-counter">
-                    <button type="button" class="cart__item-btn cart__item-btn--minus" aria-label="Уменьшить количество"></button>
-                    <div class="cart__counter-value">1</div>
-                    <button type="button" class="cart__item-btn cart__item-btn--plus" aria-label="Увеличить количество"></button>
-                </div>
-                <div class="cart__item-price">13 500 ₽</div>
-            </div>
+            <div class="cart__item-price">13 500 ₽</div>
+          </div>
         </li>
-    </ul>
-    <div class="cart__promo">
+      </ul>
+      <div class="cart__promo">
         <label class="cart__promo-label" for="cart-promo">Введите промокод:</label>
         <input type="text" id="cart-promo" class="cart__promo-input" placeholder="Промокод" autocomplete="off">
-    </div>
-    <div class="cart__footer">
+      </div>
+      <div class="cart__footer">
         <div class="cart__total">
-            <div class="cart__total-caption">Итого:</div>
-            <div class="cart__total-value">13 500 ₽</div>
+          <div class="cart__total-caption">Итого:</div>
+          <div class="cart__total-value">13 500 ₽</div>
         </div>
         <a href="order.html" class="cart__btn btn btn-primary">Оформить заказ</a>
+      </div>
     </div>
-</div>
 
-        </div>
+  </div>
 
-        <!-- plugins -->
-<script src="js/libs/jquery-4.0.0.min.js"></script>
-<script src="js/libs/swiper-bundle.min.js"></script>
-<script src="js/libs/fancybox.min.js"></script>
-<script src="js/libs/nouislider.min.js"></script>
-<script src="js/libs/gsap.min.js"></script>
-<script src="js/libs/ScrollTrigger.min.js"></script>
+  <!-- plugins -->
+  <script src="js/libs/jquery-4.0.0.min.js?_v=20260707210508"></script>
+  <script src="js/libs/swiper-bundle.min.js?_v=20260707210508"></script>
+  <script src="js/libs/fancybox.min.js?_v=20260707210508"></script>
+  <script src="js/libs/nouislider.min.js?_v=20260707210508"></script>
+  <script src="js/libs/gsap.min.js?_v=20260707210508"></script>
+  <script src="js/libs/ScrollTrigger.min.js?_v=20260707210508"></script>
 
-<!-- plugins -->
+  <!-- plugins -->
 
-<script src="js/app.min.js"></script>
-    </body>
+  <script src="js/app.min.js?_v=20260707210508"></script>
+</body>
+
 </html>
