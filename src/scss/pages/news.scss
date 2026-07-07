@@ -115,7 +115,7 @@
 
 	// .news__item-title
 	&__item-title {
-		font-family: $font-jost;
+		font-family: $font-bebas;
 		font-weight: 500;
 		margin-top: rem(6);
 
@@ -305,7 +305,8 @@
 	h4,
 	h5,
 	h6 {
-		font-weight: 600;
+		font-family: $font-bebas;
+		font-weight: 400;
 
 		@media screen and (max-width: $md4) {
 			line-height: 1.5;
@@ -315,8 +316,9 @@
 	h1 {
 		margin-top: 0;
 		margin-bottom: 2.4rem;
+		font-family: $font-bebas;
 		font-size: 3rem;
-		font-weight: 500;
+		font-weight: 400;
 		line-height: 1.25;
 	}
 

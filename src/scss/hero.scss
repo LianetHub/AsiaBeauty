@@ -264,6 +264,7 @@
 
 	&__subtitle {
 		margin-top: 1rem;
+		font-family: $font-bebas;
 		font-weight: 500;
 		line-height: 110%;
 
@@ -327,7 +328,7 @@
 		padding: 0.5rem 1.25rem 0.5rem 2.5rem;
 		background: transparent;
 		border: rem(1) solid #151515;
-		font-family: Inter;
+		font-family: $fontfamily;
 		width: 100%;
 		font-size: 0.875rem;
 		font-weight: 400;

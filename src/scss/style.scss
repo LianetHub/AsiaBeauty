@@ -17,7 +17,7 @@
 
 // Шрифт по умолчанию
 $fontfamily: "Inter", sans-serif;
-$font-jost: "Jost", sans-serif;
+$font-jost: $fontfamily;
 $font-cormorant: "Cormorant";
 $font-bebas: "BebasNeue", sans-serif;
 
@@ -68,7 +68,7 @@ $headerHeight: var(--header-height, rem(112));
 
 //ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ
 body {
-	font-family: $fontfamily, sans-serif;
+	font-family: $fontfamily;
 	color: $black;
 	background: $beige;
 	min-height: 100%;
@@ -188,6 +188,13 @@ body {
 
 	// .heading__title
 	&__title {
+		font-family: $font-bebas;
+		font-weight: 400;
+		font-synthesis: none;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-transform: uppercase;
+
 		@media (max-width: $md5) {
 			display: flex;
 			flex-direction: column;
@@ -277,6 +284,7 @@ body {
 
 	// .heading__desc-caption
 	&__desc-caption {
+		font-family: $font-bebas;
 		font-size: 1.25rem;
 		font-weight: 500;
 		line-height: 110%;
@@ -597,7 +605,7 @@ body {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		font-family: "Jost", sans-serif;
+		font-family: $fontfamily;
 		font-size: 1rem;
 		line-height: 120%;
 		color: #290F0A;
@@ -631,7 +639,7 @@ body {
 	// .places__location-route
 	&__location-route {
 		margin-top: 0.69rem;
-		font-family: Inter, sans-serif;
+		font-family: $fontfamily;
 		font-size: 1rem;
 		line-height: 145%;
 		text-decoration: underline;
