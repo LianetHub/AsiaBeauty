@@ -456,8 +456,8 @@ $(function () {
 		$(window).on("scroll", toggleLightHeader);
 	}
 
-	if ($(".extras__carousel").length > 0) {
-		$(".extras__carousel").each(function (index, sliderEl) {
+	if ($(".extras__carousel, .about-programs__carousel").length > 0) {
+		$(".extras__carousel, .about-programs__carousel").each(function (index, sliderEl) {
 			new Swiper(sliderEl, {
 				spaceBetween: 20,
 				slidesPerView: "auto",

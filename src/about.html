@@ -84,44 +84,11 @@
                 <section class="about-programs">
                     <div class="container">
                         <h2 class="about-programs__title title-lg text-center">программы в&nbsp;индивидуальных пространствах</h2>
-                        <ul class="about-programs__list">
-                            <li class="about-programs__item">
-                                <div class="about-programs__image">
-                                    <img src="@img/goods/jumu-lanmar.jpg" class="cover-image" alt="«Джуму Ланмар»">
-                                </div>
-                                <h3 class="about-programs__name">«Джуму Ланмар» / спа-программа для двоих</h3>
-                                <p class="about-programs__desc">Баланс ухода и расслабления. Just relax and feel each other</p>
-                                <div class="about-programs__meta">
-                                    <span class="about-programs__time">120 min</span>
-                                    <span class="about-programs__price">36 500 ₽</span>
-                                </div>
-                                <a href="service.html" class="about-programs__btn btn btn-grey-outline btn-lg">Подробнее</a>
-                            </li>
-                            <li class="about-programs__item">
-                                <div class="about-programs__image">
-                                    <img src="@img/goods/anahata.jpg" class="cover-image" alt="Анахата">
-                                </div>
-                                <h3 class="about-programs__name">Анахата / спа-программа для двоих</h3>
-                                <p class="about-programs__desc">Любовь, гармония и единение. Find the heart chakra</p>
-                                <div class="about-programs__meta">
-                                    <span class="about-programs__time">120 min</span>
-                                    <span class="about-programs__price">38 000 ₽</span>
-                                </div>
-                                <a href="service.html" class="about-programs__btn btn btn-grey-outline btn-lg">Подробнее</a>
-                            </li>
-                            <li class="about-programs__item">
-                                <div class="about-programs__image">
-                                    <img src="@img/goods/in-unison.jpg" class="cover-image" alt="«В унисон»">
-                                </div>
-                                <h3 class="about-programs__name">«В унисон» / спа-программа для двоих</h3>
-                                <p class="about-programs__desc">Точечная проработка тела и стоп. Full activation of energy lines</p>
-                                <div class="about-programs__meta">
-                                    <span class="about-programs__time">90 min</span>
-                                    <span class="about-programs__price">32 500 ₽</span>
-                                </div>
-                                <a href="service.html" class="about-programs__btn btn btn-grey-outline btn-lg">Подробнее</a>
-                            </li>
-                        </ul>
+                        <div class="extras__carousel swiper">
+                            <ul class="swiper-wrapper">
+                                @@loop('./html/templates/_product.html', './html/json/extras.json')
+                            </ul>
+                        </div>
                     </div>
                 </section>
                 @@include('html/_about-locations.html', {})
