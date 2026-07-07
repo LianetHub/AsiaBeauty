@@ -1,52 +1,171 @@
-<section class="quiz" data-quiz>
+<section class="quiz@@if(typeof variant !== 'undefined' && variant === 'specialoffer') { quiz--specialoffer}" data-quiz>
     <div class="container">
         <div class="quiz__card">
             <div class="quiz__main">
-                <div class="quiz__step quiz__step--active" data-quiz-step="start">
-                    <h2 class="quiz__title">Подберите идеальную SPA-программу</h2>
-                    <p class="quiz__subtitle">Короткий тест поможет подобрать программу под&nbsp;ваши задачи и&nbsp;пожелания</p>
-                    <p class="quiz__desc">Ответьте на 4 вопроса и получите список программ индивидуально для вас, а&nbsp;также бонус 1000 приветственных баллов на&nbsp;ваш первый визит</p>
-                    <button type="button" class="quiz__start btn btn-primary" data-quiz-start>Пройти тест</button>
+                <div class="quiz__toolbar">
+                    <div class="quiz__counter">Вопрос <span data-quiz-current>1</span> из <span data-quiz-total>4</span></div>
+                    <div class="quiz__nav">
+                        <button type="button" class="quiz__nav-btn icon-prev" data-quiz-prev aria-label="Назад" aria-disabled="true" disabled></button>
+                        <button type="button" class="quiz__nav-btn icon-next" data-quiz-next aria-label="Далее" aria-disabled="true" disabled></button>
+                    </div>
                 </div>
 
-                <div class="quiz__step" data-quiz-step="1">
-                    <div class="quiz__counter">Вопрос <span data-quiz-current>1</span> из <span data-quiz-total>4</span></div>
-                    <h3 class="quiz__question">Какая спа-программа подойдёт вам больше всего?</h3>
-                    <p class="quiz__subtitle">Выберите основную цель визита — так мы подберём подходящие процедуры</p>
+                @@if(typeof variant !== 'undefined' && variant === 'home') {
+                <div class="quiz__step quiz__step--active" data-quiz-step="1">
+                    <h3 class="quiz__question">Какая спа-программа подойдет вам больше всего?</h3>
+                    <p class="quiz__lead">Какого результата вы хотите достичь от визита в первую очередь?</p>
+                    <div class="quiz__options quiz__options--radio">
+                        <label class="quiz__option quiz__option--radio">
+                            <input type="radio" name="quiz_result" value="Полное расслабление, избавление от стресса и перезагрузка мыслей" class="quiz__option-input">
+                            <span class="quiz__option-label">Полное расслабление, избавление от&nbsp;стресса и&nbsp;&laquo;перезагрузка&raquo; мыслей</span>
+                        </label>
+                        <label class="quiz__option quiz__option--radio">
+                            <input type="radio" name="quiz_result" value="Глубокая проработка мышц, снятие физического напряжения и усталости" class="quiz__option-input">
+                            <span class="quiz__option-label">Глубокая проработка мышц, снятие физического напряжения и&nbsp;усталости.</span>
+                        </label>
+                        <label class="quiz__option quiz__option--radio">
+                            <input type="radio" name="quiz_result" value="Эстетический уход: сияние кожи лица, детокс и тонус тела/лица" class="quiz__option-input">
+                            <span class="quiz__option-label">Эстетический уход: сияние кожи лица, детокс и&nbsp;тонус тела/лица.</span>
+                        </label>
+                        <label class="quiz__option quiz__option--radio">
+                            <input type="radio" name="quiz_result" value="Ищу подарок для особенного человека (подарочный сертификат)" class="quiz__option-input">
+                            <span class="quiz__option-label">Ищу подарок для особенного человека (подарочный сертификат)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="quiz__step" data-quiz-step="2">
+                    <h3 class="quiz__question">Какая спа-программа подойдет вам больше всего?</h3>
+                    <p class="quiz__lead">Какой стиль массажа и&nbsp;интенсивность вам ближе?</p>
+                    <div class="quiz__options quiz__options--radio">
+                        <label class="quiz__option quiz__option--radio">
+                            <input type="radio" name="quiz_massage" value="Мягкие, плавные техники с обилием ароматных масел (Балийская школа релакса)" class="quiz__option-input">
+                            <span class="quiz__option-label">Мягкие, плавные техники с&nbsp;обилием ароматных масел (Балийская школа релакса)</span>
+                        </label>
+                        <label class="quiz__option quiz__option--radio">
+                            <input type="radio" name="quiz_massage" value="Интенсивная растяжка, проработка суставов и глубокое давление (Традиционная тайская техника)" class="quiz__option-input">
+                            <span class="quiz__option-label">Интенсивная растяжка, проработка суставов и&nbsp;глубокое давление (Традиционная тайская техника)</span>
+                        </label>
+                        <label class="quiz__option quiz__option--radio">
+                            <input type="radio" name="quiz_massage" value="Точечное воздействие на меридианы тела для оздоровления (Китайские методики)" class="quiz__option-input">
+                            <span class="quiz__option-label">Точечное воздействие на&nbsp;меридианы тела для оздоровления (Китайские методики).</span>
+                        </label>
+                        <label class="quiz__option quiz__option--radio">
+                            <input type="radio" name="quiz_massage" value="Доверяю выбор эксперту — хочу индивидуальный подход под мое самочувствие" class="quiz__option-input">
+                            <span class="quiz__option-label">Доверяю выбор эксперту&nbsp;&mdash; хочу индивидуальный подход под мое самочувствие.</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="quiz__step" data-quiz-step="3">
+                    <h3 class="quiz__question">Какая спа-программа подойдет вам больше всего?</h3>
+                    <p class="quiz__lead">Сколько времени вы готовы посвятить ритуалу заботы о&nbsp;себе?</p>
+                    <div class="quiz__options quiz__options--radio quiz__options--cols-3">
+                        <label class="quiz__option quiz__option--radio">
+                            <input type="radio" name="quiz_duration" value="Экспресс-пауза в течение дня (60 минут)" class="quiz__option-input">
+                            <span class="quiz__option-label">Экспресс-пауза в&nbsp;течение дня (60&nbsp;минут)</span>
+                        </label>
+                        <label class="quiz__option quiz__option--radio">
+                            <input type="radio" name="quiz_duration" value="Классический полноценный ритуал (90 минут)" class="quiz__option-input">
+                            <span class="quiz__option-label">Классический полноценный ритуал (90&nbsp;минут)</span>
+                        </label>
+                        <label class="quiz__option quiz__option--radio">
+                            <input type="radio" name="quiz_duration" value="Максимальное погружение: спа-программа (120 минут и более)" class="quiz__option-input">
+                            <span class="quiz__option-label">Максимальное погружение: спа-программа (120&nbsp;минут и&nbsp;более)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="quiz__step" data-quiz-step="4">
+                    <h3 class="quiz__question">Какая спа-программа подойдет вам больше всего?</h3>
+                    <p class="quiz__lead">Какие дополнительные детали сделают ваш отдых совершенным?</p>
+                    <div class="quiz__options quiz__options--radio">
+                        <label class="quiz__option quiz__option--radio">
+                            <input type="radio" name="quiz_details" value="Возможность погреться в хаммаме и расслабиться в джакузи перед массажем" class="quiz__option-input">
+                            <span class="quiz__option-label">Возможность погреться в&nbsp;хаммаме и&nbsp;расслабиться в&nbsp;джакузи перед массажем</span>
+                        </label>
+                        <label class="quiz__option quiz__option--radio">
+                            <input type="radio" name="quiz_details" value="Уединенные VIP-апартаменты только для меня" class="quiz__option-input">
+                            <span class="quiz__option-label">Уединенные VIP-апартаменты только для&nbsp;меня</span>
+                        </label>
+                        <label class="quiz__option quiz__option--radio">
+                            <input type="radio" name="quiz_details" value="Традиционная чайная церемония после процедуры" class="quiz__option-input">
+                            <span class="quiz__option-label">Традиционная чайная церемония после процедуры</span>
+                        </label>
+                        <label class="quiz__option quiz__option--radio">
+                            <input type="radio" name="quiz_details" value="Хочу, чтобы визит был ночью (удобен формат 24/7)" class="quiz__option-input">
+                            <span class="quiz__option-label">Хочу, чтобы визит был ночью (удобен формат 24/7)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="quiz__step" data-quiz-step="success">
+                    <h2 class="quiz__title">Ваш идеальный ритуал в&nbsp;Asia Beauty Spa почти готов!</h2>
+                    <p class="quiz__lead">Мы подобрали для вас 3&nbsp;программы, которые максимально отвечают вашим пожеланиям. Куда отправить подборку?</p>
+                    <form action="#" class="quiz__form">
+                        <input type="hidden" name="quiz_result_result" value="">
+                        <input type="hidden" name="quiz_massage_result" value="">
+                        <input type="hidden" name="quiz_duration_result" value="">
+                        <input type="hidden" name="quiz_details_result" value="">
+                        <input type="hidden" name="quiz_messenger_result" value="">
+                        <div class="quiz__form-fields">
+                            <input type="tel" name="phone" class="input" placeholder="+7 ___ ___ __ __" required>
+                        </div>
+                        <div class="quiz__messengers">
+                            <label class="quiz__option quiz__option--radio">
+                                <input type="radio" name="quiz_messenger" value="WhatsApp" class="quiz__option-input">
+                                <span class="quiz__option-label">WhatsApp</span>
+                            </label>
+                            <label class="quiz__option quiz__option--radio">
+                                <input type="radio" name="quiz_messenger" value="Telegram" class="quiz__option-input">
+                                <span class="quiz__option-label">Telegram</span>
+                            </label>
+                            <label class="quiz__option quiz__option--radio">
+                                <input type="radio" name="quiz_messenger" value="Max" class="quiz__option-input">
+                                <span class="quiz__option-label">Max</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="quiz__submit btn btn-primary">Приобрести сертификат</button>
+                    </form>
+                </div>
+                }
+
+                @@if(typeof variant === 'undefined' || variant !== 'home') {
+                <div class="quiz__step quiz__step--active" data-quiz-step="1">
+                    <h3 class="quiz__question">Какой повод для вашего свидания?</h3>
                     <div class="quiz__options">
                         <label class="quiz__option">
-                            <input type="radio" name="quiz_goal" value="Релакс и снятие стресса" class="quiz__option-input hidden" hidden>
+                            <input type="radio" name="quiz_occasion" value="Романтический вечер без повода" class="quiz__option-input hidden" hidden>
                             <span class="quiz__option-card">
                                 <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
-                                <span class="quiz__option-text">Релакс и&nbsp;снятие стресса</span>
+                                <span class="quiz__option-text">Романтический вечер<br>без повода</span>
                             </span>
                         </label>
                         <label class="quiz__option">
-                            <input type="radio" name="quiz_goal" value="Уход за лицом и телом" class="quiz__option-input hidden" hidden>
+                            <input type="radio" name="quiz_occasion" value="Годовщина / важная семейная дата" class="quiz__option-input hidden" hidden>
                             <span class="quiz__option-card">
                                 <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
-                                <span class="quiz__option-text">Уход за&nbsp;лицом и&nbsp;телом</span>
+                                <span class="quiz__option-text">Годовщина&nbsp;/<br>важная семейная дата</span>
                             </span>
                         </label>
                         <label class="quiz__option">
-                            <input type="radio" name="quiz_goal" value="Программы для двоих" class="quiz__option-input hidden" hidden>
+                            <input type="radio" name="quiz_occasion" value="День рождения одного из нас" class="quiz__option-input hidden" hidden>
                             <span class="quiz__option-card">
                                 <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
-                                <span class="quiz__option-text">Программы для&nbsp;двоих</span>
+                                <span class="quiz__option-text">День рождения<br>одного из&nbsp;нас</span>
                             </span>
                         </label>
                         <label class="quiz__option">
-                            <input type="radio" name="quiz_goal" value="Детокс и восстановление" class="quiz__option-input hidden" hidden>
+                            <input type="radio" name="quiz_occasion" value="Просто хотим качественно отдохнуть вместе" class="quiz__option-input hidden" hidden>
                             <span class="quiz__option-card">
                                 <span class="quiz__option-icon icon-heart" aria-hidden="true"></span>
-                                <span class="quiz__option-text">Детокс и&nbsp;восстановление</span>
+                                <span class="quiz__option-text">Просто хотим<br>качественно отдохнуть<br>вместе</span>
                             </span>
                         </label>
                     </div>
                 </div>
 
                 <div class="quiz__step" data-quiz-step="2">
-                    <div class="quiz__counter">Вопрос <span data-quiz-current>2</span> из <span data-quiz-total>4</span></div>
                     <h3 class="quiz__question">Сколько времени вы планируете провести в&nbsp;салоне?</h3>
                     <p class="quiz__subtitle">Это поможет составить программу комфортной длительности</p>
                     <div class="quiz__options">
@@ -82,7 +201,6 @@
                 </div>
 
                 <div class="quiz__step" data-quiz-step="3">
-                    <div class="quiz__counter">Вопрос <span data-quiz-current>3</span> из <span data-quiz-total>4</span></div>
                     <h3 class="quiz__question">Какой формат посещения вам ближе?</h3>
                     <p class="quiz__subtitle">Салоны, апартаменты с&nbsp;сауной, акватермальные зоны или выезд мастера на&nbsp;дом</p>
                     <div class="quiz__options">
@@ -118,7 +236,6 @@
                 </div>
 
                 <div class="quiz__step" data-quiz-step="4">
-                    <div class="quiz__counter">Вопрос <span data-quiz-current>4</span> из <span data-quiz-total>4</span></div>
                     <h3 class="quiz__question">Как часто вы посещаете SPA?</h3>
                     <p class="quiz__subtitle">Для новых гостей начисляем 1000 приветственных баллов на&nbsp;первый визит</p>
                     <div class="quiz__options">
@@ -155,10 +272,10 @@
 
                 <div class="quiz__step" data-quiz-step="success">
                     <h2 class="quiz__title">Вы прошли тест</h2>
-                    <p class="quiz__subtitle">Оставьте контакты — мы отправим персональную подборку программ</p>
+                    <p class="quiz__subtitle">Оставьте контакты&nbsp;&mdash; мы отправим персональную подборку программ</p>
                     <p class="quiz__desc">Мы подготовим персональный список программ и&nbsp;начислим 1000 приветственных баллов</p>
                     <form action="#" class="quiz__form">
-                        <input type="hidden" name="quiz_goal_result" value="">
+                        <input type="hidden" name="quiz_occasion_result" value="">
                         <input type="hidden" name="quiz_duration_result" value="">
                         <input type="hidden" name="quiz_format_result" value="">
                         <input type="hidden" name="quiz_frequency_result" value="">
@@ -170,9 +287,10 @@
                         <button type="submit" class="quiz__submit btn btn-primary">Получить рекомендации</button>
                     </form>
                 </div>
+                }
 
                 <div class="quiz__progress-wrap">
-                    <progress class="quiz__progress" value="0" max="4"></progress>
+                    <progress class="quiz__progress" value="1" max="4"></progress>
                 </div>
             </div>
 
@@ -180,12 +298,12 @@
                 <div class="quiz__aside-image">
                     <img src="@img/quiz-aside.jpg" class="cover-image" alt="">
                 </div>
-                <div class="quiz__aside-note" data-quiz-note="default">Прохождения теста вас ни&nbsp;к&nbsp;чему не&nbsp;обязывает</div>
-                <div class="quiz__aside-note" data-quiz-note="gift">После прохождения квиза, вас ждет подарок от Asia&nbsp;Beauty&nbsp;Spa</div>
-                <div class="quiz__nav">
-                    <button type="button" class="quiz__nav-btn icon-prev" data-quiz-prev aria-label="Назад" aria-disabled="true" disabled></button>
-                    <button type="button" class="quiz__nav-btn icon-next" data-quiz-next aria-label="Далее" aria-disabled="true" disabled></button>
-                </div>
+                @@if(typeof variant !== 'undefined' && variant === 'home') {
+                <div class="quiz__aside-note">Прохождения теста вас ни&nbsp;к&nbsp;чему не&nbsp;обязывает</div>
+                }
+                @@if(typeof variant === 'undefined' || variant !== 'home') {
+                <div class="quiz__aside-note">После прохождения квиза, вас ждет подарок от Asia&nbsp;Beauty&nbsp;Spa</div>
+                }
             </aside>
         </div>
     </div>

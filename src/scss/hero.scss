@@ -298,15 +298,18 @@
 			display: block;
 			margin-top: auto;
 			width: 100%;
-			max-width: rem(230);
+			max-width: 32.125rem;
 		}
 	}
 
 	&__search-btn {
 		width: 1.5rem;
 		height: 1.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		position: absolute;
-		top: 50%;
+		top: 51%;
 		transform: translateY(-50%);
 		left: 1.56rem;
 		transition: color 0.3s ease;
@@ -324,7 +327,6 @@
 	}
 
 	&__search-input {
-		border-radius: 6.25rem;
 		padding: 0.5rem 1.25rem 0.5rem 2.5rem;
 		background: transparent;
 		border: rem(1) solid #151515;

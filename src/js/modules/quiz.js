@@ -3,20 +3,24 @@ export function initQuiz() {
 
     if (!$quizzes.length) return;
 
-    const STEPS = ['start', '1', '2', '3', '4', 'success'];
+    const STEPS = ['1', '2', '3', '4', 'success'];
     const QUESTION_STEPS = ['1', '2', '3', '4'];
-    const FIELD_NAMES = ['quiz_goal', 'quiz_duration', 'quiz_format', 'quiz_frequency'];
+    const FIELD_NAMES_HOME = ['quiz_result', 'quiz_massage', 'quiz_duration', 'quiz_details'];
+    const FIELD_NAMES_SPECIALOFFER = ['quiz_occasion', 'quiz_duration', 'quiz_format', 'quiz_frequency'];
 
     $quizzes.each(function () {
         const $quiz = $(this);
+        const isSpecialOffer = $quiz.hasClass('quiz--specialoffer');
+        const fieldNames = isSpecialOffer ? FIELD_NAMES_SPECIALOFFER : FIELD_NAMES_HOME;
         const $steps = $quiz.find('[data-quiz-step]');
         const $progress = $quiz.find('.quiz__progress');
         const $progressWrap = $quiz.find('.quiz__progress-wrap');
+        const $currentCounter = $quiz.find('[data-quiz-current]');
         const $prevBtn = $quiz.find('[data-quiz-prev]');
         const $nextBtn = $quiz.find('[data-quiz-next]');
         const $form = $quiz.find('.quiz__form');
 
-        let currentStep = 'start';
+        let currentStep = '1';
 
         function getStepIndex(step) {
             return STEPS.indexOf(step);
@@ -27,7 +31,7 @@ export function initQuiz() {
         }
 
         function getSelectedValue(step) {
-            const fieldName = FIELD_NAMES[QUESTION_STEPS.indexOf(step)];
+            const fieldName = fieldNames[QUESTION_STEPS.indexOf(step)];
             const $checked = $quiz.find(`input[name="${fieldName}"]:checked`);
             return $checked.length ? $checked.val() : '';
         }
@@ -35,6 +39,11 @@ export function initQuiz() {
         function isCurrentStepAnswered() {
             if (!isQuestionStep(currentStep)) return true;
             return Boolean(getSelectedValue(currentStep));
+        }
+
+        function updateCounter() {
+            if (!isQuestionStep(currentStep)) return;
+            $currentCounter.text(currentStep);
         }
 
         function updateProgress() {
@@ -52,15 +61,8 @@ export function initQuiz() {
         }
 
         function updateNav() {
-            const onStart = currentStep === 'start';
             const onSuccess = currentStep === 'success';
             const onFirstQuestion = currentStep === '1';
-
-            if (onStart) {
-                $prevBtn.prop('disabled', true).attr('aria-disabled', 'true');
-                $nextBtn.prop('disabled', true).attr('aria-disabled', 'true');
-                return;
-            }
 
             if (onSuccess) {
                 $prevBtn.prop('disabled', false).attr('aria-disabled', 'false');
@@ -75,10 +77,15 @@ export function initQuiz() {
         }
 
         function fillFormAnswers() {
-            FIELD_NAMES.forEach((name) => {
+            fieldNames.forEach((name) => {
                 const value = $quiz.find(`input[name="${name}"]:checked`).val() || '';
                 $form.find(`input[name="${name}_result"]`).val(value);
             });
+
+            if (!isSpecialOffer) {
+                const messenger = $quiz.find('input[name="quiz_messenger"]:checked').val() || '';
+                $form.find('input[name="quiz_messenger_result"]').val(messenger);
+            }
         }
 
         function goToStep(step) {
@@ -94,6 +101,7 @@ export function initQuiz() {
                 fillFormAnswers();
             }
 
+            updateCounter();
             updateProgress();
             updateNav();
         }
@@ -114,10 +122,6 @@ export function initQuiz() {
             goToStep(STEPS[index - 1]);
         }
 
-        $quiz.on('click', '[data-quiz-start]', function () {
-            goToStep('1');
-        });
-
         $quiz.on('click', '[data-quiz-next]', function () {
             goNext();
         });
@@ -127,6 +131,14 @@ export function initQuiz() {
         });
 
         $quiz.on('change', '.quiz__option-input', function () {
+            const $input = $(this);
+            const name = $input.attr('name');
+
+            if (name === 'quiz_messenger') {
+                fillFormAnswers();
+                return;
+            }
+
             updateNav();
 
             if (!isQuestionStep(currentStep)) return;
@@ -144,6 +156,15 @@ export function initQuiz() {
             e.preventDefault();
             fillFormAnswers();
 
+            if (!isSpecialOffer) {
+                const phone = $form.find('input[name="phone"]').val().trim();
+                const messenger = $quiz.find('input[name="quiz_messenger"]:checked').val();
+
+                if (!phone || !messenger) {
+                    return;
+                }
+            }
+
             const formData = new FormData(this);
             for (const [name, value] of formData) {
                 console.log(`${name} = ${value}`);
@@ -154,9 +175,9 @@ export function initQuiz() {
             xhr.send(formData);
 
             this.reset();
-            goToStep('start');
+            goToStep('1');
         });
 
-        goToStep('start');
+        goToStep('1');
     });
 }
