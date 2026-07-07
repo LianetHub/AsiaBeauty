@@ -6592,28 +6592,15 @@ body.lock-filter {
   min-height: 2.25rem;
   padding: 0.4375rem 0.75rem;
   border: 0.0625rem solid #290F0A;
-  background: #290F0A;
-  color: #F9F0E2;
-  text-transform: uppercase;
-}
-.product-card--appartament .product-card__btn {
-  color: #ECEAE0;
-}
-.product-card--theme-light .product-card__btn {
   background: #F9F0E2;
   color: #290F0A;
-}
-@media (any-hover: hover) {
-  .product-card--theme-light .product-card__btn:hover {
-    background: #290F0A;
-    color: #F9F0E2;
-    border-color: #290F0A;
-  }
+  text-transform: uppercase;
 }
 @media (any-hover: hover) {
   .product-card__btn:hover {
-    background: #720806;
-    border-color: #720806;
+    background: #290F0A;
+    color: #F9F0E2;
+    border-color: #290F0A;
   }
 }
 .product-card__link {

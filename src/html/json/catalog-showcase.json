@@ -36,6 +36,7 @@
     },
     {
         "id": "showcase_cupping",
+        "image": "@img/goods/cupping-massage.jpg",
         "name": "Баночный массаж",
         "price": "12 500 ₽",
         "time": "90 мин"
@@ -51,12 +52,14 @@
     },
     {
         "id": "showcase_guasha",
+        "image": "@img/goods/gua-sha-massage.jpg",
         "name": "Массаж guasha",
         "price": "12 500 ₽",
         "time": "90 мин"
     },
     {
         "id": "showcase_herbal",
+        "image": "@img/goods/traditional-practices.jpg",
         "name": "Массаж травяными мешочками",
         "price": "12 500 ₽",
         "time": "90 мин"
@@ -70,6 +73,7 @@
     },
     {
         "id": "showcase_foot",
+        "image": "@img/goods/foot-massage.jpg",
         "name": "Массаж стоп",
         "price": "12 500 ₽",
         "time": "90 мин",
@@ -77,6 +81,7 @@
     },
     {
         "id": "showcase_zones",
+        "image": "@img/goods/massage-by-zones.jpg",
         "name": "Массаж по зонам",
         "price": "12 500 ₽",
         "time": "90 мин"
