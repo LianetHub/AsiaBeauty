@@ -4,6 +4,7 @@ import { initQuiz } from "./modules/quiz.js";
 import { initHeaderSearch } from "./modules/header-search.js";
 import { initCatalogFilter, initCatalogSidebarFancybox, initCatalogToolbar } from "./modules/catalog-filter.js";
 import { initCartFancybox } from "./modules/cart.js";
+import { initHeroVideo } from "./modules/hero-video.js";
 
 $(function () {
 	// init Fancybox Gallery
@@ -662,6 +663,7 @@ $(function () {
 
 	initQuiz();
 	initHeaderSearch();
+	initHeroVideo();
 	initCatalogFilter();
 	initCatalogToolbar();
 	initCatalogSidebarFancybox();

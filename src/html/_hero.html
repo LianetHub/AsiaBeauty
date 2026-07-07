@@ -42,7 +42,29 @@
     }
     @@if(typeof fullWidth === 'undefined' || !fullWidth) {
     <div class="container container-lg">
-        <div class="hero__banner@@if(typeof bannerLarge !== 'undefined' && bannerLarge) { hero__banner--large}" style="background-image: url('@@if(typeof bgImage !== 'undefined') {@@bgImage}@@if(typeof bgImage === 'undefined') {@img/hero.jpg}');">
+        <div class="hero__banner@@if(typeof bannerLarge !== 'undefined' && bannerLarge) { hero__banner--large}@@if(typeof videoBg !== 'undefined' && videoBg) { hero__banner--video}"@@if(typeof videoBg === 'undefined' || !videoBg) { style="background-image: url('@@if(typeof bgImage !== 'undefined') {@@bgImage}@@if(typeof bgImage === 'undefined') {@img/hero.jpg}');"}>
+            @@if(typeof videoBg !== 'undefined' && videoBg) {
+            <div class="hero__video-slider swiper">
+                <div class="swiper-wrapper">
+                    <div class="hero__video-slide swiper-slide">
+                        <video class="hero__video-bg hero__video-bg--desktop" poster="@@if(typeof videoPoster !== 'undefined') {@@videoPoster}@@if(typeof videoPoster === 'undefined') {@img/hero-home-bg.jpg}" muted playsinline preload="metadata">
+                            <source src="files/home-asia.mp4" type="video/mp4">
+                        </video>
+                        <video class="hero__video-bg hero__video-bg--mobile" poster="@@if(typeof videoPoster !== 'undefined') {@@videoPoster}@@if(typeof videoPoster === 'undefined') {@img/hero-home-bg.jpg}" muted playsinline preload="metadata">
+                            <source src="files/home-asia-mobile.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="hero__video-slide swiper-slide">
+                        <video class="hero__video-bg hero__video-bg--desktop" poster="@@if(typeof videoPoster !== 'undefined') {@@videoPoster}@@if(typeof videoPoster === 'undefined') {@img/hero-home-bg.jpg}" muted playsinline preload="metadata">
+                            <source src="files/hero-video.mp4" type="video/mp4">
+                        </video>
+                        <video class="hero__video-bg hero__video-bg--mobile" poster="@@if(typeof videoPoster !== 'undefined') {@@videoPoster}@@if(typeof videoPoster === 'undefined') {@img/hero-home-bg.jpg}" muted playsinline preload="metadata">
+                            <source src="files/hero-video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+            }
             <div class="hero__offer">
                 <h1 class="hero__title title-lg">@@title@@if(typeof titleLine2 !== 'undefined') {<br>@@titleLine2}</h1>
                 @@if(typeof subtitle !== 'undefined') {
