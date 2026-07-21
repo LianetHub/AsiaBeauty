@@ -501,6 +501,23 @@ $(function () {
 		});
 	}
 
+	if ($(".media-gallery__slider").length > 0) {
+		new Swiper(".media-gallery__slider", {
+			slidesPerView: "auto",
+			centeredSlides: true,
+			spaceBetween: 20,
+			speed: 700,
+			loop: true,
+			initialSlide: 3,
+			watchOverflow: true,
+			breakpoints: {
+				767.98: {
+					spaceBetween: 40,
+				},
+			},
+		});
+	}
+
 	if ($(".heading__slider").length > 0) {
 		$(".heading__slider").each(function (index, sliderWrapper) {
 			let pagination = $(sliderWrapper).find(".heading__slider-pagination")[0];

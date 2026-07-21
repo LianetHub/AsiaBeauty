@@ -5525,6 +5525,402 @@ body.lock-filter {
   line-height: 1.45;
 }
 
+.location-hero {
+  position: relative;
+  margin-top: calc(var(--header-height, 7rem) * -1);
+  margin-bottom: 1.5rem;
+  min-height: 35rem;
+  color: #f9f0e2;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-content: end;
+}
+.location-hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 20.875rem;
+  background: linear-gradient(180deg, transparent 0%, rgba(217, 217, 217, 0.5) 100%);
+  pointer-events: none;
+}
+@media (min-width: 767.98px) {
+  .location-hero {
+    min-height: 47.5rem;
+    margin-bottom: 2.5rem;
+  }
+}
+.location-hero .container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  padding-top: calc(var(--header-height, 7rem) + 1.5rem);
+  padding-bottom: 2.5rem;
+}
+@media (min-width: 767.98px) {
+  .location-hero .container {
+    padding-bottom: 5rem;
+  }
+}
+@media (min-width: 1439.98px) {
+  .location-hero__content {
+    width: 100%;
+    max-width: 80.625rem;
+    padding-left: 2rem;
+  }
+}
+.location-hero__title {
+  font-family: "BebasNeue", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  max-width: 52.5rem;
+}
+@media (min-width: 767.98px) {
+  .location-hero__title {
+    font-size: 6rem;
+  }
+}
+.location-hero__subtitle {
+  margin-top: 1rem;
+  max-width: 29.25rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.1;
+  color: #f9f0e2;
+}
+@media (min-width: 767.98px) {
+  .location-hero__subtitle {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+}
+.location-hero__btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.875rem;
+  margin-top: 1.5rem;
+}
+@media (min-width: 767.98px) {
+  .location-hero__btns {
+    margin-top: 2.75rem;
+  }
+}
+.location-hero__btn {
+  min-width: 15.625rem;
+  padding: 0.75rem 1.5rem;
+  border: 0.125rem solid #f9f0e2;
+  background: #950c0c;
+  text-transform: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.1;
+  color: #f9f0e2;
+}
+@media (min-width: 767.98px) {
+  .location-hero__btn.btn-lg {
+    min-height: 2.8125rem;
+  }
+}
+@media (any-hover: hover) {
+  .location-hero__btn:hover {
+    background: #6f0909;
+  }
+}
+.location-hero__btn--secondary {
+  border-color: transparent;
+  background: #f9f0e2;
+  color: #290f0a;
+}
+@media (any-hover: hover) {
+  .location-hero__btn--secondary:hover {
+    background: #f4e3c9;
+  }
+}
+
+.page--location .benefits {
+  padding: 2rem 0 1.5rem;
+}
+@media (min-width: 575.98px) {
+  .page--location .benefits {
+    padding: 3rem 0 2rem;
+  }
+}
+.page--location .benefits__list--icons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: start;
+  justify-content: initial;
+  gap: 2rem 1.25rem;
+  border-bottom: none;
+  padding-bottom: 0;
+  list-style: none;
+  font-size: inherit;
+}
+@media (min-width: 991.98px) {
+  .page--location .benefits__list--icons {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}
+.page--location .benefits__list--icons > li {
+  max-width: none;
+}
+.page--location .benefits__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.page--location .benefits__item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.125rem;
+}
+.page--location .benefits__item-title {
+  margin-top: 1.5rem;
+  font-family: "BebasNeue", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  font-synthesis: none;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: #290f0a;
+}
+@media (min-width: 767.98px) {
+  .page--location .benefits__item-title {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
+}
+.page--location .categories__card-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.5625rem;
+  border-radius: 18.75rem;
+  background: rgba(226, 38, 0, 0.4);
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  color: #f9f0e2;
+  text-transform: none;
+  pointer-events: none;
+}
+@media (min-width: 767.98px) {
+  .page--location .categories__card-badge {
+    font-size: 0.875rem;
+  }
+}
+.page--location .location-cta {
+  padding: 1.5rem 0 2.5rem;
+  text-align: center;
+}
+@media (min-width: 575.98px) {
+  .page--location .location-cta {
+    padding: 2rem 0 3.5rem;
+  }
+}
+.page--location .location-cta .btn {
+  min-width: 15.625rem;
+  min-height: 2.8125rem;
+}
+
+.media-gallery {
+  padding: 1.5rem 0 1rem;
+  overflow: hidden;
+}
+@media (min-width: 575.98px) {
+  .media-gallery {
+    padding: 2.5rem 0 1.5rem;
+  }
+}
+.media-gallery__slider {
+  overflow: visible;
+}
+.media-gallery__list {
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.media-gallery__item {
+  width: 12.5rem;
+  height: 12.5rem;
+  overflow: hidden;
+  transition: width 0.45s ease, height 0.45s ease;
+}
+@media (min-width: 767.98px) {
+  .media-gallery__item {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+@media (min-width: 991.98px) {
+  .media-gallery__item {
+    width: 16.1875rem;
+    height: 16.1875rem;
+  }
+}
+
+.location-intro {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: #e4e4e4;
+  padding: 2.5rem 1rem;
+  backdrop-filter: blur(0.3125rem);
+  -webkit-backdrop-filter: blur(0.3125rem);
+  background: url("../img/salon/about-bg.jpg") center/cover no-repeat;
+}
+@media (min-width: 991.98px) {
+  .location-intro {
+    padding: 0;
+    height: 49.125rem;
+  }
+}
+.location-intro__frame {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  max-width: 90rem;
+  margin-inline: auto;
+}
+.location-intro__grid {
+  position: relative;
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 991.98px) {
+  .location-intro__grid {
+    grid-template-columns: 34.583335% 33.472223% 31.944442%;
+    grid-template-rows: 1fr 1fr;
+    gap: 0;
+    height: 100%;
+  }
+}
+.location-intro__line {
+  display: none;
+  background: rgba(228, 228, 228, 0.55);
+  pointer-events: none;
+  z-index: 2;
+}
+@media (min-width: 991.98px) {
+  .location-intro__line {
+    display: block;
+    position: absolute;
+  }
+}
+.location-intro__line--v1 {
+  top: 0;
+  bottom: 0;
+  left: 34.583335%;
+  width: 1px;
+}
+.location-intro__line--v2 {
+  top: 0;
+  bottom: 0;
+  left: 68.055558%;
+  width: 1px;
+}
+.location-intro__line--h {
+  top: 23.625rem;
+  left: 34.583335%;
+  right: 0;
+  height: 1px;
+}
+.location-intro__title {
+  font-family: "BebasNeue", sans-serif;
+  font-weight: 400;
+  font-synthesis: none;
+  font-size: 2rem;
+  line-height: 1.1;
+  color: #e4e4e4;
+  max-width: 21.75rem;
+}
+@media (min-width: 575.98px) {
+  .location-intro__title {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 991.98px) {
+  .location-intro__title {
+    grid-column: 1;
+    grid-row: 1/3;
+    align-self: start;
+    width: 21.75rem;
+    max-width: none;
+    margin-top: 8.3125rem;
+    margin-left: 2.125rem;
+    font-size: 3rem;
+    line-height: 1.1;
+  }
+}
+.location-intro__text {
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #e4e4e4;
+}
+@media (min-width: 575.98px) {
+  .location-intro__text {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 991.98px) {
+  .location-intro__text {
+    width: 21.0625rem;
+    max-width: none;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+  .location-intro__text--top-mid {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: start;
+    align-self: start;
+    margin-top: 8.3125rem;
+    margin-left: 3.9375rem;
+  }
+  .location-intro__text--top-right {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: start;
+    align-self: start;
+    margin-top: 8.3125rem;
+    margin-left: 5.0625rem;
+  }
+  .location-intro__text--bot-mid {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: start;
+    align-self: start;
+    margin-top: 7.5rem;
+    margin-left: 3.9375rem;
+  }
+  .location-intro__text--bot-right {
+    grid-column: 3;
+    grid-row: 2;
+    justify-self: start;
+    align-self: start;
+    margin-top: 7.5rem;
+    margin-left: 5.0625rem;
+  }
+}
+
 .page--service .catalog {
   padding-top: 2rem;
 }
