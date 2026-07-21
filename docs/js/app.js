@@ -447,14 +447,14 @@ $(function () {
 		});
 	}
 
-	const $lightHeader = $(".header--light");
-	if ($lightHeader.length > 0) {
-		const toggleLightHeader = () => {
-			$lightHeader.toggleClass("header--scrolled", window.scrollY > 0);
+	const $overlayHeader = $(".header--light, .header--dark");
+	if ($overlayHeader.length > 0) {
+		const toggleOverlayHeader = () => {
+			$overlayHeader.toggleClass("header--scrolled", window.scrollY > 0);
 		};
 
-		toggleLightHeader();
-		$(window).on("scroll", toggleLightHeader);
+		toggleOverlayHeader();
+		$(window).on("scroll", toggleOverlayHeader);
 	}
 
 	if ($(".extras__carousel, .about-programs__carousel").length > 0) {
