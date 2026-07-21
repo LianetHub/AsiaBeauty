@@ -31,6 +31,25 @@ html:has(.page--spa-couple) {
 		background: #fff;
 	}
 
+	.events-types__title {
+		max-width: rem(658);
+	}
+
+	.benefits--dark {
+		padding: rem(40) 0;
+
+		@media (min-width: $md4) {
+			padding: rem(61) 0;
+			min-height: rem(174);
+		}
+
+		.benefits__list {
+			li {
+				max-width: rem(242);
+			}
+		}
+	}
+
 	.video-block {
 		padding: 0;
 		margin-bottom: 0;
@@ -47,21 +66,72 @@ html:has(.page--spa-couple) {
 	}
 }
 
-.spa-couple-hero {
+.split-banner {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	margin-top: calc(var(--header-height, #{rem(112)}) * -1);
 	background: #fff;
 	overflow: hidden;
 
 	@media (min-width: $md3) {
 		flex-direction: row;
-		min-height: rem(560);
 	}
 
-	@media (min-width: $md4) {
-		min-height: rem(714);
+	&--hero {
+		margin-top: calc(var(--header-height, #{rem(112)}) * -1);
+
+		@media (min-width: $md3) {
+			min-height: rem(560);
+		}
+
+		@media (min-width: $md4) {
+			min-height: rem(714);
+		}
+
+		.split-banner__main {
+			padding-top: calc(var(--header-height, #{rem(112)}) + #{rem(24)});
+			padding-bottom: rem(32);
+
+			@media (min-width: $md3) {
+				padding-bottom: rem(40);
+			}
+
+			@media (min-width: $md4) {
+				padding-bottom: rem(64);
+			}
+		}
+	}
+
+	&--inset {
+		
+
+		.split-banner__main {
+			padding-top: rem(40);
+			padding-bottom: rem(40);
+
+			@media (min-width: $md4) {
+				padding-top: rem(48);
+				padding-bottom: rem(64);
+			}
+		}
+
+		.split-banner__media {
+			@media (min-width: $md3) {
+				padding-left: 4.375rem;
+
+				.cover-image {
+					position: relative;
+					inset: auto;
+					display: block;
+				}
+			}
+		}
+
+		.split-banner__btn {
+			margin-top: rem(32);
+			min-width: rem(250);
+			border: none;
+		}
 	}
 
 	&__main {
@@ -70,16 +140,9 @@ html:has(.page--spa-couple) {
 		flex: 0 0 auto;
 		display: flex;
 		align-items: center;
-		padding-top: calc(var(--header-height, #{rem(112)}) + #{rem(24)});
-		padding-bottom: rem(32);
 
 		@media (min-width: $md3) {
 			flex: 0 0 100%;
-			padding-bottom: rem(40);
-		}
-
-		@media (min-width: $md4) {
-			padding-bottom: rem(64);
 		}
 
 		.container {
@@ -94,6 +157,7 @@ html:has(.page--spa-couple) {
 		min-height: rem(280);
 		aspect-ratio: math.div(4, 3);
 		overflow: hidden;
+		box-sizing: border-box;
 
 		@media (min-width: $md3) {
 			flex: 0 0 50%;
@@ -114,7 +178,10 @@ html:has(.page--spa-couple) {
 	}
 
 	&__content {
-		max-width: rem(514);
+		@media (min-width: $md3) {
+			max-width: 50%;
+			padding-right: rem(24);
+		}
 	}
 
 	&__title {
@@ -140,6 +207,17 @@ html:has(.page--spa-couple) {
 		@media (min-width: $md4) {
 			margin-top: rem(24);
 			font-size: rem(24);
+		}
+	}
+
+	&__text {
+		font-size: rem(16);
+		font-weight: 500;
+		line-height: 1.45;
+		color: #000;
+
+		@media (min-width: $md4) {
+			font-size: rem(20);
 		}
 	}
 
@@ -190,95 +268,7 @@ html:has(.page--spa-couple) {
 	}
 }
 
-.page--spa-couple {
-	.benefits--dark {
-		padding: rem(40) 0;
-
-		@media (min-width: $md4) {
-			padding: rem(61) 0;
-			min-height: rem(174);
-		}
-
-		.benefits__list {
-			li {
-				max-width: rem(242);
-			}
-		}
-	}
-}
-
-.spa-couple-intro {
-	padding: rem(40) 0;
-
-	@media (min-width: $md4) {
-		padding: rem(48) 0 rem(64);
-	}
-
-	&__layout {
-		display: grid;
-		gap: rem(32);
-		align-items: center;
-
-		@media (min-width: $md3) {
-			grid-template-columns: 1fr rem(658);
-			gap: rem(40);
-		}
-	}
-
-	&__content {
-		max-width: rem(649);
-	}
-
-	&__text {
-		font-size: rem(16);
-		font-weight: 500;
-		line-height: 1.45;
-		color: #000;
-
-		@media (min-width: $md4) {
-			font-size: rem(20);
-		}
-	}
-
-	&__btn {
-		margin-top: rem(32);
-		min-width: rem(250);
-		min-height: rem(45);
-		border: none;
-		background: #950c0c;
-		color: #f9f0e2;
-		text-transform: none;
-		font-size: rem(12);
-		font-weight: 600;
-		line-height: 1.1;
-
-		@media (any-hover: hover) {
-			&:hover {
-				background: darken(#950c0c, 6%);
-				color: #f9f0e2;
-			}
-		}
-	}
-
-	&__media {
-		overflow: hidden;
-		aspect-ratio: math.div(658, 483);
-
-		.cover-image {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-		}
-	}
-}
-
-.spa-couple-events {
-	.events-types__title {
-		max-width: rem(658);
-	}
-}
-
-.spa-couple-spaces {
+.split-panel {
 	display: grid;
 
 	@media (min-width: $md3) {
@@ -301,7 +291,7 @@ html:has(.page--spa-couple) {
 		}
 	}
 
-	&__panel {
+	&__body {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -346,7 +336,7 @@ html:has(.page--spa-couple) {
 	}
 }
 
-.spa-couple-amenities {
+.amenities {
 	padding: rem(32) 0;
 
 	@media (min-width: $md4) {

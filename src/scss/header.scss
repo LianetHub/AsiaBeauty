@@ -276,19 +276,19 @@
 		}
 
 		.header__action {
-			background: rgba(41, 15, 10, 0.08);
-			color: #290F0A;
+			background: #290F0A;
+			color: #F9F0E2;
 
 			@media (any-hover: hover) {
 				&:hover {
-					background: rgba(41, 15, 10, 0.16);
+					background-color: #AF290E;
 				}
 			}
 		}
 
 		.icon-menu {
-			background: rgba(41, 15, 10, 0.08);
-			color: #290F0A;
+			background: #290F0A;
+			color: #F9F0E2;
 		}
 
 		&.header--scrolled,
@@ -297,22 +297,6 @@
 
 			.header__main {
 				background: #fff;
-			}
-
-			.header__action {
-				background: #290F0A;
-				color: #fff;
-
-				@media (any-hover: hover) {
-					&:hover {
-						background-color: #AF290E;
-					}
-				}
-			}
-
-			.icon-menu {
-				background: #290F0A;
-				color: #fff;
 			}
 		}
 	}
