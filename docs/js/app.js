@@ -804,6 +804,10 @@ $(function () {
 				this.$dropdown.addClass("dropdown--service");
 			}
 
+			if (this.theme === "corporate") {
+				this.$dropdown.addClass("dropdown--corporate");
+			}
+
 			const captionTemplate = this.listCaption ? `<div class="dropdown__caption">${this.listCaption}</div>` : "";
 
 			this.$dropdown.html(`
