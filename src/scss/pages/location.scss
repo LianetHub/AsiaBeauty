@@ -2,13 +2,25 @@
 	position: relative;
 	margin-top: calc(var(--header-height, #{rem(112)}) * -1);
 	margin-bottom: rem(24);
-	min-height: rem(560);
+	min-height: rem(700);
 	color: #f9f0e2;
 	overflow: hidden;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	align-content: end;
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		height: 9.625rem;
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) -7.52%, rgba(102, 102, 102, 0) 100%);
+		pointer-events: none;
+		z-index: 0;
+	}
 
 	&::after {
 		content: "";
@@ -19,6 +31,7 @@
 		height: rem(334);
 		background: linear-gradient(180deg, transparent 0%, rgba(217, 217, 217, 0.5) 100%);
 		pointer-events: none;
+		z-index: 0;
 	}
 
 	@media (min-width: $md4) {
@@ -31,6 +44,7 @@
 		z-index: 1;
 		display: flex;
 		align-items: flex-end;
+		min-height: inherit;
 		padding-top: calc(var(--header-height, #{rem(112)}) + #{rem(24)});
 		padding-bottom: rem(40);
 
@@ -225,6 +239,7 @@
 .media-gallery {
 	padding: rem(24) 0 rem(16);
 	overflow: hidden;
+	pointer-events: none;
 
 	@media (min-width: $md5) {
 		padding: rem(40) 0 rem(24);
@@ -232,32 +247,61 @@
 
 	&__slider {
 		overflow: visible;
+		min-height: rem(280);
+
+		@media (min-width: $md3) {
+			min-height: rem(408);
+		}
+
+		.swiper-wrapper {
+			transition-timing-function: linear !important;
+		}
 	}
 
 	&__list {
-		align-items: center;
+		align-items: flex-start;
 		list-style: none;
 		margin: 0;
 		padding: 0;
 	}
 
 	&__item {
-		width: rem(200);
-		height: rem(200);
+		width: rem(180);
+		height: rem(180);
 		overflow: hidden;
-		transition: width 0.45s ease, height 0.45s ease;
+		margin-top: 0;
 
-		@media (min-width: $md4) {
-			width: rem(240);
-			height: rem(240);
+		// Figma: edge (1, 5) — 259×259, mt 0
+		&--edge {
+			@media (min-width: $md3) {
+				width: rem(259);
+				height: rem(259);
+			}
 		}
 
-		@media (min-width: $md3) {
-			width: rem(259);
-			height: rem(259);
+		// Figma: near (2, 4) — 259×259, mt 51
+		&--near {
+			margin-top: rem(36);
+
+			@media (min-width: $md3) {
+				width: rem(259);
+				height: rem(259);
+				margin-top: rem(51);
+			}
 		}
 
-		
+		// Figma: focus (3) — 365×365, mt 43
+		&--focus {
+			width: rem(254);
+			height: rem(254);
+			margin-top: rem(30);
+
+			@media (min-width: $md3) {
+				width: rem(365);
+				height: rem(365);
+				margin-top: rem(43);
+			}
+		}
 	}
 }
 
@@ -269,12 +313,19 @@
 	padding: rem(40) rem(16);
 
 	@media (min-width: $md3) {
+		padding: rem(48) rem(24);
+		min-height: rem(520);
+	}
+
+	@media (min-width: $md2) {
 		padding: 0;
 		height: rem(786);
+		min-height: 0;
 	}
+
 	backdrop-filter: blur(rem(5));
 	-webkit-backdrop-filter: blur(rem(5));
-	background: url("@img/salon/about-bg.jpg") center  / cover no-repeat;
+	background: url("@img/salon/about-bg.jpg") center / cover no-repeat;
 
 	&__frame {
 		position: relative;
@@ -290,7 +341,12 @@
 		gap: rem(24);
 
 		@media (min-width: $md3) {
-			grid-template-columns: 34.583335% 33.472223% 31.944442%; // 498 / 482 / 460 of 1440
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: rem(24) rem(32);
+		}
+
+		@media (min-width: $md2) {
+			grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr) minmax(0, 1fr);
 			grid-template-rows: 1fr 1fr;
 			gap: 0;
 			height: 100%;
@@ -303,7 +359,7 @@
 		pointer-events: none;
 		z-index: 2;
 
-		@media (min-width: $md3) {
+		@media (min-width: $md2) {
 			display: block;
 			position: absolute;
 		}
@@ -311,19 +367,19 @@
 		&--v1 {
 			top: 0;
 			bottom: 0;
-			left: 34.583335%; // 498 / 1440
+			left: 34.583335%;
 			width: 1px;
 		}
 
 		&--v2 {
 			top: 0;
 			bottom: 0;
-			left: 68.055558%; // 980 / 1440
+			left: 68.055558%;
 			width: 1px;
 		}
 
 		&--h {
-			top: rem(378); // 3072 - 2694
+			top: 50%;
 			left: 34.583335%;
 			right: 0;
 			height: 1px;
@@ -344,14 +400,20 @@
 		}
 
 		@media (min-width: $md3) {
+			grid-column: 1 / -1;
+			font-size: rem(44);
+			max-width: rem(520);
+		}
+
+		@media (min-width: $md2) {
 			grid-column: 1;
 			grid-row: 1 / 3;
-			align-self: start;
-			width: rem(348);
+			align-self: stretch;
+			width: auto;
 			max-width: none;
-			margin-top: rem(133);
-			margin-left: rem(34);
-			font-size: rem(48);
+			margin: 0;
+			padding: clamp(#{rem(48)}, 9vw, #{rem(133)}) clamp(#{rem(16)}, 2.4vw, #{rem(34)}) #{rem(40)} clamp(#{rem(16)}, 2.4vw, #{rem(34)});
+			font-size: clamp(#{rem(36)}, 3.4vw, #{rem(48)});
 			line-height: 1.1;
 		}
 	}
@@ -368,46 +430,44 @@
 		}
 
 		@media (min-width: $md3) {
-			width: rem(337);
+			width: auto;
 			max-width: none;
 			margin: 0;
-			font-size: rem(16);
+			font-size: rem(15);
 			line-height: 1.2;
+		}
+
+		@media (min-width: $md2) {
+			width: auto;
+			max-width: none;
+			min-width: 0;
+			margin: 0;
+			font-size: clamp(#{rem(14)}, 1.15vw, #{rem(16)});
+			padding: clamp(#{rem(32)}, 6vw, #{rem(80)}) clamp(#{rem(16)}, 3.5vw, #{rem(48)});
+			box-sizing: border-box;
 
 			&--top-mid {
 				grid-column: 2;
 				grid-row: 1;
-				justify-self: start;
-				align-self: start;
-				margin-top: rem(133);
-				margin-left: rem(63); // 561 - 498
+				align-self: stretch;
 			}
 
 			&--top-right {
 				grid-column: 3;
 				grid-row: 1;
-				justify-self: start;
-				align-self: start;
-				margin-top: rem(133);
-				margin-left: rem(81); // 1061 - 980
+				align-self: stretch;
 			}
 
 			&--bot-mid {
 				grid-column: 2;
 				grid-row: 2;
-				justify-self: start;
-				align-self: start;
-				margin-top: rem(120); // 3192 - 2694 - 378
-				margin-left: rem(63);
+				align-self: stretch;
 			}
 
 			&--bot-right {
 				grid-column: 3;
 				grid-row: 2;
-				justify-self: start;
-				align-self: start;
-				margin-top: rem(120);
-				margin-left: rem(81);
+				align-self: stretch;
 			}
 		}
 	}

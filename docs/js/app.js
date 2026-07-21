@@ -506,10 +506,15 @@ $(function () {
 			slidesPerView: "auto",
 			centeredSlides: true,
 			spaceBetween: 20,
-			speed: 700,
-			loop: true,
-			initialSlide: 3,
+			speed: 25000,
+			initialSlide: 2,
 			watchOverflow: true,
+			loop: true,
+			autoplay: {
+				delay: 0,
+				disableOnInteraction: false,
+				pauseOnMouseEnter: true,
+			},
 			breakpoints: {
 				767.98: {
 					spaceBetween: 40,
