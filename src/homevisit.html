@@ -6,36 +6,28 @@
     <body>
         <div class="wrapper">
             @@include('html/_header.html', {
+            "className": "header--light",
+            "lightLogo": true,
             "active": "0"
             })
-            <main class="page">
-                @@include('./html/_hero.html', {
-                "modifier": "hero--homevisit",
-                "bannerLarge": true,
-                "bgImage": "@img/homevisit.jpg",
-                "title": "Авторские spa-программы в теплой и уютной домашней обстановке",
-                })
-                <section class="homevisit">
+            <main class="page page--outcall">
+                <section class="hero-banner">
+                    <div class="hero-banner__bg" style="background-image: url('@img/homevisit/hero.jpg');"></div>
+                    <div class="hero-banner__blur" aria-hidden="true"></div>
                     <div class="container">
-                        <div class="homevisit__intro">
-                            <p>
-                                Выездной массаж на дом — идеальное решение для тех, кто ценит комфорт и не желает тратить время на дорогу, экономя свое время. Наши специалисты из Китая, Бали и Тайланда предлагают индивидуальный подход для вас, что позволит сделать процедуру более эффективной. Во время сеанса, вы сможете выбрать, на какие из зон важно акцентировать внимание или продлить время массажа.
-                            </p>
-                            <p>
-                                После сеанса вы сможете полностью расслабиться, в комфортной для вас, обстановке и продолжить заниматься своими привычными делами.
-                            </p>
-                            <p>
-                                Минимальная продолжительность сеанса 2 часа
-                            </p>
-                            <p>
-                                В пределах МКАД стоимость фиксирована. Обсуждение выезда за пределы МКАД возможно.
-                            </p>
-                            <p>
-                                Заказать услугу выездного массажа можно на сайте, заполнив заявку или по телефону<br>
-                                <a href="tel:+74950217659">+7 (495) 021 7659</a>
-                            </p>
+                        <div class="hero-banner__content">
+                            <h1 class="hero-banner__title">спа с выездом<br>на дом от ASIA BEAUTY SPA</h1>
+                            <div class="hero-banner__btns">
+                                <a href="certs.html" class="hero-banner__btn btn btn-lg">Подарить сертификат</a>
+                                <a href="#order" class="hero-banner__btn hero-banner__btn--secondary btn btn-lg">Вызвать мастера</a>
+                            </div>
                         </div>
-                        <ul class="homevisit__benefits benefits__list--homevisit">
+                    </div>
+                </section>
+
+                <section class="icon-benefits">
+                    <div class="container">
+                        <ul class="icon-benefits__list benefits__list--stagger">
                             <li class="benefits__item">
                                 <div class="benefits__item-icon">
                                     <svg data-animate="quadrant-shift" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,7 +46,7 @@
                                     </svg>
                                 </div>
                                 <div class="benefits__item-title text-uppercase text-medium">
-                                    исключает <br> необходимость <br> адаптации к новому <br> месту
+                                    исключает необходимость адаптации к новому месту
                                 </div>
                             </li>
                             <li class="benefits__item">
@@ -66,7 +58,7 @@
                                     </svg>
                                 </div>
                                 <div class="benefits__item-title text-uppercase text-medium">
-                                    предоставляется весь&nbsp;необходимый <br> инвентарь и&nbsp;одежда для&nbsp;массажа
+                                    предоставляется весь&nbsp;необходимый инвентарь и&nbsp;одежда для&nbsp;массажа
                                 </div>
                             </li>
                             <li class="benefits__item">
@@ -93,38 +85,114 @@
                                 <div class="benefits__item-title text-uppercase text-medium">позволяет подобрать удобные для проведения процедуры часы и не привязываться к графику работы спа-салона;</div>
                             </li>
                         </ul>
-                        <div class="homevisit__order">
-                            <form action="#" class="homevisit__form">
-                                <h2 class="homevisit__form-caption">Детали заказа</h2>
-                                <div class="homevisit__form-fields">
-                                    <input type="text" name="name" class="input" placeholder="Ваше имя">
-                                    <input type="tel" name="phone" class="input" placeholder="Номер телефон для связи">
-                                    <input type="text" name="date" class="input" placeholder="Дата визита">
-                                    <input type="text" name="message" class="input" placeholder="Укажите предпочитаемый Вами салон и комментарии сотрудникам">
-                                </div>
-                                <button type="submit" class="homevisit__form-btn btn btn-brown">Оставить заявку</button>
-                            </form>
-                            <div class="homevisit__order-image">
-                                <img src="@img/homevisit-form.jpg" class="cover-image" alt="Массаж на дому">
-                            </div>
-                        </div>
-                        <div class="homevisit__text">
-                            <p>Позвольте себе сэкономить время, избавляя от необходимости тратить его на поездки в спа-салоны. Вы сможете наслаждаться процедурой в комфортной и уютной обстановке своего дома, что создает атмосферу расслабления и помогает снять стресс.</p>
-                            <p>Для тех, кто не может или не хочет покидать дом по различным причинам — будь то занятость или плохая погода — выездной массаж становится отличным решением. Массажист сможет адаптировать сеанс под ваши личные предпочтения и потребности, что позволяет получить максимально эффективный и приятный опыт.</p>
-                            <p>Кроме того, выездной массаж гарантирует полную конфиденциальность и возможность наслаждаться процедурой без посторонних глаз. Вы также можете выбрать удобное для вас время, что делает услугу доступной даже для самых загруженных людей. Это также позволяет сочетать массаж с другими активностями, например, расслабиться с чашкой чая после сеанса или продолжить вечер в домашнем уюте, не тратя время на возвращение домой.</p>
+                    </div>
+                </section>
+
+                <section class="section-lead">
+                    <div class="container">
+                        <h2 class="section-lead__title">Услуги на дом</h2>
+                        <div class="section-lead__text">
+                            <p>Минимальная продолжительность сеанса 2 часа</p>
+                            <p>В пределах МКАД стоимость фиксирована. Обсуждение выезда за пределы МКАД возможно.</p>
+                            <p>
+                                Заказать услугу выездного массажа можно на сайте, заполнив заявку или по телефону<br>
+                                <a href="tel:+74950217659">+7 (495) 021 7659</a>
+                            </p>
                         </div>
                     </div>
                 </section>
-                @@include('./html/_gift.html', {
-                "title": "Идеальный подарок для&nbsp;близких",
-                "btnText": "Приобрести сертификат",
-                "btnHref": "certs.html",
-                "image": "@img/gift.jpg",
-                "imageAlt": "Фото сертификата"
-                })
-                @@include('./html/_places.html', {
-                "title": "наши локации"
-                })
+
+                <section class="media-gallery">
+                    <div class="media-gallery__slider swiper">
+                        <ul class="media-gallery__list swiper-wrapper">
+                            <li class="media-gallery__item media-gallery__item--edge swiper-slide">
+                                <a href="#" class="media-gallery__link">
+                                    <img src="@img/homevisit/service-relax.png" class="cover-image" alt="Relax-массаж">
+                                    <span class="media-gallery__label">Relax - массаж</span>
+                                </a>
+                            </li>
+                            <li class="media-gallery__item media-gallery__item--near swiper-slide">
+                                <a href="#" class="media-gallery__link">
+                                    <img src="@img/homevisit/service-slim.png" class="cover-image" alt="Slim-массаж">
+                                    <span class="media-gallery__label">Slim- массаж</span>
+                                </a>
+                            </li>
+                            <li class="media-gallery__item media-gallery__item--focus swiper-slide">
+                                <a href="#" class="media-gallery__link">
+                                    <img src="@img/homevisit/service-tandem.png" class="cover-image" alt="Tandem-массаж">
+                                    <span class="media-gallery__label">Tandem-массаж</span>
+                                </a>
+                            </li>
+                            <li class="media-gallery__item media-gallery__item--near swiper-slide">
+                                <a href="#" class="media-gallery__link">
+                                    <img src="@img/homevisit/service-zones.png" class="cover-image" alt="Массаж по зонам">
+                                    <span class="media-gallery__label">Массаж по зонам</span>
+                                </a>
+                            </li>
+                            <li class="media-gallery__item media-gallery__item--edge swiper-slide">
+                                <a href="#" class="media-gallery__link">
+                                    <img src="@img/homevisit/service-aroma.png" class="cover-image" alt="Aroma-массаж">
+                                    <span class="media-gallery__label">Aroma-массаж</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="media-gallery__action">
+                        <a href="catalog.html" class="media-gallery__btn btn btn-lg">Все услуги</a>
+                    </div>
+                </section>
+
+                <section class="promo-grid">
+                    <div class="promo-grid__bg" style="background-image: url('@img/homevisit/promo.png');" aria-hidden="true"></div>
+                    <div class="promo-grid__frame">
+                        <span class="promo-grid__line promo-grid__line--v1" aria-hidden="true"></span>
+                        <span class="promo-grid__line promo-grid__line--v2" aria-hidden="true"></span>
+                        <span class="promo-grid__line promo-grid__line--h" aria-hidden="true"></span>
+                        <div class="promo-grid__grid">
+                            <h2 class="promo-grid__title">Авторские<br> spa-программы<br> в теплой и уютной<br> домашней обстановке</h2>
+                            <div class="promo-grid__text promo-grid__text--ideal">
+                                <h3 class="promo-grid__caption">Идеальное решение</h3>
+                                <p>Выездной массаж на дом — идеальное решение для тех, кто ценит комфорт и не желает тратить время на дорогу, экономя свое время. Наши специалисты из Китая, Бали и Тайланда предлагают индивидуальный подход для вас, что позволит сделать процедуру более эффективной</p>
+                            </div>
+                            <div class="promo-grid__text promo-grid__text--choice">
+                                <h3 class="promo-grid__caption">Выбор услуги</h3>
+                                <p>Во время сеанса, вы сможете выбрать, на какие из зон важно акцентировать внимание или продлить время массажа.</p>
+                                <p>После сеанса вы сможете полностью расслабиться, в комфортной для вас, обстановке и продолжить заниматься своими привычными делами.</p>
+                            </div>
+                            <div class="promo-grid__text promo-grid__text--time">
+                                <h3 class="promo-grid__caption">Экономия времени</h3>
+                                <p>Позвольте себе сэкономить время, избавляя от необходимости тратить его на поездки в спа-салоны. Вы сможете наслаждаться процедурой в комфортной и уютной обстановке своего дома, что создает атмосферу расслабления и помогает снять стресс.</p>
+                                <p>Для тех, кто не может или не хочет покидать дом по различным причинам — будь то занятость или плохая погода — выездной массаж становится отличным решением. Массажист сможет адаптировать сеанс под ваши личные предпочтения и потребности, что позволяет получить максимально эффективный и приятный опыт.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="order-split" id="order">
+                    <div class="container">
+                        <div class="order-split__layout">
+                            <div class="order-split__media">
+                                <img src="@img/homevisit/form.png" class="cover-image" alt="Спа-пространство Asia Beauty">
+                            </div>
+                            <div class="order-split__content">
+                                <div class="order-split__text">
+                                    <p>Кроме того, выездной массаж гарантирует полную конфиденциальность и возможность наслаждаться процедурой без посторонних глаз. Вы также можете выбрать удобное для вас время, что делает услугу доступной даже для самых загруженных людей.</p>
+                                    <p>Это также позволяет сочетать массаж с другими активностями, например, расслабиться с чашкой чая после сеанса или продолжить вечер в домашнем уюте, не тратя время на возвращение домой.</p>
+                                </div>
+                                <form action="#" class="order-split__form">
+                                    <h2 class="order-split__caption">Детали заказа</h2>
+                                    <div class="order-split__fields">
+                                        <input type="text" name="name" class="order-split__input" placeholder="Ваше имя">
+                                        <input type="tel" name="phone" class="order-split__input" placeholder="Номер телефона для связи">
+                                        <input type="text" name="date" class="order-split__input" placeholder="Дата визита">
+                                        <input type="text" name="message" class="order-split__input" placeholder="Укажите предпочитаемый Вами салон и комментарии сотрудникам">
+                                    </div>
+                                    <button type="submit" class="order-split__btn btn btn-brown">Оставить заявку</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </main>
             @@include('html/_footer.html', {})
         </div>

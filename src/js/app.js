@@ -502,24 +502,30 @@ $(function () {
 	}
 
 	if ($(".media-gallery__slider").length > 0) {
-		new Swiper(".media-gallery__slider", {
-			slidesPerView: "auto",
-			centeredSlides: true,
-			spaceBetween: 20,
-			speed: 25000,
-			initialSlide: 2,
-			watchOverflow: true,
-			loop: true,
-			autoplay: {
-				delay: 0,
-				disableOnInteraction: false,
-				pauseOnMouseEnter: true,
-			},
-			breakpoints: {
-				767.98: {
-					spaceBetween: 40,
+		$(".media-gallery__slider").each(function () {
+			const isStatic = $(this).closest(".page--outcall").length > 0;
+
+			new Swiper(this, {
+				slidesPerView: "auto",
+				centeredSlides: true,
+				spaceBetween: 20,
+				speed: isStatic ? 600 : 25000,
+				initialSlide: 2,
+				watchOverflow: true,
+				loop: !isStatic,
+				autoplay: isStatic
+					? false
+					: {
+							delay: 0,
+							disableOnInteraction: false,
+							pauseOnMouseEnter: true,
+					  },
+				breakpoints: {
+					767.98: {
+						spaceBetween: 40,
+					},
 				},
-			},
+			});
 		});
 	}
 
