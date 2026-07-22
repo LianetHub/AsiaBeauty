@@ -530,8 +530,9 @@ body.lock-filter {
      text-overflow: ellipsis;
   overflow: hidden;
   word-break: break-all;
-  -ms-hyphens: auto;
-      hyphens: auto;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
   min-width: 2.13rem;
 }
 
@@ -2364,7 +2365,8 @@ body.lock-filter {
 
 .hidden {
   clip: rect(0 0 0 0);
-  clip-path: inset(50%);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
   height: 1px;
   overflow: hidden;
   position: absolute;
@@ -5605,7 +5607,8 @@ body.lock-filter {
   position: relative;
   margin-top: calc(var(--header-height, 7rem) * -1);
   margin-bottom: 1.5rem;
-  min-height: 43.75rem;
+  max-height: 43.75rem;
+  height: 100svh;
   color: #f9f0e2;
   overflow: hidden;
   background-size: cover;
@@ -5850,7 +5853,7 @@ body.lock-filter {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  color: #e4e4e4;
+  color: #f9f0e2;
   padding: 2.5rem 1rem;
   backdrop-filter: blur(0.3125rem);
   -webkit-backdrop-filter: blur(0.3125rem);
@@ -5906,7 +5909,7 @@ body.lock-filter {
   font-synthesis: none;
   font-size: 2rem;
   line-height: 1.1;
-  color: #e4e4e4;
+  color: #f9f0e2;
   max-width: 21.75rem;
 }
 
@@ -5915,7 +5918,7 @@ body.lock-filter {
   font-size: 0.875rem;
   font-weight: 700;
   line-height: 1.2;
-  color: #e4e4e4;
+  color: #f9f0e2;
 }
 
 .page--service .catalog {
@@ -11584,7 +11587,7 @@ html:has(.page--outcall) {
   }
 
   .location-hero {
-    min-height: 47.5rem;
+    max-height: 47.5rem;
     margin-bottom: 2.5rem;
   }
 
